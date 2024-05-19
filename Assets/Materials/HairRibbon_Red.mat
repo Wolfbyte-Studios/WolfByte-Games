@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 12
+  version: 13
   hdPluginSubTargetMaterialVersions:
     m_Keys: []
     m_Values: 
 --- !u!21 &2100000
 Material:
-  serializedVersion: 7
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -27,9 +27,13 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: 92f8c085987503d4da7eb0960db2c23b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ShaderKeywords: _BLUE_VERTEX_COLOR_FOR_PER_STRAND_INDEX_EFFECT _DISABLE_SSR_TRANSPARENT
-    _GENERATE_THICKNESS_FROM_COLLAPSED_RIBBON_GEOMETRY _GREEN_VERTEX_COLOR_FOR_RADIUS_VARIATION
-    _RED_VERTEX_COLOR_FOR_AMBIENT_OCCLUSION
+  m_ValidKeywords:
+  - _BLUE_VERTEX_COLOR_FOR_PER_STRAND_INDEX_EFFECT
+  - _DISABLE_SSR_TRANSPARENT
+  - _GREEN_VERTEX_COLOR_FOR_RADIUS_VARIATION
+  - _RED_VERTEX_COLOR_FOR_AMBIENT_OCCLUSION
+  m_InvalidKeywords:
+  - _GENERATE_THICKNESS_FROM_COLLAPSED_RIBBON_GEOMETRY
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -160,3 +164,4 @@ Material:
     - _Tip_Color: {r: 0.7921569, g: 0.3446027, b: 0.1843137, a: 1}
     - _dir: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

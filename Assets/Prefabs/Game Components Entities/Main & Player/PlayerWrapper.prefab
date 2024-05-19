@@ -5079,7 +5079,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7493922011729171685}
   - component: {fileID: 816266243373174331}
-  - component: {fileID: 8761596692580219647}
   - component: {fileID: 8977798049841779692}
   - component: {fileID: 9141709615733921602}
   - component: {fileID: 7443007664329936979}
@@ -5134,32 +5133,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!143 &8761596692580219647
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6747348011020626403}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.25
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.03
-  m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &8977798049841779692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5172,13 +5145,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5ba67ebe667c9b44897ab9e70042124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
   WalkSpeed: 1
   runSpeed: 10
   changeRate: 0.1
   rotSpeed: 7.5
-  jumpHeight: 5
-  jumpVelocityModifier: 1
-  newMoveDirection: {x: 0, y: 0, z: 0}
+  jumpHeight: 3.5
+  jumpVelocityModifier: 2
+  newMoveDirection: {x: -0.87110496, y: 0, z: 0.49109688}
   cameraSensitivity: 1
   zoomSensitivity: 1
   angleThreshold: 120
@@ -5187,27 +5161,27 @@ MonoBehaviour:
   Default: {fileID: -944628639613478452, guid: 885d30fcdcdaaaa45afd1919015cedeb, type: 3}
   jump:
     m_Name: Jump
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: ff4b2e32-5904-4b56-8b94-b1393f8c2ce2
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 8d6c785b-e565-493d-9fff-5fc0b00d582c
     m_Processors: 
-    m_Interactions: 
+    m_Interactions: Press
     m_SingletonActionBindings: []
     m_Flags: 0
   camRotate:
-    m_Name: Cam Rotate
+    m_Name: CameraRotate
     m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: ef3f6a6c-1413-446b-b0d9-4be75165b2c8
+    m_ExpectedControlType: Stick
+    m_Id: a118a344-84c5-4098-8036-26ff7e4a8740
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
-    m_Flags: 0
+    m_Flags: 1
   pause:
     m_Name: Pause
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: aee8c131-76be-48c3-b99d-a7767ca1e675
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 34411aa5-c382-420e-9d57-d53614772833
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -5215,59 +5189,60 @@ MonoBehaviour:
   move:
     m_Name: Move
     m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: eab0c30e-abe4-413a-9800-39fd8739ea27
+    m_ExpectedControlType: Stick
+    m_Id: 0da8eca9-76ee-48ca-989a-799ed98eb51d
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
-    m_Flags: 0
+    m_Flags: 1
   run:
     m_Name: Run
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 72156a76-c641-482a-bd6c-43069266d99b
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 6f7f930b-1995-4072-85cb-65483073e653
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
   interact:
     m_Name: Interact
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 4d79699c-8824-497f-9bd2-3b746bd46d6b
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: f13479bb-7f17-4e52-b892-6db4c7d6a067
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
   strafe:
     m_Name: Strafe
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: dae7ed62-5dca-4586-ad46-2915154b235e
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: c6117fc4-0aad-4449-8983-64592fcbb9b7
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
   zoom:
-    m_Name: Zoom
+    m_Name: CameraZoom
     m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 5c05f0ca-34d6-4b24-ace1-d21b12cb2914
+    m_ExpectedControlType: Axis
+    m_Id: d2583f54-9825-4ca8-a95d-29f40351d75f
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
-    m_Flags: 0
-  isGrounded: 0
-  animator: {fileID: 816266243373174331}
+    m_Flags: 1
+  isGrounded: 1
+  animator: {fileID: 0}
   mainCameraTransform: {fileID: 0}
-  MoveDirection: {x: 0, y: 0, z: 0}
+  MoveDirection: {x: -0.87110496, y: 0, z: 0.49109688}
   isStrafing: 0
   timeFell: 0
+  timeSinceLeftGround: 108.799965
   groundDistance: 1.5
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  slopeAngle: 0
+  slopeAngle: -0
   groundCheck: {fileID: 0}
   magnethand: {fileID: 0}
   strength: 0
@@ -5317,17 +5292,10 @@ MonoBehaviour:
   - IsCrossFadeExit: 0
     Layer: 0
     OriginatingState: -2089788878
-    DestinationState: 819769265
+    DestinationState: 318136877
     TransitionDuration: 0
     TriggerNameHash: 125937960
     TransitionIndex: 0
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: -2089788878
-    DestinationState: 1364798825
-    TransitionDuration: 0
-    TriggerNameHash: 125937960
-    TransitionIndex: 1
   m_Animator: {fileID: 816266243373174331}
 --- !u!114 &8828432557346177328
 MonoBehaviour:
@@ -7458,6 +7426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5ba67ebe667c9b44897ab9e70042124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
   WalkSpeed: 1
   runSpeed: 10
   changeRate: 0.1
@@ -7549,6 +7518,7 @@ MonoBehaviour:
   MoveDirection: {x: 0, y: 0, z: 0}
   isStrafing: 0
   timeFell: 0
+  timeSinceLeftGround: 0
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
@@ -7603,17 +7573,10 @@ MonoBehaviour:
   - IsCrossFadeExit: 0
     Layer: 0
     OriginatingState: -2089788878
-    DestinationState: 819769265
+    DestinationState: 318136877
     TransitionDuration: 0
     TriggerNameHash: 125937960
     TransitionIndex: 0
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: -2089788878
-    DestinationState: 1364798825
-    TransitionDuration: 0
-    TriggerNameHash: 125937960
-    TransitionIndex: 1
   m_Animator: {fileID: 8662449472912868481}
 --- !u!114 &6824458183448676426
 MonoBehaviour:

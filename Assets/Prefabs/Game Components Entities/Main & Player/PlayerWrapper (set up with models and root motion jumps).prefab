@@ -5169,6 +5169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5ba67ebe667c9b44897ab9e70042124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
   WalkSpeed: 1
   runSpeed: 10
   changeRate: 0.1
@@ -5260,6 +5261,7 @@ MonoBehaviour:
   MoveDirection: {x: 0, y: 0, z: 0}
   isStrafing: 0
   timeFell: 0
+  timeSinceLeftGround: 0
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
@@ -5314,17 +5316,10 @@ MonoBehaviour:
   - IsCrossFadeExit: 0
     Layer: 0
     OriginatingState: -2089788878
-    DestinationState: 819769265
+    DestinationState: 318136877
     TransitionDuration: 0
     TriggerNameHash: 125937960
     TransitionIndex: 0
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: -2089788878
-    DestinationState: 1364798825
-    TransitionDuration: 0
-    TriggerNameHash: 125937960
-    TransitionIndex: 1
   m_Animator: {fileID: 816266243373174331}
 --- !u!114 &8828432557346177328
 MonoBehaviour:
@@ -7393,6 +7388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5ba67ebe667c9b44897ab9e70042124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
   WalkSpeed: 1
   runSpeed: 10
   changeRate: 0.1
@@ -7484,6 +7480,7 @@ MonoBehaviour:
   MoveDirection: {x: 0, y: 0, z: 0}
   isStrafing: 0
   timeFell: 0
+  timeSinceLeftGround: 0
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
@@ -7538,17 +7535,10 @@ MonoBehaviour:
   - IsCrossFadeExit: 0
     Layer: 0
     OriginatingState: -2089788878
-    DestinationState: 819769265
+    DestinationState: 318136877
     TransitionDuration: 0
     TriggerNameHash: 125937960
     TransitionIndex: 0
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: -2089788878
-    DestinationState: 1364798825
-    TransitionDuration: 0
-    TriggerNameHash: 125937960
-    TransitionIndex: 1
   m_Animator: {fileID: 8662449472912868481}
 --- !u!114 &6824458183448676426
 MonoBehaviour:

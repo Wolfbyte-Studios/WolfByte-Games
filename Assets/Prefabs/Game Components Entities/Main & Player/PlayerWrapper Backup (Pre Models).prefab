@@ -1152,7 +1152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 106994226
+  GlobalObjectIdHash: 2265042570
   InScenePlacedSourceGlobalObjectIdHash: 2417093912
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -1922,6 +1922,8 @@ MonoBehaviour:
   Danger2: {fileID: 2100000, guid: 56746bed0160c75449ead28b00762cc3, type: 2}
   Danger3: {fileID: 2100000, guid: 56746bed0160c75449ead28b00762cc3, type: 2}
   Death: {fileID: 2100000, guid: b7626751f9698da4ea69b52749745434, type: 2}
+  Rock: {fileID: 0}
+  Glass: {fileID: 0}
 --- !u!1 &3926007576853500318
 GameObject:
   m_ObjectHideFlags: 0
@@ -3660,20 +3662,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5ba67ebe667c9b44897ab9e70042124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
   WalkSpeed: 1
   runSpeed: 10
   changeRate: 0.1
   rotSpeed: 100
   jumpHeight: 2.5
+  jumpVelocityModifier: 0
   newMoveDirection: {x: 0, y: 0, z: 0}
+  cameraSensitivity: 1
+  zoomSensitivity: 1
   angleThreshold: 120
-  cc: {fileID: 0}
+  gravityModifier: 0
+  fallAnimDelay: 0.5
   Default: {fileID: -944628639613478452, guid: 885d30fcdcdaaaa45afd1919015cedeb, type: 3}
   jump:
     m_Name: Jump
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: ff4b2e32-5904-4b56-8b94-b1393f8c2ce2
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  camRotate:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 3925eab1-fe2f-4226-934f-144882bc929f
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -3714,8 +3730,37 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  strafe:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 5828f1ac-5b64-487e-bd84-a99e2b07086e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  zoom:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 3a52a898-2d61-47da-99ea-ec0cca3de958
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  isGrounded: 0
   animator: {fileID: 0}
   mainCameraTransform: {fileID: 0}
+  MoveDirection: {x: 0, y: 0, z: 0}
+  isStrafing: 0
+  timeFell: 0
+  timeSinceLeftGround: 0
+  groundDistance: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  slopeAngle: 0
+  groundCheck: {fileID: 0}
   magnethand: {fileID: 0}
   strength: 0
 --- !u!114 &9141709615733921602
@@ -3764,17 +3809,10 @@ MonoBehaviour:
   - IsCrossFadeExit: 0
     Layer: 0
     OriginatingState: -2089788878
-    DestinationState: 819769265
+    DestinationState: 318136877
     TransitionDuration: 0
     TriggerNameHash: 125937960
     TransitionIndex: 0
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: -2089788878
-    DestinationState: 1364798825
-    TransitionDuration: 0
-    TriggerNameHash: 125937960
-    TransitionIndex: 1
   m_Animator: {fileID: 816266243373174331}
 --- !u!114 &8828432557346177328
 MonoBehaviour:
@@ -4104,6 +4142,8 @@ MonoBehaviour:
   Danger2: {fileID: 2100000, guid: 56746bed0160c75449ead28b00762cc3, type: 2}
   Danger3: {fileID: 2100000, guid: 56746bed0160c75449ead28b00762cc3, type: 2}
   Death: {fileID: 2100000, guid: b7626751f9698da4ea69b52749745434, type: 2}
+  Rock: {fileID: 0}
+  Glass: {fileID: 0}
 --- !u!1 &7119033808850743264
 GameObject:
   m_ObjectHideFlags: 0
@@ -5829,20 +5869,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5ba67ebe667c9b44897ab9e70042124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
   WalkSpeed: 1
   runSpeed: 10
   changeRate: 0.1
   rotSpeed: 100
   jumpHeight: 2.5
+  jumpVelocityModifier: 0
   newMoveDirection: {x: 0, y: 0, z: 0}
+  cameraSensitivity: 1
+  zoomSensitivity: 1
   angleThreshold: 120
-  cc: {fileID: 0}
+  gravityModifier: 0
+  fallAnimDelay: 0.5
   Default: {fileID: -944628639613478452, guid: 885d30fcdcdaaaa45afd1919015cedeb, type: 3}
   jump:
     m_Name: Jump
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: ff4b2e32-5904-4b56-8b94-b1393f8c2ce2
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  camRotate:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 534a4efa-3361-45fd-a1ff-b783360f68f7
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -5883,8 +5937,37 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  strafe:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e2aaae8c-f694-475b-a5cc-490c2d0cbdb9
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  zoom:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 53af51f8-cbf7-4527-8255-283216d35a6f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  isGrounded: 0
   animator: {fileID: 0}
   mainCameraTransform: {fileID: 0}
+  MoveDirection: {x: 0, y: 0, z: 0}
+  isStrafing: 0
+  timeFell: 0
+  timeSinceLeftGround: 0
+  groundDistance: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  slopeAngle: 0
+  groundCheck: {fileID: 0}
   magnethand: {fileID: 0}
   strength: 0
 --- !u!114 &855415941307254772
@@ -5933,17 +6016,10 @@ MonoBehaviour:
   - IsCrossFadeExit: 0
     Layer: 0
     OriginatingState: -2089788878
-    DestinationState: 819769265
+    DestinationState: 318136877
     TransitionDuration: 0
     TriggerNameHash: 125937960
     TransitionIndex: 0
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: -2089788878
-    DestinationState: 1364798825
-    TransitionDuration: 0
-    TriggerNameHash: 125937960
-    TransitionIndex: 1
   m_Animator: {fileID: 8662449472912868481}
 --- !u!114 &6824458183448676426
 MonoBehaviour:

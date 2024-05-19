@@ -119,40 +119,7 @@ public class PlayerMovement : NetworkBehaviour
         velocity = rb.velocity;
         
         var m = move.ReadValue<Vector2>();
-        isGrounded = checkGrounded();
-        animator.SetBool("isGrounded", isGrounded);
-        timeSinceLeftGround = Time.time - timeFell;
-        if (!isGrounded)
-        {
-            if (!isFalling)
-            {
-                // Player just left the ground
-                isFalling = true;
-                timeFell = Time.time;
-                animator.applyRootMotion = false;
-                animator.SetBool("CanJump", false);
-            }
-            inAirMovement();
-            // Continually check if the player has been in the air longer than fallAnimDelay
-            float timeSinceLeftGround = Time.time - timeFell;
-            if (timeSinceLeftGround >= fallAnimDelay)
-            {
-                animator.SetBool("InAir", true);
-            }
-        }
-        else
-        {
-            // Player is grounded again
-            if (isFalling)
-            {
-                isFalling = false;
-                animator.applyRootMotion = true;
-                animator.SetBool("InAir", false);
-                animator.SetBool("CanJump", true);
-                timeFell = 0; // Reset timeFell when grounded
-            }
         
-        }
     
         jump.started += ctx => Jump(ctx);
         camRotate.performed += ctx => RotateCamera(ctx);
@@ -188,6 +155,43 @@ public class PlayerMovement : NetworkBehaviour
             rb.velocity = v;
         }
 
+    }
+    public void checkGroundedStuff()
+    {
+        isGrounded = checkGrounded();
+        animator.SetBool("isGrounded", isGrounded);
+        timeSinceLeftGround = Time.time - timeFell;
+        if (!isGrounded)
+        {
+            if (!isFalling)
+            {
+                // Player just left the ground
+                isFalling = true;
+                timeFell = Time.time;
+                animator.applyRootMotion = false;
+                animator.SetBool("CanJump", false);
+            }
+            inAirMovement();
+            // Continually check if the player has been in the air longer than fallAnimDelay
+            float timeSinceLeftGround = Time.time - timeFell;
+            if (timeSinceLeftGround >= fallAnimDelay)
+            {
+                animator.SetBool("InAir", true);
+            }
+        }
+        else
+        {
+            // Player is grounded again
+            if (isFalling)
+            {
+                isFalling = false;
+                animator.applyRootMotion = true;
+                animator.SetBool("InAir", false);
+                animator.SetBool("CanJump", true);
+                timeFell = 0; // Reset timeFell when grounded
+            }
+
+        }
     }
     public float groundDistance = 0.4f;
     public LayerMask groundMask;

@@ -1,4 +1,6 @@
 @echo off
+REM Change directory to your repository
+cd /d "C:\Users\user1\3d zeldaish"
 
 REM Pull the latest changes from the remote repository
 echo Pulling the latest changes from the remote repository...

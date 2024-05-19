@@ -119,7 +119,7 @@ public class PlayerMovement : NetworkBehaviour
         velocity = rb.velocity;
         
         var m = move.ReadValue<Vector2>();
-        
+        checkGroundedStuff();
     
         jump.started += ctx => Jump(ctx);
         camRotate.performed += ctx => RotateCamera(ctx);

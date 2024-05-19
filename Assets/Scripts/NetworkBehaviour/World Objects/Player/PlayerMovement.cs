@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
+using Unity.VisualScripting.InputSystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -108,6 +109,7 @@ public class PlayerMovement : NetworkBehaviour
     }
     public float timeFell;
     private bool isFalling;
+    public float timeSinceLeftGround;
     public void FixedUpdate()
     {
         if (!IsOwner)
@@ -119,30 +121,39 @@ public class PlayerMovement : NetworkBehaviour
         var m = move.ReadValue<Vector2>();
         isGrounded = checkGrounded();
         animator.SetBool("isGrounded", isGrounded);
-        if (Time.time - timeFell >= fallAnimDelay)
+        timeSinceLeftGround = Time.time - timeFell;
+        if (!isGrounded)
         {
-            animator.SetBool("InAir", true);
-            timeFell = 0;
-        }
-        switch (isGrounded)
-        {
-            case false:
-                //if left ground
+            if (!isFalling)
+            {
+                // Player just left the ground
                 isFalling = true;
                 timeFell = Time.time;
                 animator.applyRootMotion = false;
-                //if left ground and delay surpassed
-
-                break;
-            case true:
-                //if grounded
+                animator.SetBool("CanJump", false);
+            }
+            inAirMovement();
+            // Continually check if the player has been in the air longer than fallAnimDelay
+            float timeSinceLeftGround = Time.time - timeFell;
+            if (timeSinceLeftGround >= fallAnimDelay)
+            {
+                animator.SetBool("InAir", true);
+            }
+        }
+        else
+        {
+            // Player is grounded again
+            if (isFalling)
+            {
                 isFalling = false;
                 animator.applyRootMotion = true;
                 animator.SetBool("InAir", false);
                 animator.SetBool("CanJump", true);
-                break;
-
+                timeFell = 0; // Reset timeFell when grounded
+            }
+        
         }
+    
         jump.started += ctx => Jump(ctx);
         camRotate.performed += ctx => RotateCamera(ctx);
         isStrafing = strafe.IsPressed();
@@ -166,22 +177,17 @@ public class PlayerMovement : NetworkBehaviour
         }
 
     }
-    public Vector3 v;
     public void OnAnimatorMove()
     {
         if (isGrounded && Time.deltaTime > 0)
         {
-            v = (animator.deltaPosition) / Time.deltaTime;
+            Vector3 v = (animator.deltaPosition ) / Time.deltaTime;
 
             // we preserve the existing y part of the current velocity.
             v.y = rb.velocity.y;
             rb.velocity = v;
         }
-        if (animator.GetNextAnimatorStateInfo(0).IsName("Base.WalkingJump"))
-        {
-            rb.velocity = v * jumpVelocityModifier;
-            Debug.Log("Jump Here");
-        }
+
     }
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
@@ -215,10 +221,7 @@ public class PlayerMovement : NetworkBehaviour
         //
     }
 
-    private void Jump_started(InputAction.CallbackContext obj)
-    {
-        throw new System.NotImplementedException();
-    }
+   
 
     public MagnetismStrength magnethand;
     [Tooltip("Strength of Magnet Hand (Somewhere around 2000)")]
@@ -296,6 +299,12 @@ public class PlayerMovement : NetworkBehaviour
         }
 
     }
+    public void inAirMovement()
+    {
+        Vector3 v = MoveDirection * animator.GetFloat("Speed") * jumpVelocityModifier;
+        v.y = rb.velocity.y;
+        rb.velocity = v;
+    }
     float CalculateInitialVelocity(float height, float gravity)
     {
         return Mathf.Sqrt(-2 * gravity * height);
@@ -313,16 +322,16 @@ public class PlayerMovement : NetworkBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         // Disable root motion for the jump
-        animator.SetTrigger("Jump");
+        
         var vel = rb.velocity;
-        animator.SetBool("CanJump", false);
         animator.applyRootMotion = false;
         // Store the current horizontal velocity
+        
 
-        isGrounded = false;
         // Set the new velocity with the calculated vertical component
         rb.velocity = vel + (Vector3.up * CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
 
+        animator.SetTrigger("Jump");
         
 
         Debug.Log(rb.velocity + " " + CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
@@ -340,6 +349,9 @@ public class PlayerMovement : NetworkBehaviour
     void OnNetworkDestroy()
     {
         // Unsubscribe to avoid memory leaks
-        run.performed -= _ => ToggleRun();
+        if (run != null) run.performed -= _ => ToggleRun();
+        if (jump != null) jump.started -= Jump;
+        if (camRotate != null) camRotate.performed -= RotateCamera;
+        if (zoom != null) zoom.performed -= ZoomCamera;
     }
 }

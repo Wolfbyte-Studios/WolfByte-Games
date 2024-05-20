@@ -12,7 +12,7 @@ public class PlayerCam : MonoBehaviour
     public float distanceForward;
     private Vector3 distanceFromPlayer;  // Define the offset relative to the player's orientation
     [Header("How far above the player the camera focuses")]
-    [Range(0f, 3f)]
+    [Range(10f, 10f)]
     public float LookOffset;  // Define the offset relative to the player's orientation
     [Header("Follow speed of the camera")]
     public float camSpeed;

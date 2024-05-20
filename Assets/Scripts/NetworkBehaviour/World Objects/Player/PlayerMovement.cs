@@ -326,7 +326,10 @@ public class PlayerMovement : NetworkBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         // Disable root motion for the jump
-        
+        if(animator.GetBool("CanJump") == false) 
+        { 
+            return;
+        }
         var vel = rb.velocity;
         animator.applyRootMotion = false;
         // Store the current horizontal velocity
@@ -334,9 +337,10 @@ public class PlayerMovement : NetworkBehaviour
 
         // Set the new velocity with the calculated vertical component
         rb.velocity = vel + (Vector3.up * CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
-
+        animator.SetBool("isGrounded", false);
         animator.SetTrigger("Jump");
-        
+        isGrounded = false;
+
 
         Debug.Log(rb.velocity + " " + CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
     }

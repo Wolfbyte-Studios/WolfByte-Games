@@ -26,9 +26,7 @@ schtasks /query /tn "GitAutoUpdate" >nul 2>&1
 if %errorlevel%==0 (
     echo Task already exists.
 ) else (
-    echo Creating a scheduled task to run this script every 24 hours...
-    schtasks /create /sc daily /tn "GitAutoUpdate" /tr "%SCRIPT_DIR%%~nx0" /st 00:00
-    echo Task created.
+        schtasks /create /sc daily /tn "GitAutoUpdate" /tr "%SCRIPT_DIR%%~nx0" /st 00:00
 )
 
 echo Done!

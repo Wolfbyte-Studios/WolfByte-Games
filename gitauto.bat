@@ -24,7 +24,7 @@ git push origin main
 REM Check if the task already exists
 schtasks /query /tn "GitAutoUpdate" >nul 2>&1
 if %errorlevel%==0 (
-    echo Task already exists.
+
 ) else (
         schtasks /create /sc daily /tn "GitAutoUpdate" /tr "%SCRIPT_DIR%%~nx0" /st 00:00
 )

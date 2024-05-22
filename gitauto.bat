@@ -26,7 +26,7 @@ schtasks /query /tn "GitAutoUpdate" >nul 2>&1
 if %errorlevel%==0 (
 
 ) else (
-        schtasks /create /sc daily /tn "GitAutoUpdate" /tr "%SCRIPT_DIR%%~nx0" /st 00:00
+        schtasks /create /sc daily /tn "GitAutoUpdate" /tr "%SCRIPT_DIR%%~nx0" /st 05:00
 )
 
 echo Done!

@@ -39,7 +39,7 @@ public class PlayerSpawner : NetworkBehaviour
        
         if (OwnerClientId == 0)
         {
-            Debug.LogWarning("Position");
+            Debug.Log(playerCam.transform.position);
             Player1.SetActive(true);
             Player1.transform.FindDeepChild("Raz").GetComponent<PlayerMovement>().playerSpawnStuff(playerCam);
         }

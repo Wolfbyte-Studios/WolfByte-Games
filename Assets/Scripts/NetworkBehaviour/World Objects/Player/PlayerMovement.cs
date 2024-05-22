@@ -85,10 +85,11 @@ public class PlayerMovement : NetworkBehaviour
     }
     void Awake()
     {
-
+        
         magnethand = transform.FindDeepChild("Magnet").gameObject.GetComponent<MagnetismStrength>();
 
         animator = gameObject.GetComponent<Animator>();
+        animator.applyRootMotion = false;
         jump = Default.FindAction("Jump");
         run = Default.FindAction("Run");
         camRotate = Default.FindAction("CameraRotate");

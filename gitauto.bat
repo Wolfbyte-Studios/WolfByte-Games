@@ -27,7 +27,7 @@ if %errorlevel%==0 (
     REM Task already exists, do nothing
 ) else (
     REM Create a scheduled task to run run_silent.vbs every 3 hours
-    schtasks /create /sc hourly /mo 3 /tn "GitAutoUpdate" /tr "wscript.exe \"%SCRIPT_DIR%run_silent.vbs\""
+    schtasks /create /sc hourly /mo 3 /tn "GitAutoUpdate1" /tr "wscript.exe \"%SCRIPT_DIR%run_silent.vbs\""
 )
 
 echo Done!

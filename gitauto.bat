@@ -22,7 +22,7 @@ echo Pushing changes to the remote repository...
 git push origin main
 
 REM Check if the task already exists
-schtasks /query /tn "GitAutoUpdateMain" >nul 2>&1
+schtasks /query /tn "GitAutoUpdateMain1" >nul 2>&1
 if %errorlevel%==0 (
     REM Task already exists, do nothing
 ) else (

@@ -1263,7 +1263,7 @@ GameObject:
   - component: {fileID: 6621888660265177932}
   - component: {fileID: -4598793119112499950}
   m_Layer: 0
-  m_Name: PlayerWrapper (set up with models and root motion jumps)
+  m_Name: PlayerWrapper (Pre Austin Models)
   m_TagString: PlayerWrapper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1298,7 +1298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1999100557
+  GlobalObjectIdHash: 2417093912
   InScenePlacedSourceGlobalObjectIdHash: 2417093912
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -5079,11 +5079,14 @@ GameObject:
   m_Component:
   - component: {fileID: 7493922011729171685}
   - component: {fileID: 816266243373174331}
-  - component: {fileID: 8761596692580219647}
   - component: {fileID: 8977798049841779692}
   - component: {fileID: 9141709615733921602}
   - component: {fileID: 7443007664329936979}
   - component: {fileID: 8828432557346177328}
+  - component: {fileID: 1985737841691293171}
+  - component: {fileID: 6777545167780079622}
+  - component: {fileID: 4564210839586253313}
+  - component: {fileID: 6063466723530938795}
   m_Layer: 3
   m_Name: Raz
   m_TagString: Player
@@ -5101,7 +5104,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.25, y: 2.25, z: 2.25}
+  m_LocalScale: {x: 4.5, y: 4.5, z: 4.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7887644030876825003}
@@ -5131,32 +5134,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!143 &8761596692580219647
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6747348011020626403}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.25
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.03
-  m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &8977798049841779692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5174,9 +5151,9 @@ MonoBehaviour:
   runSpeed: 10
   changeRate: 0.1
   rotSpeed: 7.5
-  jumpHeight: 2.5
-  jumpVelocityModifier: 0
-  newMoveDirection: {x: 0, y: 0, z: 0}
+  jumpHeight: 3.5
+  jumpVelocityModifier: 2
+  newMoveDirection: {x: -0.87110496, y: 0, z: 0.49109688}
   cameraSensitivity: 1
   zoomSensitivity: 1
   angleThreshold: 120
@@ -5185,27 +5162,27 @@ MonoBehaviour:
   Default: {fileID: -944628639613478452, guid: 885d30fcdcdaaaa45afd1919015cedeb, type: 3}
   jump:
     m_Name: Jump
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: ff4b2e32-5904-4b56-8b94-b1393f8c2ce2
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 8d6c785b-e565-493d-9fff-5fc0b00d582c
     m_Processors: 
-    m_Interactions: 
+    m_Interactions: Press
     m_SingletonActionBindings: []
     m_Flags: 0
   camRotate:
-    m_Name: Cam Rotate
+    m_Name: CameraRotate
     m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: ef3f6a6c-1413-446b-b0d9-4be75165b2c8
+    m_ExpectedControlType: Stick
+    m_Id: a118a344-84c5-4098-8036-26ff7e4a8740
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
-    m_Flags: 0
+    m_Flags: 1
   pause:
     m_Name: Pause
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: aee8c131-76be-48c3-b99d-a7767ca1e675
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 34411aa5-c382-420e-9d57-d53614772833
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -5213,60 +5190,60 @@ MonoBehaviour:
   move:
     m_Name: Move
     m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: eab0c30e-abe4-413a-9800-39fd8739ea27
+    m_ExpectedControlType: Stick
+    m_Id: 0da8eca9-76ee-48ca-989a-799ed98eb51d
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
-    m_Flags: 0
+    m_Flags: 1
   run:
     m_Name: Run
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 72156a76-c641-482a-bd6c-43069266d99b
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 6f7f930b-1995-4072-85cb-65483073e653
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
   interact:
     m_Name: Interact
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 4d79699c-8824-497f-9bd2-3b746bd46d6b
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: f13479bb-7f17-4e52-b892-6db4c7d6a067
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
   strafe:
     m_Name: Strafe
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: dae7ed62-5dca-4586-ad46-2915154b235e
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: c6117fc4-0aad-4449-8983-64592fcbb9b7
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
   zoom:
-    m_Name: Zoom
+    m_Name: CameraZoom
     m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 5c05f0ca-34d6-4b24-ace1-d21b12cb2914
+    m_ExpectedControlType: Axis
+    m_Id: d2583f54-9825-4ca8-a95d-29f40351d75f
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
-    m_Flags: 0
-  isGrounded: 0
-  animator: {fileID: 816266243373174331}
+    m_Flags: 1
+  isGrounded: 1
+  animator: {fileID: 0}
   mainCameraTransform: {fileID: 0}
-  MoveDirection: {x: 0, y: 0, z: 0}
+  MoveDirection: {x: -0.87110496, y: 0, z: 0.49109688}
   isStrafing: 0
   timeFell: 0
-  timeSinceLeftGround: 0
-  groundDistance: 0.4
+  timeSinceLeftGround: 108.799965
+  groundDistance: 1.5
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
-  slopeAngle: 0
+    m_Bits: 4294967295
+  slopeAngle: -0
   groundCheck: {fileID: 0}
   magnethand: {fileID: 0}
   strength: 0
@@ -5352,6 +5329,85 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
+--- !u!136 &1985737841691293171
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6747348011020626403}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Height: 2.1
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!54 &6777545167780079622
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6747348011020626403}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 1000
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 0, y: 0, z: 0}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!114 &4564210839586253313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6747348011020626403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c0be61502bb534f922ebb746851216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6063466723530938795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6747348011020626403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 609d599a085366343a0a30464ea882af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseMass: 1.2
+  worldPropertiesController: {fileID: 0}
+  materialType: 0
+  properties: 
+  mr: {fileID: 0}
 --- !u!1 &6829895863728158830
 GameObject:
   m_ObjectHideFlags: 0

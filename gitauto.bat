@@ -24,8 +24,10 @@ git push origin main
 REM Check if the task already exists
 schtasks /query /tn "GitAutoUpdate" >nul 2>&1
 if %errorlevel%==0 (
-    ) else (
-    schtasks /create /sc daily /tn "GitAutoUpdate" /tr "wscript.exe \"%SCRIPT_DIR%run_silent.vbs\"" /st 05:00
+    REM Task already exists, do nothing
+) else (
+    REM Create a scheduled task to run run_silent.vbs every 3 hours
+    schtasks /create /sc hourly /mo 3 /tn "GitAutoUpdate" /tr "wscript.exe \"%SCRIPT_DIR%run_silent.vbs\""
 )
 
 echo Done!

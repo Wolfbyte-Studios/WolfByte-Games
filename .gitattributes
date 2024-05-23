@@ -3,7 +3,7 @@
 *.shader text
 *.cginc  text
 # Unity binary files
-*.unity  binary
+*.unity  filter=lfs diff=lfs merge=lfs -text
 *.prefab binary
 *.asset filter=lfs diff=lfs merge=lfs -text
 # Unity LFS-tracked files

@@ -117,7 +117,7 @@ public class PlayerMovement : NetworkBehaviour
         {
             return;
         }
-        velocity = rb.velocity;
+        velocity = rb.linearVelocity;
         
         var m = move.ReadValue<Vector2>();
         checkGroundedStuff();
@@ -152,8 +152,8 @@ public class PlayerMovement : NetworkBehaviour
             Vector3 v = (animator.deltaPosition ) / Time.deltaTime;
 
             // we preserve the existing y part of the current velocity.
-            v.y = rb.velocity.y;
-            rb.velocity = v;
+            v.y = rb.linearVelocity.y;
+            rb.linearVelocity = v;
         }
 
     }
@@ -307,8 +307,8 @@ public class PlayerMovement : NetworkBehaviour
     public void inAirMovement()
     {
         Vector3 v = MoveDirection * animator.GetFloat("Speed") * jumpVelocityModifier;
-        v.y = rb.velocity.y;
-        rb.velocity = v;
+        v.y = rb.linearVelocity.y;
+        rb.linearVelocity = v;
     }
     float CalculateInitialVelocity(float height, float gravity)
     {
@@ -331,19 +331,19 @@ public class PlayerMovement : NetworkBehaviour
         { 
             return;
         }
-        var vel = rb.velocity;
+        var vel = rb.linearVelocity;
         animator.applyRootMotion = false;
         // Store the current horizontal velocity
         
 
         // Set the new velocity with the calculated vertical component
-        rb.velocity = vel + (Vector3.up * CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
+        rb.linearVelocity = vel + (Vector3.up * CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
         animator.SetBool("isGrounded", false);
         animator.SetTrigger("Jump");
         isGrounded = false;
 
 
-        Debug.Log(rb.velocity + " " + CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
+        Debug.Log(rb.linearVelocity + " " + CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
     }
 
     public void Interact()

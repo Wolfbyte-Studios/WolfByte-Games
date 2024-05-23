@@ -37,7 +37,7 @@ public class Pushable : NetworkBehaviour
                 break;
 
             case "Pusher":
-                rb.velocity = CalculateVelocity();
+                rb.linearVelocity = CalculateVelocity();
                 break;
         }
     }
@@ -78,7 +78,7 @@ public class Pushable : NetworkBehaviour
         if(collision.gameObject.tag == "Pusher")
         {
             Debug.Log("Pushed! " + CalculateVelocity());
-            rb.velocity = CalculateVelocity();
+            rb.linearVelocity = CalculateVelocity();
 
 
         }

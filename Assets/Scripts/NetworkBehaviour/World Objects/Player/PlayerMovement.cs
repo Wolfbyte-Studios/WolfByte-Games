@@ -87,7 +87,7 @@ public class PlayerMovement : NetworkBehaviour
     }
     void Awake()
     {
-        
+
         magnethand = transform.FindDeepChild("Magnet").gameObject.GetComponent<MagnetismStrength>();
 
         animator = gameObject.GetComponent<Animator>();
@@ -120,17 +120,17 @@ public class PlayerMovement : NetworkBehaviour
             return;
         }
         velocity = rb.linearVelocity;
-        
+
         var m = move.ReadValue<Vector2>();
         animator.SetBool("rootMotion", animator.applyRootMotion);
         checkGroundedStuff();
-    
+
         jump.started += ctx => Jump(ctx);
         camRotate.performed += ctx => RotateCamera(ctx);
         isStrafing = strafe.IsPressed();
         zoom.performed += ctx => ZoomCamera(ctx);
-        
-        
+
+
         if (m != Vector2.zero)
         {
             animator.applyRootMotion = true;
@@ -152,7 +152,7 @@ public class PlayerMovement : NetworkBehaviour
     {
         if (isGrounded && Time.deltaTime > 0)
         {
-            Vector3 v = (animator.deltaPosition ) / Time.deltaTime;
+            Vector3 v = (animator.deltaPosition) / Time.deltaTime;
 
             // we preserve the existing y part of the current velocity.
             v.y = rb.linearVelocity.y;
@@ -235,7 +235,7 @@ public class PlayerMovement : NetworkBehaviour
         //
     }
 
-   
+
 
     public MagnetismStrength magnethand;
     [Tooltip("Strength of Magnet Hand (Somewhere around 2000)")]
@@ -333,23 +333,30 @@ public class PlayerMovement : NetworkBehaviour
         // For zoom, use later
         PlayerCam.distanceForward += zoom * zoomSensitivity;
     }
+    private float timeJumped;
+    public float jumpDelay;
     public void Jump(InputAction.CallbackContext context)
     {
-        // Disable root motion for the jump
-        if(animator.GetBool("CanJump") == false) 
-        { 
+        
+        if (Time.time - timeJumped < jumpDelay)
+        {
             return;
         }
-        if(animator.GetFloat("Speed") >= 10)
+        // Disable root motion for the jump
+        if (animator.GetBool("CanJump") == false)
         {
-            
+            return;
+        }
+        if (animator.GetFloat("Speed") >= runSpeed)
+        {
+
             StartCoroutine(longJump());
             return;
         }
         var vel = rb.linearVelocity;
         animator.applyRootMotion = false;
         // Store the current horizontal velocity
-        
+
 
         // Set the new velocity with the calculated vertical component
         rb.linearVelocity = vel + (Vector3.up * CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
@@ -359,17 +366,18 @@ public class PlayerMovement : NetworkBehaviour
 
 
         Debug.Log(rb.linearVelocity + " " + CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
+        timeJumped = Time.time;
     }
     IEnumerator longJump()
     {
-        
-        
+
+
         // Store the current horizontal velocity
 
 
         // Set the new velocity with the calculated vertical component
-        
-       
+
+
         animator.SetTrigger("Jump");
         animator.SetBool("isJumping", true);
         yield return new WaitForSeconds(longJumpDelay);
@@ -377,13 +385,13 @@ public class PlayerMovement : NetworkBehaviour
 
         var vel = rb.linearVelocity;
         animator.applyRootMotion = false;
-        rb.linearVelocity = vel + (Vector3.up * CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
-        
+        rb.linearVelocity = vel + (Vector3.up * CalculateInitialVelocity(4f, Physics.gravity.y));
+
         isGrounded = false;
 
 
         Debug.Log(rb.linearVelocity + " " + CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
-        
+
         yield return new WaitForSeconds(longJumpDelay);
         animator.SetBool("isJumping", false);
         yield return null;

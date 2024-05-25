@@ -5487,6 +5487,7 @@ MonoBehaviour:
   rotSpeed: 7.5
   jumpHeight: 3.5
   jumpVelocityModifier: 2
+  longJumpDelay: 0.5
   newMoveDirection: {x: -0.87110496, y: 0, z: 0.49109688}
   cameraSensitivity: 1
   zoomSensitivity: 1
@@ -7793,6 +7794,7 @@ MonoBehaviour:
   rotSpeed: 7.5
   jumpHeight: 2.5
   jumpVelocityModifier: 0
+  longJumpDelay: 0.5
   newMoveDirection: {x: 0, y: 0, z: 0}
   cameraSensitivity: 1
   zoomSensitivity: 1
@@ -16774,6 +16776,7 @@ MonoBehaviour:
   rotSpeed: 7.5
   jumpHeight: 10
   jumpVelocityModifier: 3
+  longJumpDelay: 0.5
   newMoveDirection: {x: 0.6044931, y: 0, z: 0.7966104}
   cameraSensitivity: 1
   zoomSensitivity: 1
@@ -17031,8 +17034,8 @@ MonoBehaviour:
   - IsCrossFadeExit: 0
     Layer: 0
     OriginatingState: -2089788878
-    DestinationState: 1897025180
-    TransitionDuration: 0.05778873
+    DestinationState: 808912829
+    TransitionDuration: 0.010474028
     TriggerNameHash: 125937960
     TransitionIndex: 3
   m_Animator: {fileID: 7117751572966785429}

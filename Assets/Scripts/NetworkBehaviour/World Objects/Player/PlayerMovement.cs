@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
@@ -15,6 +16,7 @@ public class PlayerMovement : NetworkBehaviour
     public float rotSpeed;  // This will control the speed of the rotation
     public float jumpHeight;
     public float jumpVelocityModifier;
+    public float longJumpDelay = .5f;
     public Vector3 newMoveDirection;
     public float cameraSensitivity = 1;
     public float zoomSensitivity = 1;
@@ -120,6 +122,7 @@ public class PlayerMovement : NetworkBehaviour
         velocity = rb.linearVelocity;
         
         var m = move.ReadValue<Vector2>();
+        animator.SetBool("rootMotion", animator.applyRootMotion);
         checkGroundedStuff();
     
         jump.started += ctx => Jump(ctx);
@@ -167,10 +170,16 @@ public class PlayerMovement : NetworkBehaviour
             if (!isFalling)
             {
                 // Player just left the ground
-                isFalling = true;
+
                 timeFell = Time.time;
                 animator.applyRootMotion = false;
                 animator.SetBool("CanJump", false);
+                if (animator.GetBool("isJumping"))
+                {
+                    Debug.Log("jumping, not falling");
+                    return;
+                }
+                isFalling = true;
             }
             inAirMovement();
             // Continually check if the player has been in the air longer than fallAnimDelay
@@ -331,6 +340,12 @@ public class PlayerMovement : NetworkBehaviour
         { 
             return;
         }
+        if(animator.GetFloat("Speed") >= 10)
+        {
+            
+            StartCoroutine(longJump());
+            return;
+        }
         var vel = rb.linearVelocity;
         animator.applyRootMotion = false;
         // Store the current horizontal velocity
@@ -345,7 +360,34 @@ public class PlayerMovement : NetworkBehaviour
 
         Debug.Log(rb.linearVelocity + " " + CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
     }
+    IEnumerator longJump()
+    {
+        
+        
+        // Store the current horizontal velocity
 
+
+        // Set the new velocity with the calculated vertical component
+        
+       
+        animator.SetTrigger("Jump");
+        animator.SetBool("isJumping", true);
+        yield return new WaitForSeconds(longJumpDelay);
+        animator.SetBool("isGrounded", false);
+
+        var vel = rb.linearVelocity;
+        animator.applyRootMotion = false;
+        rb.linearVelocity = vel + (Vector3.up * CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
+        
+        isGrounded = false;
+
+
+        Debug.Log(rb.linearVelocity + " " + CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
+        
+        yield return new WaitForSeconds(longJumpDelay);
+        animator.SetBool("isJumping", false);
+        yield return null;
+    }
     public void Interact()
     {
         // Interaction logic here

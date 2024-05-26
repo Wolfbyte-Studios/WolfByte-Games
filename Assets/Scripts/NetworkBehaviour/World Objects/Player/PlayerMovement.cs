@@ -347,6 +347,8 @@ public class PlayerMovement : NetworkBehaviour
         {
             return;
         }
+
+        timeJumped = Time.time;
         if (animator.GetFloat("Speed") >= runSpeed)
         {
 
@@ -368,7 +370,7 @@ public class PlayerMovement : NetworkBehaviour
 
 
         Debug.Log(rb.linearVelocity + " " + CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
-        timeJumped = Time.time;
+       
     }
     IEnumerator longJump()
     {

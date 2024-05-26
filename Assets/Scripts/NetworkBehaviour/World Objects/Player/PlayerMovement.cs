@@ -355,13 +355,15 @@ public class PlayerMovement : NetworkBehaviour
         }
         var vel = rb.linearVelocity;
         animator.applyRootMotion = false;
+        animator.SetBool("CanJump", true);
         // Store the current horizontal velocity
 
 
         // Set the new velocity with the calculated vertical component
+        animator.SetTrigger("Jump");
         rb.linearVelocity = vel + (Vector3.up * CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
         animator.SetBool("isGrounded", false);
-        animator.SetTrigger("Jump");
+        
         isGrounded = false;
 
 

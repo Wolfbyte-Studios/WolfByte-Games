@@ -135,10 +135,7 @@ public class PlayerMovement : NetworkBehaviour
         {
             animator.applyRootMotion = true;
             // Determine running state based on speed
-            if (animator.GetFloat("Speed") <= 0.75f)
-            {
-                isRunning = false;
-            }
+            
 
             Move(m != Vector2.zero, isRunning, m);
         }
@@ -249,7 +246,8 @@ public class PlayerMovement : NetworkBehaviour
         var oldMoveDirection = newMoveDirection;
         if (!isMoving)
         {
-            animator.SetFloat("Speed", Mathf.Lerp(animator.GetFloat("Speed"), 0f, changeRate * Time.deltaTime));
+            //animator.SetFloat("Speed", Mathf.Lerp(animator.GetFloat("Speed"), 0f, changeRate * Time.deltaTime));
+            animator.SetFloat("Speed", 0f);
             return;
         }
         checkSlope();
@@ -294,7 +292,7 @@ public class PlayerMovement : NetworkBehaviour
         }
         else
         {
-            animator.SetFloat("Speed", Mathf.Lerp(currentSpeed, 1f, changeRate * Time.deltaTime));
+            animator.SetFloat("Speed", Mathf.Lerp(currentSpeed, 1f, 2 * changeRate * Time.deltaTime));
         }
     }
 
@@ -323,7 +321,7 @@ public class PlayerMovement : NetworkBehaviour
     }
     public void inAirMovement()
     {
-        Vector3 v = MoveDirection * jumpVelocityModifier;
+        Vector3 v = MoveDirection * jumpVelocityModifier * (animator.GetFloat("Speed") / runSpeed);
         v.y = rb.linearVelocity.y;
         rb.linearVelocity = v;
     }

@@ -1474,7 +1474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 339825237
+  GlobalObjectIdHash: 2417093912
   InScenePlacedSourceGlobalObjectIdHash: 2417093912
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -16771,15 +16771,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5ba67ebe667c9b44897ab9e70042124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0.0017132403, y: 0.000015377998, z: -0.002290482}
+  velocity: {x: 0, y: -0.000000059604645, z: 0}
   WalkSpeed: 1
   runSpeed: 25
-  changeRate: 1
+  changeRate: 0.25
   rotSpeed: 7.5
   jumpHeight: 3
-  jumpVelocityModifier: 2
+  jumpVelocityModifier: 20
   longJumpDelay: 0.5
-  newMoveDirection: {x: 0.6044931, y: 0, z: 0.7966104}
+  newMoveDirection: {x: 0.22236964, y: 0, z: -0.9749625}
   cameraSensitivity: 1
   zoomSensitivity: 1
   angleThreshold: 120
@@ -16861,11 +16861,11 @@ MonoBehaviour:
   isGrounded: 1
   animator: {fileID: 0}
   mainCameraTransform: {fileID: 0}
-  MoveDirection: {x: 0.6044931, y: 0, z: 0.7966104}
+  MoveDirection: {x: 0.22236964, y: 0, z: -0.9749625}
   isStrafing: 0
   timeFell: 0
-  timeSinceLeftGround: 223.97992
-  groundDistance: 0.25
+  timeSinceLeftGround: 352.29987
+  groundDistance: 1
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -16873,7 +16873,7 @@ MonoBehaviour:
   groundCheck: {fileID: 0}
   magnethand: {fileID: 0}
   strength: 0
-  jumpDelay: 0
+  jumpDelay: 2
 --- !u!114 &4561063534221159435
 MonoBehaviour:
   m_ObjectHideFlags: 0

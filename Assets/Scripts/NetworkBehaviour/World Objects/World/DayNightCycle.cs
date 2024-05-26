@@ -15,12 +15,15 @@ public class DayNightCycle : NetworkBehaviour
     public float timeScale = 1f;
     public float timeMultiplier = 1f;  // Multiplier to control the speed of time
 
+    private float updateInterval = 1f;  // Interval in seconds to update the celestial positions
+    private float nextUpdate;
+
     void Start()
     {
-        
         hours = PlayerPrefs.GetInt("hours", 12);  // Default to noon if not set
         minutes = PlayerPrefs.GetInt("minutes", 0);  // Default to 0 if not set
         startTime = Time.realtimeSinceStartup;
+        nextUpdate = Time.time + updateInterval;
     }
 
     void Update()
@@ -42,20 +45,26 @@ public class DayNightCycle : NetworkBehaviour
                     hours = 0;
                 }
             }
+
+            // Save time to PlayerPrefs less frequently
+            if (minutes % 5 == 0)
+            {
+                PlayerPrefs.SetInt("hours", hours);
+                PlayerPrefs.SetInt("minutes", minutes);
+            }
         }
 
-        UpdateCelestialPositions();
-        
+        if (Time.time >= nextUpdate)
+        {
+            UpdateCelestialPositions();
+            nextUpdate = Time.time + updateInterval;
+        }
     }
 
     void UpdateCelestialPositions()
     {
         float dayFraction = (hours / 24f);
-        if ((hours > 18))
-        {
-            day(false);
-        }
-        else if((hours < 6))
+        if ((hours > 18) || (hours < 6))
         {
             day(false);
         }
@@ -74,11 +83,10 @@ public class DayNightCycle : NetworkBehaviour
         sun.transform.rotation = Quaternion.Lerp(sun.transform.rotation, sunTargetRotation, Time.deltaTime * 0.5f);
         moon.transform.rotation = Quaternion.Lerp(moon.transform.rotation, moonTargetRotation, Time.deltaTime * 0.5f);
     }
+
     public void day(bool isDay)
     {
         sun.SetActive(isDay);
         moon.SetActive(!isDay);
-        PlayerPrefs.SetInt("hours", hours);
-        PlayerPrefs.SetInt("minutes", minutes);
     }
 }

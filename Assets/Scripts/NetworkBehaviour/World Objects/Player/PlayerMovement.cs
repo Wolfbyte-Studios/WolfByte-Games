@@ -249,11 +249,12 @@ public class PlayerMovement : NetworkBehaviour
         var oldMoveDirection = newMoveDirection;
         if (!isMoving)
         {
-            animator.SetFloat("Speed", Mathf.Lerp(animator.GetFloat("Speed"), 0f, changeRate));
+            animator.SetFloat("Speed", Mathf.Lerp(animator.GetFloat("Speed"), 0f, changeRate * Time.deltaTime));
             return;
         }
         checkSlope();
         ZeroSidewaysRotation();
+
         // Calculate new movement direction based on camera orientation
         newMoveDirection = mainCameraTransform.forward * inputDirection.y + mainCameraTransform.right * inputDirection.x;
         newMoveDirection.y = 0; // Ensure the movement is purely horizontal
@@ -286,10 +287,18 @@ public class PlayerMovement : NetworkBehaviour
 
         float targetSpeed = isRunning ? runSpeed : WalkSpeed;
         float speedChange = isRunning ? changeRate * 1.5f : changeRate;
-        animator.SetFloat("Speed", Mathf.Clamp(animator.GetFloat("Speed") + speedChange * inputDirection.magnitude, -targetSpeed, targetSpeed));
+        float currentSpeed = animator.GetFloat("Speed");
 
-
+        if (isRunning)
+        {
+            animator.SetFloat("Speed", Mathf.Clamp(currentSpeed + speedChange * inputDirection.magnitude, -targetSpeed, targetSpeed));
+        }
+        else
+        {
+            animator.SetFloat("Speed", Mathf.Lerp(currentSpeed, 1f, speedChange * Time.deltaTime));
+        }
     }
+
     public void RotateCamera(InputAction.CallbackContext context)
     {
         Vector2 rotation = context.ReadValue<Vector2>();
@@ -363,7 +372,7 @@ public class PlayerMovement : NetworkBehaviour
 
         // Set the new velocity with the calculated vertical component
         animator.SetTrigger("Jump");
-        rb.linearVelocity = vel + (Vector3.up * CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
+        rb.linearVelocity = vel + (Vector3.up * CalculateInitialVelocity(jumpHeight, Physics.gravity.y) + (Vector3.forward * jumpVelocityModifier));
         animator.SetBool("isGrounded", false);
         
         isGrounded = false;

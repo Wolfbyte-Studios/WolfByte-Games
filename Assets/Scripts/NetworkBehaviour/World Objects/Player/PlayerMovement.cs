@@ -286,16 +286,15 @@ public class PlayerMovement : NetworkBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotSpeed); // Smoothly rotate towards the target direction
 
         float targetSpeed = isRunning ? runSpeed : WalkSpeed;
-        float speedChange = isRunning ? changeRate * 1.5f : changeRate;
         float currentSpeed = animator.GetFloat("Speed");
 
         if (isRunning)
         {
-            animator.SetFloat("Speed", Mathf.Clamp(currentSpeed + speedChange * inputDirection.magnitude, -targetSpeed, targetSpeed));
+            animator.SetFloat("Speed", Mathf.Clamp(currentSpeed + changeRate * inputDirection.magnitude, -targetSpeed, targetSpeed));
         }
         else
         {
-            animator.SetFloat("Speed", Mathf.Lerp(currentSpeed, 1f, speedChange * Time.deltaTime));
+            animator.SetFloat("Speed", Mathf.Lerp(currentSpeed, 1f, changeRate * Time.deltaTime));
         }
     }
 
@@ -324,7 +323,7 @@ public class PlayerMovement : NetworkBehaviour
     }
     public void inAirMovement()
     {
-        Vector3 v = MoveDirection * animator.GetFloat("Speed") * jumpVelocityModifier;
+        Vector3 v = MoveDirection * jumpVelocityModifier;
         v.y = rb.linearVelocity.y;
         rb.linearVelocity = v;
     }

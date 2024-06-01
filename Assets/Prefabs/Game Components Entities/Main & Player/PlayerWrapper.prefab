@@ -5481,6 +5481,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
+  MoveDirection: {x: -0.87110496, y: 0, z: 0.49109688}
+  mainCameraTransform: {fileID: 0}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  groundCheck: {fileID: 0}
+  magnethand: {fileID: 0}
   WalkSpeed: 1
   runSpeed: 10
   changeRate: 0.1
@@ -5494,6 +5501,15 @@ MonoBehaviour:
   angleThreshold: 120
   gravityModifier: 1
   fallAnimDelay: 0.75
+  timeSinceLeftGround: 108.799965
+  timeFell: 0
+  groundDistance: 1.5
+  slopeAngle: -0
+  strength: 0
+  jumpDelay: 0
+  isGrounded: 1
+  isStrafing: 0
+  animator: {fileID: 0}
   Default: {fileID: -944628639613478452, guid: 885d30fcdcdaaaa45afd1919015cedeb, type: 3}
   jump:
     m_Name: Jump
@@ -5567,22 +5583,6 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 1
-  isGrounded: 1
-  animator: {fileID: 0}
-  mainCameraTransform: {fileID: 0}
-  MoveDirection: {x: -0.87110496, y: 0, z: 0.49109688}
-  isStrafing: 0
-  timeFell: 0
-  timeSinceLeftGround: 108.799965
-  groundDistance: 1.5
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  slopeAngle: -0
-  groundCheck: {fileID: 0}
-  magnethand: {fileID: 0}
-  strength: 0
-  jumpDelay: 0
 --- !u!114 &9141709615733921602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7789,6 +7789,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
+  MoveDirection: {x: 0, y: 0, z: 0}
+  mainCameraTransform: {fileID: 0}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  groundCheck: {fileID: 0}
+  magnethand: {fileID: 0}
   WalkSpeed: 1
   runSpeed: 10
   changeRate: 0.1
@@ -7802,6 +7809,15 @@ MonoBehaviour:
   angleThreshold: 120
   gravityModifier: 1
   fallAnimDelay: 0.5
+  timeSinceLeftGround: 0
+  timeFell: 0
+  groundDistance: 0.4
+  slopeAngle: 0
+  strength: 0
+  jumpDelay: 0
+  isGrounded: 0
+  isStrafing: 0
+  animator: {fileID: 0}
   Default: {fileID: -944628639613478452, guid: 885d30fcdcdaaaa45afd1919015cedeb, type: 3}
   jump:
     m_Name: Jump
@@ -7875,22 +7891,6 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
-  isGrounded: 0
-  animator: {fileID: 0}
-  mainCameraTransform: {fileID: 0}
-  MoveDirection: {x: 0, y: 0, z: 0}
-  isStrafing: 0
-  timeFell: 0
-  timeSinceLeftGround: 0
-  groundDistance: 0.4
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 0
-  slopeAngle: 0
-  groundCheck: {fileID: 0}
-  magnethand: {fileID: 0}
-  strength: 0
-  jumpDelay: 0
 --- !u!114 &855415941307254772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16772,6 +16772,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: -0.000000059604645, z: 0}
+  MoveDirection: {x: 0.4407214, y: 0, z: -0.897644}
+  mainCameraTransform: {fileID: 0}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  groundCheck: {fileID: 0}
+  magnethand: {fileID: 0}
   WalkSpeed: 1
   runSpeed: 25
   changeRate: 0.25
@@ -16785,6 +16792,15 @@ MonoBehaviour:
   angleThreshold: 120
   gravityModifier: 1
   fallAnimDelay: 1
+  timeSinceLeftGround: 3793.3386
+  timeFell: 0
+  groundDistance: 2
+  slopeAngle: 26.092102
+  strength: 0
+  jumpDelay: 2
+  isGrounded: 1
+  isStrafing: 0
+  animator: {fileID: 0}
   Default: {fileID: -944628639613478452, guid: 885d30fcdcdaaaa45afd1919015cedeb, type: 3}
   jump:
     m_Name: Jump
@@ -16858,22 +16874,6 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 1
-  isGrounded: 1
-  animator: {fileID: 0}
-  mainCameraTransform: {fileID: 0}
-  MoveDirection: {x: 0.4407214, y: 0, z: -0.897644}
-  isStrafing: 0
-  timeFell: 0
-  timeSinceLeftGround: 3793.3386
-  groundDistance: 2
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  slopeAngle: 26.092102
-  groundCheck: {fileID: 0}
-  magnethand: {fileID: 0}
-  strength: 0
-  jumpDelay: 2
 --- !u!114 &4561063534221159435
 MonoBehaviour:
   m_ObjectHideFlags: 0

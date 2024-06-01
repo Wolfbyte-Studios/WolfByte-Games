@@ -1,133 +1,28 @@
 
-bl_info = {
-    "name": "Wide Flange Steel Beams",
-    "blender": (2, 80, 0),
-    "category": "Object",
-}
-
-import bpy
-from mathutils import Vector
-
-# Standard wide flange steel beam dimensions
-beam_dimensions = {
-    "W8x10": {"d": 203.2, "bf": 101.6, "tf": 5.72, "tw": 4.57},
-    "W10x12": {"d": 254, "bf": 127, "tf": 6.35, "tw": 5.08},
-    # Add more beam sizes as needed
-}
-
-def create_beam(size):
-    if size not in beam_dimensions:
-        return None
-
-    dims = beam_dimensions[size]
-    d, bf, tf, tw = dims["d"], dims["bf"], dims["tf"], dims["tw"]
-
-    # Create mesh and object
-    mesh = bpy.data.meshes.new(name="Beam")
-    obj = bpy.data.objects.new(name="Beam", object_data=mesh)
-
-    # Link object to scene
-    bpy.context.collection.objects.link(obj)
-
-    # Create mesh data
-    vertices = [
-        # Top flange
-        Vector((-bf/2, -d/2 + tf, 0)), Vector((bf/2, -d/2 + tf, 0)),
-        Vector((bf/2, -d/2, 0)), Vector((-bf/2, -d/2, 0)),
-        # Web
-        Vector((-tw/2, -d/2 + tf, 0)), Vector((tw/2, -d/2 + tf, 0)),
-        Vector((tw/2, d/2 - tf, 0)), Vector((-tw/2, d/2 - tf, 0)),
-        # Bottom flange
-        Vector((-bf/2, d/2, 0)), Vector((bf/2, d/2, 0)),
-        Vector((bf/2, d/2 - tf, 0)), Vector((-bf/2, d/2 - tf, 0)),
-    ]
-
-    edges = []
-    faces = [
-        # Top flange
-        (0, 1, 2, 3),
-        # Web
-        (4, 5, 6, 7),
-        # Bottom flange
-        (8, 9, 10, 11),
-    ]
-
-    mesh.from_pydata(vertices, edges, faces)
-    mesh.update()
-
-    return obj
-
-def add_stiffeners(beam_obj, num_stiffeners, width, thickness):
-    if not beam_obj:
-        return
-
-    for i in range(num_stiffeners):
-        # Example code to add a stiffener
-        # Positioning and sizing would need to be adjusted based on beam dimensions
-        bpy.ops.mesh.primitive_cube_add(size=1, location=(0, 0, 0))
-        stiffener = bpy.context.object
-        stiffener.scale = (thickness, width / 2, thickness)
-        stiffener.location = (0, 0, i * 2)
-
-        mod = beam_obj.modifiers.new(name="Boolean", type='BOOLEAN')
-        mod.operation = 'UNION'
-        mod.object = stiffener
-        bpy.context.view_layer.objects.active = beam_obj
-        bpy.ops.object.modifier_apply(modifier=mod.name)
-        bpy.data.objects.remove(stiffener)
-
-def add_holes(beam_obj, num_holes, diameter, spacing):
-    if not beam_obj:
-        return
-
-    for i in range(num_holes):
-        bpy.ops.mesh.primitive_cylinder_add(radius=diameter / 2, depth=beam_obj.dimensions.x, location=(0, i * spacing, 0))
-        hole = bpy.context.object
-
-        mod = beam_obj.modifiers.new(name="Boolean", type='BOOLEAN')
-        mod.operation = 'DIFFERENCE'
-        mod.object = hole
-        bpy.context.view_layer.objects.active = beam_obj
-        bpy.ops.object.modifier_apply(modifier=mod.name)
-        bpy.data.objects.remove(hole)
-
-class BeamOperator(bpy.types.Operator):
-    bl_idname = "object.create_beam"
-    bl_label = "Create Beam"
-    bl_options = {'REGISTER', 'UNDO'}
-
-    beam_size: bpy.props.StringProperty(name="Beam Size", default="W8x10")
-    num_stiffeners: bpy.props.IntProperty(name="Number of Stiffeners", default=2)
-    stiffener_width: bpy.props.FloatProperty(name="Stiffener Width", default=20.0)
-    stiffener_thickness: bpy.props.FloatProperty(name="Stiffener Thickness", default=1.0)
-    num_holes: bpy.props.IntProperty(name="Number of Holes", default=2)
-    hole_diameter: bpy.props.FloatProperty(name="Hole Diameter", default=5.0)
-    hole_spacing: bpy.props.FloatProperty(name="Hole Spacing", default=30.0)
-
-    def execute(self, context):
-        beam = create_beam(self.beam_size)
-        add_stiffeners(beam, self.num_stiffeners, self.stiffener_width, self.stiffener_thickness)
-        add_holes(beam, self.num_holes, self.hole_diameter, self.hole_spacing)
-        return {'FINISHED'}
-
-class BeamPanel(bpy.types.Panel):
-    bl_idname = "VIEW3D_PT_beam_panel"
-    bl_label = "Beam Tools"
-    bl_space_type = 'VIEW_3D'
-    bl_region_type = 'UI'
-    bl_category = 'Beam Tools'
-
-    def draw(self, context):
-        layout = self.layout
-        layout.operator(BeamOperator.bl_idname)
-
-def register():
-    bpy.utils.register_class(BeamOperator)
-    bpy.utils.register_class(BeamPanel)
-
-def unregister():
-    bpy.utils.unregister_class(BeamOperator)
-    bpy.utils.unregister_class(BeamPanel)
-
-if __name__ == "__main__":
-    register()
+*.shader text
+*.cginc  text
+# Unity binary files
+*.unity  filter=lfs diff=lfs merge=lfs -text
+*.prefab binary
+*.asset filter=lfs diff=lfs merge=lfs -text
+# Unity LFS-tracked files
+*.fbx    filter=lfs diff=lfs merge=lfs -text
+*.mat    filter=lfs diff=lfs merge=lfs -text
+*.png    filter=lfs diff=lfs merge=lfs -text
+*.jpg    filter=lfs diff=lfs merge=lfs -text
+*.jpeg   filter=lfs diff=lfs merge=lfs -text
+*.tga    filter=lfs diff=lfs merge=lfs -text
+*.psd    filter=lfs diff=lfs merge=lfs -text
+*.wav    filter=lfs diff=lfs merge=lfs -text
+*.mp3    filter=lfs diff=lfs merge=lfs -text
+*.ogg    filter=lfs diff=lfs merge=lfs -text
+*.mp4    filter=lfs diff=lfs merge=lfs -text
+*.mov    filter=lfs diff=lfs merge=lfs -text
+# Blender files
+*.blend  filter=lfs diff=lfs merge=lfs -text
+*.blend1 filter=lfs diff=lfs merge=lfs -text
+*.blend2 filter=lfs diff=lfs merge=lfs -text
+# Other common 3D asset types
+*.obj    filter=lfs diff=lfs merge=lfs -text
+*.mtl    filter=lfs diff=lfs merge=lfs -text
+*.dae    filter=lfs diff=lfs merge=lfs -text

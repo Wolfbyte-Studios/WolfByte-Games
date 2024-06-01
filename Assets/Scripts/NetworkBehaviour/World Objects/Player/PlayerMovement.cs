@@ -10,6 +10,12 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : NetworkBehaviour
 {
     public Vector3 velocity;
+    public Vector3 MoveDirection;
+    public Transform mainCameraTransform; // Reference to the main camera's transform
+    public LayerMask groundMask;
+    public Transform groundCheck;
+    public MagnetismStrength magnethand;
+    [Tooltip("Strength of Magnet Hand (Somewhere around 2000)")]
     public float WalkSpeed;
     public float runSpeed;
     public float changeRate;
@@ -24,7 +30,17 @@ public class PlayerMovement : NetworkBehaviour
     public float angleThreshold;
     public float gravityModifier;
     public float fallAnimDelay = .5f;
-    private Vector3 oldMoveDirectionDifference;
+    public float timeSinceLeftGround;
+    public float timeFell;
+    public float groundDistance = 0.4f;
+    public float slopeAngle;
+    public float strength;
+    public float jumpDelay;
+    private bool isFalling;
+    private float timeJumped;
+    public bool isGrounded;
+    public bool isStrafing;
+    public Animator animator;
     public InputActionAsset Default;
     public InputAction jump;
     public InputAction camRotate;
@@ -34,19 +50,14 @@ public class PlayerMovement : NetworkBehaviour
     public InputAction interact;
     public InputAction strafe;
     public InputAction zoom;
-    public bool isGrounded;
-
-    public Animator animator;
-    private bool isRunning = false;
-    public Transform mainCameraTransform; // Reference to the main camera's transform
-    private PlayerCam PlayerCam;
-    public Vector3 MoveDirection;
-    public bool isStrafing;
-    private float _verticalVelocity;
-    private float _terminalVelocity = 53.0f;
     private Rigidbody rb;
     private CapsuleCollider cc;
-    //Following variables are for engaging with animation events
+    private bool isRunning = false;
+    private PlayerCam PlayerCam;
+    
+    
+    
+   
 
     private void Start()
     {
@@ -80,11 +91,7 @@ public class PlayerMovement : NetworkBehaviour
         groundCheck.localPosition = new Vector3(0, cc.height / 2, 0);
 
     }
-    public void playerSpawnStuff(GameObject cam)
-    {
-
-        gameObject.transform.position = cam.transform.position;
-    }
+    
     void Awake()
     {
 
@@ -105,14 +112,6 @@ public class PlayerMovement : NetworkBehaviour
         mainCameraTransform = GameObject.Find("PlayerCam").transform; // Get the main camera transform
 
     }
-
-    void ToggleRun()
-    {
-        isRunning = !isRunning; // Toggle the running state
-    }
-    public float timeFell;
-    private bool isFalling;
-    public float timeSinceLeftGround;
     public void FixedUpdate()
     {
         if (!IsOwner)
@@ -121,21 +120,88 @@ public class PlayerMovement : NetworkBehaviour
         }
         velocity = rb.linearVelocity;
 
-        var m = move.ReadValue<Vector2>();
+
         animator.SetBool("rootMotion", animator.applyRootMotion);
         checkGroundedStuff();
-
-        jump.started += ctx => Jump(ctx);
+        CheckMovement();
+        jump.started += ctx => JumpAnimator(ctx);
         camRotate.performed += ctx => RotateCamera(ctx);
         isStrafing = strafe.IsPressed();
         zoom.performed += ctx => ZoomCamera(ctx);
 
 
+
+
+    }
+    public float CalculateInitialVelocity(float height, float gravity)
+    {
+        return Mathf.Sqrt(-2 * gravity * height);
+    }
+    public void JumpAnimator(InputAction.CallbackContext context)
+    {
+        //Only apply animator properties here, will apply physics to jump via animator events
+        if (Time.time - timeJumped < jumpDelay)
+        {
+            return;
+        }
+        if (animator.GetBool("CanJump") == false)
+        {
+            return;
+        }
+
+        timeJumped = Time.time;
+        
+        
+       
+    }
+    public void longJumpAnimator()
+    {
+        if (animator.GetFloat("Speed") >= runSpeed)
+        {
+
+            StartCoroutine(longJumpPhysics());
+            return;
+        }
+    }
+    public void JumpPhysics()
+    {
+        var vel = rb.linearVelocity;
+        animator.applyRootMotion = false;
+        animator.SetBool("CanJump", true);
+        // Store the current horizontal velocity
+
+
+        // Set the new velocity with the calculated vertical component
+        animator.SetTrigger("Jump");
+        rb.linearVelocity = vel + (Vector3.up * CalculateInitialVelocity(jumpHeight, Physics.gravity.y) + (Vector3.forward * jumpVelocityModifier));
+        animator.SetBool("isGrounded", false);
+
+        isGrounded = false;
+
+
+        Debug.Log(rb.linearVelocity + " " + CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
+    }
+    public void playerSpawnStuff(GameObject cam)
+    {
+
+        gameObject.transform.position = cam.transform.position;
+    }
+    public void Interact()
+    {
+        // Interaction logic here
+    }
+    public void Push(GameObject pushable)
+    {
+
+    }
+    public void CheckMovement()
+    {
+        var m = move.ReadValue<Vector2>();
         if (m != Vector2.zero)
         {
             animator.applyRootMotion = true;
             // Determine running state based on speed
-            
+
 
             Move(m != Vector2.zero, isRunning, m);
         }
@@ -143,7 +209,6 @@ public class PlayerMovement : NetworkBehaviour
         {
             Move(false, false, Vector2.zero);
         }
-
     }
     public void OnAnimatorMove()
     {
@@ -159,7 +224,7 @@ public class PlayerMovement : NetworkBehaviour
     }
     public void checkGroundedStuff()
     {
-        isGrounded = checkGrounded();
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, groundDistance, groundMask);
         animator.SetBool("isGrounded", isGrounded);
         timeSinceLeftGround = Time.time - timeFell;
         if (!isGrounded)
@@ -200,43 +265,6 @@ public class PlayerMovement : NetworkBehaviour
 
         }
     }
-    public float groundDistance = 0.4f;
-    public LayerMask groundMask;
-    public float slopeAngle;
-
-    public Transform groundCheck;
-    public bool checkGrounded()
-    {
-        bool grounded = Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, groundDistance, groundMask);
-        return grounded;
-    }
-    public void checkSlope()
-    {
-        if (Physics.Raycast(groundCheck.position, Vector3.down, out RaycastHit hit, groundDistance + 1f, groundMask))
-        {
-            // Calculate the angle between the ground normal and the player's forward direction
-            Vector3 groundNormal = hit.normal;
-            Vector3 playerForward = transform.forward;
-
-            // Project the player's forward vector onto the plane defined by the ground normal
-            Vector3 projectedForward = Vector3.ProjectOnPlane(playerForward, groundNormal);
-
-            // Calculate the angle between the projected forward vector and the ground plane's up vector
-            slopeAngle = -Vector3.SignedAngle(Vector3.up, groundNormal, transform.right);
-
-            //Debug.Log("Slope Angle: " + slopeAngle);
-        }
-    }
-    public void onStep()
-    {
-        //
-    }
-
-
-
-    public MagnetismStrength magnethand;
-    [Tooltip("Strength of Magnet Hand (Somewhere around 2000)")]
-    public float strength;
     public void ActivateMagnetHand()
     {
         magnethand.strength = 2000;
@@ -325,9 +353,39 @@ public class PlayerMovement : NetworkBehaviour
         v.y = rb.linearVelocity.y;
         rb.linearVelocity = v;
     }
-    float CalculateInitialVelocity(float height, float gravity)
+    public void ToggleRun()
     {
-        return Mathf.Sqrt(-2 * gravity * height);
+        isRunning = !isRunning; // Toggle the running state
+    }
+    public void checkSlope()
+    {
+        if (Physics.Raycast(groundCheck.position, Vector3.down, out RaycastHit hit, 25f, groundMask))
+        {
+            // Calculate the angle between the ground normal and the player's forward direction
+            Vector3 groundNormal = hit.normal;
+            Vector3 playerForward = transform.forward;
+
+            // Project the player's forward vector onto the plane defined by the ground normal
+            Vector3 projectedForward = Vector3.ProjectOnPlane(playerForward, groundNormal);
+
+            // Calculate the angle between the projected forward vector and the ground plane's up vector
+            slopeAngle = -Vector3.SignedAngle(Vector3.up, groundNormal, transform.right);
+
+            //Debug.Log("Slope Angle: " + slopeAngle);
+        }
+    }
+    public void onStep()
+    {
+        //
+    }
+
+    void OnNetworkDestroy()
+    {
+        // Unsubscribe to avoid memory leaks
+        if (run != null) run.performed -= _ => ToggleRun();
+        if (jump != null) jump.started -= JumpAnimator;
+        if (camRotate != null) camRotate.performed -= RotateCamera;
+        if (zoom != null) zoom.performed -= ZoomCamera;
     }
     public void ZeroSidewaysRotation()
     {
@@ -339,46 +397,7 @@ public class PlayerMovement : NetworkBehaviour
         // For zoom, use later
         PlayerCam.distanceForward += zoom * zoomSensitivity;
     }
-    private float timeJumped;
-    public float jumpDelay;
-    public void Jump(InputAction.CallbackContext context)
-    {
-        
-        if (Time.time - timeJumped < jumpDelay)
-        {
-            return;
-        }
-        // Disable root motion for the jump
-        if (animator.GetBool("CanJump") == false)
-        {
-            return;
-        }
-
-        timeJumped = Time.time;
-        if (animator.GetFloat("Speed") >= runSpeed)
-        {
-
-            StartCoroutine(longJump());
-            return;
-        }
-        var vel = rb.linearVelocity;
-        animator.applyRootMotion = false;
-        animator.SetBool("CanJump", true);
-        // Store the current horizontal velocity
-
-
-        // Set the new velocity with the calculated vertical component
-        animator.SetTrigger("Jump");
-        rb.linearVelocity = vel + (Vector3.up * CalculateInitialVelocity(jumpHeight, Physics.gravity.y) + (Vector3.forward * jumpVelocityModifier));
-        animator.SetBool("isGrounded", false);
-        
-        isGrounded = false;
-
-
-        Debug.Log(rb.linearVelocity + " " + CalculateInitialVelocity(jumpHeight, Physics.gravity.y));
-       
-    }
-    IEnumerator longJump()
+    IEnumerator longJumpPhysics()
     {
 
 
@@ -405,22 +424,5 @@ public class PlayerMovement : NetworkBehaviour
         yield return new WaitForSeconds(longJumpDelay);
         animator.SetBool("isJumping", false);
         yield return null;
-    }
-    public void Interact()
-    {
-        // Interaction logic here
-    }
-    public void Push(GameObject pushable)
-    {
-
-    }
-
-    void OnNetworkDestroy()
-    {
-        // Unsubscribe to avoid memory leaks
-        if (run != null) run.performed -= _ => ToggleRun();
-        if (jump != null) jump.started -= Jump;
-        if (camRotate != null) camRotate.performed -= RotateCamera;
-        if (zoom != null) zoom.performed -= ZoomCamera;
     }
 }

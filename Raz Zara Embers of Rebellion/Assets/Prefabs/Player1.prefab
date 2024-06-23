@@ -63,9 +63,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
+    y: 0.5
     width: 1
-    height: 1
+    height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -284,6 +284,8 @@ Transform:
   m_Children:
   - {fileID: 5777078390378528509}
   - {fileID: 2224406597320024057}
+  - {fileID: 69116504304344333}
+  - {fileID: 366414806145089509}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4043237513647060109
@@ -303,6 +305,183 @@ MonoBehaviour:
   MovementAcceleration: 0.075
   RotationSpeed: 100
   jumpHeight: 1
+--- !u!1 &3059535011919598799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 69116504304344333}
+  - component: {fileID: 1683331174813587832}
+  m_Layer: 0
+  m_Name: TIme
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &69116504304344333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059535011919598799}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2176495122938739952}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1683331174813587832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059535011919598799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93886dddef38e648b436200c5e44b46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sun: {fileID: 0}
+  moon: {fileID: 0}
+  hours: 0
+  minutes: 0
+  SecondsPerMinute: 35
+  timeScale: 1
+  timeMultiplier: 1
+--- !u!1 &6522617267820613713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 366414806145089509}
+  - component: {fileID: 6138385500791860155}
+  m_Layer: 0
+  m_Name: Custom Pass
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &366414806145089509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6522617267820613713}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.791721, y: -0.019367218, z: -6.0744057}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2176495122938739952}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6138385500791860155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6522617267820613713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d6499a6bd256e47b859377446493a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  fadeRadius: 0
+  priority: 0
+  customPasses:
+  - rid: 3900520220488368521
+  - rid: 3900520220488368522
+  - rid: 3900520220488368523
+  injectionPoint: 1
+  m_TargetCamera: {fileID: 0}
+  useTargetCamera: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 3900520220488368521
+      type: {class: CleanOutlineCustomPass, ns: CR, asm: Assembly-CSharp}
+      data:
+        m_Name: Custom Pass
+        enabled: 1
+        targetColorBuffer: 0
+        targetDepthBuffer: 0
+        clearFlags: 0
+        passFoldout: 0
+        m_Version: 0
+        m_DrawType: 0
+        m_LayerMask:
+          serializedVersion: 2
+          m_Bits: 8
+        m_DrawRenderers: []
+        m_OutlineWidth: 1
+        m_NormalExclude: 0
+        m_OutlineColor: {r: 0, g: 0.12164171, b: 0.21763767, a: 1}
+        m_FullColorByDistance: 1
+        m_FullColorDistanceNear: 20
+        m_FullColorDistanceFar: 40
+        m_BlockType: 2
+        m_BlockColor: {r: 0, g: 0, b: 0, a: 0.8156863}
+    - rid: 3900520220488368522
+      type: {class: CleanOutlineCustomPass, ns: CR, asm: Assembly-CSharp}
+      data:
+        m_Name: Custom Pass
+        enabled: 1
+        targetColorBuffer: 0
+        targetDepthBuffer: 0
+        clearFlags: 0
+        passFoldout: 0
+        m_Version: 0
+        m_DrawType: 0
+        m_LayerMask:
+          serializedVersion: 2
+          m_Bits: 192
+        m_DrawRenderers: []
+        m_OutlineWidth: 1
+        m_NormalExclude: 0
+        m_OutlineColor: {r: 2.1185472, g: 0, b: 0, a: 0}
+        m_FullColorByDistance: 1
+        m_FullColorDistanceNear: 20
+        m_FullColorDistanceFar: 40
+        m_BlockType: 2
+        m_BlockColor: {r: 0, g: 0, b: 0, a: 0.5}
+    - rid: 3900520220488368523
+      type: {class: CleanOutlineCustomPass, ns: CR, asm: Assembly-CSharp}
+      data:
+        m_Name: Custom Pass
+        enabled: 1
+        targetColorBuffer: 0
+        targetDepthBuffer: 0
+        clearFlags: 0
+        passFoldout: 0
+        m_Version: 0
+        m_DrawType: 0
+        m_LayerMask:
+          serializedVersion: 2
+          m_Bits: 128
+        m_DrawRenderers: []
+        m_OutlineWidth: 1
+        m_NormalExclude: 0
+        m_OutlineColor: {r: 0, g: 0.125, b: 0.12255201, a: 1}
+        m_FullColorByDistance: 1
+        m_FullColorDistanceNear: 20
+        m_FullColorDistanceFar: 40
+        m_BlockType: 2
+        m_BlockColor: {r: 0, g: 0, b: 0, a: 0.5}
 --- !u!1001 &6316007439341033750
 PrefabInstance:
   m_ObjectHideFlags: 0

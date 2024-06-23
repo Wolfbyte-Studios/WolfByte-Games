@@ -105,10 +105,9 @@ public class PlayerMovement : MonoBehaviour
     }
     public void OnJump(InputAction.CallbackContext obj)
     {
-        if (isGrounded)
-        {
+        
             anim.SetTrigger("Jump");
-        }
+        
     }
     
     public void Jump()

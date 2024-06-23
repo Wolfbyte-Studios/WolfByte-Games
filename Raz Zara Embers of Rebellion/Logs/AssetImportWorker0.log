@@ -15,7 +15,7 @@ C:/Users/user1/3d zeldaish/Raz Zara Embers of Rebellion
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51555
+51171
 -job-worker-count
 9
 -background-job-worker-count
@@ -59,20 +59,20 @@ C:/Users/user1/3d zeldaish/Raz Zara Embers of Rebellion
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [21780]  Target information:
+Player connection [11260]  Target information:
 
-Player connection [21780]  * "[IP] 192.168.86.27 [Port] 0 [Flags] 2 [Guid] 3158798940 [EditorId] 3158798940 [Version] 1048832 [Id] WindowsEditor(7,MotherShip) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [11260]  * "[IP] 192.168.86.27 [Port] 0 [Flags] 2 [Guid] 3499192817 [EditorId] 3499192817 [Version] 1048832 [Id] WindowsEditor(7,MotherShip) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [21780]  * "[IP] 25.13.96.105 [Port] 0 [Flags] 2 [Guid] 3158798940 [EditorId] 3158798940 [Version] 1048832 [Id] WindowsEditor(7,MotherShip) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [11260]  * "[IP] 25.13.96.105 [Port] 0 [Flags] 2 [Guid] 3499192817 [EditorId] 3499192817 [Version] 1048832 [Id] WindowsEditor(7,MotherShip) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [21780]  * "[IP] 10.241.78.62 [Port] 0 [Flags] 2 [Guid] 3158798940 [EditorId] 3158798940 [Version] 1048832 [Id] WindowsEditor(7,MotherShip) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [11260]  * "[IP] 10.241.78.62 [Port] 0 [Flags] 2 [Guid] 3499192817 [EditorId] 3499192817 [Version] 1048832 [Id] WindowsEditor(7,MotherShip) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [21780] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [21780] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [11260] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [11260] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 9
 Library Redirect Path: Library/
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-Refreshing native plugins compatible for Editor in 1.37 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.08 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.5f1 (17028576122a)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Resources/UnitySubsystems
@@ -89,43 +89,43 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56416
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56296
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001695 seconds.
-- Loaded All Assemblies, in  0.299 seconds
+Registered in 0.001782 seconds.
+- Loaded All Assemblies, in  0.326 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.316 seconds
-Domain Reload Profiling: 615ms
-	BeginReloadAssembly (104ms)
+- Finished resetting the current domain, in  0.352 seconds
+Domain Reload Profiling: 676ms
+	BeginReloadAssembly (109ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (29ms)
+	RebuildCommonClasses (30ms)
 	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (39ms)
-	LoadAllAssembliesAndSetupDomain (118ms)
-		LoadAssemblies (101ms)
+	initialDomainReloadingComplete (42ms)
+	LoadAllAssembliesAndSetupDomain (135ms)
+		LoadAssemblies (106ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (116ms)
-			TypeCache.Refresh (115ms)
-				TypeCache.ScanAssembly (105ms)
+		AnalyzeDomain (133ms)
+			TypeCache.Refresh (132ms)
+				TypeCache.ScanAssembly (122ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (317ms)
+	FinalizeReload (352ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (272ms)
+		SetupLoadedEditorAssemblies (315ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (21ms)
+			InitializePlatformSupportModulesInManaged (19ms)
 			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (116ms)
-			ProcessInitializeOnLoadMethodAttributes (126ms)
+			BeforeProcessingInitializeOnLoad (6ms)
+			ProcessInitializeOnLoadAttributes (147ms)
+			ProcessInitializeOnLoadMethodAttributes (139ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -134,569 +134,146 @@ Domain Reload Profiling: 615ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.893 seconds
+- Loaded All Assemblies, in  1.017 seconds
 'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Raz Zara Embers of Rebellion
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.043 seconds
-Domain Reload Profiling: 1932ms
-	BeginReloadAssembly (314ms)
+- Finished resetting the current domain, in  1.189 seconds
+Domain Reload Profiling: 2202ms
+	BeginReloadAssembly (341ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (25ms)
-	RebuildCommonClasses (31ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (33ms)
-	LoadAllAssembliesAndSetupDomain (501ms)
-		LoadAssemblies (313ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (38ms)
+	LoadAllAssembliesAndSetupDomain (594ms)
+		LoadAssemblies (361ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (272ms)
-			TypeCache.Refresh (195ms)
-				TypeCache.ScanAssembly (182ms)
-			BuildScriptInfoCaches (64ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (1043ms)
+		AnalyzeDomain (322ms)
+			TypeCache.Refresh (235ms)
+				TypeCache.ScanAssembly (218ms)
+			BuildScriptInfoCaches (72ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1189ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (812ms)
+		SetupLoadedEditorAssemblies (945ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (2ms)
 			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (54ms)
-			ProcessInitializeOnLoadAttributes (421ms)
-			ProcessInitializeOnLoadMethodAttributes (326ms)
-			AfterProcessingInitializeOnLoad (5ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 454 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6615 unused Assets / (6.1 MB). Loaded Objects now: 7640.
-Memory consumption went from 272.2 MB to 266.1 MB.
-Total: 8.670700 ms (FindLiveObjects: 0.539600 ms CreateObjectMapping: 0.516800 ms MarkObjects: 4.687000 ms  DeleteObjects: 2.925700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 4584.800812 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Animations FBX.fbx
-  artifactKey: Guid(9b43b3ebe305d6640b0c8d0a8ea4e7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Animations FBX.fbx using Guid(9b43b3ebe305d6640b0c8d0a8ea4e7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'd95399b93448bb3676af5e5625e633a9') in 1.7754293 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 30
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Leak Detected : Persistent allocates 8 individual allocations. To find out more please enable 'Preferences > Jobs > Leak Detection Level > Enabled With Stack Trace' and reproduce the leak again.
-- Loaded All Assemblies, in  0.646 seconds
-'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.896 seconds
-Domain Reload Profiling: 1542ms
-	BeginReloadAssembly (222ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (29ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (59ms)
-	RebuildCommonClasses (26ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (22ms)
-	LoadAllAssembliesAndSetupDomain (366ms)
-		LoadAssemblies (267ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (172ms)
-			TypeCache.Refresh (6ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (154ms)
-			ResolveRequiredComponents (8ms)
-	FinalizeReload (896ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (592ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (2ms)
-			BeforeProcessingInitializeOnLoad (47ms)
-			ProcessInitializeOnLoadAttributes (386ms)
-			ProcessInitializeOnLoadMethodAttributes (150ms)
+			BeforeProcessingInitializeOnLoad (53ms)
+			ProcessInitializeOnLoadAttributes (501ms)
+			ProcessInitializeOnLoadMethodAttributes (381ms)
 			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-Refreshing native plugins compatible for Editor in 0.95 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (5ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 28 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6614 unused Assets / (5.4 MB). Loaded Objects now: 7772.
-Memory consumption went from 268.4 MB to 263.0 MB.
-Total: 8.260700 ms (FindLiveObjects: 0.624200 ms CreateObjectMapping: 0.480300 ms MarkObjects: 4.754400 ms  DeleteObjects: 2.400400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 360.903112 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Animations FBX.fbx
-  artifactKey: Guid(9b43b3ebe305d6640b0c8d0a8ea4e7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Animations FBX.fbx using Guid(9b43b3ebe305d6640b0c8d0a8ea4e7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'a1329dbb85d590a65d536f6f2852988b') in 0.8358117 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 30
+Unloading 480 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7412 unused Assets / (7.0 MB). Loaded Objects now: 8500.
+Memory consumption went from 295.7 MB to 288.7 MB.
+Total: 11.039100 ms (FindLiveObjects: 1.592000 ms CreateObjectMapping: 0.553500 ms MarkObjects: 5.579500 ms  DeleteObjects: 3.312700 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 103.663648 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Animations FBX.fbx
-  artifactKey: Guid(9b43b3ebe305d6640b0c8d0a8ea4e7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Animations FBX.fbx using Guid(9b43b3ebe305d6640b0c8d0a8ea4e7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+  Time since last request: 52688.341034 seconds.
+  path: Assets/ALP_Assets/Realistic Terrain Textures FREE/Textures/Ground003_N.png
+  artifactKey: Guid(76c6e2a0a04c76c4fb2ba05a8deb993f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ALP_Assets/Realistic Terrain Textures FREE/Textures/Ground003_N.png using Guid(76c6e2a0a04c76c4fb2ba05a8deb993f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'a0bde7d398d88179504d7fadec941989') in 0.0623939 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+ -> (artifact id: '604fd1cb0569351909b46349d10ea158') in 0.1003921 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 56.865710 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.1.obj
-  artifactKey: Guid(ad72dd9189bd68644be564bd336c412d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.1.obj using Guid(ad72dd9189bd68644be564bd336c412d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+  Time since last request: 0.000021 seconds.
+  path: Assets/ALP_Assets/Realistic Terrain Textures FREE/Textures/Ground003_mask.png
+  artifactKey: Guid(d662ecd58105829429f4ac9847955c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ALP_Assets/Realistic Terrain Textures FREE/Textures/Ground003_mask.png using Guid(d662ecd58105829429f4ac9847955c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '6000f9cb471a325ca29e5fe262d8890d') in 0.0514056 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+ -> (artifact id: 'd2d9e5303a2d03fdc82d1bbbe8e75762') in 0.0329188 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/King Cobra/Lord Cobra.blend
-  artifactKey: Guid(da5df286535c80549a2b14922f1e3bc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/King Cobra/Lord Cobra.blend using Guid(da5df286535c80549a2b14922f1e3bc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+  Time since last request: 0.000023 seconds.
+  path: Assets/ALP_Assets/Realistic Terrain Textures FREE/Textures/Ground005_mask.png
+  artifactKey: Guid(94a79c6aaae13134d9611a36dce7353e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ALP_Assets/Realistic Terrain Textures FREE/Textures/Ground005_mask.png using Guid(94a79c6aaae13134d9611a36dce7353e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '97eece2043cbe0440758ca351ec90ab1') in 0.08637 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 629
+ -> (artifact id: '4d0a744b40218bf77cae868e43ca0738') in 0.0220046 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Backups/Badger 0.5.blend
-  artifactKey: Guid(513be4c1ae904f9499f80ab14d348dbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Backups/Badger 0.5.blend using Guid(513be4c1ae904f9499f80ab14d348dbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+  Time since last request: 0.000017 seconds.
+  path: Assets/ALP_Assets/Realistic Terrain Textures FREE/Textures/Ground001_H.png
+  artifactKey: Guid(5bd380ddebf8b1046a9bbd4c00799e6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ALP_Assets/Realistic Terrain Textures FREE/Textures/Ground001_H.png using Guid(5bd380ddebf8b1046a9bbd4c00799e6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'a2e1937e74ccf3880b6ba89019301f7a') in 0.7826203 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1206
+ -> (artifact id: '15fe3b713282fee3fbefc128f4a0de35') in 0.0187683 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Backups/Badger 0.6.blend
-  artifactKey: Guid(1ec2ae0946e1fc143bae746e11782d1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Backups/Badger 0.6.blend using Guid(1ec2ae0946e1fc143bae746e11782d1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+  Time since last request: 0.000016 seconds.
+  path: Assets/ALP_Assets/Realistic Terrain Textures FREE/Textures/Ground003.tif
+  artifactKey: Guid(dd4cb1153d607834482aa2cff04fcf07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ALP_Assets/Realistic Terrain Textures FREE/Textures/Ground003.tif using Guid(dd4cb1153d607834482aa2cff04fcf07) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '1931cc2be47240389995bfacc93b057e') in 0.1887115 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 912
+ -> (artifact id: '437a44b4a61831231c6d911fb587bfb3') in 0.0506931 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000052 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Wasp/Backups/Wasp 2.6.blend
-  artifactKey: Guid(0057129efff6ac04c9242ba628781926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Wasp/Backups/Wasp 2.6.blend using Guid(0057129efff6ac04c9242ba628781926) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-d3d12: upload buffer was too small for the requested resource! Size: 16777216. Requested: 31972520.
+  Time since last request: 0.000022 seconds.
+  path: Assets/ALP_Assets/Realistic Terrain Textures FREE/Textures/GroundPatchCracked01_mask.png
+  artifactKey: Guid(fbf85bd2f2886664d9a94047241c8b35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ALP_Assets/Realistic Terrain Textures FREE/Textures/GroundPatchCracked01_mask.png using Guid(fbf85bd2f2886664d9a94047241c8b35) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '444a49a77b6622ffe60546144f202d1b') in 0.1488465 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 438
+ -> (artifact id: '1270bb3ae156a3b25e5d985c31838059') in 0.0221348 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Imported/Upper wing.obj
-  artifactKey: Guid(a76c9e7d50a4dbf4094d25613d8770e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Imported/Upper wing.obj using Guid(a76c9e7d50a4dbf4094d25613d8770e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+  Time since last request: 0.000013 seconds.
+  path: Assets/ALP_Assets/Realistic Terrain Textures FREE/Textures/Ground005_S.png
+  artifactKey: Guid(5485addbbd4f8074f80cada294a7674d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ALP_Assets/Realistic Terrain Textures FREE/Textures/Ground005_S.png using Guid(5485addbbd4f8074f80cada294a7674d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'b54c62306b32f6b4ce4ffc9fe200aa85') in 0.0720652 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+ -> (artifact id: 'e091301bb77b5fdfb2099fe2b9613ec4') in 0.0173904 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000063 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.2.obj
-  artifactKey: Guid(b431853839c66cd429b8b5f330b82733) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.2.obj using Guid(b431853839c66cd429b8b5f330b82733) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+  Time since last request: 0.000013 seconds.
+  path: Assets/ALP_Assets/Realistic Terrain Textures FREE/Textures/Ground002_AO.png
+  artifactKey: Guid(3020193ef203a1f41a9ffe949f477ee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ALP_Assets/Realistic Terrain Textures FREE/Textures/Ground002_AO.png using Guid(3020193ef203a1f41a9ffe949f477ee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '593d03fae0308d80087cffbffbb459dd') in 0.0547322 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+ -> (artifact id: '7a3e215f8db6f1998afbcd83ab699fbf') in 0.0173105 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000085 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Wasp/Backups/Wasp 2.7.blend
-  artifactKey: Guid(9e027cd820d73eb4a8ec72d18948183f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Wasp/Backups/Wasp 2.7.blend using Guid(9e027cd820d73eb4a8ec72d18948183f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'b69971cc7bd0d0164c1048b97d895813') in 0.1113456 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 438
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Animations/Badger Animation_Walk.1.blend
-  artifactKey: Guid(3cbeb82478661404eb027f251ff41144) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Animations/Badger Animation_Walk.1.blend using Guid(3cbeb82478661404eb027f251ff41144) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '20edd2b2485970b4b5cfbb41b09033b0') in 0.2259364 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 412
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/King Cobra/FBX_OBJ/King Cobra1.fbx
-  artifactKey: Guid(02ce347df9009724aa694aeddfdc3173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/King Cobra/FBX_OBJ/King Cobra1.fbx using Guid(02ce347df9009724aa694aeddfdc3173) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '95633adc5e762f0ef2111abcc44bb56c') in 0.0428421 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Raz_Main.blend
-  artifactKey: Guid(2c86a678efa134a49b2282e55463f527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Raz_Main.blend using Guid(2c86a678efa134a49b2282e55463f527) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'e273d63e3ff29ee4239d55b9dafce8aa') in 0.1332682 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1518
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.6.fbx
-  artifactKey: Guid(afb9048bdae86ba4b99e5c74663bf0ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.6.fbx using Guid(afb9048bdae86ba4b99e5c74663bf0ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '63a83a971f609a3d399f5edefdfda8e6') in 0.0724371 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 190
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Imported/Base Character ready to model.blend
-  artifactKey: Guid(5039c6be8dc5e7d43a17ef6390e180b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Imported/Base Character ready to model.blend using Guid(5039c6be8dc5e7d43a17ef6390e180b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '5dd175d204e3447c9c3dbbd2bdbabcd0') in 0.0290937 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.3.obj
-  artifactKey: Guid(28f573c698c1f544287905350bd85058) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.3.obj using Guid(28f573c698c1f544287905350bd85058) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'abd7bbff8896010b4ce007c0ccb8c25a') in 0.0510392 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.2 Acurig.fbx
-  artifactKey: Guid(1481ade2b6269944ba439e2c8f67b330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.2 Acurig.fbx using Guid(1481ade2b6269944ba439e2c8f67b330) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'da106d029f3d5a351b4ee5a0dd2614f8') in 0.1152222 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 204
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Wasp/Backups/Wasp 2.5.blend
-  artifactKey: Guid(41c7798eb2d92df41bcdbc794dcde9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Wasp/Backups/Wasp 2.5.blend using Guid(41c7798eb2d92df41bcdbc794dcde9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '9c92cb9544b7bfde0fe8cc21db6bba4d') in 0.1250419 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 283
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Wasp/Backups/Wasp 1.blend
-  artifactKey: Guid(ca8028c367c9337488e16fe8b9b479a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Wasp/Backups/Wasp 1.blend using Guid(ca8028c367c9337488e16fe8b9b479a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '94c5f4411ba3e86cf731b8158817c274') in 0.4828765 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 196
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000063 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/King Cobra/Backups/King Cobra to mixamo.blend
-  artifactKey: Guid(a677cd2de912b68408d883c5ef0a9bc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/King Cobra/Backups/King Cobra to mixamo.blend using Guid(a677cd2de912b68408d883c5ef0a9bc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'b1007f0cce16b34a3dd570deafbef572') in 0.0609425 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 17
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/King Cobra/Backups/King Cobra1.blend
-  artifactKey: Guid(b58ff17fc0717a3408bf025ea461c632) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/King Cobra/Backups/King Cobra1.blend using Guid(b58ff17fc0717a3408bf025ea461c632) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'a0089ac5e340194a30615ed6b4ef86bf') in 0.0435422 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/RazZara-Terrain1.blend
-  artifactKey: Guid(839491e0972485240ba067b5a56935b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/RazZara-Terrain1.blend using Guid(839491e0972485240ba067b5a56935b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-d3d12: upload buffer was too small for the requested resource! Size: 32505856. Requested: 341249568.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '87e300787edbcb0290ec3a6cdd575a51') in 0.814939 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 196
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Backups/Badger T-Pose1.blend
-  artifactKey: Guid(8f19b518b9196c04fa7e90d2cc8fc9e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Backups/Badger T-Pose1.blend using Guid(8f19b518b9196c04fa7e90d2cc8fc9e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'a587f14ddd07a045b107ec6a2c273c8e') in 0.0357116 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Backups/Badger T-Pose1.fbx
-  artifactKey: Guid(f8b20fb467fdcaf43b57124a271c94b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Backups/Badger T-Pose1.fbx using Guid(f8b20fb467fdcaf43b57124a271c94b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '649a601a0213821a4d0925c2098024a5') in 0.0181763 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000052 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Raz_Main3.blend
-  artifactKey: Guid(be67aa2e1ed2bcf4ca77d9236f2ddbe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Raz_Main3.blend using Guid(be67aa2e1ed2bcf4ca77d9236f2ddbe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '127c4ce27391650d0c3b7a62efdcbfe9') in 0.055603 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 286
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000049 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Raz_Main2.blend
-  artifactKey: Guid(0e61762a7325d194689e24ddef5603d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Raz_Main2.blend using Guid(0e61762a7325d194689e24ddef5603d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '60878cd1b0d682b385386ee6080d791d') in 0.0779886 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 16
+  Time since last request: 0.000017 seconds.
+  path: Assets/ALP_Assets/Realistic Terrain Textures FREE/Textures/Ground001_S.png
+  artifactKey: Guid(037788aba91c8c54195bda2d098c1506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ALP_Assets/Realistic Terrain Textures FREE/Textures/Ground001_S.png using Guid(037788aba91c8c54195bda2d098c1506) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: 'd079c5597508e4c8c5ce7e544615ebc7') in 0.0171897 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server

@@ -305,6 +305,13 @@ MonoBehaviour:
   MovementAcceleration: 0.075
   RotationSpeed: 100
   jumpHeight: 1
+  MaxSlopeAngle: 45
+  SlideSpeed: 5
+  RaycastOriginOffset: {x: 0, y: 0.5, z: -0.25}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  RaycastOrigin: {fileID: 0}
 --- !u!1 &3059535011919598799
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 RaycastOriginOffset;
     public LayerMask groundLayer;
     public GameObject RaycastOrigin;
+    public float distanceToGroundForLanding;
 
     private Vector3 velocity;
     private bool isGrounded;
@@ -182,7 +183,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = cc.isGrounded; 
         anim.SetBool("IsGrounded", cc.isGrounded);
-        if(!cc.isGrounded & anim.GetBool("IsFalling") & distanceToGround < 0.5f)
+        if(!cc.isGrounded & anim.GetBool("IsFalling") & distanceToGround < distanceToGroundForLanding)
         {
             anim.SetBool("IsGrounded", true);
         }

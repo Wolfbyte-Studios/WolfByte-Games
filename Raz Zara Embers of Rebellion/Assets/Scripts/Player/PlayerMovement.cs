@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +10,15 @@ public class PlayerMovement : MonoBehaviour
     public float MovementAcceleration = 0.02f;
     public float RotationSpeed;
     public float jumpHeight;
+    [Header("Raycast Tuning/Slope Settings")]
+    public float MaxSlopeAngle = 45f;
+    public float SlideSpeed = 5f;
+    private float slopeAngle;
+    public float distanceToGround;
+    public Vector3 RaycastOriginOffset;
+    public LayerMask groundLayer;
+    public GameObject RaycastOrigin;
+    public float distanceToGroundForLanding;
 
     private Vector3 velocity;
     private bool isGrounded;
@@ -43,6 +53,10 @@ public class PlayerMovement : MonoBehaviour
         inputRun.performed += OnRun;
         Player = cc.transform.gameObject;
         playerCam = transform.GetComponentInChildren<Camera>();
+
+        RaycastOrigin = new GameObject("RaycastOrigin");
+        RaycastOrigin.transform.parent = transform.GetChild(0).transform;
+        RaycastOrigin.transform.localPosition = RaycastOriginOffset;
     }
 
     public void ProcessMovement()
@@ -52,8 +66,10 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = 0f;
+            anim.SetBool("IsFalling", false);
+            anim.SetFloat("FallDistance", 0);
         }
-
+        
         if (!inputMove.IsPressed())
         {
             if (MovementSpeed > 1f)
@@ -87,13 +103,47 @@ public class PlayerMovement : MonoBehaviour
             // Walking
             MovementSpeed = Mathf.Lerp(MovementSpeed, 1f, MovementAcceleration * 2);
         }
+        if (anim.GetBool("IsFalling") & value != Vector2.zero)
+        {
+            cc.Move(lookDirection * Time.deltaTime * MovementSpeed);
+        }
 
-        
 
-        
-        
-        
+
+
+
     }
+    public void CheckSlope()
+    {
+
+        RaycastOrigin.transform.localPosition = RaycastOriginOffset;
+        RaycastHit hit;
+        if (Physics.Raycast(RaycastOrigin.transform.position, Vector3.down, out hit, Mathf.Infinity, groundLayer))
+        {
+            Debug.DrawRay(RaycastOrigin.transform.position, Vector3.down * hit.distance, Color.yellow);
+            slopeAngle = Vector3.Angle(Vector3.up, hit.normal);
+            distanceToGround = hit.distance - RaycastOriginOffset.y;
+            if(distanceToGround > 2)
+            {
+                anim.SetBool("IsFalling", true);
+                
+            }
+            if(distanceToGround > anim.GetFloat("FallDistance"))
+            {
+                anim.SetFloat("FallDistance", distanceToGround);
+            }
+            Debug.Log("Slope Angle: " + slopeAngle);
+
+            if (slopeAngle > MaxSlopeAngle)
+            {
+                // Apply sliding logic
+                Vector3 slideDirection = new Vector3(hit.normal.x, -hit.normal.y, hit.normal.z);
+                cc.Move(slideDirection * SlideSpeed * Time.deltaTime);
+                Debug.LogWarning(slideDirection * SlideSpeed * Time.deltaTime);
+            }
+        }
+    }
+    
 
     public void OnInteract(InputAction.CallbackContext obj)
     {
@@ -129,17 +179,28 @@ public class PlayerMovement : MonoBehaviour
         // Player item use logic here
     }
 
-
+    public void CheckGrounded()
+    {
+        isGrounded = cc.isGrounded; 
+        anim.SetBool("IsGrounded", cc.isGrounded);
+        if(!cc.isGrounded & anim.GetBool("IsFalling") & distanceToGround < distanceToGroundForLanding)
+        {
+            anim.SetBool("IsGrounded", true);
+        }
+    }
     public void FixedUpdate()
     {
-        isGrounded = cc.isGrounded;
-        anim.SetBool("IsGrounded", cc.isGrounded);
+        CheckGrounded();
+        CheckSlope();
+        
+
         ProcessMovement();
         // Apply gravity
         velocity.y += Gravity.y * Time.deltaTime;
         cc.Move(velocity * Time.deltaTime);
         //Apply animator components
         anim.SetFloat("MovementSpeed", MovementSpeed);
+
 
 
     }

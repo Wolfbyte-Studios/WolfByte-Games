@@ -15,7 +15,7 @@ C:/Users/user1/3d zeldaish/Raz Zara Embers of Rebellion
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51555
+50727
 -job-worker-count
 9
 -background-job-worker-count
@@ -59,20 +59,20 @@ C:/Users/user1/3d zeldaish/Raz Zara Embers of Rebellion
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [21780]  Target information:
+Player connection [43684]  Target information:
 
-Player connection [21780]  * "[IP] 192.168.86.27 [Port] 0 [Flags] 2 [Guid] 3158798940 [EditorId] 3158798940 [Version] 1048832 [Id] WindowsEditor(7,MotherShip) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [43684]  * "[IP] 192.168.86.27 [Port] 0 [Flags] 2 [Guid] 4019467337 [EditorId] 4019467337 [Version] 1048832 [Id] WindowsEditor(7,MotherShip) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [21780]  * "[IP] 25.13.96.105 [Port] 0 [Flags] 2 [Guid] 3158798940 [EditorId] 3158798940 [Version] 1048832 [Id] WindowsEditor(7,MotherShip) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [43684]  * "[IP] 25.13.96.105 [Port] 0 [Flags] 2 [Guid] 4019467337 [EditorId] 4019467337 [Version] 1048832 [Id] WindowsEditor(7,MotherShip) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [21780]  * "[IP] 10.241.78.62 [Port] 0 [Flags] 2 [Guid] 3158798940 [EditorId] 3158798940 [Version] 1048832 [Id] WindowsEditor(7,MotherShip) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [43684]  * "[IP] 10.241.78.62 [Port] 0 [Flags] 2 [Guid] 4019467337 [EditorId] 4019467337 [Version] 1048832 [Id] WindowsEditor(7,MotherShip) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [21780] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [21780] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [43684] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [43684] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 9
 Library Redirect Path: Library/
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-Refreshing native plugins compatible for Editor in 1.37 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.45 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.5f1 (17028576122a)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Resources/UnitySubsystems
@@ -89,43 +89,43 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56416
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56240
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001695 seconds.
-- Loaded All Assemblies, in  0.299 seconds
+Registered in 0.001882 seconds.
+- Loaded All Assemblies, in  0.307 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.316 seconds
-Domain Reload Profiling: 615ms
-	BeginReloadAssembly (104ms)
+- Finished resetting the current domain, in  0.335 seconds
+Domain Reload Profiling: 640ms
+	BeginReloadAssembly (103ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (29ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (39ms)
-	LoadAllAssembliesAndSetupDomain (118ms)
-		LoadAssemblies (101ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (41ms)
+	LoadAllAssembliesAndSetupDomain (122ms)
+		LoadAssemblies (102ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (116ms)
-			TypeCache.Refresh (115ms)
-				TypeCache.ScanAssembly (105ms)
+		AnalyzeDomain (120ms)
+			TypeCache.Refresh (119ms)
+				TypeCache.ScanAssembly (108ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (317ms)
+	FinalizeReload (335ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (272ms)
+		SetupLoadedEditorAssemblies (285ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (21ms)
+			InitializePlatformSupportModulesInManaged (20ms)
 			SetLoadedEditorAssemblies (4ms)
 			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (116ms)
-			ProcessInitializeOnLoadMethodAttributes (126ms)
+			ProcessInitializeOnLoadAttributes (132ms)
+			ProcessInitializeOnLoadMethodAttributes (124ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -134,571 +134,753 @@ Domain Reload Profiling: 615ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.893 seconds
+- Loaded All Assemblies, in  0.888 seconds
 'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Raz Zara Embers of Rebellion
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.043 seconds
-Domain Reload Profiling: 1932ms
-	BeginReloadAssembly (314ms)
+- Finished resetting the current domain, in  1.019 seconds
+Domain Reload Profiling: 1904ms
+	BeginReloadAssembly (299ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (25ms)
-	RebuildCommonClasses (31ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (33ms)
-	LoadAllAssembliesAndSetupDomain (501ms)
-		LoadAssemblies (313ms)
+		CreateAndSetChildDomain (24ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (511ms)
+		LoadAssemblies (324ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (272ms)
-			TypeCache.Refresh (195ms)
-				TypeCache.ScanAssembly (182ms)
-			BuildScriptInfoCaches (64ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (1043ms)
+		AnalyzeDomain (269ms)
+			TypeCache.Refresh (191ms)
+				TypeCache.ScanAssembly (178ms)
+			BuildScriptInfoCaches (67ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1019ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (812ms)
+		SetupLoadedEditorAssemblies (821ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (2ms)
 			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (54ms)
-			ProcessInitializeOnLoadAttributes (421ms)
-			ProcessInitializeOnLoadMethodAttributes (326ms)
-			AfterProcessingInitializeOnLoad (5ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 454 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6615 unused Assets / (6.1 MB). Loaded Objects now: 7640.
-Memory consumption went from 272.2 MB to 266.1 MB.
-Total: 8.670700 ms (FindLiveObjects: 0.539600 ms CreateObjectMapping: 0.516800 ms MarkObjects: 4.687000 ms  DeleteObjects: 2.925700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 4584.800812 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Animations FBX.fbx
-  artifactKey: Guid(9b43b3ebe305d6640b0c8d0a8ea4e7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Animations FBX.fbx using Guid(9b43b3ebe305d6640b0c8d0a8ea4e7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'd95399b93448bb3676af5e5625e633a9') in 1.7754293 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 30
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Leak Detected : Persistent allocates 8 individual allocations. To find out more please enable 'Preferences > Jobs > Leak Detection Level > Enabled With Stack Trace' and reproduce the leak again.
-- Loaded All Assemblies, in  0.646 seconds
-'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.896 seconds
-Domain Reload Profiling: 1542ms
-	BeginReloadAssembly (222ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (29ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (59ms)
-	RebuildCommonClasses (26ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (22ms)
-	LoadAllAssembliesAndSetupDomain (366ms)
-		LoadAssemblies (267ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (172ms)
-			TypeCache.Refresh (6ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (154ms)
-			ResolveRequiredComponents (8ms)
-	FinalizeReload (896ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (592ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (2ms)
-			BeforeProcessingInitializeOnLoad (47ms)
-			ProcessInitializeOnLoadAttributes (386ms)
-			ProcessInitializeOnLoadMethodAttributes (150ms)
+			BeforeProcessingInitializeOnLoad (50ms)
+			ProcessInitializeOnLoadAttributes (420ms)
+			ProcessInitializeOnLoadMethodAttributes (342ms)
 			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-Refreshing native plugins compatible for Editor in 0.95 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (5ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 28 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6614 unused Assets / (5.4 MB). Loaded Objects now: 7772.
-Memory consumption went from 268.4 MB to 263.0 MB.
-Total: 8.260700 ms (FindLiveObjects: 0.624200 ms CreateObjectMapping: 0.480300 ms MarkObjects: 4.754400 ms  DeleteObjects: 2.400400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 360.903112 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Animations FBX.fbx
-  artifactKey: Guid(9b43b3ebe305d6640b0c8d0a8ea4e7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Animations FBX.fbx using Guid(9b43b3ebe305d6640b0c8d0a8ea4e7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'a1329dbb85d590a65d536f6f2852988b') in 0.8358117 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 30
+Unloading 482 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7424 unused Assets / (5.8 MB). Loaded Objects now: 8515.
+Memory consumption went from 310.4 MB to 304.5 MB.
+Total: 8.061800 ms (FindLiveObjects: 0.549800 ms CreateObjectMapping: 0.570900 ms MarkObjects: 4.616800 ms  DeleteObjects: 2.323000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 103.663648 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Animations FBX.fbx
-  artifactKey: Guid(9b43b3ebe305d6640b0c8d0a8ea4e7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Animations FBX.fbx using Guid(9b43b3ebe305d6640b0c8d0a8ea4e7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'a0bde7d398d88179504d7fadec941989') in 0.0623939 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+  Time since last request: 243888.351883 seconds.
+  path: Assets/Scenes/Overworld
+  artifactKey: Guid(4c5c728127330274e8498fc9b8ea3ae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Overworld using Guid(4c5c728127330274e8498fc9b8ea3ae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: 'dd073bb074f031412c77b2dd75c7477c') in 0.0057108 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 56.865710 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.1.obj
-  artifactKey: Guid(ad72dd9189bd68644be564bd336c412d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.1.obj using Guid(ad72dd9189bd68644be564bd336c412d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '6000f9cb471a325ca29e5fe262d8890d') in 0.0514056 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+  Time since last request: 27.339753 seconds.
+  path: Assets/Scenes/Overworld/Seahorse.unity
+  artifactKey: Guid(29ad72d0c5c08d24495a9f545e851cec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Overworld/Seahorse.unity using Guid(29ad72d0c5c08d24495a9f545e851cec) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: 'c3423d82ecf80817a9935f54947f3b46') in 0.001263 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/King Cobra/Lord Cobra.blend
-  artifactKey: Guid(da5df286535c80549a2b14922f1e3bc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/King Cobra/Lord Cobra.blend using Guid(da5df286535c80549a2b14922f1e3bc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '97eece2043cbe0440758ca351ec90ab1') in 0.08637 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 629
+  Time since last request: 3.442485 seconds.
+  path: Assets/Scenes/Overworld/SeahorseHome.unity
+  artifactKey: Guid(29ad72d0c5c08d24495a9f545e851cec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Overworld/SeahorseHome.unity using Guid(29ad72d0c5c08d24495a9f545e851cec) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '18609ec63e5d1c4ca6be11908de31189') in 0.0006291 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Backups/Badger 0.5.blend
-  artifactKey: Guid(513be4c1ae904f9499f80ab14d348dbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Backups/Badger 0.5.blend using Guid(513be4c1ae904f9499f80ab14d348dbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'a2e1937e74ccf3880b6ba89019301f7a') in 0.7826203 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1206
+  Time since last request: 118.165791 seconds.
+  path: Assets/Scenes/TestScene.unity
+  artifactKey: Guid(0086f8969f5a9d84f9e55f408a7513ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TestScene.unity using Guid(0086f8969f5a9d84f9e55f408a7513ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '037d8e0d08894434c80ab3aed85c04fd') in 0.0007224 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Backups/Badger 0.6.blend
-  artifactKey: Guid(1ec2ae0946e1fc143bae746e11782d1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Backups/Badger 0.6.blend using Guid(1ec2ae0946e1fc143bae746e11782d1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '1931cc2be47240389995bfacc93b057e') in 0.1887115 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 912
+  Time since last request: 29.268496 seconds.
+  path: Assets/Scenes/Overworld Altogether.unity
+  artifactKey: Guid(0086f8969f5a9d84f9e55f408a7513ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Overworld Altogether.unity using Guid(0086f8969f5a9d84f9e55f408a7513ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '60be6967e993830a97430e73afd3543c') in 0.0006979 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000052 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Wasp/Backups/Wasp 2.6.blend
-  artifactKey: Guid(0057129efff6ac04c9242ba628781926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Wasp/Backups/Wasp 2.6.blend using Guid(0057129efff6ac04c9242ba628781926) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-d3d12: upload buffer was too small for the requested resource! Size: 16777216. Requested: 31972520.
+  Time since last request: 40.123638 seconds.
+  path: Assets/Materials/Default Terrain.mat
+  artifactKey: Guid(79f6de214063c0147ba4449a1918e0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Default Terrain.mat using Guid(79f6de214063c0147ba4449a1918e0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '24199cbd3794c1956f80960ff11a6641') in 3.2530317 seconds
+Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Materials/Terrain 1.mat
+  artifactKey: Guid(9af5f48badea6b74ea734a06de705a8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Terrain 1.mat using Guid(9af5f48badea6b74ea734a06de705a8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '444a49a77b6622ffe60546144f202d1b') in 0.1488465 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 438
+ -> (artifact id: 'a8a241d9a63d92ee108f1be94065d4eb') in 0.1166637 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000034 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Imported/Upper wing.obj
-  artifactKey: Guid(a76c9e7d50a4dbf4094d25613d8770e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Imported/Upper wing.obj using Guid(a76c9e7d50a4dbf4094d25613d8770e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+  path: Assets/Materials/TerrainData_e3fe14f3-4149-4c25-8d84-5a333a70f01d Default.mat
+  artifactKey: Guid(2135e41bda458364596d5ba41457519f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/TerrainData_e3fe14f3-4149-4c25-8d84-5a333a70f01d Default.mat using Guid(2135e41bda458364596d5ba41457519f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'b54c62306b32f6b4ce4ffc9fe200aa85') in 0.0720652 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+ -> (artifact id: '75765aacd4ac6043f0d60d54d3b11148') in 0.0237771 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000063 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.2.obj
-  artifactKey: Guid(b431853839c66cd429b8b5f330b82733) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.2.obj using Guid(b431853839c66cd429b8b5f330b82733) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Materials/New Terrain Material.mat
+  artifactKey: Guid(3aa266081e91a8f4ba1245522957df56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/New Terrain Material.mat using Guid(3aa266081e91a8f4ba1245522957df56) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '593d03fae0308d80087cffbffbb459dd') in 0.0547322 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000085 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Wasp/Backups/Wasp 2.7.blend
-  artifactKey: Guid(9e027cd820d73eb4a8ec72d18948183f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Wasp/Backups/Wasp 2.7.blend using Guid(9e027cd820d73eb4a8ec72d18948183f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'b69971cc7bd0d0164c1048b97d895813') in 0.1113456 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 438
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Animations/Badger Animation_Walk.1.blend
-  artifactKey: Guid(3cbeb82478661404eb027f251ff41144) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Animations/Badger Animation_Walk.1.blend using Guid(3cbeb82478661404eb027f251ff41144) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '20edd2b2485970b4b5cfbb41b09033b0') in 0.2259364 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 412
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/King Cobra/FBX_OBJ/King Cobra1.fbx
-  artifactKey: Guid(02ce347df9009724aa694aeddfdc3173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/King Cobra/FBX_OBJ/King Cobra1.fbx using Guid(02ce347df9009724aa694aeddfdc3173) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '95633adc5e762f0ef2111abcc44bb56c') in 0.0428421 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Raz_Main.blend
-  artifactKey: Guid(2c86a678efa134a49b2282e55463f527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Raz_Main.blend using Guid(2c86a678efa134a49b2282e55463f527) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'e273d63e3ff29ee4239d55b9dafce8aa') in 0.1332682 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1518
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.6.fbx
-  artifactKey: Guid(afb9048bdae86ba4b99e5c74663bf0ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.6.fbx using Guid(afb9048bdae86ba4b99e5c74663bf0ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '63a83a971f609a3d399f5edefdfda8e6') in 0.0724371 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 190
+ -> (artifact id: 'e1a298f877b3d95e5ace2b2272121e34') in 0.0988474 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000038 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Imported/Base Character ready to model.blend
-  artifactKey: Guid(5039c6be8dc5e7d43a17ef6390e180b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Imported/Base Character ready to model.blend using Guid(5039c6be8dc5e7d43a17ef6390e180b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+  path: Assets/Materials/TerrainData_ab90ba97-2380-498e-8763-a10a3ae6eba5 Default.mat
+  artifactKey: Guid(166eaff102f0d364eb525161cffca06f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/TerrainData_ab90ba97-2380-498e-8763-a10a3ae6eba5 Default.mat using Guid(166eaff102f0d364eb525161cffca06f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '5dd175d204e3447c9c3dbbd2bdbabcd0') in 0.0290937 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.3.obj
-  artifactKey: Guid(28f573c698c1f544287905350bd85058) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.3.obj using Guid(28f573c698c1f544287905350bd85058) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'abd7bbff8896010b4ce007c0ccb8c25a') in 0.0510392 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.2 Acurig.fbx
-  artifactKey: Guid(1481ade2b6269944ba439e2c8f67b330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/FBX_OBJ/Badger 0.2 Acurig.fbx using Guid(1481ade2b6269944ba439e2c8f67b330) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'da106d029f3d5a351b4ee5a0dd2614f8') in 0.1152222 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 204
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Wasp/Backups/Wasp 2.5.blend
-  artifactKey: Guid(41c7798eb2d92df41bcdbc794dcde9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Wasp/Backups/Wasp 2.5.blend using Guid(41c7798eb2d92df41bcdbc794dcde9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '9c92cb9544b7bfde0fe8cc21db6bba4d') in 0.1250419 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 283
+ -> (artifact id: '6096ae70fa42663b3815a30d9c167c0a') in 0.0216789 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000040 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Wasp/Backups/Wasp 1.blend
-  artifactKey: Guid(ca8028c367c9337488e16fe8b9b479a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Wasp/Backups/Wasp 1.blend using Guid(ca8028c367c9337488e16fe8b9b479a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+  path: Assets/Materials/testTerrainData_dd208eb6-508e-4e16-9dc4-3d6fe007dc5e TerrainData_dd208eb6-508e-4e16-9dc4-3d6fe007dc5e Splatmap.mat
+  artifactKey: Guid(a4baa69cbea67c745a28508c9d08e7a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/testTerrainData_dd208eb6-508e-4e16-9dc4-3d6fe007dc5e TerrainData_dd208eb6-508e-4e16-9dc4-3d6fe007dc5e Splatmap.mat using Guid(a4baa69cbea67c745a28508c9d08e7a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '94c5f4411ba3e86cf731b8158817c274') in 0.4828765 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 196
+ -> (artifact id: 'd88885fd664ee6fcf87f5e790e3c9492') in 0.0360355 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000063 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/King Cobra/Backups/King Cobra to mixamo.blend
-  artifactKey: Guid(a677cd2de912b68408d883c5ef0a9bc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/King Cobra/Backups/King Cobra to mixamo.blend using Guid(a677cd2de912b68408d883c5ef0a9bc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Materials/testTerrainData_e3fe14f3-4149-4c25-8d84-5a333a70f01d TerrainData_e3fe14f3-4149-4c25-8d84-5a333a70f01d Default.mat
+  artifactKey: Guid(d7b3c38fa6a9efa44aae718e3e61c98a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/testTerrainData_e3fe14f3-4149-4c25-8d84-5a333a70f01d TerrainData_e3fe14f3-4149-4c25-8d84-5a333a70f01d Default.mat using Guid(d7b3c38fa6a9efa44aae718e3e61c98a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'b1007f0cce16b34a3dd570deafbef572') in 0.0609425 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 17
+ -> (artifact id: '1ec40807372d6c031ddae78bba8508c1') in 0.023664 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/King Cobra/Backups/King Cobra1.blend
-  artifactKey: Guid(b58ff17fc0717a3408bf025ea461c632) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/King Cobra/Backups/King Cobra1.blend using Guid(b58ff17fc0717a3408bf025ea461c632) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Materials/testTerrainData_4749137d-74e9-432f-99c9-f16012f870d8 TerrainData_4749137d-74e9-432f-99c9-f16012f870d8 Default.mat
+  artifactKey: Guid(f9771c2bb7f0184418f1b81ac3d7804f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/testTerrainData_4749137d-74e9-432f-99c9-f16012f870d8 TerrainData_4749137d-74e9-432f-99c9-f16012f870d8 Default.mat using Guid(f9771c2bb7f0184418f1b81ac3d7804f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'a0089ac5e340194a30615ed6b4ef86bf') in 0.0435422 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
+ -> (artifact id: 'da52ea8d2e084a2ee375a0c3f00d3619') in 0.0241019 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/RazZara-Terrain1.blend
-  artifactKey: Guid(839491e0972485240ba067b5a56935b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/RazZara-Terrain1.blend using Guid(839491e0972485240ba067b5a56935b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-d3d12: upload buffer was too small for the requested resource! Size: 32505856. Requested: 341249568.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Materials/TerrainData_4749137d-74e9-432f-99c9-f16012f870d8 Default.mat
+  artifactKey: Guid(0f86783c6c2e96f48a706f835a05a649) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/TerrainData_4749137d-74e9-432f-99c9-f16012f870d8 Default.mat using Guid(0f86783c6c2e96f48a706f835a05a649) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '87e300787edbcb0290ec3a6cdd575a51') in 0.814939 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 196
+ -> (artifact id: '399d8a9a29736e19a71097cc173de1df') in 0.0285185 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Backups/Badger T-Pose1.blend
-  artifactKey: Guid(8f19b518b9196c04fa7e90d2cc8fc9e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Backups/Badger T-Pose1.blend using Guid(8f19b518b9196c04fa7e90d2cc8fc9e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Materials/TerrainData_4d7fbbcf-8e58-4740-94fc-b5818a698a28 Splatmap.mat
+  artifactKey: Guid(b162fb2d2a705054bb9da9648cbc2c05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/TerrainData_4d7fbbcf-8e58-4740-94fc-b5818a698a28 Splatmap.mat using Guid(b162fb2d2a705054bb9da9648cbc2c05) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'a587f14ddd07a045b107ec6a2c273c8e') in 0.0357116 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+ -> (artifact id: 'd848b11f25b4b5483db12e41dab44024') in 0.0161043 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000033 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Backups/Badger T-Pose1.fbx
-  artifactKey: Guid(f8b20fb467fdcaf43b57124a271c94b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Backups/Badger T-Pose1.fbx using Guid(f8b20fb467fdcaf43b57124a271c94b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+  path: Assets/Materials/testTerrainData_ab90ba97-2380-498e-8763-a10a3ae6eba5 TerrainData_ab90ba97-2380-498e-8763-a10a3ae6eba5 Default.mat
+  artifactKey: Guid(ebb2acd528ce07d4990c9dedefe155a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/testTerrainData_ab90ba97-2380-498e-8763-a10a3ae6eba5 TerrainData_ab90ba97-2380-498e-8763-a10a3ae6eba5 Default.mat using Guid(ebb2acd528ce07d4990c9dedefe155a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '649a601a0213821a4d0925c2098024a5') in 0.0181763 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+ -> (artifact id: '50102a6297b9f1c4751ea793236e9e69') in 0.0244086 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000052 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Raz_Main3.blend
-  artifactKey: Guid(be67aa2e1ed2bcf4ca77d9236f2ddbe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Raz_Main3.blend using Guid(be67aa2e1ed2bcf4ca77d9236f2ddbe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Materials/TerrainData_dd208eb6-508e-4e16-9dc4-3d6fe007dc5e Splatmap.mat
+  artifactKey: Guid(78b24ea32d5dece43bcf0fccc487fb9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/TerrainData_dd208eb6-508e-4e16-9dc4-3d6fe007dc5e Splatmap.mat using Guid(78b24ea32d5dece43bcf0fccc487fb9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '127c4ce27391650d0c3b7a62efdcbfe9') in 0.055603 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 286
+ -> (artifact id: 'a6f175ba84cf05bfd77d8709d1c54384') in 0.0158893 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000049 seconds.
-  path: Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Raz_Main2.blend
-  artifactKey: Guid(0e61762a7325d194689e24ddef5603d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Raz and Zara_ Embers of Rebelion/Character Models/Badger/Raz_Main2.blend using Guid(0e61762a7325d194689e24ddef5603d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Materials/testTerrainData_071e2ba0-1ac2-4cad-b257-0788bcb172cb TerrainData_071e2ba0-1ac2-4cad-b257-0788bcb172cb Default.mat
+  artifactKey: Guid(eb506659e8844314d873375e708c92ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/testTerrainData_071e2ba0-1ac2-4cad-b257-0788bcb172cb TerrainData_071e2ba0-1ac2-4cad-b257-0788bcb172cb Default.mat using Guid(eb506659e8844314d873375e708c92ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '60878cd1b0d682b385386ee6080d791d') in 0.0779886 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 16
+ -> (artifact id: '281018c2b04bafa05075d4e69cddb03d') in 0.0242399 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Materials/TerrainData_2f15971b-3096-437f-af30-d2fd098d17df Default.mat
+  artifactKey: Guid(c9f5c8efe4c0f714ea52d169503f8191) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/TerrainData_2f15971b-3096-437f-af30-d2fd098d17df Default.mat using Guid(c9f5c8efe4c0f714ea52d169503f8191) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '5d9c4e8c7e942d3020628332cef1e1a1') in 0.0239114 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Materials/testTerrainData_380aae10-4e53-43b8-b9b1-904d3a8ddd05 TerrainData_380aae10-4e53-43b8-b9b1-904d3a8ddd05 Default.mat
+  artifactKey: Guid(a2d3808ac09b8c348a8500401a48a8c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/testTerrainData_380aae10-4e53-43b8-b9b1-904d3a8ddd05 TerrainData_380aae10-4e53-43b8-b9b1-904d3a8ddd05 Default.mat using Guid(a2d3808ac09b8c348a8500401a48a8c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '594049aa7c49b7416c40db7133478f5b') in 0.0280459 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Materials/New Terrain 5 Splatmap.mat
+  artifactKey: Guid(2b1a8d59cdcb72e4fa59f46dc5277ae9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/New Terrain 5 Splatmap.mat using Guid(2b1a8d59cdcb72e4fa59f46dc5277ae9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '7a9e5a259f06fda613d3650fc1e694a9') in 0.0193116 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Prepare
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7415 unused Assets / (6.1 MB). Loaded Objects now: 9637.
+Memory consumption went from 334.9 MB to 328.8 MB.
+Total: 13.502500 ms (FindLiveObjects: 0.696600 ms CreateObjectMapping: 0.614300 ms MarkObjects: 9.884600 ms  DeleteObjects: 2.304900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 532.082011 seconds.
+  path: Assets/Scripts/Player/WaterDetectionAndPhysics.cs
+  artifactKey: Guid(e184c256d2122c447a0046f1d5fc240c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/WaterDetectionAndPhysics.cs using Guid(e184c256d2122c447a0046f1d5fc240c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: 'f5dd7bc16c8e3ac778b57abf99d5405a') in 0.0012556 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Leak Detected : Persistent allocates 9 individual allocations. To find out more please enable 'Preferences > Jobs > Leak Detection Level > Enabled With Stack Trace' and reproduce the leak again.
+- Loaded All Assemblies, in  1.002 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.68 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.282 seconds
+Domain Reload Profiling: 2285ms
+	BeginReloadAssembly (279ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (44ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (83ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (32ms)
+	LoadAllAssembliesAndSetupDomain (654ms)
+		LoadAssemblies (421ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (331ms)
+			TypeCache.Refresh (14ms)
+				TypeCache.ScanAssembly (2ms)
+			BuildScriptInfoCaches (297ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (1283ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (819ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (65ms)
+			ProcessInitializeOnLoadAttributes (536ms)
+			ProcessInitializeOnLoadMethodAttributes (206ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (17ms)
+Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 29 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7423 unused Assets / (6.4 MB). Loaded Objects now: 8648.
+Memory consumption went from 290.5 MB to 284.1 MB.
+Total: 9.898900 ms (FindLiveObjects: 0.645400 ms CreateObjectMapping: 0.964300 ms MarkObjects: 5.521900 ms  DeleteObjects: 2.765900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7415 unused Assets / (6.1 MB). Loaded Objects now: 8648.
+Memory consumption went from 296.7 MB to 290.6 MB.
+Total: 12.943200 ms (FindLiveObjects: 1.056700 ms CreateObjectMapping: 1.324000 ms MarkObjects: 6.237000 ms  DeleteObjects: 4.323600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 14.985849 seconds.
+  path: Assets/Scripts/Player/WaterDetectionAndPhysics.cs
+  artifactKey: Guid(e184c256d2122c447a0046f1d5fc240c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/WaterDetectionAndPhysics.cs using Guid(e184c256d2122c447a0046f1d5fc240c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '3c77b2cdbbfb788bbb47b565b2b5ad67') in 0.0135003 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.847 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 0.76 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.180 seconds
+Domain Reload Profiling: 2029ms
+	BeginReloadAssembly (199ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (55ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (23ms)
+	LoadAllAssembliesAndSetupDomain (584ms)
+		LoadAssemblies (410ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (258ms)
+			TypeCache.Refresh (15ms)
+				TypeCache.ScanAssembly (2ms)
+			BuildScriptInfoCaches (228ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1181ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (821ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (74ms)
+			ProcessInitializeOnLoadAttributes (510ms)
+			ProcessInitializeOnLoadMethodAttributes (223ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (20ms)
+Refreshing native plugins compatible for Editor in 0.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7423 unused Assets / (6.2 MB). Loaded Objects now: 8650.
+Memory consumption went from 296.6 MB to 290.3 MB.
+Total: 8.499900 ms (FindLiveObjects: 0.780700 ms CreateObjectMapping: 0.563300 ms MarkObjects: 4.548600 ms  DeleteObjects: 2.606000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 6.964404 seconds.
+  path: Assets/Scripts/Player/WaterDetectionAndPhysics.cs
+  artifactKey: Guid(e184c256d2122c447a0046f1d5fc240c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/WaterDetectionAndPhysics.cs using Guid(e184c256d2122c447a0046f1d5fc240c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '61a07182a8d488b95b8c2b3c292272eb') in 0.006315 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.082360 seconds.
+  path: Assets/Prefabs/Player/Player Master.prefab
+  artifactKey: Guid(bb7b731279cbc8f4a85f9bece3eefde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player/Player Master.prefab using Guid(bb7b731279cbc8f4a85f9bece3eefde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: 'a43906ff64faa825e7822abd697f8592') in 1.0949383 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 320
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.952960 seconds.
+  path: Assets/Prefabs/Player/Player Master.prefab
+  artifactKey: Guid(bb7b731279cbc8f4a85f9bece3eefde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player/Player Master.prefab using Guid(bb7b731279cbc8f4a85f9bece3eefde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '63a385e004b2a51bd7a80ca02905390a') in 0.0307076 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 321
+
+========================================================================
+Received Prepare
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7415 unused Assets / (6.1 MB). Loaded Objects now: 9041.
+Memory consumption went from 358.7 MB to 352.6 MB.
+Total: 14.473600 ms (FindLiveObjects: 0.758400 ms CreateObjectMapping: 0.725300 ms MarkObjects: 9.066600 ms  DeleteObjects: 3.922000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 48.256301 seconds.
+  path: Assets/Prefabs/Player/Player Master.prefab
+  artifactKey: Guid(bb7b731279cbc8f4a85f9bece3eefde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player/Player Master.prefab using Guid(bb7b731279cbc8f4a85f9bece3eefde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: 'fa889febfb9fadb4e77d948fe49d8018') in 0.0311994 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 321
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Leak Detected : Persistent allocates 9 individual allocations. To find out more please enable 'Preferences > Jobs > Leak Detection Level > Enabled With Stack Trace' and reproduce the leak again.
+- Loaded All Assemblies, in  0.686 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 0.84 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.973 seconds
+Domain Reload Profiling: 1662ms
+	BeginReloadAssembly (212ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (31ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (60ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (416ms)
+		LoadAssemblies (281ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (205ms)
+			TypeCache.Refresh (9ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (185ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (973ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (635ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (54ms)
+			ProcessInitializeOnLoadAttributes (410ms)
+			ProcessInitializeOnLoadMethodAttributes (161ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7423 unused Assets / (5.6 MB). Loaded Objects now: 8726.
+Memory consumption went from 290.3 MB to 284.7 MB.
+Total: 7.140900 ms (FindLiveObjects: 0.605500 ms CreateObjectMapping: 0.509300 ms MarkObjects: 4.168800 ms  DeleteObjects: 1.856500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.658 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.970 seconds
+Domain Reload Profiling: 1629ms
+	BeginReloadAssembly (168ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (44ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (433ms)
+		LoadAssemblies (295ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (210ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (189ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (971ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (667ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (51ms)
+			ProcessInitializeOnLoadAttributes (422ms)
+			ProcessInitializeOnLoadMethodAttributes (184ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7423 unused Assets / (6.1 MB). Loaded Objects now: 8728.
+Memory consumption went from 298.4 MB to 292.3 MB.
+Total: 8.730500 ms (FindLiveObjects: 0.619100 ms CreateObjectMapping: 0.743100 ms MarkObjects: 4.698700 ms  DeleteObjects: 2.668700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 62.529410 seconds.
+  path: Assets/Prefabs/Player/Player Master.prefab
+  artifactKey: Guid(bb7b731279cbc8f4a85f9bece3eefde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player/Player Master.prefab using Guid(bb7b731279cbc8f4a85f9bece3eefde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: 'f60f1ad91697d7802524be0bede6722b') in 0.7602873 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 321
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Leak Detected : Persistent allocates 9 individual allocations. To find out more please enable 'Preferences > Jobs > Leak Detection Level > Enabled With Stack Trace' and reproduce the leak again.
+- Loaded All Assemblies, in  0.691 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.918 seconds
+Domain Reload Profiling: 1610ms
+	BeginReloadAssembly (206ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (28ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (55ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (23ms)
+	LoadAllAssembliesAndSetupDomain (428ms)
+		LoadAssemblies (296ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (203ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (184ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (918ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (637ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (54ms)
+			ProcessInitializeOnLoadAttributes (399ms)
+			ProcessInitializeOnLoadMethodAttributes (173ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7423 unused Assets / (5.7 MB). Loaded Objects now: 8803.
+Memory consumption went from 293.7 MB to 287.9 MB.
+Total: 7.373500 ms (FindLiveObjects: 0.588500 ms CreateObjectMapping: 0.568700 ms MarkObjects: 4.210000 ms  DeleteObjects: 2.005400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.667 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.918 seconds
+Domain Reload Profiling: 1585ms
+	BeginReloadAssembly (170ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (47ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (23ms)
+	LoadAllAssembliesAndSetupDomain (437ms)
+		LoadAssemblies (301ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (209ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (188ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (918ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (630ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (55ms)
+			ProcessInitializeOnLoadAttributes (404ms)
+			ProcessInitializeOnLoadMethodAttributes (160ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
+Refreshing native plugins compatible for Editor in 0.93 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7423 unused Assets / (6.0 MB). Loaded Objects now: 8805.
+Memory consumption went from 301.2 MB to 295.2 MB.
+Total: 9.699500 ms (FindLiveObjects: 0.702600 ms CreateObjectMapping: 0.701300 ms MarkObjects: 5.258400 ms  DeleteObjects: 3.036200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7415 unused Assets / (6.0 MB). Loaded Objects now: 8805.
+Memory consumption went from 309.8 MB to 303.8 MB.
+Total: 11.864500 ms (FindLiveObjects: 0.663600 ms CreateObjectMapping: 0.514200 ms MarkObjects: 8.232600 ms  DeleteObjects: 2.452000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.692 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.920 seconds
+Domain Reload Profiling: 1612ms
+	BeginReloadAssembly (183ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (47ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (23ms)
+	LoadAllAssembliesAndSetupDomain (443ms)
+		LoadAssemblies (312ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (214ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (192ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (920ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (620ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (56ms)
+			ProcessInitializeOnLoadAttributes (390ms)
+			ProcessInitializeOnLoadMethodAttributes (165ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 0.76 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7423 unused Assets / (5.9 MB). Loaded Objects now: 8807.
+Memory consumption went from 318.1 MB to 312.2 MB.
+Total: 8.393500 ms (FindLiveObjects: 0.942900 ms CreateObjectMapping: 0.589000 ms MarkObjects: 4.598800 ms  DeleteObjects: 2.261600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportWorkerClient::OnTransportError - code=10054 error=An existing connection was forcibly closed by the remote host.

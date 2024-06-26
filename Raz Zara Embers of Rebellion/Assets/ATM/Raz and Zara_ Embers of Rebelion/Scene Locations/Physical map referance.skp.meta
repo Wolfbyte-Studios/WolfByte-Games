@@ -3,7 +3,102 @@ guid: b9c69fa75cd7be14bba4fb8e15b87d72
 SketchUpImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material 1
+    second: {fileID: 2100000, guid: 6293c3eeab6b3864cab70b9695e5008e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SydBas02
+    second: {fileID: 2100000, guid: 8e08b43cdfede3546bd2280c1752bb20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SydBas10
+    second: {fileID: 2100000, guid: 6c40ad42dd499fb4c83440bafdda1dbb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SydSst08
+    second: {fileID: 2100000, guid: 3f951829b6bb48f43bf9bcd3481f0ccd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color_B25]'
+    second: {fileID: 2100000, guid: a4d3b7bd65cb25d48b3771cab29996f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Wood Bamboo]'
+    second: {fileID: 2100000, guid: 4ac0ed5012df034419b98568810686a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Wood Veneer 01]'
+    second: {fileID: 2100000, guid: 06120b613b5586741941c03e6a22072d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _2
+    second: {fileID: 2100000, guid: 41f14d524e37de04eafa210089564de0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _3
+    second: {fileID: 2100000, guid: 8b496802ad585b84488917a4fb1190d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: 63d7be7893e382f4285939a162ead2f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_Base_Color
+    second: {fileID: 2100000, guid: 65c8fa3a9bcdf5345806e012ffbbd879, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SydBas02
+    second: {fileID: 2800000, guid: d8f3c7a930e135a4fafa9a33adeb7b24, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SydBas10
+    second: {fileID: 2800000, guid: ba45ddc4675f7e64689b8041a950ef42, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SydSst08
+    second: {fileID: 2800000, guid: 4da5104def05a0242996611142d48588, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood 01
+    second: {fileID: 2800000, guid: 4d75f8b900119a84daf8608d60859656, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood_Bamboo_Medium
+    second: {fileID: 2800000, guid: ba9b7ccf283604847869e65582a4f0e0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: material_Base_Color
+    second: {fileID: 2800000, guid: fd82cc7de2192ff458761f04d1bab412, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wood_tint0xA0764FFF
+    second: {fileID: 2800000, guid: 0d6bd3bc633b32c4281b38c38694fc47, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: woodu_tint0xA47D50FF
+    second: {fileID: 2800000, guid: be1484f88de2ebb42947d5a781f30331, type: 3}
   materials:
     materialImportMode: 2
     materialName: 2
@@ -41,7 +136,7 @@ SketchUpImporter:
     importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
+    importCameras: 0
     importLights: 1
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2

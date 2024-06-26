@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float MovementAcceleration = 0.02f;
     public float RotationSpeed;
     public float jumpHeight;
+    public float inAirSpeed;
     [Header("Raycast Tuning/Slope Settings")]
     public float MaxSlopeAngle = 45f;
     public float SlideSpeed = 5f;
@@ -37,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         anim = transform.GetComponentInChildren<Animator>();
         cc = transform.GetComponentInChildren<CharacterController>();
 
@@ -103,9 +105,10 @@ public class PlayerMovement : MonoBehaviour
             // Walking
             MovementSpeed = Mathf.Lerp(MovementSpeed, 1f, MovementAcceleration * 2);
         }
+        //Falling, in air movement
         if (anim.GetBool("IsFalling") & value != Vector2.zero)
         {
-            cc.Move(lookDirection * Time.deltaTime * MovementSpeed);
+            cc.Move(lookDirection * Time.deltaTime * MovementSpeed * inAirSpeed);
         }
 
 

@@ -8,7 +8,7 @@ public class PlayerCam : MonoBehaviour
     [Header("Left/Right, Up/Down, Forward/Back")]
     public float distanceSideways;
     public float distanceAbove;
-    
+
     public float distanceForward;
     private Vector3 distanceFromPlayer;  // Define the offset relative to the player's orientation
     [Header("How far above the player the camera focuses")]
@@ -19,11 +19,20 @@ public class PlayerCam : MonoBehaviour
     [Header("Look speed of the camera")]
     public float lookSpeed;
     private Vector3 target;
-
+    public void Start()
+    {
+        StartCoroutine(DisconnectCamera());
+    }
+    IEnumerator DisconnectCamera()
+    {
+        yield return new WaitForSeconds(3);
+        transform.parent = null;
+        yield return null;
+    }
     void FixedUpdate()
     {
         distanceAbove = Mathf.Clamp(distanceAbove, 0.25f, (Mathf.Abs(distanceForward) * 1.5f));
-        
+
         distanceSideways = Mathf.Clamp(distanceSideways, -Mathf.Abs(distanceForward), Mathf.Abs(distanceForward));
         distanceFromPlayer = new Vector3(distanceSideways, distanceAbove, distanceForward);
         // Calculate the desired position based on player position and offset

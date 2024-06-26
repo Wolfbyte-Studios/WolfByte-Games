@@ -63,9 +63,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
+    y: 0.5
     width: 1
-    height: 1
+    height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -248,9 +248,9 @@ MonoBehaviour:
   player: {fileID: 5777078390378528509}
   distanceSideways: 0
   distanceAbove: 3
-  distanceForward: 7.5
+  distanceForward: 5
   LookOffset: 2.5
-  camSpeed: 1
+  camSpeed: 2.5
   lookSpeed: 2.5
 --- !u!1 &1781274326644758654
 GameObject:
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 2176495122938739952}
   - component: {fileID: 4043237513647060109}
   m_Layer: 3
-  m_Name: Player2
+  m_Name: Player Master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,7 +280,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5777078390378528509}
   - {fileID: 2224406597320024057}
@@ -303,6 +303,16 @@ MonoBehaviour:
   MovementAcceleration: 0.075
   RotationSpeed: 100
   jumpHeight: 1
+  inAirSpeed: 0.5
+  MaxSlopeAngle: 45
+  SlideSpeed: 5
+  distanceToGround: 0
+  RaycastOriginOffset: {x: 0, y: 0.5, z: -0.25}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  RaycastOrigin: {fileID: 0}
+  distanceToGroundForLanding: 1
 --- !u!1001 &6316007439341033750
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -7,10 +7,12 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement Settings")]
     public Vector3 Gravity = new Vector3(0, -9.81f, 0);
     public float MovementSpeed;
+    public float swimmingSpeed;
     public float MovementAcceleration = 0.02f;
     public float RotationSpeed;
     public float jumpHeight;
     public float inAirSpeed;
+    public Vector3 lookDirection;
     [Header("Raycast Tuning/Slope Settings")]
     public float MaxSlopeAngle = 45f;
     public float SlideSpeed = 5f;
@@ -20,16 +22,18 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     public GameObject RaycastOrigin;
     public float distanceToGroundForLanding;
+    public bool IsSwimming;
 
-    private Vector3 velocity;
+    public Vector3 velocity;
     private bool isGrounded;
 
     private CharacterController cc;
-    private Animator anim;
+    public Animator anim;
     private GameObject Player;
     private Camera playerCam;
     private InputAction inputMove;
     private InputAction inputJump;
+    private InputAction inputCrouch;
     private InputAction inputAttack;
     private InputAction inputInteract;
     private InputAction inputItem;
@@ -47,6 +51,8 @@ public class PlayerMovement : MonoBehaviour
         inputAttack.performed += OnAttack;
         inputJump = InputSystem.actions.FindAction("Jump");
         inputJump.performed += OnJump;
+        inputCrouch = InputSystem.actions.FindAction("Crouch");
+        inputCrouch.performed += OnCrouch;
         inputInteract = InputSystem.actions.FindAction("Interact");
         inputInteract.performed += OnInteract;
         inputItem = InputSystem.actions.FindAction("Item");
@@ -59,6 +65,11 @@ public class PlayerMovement : MonoBehaviour
         RaycastOrigin = new GameObject("RaycastOrigin");
         RaycastOrigin.transform.parent = transform.GetChild(0).transform;
         RaycastOrigin.transform.localPosition = RaycastOriginOffset;
+    }
+
+    private void OnCrouch(InputAction.CallbackContext obj)
+    {
+        //throw new System.NotImplementedException();
     }
 
     public void ProcessMovement()
@@ -87,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         var value = inputMove.ReadValue<Vector2>();
-        var lookDirection = playerCam.transform.right * value.x + playerCam.transform.forward * value.y;
+        lookDirection = playerCam.transform.right * value.x + playerCam.transform.forward * value.y;
         lookDirection.y = 0; // Ensure the movement is only on the XZ plane
 
         if (lookDirection.sqrMagnitude > 0.01f) // Check to avoid small rotations when not moving
@@ -115,6 +126,20 @@ public class PlayerMovement : MonoBehaviour
 
 
 
+    }
+    public void Swimming()
+    {
+        int SwimUpDown = 0;
+        if (inputJump.IsPressed())
+        {
+            SwimUpDown = 1;
+        }
+        if (inputCrouch.IsPressed())
+        {
+            SwimUpDown = -1;
+        }
+        var PreUpDown = (lookDirection * Time.deltaTime * MovementSpeed * swimmingSpeed);
+        cc.Move( new Vector3(PreUpDown.x, SwimUpDown, PreUpDown.z));
     }
     public void CheckSlope()
     {

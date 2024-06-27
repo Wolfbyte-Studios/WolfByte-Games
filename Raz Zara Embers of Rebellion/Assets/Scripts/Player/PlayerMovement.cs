@@ -123,7 +123,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-
+        // Apply gravity
+        velocity.y += Gravity.y * Time.deltaTime;
+        cc.Move(velocity * Time.deltaTime);
+        
 
 
     }
@@ -140,6 +143,7 @@ public class PlayerMovement : MonoBehaviour
         }
         var PreUpDown = (lookDirection * Time.deltaTime * MovementSpeed * swimmingSpeed);
         cc.Move( new Vector3(PreUpDown.x, SwimUpDown, PreUpDown.z));
+        Debug.LogWarning("Swim movement");
     }
     public void CheckSlope()
     {
@@ -223,9 +227,6 @@ public class PlayerMovement : MonoBehaviour
         
 
         ProcessMovement();
-        // Apply gravity
-        velocity.y += Gravity.y * Time.deltaTime;
-        cc.Move(velocity * Time.deltaTime);
         //Apply animator components
         anim.SetFloat("MovementSpeed", MovementSpeed);
 

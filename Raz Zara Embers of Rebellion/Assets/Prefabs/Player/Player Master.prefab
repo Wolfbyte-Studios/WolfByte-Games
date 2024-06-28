@@ -300,10 +300,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Gravity: {x: 0, y: -9.81, z: 0}
   MovementSpeed: 0
+  swimmingSpeed: 0.25
+  swimmingVerticalSpeed: 0.01
   MovementAcceleration: 0.075
   RotationSpeed: 100
   jumpHeight: 1
   inAirSpeed: 0.5
+  lookDirection: {x: 0, y: 0, z: 0}
   MaxSlopeAngle: 45
   SlideSpeed: 5
   distanceToGround: 0
@@ -313,6 +316,9 @@ MonoBehaviour:
     m_Bits: 4294967295
   RaycastOrigin: {fileID: 0}
   distanceToGroundForLanding: 1
+  IsSwimming: 0
+  velocity: {x: 0, y: 0, z: 0}
+  anim: {fileID: 0}
 --- !u!1001 &6316007439341033750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -716,3 +722,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetSurface: {fileID: 0}
+  pm: {fileID: 0}

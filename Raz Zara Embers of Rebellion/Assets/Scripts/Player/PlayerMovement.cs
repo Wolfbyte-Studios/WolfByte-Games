@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 Gravity = new Vector3(0, -9.81f, 0);
     public float MovementSpeed;
     public float swimmingSpeed;
+    public float swimmingVerticalSpeed;
+    public bool swimMaxHeight;
     public float MovementAcceleration = 0.02f;
     public float RotationSpeed;
     public float jumpHeight;
@@ -142,8 +144,12 @@ public class PlayerMovement : MonoBehaviour
             SwimUpDown = -1;
         }
         var PreUpDown = (lookDirection * Time.deltaTime * MovementSpeed * swimmingSpeed);
-        cc.Move( new Vector3(PreUpDown.x, SwimUpDown, PreUpDown.z));
-        Debug.LogWarning("Swim movement");
+        if (swimMaxHeight)
+        {
+            SwimUpDown = Mathf.Clamp(SwimUpDown, -1, 0);
+        }
+        cc.Move( new Vector3(PreUpDown.x, SwimUpDown * swimmingVerticalSpeed, PreUpDown.z));
+        Debug.LogWarning(new Vector3(PreUpDown.x, SwimUpDown, PreUpDown.z));
     }
     public void CheckSlope()
     {
@@ -164,14 +170,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 anim.SetFloat("FallDistance", distanceToGround);
             }
-            Debug.Log("Slope Angle: " + slopeAngle);
 
             if (slopeAngle > MaxSlopeAngle)
             {
                 // Apply sliding logic
                 Vector3 slideDirection = new Vector3(hit.normal.x, -hit.normal.y, hit.normal.z);
                 cc.Move(slideDirection * SlideSpeed * Time.deltaTime);
-                Debug.LogWarning(slideDirection * SlideSpeed * Time.deltaTime);
             }
         }
     }
@@ -187,18 +191,21 @@ public class PlayerMovement : MonoBehaviour
     }
     public void OnJump(InputAction.CallbackContext obj)
     {
-        
-            anim.SetTrigger("Jump");
+        if (IsSwimming)
+        {
+            return;
+        }
+        anim.SetTrigger("Jump");
         
     }
-    
+
     public void Jump()
     {
         
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * Gravity.y);
-            cc.Move(velocity * Time.deltaTime);
-            isGrounded = false;
-            Debug.Log("Jumped with physics");
+        velocity.y = Mathf.Sqrt(jumpHeight * -2f * Gravity.y);
+        cc.Move(velocity * Time.deltaTime);
+        isGrounded = false;
+        Debug.Log("Jumped with physics");
     }
 
     public void OnAttack(InputAction.CallbackContext obj)
@@ -227,6 +234,10 @@ public class PlayerMovement : MonoBehaviour
         
 
         ProcessMovement();
+        if(IsSwimming)
+        {
+            Swimming();
+        }
         //Apply animator components
         anim.SetFloat("MovementSpeed", MovementSpeed);
 

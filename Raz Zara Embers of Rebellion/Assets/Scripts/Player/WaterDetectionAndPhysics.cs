@@ -43,13 +43,13 @@ public class FitToWaterSurface : MonoBehaviour
                 if (targetSurface.ProjectPointOnWaterSurface(searchParameters, out searchResult))
                 {
                     // Clamp the y position of the player
-                    gameObject.transform.position = new Vector3(
+                   /* gameObject.transform.position = new Vector3(
                         gameObject.transform.position.x,
-                        Mathf.Clamp(gameObject.transform.position.y, targetSurface.volumeBounds.bounds.max.y * -1, searchResult.projectedPositionWS.y + WaterHeightOffset),
-                        gameObject.transform.position.z);
+                        Mathf.Clamp(gameObject.transform.position.y, targetSurface.volumeBounds.bounds.max.y * -1, targetSurface.transform.TransformPoint(targetSurface.volumeBounds.bounds.max).y + WaterHeightOffset),
+                        gameObject.transform.position.z); */
 
                     // Check if the player is within the tolerance of the water surface
-                    float distanceToWaterSurface = Mathf.Abs(gameObject.transform.position.y - GetWaterSurfaceHeight());
+                    float distanceToWaterSurface = Mathf.Abs(gameObject.transform.position.y - targetSurface.volumeBounds.bounds.max.y);
                     if (distanceToWaterSurface <= tolerance)
                     {
                         pm.swimMaxHeight = true;
@@ -100,6 +100,7 @@ public class FitToWaterSurface : MonoBehaviour
             pm.velocity = Vector3.zero;
             pm.anim.applyRootMotion = false;
             Debug.LogWarning("Velocity should be zero");
+            targetSurface = other.GetComponent<WaterSurface>();
         }
     }
     public void OnTriggerExit(Collider other)

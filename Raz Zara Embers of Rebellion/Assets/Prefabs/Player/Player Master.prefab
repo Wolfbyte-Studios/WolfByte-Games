@@ -111,7 +111,7 @@ MonoBehaviour:
   clearDepth: 1
   volumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 4294967295
   volumeAnchorOverride: {fileID: 0}
   antialiasing: 2
   SMAAQuality: 2
@@ -301,7 +301,8 @@ MonoBehaviour:
   Gravity: {x: 0, y: -9.81, z: 0}
   MovementSpeed: 0
   swimmingSpeed: 0.25
-  swimmingVerticalSpeed: 0.01
+  swimmingVerticalSpeed: 0.02
+  swimMaxHeight: 0
   MovementAcceleration: 0.075
   RotationSpeed: 100
   jumpHeight: 1
@@ -723,3 +724,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetSurface: {fileID: 0}
   pm: {fileID: 0}
+  WaterHeightOffset: 0
+  tolerance: 1.5
+  projectedHeight: 0

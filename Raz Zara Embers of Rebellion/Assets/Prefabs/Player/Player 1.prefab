@@ -195,15 +195,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2176495122938739952, guid: bb7b731279cbc8f4a85f9bece3eefde9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.6
+      value: -0.22
       objectReference: {fileID: 0}
     - target: {fileID: 2176495122938739952, guid: bb7b731279cbc8f4a85f9bece3eefde9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.7
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 2176495122938739952, guid: bb7b731279cbc8f4a85f9bece3eefde9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -138.7
+      value: -12.88
       objectReference: {fileID: 0}
     - target: {fileID: 2176495122938739952, guid: bb7b731279cbc8f4a85f9bece3eefde9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -237,6 +237,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8560050253043969248, guid: bb7b731279cbc8f4a85f9bece3eefde9, type: 3}
+      propertyPath: pm
+      value: 
+      objectReference: {fileID: 5287911987270288089}
+    - target: {fileID: 8560050253043969248, guid: bb7b731279cbc8f4a85f9bece3eefde9, type: 3}
+      propertyPath: WaterHeightOffset
+      value: 1.05
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -3030322110497693522, guid: bb7b731279cbc8f4a85f9bece3eefde9, type: 3}
     m_RemovedGameObjects: []
@@ -249,6 +257,17 @@ PrefabInstance:
       addedObject: {fileID: 4632996982820634637}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb7b731279cbc8f4a85f9bece3eefde9, type: 3}
+--- !u!114 &5287911987270288089 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4043237513647060109, guid: bb7b731279cbc8f4a85f9bece3eefde9, type: 3}
+  m_PrefabInstance: {fileID: 8178001423220471380}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88479b58119bcc640b250a41d00b2cb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8019343304583006884 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2176495122938739952, guid: bb7b731279cbc8f4a85f9bece3eefde9, type: 3}

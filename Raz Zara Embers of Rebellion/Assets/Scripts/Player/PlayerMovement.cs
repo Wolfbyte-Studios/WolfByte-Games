@@ -15,6 +15,11 @@ public class PlayerMovement : MonoBehaviour
     public float jumpHeight;
     public float inAirSpeed;
     public Vector3 lookDirection;
+    [Header("Edge Grab Settings")]
+    public Vector3 EdgeRayOrigin;
+    public Vector3 EdgeRayDirection;
+    public float EdgeRayDistance;
+    public bool ClimbableEdge;
     [Header("Raycast Tuning/Slope Settings")]
     public float MaxSlopeAngle = 45f;
     public float SlideSpeed = 5f;
@@ -25,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject RaycastOrigin;
     public float distanceToGroundForLanding;
     public bool IsSwimming;
+
+    [Header("Readouts")]
 
     public Vector3 velocity;
     private bool isGrounded;
@@ -151,6 +158,20 @@ public class PlayerMovement : MonoBehaviour
         cc.Move( new Vector3(PreUpDown.x, SwimUpDown * swimmingVerticalSpeed, PreUpDown.z));
         Debug.LogWarning(new Vector3(PreUpDown.x, SwimUpDown, PreUpDown.z));
     }
+    public void CheckEdgeGrab()
+    {
+        RaycastHit hit;
+        Debug.DrawRay(RaycastOrigin.transform.position + EdgeRayOrigin, EdgeRayDirection * EdgeRayDistance, Color.magenta);
+        Debug.DrawRay(RaycastOrigin.transform.position + EdgeRayOrigin, RaycastOrigin.transform.forward * -1 * EdgeRayDistance, Color.magenta);
+        if (Physics.Raycast(RaycastOrigin.transform.position + EdgeRayOrigin, EdgeRayDirection, out hit, EdgeRayDistance, groundLayer))
+        {
+            ClimbableEdge = true;
+        }
+        else
+        {
+            ClimbableEdge = false;
+        }
+    }
     public void CheckSlope()
     {
 
@@ -231,7 +252,7 @@ public class PlayerMovement : MonoBehaviour
     {
         CheckGrounded();
         CheckSlope();
-        
+        CheckEdgeGrab();
 
         ProcessMovement();
         if(IsSwimming)

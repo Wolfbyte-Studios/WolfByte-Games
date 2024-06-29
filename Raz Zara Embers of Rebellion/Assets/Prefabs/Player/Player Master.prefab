@@ -310,11 +310,14 @@ MonoBehaviour:
   inAirSpeed: 0.5
   lookDirection: {x: 0, y: 0, z: 0}
   EdgeRayDirection: {x: 0, y: -1, z: 0}
-  EdgeVerticalOriginOffset: {x: 0, y: 2.1, z: -0.1}
-  EdgeHorizontalOriginOffset: {x: 0, y: 0.1, z: 0.2}
+  EdgeVerticalOriginOffset: {x: 0, y: 2.1, z: -0.25}
+  EdgeHorizontalOriginOffset: {x: 0, y: 0.1, z: 0.35}
   EdgeRayDistance: 1.5
-  GetupMoveSpeed: 0.5
+  GetupMoveSpeed: 0.125
   ClimbableEdge: 0
+  TargetGetUpOffset1: {x: 0, y: 0, z: 0}
+  TargetGetUpOffset2: {x: 0, y: 0, z: 0}
+  isStandingUp: 0
   MaxSlopeAngle: 45
   SlideSpeed: 5
   distanceToGround: 0

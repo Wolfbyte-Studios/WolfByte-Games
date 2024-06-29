@@ -27,8 +27,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 CurrentGetUpLocation;
     private Vector3 TargetGetupLocation2;
     private Vector3 TargetGetupLocation1;
+    public Vector3 TargetGetUpOffset1;
+    public Vector3 TargetGetUpOffset2;
     private Vector3 InitialGetUpPoint;
     private bool isGettingUp;
+    public bool isStandingUp;
     [Header("Raycast Tuning/Slope Settings")]
     public float MaxSlopeAngle = 45f;
     public float SlideSpeed = 5f;
@@ -104,7 +107,12 @@ public class PlayerMovement : MonoBehaviour
         //For edge get up
         if (isGettingUp)
         {
-            Player.transform.position = Vector3.Lerp(Player.transform.position, TargetGetupLocation1, GetupMoveSpeed);
+            Player.transform.position = Vector3.Lerp(Player.transform.position, TargetGetupLocation1 + TargetGetUpOffset1, GetupMoveSpeed);
+            return;
+        }
+        if (isStandingUp)
+        {
+            Player.transform.position = Vector3.Lerp(Player.transform.position, TargetGetupLocation2 + TargetGetUpOffset2, GetupMoveSpeed);
             return;
         }
 
@@ -263,11 +271,12 @@ public class PlayerMovement : MonoBehaviour
     }
     public void StandUp()
     {
-        Debug.Log("Test");
+        Debug.Log("Stand up ending");
         isGettingUp = false;
+        isStandingUp = true;
         anim.applyRootMotion = false;
         cc.enabled = false;
-        Player.transform.position = TargetGetupLocation2;
+        //Player.transform.position = TargetGetupLocation2 + TargetGetUpOffset2;
         anim.applyRootMotion = true;
         cc.enabled = true;
         if (IsSwimming)
@@ -282,10 +291,7 @@ public class PlayerMovement : MonoBehaviour
         anim.applyRootMotion = false;
         cc.enabled = false;
         isGettingUp = true;
-        if(isGettingUp)
-        {
-            Player.transform.position = Vector3.Lerp(Player.transform.position, TargetGetupLocation1, GetupMoveSpeed);
-        }
+       
         if (IsSwimming)
         {
             IsSwimming = false;

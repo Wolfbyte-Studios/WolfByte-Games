@@ -16,10 +16,19 @@ public class PlayerMovement : MonoBehaviour
     public float inAirSpeed;
     public Vector3 lookDirection;
     [Header("Edge Grab Settings")]
-    public Vector3 EdgeRayOrigin;
+    private GameObject EdgeRayVerticalOrigin;
+    private GameObject EdgeRayHorizontalOrigin;
     public Vector3 EdgeRayDirection;
+    public Vector3 EdgeVerticalOriginOffset;
+    public Vector3 EdgeHorizontalOriginOffset;
     public float EdgeRayDistance;
+    public float GetupMoveSpeed;
     public bool ClimbableEdge;
+    private Vector3 CurrentGetUpLocation;
+    private Vector3 TargetGetupLocation2;
+    private Vector3 TargetGetupLocation1;
+    private Vector3 InitialGetUpPoint;
+    private bool isGettingUp;
     [Header("Raycast Tuning/Slope Settings")]
     public float MaxSlopeAngle = 45f;
     public float SlideSpeed = 5f;
@@ -74,6 +83,14 @@ public class PlayerMovement : MonoBehaviour
         RaycastOrigin = new GameObject("RaycastOrigin");
         RaycastOrigin.transform.parent = transform.GetChild(0).transform;
         RaycastOrigin.transform.localPosition = RaycastOriginOffset;
+
+        EdgeRayVerticalOrigin = new GameObject("EdgeRayVerticalOrigin");
+        EdgeRayVerticalOrigin.transform.parent = RaycastOrigin.transform;
+        EdgeRayVerticalOrigin.transform.localPosition = Vector3.zero;
+
+        EdgeRayHorizontalOrigin = new GameObject("EdgeRayHorizontalOrigin");
+        EdgeRayHorizontalOrigin.transform.parent = EdgeRayVerticalOrigin.transform;
+        EdgeRayHorizontalOrigin.transform.localPosition = Vector3.zero;
     }
 
     private void OnCrouch(InputAction.CallbackContext obj)
@@ -83,8 +100,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void ProcessMovement()
     {
-       
-        
+        //For edge get up
+        if (isGettingUp)
+        {
+            Player.transform.position = Vector3.Lerp(Player.transform.position, TargetGetupLocation1, GetupMoveSpeed);
+            return;
+        }
+
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = 0f;
@@ -160,12 +182,22 @@ public class PlayerMovement : MonoBehaviour
     }
     public void CheckEdgeGrab()
     {
+        EdgeRayVerticalOrigin.transform.localPosition = EdgeVerticalOriginOffset;
+        EdgeRayHorizontalOrigin.transform.localPosition= EdgeHorizontalOriginOffset;
         RaycastHit hit;
-        Debug.DrawRay(RaycastOrigin.transform.position + EdgeRayOrigin, EdgeRayDirection * EdgeRayDistance, Color.magenta);
-        Debug.DrawRay(RaycastOrigin.transform.position + EdgeRayOrigin, RaycastOrigin.transform.forward * -1 * EdgeRayDistance, Color.magenta);
-        if (Physics.Raycast(RaycastOrigin.transform.position + EdgeRayOrigin, EdgeRayDirection, out hit, EdgeRayDistance, groundLayer))
+        //Draw and test a vertical ray
+        Debug.DrawRay(EdgeRayVerticalOrigin.transform.position, EdgeRayDirection * EdgeRayDistance, Color.magenta);
+        
+        if (Physics.Raycast(EdgeRayVerticalOrigin.transform.position, EdgeRayDirection, out hit, EdgeRayDistance, groundLayer))
         {
-            ClimbableEdge = true;
+            CurrentGetUpLocation = hit.point;   
+            Debug.DrawRay(new Vector3(EdgeRayHorizontalOrigin.transform.position.x, hit.point.y - EdgeHorizontalOriginOffset.y, EdgeRayHorizontalOrigin.transform.position.z), RaycastOrigin.transform.forward * -1 * EdgeRayDistance, Color.magenta);
+            if( Physics.Raycast(new Vector3(EdgeRayHorizontalOrigin.transform.position.x, hit.point.y - EdgeHorizontalOriginOffset.y, EdgeRayHorizontalOrigin.transform.position.z), RaycastOrigin.transform.forward * -1, out hit, .5f, groundLayer))
+            {
+                InitialGetUpPoint = hit.point;
+                ClimbableEdge = true;
+            }
+            
         }
         else
         {
@@ -212,6 +244,14 @@ public class PlayerMovement : MonoBehaviour
     }
     public void OnJump(InputAction.CallbackContext obj)
     {
+        
+        if(ClimbableEdge)
+        {
+            anim.SetTrigger("ClimbLedge");
+            TargetGetupLocation2 = CurrentGetUpLocation;
+            TargetGetupLocation1 = InitialGetUpPoint;
+            return;
+        }
         if (IsSwimming)
         {
             return;
@@ -219,7 +259,27 @@ public class PlayerMovement : MonoBehaviour
         anim.SetTrigger("Jump");
         
     }
-
+    public void StandUp()
+    {
+        Debug.Log("Test");
+        isGettingUp = false;
+        anim.applyRootMotion = false;
+        cc.enabled = false;
+        Player.transform.position = TargetGetupLocation2;
+        anim.applyRootMotion = true;
+        cc.enabled = true;
+    }
+    public void GetUp()
+    {
+        anim.applyRootMotion = false;
+        cc.enabled = false;
+        isGettingUp = true;
+        if(isGettingUp)
+        {
+            Player.transform.position = Vector3.Lerp(Player.transform.position, TargetGetupLocation1, GetupMoveSpeed);
+        }
+    }
+        
     public void Jump()
     {
         

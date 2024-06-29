@@ -19,4 +19,12 @@ public class JumpParent : MonoBehaviour
     {
         pm.Jump();
     }
+    public void StandUp()
+    {
+        pm.StandUp();
+    }
+    public void GetUp()
+    {
+        pm.GetUp();
+    }
 }

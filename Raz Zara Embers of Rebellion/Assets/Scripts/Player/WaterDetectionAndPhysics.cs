@@ -10,7 +10,7 @@ public class FitToWaterSurface : MonoBehaviour
     public float WaterHeightOffset;
     public float tolerance;
     public float projectedHeight;
-
+    public float distanceToWaterSurface;
 
     private Collider col;
     private bool InWater;
@@ -51,7 +51,7 @@ public class FitToWaterSurface : MonoBehaviour
                         gameObject.transform.position.z); */
 
                     // Check if the player is within the tolerance of the water surface
-                    float distanceToWaterSurface = Mathf.Abs(gameObject.transform.position.y - targetSurface.volumeBounds.bounds.max.y);
+                    distanceToWaterSurface = Mathf.Abs(gameObject.transform.position.y - targetSurface.volumeBounds.bounds.max.y);
                     if (distanceToWaterSurface <= tolerance)
                     {
                         pm.swimMaxHeight = true;
@@ -62,7 +62,7 @@ public class FitToWaterSurface : MonoBehaviour
                         pm.swimMaxHeight = false;
                         Debug.Log($"Outside tolerance: {distanceToWaterSurface}");
                     }
-                    if(distanceToWaterSurface < tolerance)
+                    if(distanceToWaterSurface <= tolerance)
                     {
                         pm.cc.Move(new Vector3(0, -0.1f, 0));
                     }

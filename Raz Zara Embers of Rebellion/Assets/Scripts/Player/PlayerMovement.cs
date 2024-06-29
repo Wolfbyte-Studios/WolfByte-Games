@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 velocity;
     private bool isGrounded;
 
-    private CharacterController cc;
+    public CharacterController cc;
     public Animator anim;
     private GameObject Player;
     private Camera playerCam;
@@ -268,6 +268,12 @@ public class PlayerMovement : MonoBehaviour
         Player.transform.position = TargetGetupLocation2;
         anim.applyRootMotion = true;
         cc.enabled = true;
+        if (IsSwimming)
+        {
+            IsSwimming = false;
+            anim.SetBool("InWater", false);
+            anim.SetBool("IsGrounded", true);
+        }
     }
     public void GetUp()
     {
@@ -277,6 +283,11 @@ public class PlayerMovement : MonoBehaviour
         if(isGettingUp)
         {
             Player.transform.position = Vector3.Lerp(Player.transform.position, TargetGetupLocation1, GetupMoveSpeed);
+        }
+        if (IsSwimming)
+        {
+            IsSwimming = false;
+            anim.SetBool("InWater", false);
         }
     }
         

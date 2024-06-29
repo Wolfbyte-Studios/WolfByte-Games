@@ -312,6 +312,7 @@ MonoBehaviour:
   EdgeVerticalOriginOffset: {x: 0, y: 2.1, z: -0.1}
   EdgeHorizontalOriginOffset: {x: 0, y: 0.1, z: 0.2}
   EdgeRayDistance: 1.5
+  GetupMoveSpeed: 0.5
   ClimbableEdge: 0
   MaxSlopeAngle: 45
   SlideSpeed: 5
@@ -324,6 +325,7 @@ MonoBehaviour:
   distanceToGroundForLanding: 1
   IsSwimming: 0
   velocity: {x: 0, y: 0, z: 0}
+  cc: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1001 &6316007439341033750
 PrefabInstance:
@@ -732,3 +734,5 @@ MonoBehaviour:
   WaterHeightOffset: 0
   tolerance: 1.5
   projectedHeight: 0
+  triggerCollider: {fileID: 0}
+  character: {fileID: 0}

@@ -1,6 +1,7 @@
 using NUnit.Framework.Constraints;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
+using UnityEngine.TextCore.Text;
 
 public class FitToWaterSurface : MonoBehaviour
 {
@@ -26,10 +27,11 @@ public class FitToWaterSurface : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pm.anim.SetBool("InWater", InWater);
-        pm.IsSwimming = InWater;
+        
+        
         if (InWater)
         {
+            CheckIfCharacterIsInTrigger();
             if (targetSurface != null)
             {
                 // Build the search parameters
@@ -60,12 +62,42 @@ public class FitToWaterSurface : MonoBehaviour
                         pm.swimMaxHeight = false;
                         Debug.Log($"Outside tolerance: {distanceToWaterSurface}");
                     }
+                    if(distanceToWaterSurface < tolerance)
+                    {
+                        pm.cc.Move(new Vector3(0, -0.1f, 0));
+                    }
                 }
                 else
                 {
                     Debug.LogError("Can't Find Projected Position");
                 }
             }
+            
+        }
+    }
+    public Collider triggerCollider; 
+    public Transform character;
+    void CheckIfCharacterIsInTrigger()
+    {
+        if(triggerCollider == null)
+        {
+            return;
+        }
+        // Get the bounds of the trigger collider
+        Bounds triggerBounds = triggerCollider.bounds;
+        
+        // Check if the character's position is within the bounds
+        if (triggerBounds.Contains(transform.position))
+        {
+            //Debug.Log("Character is within the trigger bounds.");
+            // Handle in-trigger logic here
+        }
+        else
+        {
+            OnTriggerExit(triggerCollider);
+            triggerCollider = null;
+            return;
+            // Handle out-of-trigger logic here
         }
     }
     public float GetWaterSurfaceHeight()
@@ -95,10 +127,15 @@ public class FitToWaterSurface : MonoBehaviour
     {
         if(other.gameObject.GetComponent<WaterSurface>() != null)
         {
+            triggerCollider = other;
             InWater = true;
+            pm.anim.SetBool("InWater", InWater);
+            pm.IsSwimming = InWater;
             pm.Gravity = Vector3.zero;
             pm.velocity = Vector3.zero;
             pm.anim.applyRootMotion = false;
+            pm.anim.SetBool("IsFalling", false);
+            pm.anim.SetBool("IsGrounded", true);
             Debug.LogWarning("Velocity should be zero");
             targetSurface = other.GetComponent<WaterSurface>();
         }
@@ -108,6 +145,8 @@ public class FitToWaterSurface : MonoBehaviour
         if (other.gameObject.GetComponent<WaterSurface>() != null)
         {
             InWater = false;
+            pm.anim.SetBool("InWater", InWater);
+            pm.IsSwimming = InWater;
             pm.anim.applyRootMotion = true;
             pm.Gravity = new Vector3(0, -9.81f, 0);
         }

@@ -58,24 +58,25 @@ public class PlayerMovement : MonoBehaviour
     private InputAction inputRun;
     private bool isRunning = false;
 
+
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
         anim = transform.GetComponentInChildren<Animator>();
         cc = transform.GetComponentInChildren<CharacterController>();
-
-        inputMove = InputSystem.actions.FindAction("Move");
-        inputAttack = InputSystem.actions.FindAction("Attack");
+        var playerInput = gameObject.GetComponent<PlayerInput>();
+        inputMove = playerInput.actions.FindAction("Move");
+        inputAttack = playerInput.actions.FindAction("Attack");
         inputAttack.performed += OnAttack;
-        inputJump = InputSystem.actions.FindAction("Jump");
+        inputJump = playerInput.actions.FindAction("Jump");
         inputJump.performed += OnJump;
-        inputCrouch = InputSystem.actions.FindAction("Crouch");
+        inputCrouch = playerInput.actions.FindAction("Crouch");
         inputCrouch.performed += OnCrouch;
-        inputInteract = InputSystem.actions.FindAction("Interact");
+        inputInteract = playerInput.actions.FindAction("Interact");
         inputInteract.performed += OnInteract;
-        inputItem = InputSystem.actions.FindAction("Item");
+        inputItem = playerInput.actions.FindAction("Item");
         inputItem.performed += OnItem;
-        inputRun = InputSystem.actions.FindAction("Run");
+        inputRun = playerInput.actions.FindAction("Run");
         inputRun.performed += OnRun;
         Player = cc.transform.gameObject;
         playerCam = transform.GetComponentInChildren<Camera>();
@@ -173,9 +174,10 @@ public class PlayerMovement : MonoBehaviour
             SwimUpDown = -1;
         }
         var PreUpDown = (lookDirection * Time.deltaTime * MovementSpeed * swimmingSpeed);
-        if (swimMaxHeight)
+        if (swimMaxHeight && SwimUpDown > 0)
         {
-            SwimUpDown = Mathf.Clamp(SwimUpDown, -1, 0);
+            return;
+            //SwimUpDown = Mathf.Clamp(SwimUpDown, -1, 0);
         }
         cc.Move( new Vector3(PreUpDown.x, SwimUpDown * swimmingVerticalSpeed, PreUpDown.z));
         Debug.LogWarning(new Vector3(PreUpDown.x, SwimUpDown, PreUpDown.z));

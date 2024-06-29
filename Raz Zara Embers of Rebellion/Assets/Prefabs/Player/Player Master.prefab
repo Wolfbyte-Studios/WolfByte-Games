@@ -262,6 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2176495122938739952}
   - component: {fileID: 4043237513647060109}
+  - component: {fileID: 2223409719653199811}
   m_Layer: 3
   m_Name: Player Master
   m_TagString: Untagged
@@ -327,6 +328,36 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   cc: {fileID: 0}
   anim: {fileID: 0}
+--- !u!114 &2223409719653199811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781274326644758654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 35845fe01580c41289b024647b1d1c53, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1001 &6316007439341033750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -734,5 +765,6 @@ MonoBehaviour:
   WaterHeightOffset: 0
   tolerance: 1.5
   projectedHeight: 0
+  distanceToWaterSurface: 0
   triggerCollider: {fileID: 0}
   character: {fileID: 0}

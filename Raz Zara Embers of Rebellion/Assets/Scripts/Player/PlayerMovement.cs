@@ -258,6 +258,7 @@ public class PlayerMovement : MonoBehaviour
         if(ClimbableEdge)
         {
             anim.SetTrigger("ClimbLedge");
+            cc.enabled = false;
             TargetGetupLocation2 = CurrentGetUpLocation;
             TargetGetupLocation1 = InitialGetUpPoint;
             return;

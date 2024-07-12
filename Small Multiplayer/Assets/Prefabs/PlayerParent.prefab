@@ -554,6 +554,15 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  menu:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 4789edec-1aee-4bad-bba1-f4e23347344f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!54 &7082935000621846428
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -938,6 +947,15 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  menu:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 3350b206-3c87-417c-b250-5ab8828243de
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!54 &3227681487332556732
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1153,8 +1171,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5319691224319365378}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.9418817, z: -0.33594477, w: 0}
-  m_LocalPosition: {x: 0, y: 7.17, z: 6.35}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2116,7 +2134,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2976
+  m_VersionIndex: 2979
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2367,19 +2385,43 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7051163082655987573, guid: 70b75ed464028a146babf59e2a91bc89, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 0c046800c7e2bad45a0468288e4c9535, type: 2}
     - target: {fileID: -3908025285629652317, guid: 70b75ed464028a146babf59e2a91bc89, type: 3}
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -3908025285629652317, guid: 70b75ed464028a146babf59e2a91bc89, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 0c046800c7e2bad45a0468288e4c9535, type: 2}
     - target: {fileID: 44188972432253814, guid: 70b75ed464028a146babf59e2a91bc89, type: 3}
       propertyPath: m_Convex
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 44188972432253814, guid: 70b75ed464028a146babf59e2a91bc89, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 0c046800c7e2bad45a0468288e4c9535, type: 2}
+    - target: {fileID: 117214286460000749, guid: 70b75ed464028a146babf59e2a91bc89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 70b75ed464028a146babf59e2a91bc89, type: 3}
       propertyPath: m_Name
       value: vodoo_model1
       objectReference: {fileID: 0}
     - target: {fileID: 4645039867258583399, guid: 70b75ed464028a146babf59e2a91bc89, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645039867258583399, guid: 70b75ed464028a146babf59e2a91bc89, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 0c046800c7e2bad45a0468288e4c9535, type: 2}
+    - target: {fileID: 7258471703827393959, guid: 70b75ed464028a146babf59e2a91bc89, type: 3}
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}

@@ -3,6 +3,7 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
 using UnityEngine.UIElements;
+using UnityEngine.Events;
 
 public class AddComponentsBasedOnName
 {
@@ -18,18 +19,48 @@ public class AddComponentsBasedOnName
             // Check if the object name contains "Clickable"
             if (obj.name.Contains("Clickable"))
             {
+                Clickable c = null;
+                LerpMovement l = null;
                 // Add Clickable component if it doesn't already exist
                 if (obj.GetComponent<Clickable>() == null)
                 {
-                    obj.AddComponent<Clickable>();
+                   c = obj.AddComponent<Clickable>();
+                }
+                else
+                {
+                    c = obj.GetComponent<Clickable>();
                 }
                 if (obj.GetComponent<NetworkObject>() == null)
                 {
                     obj.AddComponent<NetworkObject>();
                 }
-
+                if (obj.GetComponent<LerpMovement>() == null)
+                {
+                    l = obj.AddComponent<LerpMovement>();
+                }
+                var mat = obj.GetComponent<MeshRenderer>().sharedMaterial = new Material(obj.GetComponent<MeshRenderer>().sharedMaterial.shader);
+                mat.color = Color.magenta;
                 obj.tag = "Clickable";
                 obj.layer = 30;
+                c.low = Color.red;
+                c.med = Color.yellow;
+                c.high = Color.green;
+                c.done = Color.white;
+                
+                if(obj.GetComponent<MeshCollider>() != null)
+                {
+                    if (l = null) { return; }
+                    if (obj.GetComponent<LerpMovement>().rigBody == true)
+                    {
+                        obj.GetComponent<MeshCollider>().convex = true;
+                    }
+                    else
+                    {
+                        obj.GetComponent<MeshCollider>().convex = false;
+                    }
+                }
+
+               
             }
             if (obj.name.Contains("Water"))
             {

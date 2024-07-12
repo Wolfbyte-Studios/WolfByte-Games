@@ -61,10 +61,10 @@ public class Clickable : NetworkBehaviour
             case <= 70:
                 NewMat.color = med;
                 return;
-            case <= 90:
+            case <= 95:
                 NewMat.color = high;
                 return;
-            case > 90:
+            case > 95:
                 NewMat.color = done;
                 return;
         }

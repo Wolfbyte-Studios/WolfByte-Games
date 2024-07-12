@@ -53,6 +53,7 @@ public class AimOutline : NetworkBehaviour
    
     private void OnTriggerExit(Collider other)
     {
+        if (target == null) { return; }
         if (other.gameObject.tag == "Clickable")
         {
             target.layer = 30;

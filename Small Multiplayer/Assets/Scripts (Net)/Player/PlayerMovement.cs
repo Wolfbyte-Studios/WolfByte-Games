@@ -6,14 +6,12 @@ using UnityEngine.UI;
 public class PlayerMovement : NetworkBehaviour
 {
     [Header("Movement Settings")]
-    public float movespeed;
+    public float moveSpeed;
     public float maxVelocity;
     public bool CanFly;
     public float FlyForce = 50;
     public float jumpHeight;
     public float slowRate;
-
-
 
     public GameObject playerCam;
     public Rigidbody rb;
@@ -22,7 +20,7 @@ public class PlayerMovement : NetworkBehaviour
     public InputAction jump;
     public InputAction crouch;
     public InputAction menu;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -87,23 +85,26 @@ public class PlayerMovement : NetworkBehaviour
 
     public void OnFly(float upDownStrength)
     {
-        rb.linearVelocity = new Vector3(rb.linearVelocity.x, upDownStrength, rb.linearVelocity.z);
+        Vector3 velocity = rb.linearVelocity;
+        velocity.y = upDownStrength;
+        rb.linearVelocity = velocity;
     }
 
-    // Update is called once per frame
     void Update()
     {
 
     }
+
     public void FaceCamera()
     {
-        if(gameObject.GetComponent<PlayerNetworkIndex>().playerIndexTarget == 0)
+        if (gameObject.GetComponent<PlayerNetworkIndex>().playerIndexTarget == 0)
         {
             gameObject.transform.eulerAngles = new Vector3(playerCam.transform.eulerAngles.x, playerCam.transform.eulerAngles.y, playerCam.transform.eulerAngles.z);
             return;
         }
         gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x, playerCam.transform.eulerAngles.y, gameObject.transform.eulerAngles.z);
     }
+
     public void FixedUpdate()
     {
         if (!IsOwner)
@@ -119,7 +120,7 @@ public class PlayerMovement : NetworkBehaviour
         if (CanFly)
         {
             rb.useGravity = false;
-            if (!jump.IsPressed() & !move.IsPressed() & !crouch.IsPressed())
+            if (!jump.IsPressed() && !crouch.IsPressed())
             {
                 rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, Vector3.zero, slowRate);
             }
@@ -130,9 +131,9 @@ public class PlayerMovement : NetworkBehaviour
         }
 
     }
+
     public void OnMove()
     {
-
         var v = move.ReadValue<Vector2>();
 
         // Convert the 2D input into 3D direction relative to the camera
@@ -151,7 +152,15 @@ public class PlayerMovement : NetworkBehaviour
         Vector3 moveDirection = (forward * v.y + right * v.x).normalized;
 
         // Apply the force to the Rigidbody
-        rb.AddForce(moveDirection * movespeed);
-        rb.maxLinearVelocity = maxVelocity;
+        Vector3 moveVelocity = moveDirection * moveSpeed;
+        if (CanFly)
+        {
+            rb.linearVelocity = new Vector3(moveVelocity.x, rb.linearVelocity.y, moveVelocity.z);
+        }
+        else
+        {
+            rb.AddForce(moveDirection * moveSpeed);
+            rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, maxVelocity);
+        }
     }
 }

@@ -15,7 +15,8 @@ public class LerpMovementEditor : Editor
             script.transforms.Add(new LerpMovement.TransformData
             {
                 position = script.transform.position,
-                rotation = script.transform.rotation
+                rotation = script.transform.rotation,
+                speed = 1
             });
             EditorUtility.SetDirty(script);
         }

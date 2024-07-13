@@ -1,13 +1,3 @@
-# Use custom post-processing with dynamic resolution and DLSS 
-
-If you want to use DLSS or dynamic resolution with a custom post-processing pass, and need to interpolate or sample UVs from color, normal, or velocity, use the following functions to calculate the correct UVs:
-
-```glsl
-#include "Packages/com.unity.render-pipelines.high-dynamic/Runtime/ShaderLibrary/ShaderVariables.hlsl"
-
-//...
-
-float2 UVs = ... //the uvs coming from the interpolator
-float2 correctUvs = ClampAndScaleUVForBilinearPostProcessTexture(UV); // use these uvs to sample color / normal and velocity
-
-```
+version https://git-lfs.github.com/spec/v1
+oid sha256:69248614d7a81248580fc36aa8c164bab5068f47407f0f6334e2f9c0f8ac5280
+size 580

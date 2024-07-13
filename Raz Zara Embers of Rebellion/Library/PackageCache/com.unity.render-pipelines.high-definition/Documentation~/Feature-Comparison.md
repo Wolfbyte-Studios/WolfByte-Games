@@ -1,3 +1,3 @@
-# Feature Comparison with the Built-in Render Pipeline
-
-For an overview of the features supported in the High Definition Render Pipeline (HDRP) compared to the other Unity render pipelines, refer to the page [Render pipeline feature comparison](https://docs.unity3d.com/2023.1/Documentation/Manual/render-pipelines-feature-comparison.html).
+version https://git-lfs.github.com/spec/v1
+oid sha256:df73593a228c133b9081482e8c2ab7f22308696c7b645751ed67d0bc1401a737
+size 341

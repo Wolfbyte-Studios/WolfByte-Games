@@ -1,23 +1,3 @@
-using UnityEngine;
-using UnityEngine.Rendering;
-
-namespace UnityEditor.ShaderGraph
-{
-    static class RenderPipelineChangedCallback
-    {
-        internal static readonly string k_CustomDependencyKey = "ShaderGraph/RenderPipelineChanged";
-
-        [InitializeOnLoadMethod]
-        private static void RegisterSRPChangeCallback()
-        {
-            RenderPipelineManager.activeRenderPipelineTypeChanged -= SRPChanged;
-            RenderPipelineManager.activeRenderPipelineTypeChanged += SRPChanged;
-        }
-
-        static Hash128 ComputeCurrentRenderPipelineHash()
-            => Hash128.Compute(GraphicsSettings.currentRenderPipelineAssetType?.FullName ?? string.Empty);
-
-        static void SRPChanged()
-            => AssetDatabase.RegisterCustomDependency(k_CustomDependencyKey,ComputeCurrentRenderPipelineHash());
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e0c984f5b56b7440b4ffaf4bc974bd8617228fa6c2600c34616a9285d43c2bd9
+size 832

@@ -1,35 +1,3 @@
-using System;
-using UnityEditor.ShaderGraph;
-using UnityEngine.Rendering;
-
-namespace UnityEditor.Rendering.HighDefinition.ShaderGraph
-{
-    static class CreateStackLitShaderGraph
-    {
-        [MenuItem("Assets/Create/Shader Graph/HDRP/StackLit Shader Graph", priority = CoreUtils.Priorities.assetsCreateShaderMenuPriority + 6)]
-        public static void CreateStackLitGraph()
-        {
-            var target = (HDTarget)Activator.CreateInstance(typeof(HDTarget));
-            target.TrySetActiveSubTarget(typeof(StackLitSubTarget));
-
-            var blockDescriptors = new[]
-            {
-                BlockFields.VertexDescription.Position,
-                BlockFields.VertexDescription.Normal,
-                BlockFields.VertexDescription.Tangent,
-                BlockFields.SurfaceDescription.BaseColor,
-                BlockFields.SurfaceDescription.NormalTS,
-                HDBlockFields.SurfaceDescription.BentNormal,
-                HDBlockFields.SurfaceDescription.TangentTS,
-                BlockFields.SurfaceDescription.Metallic,
-                HDBlockFields.SurfaceDescription.DielectricIor,
-                BlockFields.SurfaceDescription.Smoothness,
-                BlockFields.SurfaceDescription.Emission,
-                BlockFields.SurfaceDescription.Occlusion,
-                BlockFields.SurfaceDescription.Alpha,
-            };
-
-            GraphUtil.CreateNewGraphWithOutputs(new[] { target }, blockDescriptors);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5f390c39f9fc1e91502c28e82809e289c7c18b822188d09d38d0f46e99c1aea6
+size 1461

@@ -1,21 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
-
-[ExecuteInEditMode]
-public class DisableGizmos : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Awake()
-    {
-#if UNITY_EDITOR
-        SceneView view = SceneView.lastActiveSceneView;
-        if (view != null)
-        {
-            view.drawGizmos = false;
-        }
-#endif
-    }
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b90b4d3e1657512ee3d797a65703f704051431b0bedffee02f9c093c7eff4d1b
+size 412

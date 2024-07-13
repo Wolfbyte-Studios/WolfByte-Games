@@ -1,21 +1,3 @@
-# Gravity
-
-Menu Path : **Force >** **Gravity**
-
-The **Gravity** Block applies the given force to particles. To do this, it changes the affected particles’ velocity.
-
-## Block compatibility
-
-This Block is compatible with the following Contexts:
-
-- [Update](Context-Update.md)
-
-## Block properties
-
-| **Input** | **Type**                 | **Description**                                              |
-| --------- | ------------------------ | ------------------------------------------------------------ |
-| **Force** | [Vector](Type-Vector.md) | The force vector this Block applies. The default value is (0, -9.81, 0) which simulates gravity on Earth. |
-
-## Remarks
-
-This Block only affects the particle position if you enable the **Update Position** setting in the [Update Context](Context-Update.md).
+version https://git-lfs.github.com/spec/v1
+oid sha256:9832e883d6fcfbaca1560f32b03586584634118c536134c542278e9d35c101ad
+size 805

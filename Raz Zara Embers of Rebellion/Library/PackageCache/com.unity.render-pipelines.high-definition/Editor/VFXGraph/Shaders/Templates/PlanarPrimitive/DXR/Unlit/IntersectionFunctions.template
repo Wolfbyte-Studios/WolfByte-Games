@@ -1,27 +1,3 @@
-            // Needs to be included after the VFX includes
-            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/VFXGraph/Shaders/VFXRayTracingCommon.hlsl"
-            // Visibility function required for the intersection shader
-            bool AABBPrimitiveIsVisible(RayTracingProceduralData rtProceduralData, float2 uv)
-            {
-            #if VFX_USE_GRAPH_VALUES
-                uint instanceActiveIndex = asuint(_InstanceActiveIndex);
-                ${VFXLoadGraphValues}
-            #endif
-                VFXAttributes attributes = rtProceduralData.attributes;
-            #if USE_FLIPBOOK
-                ${VFXLoadParameter:{invFlipBookSize}}
-                ${VFXLoadParameter:{flipBookSize}}
-                #if USE_FLIPBOOK_INTERPOLATION
-                    VFXUVData uvData = GetUVData(flipBookSize, invFlipBookSize, uv, attributes.texIndex, attributes.texIndexBlend);
-                #else
-                    VFXUVData uvData = GetUVData(flipBookSize, invFlipBookSize, uv, attributes.texIndex);
-                #endif
-                uv = uvData.uvs.xy;
-            #endif
-            #if USE_ALPHA_TEST
-                ${VFXLoadParameter:{alphaThreshold}}
-                return attributes.alpha * SampleTexture(VFX_SAMPLER(mainTexture), uv, 0).a > alphaThreshold;
-            #else
-                return true;
-            #endif
-            }
+version https://git-lfs.github.com/spec/v1
+oid sha256:581cc7afd10eaf8a410c6319fa8b78952c256c772e34d4e2fea288af5507a472
+size 1395

@@ -1,13 +1,3 @@
-namespace UnityEngine.Rendering.RenderGraphModule
-{
-    /// <summary>
-    /// Interface to add/manage Render Graph related parameters across different types of RenderPipelineAssets.
-    /// </summary>
-    public interface IRenderGraphEnabledRenderPipeline
-    {
-        /// <summary>
-        /// Indicates if this render pipeline instance supports ImmediateMode when debugging the render graph.
-        /// </summary>
-        bool isImmediateModeSupported { get; }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:36faf007da8f5c9ea2ccc39b7c5fd4104f9449ab30f8efc34802996ac0f5bbb0
+size 473

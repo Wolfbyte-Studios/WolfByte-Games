@@ -1,10 +1,3 @@
-# Clouds
-
-The High Definition Render Pipeline (HDRP) includes two cloud solutions that you can use in your Unity project. You can also create custom cloud effects.
-
-| Page | Description |
-|-|-|
-| [Understand clouds](understand-clouds.md) | Understand the different ways you can create clouds in HDRP. |
-| [Create realistic clouds (volumetric clouds)](create-realistic-clouds-volumetric-clouds.md) | Use a Volumetric Clouds Volume Override to create interactable clouds that can render shadows, and receive fog and volumetric light. |
-| [Create simple clouds (Cloud Layer)](create-simple-clouds-cloud-layer.md) | Use a Cloud Layer Volume Override to create a simple representation of clouds using a 2D texture rendered on top of the sky. |
-| [Create custom cloud effects](create-custom-cloud-effects.md) | Create your own custom clouds with their own properties and shaders, while still keeping the clouds consistent with HDRP's lighting pipeline. |
+version https://git-lfs.github.com/spec/v1
+oid sha256:80bc4f128242cda3e2ff9008d1241f3e0c15df02889488d188c73e3d9805acb6
+size 949

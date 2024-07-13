@@ -1,31 +1,3 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using NUnit.Framework;
-using UnityEngine;
-using UnityEngine.TestTools;
-
-namespace PlayModeTests_9s
-{
-    public class SkippingFrameTests
-    {
-        private GameObject PrepareCube()
-        {
-            var go = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            var rb = go.AddComponent<MovementScript>();
-            rb.velocity = Vector3.down * 5;
-            return go;
-        }
-        
-        [UnityTest]
-        public IEnumerator CubeMovesDown()
-        {
-            var cubeUnderTest = PrepareCube();
-            var initialPosition = cubeUnderTest.transform.position;
-
-            yield return null;
-
-            Assert.That(cubeUnderTest.transform.position, Is.Not.EqualTo(initialPosition));
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a13276b3367dddd810b6a9f67e809d4dfa12560e6ac04c1fc84a2ee8da0a4ab9
+size 844

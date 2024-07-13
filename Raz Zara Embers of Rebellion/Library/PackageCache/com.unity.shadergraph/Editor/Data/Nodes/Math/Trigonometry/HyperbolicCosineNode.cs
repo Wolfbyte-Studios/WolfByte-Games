@@ -1,31 +1,3 @@
-using System.Reflection;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Title("Math", "Trigonometry", "Hyperbolic Cosine")]
-    class HyperbolicCosineNode : CodeFunctionNode
-    {
-        public HyperbolicCosineNode()
-        {
-            name = "Hyperbolic Cosine";
-            synonyms = new string[] { "cosh" };
-        }
-
-        protected override MethodInfo GetFunctionToConvert()
-        {
-            return GetType().GetMethod("Unity_HyperbolicCosine", BindingFlags.Static | BindingFlags.NonPublic);
-        }
-
-        static string Unity_HyperbolicCosine(
-            [Slot(0, Binding.None)] DynamicDimensionVector In,
-            [Slot(1, Binding.None)] out DynamicDimensionVector Out)
-        {
-            return
-@"
-{
-    Out = cosh(In);
-}
-";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0c29433317cf7ba476cc1dea7a8b3d55276b5edc1e9e51d1050a5f69ee393f9b
+size 770

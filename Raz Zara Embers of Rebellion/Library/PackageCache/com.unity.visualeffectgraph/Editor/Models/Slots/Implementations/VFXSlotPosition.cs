@@ -1,26 +1,3 @@
-using System;
-using UnityEngine;
-using UnityEngine.VFX;
-
-namespace UnityEditor.VFX
-{
-    [VFXInfo(type = typeof(Position))]
-    class VFXSlotPosition : VFXSlotEncapsulated
-    {
-        public override VFXValue DefaultExpression(VFXValue.Mode mode)
-        {
-            return new VFXValue<Vector3>(Vector3.zero, mode);
-        }
-
-        protected override bool CanConvertFrom(Type type)
-        {
-            return base.CanConvertFrom(type)
-                || VFXSlotFloat3.CanConvertFromVector3(type);
-        }
-
-        sealed protected override VFXExpression ConvertExpression(VFXExpression expression, VFXSlot sourceSlot)
-        {
-            return VFXSlotFloat3.ConvertExpressionToVector3(expression);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2c71f156effef1e2c9860ce8c7908b65c0da8ca65843c5005fb5cbba5c4fde2e
+size 731

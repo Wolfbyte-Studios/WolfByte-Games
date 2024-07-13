@@ -1,4 +1,3 @@
-<tr>
-<td><strong>UseOpacityMap</strong></td>
-<td>Toggles whether the material uses the alpha channel of the <strong>ColorMap</strong> texture or the red channel of the <strong>MaskMap</strong> texture to set the opacity of its surface. Enable this checkbox to use the alpha channel of the <strong>ColorMap</strong> texture, disable this checkbox to use the red channel of the <strong>MaskMap</strong> texture.</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:17126e686a887f4ec7451016a24a2684bcefd196e04a8d11e716693a1d2c8ff6
+size 421

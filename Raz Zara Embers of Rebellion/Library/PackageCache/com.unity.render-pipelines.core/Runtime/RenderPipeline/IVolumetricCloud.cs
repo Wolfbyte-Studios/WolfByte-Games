@@ -1,16 +1,3 @@
-
-namespace UnityEngine.Rendering
-{
-    /// <summary>
-    /// Volumetric Cloud
-    /// Interface for VolumetricCloud on each SRP
-    /// </summary>
-    public interface IVolumetricCloud
-    {
-        /// <summary>
-        /// Check is the current Render Pipeline had VolumetricCloud
-        /// </summary>
-        /// <returns>true if the VolumetricCloud is usable on the current pipeline</returns>
-        public bool IsVolumetricCloudUsable();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e966515d0e417ab94ef8b84e517a9f4a21fc429a37f9c8be15d918b25ed65810
+size 453

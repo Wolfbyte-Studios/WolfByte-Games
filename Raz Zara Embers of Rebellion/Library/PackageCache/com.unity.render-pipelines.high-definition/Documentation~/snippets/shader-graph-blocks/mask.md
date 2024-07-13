@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Mask</strong></td>
-<td>Specifies whether the current fragment represents the iris or the sclera. The Shader Graph only uses the x component of this Vector2. A value of 0 means the fragment represents the sclera, and a value of 1 means the fragment represents the iris. A value between 0 and 1 results in a linear blend between sclera and iris.</td>
-<td><strong>Material</strong> set to <strong>Eye</strong></td>
-<td>Vector2(1.0, 0)</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:1f6d7745fbe0d3b117d0dc00847c808ba571b56510e81b8ad18fdde17d6edfa2
+size 460

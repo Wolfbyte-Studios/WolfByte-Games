@@ -1,17 +1,3 @@
-# Rotate 2D
-
-Menu Path : **Operator > Math > Vector**
-
-The **Rotate 2D** Operator performs a 2D rotation of an input point and a given angle around a given center.
-
-## Operator properties
-
-| **Input**           | **Type** | **Description**                           |
-| ------------------- | -------- | ----------------------------------------- |
-| **Position**        | Vector2  | The point to rotate.                      |
-| **Rotation Center** | Vector2  | The point to rotate **Position** around.  |
-| **Angle**           | float    | The angle of rotation to use, in radians. |
-
-| **Output**   | **Type** | **Description**       |
-| ------------ | -------- | --------------------- |
-| **Position** | Vector2  | The rotated position. |
+version https://git-lfs.github.com/spec/v1
+oid sha256:8000ace12a633beff486914cd7b0b2d021b8e3517bcc4280a9224624de81babf
+size 741

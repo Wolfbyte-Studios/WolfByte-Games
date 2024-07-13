@@ -1,13 +1,3 @@
-#ifndef RAY_TRACING_HELPERS_H_
-#define RAY_TRACING_HELPERS_H_
-
-#if defined(SHADER_STAGE_RAY_TRACING)
-float EvaluateRayTracingBias(float3 positionRWS)
-{
-    float distanceToCamera = length(positionRWS);
-    float blend = saturate((distanceToCamera - _ProjectionParams.y) / (_ProjectionParams.z - _ProjectionParams.y));
-    return lerp(_RayTracingRayBias, _RayTracingDistantRayBias, blend);
-}
-#endif
-
-#endif // RAY_TRACING_HELPERS_H_
+version https://git-lfs.github.com/spec/v1
+oid sha256:7d69b3af6a5a53d61dc906a53817eec8ff6a16055c49559ccfa553f4df65854a
+size 432

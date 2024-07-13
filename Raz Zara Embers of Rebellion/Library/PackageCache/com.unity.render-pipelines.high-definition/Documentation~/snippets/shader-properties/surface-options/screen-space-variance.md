@@ -1,6 +1,3 @@
-<tr>
-<td>- <strong>Screen Space Variance</strong></td>
-<td></td>
-<td></td>
-<td>The strength of the geometric specular anti-aliasing effect between 0 and 1. Higher values produce a blurrier result with less aliasing.<br />This property only appears if you enable <strong>Geometric Specular AA</strong>.</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:967e3604c9aef69c004b7a415a8ffc5756057a8cec4263c86d6d38f45d94ec83
+size 313

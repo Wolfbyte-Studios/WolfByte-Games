@@ -1,13 +1,3 @@
-using System;
-using System.Collections.Generic;
-using NUnit.Framework.Interfaces;
-using UnityEngine.TestTools;
-
-namespace UnityEditor.TestTools.TestRunner
-{
-    internal interface ITestListCacheData
-    {
-        List<TestPlatform> platforms { get; }
-        List<ITest> cachedData { get; }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:02fbf4f93634d8674322d38f106e3015b608ca6215293a0f6f270d742425f7a3
+size 312

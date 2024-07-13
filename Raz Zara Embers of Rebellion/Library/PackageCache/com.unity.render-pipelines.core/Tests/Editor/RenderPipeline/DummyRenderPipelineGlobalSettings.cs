@@ -1,20 +1,3 @@
-using System.Collections.Generic;
-using UnityEngine.Rendering;
-
-namespace UnityEditor.Rendering
-{
-    [SupportedOnRenderPipeline(typeof(DummyRenderPipelineAsset))]
-    class DummyRenderPipelineGlobalSettings : RenderPipelineGlobalSettings<DummyRenderPipelineGlobalSettings, DummyRenderPipeline>
-    {
-        internal static string defaultPath => "Assets/Tests/DummyRenderPipelineGlobalSettings.asset";
-
-        public bool initializedCalled = false;
-
-        protected override List<IRenderPipelineGraphicsSettings> settingsList { get; } = new();
-
-        public override void Initialize(RenderPipelineGlobalSettings source = null)
-        {
-            initializedCalled = true;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:904186b508acc8f02d33e06cb5c0348d9d7ac77e54c0f9a91b95675d79c72cc3
+size 699

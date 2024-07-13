@@ -1,24 +1,3 @@
-using UnityEngine;
-
-namespace UnityEditor.VFX.Operator
-{
-    [VFXHelpURL("Operator-Asin")]
-    [VFXInfo(name = "Asin", category = "Math/Trigonometry", synonyms = new []{ "arc", "sine" })]
-    class Asin : VFXOperatorNumericUniform
-    {
-        public class InputProperties
-        {
-            [Range(-1.0f, 1.0f)]
-            public float x = 0.0f;
-        }
-
-        protected override sealed string operatorName { get { return "Asin"; } }
-
-        protected override sealed ValidTypeRule typeFilter { get { return ValidTypeRule.allowEverythingExceptInteger; } }
-
-        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
-        {
-            return new[] { new VFXExpressionASin(inputExpression[0]) };
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:20f2acbf733289e94cde257da34f939146e49a5a71955e245671aa2c1b350bc8
+size 767

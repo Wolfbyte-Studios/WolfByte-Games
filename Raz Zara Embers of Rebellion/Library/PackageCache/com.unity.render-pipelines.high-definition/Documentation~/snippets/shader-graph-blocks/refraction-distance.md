@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Refraction Distance</strong></td>
-<td>The thickness of the object at which the <strong>Refraction Color</strong> affects incident light at full strength.</td>
-<td>&#8226; <strong>Refraction Model</strong> not set to <strong>None</strong></td>
-<td>0.0</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea71b6b9994963b58a2cdf93d304a136e243ff0e20de15e4bb247ed7353618bb
+size 279

@@ -1,18 +1,3 @@
-Pass
-{
-    Name "DepthForwardOnly"
-	Tags { "LightMode"="DepthForwardOnly" }
-
-	ZWrite On
-	Blend Off
-
-	HLSLPROGRAM
-	#define VFX_PASSDEPTH VFX_PASSDEPTH_ACTUAL
-	#pragma multi_compile _ WRITE_NORMAL_BUFFER
-	#pragma multi_compile _ WRITE_DECAL_BUFFER
-	#pragma multi_compile _ WRITE_MSAA_DEPTH
-	${VFXInclude("Shaders/ParticleHexahedron/PassDepthOrMV.template")}
-
-
-	ENDHLSL
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e462a1f4e9c095b885bbe596d8abeba8bb9b37749f10b5622d9413cef17d639b
+size 369

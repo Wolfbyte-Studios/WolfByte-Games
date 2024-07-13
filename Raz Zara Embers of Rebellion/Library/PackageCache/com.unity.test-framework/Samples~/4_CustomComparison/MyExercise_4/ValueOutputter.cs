@@ -1,22 +1,3 @@
-using UnityEngine;
-
-namespace MyExercise_4
-{
-    public class ValueOutputter
-    {
-        public Vector3 GetVector3()
-        {
-            return new Vector3(10f + (1f/3f), 3f, 9f + (2f/3f));
-        }
-        
-        public Quaternion GetQuaternion()
-        {
-            return new Quaternion(10f, 0f, 7f + (1f/3f), 0f);
-        }
-        
-        public float GetFloat()
-        {
-            return 19f + (1f/3f);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b8ce653be33ad92ec1c00dbdcfc7b0ce32a87e206db558c4f97e1ba47cdd0e5f
+size 460

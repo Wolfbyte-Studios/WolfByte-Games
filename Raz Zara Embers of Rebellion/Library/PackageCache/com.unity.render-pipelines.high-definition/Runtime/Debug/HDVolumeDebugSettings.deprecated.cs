@@ -1,13 +1,3 @@
-﻿using System;
-
-namespace UnityEngine.Rendering.HighDefinition
-{
-    public partial class HDVolumeDebugSettings
-    {
-        /// <summary>
-        /// Specifies the render pipeline for this volume settings
-        /// </summary>
-        [Obsolete("This property is obsolete and kept only for not breaking user code. VolumeDebugSettings will use current pipeline when it needs to gather volume component types and paths. #from(23.2)", false)]
-        public override Type targetRenderPipeline => typeof(HDRenderPipeline);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5cfc280d3a8fbee091eb2daee3adbf2cc1563dcb318d4d045b2c17de55c9ad48
+size 532

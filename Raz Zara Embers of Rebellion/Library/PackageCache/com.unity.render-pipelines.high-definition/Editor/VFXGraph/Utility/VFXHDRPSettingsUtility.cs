@@ -1,21 +1,3 @@
-using System.Linq;
-using UnityEditor.VFX.UI;
-
-namespace UnityEditor.VFX.HDRP
-{
-    static class VFXHDRPSettingsUtility
-    {
-        public static void RefreshVfxErrorsIfNeeded()
-        {
-            foreach (var vfxWindow in VFXViewWindow.GetAllWindows())
-            {
-                if (vfxWindow != null  && vfxWindow.graphView != null )
-                {
-                    var vfxGraph = vfxWindow.graphView.controller.graph;
-                    foreach (var output in vfxGraph.children.OfType<VFXDecalHDRPOutput>())
-                        output.RefreshErrors();
-                }
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:059df0b1482f34d4ff7a32cc8a6ecb506752a927bbc7bbc0926f035780288345
+size 624

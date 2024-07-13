@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Anisotropy B</strong></td>
-<td>The direction of the anisotropy effect for the secondary lobe. Negative values make the effect vertical, and positive values make the effect horizontal.</td>
-<td>&#8226; <strong>Anisotropy</strong> enabled <br/>&#8226; <strong>Dual Specular lobe</strong> enabled</td>
-<td>1.0</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:e29a984e197a5e47e066009b3a546df1286b9daa97ae5afbb155bca334de3cdc
+size 335

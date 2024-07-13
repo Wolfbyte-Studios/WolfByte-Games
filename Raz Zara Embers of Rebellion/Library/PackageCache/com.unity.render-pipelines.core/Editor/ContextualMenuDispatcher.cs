@@ -1,18 +1,3 @@
-using UnityEngine;
-
-namespace UnityEditor.Rendering
-{
-    /// <summary>
-    /// Helper methods for overriding contextual menus
-    /// </summary>
-    static class ContextualMenuDispatcher
-    {
-        [MenuItem("CONTEXT/ReflectionProbe/Remove Component")]
-        [MenuItem("CONTEXT/Light/Remove Component")]
-        [MenuItem("CONTEXT/Camera/Remove Component")]
-        static void RemoveComponentWithAdditionalData(MenuCommand command)
-        {
-            RemoveComponentUtils.RemoveComponent(command.context as Component);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6113f4f837428b5e38391850fa438e7d834eaaf26965d8dae338bdd54aa8a2c4
+size 547

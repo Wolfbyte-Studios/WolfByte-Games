@@ -1,16 +1,3 @@
-//
-// This file was automatically generated. Please don't edit by hand. Execute Editor command [ Edit > Rendering > Generate Shader Includes ] instead
-//
-
-#ifndef WATERFOAMGENERATOR_CS_HLSL
-#define WATERFOAMGENERATOR_CS_HLSL
-//
-// UnityEngine.Rendering.HighDefinition.WaterFoamGeneratorType:  static fields
-//
-#define WATERFOAMGENERATORTYPE_DISK (0)
-#define WATERFOAMGENERATORTYPE_RECTANGLE (1)
-#define WATERFOAMGENERATORTYPE_TEXTURE (2)
-#define WATERFOAMGENERATORTYPE_MATERIAL (3)
-
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:d22c25761245c820c40dcac65cb0382ee20aee28fd89249fb4739198031249ea
+size 491

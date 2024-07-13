@@ -1,27 +1,3 @@
-namespace UnityEditor.VFX.Operator
-{
-    [VFXHelpURL("Operator-Tangent")]
-    [VFXInfo(category = "Math/Trigonometry")]
-    class Tangent : VFXOperatorNumericUniform
-    {
-        public class InputProperties
-        {
-            public float x = 0.0f;
-        }
-
-        protected override sealed string operatorName { get { return "Tangent"; } }
-
-        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
-        {
-            return new[] { new VFXExpressionTan(inputExpression[0]) };
-        }
-
-        protected override sealed ValidTypeRule typeFilter
-        {
-            get
-            {
-                return ValidTypeRule.allowEverythingExceptInteger;
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:caedebbf724ed137aae1ee028c19b41faa4e667bd666b0f51306c99cc59a4dc7
+size 739

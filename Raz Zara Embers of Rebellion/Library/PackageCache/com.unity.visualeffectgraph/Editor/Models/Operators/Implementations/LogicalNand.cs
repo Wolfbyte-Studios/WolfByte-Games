@@ -1,31 +1,3 @@
-using UnityEngine;
-
-namespace UnityEditor.VFX.Operator
-{
-    [VFXHelpURL("Operator-LogicNand")]
-    [VFXInfo(name = "Nand", category = "Logic")]
-    class LogicalNand : VFXOperator
-    {
-        override public string name { get { return "Nand"; } }
-
-        public class InputProperties
-        {
-            static public bool FallbackValue = false;
-            [Tooltip("Sets the first operand.")]
-            public bool a = FallbackValue;
-            [Tooltip("Sets the second operand.")]
-            public bool b = FallbackValue;
-        }
-
-        public class OutputProperties
-        {
-            [Tooltip("Outputs false if both operands are true. Otherwise, outputs true.")]
-            public bool o = false;
-        }
-
-        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
-        {
-            return new[] { new VFXExpressionLogicalNot(new VFXExpressionLogicalAnd(inputExpression[0], inputExpression[1])) };
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fa4370cbb0dc9d6afdddb440bf409befe95fb2638a70a0cfe62df1909d8d2db4
+size 987

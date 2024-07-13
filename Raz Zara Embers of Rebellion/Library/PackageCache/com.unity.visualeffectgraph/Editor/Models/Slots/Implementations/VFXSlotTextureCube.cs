@@ -1,24 +1,3 @@
-using System;
-using UnityEngine;
-using UnityEngine.VFX;
-using UnityEngine.Rendering;
-
-namespace UnityEditor.VFX
-{
-    [VFXInfo(type = typeof(Cubemap))]
-    class VFXSlotTextureCube : VFXSlotObject
-    {
-        internal override void GenerateErrors(VFXErrorReporter report)
-        {
-            if (value is Texture texture && texture.dimension != TextureDimension.Cube)
-                report.RegisterError("Slot_Value_Incorrect_TextureCube", VFXErrorType.Error, $"The selected texture {(string.IsNullOrEmpty(this.property.name) ? "" : $"'{this.property.name}' ")}is not a Cubemap texture", this.owner as VFXModel);
-
-            base.GenerateErrors(report);
-        }
-
-        public override VFXValue DefaultExpression(VFXValue.Mode mode)
-        {
-            return new VFXTextureCubeValue(0, mode);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:90e830145e25bd90c32cae7aedb41a4852199bc3ae7b15c9119cc2cf607cddf3
+size 823

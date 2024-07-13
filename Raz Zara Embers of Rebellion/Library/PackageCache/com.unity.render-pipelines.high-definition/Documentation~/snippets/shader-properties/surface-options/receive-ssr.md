@@ -1,6 +1,3 @@
-<tr>
-  <td>Receive SSR</td>
-  <td></td>
-  <td></td>
-  <td>Indicates whether HDRP includes this material when it processes the screen space reflection pass.<br>This property only appears if you set Surface Type to Opaque.</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:ee76b0442151fcd63bb9082861d3fcf2c8152afc5762ecd69aed221dfa95063a
+size 232

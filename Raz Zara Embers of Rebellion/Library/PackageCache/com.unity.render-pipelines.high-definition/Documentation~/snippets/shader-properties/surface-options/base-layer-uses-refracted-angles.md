@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Base Layer Uses Refracted Angles</strong></td>
-<td></td>
-<td></td>
-<td>Indicates whether to shade directional, punctual, and spot lights on the bottom layer with refraction from the top layer (the coat).<br/>This setting only appears if you enable Coat.</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:0171507e7ce0e8fc5a27d4682f83b6ffb6b343460b038585e92fa05375b5c19c
+size 282

@@ -1,20 +1,3 @@
-# Camera
-
-Menu Path : **Operator > Inline > Camera**
-
-The **Camera** inline Operator allows you to store an instance of a [Camera](Type-Camera.md). This is one of the Visual Effect Graph's advanced [Types](VisualEffectGraphTypeReference.md). To modify a value in this inline Operator, either set the value explicitly in the Operator body, or connect it to a compatible output.
-
-[!include[](Snippets/Operator-InlineIntro.md)]
-
-
-## Operator properties
-
-| **Input** | **Type** | **Description**                                              |
-| --------- | -------- | ------------------------------------------------------------ |
-| **Input** | Camera   | The value of the Operator. You can either set this in the Operator's body, or connect to it from the output of another Operator. |
-
-| **Output** | **Type** | **Description**            |
-| ---------- | -------- | -------------------------- |
-| **Output** | Camera   | The value of the Operator. |
-
-[!include[](Snippets/Operator-InlineNotes.md)]
+version https://git-lfs.github.com/spec/v1
+oid sha256:742b2bc20beeefaf7238e0d29890c4a4b457b38acf24e69b413fc20e02be1556
+size 997

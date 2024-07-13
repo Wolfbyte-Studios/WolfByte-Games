@@ -1,10 +1,3 @@
-# Motion effects
-
-Effects that simulate the effect movement has on a real-world camera.
-
-|Page|Description |
-|-|-|
-|[Motion Blur](Post-Processing-Motion-Blur.md) |Simulate the blur of objects that move faster than a real-world camera’s exposure time.|
-|[Motion vectors](Motion-Vectors.md)|Capture the motion of GameObjects from one frame to the next.|
-|[Multiframe rendering](Accumulation.md)|Use information from multiple frames to create a detailed motion blur or path tracing effect.|
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c8f677186faf7c98f0fbc8b9080c77ece400ba490ca49623be1961aec5cdb12
+size 491

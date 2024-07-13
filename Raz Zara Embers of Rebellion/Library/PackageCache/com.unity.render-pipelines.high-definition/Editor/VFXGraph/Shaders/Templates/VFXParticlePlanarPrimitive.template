@@ -1,20 +1,3 @@
-{
-
-	SubShader
-	{
-	    Tags{ "RenderPipeline" = "HDRenderPipeline" }
-		Cull Off
-
-		// Required passes
-        ${VFXInclude("Shaders/VFXParticleHeader.template")}
-		${VFXInclude("Shaders/ParticlePlanarPrimitives/PassSelection.template")}
-		${VFXInclude("Shaders/ParticlePlanarPrimitives/PassDepth.template"),IS_OPAQUE_PARTICLE}
-		${VFXInclude("Shaders/ParticlePlanarPrimitives/PassVelocity.template"),USE_MOTION_VECTORS_PASS}
-		${VFXInclude("Shaders/ParticlePlanarPrimitives/PassForward.template")}
-		${VFXIncludeRP("Templates/PlanarPrimitive/PassFullScreenDebug.template")}
-		${VFXInclude("Shaders/ParticlePlanarPrimitives/PassShadowCaster.template"),USE_CAST_SHADOWS_PASS}
-	}
-
-	${VFXIncludeRP("Templates/PlanarPrimitive/DXR/Unlit/DXRPasses.template"),VFX_IS_RAYTRACED}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0ebbdd7d9f1c247d36a7fc982e9022cf4c5c34850f0238c871eb4af75079eed4
+size 772

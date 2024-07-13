@@ -1,17 +1,3 @@
-# InvertTRS (Matrix)
-
-Menu Path : **Operator > Math > Geometry > InvertTRS (Matrix)**
-
-The **Invert TRS (Matrix)** Operator inverts a TRS (Translation, Rotation, and Scaling) matrix.
-
-A matrix is the inverse of another matrix if, when you multiply them together, the result is an [identity matrix](https://docs.unity3d.com/ScriptReference/Matrix4x4-identity.html). For more information on inverse matrices, see [Matrix4x4.inverse](https://docs.unity3d.com/ScriptReference/Matrix4x4-inverse.html).
-
-## Operator properties
-
-| **Input**  | **Type**  | **Description**                   |
-| ---------- | --------- | --------------------------------- |
-| **Matrix** | Matrix4x4 | The Matrix this Operator inverts. |
-
-| **Output** | **Type**  | **Description**                    |
-| ---------- | --------- | ---------------------------------- |
-| **o**      | Matrix4x4 | The result of the inverted Matrix. |
+version https://git-lfs.github.com/spec/v1
+oid sha256:72fc581cf94d02d8d5a6719b0f2a06db36acda50680bb559e21128e58f35b87a
+size 904

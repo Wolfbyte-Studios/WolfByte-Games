@@ -1,28 +1,3 @@
-// Depth pass
-Pass
-{
-    Name "SceneSelectionPass"
-	Tags { "LightMode"="SceneSelectionPass" }
-
-	ZWrite On
-	Blend Off
-
-	HLSLPROGRAM
-	#define VFX_PASSDEPTH VFX_PASSDEPTH_SELECTION
-	${VFXInclude("Shaders/ParticlePoints/PassDepthOrMV.template")}
-	ENDHLSL
-}
-
-Pass
-{
-    Name "Picking"
-	Tags { "LightMode"="Picking" }
-
-	ZWrite On
-	Blend Off
-
-	HLSLPROGRAM
-	#define VFX_PASSDEPTH VFX_PASSDEPTH_PICKING
-	${VFXInclude("Shaders/ParticlePoints/PassDepthOrMV.template")}
-	ENDHLSL
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc3b2f5d6f9b0474fbaaed36c524e86eb7d1cb88e622087156fe1ac600fd9b03
+size 469

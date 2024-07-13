@@ -1,20 +1,3 @@
-using UnityEngine;
-using UnityEngine.Rendering;
-
-// Include material common properties names
-using static UnityEngine.Rendering.HighDefinition.HDMaterialProperties;
-
-namespace UnityEditor.Rendering.HighDefinition
-{
-    /// <summary>
-    /// Material GUI for Lit ShaderGraph
-    /// </summary>
-    internal class LitShaderGraphGUI : LightingShaderGraphGUI
-    {
-        public LitShaderGraphGUI()
-        {
-            // Lit SG have refraction block
-            uiBlocks.Insert(1, new TransparencyUIBlock(MaterialUIBlock.ExpandableBit.Transparency, TransparencyUIBlock.Features.Refraction));
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:25383995c4ee78f3578bac35bb1b29c444151eefe025c96dbdb7a8297f6c7fad
+size 610

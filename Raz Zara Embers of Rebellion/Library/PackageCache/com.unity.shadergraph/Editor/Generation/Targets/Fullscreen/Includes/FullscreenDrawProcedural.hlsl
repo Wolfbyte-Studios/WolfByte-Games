@@ -1,13 +1,3 @@
-PackedVaryings vert(Attributes input)
-{
-    Varyings output = (Varyings)0;
-    output.positionCS = GetDrawProceduralVertexPosition(input.vertexID);
-    BuildVaryings(input, output);
-    PackedVaryings packedOutput = PackVaryings(output);
-    return packedOutput;
-}
-
-FragOutput frag(PackedVaryings packedInput)
-{
-    return DefaultFullscreenFragmentShader(packedInput);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:72d136620f010add9e36804daa8be7b0ce4300f569d9a23adabe06c616cae3ec
+size 371

@@ -1,17 +1,3 @@
-using System;
-using UnityEngine;
-using UnityEngine.Rendering.HighDefinition;
-
-namespace UnityEditor.Rendering.HighDefinition.ShaderGraph
-{
-    class HDFullscreenData : HDTargetData
-    {
-        [SerializeField]
-        bool m_ShowOnlyHDStencilBits = true;
-        public bool showOnlyHDStencilBits
-        {
-            get => m_ShowOnlyHDStencilBits;
-            set => m_ShowOnlyHDStencilBits = value;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a23fd975a0db4aad414e200d29f00acdf218b10bdd8fa56d9416340794a26271
+size 423

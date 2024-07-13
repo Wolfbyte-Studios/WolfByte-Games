@@ -1,30 +1,3 @@
-using UnityEngine;
-
-namespace UnityEditor.VFX.Operator
-{
-    [VFXHelpURL("Operator-Area(Circle)")]
-    [VFXInfo(name = "Area (Circle)", category = "Math/Geometry")]
-    class CircleArea : VFXOperator
-    {
-        public class InputProperties
-        {
-            [Tooltip("Sets the circle used for the area calculation.")]
-            public TCircle circle = TCircle.defaultValue;
-        }
-
-        public class OutputProperties
-        {
-            [Tooltip("Outputs the area of the circle.")]
-            public float area;
-        }
-
-        override public string name { get { return "Area (Circle)"; } }
-
-        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
-        {
-            var scale = new VFXExpressionExtractScaleFromMatrix(inputExpression[0]);
-            var radius = inputExpression[1];
-            return new VFXExpression[] { VFXOperatorUtility.CircleArea(radius, scale) };
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ff30b0d67f71d7776012d0c6b1dd13e96f9c8ad8e9407f6b9e29dd128f6d23f6
+size 960

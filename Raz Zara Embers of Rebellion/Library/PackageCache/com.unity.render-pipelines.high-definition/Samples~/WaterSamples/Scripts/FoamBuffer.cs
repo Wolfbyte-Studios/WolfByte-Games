@@ -1,18 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Rendering.HighDefinition;
-
-[ExecuteInEditMode]
-public class FoamBuffer : MonoBehaviour
-{
-    public WaterSurface waterSurface;
-    public float time = 2.5f;
-
-    // Update is called once per frame
-    void Update()
-    {
-        Vector2 foamArea;
-        this.GetComponent<DecalProjector>().material.SetTexture("_Base_Color", waterSurface.GetFoamBuffer(out foamArea));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7e7c731db602185f5c2eddafd6f2b6f767afb6c01e2c061c14aa766091faacc0
+size 474

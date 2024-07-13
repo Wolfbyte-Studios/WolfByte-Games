@@ -1,20 +1,3 @@
-using System;
-using NUnit.Framework.Interfaces;
-
-namespace UnityEditor.TestTools.TestRunner.Api
-{
-    internal interface ICallbacksDelegator
-    {
-        void RunStarted(ITest testsToRun);
-        void RunStartedRemotely(byte[] testsToRunData);
-        void RunFinished(ITestResult testResults);
-        void RunFinishedRemotely(byte[] testResultsData);
-        void RunFailed(string failureMessage);
-        void TestStarted(ITest test);
-        void TestStartedRemotely(byte[] testStartedData);
-        void TestFinished(ITestResult result);
-        void TestFinishedRemotely(byte[] testResultsData);
-        void TestTreeRebuild(ITest test);
-        void SetTestRunFilter(ITestFilter filter);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c394e16ced8b1fb1dd0cf206dd141951124f58801136e1d5f6d7490ec0aa20fa
+size 725

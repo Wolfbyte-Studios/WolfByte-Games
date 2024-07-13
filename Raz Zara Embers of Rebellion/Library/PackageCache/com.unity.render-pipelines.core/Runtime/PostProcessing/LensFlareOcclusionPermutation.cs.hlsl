@@ -1,14 +1,3 @@
-//
-// This file was automatically generated. Please don't edit by hand. Execute Editor command [ Edit > Rendering > Generate Shader Includes ] instead
-//
-
-#ifndef LENSFLAREOCCLUSIONPERMUTATION_CS_HLSL
-#define LENSFLAREOCCLUSIONPERMUTATION_CS_HLSL
-//
-// UnityEngine.Rendering.LensFlareOcclusionPermutation:  static fields
-//
-#define LENSFLAREOCCLUSIONPERMUTATION_DEPTH (1)
-#define LENSFLAREOCCLUSIONPERMUTATION_FOG_OPACITY (4)
-
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:faaca66a3da96b85122186e2aff1b30530d990a61f52296ae66cd1bd5c811bd5
+size 435

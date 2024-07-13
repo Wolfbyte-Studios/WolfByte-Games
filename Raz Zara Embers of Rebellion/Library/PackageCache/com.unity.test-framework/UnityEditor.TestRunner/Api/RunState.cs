@@ -1,35 +1,3 @@
-using System;
-
-namespace UnityEditor.TestTools.TestRunner.Api
-{
-    /// <summary>
-    /// The RunState enum indicates whether a test can be executed.
-    /// </summary>
-    public enum RunState
-    {
-        /// <summary>
-        /// The test is not runnable.
-        /// </summary>
-        NotRunnable,
-
-        /// <summary>
-        /// The test is runnable.
-        /// </summary>
-        Runnable,
-
-        /// <summary>
-        /// The test can only be run explicitly
-        /// </summary>
-        Explicit,
-
-        /// <summary>
-        /// The test has been skipped. This value may appear on a Test when certain attributes are used to skip the test.
-        /// </summary>
-        Skipped,
-
-        /// <summary>
-        /// The test has been ignored. May appear on a Test, when the IgnoreAttribute is used.
-        /// </summary>
-        Ignored
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d3b24f79621cb14fbc23f46be333146d446275ecd05f1a2a3095513b9a97afe2
+size 899

@@ -1,22 +1,3 @@
-using UnityEngine;
-using UnityEngine.Rendering;
-
-namespace UnityEditor
-{
-    /// <summary>
-    /// Editor for Lens Flare (builtin): Editor to show an error message
-    /// </summary>
-    [CustomEditor(typeof(LensFlare))]
-    [SupportedOnRenderPipeline]
-    [CanEditMultipleObjects]
-    class LensFlareEditor : Editor
-    {
-        /// <summary>
-        /// Implement this function to make a custom inspector
-        /// </summary>
-        public override void OnInspectorGUI()
-        {
-            EditorGUILayout.HelpBox("This component doesn't work on SRP, use Lens Flare (SRP) instead.", MessageType.Error);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7379517b68e604fc73fb388411bcac60d84ebc0033778e2f4c0874313817ed58
+size 630

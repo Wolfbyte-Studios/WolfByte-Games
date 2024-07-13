@@ -1,24 +1,3 @@
-using UnityEngine;
-using UnityEngine.Rendering;
-
-namespace UnityEditor.Rendering.HighDefinition
-{
-    class ProbeVolumeMenuItems
-    {
-        [MenuItem("GameObject/Light/Adaptive Probe Volume", priority = CoreUtils.Sections.section8)]
-        static void CreateProbeVolumeGameObject(MenuCommand menuCommand)
-        {
-            var parent = menuCommand.context as GameObject;
-            var probeVolume = CoreEditorUtils.CreateGameObject("Adaptive Probe Volume", parent);
-            probeVolume.AddComponent<ProbeVolume>();
-        }
-
-        [MenuItem("GameObject/Light/Probe Adjustment Volume", priority = CoreUtils.Sections.section8 + 1)]
-        static void CreateProbeAdjustmentVolumeGameObject(MenuCommand menuCommand)
-        {
-            var parent = menuCommand.context as GameObject;
-            var probeVolume = CoreEditorUtils.CreateGameObject("Probe Adjustment Volume", parent);
-            probeVolume.AddComponent<ProbeAdjustmentVolume>();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:12c3705c8b1ba38a74fd71ed8aa22dd69f651f2e229f4c62cf617e75df6ad73b
+size 980

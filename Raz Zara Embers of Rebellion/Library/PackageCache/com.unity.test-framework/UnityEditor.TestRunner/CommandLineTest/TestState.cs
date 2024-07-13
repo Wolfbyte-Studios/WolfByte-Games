@@ -1,26 +1,3 @@
-namespace UnityEditor.TestTools.TestRunner.CommandLineTest
-{
-    internal enum TestRunState
-    {
-        /// <summary>
-        /// When the test run has started, but no callbacks from the test runner api have yet been received.
-        /// </summary>
-        NoCallbacksReceived,
-        /// <summary>
-        /// When at least one test started event have been fired for a test node.
-        /// </summary>
-        OneOrMoreTestsExecutedWithNoFailures,
-        /// <summary>
-        /// When at least one test finished event have been fired for a test node and the status is failed.
-        /// </summary>
-        OneOrMoreTestsExecutedWithOneOrMoreFailed,
-        /// <summary>
-        /// When the test job in the test runner api have completed, but no test started events for test nodes has happened. E.g. if there are no valid tests in the project.
-        /// </summary>
-        CompletedJobWithoutAnyTestsExecuted,
-        /// <summary>
-        /// When the test runner api has raised an error during the run.
-        /// </summary>
-        RunError
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:93711796771e175b87e4c5bba557a78027e71f6ddd54895ad18aa70505ab5008
+size 1091

@@ -1,20 +1,3 @@
-using System.Runtime.InteropServices;
-
-namespace Unity.Collections
-{
-    /// <summary>
-    /// Declares a union object where all members start at the same location in memory.
-    /// Allows for retrieving the bits for i.e. the floatValue.
-    /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
-    internal struct UIntFloat
-    {
-        [FieldOffset(0)] public float floatValue;
-
-        [FieldOffset(0)] public uint intValue;
-
-        [FieldOffset(0)] public double doubleValue;
-
-        [FieldOffset(0)] public ulong longValue;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b87c2f01e9656185dcbd2a999c9903d7ccf7d0fa6d318b2823a46b26a57c6253
+size 543

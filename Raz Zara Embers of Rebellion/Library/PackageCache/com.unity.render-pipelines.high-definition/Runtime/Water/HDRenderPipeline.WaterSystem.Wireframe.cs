@@ -1,30 +1,3 @@
-namespace UnityEngine.Rendering.HighDefinition
-{
-    public partial class HDRenderPipeline
-    {
-        void RenderWaterAsWireFrame(CommandBuffer cmd, HDCamera hdCamera)
-        {
-            // If the water is disabled, no need to render
-            if (!ShouldRenderWater(hdCamera))
-                return;
-
-            WaterRendering settings = hdCamera.volumeStack.GetComponent<WaterRendering>();
-
-            var data = new WaterRenderingData();
-            PrepareWaterRenderingData(data, hdCamera);
-            data.BindGlobal(cmd);
-
-            var waterSurfaces = WaterSurface.instancesAsArray;
-            for (int surfaceIdx = 0; surfaceIdx < data.numSurfaces; ++surfaceIdx)
-            {
-                // Grab the current water surface
-                WaterSurface currentWater = waterSurfaces[surfaceIdx];
-                ref var surfaceData = ref data.surfaces[surfaceIdx];
-
-                // Render the water surface
-                PrepareSurfaceGBufferData(hdCamera, settings, currentWater, surfaceIdx, ref surfaceData);
-                RenderWaterSurface(cmd, data, ref surfaceData);
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fc3d3c365511c0ce93f4a80347ab81eb2915c46b95d74e3ac98db9b3801ac750
+size 1138

@@ -1,15 +1,3 @@
-//
-// This file was automatically generated. Please don't edit by hand.
-//
-
-#ifndef ATMOSPHERICSCATTERING_CS_HLSL
-#define ATMOSPHERICSCATTERING_CS_HLSL
-
-//
-// UnityEngine.Rendering.HighDefinition.FogColorMode:  static fields
-//
-#define FOGCOLORMODE_CONSTANT_COLOR (0)
-#define FOGCOLORMODE_SKY_COLOR (1)
-
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:ce5aa683bbfaa42062aaed3a01b5282ca1d0124fe9fa4c1b3272051358a5692c
+size 312

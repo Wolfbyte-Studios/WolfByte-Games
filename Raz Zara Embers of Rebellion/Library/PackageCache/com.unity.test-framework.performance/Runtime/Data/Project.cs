@@ -1,33 +1,3 @@
-namespace Unity.PerformanceTesting.Data
-{
-    /// <summary>
-    /// Represents Project version.
-    /// </summary>
-    public class Project
-    {
-        /// <summary>
-        /// Name of the project.
-        /// </summary>
-        [RequiredMember] public string Name;
-
-        /// <summary>
-        /// Version of the project unrelated to changeset e.g. package version.
-        /// </summary>
-        [RequiredMember] public string Version;
-
-        /// <summary>
-        /// Commit branch.
-        /// </summary>
-        [RequiredMember] public string Branch;
-
-        /// <summary>
-        /// Commit changeset.
-        /// </summary>
-        [RequiredMember] public string Changeset;
-
-        /// <summary>
-        /// Commit datetime in Unix Epoch milliseconds format.
-        /// </summary>
-        [RequiredMember] public int Date;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:456cb80a20377ef6cac9c792113ac4f310be335cd0dcad2e69603f9feacbc794
+size 881

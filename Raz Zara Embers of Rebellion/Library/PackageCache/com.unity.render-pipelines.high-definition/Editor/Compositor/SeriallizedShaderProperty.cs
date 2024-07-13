@@ -1,20 +1,3 @@
-using UnityEditor;
-
-namespace UnityEditor.Rendering.HighDefinition.Compositor
-{
-    internal class SerializedShaderProperty
-    {
-        public SerializedProperty propertyName;
-        public SerializedProperty propertyType;
-        public SerializedProperty propertyValue;
-        public SerializedProperty rangeLimits;
-
-        public SerializedShaderProperty(SerializedProperty root)
-        {
-            propertyName = root.FindPropertyRelative("propertyName");
-            propertyType = root.FindPropertyRelative("propertyType");
-            propertyValue = root.FindPropertyRelative("value");
-            rangeLimits = root.FindPropertyRelative("rangeLimits");
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:158673b4f95a73ea7ecfd143e564a9a5112d22456623e79144d57a5a419fe099
+size 688

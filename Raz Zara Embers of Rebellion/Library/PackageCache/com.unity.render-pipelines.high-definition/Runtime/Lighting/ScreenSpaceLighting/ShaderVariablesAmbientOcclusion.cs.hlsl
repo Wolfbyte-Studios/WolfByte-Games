@@ -1,21 +1,3 @@
-//
-// This file was automatically generated. Please don't edit by hand. Execute Editor command [ Edit > Rendering > Generate Shader Includes ] instead
-//
-
-#ifndef SHADERVARIABLESAMBIENTOCCLUSION_CS_HLSL
-#define SHADERVARIABLESAMBIENTOCCLUSION_CS_HLSL
-// Generated from UnityEngine.Rendering.HighDefinition.ShaderVariablesAmbientOcclusion
-// PackingRules = Exact
-CBUFFER_START(ShaderVariablesAmbientOcclusion)
-    float4 _AOBufferSize;
-    float4 _AOParams0;
-    float4 _AOParams1;
-    float4 _AOParams2;
-    float4 _AOParams3;
-    float4 _AOParams4;
-    float4 _FirstTwoDepthMipOffsets;
-    float4 _AODepthToViewParams;
-CBUFFER_END
-
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:82dd103e3153498c4496b3f9cc9957ec94fd0bd2058ca91fb7283e31351d8126
+size 641

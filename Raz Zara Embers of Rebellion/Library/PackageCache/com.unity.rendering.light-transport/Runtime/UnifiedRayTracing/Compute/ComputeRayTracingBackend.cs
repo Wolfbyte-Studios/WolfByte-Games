@@ -1,23 +1,3 @@
-namespace UnityEngine.Rendering.UnifiedRayTracing
-{
-    internal class ComputeRayTracingBackend : IRayTracingBackend
-    {
-        public ComputeRayTracingBackend(RayTracingResources resources)
-        {
-            m_Resources = resources;
-        }
-
-        public IRayTracingShader CreateRayTracingShader(Object shader, string kernelName)
-        {
-            Debug.Assert(shader is ComputeShader);
-            return new ComputeRayTracingShader((ComputeShader)shader, kernelName);
-        }
-
-        public IRayTracingAccelStruct CreateAccelerationStructure(AccelerationStructureOptions options, GeometryPool geometryPool, ReferenceCounter counter)
-        {
-            return new ComputeRayTracingAccelStruct(options, geometryPool, m_Resources, counter);
-        }
-
-        RayTracingResources m_Resources;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b7102928c33888660549063e684455478e3ce50aa40ea5e0c188635f4036b207
+size 822

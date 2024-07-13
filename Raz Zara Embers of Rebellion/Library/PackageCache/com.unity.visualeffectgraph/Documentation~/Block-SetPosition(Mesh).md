@@ -1,12 +1,3 @@
-# Set Position (Mesh)
-
-Menu Path: **Position > Set Position (Mesh)**
-
-Use the **Set Position (Mesh)** Block to set particle positions based on the shape of a mesh.
-
-The Block calculates positions from the vertex data of the mesh, then stores the results in the [position attributes](Reference-Attributes.md).
-
-Note: [Velocity from Direction and Speed](Block-VelocityFromDirection&Speed(NewDirection).md) Blocks can then process the direction attribute.
-
-[!include[](Snippets/Block-SetPosition.md)]
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:7d6c8c85789a176ccf0554a48903878a87cdf6e28bbcedf7de29fa1e8608e44b
+size 499

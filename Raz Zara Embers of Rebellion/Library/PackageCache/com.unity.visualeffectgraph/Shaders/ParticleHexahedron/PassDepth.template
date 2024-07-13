@@ -1,15 +1,3 @@
-// Depth pass
-Pass
-{
-    Name ${VFXPassDepth}
-	Tags { "LightMode"=${VFXPassDepth} }
-
-	ZWrite On
-	Blend Off
-
-	HLSLPROGRAM
-	#define VFX_PASSDEPTH VFX_PASSDEPTH_ACTUAL
-	${VFXPassDepthAdditionalPragma}
-	${VFXInclude("Shaders/ParticleHexahedron/PassDepthOrMV.template")}
-	ENDHLSL
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:935015fe4401b9f6499c89704de1363de99ec5142ab0430af698b6f3691d6f8c
+size 277

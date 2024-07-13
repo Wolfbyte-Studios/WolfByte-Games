@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Anisotropy</strong></td>
-<td>The direction of the anisotropy effect. Negative values make the effect vertical, and positive values make the effect horizontal.</td>
-<td>&#8226; <strong>Anisotropy</strong> enabled</td>
-<td>0.0</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:abed54651426af9b2d09acbebb519c90cdfc9b965c81bbf550aad70ccc793ad8
+size 253

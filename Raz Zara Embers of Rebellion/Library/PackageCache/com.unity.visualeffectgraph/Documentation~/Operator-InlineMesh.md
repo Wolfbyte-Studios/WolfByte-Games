@@ -1,20 +1,3 @@
-# Mesh
-
-Menu Path : **Operator > Inline > Mesh**
-
-The **Mesh** inline Operator allows you to store an instance of a Mesh. This is one of the Visual Effect Graph's base [Types](VisualEffectGraphTypeReference.md). To modify a value in this inline Operator, either set the value explicitly in the Operator body, or connect it to a compatible output.
-
-[!include[](Snippets/Operator-InlineIntro.md)]
-
-
-## Operator properties
-
-| **Input** | **Type** | **Description**                                              |
-| --------- | -------- | ------------------------------------------------------------ |
-| **Input** | Mesh   | The value of the Operator. You can either set this in the Operator's body, or connect to it from the output of another Operator. |
-
-| **Output** | **Type** | **Description**            |
-| ---------- | -------- | -------------------------- |
-| **Output** | Mesh   | The value of the Operator. |
-
-[!include[](Snippets/Operator-InlineNotes.md)]
+version https://git-lfs.github.com/spec/v1
+oid sha256:5e1d3d329630110b6969f8b88e816c439e24389dae11ddb3000ecb39470aef10
+size 963

@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Specular Shift</strong></td>
-<td>The position of the primary specular highlight.</td>
-<td>&#8226; <strong>Material</strong> set to <strong>Hair</strong></td>
-<td>0.1</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:508a7877f95026a52bca0d2d6bc84669493e1003b3a474b035ae137dfbccc7f0
+size 194

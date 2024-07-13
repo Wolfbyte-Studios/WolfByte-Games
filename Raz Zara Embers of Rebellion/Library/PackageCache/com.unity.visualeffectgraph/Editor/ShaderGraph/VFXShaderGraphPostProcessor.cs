@@ -1,13 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using UnityEditor.ShaderGraph;
-using UnityEditor.ShaderGraph.Internal;
-using UnityEditor.VFX.UI;
-using UnityEngine;
-using UnityEngine.Profiling;
-
-namespace UnityEditor.VFX
-{
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:db476ba8947623aa01de6db6de08e0e0bf86175235cdcf310d203607c144a018
+size 268

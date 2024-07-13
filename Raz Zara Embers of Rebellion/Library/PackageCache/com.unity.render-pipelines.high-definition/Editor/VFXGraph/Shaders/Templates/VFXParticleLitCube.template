@@ -1,20 +1,3 @@
-{
-	SubShader
-	{
-	    Tags{ "RenderPipeline" = "HDRenderPipeline" }
-		Cull Back
-
-		HLSLINCLUDE
-		#define mainTexture baseColorMap
-		ENDHLSL
-
-		${VFXInclude("Shaders/VFXParticleHeader.template")}
-		${VFXInclude("Shaders/ParticleHexahedron/PassSelection.template")}
-		${VFXInclude("Shaders/ParticleHexahedron/PassDepth.template"),IS_OPAQUE_NOT_SIMPLE_LIT_PARTICLE}
-		${VFXIncludeRP("Templates/Hexahedron/PassDepthForwardOnly.template"),HDRP_MATERIAL_TYPE_SIMPLELIT}
-		${VFXInclude("Shaders/ParticleHexahedron/PassVelocity.template"),USE_MOTION_VECTORS_PASS}
-		${VFXIncludeRP("Templates/Hexahedron/PassGBuffer.template"), IS_OPAQUE_NOT_SIMPLE_LIT_PARTICLE}
-		${VFXIncludeRP("Templates/Hexahedron/PassForward.template")}
-		${VFXIncludeRP("Templates/Hexahedron/PassShadowCaster.template"),USE_CAST_SHADOWS_PASS}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:70be395e14aa30c3f51fe4c341cdd35d9312a2763753129bb8ec8e78f2056d8b
+size 811

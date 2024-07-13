@@ -1,31 +1,3 @@
-#ifndef __SHADERBASE_H__
-#define __SHADERBASE_H__
-
-#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
-#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/TextureXR.hlsl"
-
-#ifdef MSAA_ENABLED
-    TEXTURE2D_X_MSAA(float, g_depth_tex) : register( t0 );
-
-    float FetchDepthMSAA(uint2 pixCoord, uint sampleIdx)
-    {
-        float zdpth = LOAD_TEXTURE2D_X_MSAA(g_depth_tex, pixCoord.xy, sampleIdx).x;
-    #if UNITY_REVERSED_Z
-        zdpth = 1.0 - zdpth;
-    #endif
-        return zdpth;
-    }
-#else
-    TEXTURE2D_X(g_depth_tex) : register( t0 );
-
-    float FetchDepth(uint2 pixCoord)
-    {
-        float zdpth = LOAD_TEXTURE2D_X(g_depth_tex, pixCoord.xy).x;
-    #if UNITY_REVERSED_Z
-            zdpth = 1.0 - zdpth;
-    #endif
-        return zdpth;
-    }
-#endif
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:8a2331434adb1ee8bb4a174fae0bed0ad1aa6c896afc499429dd270f50db691f
+size 808

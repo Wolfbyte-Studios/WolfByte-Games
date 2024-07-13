@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Iridescence</strong></td>
-<td></td>
-<td></td>
-<td>Indicates whether to apply iridescence to the base layer (and the coat layer if there is one). Iridescent surfaces appear to gradually change color as the angle of view or the angle of illumination changes.</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:4431310c334a1e2369289e0a9555a6a5757de1b6c8cb0ef4fa720e284555943a
+size 285

@@ -1,34 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using NUnit.Framework.Interfaces;
-using NUnit.Framework.Internal;
-using NUnit.Framework.Internal.Commands;
-using UnityEngine.TestRunner.NUnitExtensions.Runner;
-
-namespace UnityEngine.TestTools
-{
-    internal class EnumerableApplyChangesToContextCommand : ApplyChangesToContextCommand, IEnumerableTestMethodCommand
-    {
-        public EnumerableApplyChangesToContextCommand(TestCommand innerCommand, IEnumerable<IApplyToContext> changes)
-            : base(innerCommand, changes) {}
-
-        public IEnumerable ExecuteEnumerable(ITestExecutionContext context)
-        {
-            ApplyChanges(context);
-
-            if (innerCommand is IEnumerableTestMethodCommand)
-            {
-                var executeEnumerable = ((IEnumerableTestMethodCommand)innerCommand).ExecuteEnumerable(context);
-                foreach (var iterator in executeEnumerable)
-                {
-                    yield return iterator;
-                }
-            }
-            else
-            {
-                context.CurrentResult = innerCommand.Execute(context);
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:27e964fbcb0a8dd1e35c0953a4e9da22c7cc3b0045ee9c511947a3d0a2d52847
+size 1190

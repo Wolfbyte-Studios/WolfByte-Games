@@ -1,30 +1,3 @@
-using System;
-using System.Collections;
-using UnityEditor.SceneManagement;
-using UnityEngine.SceneManagement;
-
-namespace UnityEditor.TestTools.TestRunner.TestRun.Tasks.Scene
-{
-    internal class ReloadModifiedScenesTask : TestTaskBase
-    {
-        internal Func<int> GetSceneCount = () => SceneManager.sceneCount;
-        internal Func<int, ISceneWrapper> GetSceneAt = i => new SceneWrapper(SceneManager.GetSceneAt(i));
-        internal Func<ISceneWrapper, bool> ReloadScene = scene => EditorSceneManager.ReloadScene(scene.WrappedScene);
-
-        public override IEnumerator Execute(TestJobData testJobData)
-        {
-            for (var i = 0; i < GetSceneCount(); i++)
-            {
-                var scene = GetSceneAt(i);
-                var isSceneSaved = !string.IsNullOrEmpty(scene.path);
-                var isSceneDirty = scene.isDirty;
-                if (isSceneSaved && isSceneDirty)
-                {
-                    ReloadScene(scene);
-                }
-            }
-
-            yield break;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:afdfc24ede0d11b0daad1a39b292a112593ebb2733f5559e0fb26ab9103e3a24
+size 1064

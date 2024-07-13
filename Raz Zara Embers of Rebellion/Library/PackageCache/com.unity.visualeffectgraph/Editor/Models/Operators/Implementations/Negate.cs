@@ -1,29 +1,3 @@
-namespace UnityEditor.VFX.Operator
-{
-    [VFXHelpURL("Operator-Negate")]
-    [VFXInfo(name = "Negate (-x)", category = "Math/Arithmetic", synonyms = new []{ "opposite" })]
-    class Negate : VFXOperatorNumericUniform
-    {
-        public class InputProperties
-        {
-            public float x = 0.0f;
-        }
-
-        protected override sealed string operatorName { get { return "Negate (-x)"; } }
-
-        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
-        {
-            var input = inputExpression[0];
-            var minusOne = VFXOperatorUtility.MinusOneExpression[input.valueType];
-            return new[] { minusOne * input };
-        }
-
-        protected sealed override ValidTypeRule typeFilter
-        {
-            get
-            {
-                return ValidTypeRule.allowEverythingExceptInteger;
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:abc29cedc89d1fb0bd66cc787cb10441bdfe78a599bed6ea1d1b0747da9904a4
+size 897

@@ -1,20 +1,3 @@
-using System;
-
-namespace Unity.PerformanceTesting.Statistics
-{
-    /// <summary>
-    /// Outlier removal mode.
-    /// </summary>
-    public enum OutlierMode
-    {
-        /// <summary>
-        /// Do not remove outliers.
-        /// </summary>
-        DontRemove,
-            
-        /// <summary>
-        /// Remove outliers using the Tukey fences method.
-        /// </summary>
-        Remove
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d9f7e709fe42bf1ba25bf99902659615ad7061a5ec16b9d77687b1f9e42376a3
+size 425

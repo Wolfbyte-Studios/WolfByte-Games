@@ -1,29 +1,3 @@
-using System;
-
-namespace UnityEditor.TestTools.TestRunner.TestRun.Tasks.Scene
-{
-    internal class SceneWrapper : ISceneWrapper
-    {
-        private UnityEngine.SceneManagement.Scene m_WrappedScene;
-
-        public SceneWrapper(UnityEngine.SceneManagement.Scene wrappedScene)
-        {
-            m_WrappedScene = wrappedScene;
-        }
-
-        public UnityEngine.SceneManagement.Scene WrappedScene
-        {
-            get { return m_WrappedScene; }
-        }
-
-        public bool isDirty
-        {
-            get { return m_WrappedScene.isDirty; }
-        }
-
-        public string path
-        {
-            get { return m_WrappedScene.path; }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:276ee6cd6154dce8fe52df683b20af7b202c9c0fd376708047ca51ef1bda661d
+size 699

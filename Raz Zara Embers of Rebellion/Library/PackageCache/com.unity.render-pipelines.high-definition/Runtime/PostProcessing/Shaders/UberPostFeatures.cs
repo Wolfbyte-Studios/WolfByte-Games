@@ -1,14 +1,3 @@
-using System;
-
-namespace UnityEngine.Rendering.HighDefinition
-{
-    [Flags]
-    internal enum UberPostFeatureFlags
-    {
-        None = 0,
-        ChromaticAberration = 1 << 0,
-        Vignette = 1 << 1,
-        LensDistortion = 1 << 2,
-        EnableAlpha = 1 << 3
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:918b7b1ab5ed7a927fda78f58aa796e08f83a95862b208f5739d49d3f7b40088
+size 274

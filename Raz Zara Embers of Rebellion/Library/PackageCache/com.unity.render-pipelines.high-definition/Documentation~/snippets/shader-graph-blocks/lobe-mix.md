@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Lobe Mix</strong></td>
-<td>The amount of mixing between the primary and secondary specular lobes.</td>
-<td>&#8226; <strong>Duel Specular Lobe</strong> enabled <br/>&#8226; <strong>Duel SpecularLobe Parametrization</strong> set to <strong>Direct</strong>.</td>
-<td>0.3</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:81a77272acb734cb600536b4e0c9d26c673467ba74e5858029db1e9664759af0
+size 296

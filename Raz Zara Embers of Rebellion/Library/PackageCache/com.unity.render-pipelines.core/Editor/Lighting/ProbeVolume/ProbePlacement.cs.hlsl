@@ -1,22 +1,3 @@
-//
-// This file was automatically generated. Please don't edit by hand. Execute Editor command [ Edit > Rendering > Generate Shader Includes ] instead
-//
-
-#ifndef PROBEPLACEMENT_CS_HLSL
-#define PROBEPLACEMENT_CS_HLSL
-// Generated from UnityEngine.Rendering.ProbePlacement+GPUProbeVolumeOBB
-// PackingRules = Exact
-struct GPUProbeVolumeOBB
-{
-    float3 corner;
-    float3 X;
-    float3 Y;
-    float3 Z;
-    int minControllerSubdivLevel;
-    int maxControllerSubdivLevel;
-    int fillEmptySpaces;
-    int maxSubdivLevelInsideVolume;
-};
-
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:e63236e1447304aaddb4d884e01f2f8dd6c22578e27d38f90c61bed2d3f4a676
+size 543

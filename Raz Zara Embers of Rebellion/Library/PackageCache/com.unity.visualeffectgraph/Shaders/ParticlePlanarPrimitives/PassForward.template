@@ -1,13 +1,3 @@
-// Forward pass
-Pass
-{
-    Name ${VFXPassForward}
-	Tags { "LightMode"=${VFXPassForward} }
-
-	${VFXStencilForward}
-
-	HLSLPROGRAM
-	#pragma target 4.5
-	${VFXInclude("Shaders/ParticlePlanarPrimitives/PassForwardCommon.template")}
-	ENDHLSL
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:966ba629b4d68ff01e427b9ced41e61e3023da131df61fbfaf96d2a0b0518109
+size 236

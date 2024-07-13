@@ -1,8 +1,3 @@
-<tr>
-<td><strong>Index of Refraction</strong></td>
-<td>
-
-The index of refraction for this material. The index of refraction defines the ratio between the speed of light in a vacuum and the speed of light in the medium of the material. Higher values produce more intense refraction.<br />This property only appears when you select <strong>Box</strong>, <strong>Sphere</strong> or <strong>Thin</strong> from the <strong>Refraction Model</strong> drop-down.
-
-</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:c03e4ebaea0449783a72fae65065a689f64ab03269b8fca1ff661f27c47a6162
+size 468

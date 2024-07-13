@@ -1,20 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using UnityEngine;
-
-public class MyClass
-{
-    public bool DoSomething()
-    {
-        return true;
-    }
-
-    public bool DoSomethingElse()
-    {
-        // here is a regression that somebody made. It seems slow
-        Thread.Sleep(500);
-
-        return true;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:23911f8ce58349583deb554c3af4bb0f36319ce933a49ed63259300ca0cb62d5
+size 377

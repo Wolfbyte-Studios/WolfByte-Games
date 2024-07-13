@@ -1,10 +1,3 @@
-#ifndef SHADERPASS
-#error Undefine_SHADERPASS
-#endif
-
-#define ATTRIBUTES_NEED_TEXCOORD0
-
-#define VARYINGS_NEED_TEXCOORD0
-
-// This include will define the various Attributes/Varyings structure
-#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/VaryingMesh.hlsl"
+version https://git-lfs.github.com/spec/v1
+oid sha256:62cb8885979daeb68e31e5d3e52c42c93ddb2d33a3f5feaf80f0804d26becd3c
+size 306

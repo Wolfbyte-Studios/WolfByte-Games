@@ -1,20 +1,3 @@
-# bool
-
-Menu Path : **Operator > Inline > bool**
-
-The **bool** inline Operator allows you to store an instance of a bool. This is one of the Visual Effect Graph's base [Types](VisualEffectGraphTypeReference.md). To modify a value in this inline Operator, either set the value explicitly in the Operator body, or connect it to a compatible output.
-
-[!include[](Snippets/Operator-InlineIntro.md)]
-
-
-## Operator properties
-
-| **Input** | **Type** | **Description**                                              |
-| --------- | -------- | ------------------------------------------------------------ |
-| **Input** | bool   | The value of the Operator. You can either set this in the Operator's body, or connect to it from the output of another Operator. |
-
-| **Output** | **Type** | **Description**            |
-| ---------- | -------- | -------------------------- |
-| **Output** | bool   | The value of the Operator. |
-
-[!include[](Snippets/Operator-InlineNotes.md)]
+version https://git-lfs.github.com/spec/v1
+oid sha256:1ba348f71b620b890cd9c0d9cc1bd7a741bbe8b66879da44a85495e2eaeda20a
+size 963

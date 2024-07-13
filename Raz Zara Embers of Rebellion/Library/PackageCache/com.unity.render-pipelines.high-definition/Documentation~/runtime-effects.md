@@ -1,8 +1,3 @@
-# Runtime effects
-
-Use High Definition Render Pipeline (HDRP) API to control properties in a script at runtime.
-
-|Page|Description|
-|-|-|
-| [Modify volume effects at runtime](Volumes-API.md) | Use the Volumes API to control volume profile properties. |
-| [Modify frame settings at runtime](Frame-Settings-API.md)| Use the Frame Settings API to control Frame Settings for a specific rendering component. |
+version https://git-lfs.github.com/spec/v1
+oid sha256:9c84ccc787d0ad8b28bb13eee111915fb87f2ddcda09bf1440c47bf41de194de
+size 404

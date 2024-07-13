@@ -1,4 +1,3 @@
-<tr>
-<td><strong>SpecularRoughnessMap</strong></td>
-<td>Specifies a texture that determines the roughness across the surface. Note that this property only uses the red channel of the texture.</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:0e90f5348f8cd5790b973735286acfcbec546d1882728c070c7f38aef9c5a323
+size 203

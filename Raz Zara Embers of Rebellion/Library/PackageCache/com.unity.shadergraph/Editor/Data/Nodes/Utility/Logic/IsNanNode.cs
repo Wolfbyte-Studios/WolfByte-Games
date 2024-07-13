@@ -1,36 +1,3 @@
-using System.Reflection;
-using UnityEngine;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Title("Utility", "Logic", "Is NaN")]
-    class IsNanNode : CodeFunctionNode
-    {
-        public IsNanNode()
-        {
-            name = "Is NaN";
-        }
-
-        public override bool hasPreview
-        {
-            get { return false; }
-        }
-
-        protected override MethodInfo GetFunctionToConvert()
-        {
-            return GetType().GetMethod("Unity_IsNaN", BindingFlags.Static | BindingFlags.NonPublic);
-        }
-
-        static string Unity_IsNaN(
-            [Slot(0, Binding.None)] Vector1 In,
-            [Slot(1, Binding.None)] out Boolean Out)
-        {
-            return
-@"
-{
-    Out = IsNaN(In) ? 1 : 0;
-}
-";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:994eebd8570e93474b0555cdcb746e98770f376d8fb7c2b8f5815db0e22e4c13
+size 745

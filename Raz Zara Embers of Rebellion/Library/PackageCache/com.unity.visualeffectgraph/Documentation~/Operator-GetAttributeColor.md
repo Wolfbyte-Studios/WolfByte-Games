@@ -1,17 +1,3 @@
-# Get Attribute: color
-
-Menu Path : **Operator > Attribute > Get Attribute: color**
-
-The **Get Attribute: color** returns the color, which is a [standard attribute](Reference-Attributes.md), of a simulated element depending on [Location](Attributes.md#attribute-locations). This Operator outputs the RGB values of the simulated element's color.
-
-[!include[](Snippets/Operator-GetAttributeOperatorSettings.md)]
-
-## Operator properties
-
-| **Output** | **Type** | **Description**                                              |
-| ---------- | -------- | ------------------------------------------------------------ |
-| color      | Vector3  | The value of the color attribute, based on **Location**.<br/>If this attribute has not been written to, this Operator returns the default attribute value. |
-
-## Details
-
-The value the attribute returns uses the system’s space (either local-space or world-space).
+version https://git-lfs.github.com/spec/v1
+oid sha256:bbac11d1af2184461dc3866e003ddc6f8a84d69b6d88ab0f517da618cd7620cd
+size 904

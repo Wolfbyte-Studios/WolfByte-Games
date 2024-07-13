@@ -1,10 +1,3 @@
-<tr>
-<td><strong>Alpha Clipping</strong></td>
-<td></td>
-<td></td>
-<td>
-
-Indicates whether this material acts like a <a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterRenderingMode.html">Cutout Shader</a>.<br/>For more information about the feature and for the  list of properties this feature exposes, see the <a href="Alpha-Clipping.md">Alpha Clipping documentation</a>.
-
-</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:03c466d3fa7c25b1d5ff20d0dff72b5b6a879fd434b56df94f013bee56acf9cb
+size 407

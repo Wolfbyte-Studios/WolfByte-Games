@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Secondary Specular Tint</strong></td>
-<td>The color of the secondary specular highlight.</td>
-<td>&#8226; <strong>Material</strong> set to <strong>Hair</strong></td>
-<td>Color.grey</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:4ee1d5104c9f93d077b3fd6f037f053abd2b5bb5910451ad1f632c9f4e4ebd3f
+size 209

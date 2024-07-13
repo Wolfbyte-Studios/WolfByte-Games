@@ -1,29 +1,3 @@
-//
-// This file was automatically generated. Please don't edit by hand. Execute Editor command [ Edit > Rendering > Generate Shader Includes ] instead
-//
-
-#ifndef SHADERVARIABLESXR_CS_HLSL
-#define SHADERVARIABLESXR_CS_HLSL
-// Generated from UnityEngine.Rendering.HighDefinition.ShaderVariablesXR
-// PackingRules = Exact
-GLOBAL_CBUFFER_START(ShaderVariablesXR, b1)
-    float4x4 _XRViewMatrix[2];
-    float4x4 _XRInvViewMatrix[2];
-    float4x4 _XRProjMatrix[2];
-    float4x4 _XRInvProjMatrix[2];
-    float4x4 _XRViewProjMatrix[2];
-    float4x4 _XRInvViewProjMatrix[2];
-    float4x4 _XRNonJitteredViewProjMatrix[2];
-    float4x4 _XRNonJitteredInvViewProjMatrix[2];
-    float4x4 _XRPrevViewProjMatrix[2];
-    float4x4 _XRPrevInvViewProjMatrix[2];
-    float4x4 _XRPrevViewProjMatrixNoCameraTrans[2];
-    float4x4 _XRViewProjMatrixNoCameraTrans[2];
-    float4x4 _XRPixelCoordToViewDirWS[2];
-    float4 _XRWorldSpaceCameraPos[2];
-    float4 _XRWorldSpaceCameraPosViewOffset[2];
-    float4 _XRPrevWorldSpaceCameraPos[2];
-CBUFFER_END
-
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:8613cb8c4d0c2b68e0053df37ae9b21b4f7d17ef24e15543701fb75bb9dd8fd9
+size 1034

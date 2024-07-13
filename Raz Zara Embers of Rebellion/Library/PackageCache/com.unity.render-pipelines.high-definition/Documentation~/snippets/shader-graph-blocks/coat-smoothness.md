@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Coat Smoothness</strong></td>
-<td>The smoothness of the coat's specular lobe. The coat has no diffuse component, but this property affects the base layer's diffuse color. Decreasing this value also makes the base layer seem less smooth.</td>
-<td>&#8226; <strong>Material</strong> set to <strong>StackLit</strong> <br/>&#8226; <strong>Coat</strong> enabled</td>
-<td>1.0</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:4e27a434c8f7986e4e43194fcf1d1cddc48410de4f4142461bb529b1f745cfba
+size 397

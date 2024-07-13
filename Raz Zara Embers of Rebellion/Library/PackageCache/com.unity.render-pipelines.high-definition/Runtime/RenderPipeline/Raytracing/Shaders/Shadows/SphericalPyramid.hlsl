@@ -1,26 +1,3 @@
-void SampleSphericalPyramid(float3 conePosition, float coneRadius,
-                        float3 coneDir, float3 coneRight, float3 coneUp,
-                        float coneAngleX, float coneAngleY,
-                        float u, float v,
-                        out float3 outPosition, out float outPDF)
-{
-    // The light is a spotlight: sample in the light's pyramid cone to increase convergence.
-    float thetaX = coneAngleX * (u - 0.5f);
-    float thetaY = coneAngleY * (v - 0.5f);
-
-    // Compute the local space sampling direction
-    float cosThetaY = cos(thetaY);
-    float3 smp_dir = float3(cos(thetaX) * cosThetaY, sin(thetaX) * cosThetaY, sin(thetaY));
-
-    // Compute the sampling direction
-    float3 wsmp_dir;
-    wsmp_dir = smp_dir.x * coneDir;
-    wsmp_dir = smp_dir.y * coneRight + wsmp_dir;
-    wsmp_dir = smp_dir.z * coneUp + wsmp_dir;
-
-    // Compute the world position of the sample
-    outPosition = coneRadius * wsmp_dir + conePosition;
-
-    // Product of two separable PDFs over each pyramid cone angle.
-    outPDF = PI * PI / (coneAngleX * coneAngleY);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fbff9aa1bab92cf25813803c26d931ce9d40e9e294cf1067e5b870b8f9f13a0c
+size 1085

@@ -1,24 +1,3 @@
-using System;
-using System.Runtime.CompilerServices;
-
-[assembly: InternalsVisibleTo("Unity.Collections")]
-
-namespace Unity.Collections.LowLevel.Unsafe
-{
-    internal unsafe static class ILSupport
-    {
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void* AddressOf<T>(in T thing)
-            where T : struct
-        {
-            throw new NotImplementedException();
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ref T AsRef<T>(in T thing)
-            where T : struct
-        {
-            throw new NotImplementedException();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:797178cd154269783e5df22c1b92e8d68242f00a8a795c3c918082150707251b
+size 627

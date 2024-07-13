@@ -1,9 +1,3 @@
-# Decal material reference
-
-Learn about properties that relate to [Decal](decals.md) materials.
-
-| Page | Description |
-| - | - |
-|[Decal Projector reference](decal-projector-reference.md)|The properties and options in the Decal Projector inspector.|
-|[Decal Material Inspector reference](decal-material-inspector-reference.md)|The properties and options in the Decal Material. inspector.|
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:3f93414b8035dcce143910404e9a5b97f7e98a76f5059408e86ea4b9185b9417
+size 391

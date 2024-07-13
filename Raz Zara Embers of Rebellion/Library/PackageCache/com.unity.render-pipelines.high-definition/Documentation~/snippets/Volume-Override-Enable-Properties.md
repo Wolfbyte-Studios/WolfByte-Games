@@ -1,1 +1,3 @@
-To edit properties in any Volume component override, enable the checkbox to the left of the property. This also tells HDRP to use the property value you specify for the Volume component rather than the default value. If you disable the checkbox, HDRP ignores the property you set and uses the Volume’s default value for that property instead.
+version https://git-lfs.github.com/spec/v1
+oid sha256:42a3306fd10d0994ebd355713bd4bd5aa3159fb1346fd384166241d56dd6deae
+size 345

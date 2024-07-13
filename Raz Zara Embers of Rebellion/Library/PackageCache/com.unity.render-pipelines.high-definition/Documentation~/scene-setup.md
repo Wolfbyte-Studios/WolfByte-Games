@@ -1,10 +1,3 @@
-# Scene setup
-
-Use Volumes in the High Definition Render Pipeline (HDRP) to partition your scene into areas so you can control lighting and effects at a finer level, rather than tune an entire scene.
-
-| Page | Description |
-|-|-|
-| [Understand Volumes](understand-volumes.md) | Understand the Volume framework, Volumes, Volume Overrides and Volume Profiles. |
-| [Set up a Volume](set-up-a-volume.md) | Create a Volume and assign a Volume Profile. |
-| [Configure Volume Overrides](configure-volume-overrides.md) | Create a Volume Override and configure its properties. |
-| [Create a Volume Profile](create-a-volume-profile.md) | Create and customize a Volume Profile. |
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c33e17a827d94f84954ec5ab80215ba233f84dd2b71c41e97f9cbcab752d676
+size 669

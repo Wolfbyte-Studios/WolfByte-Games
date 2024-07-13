@@ -1,9 +1,3 @@
-# Vector
-
-A world-space or local-space three-component vector. When the Visual Effect Graph transforms a Vector, it does not take translation into account, only rotation and scale. This is different from a [Position](Type-Position.md) because when the Visual Effect Graph transforms a Position, it also takes translation into account, as well as rotation and scale.
-
-## Properties
-
-| **Property** | **Description**                          |
-| ------------ | ---------------------------------------- |
-| **Vector**   | The value of the three-component vector. |
+version https://git-lfs.github.com/spec/v1
+oid sha256:35fdb3301be8a39cbcf8c57e9049a3efe58eae80bbf8bb288d591e38928512b1
+size 562

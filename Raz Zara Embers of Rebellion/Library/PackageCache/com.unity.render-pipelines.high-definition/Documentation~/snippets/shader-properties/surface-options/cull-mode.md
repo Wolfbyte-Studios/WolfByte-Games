@@ -1,6 +1,3 @@
-<tr>
-  <td></td>
-  <td>Cull Mode</td>
-  <td></td>
-  <td>Specifies the face to cull for GameObjects that use this material. The options are:<br>• Front: Culls the front face of the mesh.<br>• Back: Culls the back face of the mesh.<br>This property only appears if you disable Double Sided.</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:77bc48f463857a7a3ac8f05300aaaa3fc07cf680294f6b9bebccf08331ec811c
+size 304

@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Iris Normal</strong></td>
-<td></td>
-<td></td>
-<td>Indicates whether to use custom normals for the iris. When enabled, the Iris Normal Block sets the normal of the iris for the current fragment. When disabled, it uses the Normal Block.</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:55f5f26be1c6606e950ac16685a0627868e270fd5bb9950b804326b7d08959d8
+size 263

@@ -1,31 +1,3 @@
-using System;
-
-namespace UnityEngine.Rendering.HighDefinition
-{
-    /// <summary>
-    /// A volume component that holds settings for the Micro Shadows effect.
-    /// </summary>
-    [Serializable, VolumeComponentMenu("Shadowing/Micro Shadows")]
-    [SupportedOnRenderPipeline(typeof(HDRenderPipelineAsset))]
-    [HDRPHelpURLAttribute("Override-Micro-Shadows")]
-    public class MicroShadowing : VolumeComponent
-    {
-        /// <summary>
-        /// When enabled, HDRP processes Micro Shadows for this Volume.
-        /// </summary>
-        [Tooltip("Enables micro shadows for directional lights.")]
-        [DisplayInfo(name = "State")]
-        public BoolParameter enable = new BoolParameter(false, BoolParameter.DisplayType.EnumPopup);
-
-        /// <summary>
-        /// Controls the opacity of the micro shadows.
-        /// </summary>
-        [Tooltip("Controls the opacity of the micro shadows.")]
-        public ClampedFloatParameter opacity = new ClampedFloatParameter(1.0f, 0.0f, 1.0f);
-
-        MicroShadowing()
-        {
-            displayName = "Micro Shadows";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:28bcfceff481e620148156e7e52b7fc2c8ee8d38837d6696d8ece5da20273e5f
+size 1094

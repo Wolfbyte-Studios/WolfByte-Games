@@ -1,16 +1,3 @@
-# Lit materials
-
-Lit materials in the High Definition Render Pipeline (HDPR) are realistic materials that include options for effects like subsurface scattering, iridescence, vertex or pixel displacement, and decal compatibility. 
-
-|Page|Description|
-|-|-|
-|[Lit material](lit-material.md)|Create a Lit material.|
-|[Layered Lit material](layered-lit-material.md)|Stack up to four materials on the same GameObject.|
-|[Lit Tessellation material](lit-tessellation-material.md)|Create materials that use tessellation to provide adaptive vertex density for meshes.|
-|[Layered Lit Tessellation material](layered-lit-tessellation-material.md)|Stack up to four tessellated materials on the same GameObject.|
-|[Stacklit material](stacklit-material.md)|Render materials that are more complex than Lit materials.|
-|[Terrain Lit material](terrain-lit-material.md)|Create a material HDRP uses for Unity Terrain.|
-
-## Additional resources
-
-- [Lit material reference](reference-lit-materials.md)
+version https://git-lfs.github.com/spec/v1
+oid sha256:96883d6a50f3f417dccf3c8d3bd8efcd6529687db9c9a4b2de48bab9a6fa14b4
+size 981

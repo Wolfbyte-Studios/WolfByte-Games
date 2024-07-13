@@ -1,8 +1,3 @@
-<tr>
-<td><strong>Raw Depth</strong></td>
-<td>Samples the depth value from the depth buffer. You can also use this setting with a nonlinear depth value.</td>
-<td>In <strong>Graph Settings</strong>:
-&#8226; Enable <strong>Depth Write</strong>.<br/>&#8226; Set <strong>Depth Write Mode</strong> to <strong>Raw</strong>.</td>
-<td>0</td>
-</tr>
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:a43d25e59880fc5442c359d877ef8f90597a2b90d1f54da9fed2fae7cf700b91
+size 340

@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Iridescence Thickness</strong></td>
-<td>The thickness of the iridescence. This changes the gradient of color that the iridescence effect produces. Unit is micrometer multiplied by 3. A value of 1 is remapped to 3 micrometers or 3000 nanometers.</td>
-<td>&#8226; <strong>Material Type</strong> set to <strong>StackLit</strong> <br/>&#8226; <strong>Iridescence</strong> enabled.</td>
-<td>0.0</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:c83efa8d2b255acdd760474025114b53691d6686bb648448b81ff27d6c320d4b
+size 418

@@ -1,10 +1,3 @@
-# Path tracing
-
-Use path tracing to create detailed lighting effects like soft shadows, mirror reflections and refractions, and indirect illumination.
-
-| Page | Description |
-|-|-|
-|[Understand path tracing](path-tracing-understand.md)|Learn how path tracing works and how it affects other HDRP features.|
-|[Set up path tracing](path-tracing-setup.md)|Add a path tracing volume to a scene.|
-|[Path tracing limitations](path-tracing-limitations.md)|Learn which features that HDRP doesn't support with path tracing.|
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:7fb2743616059e8ba2868a160c6a0151e7d151973ca9f5c7b3d9f7f735428891
+size 516

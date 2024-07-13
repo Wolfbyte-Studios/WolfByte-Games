@@ -1,4 +1,3 @@
-<tr>
-<td><strong>NormalMap</strong></td>
-<td>The texture that defines the <a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterNormalMap.html">normal map</a> for this material, in tangent space. This is similar to the one in the <a href="https://docs.unity3d.com/Manual/shader-StandardShader.html">Standard Shader</a> in the Built-in Render Pipeline.<br/>If you disable <strong>UseNormalMap</strong>, HDRP ignores this property.</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:d3a2e147483124eefded8a5a8abcdc0ab88dc822420cdc60b4290635275ef67c
+size 459

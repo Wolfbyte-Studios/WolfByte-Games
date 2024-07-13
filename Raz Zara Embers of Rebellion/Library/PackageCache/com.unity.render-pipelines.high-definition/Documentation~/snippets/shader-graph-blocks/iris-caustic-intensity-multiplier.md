@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Iris Caustic Intensity Multiplier</strong></td>
-<td>Determines the intensity of the eye caustic.</td>
-<td><strong>Material Type</strong> set to <strong>Eye Cinematic With Caustic</strong></td>
-<td>1.0</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:b3697fec065b61c8c43d77aecce2ac015d789336a3096c77622ece0933e14769
+size 229

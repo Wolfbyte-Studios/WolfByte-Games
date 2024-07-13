@@ -1,21 +1,3 @@
-using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
-
-namespace UnityEngine.Rendering
-{
-    internal static class MemoryUtilities
-    {
-        public unsafe static T* Malloc<T>(int count, Allocator allocator) where T : unmanaged
-        {
-            return (T*)UnsafeUtility.Malloc(
-                UnsafeUtility.SizeOf<T>() * count,
-                UnsafeUtility.AlignOf<T>(),
-                allocator);
-        }
-
-        public unsafe static void Free<T>(T* p, Allocator allocator) where T : unmanaged
-        {
-            UnsafeUtility.Free(p, allocator);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3f8b4aa10784781602ceca19e72ddc344394e61a145bd6dd0a522e5bf34829e5
+size 595

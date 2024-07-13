@@ -1,23 +1,3 @@
-
-namespace UnityEngine.Rendering.RadeonRays
-{
-    internal class Common
-    {
-        public static uint CeilDivide(uint val, uint div)
-        {
-            return (val + div - 1) / div;
-        }
-
-        public static void EnableKeyword(CommandBuffer cmd, ComputeShader shader, string keyword, bool enable)
-        {
-            if (enable)
-            {
-                cmd.EnableKeyword(shader, new LocalKeyword(shader, keyword));
-            }
-            else
-            {
-                cmd.DisableKeyword(shader, new LocalKeyword(shader, keyword));
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:48ce6779cbf93d31ea0d722ae0d3671876448f6f3d304d520dd4a510166d9213
+size 592

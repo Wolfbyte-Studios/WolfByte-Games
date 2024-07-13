@@ -1,21 +1,3 @@
-﻿using UnityEngine;
-using System.Collections;
-
-public class MovementCamera : MonoBehaviour
-{
-
-    public KeyCode Left;
-    public KeyCode Right;
-    public KeyCode Forward;
-    public KeyCode Backward;
-	
-	// Update is called once per frame
-	void Update () {
-	
-        if(Input.GetKey(Left))transform.Rotate(0,-30.0f*Time.deltaTime,0);
-        if (Input.GetKey(Right)) transform.Rotate(0, 30.0f * Time.deltaTime, 0);
-
-        if (Input.GetKey(Forward)) transform.Translate(0,0,10*Time.deltaTime);
-        if (Input.GetKey(Backward)) transform.Translate(0,0,-10*Time.deltaTime);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:81af7d171b45f594e7491f96689fd8a0e8fca02a35bbead6f687f4a2ca3d43be
+size 608

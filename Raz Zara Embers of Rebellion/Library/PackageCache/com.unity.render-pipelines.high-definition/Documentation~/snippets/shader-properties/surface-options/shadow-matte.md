@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Shadow Matte</strong></td>
-<td></td>
-<td></td>
-<td>Indicates whether or not the Shader receives shadows. Shadow matte only supports shadow maps. It does not support Screen Space Shadows, <a href="Ray-Traced-Shadows.md">Ray-Traced Shadows</a>, or <a href="Override-Contact-Shadows.md">Contact Shadows</a>.</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:f9b53ba63e83ebc83958f63db6989581dcd4e51918915a66cc4346efb1341d53
+size 333

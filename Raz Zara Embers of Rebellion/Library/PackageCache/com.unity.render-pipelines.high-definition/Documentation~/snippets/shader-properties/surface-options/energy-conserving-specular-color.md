@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Energy Conserving Specular Color</strong></td>
-<td></td>
-<td></td>
-<td>Indicates whether HDRP reduces the diffuse color of the Material if the specular effect is more intense. This makes the lighting of the Material more consistent and makes it look more physically-accurate.<br />This property only appears when you set Material Type to Specular Color.</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:d0c906735db649cda6cb8f1b851a7f9bab52085f5ff395a4a3f998faf5818efe
+size 382

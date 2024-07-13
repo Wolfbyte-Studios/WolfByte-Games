@@ -1,4 +1,3 @@
-<tr>
-<td><strong>MaskThreshold</strong></td>
-<td>The opacity threshold HDRP uses to to determine which areas of the <strong>MaskMap</strong> render as transparent or completely opaque. For example, for a <strong>MaskThreshold</strong> value of 0.5, a pixel in the <strong>MaskMap</strong> with a value of 0.6 appears completely opaque and a pixel with a value of 0.4 appears completely transparent.</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:08f631a1fc0b1c098d42786bc1de058ce2b7a987123f28e5f0e369827035373c
+size 410

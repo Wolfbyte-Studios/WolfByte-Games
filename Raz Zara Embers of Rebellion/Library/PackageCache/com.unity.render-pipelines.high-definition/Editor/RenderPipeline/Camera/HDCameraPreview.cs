@@ -1,26 +1,3 @@
-using UnityEngine;
-using UnityEngine.Rendering.HighDefinition;
-
-namespace UnityEditor.Rendering.HighDefinition
-{
-    class CamerasOverlayCallbacks : Editor
-    {
-        [InitializeOnLoadMethod]
-        static void InitializeCameraPreview()
-        {
-            UnityEditor.CameraEditorUtils.virtualCameraPreviewInstantiator = () =>
-            {
-                var camera = EditorUtility.CreateGameObjectWithHideFlags("HDRP Preview Camera", HideFlags.HideAndDontSave, typeof(Camera)).GetComponent<Camera>();
-
-                camera.enabled = false;
-                camera.cameraType = CameraType.Preview;
-
-                var additionalData = camera.gameObject.AddComponent<HDAdditionalCameraData>();
-                additionalData.isEditorCameraPreview = true;
-
-                return camera;
-            };
-        }
-    }
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:048a5b3e9e99e2a94fb250172b821a570adc0fb5c7158be8dd1142ea1988de31
+size 831

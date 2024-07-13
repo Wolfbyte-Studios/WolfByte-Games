@@ -1,13 +1,3 @@
-using System;
-
-namespace Unity.IL2CPP.CompilerServices
-{
-    /// <summary>
-    /// This is used to indicate to IL2CPP that the static constructors should be executed eagerly at startup
-    /// rather than lazily at runtime.
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, Inherited = false, AllowMultiple = false)]
-    internal class Il2CppEagerStaticClassConstructionAttribute : Attribute
-    {
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b06a15d54c0f9e76fd8ceb1925140a545c0b1589a9d4d1b12017bb1fde267f98
+size 444

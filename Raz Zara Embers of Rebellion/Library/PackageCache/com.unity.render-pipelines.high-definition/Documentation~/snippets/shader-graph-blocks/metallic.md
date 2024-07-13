@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Metallic</strong></td>
-<td>The material's metallic value. This defines how "metal-like" the surface of your Material is (between 0 and 1). When a surface is more metallic, it reflects the environment more and its albedo color becomes less visible. At full metallic level, the surface color is entirely driven by reflections from the environment. When a surface is less metallic, its albedo color is clearer and any surface reflections are visible on top of the surface color, rather than obscuring it.</td>
-<td>None</td>
-<td>0.0</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:60da97c69bcd8e0d785e60d56d332138ab82394d6e34b9cea51eb62eeeaf745e
+size 557

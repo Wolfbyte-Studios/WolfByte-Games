@@ -1,21 +1,3 @@
-using System;
-using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.Rendering.HighDefinition;
-
-namespace UnityEditor.Rendering.HighDefinition
-{
-    /// <summary>
-    /// Rendering Layers settings class.
-    /// </summary>
-    [Serializable]
-    [SupportedOnRenderPipeline(typeof(HDRenderPipelineAsset))]
-    [UnityEngine.Categorization.CategoryInfo(Name = "H: Rendering Layer Settings", Order = 980), HideInInspector]
-    public class HDRenderingLayersLimitSettings : RenderingLayersLimitSettings
-    {
-        /// <summary>
-        /// Maximum number of the supported Rendering Layers on HDRP.
-        /// </summary>
-        protected override int maxRenderingLayersForPipeline => 16;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6ccdd907c7f42216cd6a44b31c1f95ea07b9ad426ec59302d114756c6511e8ca
+size 706

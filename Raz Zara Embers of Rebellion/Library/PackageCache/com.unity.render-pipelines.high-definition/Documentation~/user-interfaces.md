@@ -1,13 +1,3 @@
-## User interfaces
-
-Create a user interface (UI) in the High Definition Render Pipeline (HDRP), for example to create a menu system or to display information to users.
-
-|Page|Description|
-|-|-|
-|[Best practices for UI in HDRP](best-practices-for-ui-in-hdrp.md)|Use the Unity UI package in HDRP.|
-
-## Additional resources
-
-- [Unity UI](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/index.html)
-- [Graphics Compositor](graphics-compositor-window-reference.md)
-- [DecalShaderGraphGUI API](xref:UnityEditor.Rendering.HighDefinition.DecalShaderGraphGUI)
+version https://git-lfs.github.com/spec/v1
+oid sha256:21f0053e1ef002b81aa06c1a084e7060ae236d68343c40a9a2c1770790a90f15
+size 563

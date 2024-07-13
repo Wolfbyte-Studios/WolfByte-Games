@@ -1,20 +1,3 @@
-# Vector3
-
-Menu Path : **Operator > Inline > Vector3**
-
-The **Vector3** inline Operator allows you to store an instance of a Vector3. This is one of the Visual Effect Graph's base [Types](VisualEffectGraphTypeReference.md). To modify a value in this inline Operator, either set the value explicitly in the Operator body, or connect it to a compatible output.
-
-[!include[](Snippets/Operator-InlineIntro.md)]
-
-
-## Operator properties
-
-| **Input** | **Type** | **Description**                                              |
-| --------- | -------- | ------------------------------------------------------------ |
-| **Input** | Vector3   | The value of the Operator. You can either set this in the Operator's body, or connect to it from the output of another Operator. |
-
-| **Output** | **Type** | **Description**            |
-| ---------- | -------- | -------------------------- |
-| **Output** | Vector3   | The value of the Operator. |
-
-[!include[](Snippets/Operator-InlineNotes.md)]
+version https://git-lfs.github.com/spec/v1
+oid sha256:c7d1e1eb4821b625c48f6e5cd999b12310821f80f5969a092e3a204c41977db5
+size 981

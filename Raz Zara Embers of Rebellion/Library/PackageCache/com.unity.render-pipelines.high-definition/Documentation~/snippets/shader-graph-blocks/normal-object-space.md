@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Normal Object Space</strong></td>
-<td>The normal, in object space, for the material.</td>
-<td><strong>Fragment Normal Space</strong> set to <strong>Object</strong></td>
-<td>CoordinateSpace.Object</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:aa0ec9a571864a53c114efde92ec5c00b39cb9f40401e959a9c926f485401a96
+size 224

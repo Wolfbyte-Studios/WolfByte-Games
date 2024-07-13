@@ -1,31 +1,3 @@
-using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.Rendering.HighDefinition;
-
-// Include material common properties names
-using static UnityEngine.Rendering.HighDefinition.HDMaterialProperties;
-
-namespace UnityEditor.Rendering.HighDefinition
-{
-    /// <summary>
-    /// GUI for HDRP unlit shaders (does not include shader graphs)
-    /// </summary>
-    class UnlitGUI : HDShaderGUI
-    {
-        MaterialUIBlockList uiBlocks = new MaterialUIBlockList
-        {
-            new SurfaceOptionUIBlock(MaterialUIBlock.ExpandableBit.Base, features: SurfaceOptionUIBlock.Features.Unlit),
-            new UnlitSurfaceInputsUIBlock(MaterialUIBlock.ExpandableBit.Input),
-            new TransparencyUIBlock(MaterialUIBlock.ExpandableBit.Transparency),
-            new EmissionUIBlock(MaterialUIBlock.ExpandableBit.Emissive),
-            new AdvancedOptionsUIBlock(MaterialUIBlock.ExpandableBit.Advance, AdvancedOptionsUIBlock.Features.Instancing | AdvancedOptionsUIBlock.Features.AddPrecomputedVelocity)
-        };
-
-        protected override void OnMaterialGUI(MaterialEditor materialEditor, MaterialProperty[] props)
-        {
-            uiBlocks.OnGUI(materialEditor, props);
-        }
-
-        public override void ValidateMaterial(Material material) => UnlitAPI.ValidateMaterial(material);
-    }
-} // namespace UnityEditor
+version https://git-lfs.github.com/spec/v1
+oid sha256:b58b0f63bb9b15fe52a7ffd303b0a405b7267fd98a89e2293bbc73bb4b08c244
+size 1335

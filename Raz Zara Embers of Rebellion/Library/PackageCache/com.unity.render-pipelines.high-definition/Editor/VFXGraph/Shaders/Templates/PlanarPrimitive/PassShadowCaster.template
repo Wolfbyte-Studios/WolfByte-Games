@@ -1,18 +1,3 @@
-Pass
-{
-	Name ${VFXPassShadow}
-	Tags { "LightMode"=${VFXPassShadow} }
-
-	ZClip [_ZClip]
-	ZWrite On
-	Blend Off
-
-	HLSLPROGRAM
-	#define VFX_PASSDEPTH VFX_PASSDEPTH_SHADOW
-	#if !USE_ALPHA_TEST && IS_TRANSPARENT_PARTICLE
-	#define USE_ALPHA_TEST 1
-	#endif
-	${VFXIncludeRP("Templates/PlanarPrimitive/PassDepthOrMV.template")}
-
-	ENDHLSL
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:35390060cca6ae27fd598b6506b5d66027acc75f45f36e3d4d005c4fa2b9f82e
+size 329

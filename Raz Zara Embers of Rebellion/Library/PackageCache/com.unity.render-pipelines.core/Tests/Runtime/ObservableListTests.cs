@@ -1,20 +1,3 @@
-using NUnit.Framework;
-
-namespace UnityEngine.Rendering.Tests
-{
-    class ObservableListTests
-    {
-        [Test]
-        public void ObservableList_CompletelyCleared()
-        {
-            var observableList = new ObservableList<int>();
-
-            for(int i = 0; i < 5; i++)
-                observableList.Add(i);
-
-            observableList.Clear();
-            Assert.AreEqual(0, observableList.Count,
-                $"{observableList.Count} elements remaining after ObservableList.Clear(), expected 0");
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8ad0ad91a223d33b5982fa78c0cda70eb515a1aa06497a0ba6db0ab3cfb70af7
+size 531

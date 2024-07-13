@@ -1,27 +1,3 @@
-using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.Rendering.HighDefinition;
-
-namespace UnityEditor.Rendering.HighDefinition
-{
-    [CanEditMultipleObjects]
-    [CustomEditor(typeof(LightCluster))]
-    class LightClusterEditor : VolumeComponentEditor
-    {
-        public override void OnInspectorGUI()
-        {
-            HDRenderPipelineAsset currentAsset = HDRenderPipeline.currentAsset;
-            bool notSupported = currentAsset != null && !currentAsset.currentPlatformRenderPipelineSettings.supportRayTracing;
-            if (notSupported)
-            {
-                EditorGUILayout.Space();
-                HDEditorUtils.QualitySettingsHelpBox(HDRenderPipelineUI.Styles.rayTracingUnsupportedMessage,
-                    MessageType.Warning, HDRenderPipelineUI.ExpandableGroup.Rendering,
-                    "m_RenderPipelineSettings.supportRayTracing");
-            }
-            using var disableScope = new EditorGUI.DisabledScope(notSupported);
-
-            base.OnInspectorGUI();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bdbd843080f4f6cf149f23ae5d69f1ad669c3ac19aa1b7c80543407c3cd33adf
+size 1030

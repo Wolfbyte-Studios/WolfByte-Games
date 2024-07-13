@@ -1,25 +1,3 @@
-﻿using System;
-using UnityEngine;
-
-namespace Unity.PerformanceTesting
-{
-    internal static class ResourcesLoader
-    {
-        public static T Load<T>(string assetPath, string prefsKey) where T : class
-        {
-            try
-            {
-                var runResource = Resources.Load<TextAsset>(assetPath.Replace(".json", ""));
-                var json = Application.isEditor ? PlayerPrefs.GetString(prefsKey) : runResource.text;
-                var run = JsonUtility.FromJson<T>(json);
-                return run;
-            }
-            catch (Exception e)
-            {
-                Debug.LogError(e);
-            }
-
-            return null;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7522515f7ef12d0897588e9ba4f0fe02cf9e34f81d3f5edc4eb1ad32438d2ae4
+size 701

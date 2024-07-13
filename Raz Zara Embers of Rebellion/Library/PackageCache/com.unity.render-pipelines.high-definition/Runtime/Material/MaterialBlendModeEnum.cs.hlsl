@@ -1,15 +1,3 @@
-//
-// This file was automatically generated. Please don't edit by hand. Execute Editor command [ Edit > Rendering > Generate Shader Includes ] instead
-//
-
-#ifndef MATERIALBLENDMODEENUM_CS_HLSL
-#define MATERIALBLENDMODEENUM_CS_HLSL
-//
-// UnityEngine.Rendering.HighDefinition.BlendingMode:  static fields
-//
-#define BLENDINGMODE_ALPHA (0)
-#define BLENDINGMODE_PREMULTIPLY (4)
-#define BLENDINGMODE_ADDITIVE (1)
-
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:b9b43517684463532680222bbf5d5899f7684f3b183a8bb124c9f7818f184d82
+size 417

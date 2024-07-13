@@ -1,14 +1,3 @@
-#ifndef UNITY_CORE_SAMPLERS_INCLUDED
-#define UNITY_CORE_SAMPLERS_INCLUDED
-
-// Common inline samplers.
-// Separated into its own file for robust including from any other file.
-// Helps with sharing samplers between intermediate and/or procedural textures (D3D11 has a active sampler limit of 16).
-SAMPLER(sampler_PointClamp);
-SAMPLER(sampler_LinearClamp);
-SAMPLER(sampler_TrilinearClamp);
-SAMPLER(sampler_PointRepeat);
-SAMPLER(sampler_LinearRepeat);
-SAMPLER(sampler_TrilinearRepeat);
-
-#endif //UNITY_CORE_SAMPLERS_INCLUDED
+version https://git-lfs.github.com/spec/v1
+oid sha256:f8db3219070a49de17e423bbfa2839becbecbd614c02f4888b39396f8e5d90db
+size 522

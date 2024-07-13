@@ -1,16 +1,3 @@
-using System;
-using UnityEngine;
-
-namespace UnityEditor.TestTools.TestRunner.UnityTestProtocol
-{
-    internal class UtpDebugLogger : IUtpLogger
-    {
-        internal const string UtpPrefix = "\n##utp:";
-
-        public void Log(Message msg)
-        {
-            var msgJson = JsonUtility.ToJson(msg);
-            Debug.LogFormat(LogType.Log, LogOption.NoStacktrace, null, "{0}{1}", UtpPrefix, msgJson);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:09ab29ee9368f37574c897d2f3f9c4d88a2d70b2559e876a8f1db810e3d7d77d
+size 439

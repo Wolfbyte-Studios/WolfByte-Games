@@ -1,24 +1,3 @@
-﻿using System.Linq;
-using UnityEditor;
-using UnityEditor.Build;
-
-namespace Unity.PerformanceTesting.Editor
-{
-    internal class PerformanceTestBuildAssemblyFilter : IFilterBuildAssemblies
-    {
-        private const string unityTestRunnerAssemblyName = "Unity.PerformanceTesting";
-
-        public int callbackOrder { get; }
-
-        public string[] OnFilterAssemblies(BuildOptions buildOptions, string[] assemblies)
-        {
-            if ((buildOptions & BuildOptions.IncludeTestAssemblies) == BuildOptions.IncludeTestAssemblies)
-            {
-                return assemblies;
-            }
-
-            return assemblies.Where(x => !x.Contains(unityTestRunnerAssemblyName))
-                .ToArray();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1b9ee696634152c972ec3dad8743b89e37736425749e25a05dc24850d0b1e354
+size 752

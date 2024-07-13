@@ -1,34 +1,3 @@
-using System;
-using UnityEngine.Scripting.APIUpdating;
-
-namespace Unity.Jobs
-{
-    /// <summary>
-    /// When added as an assembly-level attribute, allows creating job reflection data for instances of generic jobs.
-    /// </summary>
-    /// <remarks>
-    /// This attribute allows specific instances of generic jobs to be registered for reflection data generation.
-    /// </remarks>
-    [MovedFrom(true, "Unity.Entities", "Unity.Entities")]
-    [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = true)]
-    public class RegisterGenericJobTypeAttribute : Attribute
-    {
-        /// <summary>
-        /// Fully closed generic job type to register with the job system
-        /// </summary>
-        public Type ConcreteType;
-
-        /// <summary>
-        /// Registers a fully closed generic job type with the job system
-        /// </summary>
-        /// <param name="type"></param>
-        public RegisterGenericJobTypeAttribute(Type type)
-        {
-            ConcreteType = type;
-        }
-    }
-    
-    [AttributeUsage(AttributeTargets.Class)]
-    internal class DOTSCompilerGeneratedAttribute : Attribute
-    {}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:78019a975f770d4d9f334a0afb5417abab15b27331e2903e748a10334edaf861
+size 1131

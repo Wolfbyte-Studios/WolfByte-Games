@@ -1,12 +1,3 @@
-﻿namespace Unity.Mathematics
-{
-    /// <summary>
-    /// Used by property drawers when vectors should be post normalized.
-    /// </summary>
-    public class PostNormalizeAttribute : UnityEngine.PropertyAttribute {}
-
-    /// <summary>
-    /// Used by property drawers when vectors should not be normalized.
-    /// </summary>
-    public class DoNotNormalizeAttribute : UnityEngine.PropertyAttribute {}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5b1fd58d9a695f9df8bed0e0dbf8dc880b4e6082d3c025cd85809aa4592da99f
+size 406

@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Refraction Color</strong></td>
-<td>The color that this refractive material tints light which passes through it.</td>
-<td>&#8226; <strong>Refraction Model</strong> not set to <strong>None</strong></td>
-<td>0.0</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:ec90735ae5b381db12f4f5ad11ae81875bfe6e473c28f687a7f52ebbcbdc79ac
+size 237

@@ -1,19 +1,3 @@
-using System;
-using System.Collections;
-
-namespace UnityEditor.TestTools.TestRunner.TestRun.Tasks.Platform
-{
-    internal class PlatformSpecificCleanupTask : TestTaskBase
-    {
-        public PlatformSpecificCleanupTask()
-        {
-            RunOnError = ErrorRunMode.RunAlways;
-        }
-
-        public override IEnumerator Execute(TestJobData testJobData)
-        {
-            testJobData.PlatformSpecificSetup?.CleanUp();
-            yield break;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:480ecbe275ef61c70d7b4b8bfc6b514428a4722a8e723d7d4331878282c8d837
+size 491

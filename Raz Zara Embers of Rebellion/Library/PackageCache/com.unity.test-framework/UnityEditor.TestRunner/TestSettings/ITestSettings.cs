@@ -1,35 +1,3 @@
-using System;
-using UnityEditor.TestTools.TestRunner.Api;
-using UnityEngine.TestRunner.NUnitExtensions.Runner;
-
-namespace UnityEditor.TestTools.TestRunner
-{
-    internal interface ITestSettings : IDisposable
-    {
-        ScriptingImplementation? scriptingBackend { get; set; }
-
-        string Architecture { get; set; }
-
-        ApiCompatibilityLevel? apiProfile { get; set; }
-
-        bool? appleEnableAutomaticSigning { get; set; }
-        string appleDeveloperTeamID { get; set; }
-        ProvisioningProfileType? iOSManualProvisioningProfileType { get; set; }
-        string iOSManualProvisioningProfileID { get; set; }
-        string iOSTargetSDK { get; set; }
-        ProvisioningProfileType? tvOSManualProvisioningProfileType { get; set; }
-        string tvOSManualProvisioningProfileID { get; set; }
-        string tvOSTargetSDK { get; set; }
-        string[] playerGraphicsAPIs { get; set; }
-        bool autoGraphicsAPIs { get; set; }
-        bool? androidBuildAppBundle { get; set; }
-        IgnoreTest[] ignoreTests { get; set; }
-        FeatureFlags featureFlags { get; set; }
-#if UNITY_2023_2_OR_NEWER
-        WebGLClientBrowserType? webGLClientBrowserType { get; set; }
-        string webGLClientBrowserPath { get; set; }
-#endif
-
-        void SetupProjectParameters();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5e5df99c1c5308423b18566af21d0c8e5ecd2fddcda33264694be061d1770a4c
+size 1328

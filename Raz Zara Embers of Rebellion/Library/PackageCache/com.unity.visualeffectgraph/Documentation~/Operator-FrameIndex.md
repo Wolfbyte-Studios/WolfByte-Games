@@ -1,11 +1,3 @@
-# Frame Index
-
-Menu Path : **Operator > BuiltIn > Frame Index**
-
-The **Frame Index** Operator outputs the internal Visual Effect manager frame index. This is equivalent to [Time.frameCount](https://docs.unity3d.com/ScriptReference/Time-frameCount.html). The VFX Graph uses this value internally to check the validity of motion vectors.
-
-## Operator properties
-
-| **Output**     | **Type** | **Description**          |
-| -------------- | -------- | ------------------------ |
-| **frameIndex** | uint     | The current frame index. |
+version https://git-lfs.github.com/spec/v1
+oid sha256:199e495878a519b219f2386899ceb279dd62ef4f48624e08f3acdd7767824f88
+size 532

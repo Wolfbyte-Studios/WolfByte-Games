@@ -1,15 +1,3 @@
-namespace UnityEngine.Rendering
-{
-    /// <summary>
-    /// Interface for a settings class for that stores the default volume profile for Volume Framework.
-    /// </summary>
-    public interface IDefaultVolumeProfileSettings : IRenderPipelineGraphicsSettings
-    {
-        bool IRenderPipelineGraphicsSettings.isAvailableInPlayerBuild => true;
-
-        /// <summary>
-        /// The default volume profile asset.
-        /// </summary>
-        public VolumeProfile volumeProfile { get; set; }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac8e3aaaa6f280e33f5ddeeca56e36bd47e49eea4b55d6349a044989abaf9f54
+size 502

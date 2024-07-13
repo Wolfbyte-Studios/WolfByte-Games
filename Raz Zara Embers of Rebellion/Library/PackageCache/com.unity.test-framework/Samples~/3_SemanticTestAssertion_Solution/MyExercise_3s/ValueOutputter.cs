@@ -1,22 +1,3 @@
-using System.Linq;
-
-namespace MyExercise_3s
-{
-    public class ValueOutputter
-    {
-        public string GetString()
-        {
-            return "A string to be asserted on";
-        }
-        
-        public int GetInt()
-        {
-            return 11;
-        }
-        
-        public float GetFloat()
-        {
-            return 19f + (1f/3f);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4949172fd5bdaf95f443fe8c89968d2937eb37f437393530d5ed78f54f8f0eb6
+size 390

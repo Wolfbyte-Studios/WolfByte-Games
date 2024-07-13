@@ -1,32 +1,3 @@
-using System.Linq;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace UnityEditor.VFX
-{
-    [VFXHelpURL("Block-VariableRate")]
-    [VFXInfo(name = "Variable Spawn Rate", category = "Spawn")]
-    class VFXSpawnerVariableRate : VFXAbstractSpawner
-    {
-        public override string name { get { return "Variable Spawn Rate"; } }
-        public override VFXTaskType spawnerType { get { return VFXTaskType.VariableRateSpawner; } }
-        public class InputProperties
-        {
-            [Tooltip("Sets the minimum and maximum number of particles to be spawned per second.")]
-            public Vector2 Rate = new Vector2(0, 10);
-            [Tooltip("Sets the minimum and maximum time period before a new spawn rate is randomly selected.")]
-            public Vector2 Period = new Vector2(0, 1);
-        }
-
-        public override IEnumerable<VFXNamedExpression> parameters
-        {
-            get
-            {   // Get InputProperties
-                var namedExpressions = GetExpressionsFromSlots(this);
-
-                yield return new VFXNamedExpression(namedExpressions.First(e => e.name == "Rate").exp, "nb");
-                yield return new VFXNamedExpression(namedExpressions.First(e => e.name == "Period").exp, "period");
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b578f794775b55853951f7b82236cf930e778597d0855e7c00fad257aad3fbc8
+size 1282

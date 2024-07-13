@@ -1,25 +1,3 @@
-using System;
-using System.Reflection;
-using UnityEngine;
-using UnityEditor.UIElements;
-using UnityEditor.Graphing;
-using UnityEditor.ShaderGraph.Drawing;
-using UnityEditor.Graphing.Util;
-using UnityEditor.ShaderGraph.Internal;
-using UnityEngine.UIElements;
-
-namespace UnityEditor.ShaderGraph.Drawing.Inspector.PropertyDrawers
-{
-    [SGPropertyDrawer(typeof(SampleTexture3DNode))]
-    class SampleTexture3DNodePropertyDrawer : AbstractMaterialNodePropertyDrawer
-    {
-        internal override void AddCustomNodeProperties(VisualElement parentElement, AbstractMaterialNode nodeBase, Action setNodesAsDirtyCallback, Action updateNodeViewsCallback)
-        {
-            var node = nodeBase as SampleTexture3DNode;
-            PropertyDrawerUtils.AddCustomEnumProperty<Texture3DMipSamplingMode>(
-                parentElement, nodeBase, setNodesAsDirtyCallback, updateNodeViewsCallback,
-                "Mip Sampling Mode", "Change Mip Sampling Mode",
-                () => node.mipSamplingMode, (val) => node.mipSamplingMode = val);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5b32234446167e881b533500139db9a054e274dcb12987a95f29fba70fcb0cde
+size 1050

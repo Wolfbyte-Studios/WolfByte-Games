@@ -1,27 +1,3 @@
-# Linear Drag
-
-Menu Path : **Force >** **Linear Drag**
-
-The **Linear Drag** Block applies a force to particles that slows them down without affecting their direction.
-
-Block settings
-
-| **Setting**         | **Type** | **Description**                                              |
-| ------------------- | -------- | ------------------------------------------------------------ |
-| **UseParticleSize** | bool     | Toggles whether larger particles experience more drag. When enabled, the amount drag that particles experience depends on the particles' size. When disabled, all particles experience the same drag. |
-
-## Block compatibility
-
-This Block is compatible with the following Contexts:
-
-- [Update](Context-Update.md)
-
-## Block properties
-
-| **Input**            | **Type** | **Description**       |
-| -------------------- | -------- | --------------------- |
-| **Drag Coefficient** | float    | The drag coefficient. |
-
-## Remarks
-
-To make this Block affect particle position, enable **Update Position** in the [Update Context](Context-Update.md) Particle.
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a3bee96a9407dcd26d3884a94ff637f201c175b9e5e36902219b23f982f5d87
+size 1065

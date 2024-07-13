@@ -1,23 +1,3 @@
-using System;
-using UnityEngine.Rendering;
-
-namespace UnityEditor.Rendering.Tests
-{
-    internal class CopyPasteTestComponent2 : CopyPasteTestComponent1
-    {
-        public BoolParameter p21 = new BoolParameter(false);
-
-        public new CopyPasteTestComponent2 WithModifiedValues()
-        {
-            base.WithModifiedValues();
-            p21.value = true;
-            return this;
-        }
-
-        public void AssertEquality(CopyPasteTestComponent2 other, Action<object, object> assertionFunction)
-        {
-            base.AssertEquality(other, assertionFunction);
-            assertionFunction(p21.value, other.p21.value);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:925db3cca555819646fd372911025aea22d79a1ec0b02837e0d08a92b9d9a0b0
+size 654

@@ -1,16 +1,3 @@
-#ifndef UNITY_SCREEN_COORD_OVERRIDE_HDRP_INCLUDED
-#define UNITY_SCREEN_COORD_OVERRIDE_HDRP_INCLUDED
-
-#ifndef UNITY_SCREEN_COORD_OVERRIDE_INCLUDED
-    #error UNITY_SCREEN_COORD_OVERRIDE_INCLUDED not defined, you should include "Packages/com.unity.render-pipelines.core/ShaderLibrary/ScreenCoordOverride.hlsl"
-#else
-    // We must redefine SCREEN_SIZE_OVERRIDE on HDRP to use _PostProcessScreenSize.
-    #undef SCREEN_SIZE_OVERRIDE
-    #if defined(SCREEN_COORD_OVERRIDE)
-        #define SCREEN_SIZE_OVERRIDE _ScreenSizeOverride
-    #else
-        #define SCREEN_SIZE_OVERRIDE _PostProcessScreenSize
-    #endif
-#endif
-
-#endif // UNITY_SCREEN_COORD_OVERRIDE_HDRP_INCLUDED
+version https://git-lfs.github.com/spec/v1
+oid sha256:6a4b835f8854b79ec66f36d75387888486bb5818595737818cd8e529feaa55ab
+size 667

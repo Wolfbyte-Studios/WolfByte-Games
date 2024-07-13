@@ -1,11 +1,3 @@
-# Local To World
-
-Menu Path : **Operator > BuiltIn > Local To World**
-
-The **Local To World** Operator provides a matrix to transform a point from local space to world space. This is the functionally the same as calling [Transform.localToWorldMatrix](https://docs.unity3d.com/ScriptReference/Transform-localToWorldMatrix.html) on the parent Transform object.
-
-## Operator properties
-
-| **Output**         | **Type**  | **Description**            |
-| ------------------ | --------- | -------------------------- |
-| **Local to world** | Matrix4x4 | The local to world matrix. |
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a5660f9182daa8b7b8e619d46287782af5b4bf822d6f24a87449903514e7bad
+size 576

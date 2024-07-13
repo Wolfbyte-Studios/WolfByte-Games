@@ -1,16 +1,3 @@
-using System;
-using UnityEngine;
-using UnityEngine.VFX;
-using UnityEngine.Rendering;
-
-namespace UnityEditor.VFX
-{
-    [VFXInfo(type = typeof(CameraBuffer))]
-    class VFXSlotCameraBuffer : VFXSlot
-    {
-        public override VFXValue DefaultExpression(VFXValue.Mode mode)
-        {
-            return new VFXCameraBufferValue(0, mode);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0863e6ef39433f9661f7f25a51ca29dc784225447ec4bff8e616f83383bbdb76
+size 356

@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Normal Tangent Space</strong></td>
-<td>The normal, in tangent space, for the material.</td>
-<td> <strong>Fragment Normal Space</strong> set to <strong>Tangent</strong></td>
-<td>CoordinateSpace.Tangent</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:ec2aada09fee8a8d65b74b53bdaddac2cefec1c963cffe6ec31e362bc703c15c
+size 229

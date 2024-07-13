@@ -1,23 +1,3 @@
-using System;
-using UnityEditor.ShaderGraph;
-
-namespace UnityEditor.ShaderGraph.Drawing
-{
-    interface ISGControlledElement
-    {
-        SGController controller
-        {
-            get;
-        }
-
-        void OnControllerChanged(ref SGControllerChangedEvent e);
-
-        void OnControllerEvent(SGControllerEvent e);
-    }
-
-    interface ISGControlledElement<T> : ISGControlledElement where T : SGController
-    {
-        // This provides a way to access the controller of a ControlledElement at both the base class SGController level and child class level
-        new T controller { get; }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef47043d9667fb0a3ff99a18011ff44f5eb3f8d24866591a5756cdae6ccb2149
+size 603

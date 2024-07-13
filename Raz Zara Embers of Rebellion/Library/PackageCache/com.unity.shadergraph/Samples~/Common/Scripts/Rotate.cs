@@ -1,11 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Rotate : MonoBehaviour
-{
-    void Update()
-    {
-        transform.Rotate(new Vector3(0f, 10f, 0f) * Time.deltaTime);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:23c31b40c9e4d6021bdc57b81467d6f0c22ac207177d107c40cd9ff88fcf939e
+size 219

@@ -1,27 +1,3 @@
-using System;
-using NUnit.Framework;
-using UnityEngine.Rendering;
-
-class DebugMangerTests
-{
-    [Test]
-    public void WindowStateCallbackIsTriggerred()
-    {
-        bool called = false;
-        Action<DebugManager.UIMode, bool> action = (mode, open) =>
-        {
-            Assert.AreEqual(DebugManager.UIMode.EditorMode, mode);
-            Assert.AreEqual(true, open);
-            called = true;
-        };
-
-        DebugManager.windowStateChanged += action;
-
-        DebugManager.instance.displayEditorUI = true;
-
-        Assert.AreEqual(true, called);
-        DebugManager.windowStateChanged -= action;
-
-        DebugManager.instance.displayEditorUI = false;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a2264ab366e357537a13880f5995ec94d4ee65a7a51ecaaca2949871f7b9903c
+size 673

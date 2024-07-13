@@ -1,23 +1,3 @@
-using System.Runtime.CompilerServices;
-
-[assembly: InternalsVisibleTo("Unity.Burst.Tests")]
-[assembly: InternalsVisibleTo("Unity.Collections.BurstCompatibilityTestCodeGen")]
-[assembly: InternalsVisibleTo("Unity.Collections.Tests")]
-[assembly: InternalsVisibleTo("Unity.Collections.CodeGen")]
-[assembly: InternalsVisibleTo("Unity.Collections.Editor")]
-[assembly: InternalsVisibleTo("Unity.Collections.PerformanceTests")]
-[assembly: InternalsVisibleTo("Unity.Entities")]
-[assembly: InternalsVisibleTo("Unity.Entities.CodeGen")]
-[assembly: InternalsVisibleTo("Unity.Entities.Tests")]
-[assembly: InternalsVisibleTo("Unity.Entities.Editor")]
-[assembly: InternalsVisibleTo("Unity.Entities.Editor.Tests")]
-[assembly: InternalsVisibleTo("Unity.Entities.Graphics")]
-[assembly: InternalsVisibleTo("Unity.Entities.Hybrid")]
-[assembly: InternalsVisibleTo("Unity.Runtime")]
-[assembly: InternalsVisibleTo("Unity.Runtime.Tests")]
-[assembly: InternalsVisibleTo("Unity.Runtime.IO.Tests")]
-[assembly: InternalsVisibleTo("Unity.Runtime.UnityInstance")]
-[assembly: InternalsVisibleTo("Unity.Scenes")]
-[assembly: InternalsVisibleTo("Unity.Scenes.Editor")]
-[assembly: InternalsVisibleTo("Samples.GridPath.Tests")]
-[assembly: InternalsVisibleTo("Unity.Entities.PerformanceTests")]
+version https://git-lfs.github.com/spec/v1
+oid sha256:a02d01433ff734908da3716211755042b661be2af30d3f78e21eb51f00ad3511
+size 1258

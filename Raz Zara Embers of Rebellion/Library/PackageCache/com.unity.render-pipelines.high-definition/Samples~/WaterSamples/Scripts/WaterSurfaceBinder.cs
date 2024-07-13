@@ -1,27 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.VFX;
-using UnityEngine.VFX.Utility;
-using UnityEngine.Rendering.HighDefinition;
-
-
-public class WaterSurfaceBinder : VFXBinderBase
-{
-    public WaterSurface waterSurface;
-
-    public override bool IsValid(VisualEffect component)
-    {
-        return waterSurface != null;
-    }
-
-    public override void UpdateBinding(VisualEffect component)
-    {
-        waterSurface.SetGlobalTextures();
-    }
-
-    public override string ToString()
-    {
-        return string.Format($"Water Surface : '{(waterSurface == null ? "null" : waterSurface.gameObject.name)}'");
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3c24731611813da3dc55de62f6b080523ee2eb1c166df1ca215b9551c59c0ba4
+size 662

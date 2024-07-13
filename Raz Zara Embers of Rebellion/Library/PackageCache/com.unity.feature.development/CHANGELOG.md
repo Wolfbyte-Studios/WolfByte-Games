@@ -1,13 +1,3 @@
-# Changelog
-
-## [1.0.2] - 2022-10-07
-- Removed Visual Studio Code
-
-## [1.0.1] - 2021-06-15
-
-### Changes
-- Added the Code Coverage package
-
-## [1.0.0] - 2021-04-23
-
-### This is the first release of *Engineering* feature set.
+version https://git-lfs.github.com/spec/v1
+oid sha256:712d3121a404c0bb47017ff6cd76158f6067dcdd97796118f491ae933388010f
+size 224

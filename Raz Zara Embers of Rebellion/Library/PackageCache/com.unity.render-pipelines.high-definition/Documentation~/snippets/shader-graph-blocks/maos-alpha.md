@@ -1,6 +1,3 @@
-<tr>
-<td><strong>MAOS Alpha</strong></td>
-<td>The opacity of the <strong>Metallic</strong>, <strong>Ambient Occlusion</strong>, and <strong>Smoothness</strong> values.</td>
-<td>&#8226; <strong>Material Type</strong> set to <strong>Decal</strong></td>
-<td>1.0</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:9ef776470fdf93ff8fd3582a8d5c590b5064adfe4caa744f5669ad3330d01ddb
+size 270

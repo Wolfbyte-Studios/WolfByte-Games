@@ -1,14 +1,3 @@
-using System;
-using UnityEngine;
-using UnityEngine.VFX;
-
-namespace UnityEditor.VFX
-{
-    abstract class VFXAbstractSpawner : VFXBlock
-    {
-        public override VFXContextType compatibleContexts { get { return VFXContextType.Spawner; } }
-        public override VFXDataType compatibleData { get { return VFXDataType.SpawnEvent; } }
-        public abstract VFXTaskType spawnerType { get; }
-        public virtual MonoScript customBehavior { get { return null; } }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7cbc2af7347ffcd64fea87aca280072a3548f1391a80f836bc3aaa428be2e9ed
+size 474

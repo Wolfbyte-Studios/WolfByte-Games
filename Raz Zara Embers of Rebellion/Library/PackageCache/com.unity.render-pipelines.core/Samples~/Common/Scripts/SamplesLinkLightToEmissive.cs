@@ -1,29 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-
-[ExecuteInEditMode]
-public class SamplesLinkLightToEmissive : MonoBehaviour
-{
-
-    public GameObject emissiveObject;
-    public Light lightToLink;
-    public string emissionColorProperty = "_Emission_Color";
-    public string emissionIntensityProperty ="_Intensity";
-
-    void Update()
-    {
-
-        if (lightToLink != null && emissiveObject !=null )
-        {
-                var renderer = emissiveObject.GetComponent<MeshRenderer>();
-                var propertyBlock = new MaterialPropertyBlock();
-                renderer.GetPropertyBlock(propertyBlock);
-                propertyBlock.SetColor(emissionColorProperty, lightToLink.color * Mathf.CorrelatedColorTemperatureToRGB(lightToLink.colorTemperature));
-                propertyBlock.SetFloat(emissionIntensityProperty,lightToLink.intensity);
-                renderer.SetPropertyBlock(propertyBlock);
-                
-        } 
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:610f88c172cf1f2ed620b1909edac237d2a7348a563aa3b447c6c4245e5837d9
+size 977

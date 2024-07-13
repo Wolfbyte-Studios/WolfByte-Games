@@ -1,21 +1,3 @@
-using System;
-using UnityEngine.Rendering;
-
-namespace UnityEditor.Rendering.HighDefinition
-{
-    [Serializable]
-    class PluginMaterialVersions : SerializedDictionary<GUID, int, string, int>
-    {
-        public override string SerializeKey(GUID key) => key.ToString();
-        public override int SerializeValue(int val) => val;
-        public override GUID DeserializeKey(string key)
-        {
-            if (!string.IsNullOrEmpty(key) && GUID.TryParse(key, out GUID guid))
-                return guid;
-            else
-                return new GUID();
-        }
-
-        public override int DeserializeValue(int val) => val;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:443059ef4648ce4da4852654c16286a7fd7e6922a95f9f634887e62153c0aecd
+size 640

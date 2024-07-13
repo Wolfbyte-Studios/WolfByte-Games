@@ -1,28 +1,3 @@
-using JetBrains.Annotations;
-using UnityEngine;
-using UnityEngine.Timeline;
-
-namespace UnityEditor.Timeline.Signals
-{
-    [CustomEditor(typeof(SignalAsset))]
-    class SignalAssetInspector : Editor
-    {
-        [MenuItem("Assets/Create/Timeline/Signal", false, -124)]
-        [UsedImplicitly]
-        public static void CreateNewSignal()
-        {
-            var icon = EditorGUIUtility.IconContent("SignalAsset Icon").image as Texture2D;
-            ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0, CreateInstance<DoCreateSignalAsset>(), "New Signal.signal", icon, null);
-        }
-
-        class DoCreateSignalAsset : ProjectWindowCallback.EndNameEditAction
-        {
-            public override void Action(int instanceId, string pathName, string resourceFile)
-            {
-                var signalAsset = CreateInstance<SignalAsset>();
-                AssetDatabase.CreateAsset(signalAsset, pathName);
-                ProjectWindowUtil.ShowCreatedAsset(signalAsset);
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c5f2abb4af278b36bfafd22f1c76d45eb76c36a4a002549eacc7aaad561aff5a
+size 1018

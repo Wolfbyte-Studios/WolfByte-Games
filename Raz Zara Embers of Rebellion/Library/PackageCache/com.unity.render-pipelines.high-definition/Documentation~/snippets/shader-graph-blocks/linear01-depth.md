@@ -1,8 +1,3 @@
-<tr>
-<td><strong>Linear 01 Depth</strong></td>
-<td>Uses a linear depth value between 0 and 1.</td>
-<td>In <strong>Graph Settings</strong>:
-&#8226; Enable <strong>Depth Write</strong>.<br/>&#8226; Set <strong>Depth Write Mode</strong> to <strong>Linear01</strong>.</td>
-<td>0</td>
-</tr>
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:f97b95fd8180fa6f60f6dd9a1699aaf9d7a94f56292dbcaa30ad628876645671
+size 287

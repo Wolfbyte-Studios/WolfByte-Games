@@ -1,25 +1,3 @@
-void EvaluateUnlitMaterialData(in AttributeData attributeData, out float4 outColor, out float velocity)
-{
-    VFXAttributes attributes;
-    ZERO_INITIALIZE(VFXAttributes, attributes);
-
-    // Index needs to be available in the context for the attribute load to work
-    ${VFXGetIndexFromRTPrimitiveIndex}
-    ${VFXLoadGraphValues}
-    // Load the VFX attributes that we need for this
-    ${VFXLoadAttributes}
-    ${VFXProcessBlocks}
-    ${VFXGetColorRT}
-
-    // Return the color
-    outColor = color;
-
-    // Grab the current particle's AABB
-    AABB particleAABB = FetchPrimitiveAABB(PrimitiveIndex(),  VFX_AABB_COUNT, instanceIndex);
-    float3 inputVertexPosition = 0.0;
-    float3 currentOS = (particleAABB.maxPosOS + particleAABB.minPosOS) * 0.5;
-    float3 currentWS = TransformObjectToWorld(currentOS);
-
-    ${VFXVertexComputeDisplacement}
-    velocity = displacement;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:62053a09cecd0cc068c9472335ff5fe873d457ba93da8172e9e43e49b0de03f3
+size 878

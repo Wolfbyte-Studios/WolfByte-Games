@@ -1,18 +1,3 @@
-using System;
-
-namespace UnityEngine.Rendering
-{
-    [GenerateHLSL(needAccessors = false, generateCBuffer = true)]
-    internal unsafe struct OcclusionCullingDebugShaderVariables
-    {
-        public Vector4 _DepthSizeInOccluderPixels;
-
-        [HLSLArray(OccluderContext.k_MaxOccluderMips, typeof(ShaderGenUInt4))]
-        public fixed uint _OccluderMipBounds[OccluderContext.k_MaxOccluderMips * 4];
-
-        public uint _OccluderMipLayoutSizeX;
-        public uint _OccluderMipLayoutSizeY;
-        public uint _OcclusionCullingDebugPad0;
-        public uint _OcclusionCullingDebugPad1;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9dfd6d40287124297cd06cddbd4484baf7d2ee86edc9c30255275ff3f321d0a9
+size 596

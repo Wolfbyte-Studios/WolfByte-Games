@@ -1,20 +1,3 @@
-//
-// This file was automatically generated. Please don't edit by hand. Execute Editor command [ Edit > Rendering > Generate Shader Includes ] instead
-//
-
-#ifndef HDTEMPORALFILTER_CS_HLSL
-#define HDTEMPORALFILTER_CS_HLSL
-//
-// UnityEngine.Rendering.HighDefinition.HDTemporalFilter+HistoryRejectionFlags:  static fields
-//
-#define HISTORYREJECTIONFLAGS_DEPTH (1)
-#define HISTORYREJECTIONFLAGS_REPROJECTION (2)
-#define HISTORYREJECTIONFLAGS_PREVIOUS_DEPTH (4)
-#define HISTORYREJECTIONFLAGS_POSITION (8)
-#define HISTORYREJECTIONFLAGS_NORMAL (16)
-#define HISTORYREJECTIONFLAGS_MOTION (32)
-#define HISTORYREJECTIONFLAGS_COMBINED (63)
-#define HISTORYREJECTIONFLAGS_COMBINED_NO_MOTION (31)
-
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:78251e891ac6deff3c8ac1390d8b19b04b5360597a3eda776da54a8217218141
+size 692

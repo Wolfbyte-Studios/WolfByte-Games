@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Alpha Clip Threshold Depth Postpass</strong></td>
-<td>The alpha value limit that HDRP uses for the transparent depth postpass. If the alpha value of the pixel is equal to or higher than this limit, HDRP renders the pixel. If the value is lower than the limit, HDRP does not render the pixel. The default value is 0.5.</td>
-<td>&#8226; <strong>Alpha Clipping</strong> enabled <br/>&#8226; <strong>Transparent Depth Postpass</strong> enabled</td>
-<td>0.5</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:f46ab50b8a72bf780bccc26bf046ee73391b42e7fee754f5722c6b6c7fd701eb
+size 481

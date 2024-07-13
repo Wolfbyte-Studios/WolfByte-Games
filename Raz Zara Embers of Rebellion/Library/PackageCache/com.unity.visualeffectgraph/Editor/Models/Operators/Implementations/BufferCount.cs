@@ -1,29 +1,3 @@
-using UnityEngine;
-
-namespace UnityEditor.VFX.Operator
-{
-    [VFXHelpURL("Operator-BufferCount")]
-    [VFXInfo(name = "Graphics Buffer Count", category = "Sampling")]
-    class BufferCount : VFXOperator
-    {
-        public override string name { get { return "Graphics Buffer Count"; } }
-
-        public class InputProperties
-        {
-            [Tooltip("Sets the Graphics Buffer to retrieve count.")]
-            public GraphicsBuffer buffer = null;
-        }
-
-        public class OutputProperties
-        {
-            [Tooltip("The Graphics Buffer count.")]
-            public uint count;
-        }
-
-        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
-        {
-            var count = new VFXExpressionBufferCount(inputExpression[0]);
-            return new VFXExpression[] { count };
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d543eb6bdd6a78feeb7e63a79a888e57f4f9dd9ad89aabe7ac867f624699d472
+size 859

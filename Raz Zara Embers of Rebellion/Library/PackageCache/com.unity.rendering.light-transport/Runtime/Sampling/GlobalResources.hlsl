@@ -1,16 +1,3 @@
-#ifndef GLOBAL_RESOURCES_INCLUDED
-#define GLOBAL_RESOURCES_INCLUDED
-
-#if (RNG_METHOD == BLUE_NOISE)
-Texture2D<float>                _ScramblingTileXSPP;
-Texture2D<float>                _RankingTileXSPP;
-Texture2D<float2>               _ScramblingTexture;
-Texture2D<float2>               _OwenScrambledTexture;
-#endif
-#if (RNG_METHOD == SOBOL)
-StructuredBuffer<uint>          _SobolBuffer;
-StructuredBuffer<float>         _CPRBuffer;
-#endif
-
-#endif
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:1d18bcf514eaaefb1aa40bebfc70d7eb41ad24df6ebcd6affac4614327fae517
+size 449

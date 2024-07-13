@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Iris Normal Object Space</strong></td>
-<td>The normal of the eye's iris in object space.</td>
-<td>&#8226; <strong>Material Type</strong> set to <strong>Eye</strong> <br/>&#8226; <strong>Iris Normal</strong> enabled <br/>&#8226; <strong>Fragment Normal Space</strong> set to <strong>Object</strong></td>
-<td>CoordinateSpace.Object</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:1d04da30441ed9e1f8d378553d79b28777fc1926c6e80ab97fa9a4dcb1e3284a
+size 358

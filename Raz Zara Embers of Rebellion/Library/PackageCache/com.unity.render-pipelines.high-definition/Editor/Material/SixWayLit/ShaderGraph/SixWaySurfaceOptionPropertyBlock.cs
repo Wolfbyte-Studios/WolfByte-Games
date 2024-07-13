@@ -1,25 +1,3 @@
-﻿using UnityEngine;
-
-namespace UnityEditor.Rendering.HighDefinition.ShaderGraph
-{
-    class SixWaySurfaceOptionPropertyBlock : SurfaceOptionPropertyBlock
-    {
-        HDSixWayData sixWayData;
-
-        class Styles
-        {
-            public static GUIContent receiveShadows = new GUIContent("Receive Shadows", "Receive Shadows");
-            public static GUIContent useColorAbsorption = new GUIContent("Use Color Absorption", "Use Color Absorption");
-        }
-
-        public SixWaySurfaceOptionPropertyBlock(HDSixWayData sixWayData) : base(Features.Unlit)
-            => this.sixWayData = sixWayData;
-
-        protected override void CreatePropertyGUI()
-        {
-            base.CreatePropertyGUI();
-            AddProperty(Styles.receiveShadows, () => sixWayData.receiveShadows, (newValue) => sixWayData.receiveShadows = newValue);
-            AddProperty(Styles.useColorAbsorption, () => sixWayData.useColorAbsorption, (newValue) => sixWayData.useColorAbsorption = newValue);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:de94164094beee8d2bded6c6ba9295a75604bcd5933ec687bc4551b572699d37
+size 1006

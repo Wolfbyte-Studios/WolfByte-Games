@@ -1,6 +1,3 @@
-<tr>
-<td>- <strong>Threshold</strong>  </td>
-<td></td>
-<td></td>
-<td>The maximum value for the offset that HDRP subtracts from the smoothness value to reduce artifacts.<br />This property only appears if you enable <strong>Geometric Specular AA</strong>.</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:11329f6ac641b2a3f2f6557f5d9e89f5e129bcb4a81d32922b8a9bc2485fed5c
+size 266

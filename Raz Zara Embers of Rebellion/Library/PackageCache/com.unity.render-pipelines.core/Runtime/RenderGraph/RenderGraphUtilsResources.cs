@@ -1,34 +1,3 @@
-using System;
-using System.ComponentModel;
-
-namespace UnityEngine.Rendering.RenderGraphModule.Util
-{
-    [Serializable]
-    [HideInInspector]
-    [Category("Resources/Render Graph Helper Function Resources")]
-    [SupportedOnRenderPipeline]
-    class RenderGraphUtilsResources : IRenderPipelineResources
-    {
-        public enum Version
-        {
-            Initial,
-
-            Count,
-            Latest = Count - 1
-        }
-        [SerializeField, HideInInspector] Version m_Version = Version.Latest;
-        int IRenderPipelineGraphicsSettings.version => (int)m_Version;
-
-        [SerializeField, ResourcePath("Shaders/CoreCopy.shader")]
-        internal Shader m_CoreCopyPS;
-
-        /// <summary>
-        /// Core Copy shader.
-        /// </summary>
-        public Shader coreCopyPS
-        {
-            get => m_CoreCopyPS;
-            set => this.SetValueAndNotify(ref m_CoreCopyPS, value, nameof(m_CoreCopyPS));
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9ac839373e28edf2b7489251046ca821f7f7126991e4f2c9bae56af1493cab44
+size 944

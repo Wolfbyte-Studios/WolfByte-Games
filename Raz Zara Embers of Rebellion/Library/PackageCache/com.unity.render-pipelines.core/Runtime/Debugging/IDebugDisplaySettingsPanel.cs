@@ -1,32 +1,3 @@
-using System;
-
-namespace UnityEngine.Rendering
-{
-    /// <summary>
-    /// Debug UI panel
-    /// </summary>
-    public interface IDebugDisplaySettingsPanel
-    {
-        /// <summary>
-        /// The name used when displaying this panel.
-        /// </summary>
-        string PanelName { get; }
-
-        /// <summary>
-        /// Widgets used by this panel.
-        /// </summary>
-        DebugUI.Widget[] Widgets { get; }
-
-        /// <summary>
-        /// Flags to be applied to the top-level panel.
-        /// </summary>
-        DebugUI.Flags Flags { get; }
-    }
-
-    /// <summary>
-    /// Debug UI panel disposable
-    /// </summary>
-    public interface IDebugDisplaySettingsPanelDisposable : IDebugDisplaySettingsPanel, IDisposable
-    {
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a659f41a7c414c0f9aa54266f080e32af3f37a40f0c3e55ca217a62b3f6be73
+size 755

@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Alpha Clip Threshold</strong></td>
-<td>The alpha value limit that HDRP uses to determine whether to render each pixel. If the alpha value of the pixel is equal to or higher than the limit, HDRP renders the pixel. If the value is lower than the limit, HDRP does not render the pixel. The default value is 0.5.</td>
-<td><strong>Alpha Clipping</strong> enabled</td>
-<td>0.5</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:6da6ab1e01ad1d55ee0101e55ccccd74b2b79d5faa12b646b166b08dc813c51c
+size 399

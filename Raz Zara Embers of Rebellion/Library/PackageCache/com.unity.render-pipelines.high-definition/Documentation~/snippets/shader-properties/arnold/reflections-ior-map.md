@@ -1,4 +1,3 @@
-<tr>
-<td><strong>ReflectionsIORMap</strong></td>
-<td>Specifies a texture that determines the specular index of refraction across the surface. Note that this property only uses the red channel of the texture.</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:a77e618d30476982fc215f1ae8cb324753de2a152400e40a6e335bf7df9dfa37
+size 219

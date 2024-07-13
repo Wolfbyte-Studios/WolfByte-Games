@@ -1,10 +1,3 @@
-# ArcTorus
-
-A solid-arc of a torus defined by an angle and a 3D [Torus](Type-Torus.md). This is useful if you only want to use a segment of a torus.
-
-## Properties
-
-| **Property** | **Description**                                       |
-| ------------ | ----------------------------------------------------- |
-| **Torus**    | The  [Torus](Type-Torus.md) to take the segment from. |
-| **Arc**      | The angle, in radians, of the torus segment.          |
+version https://git-lfs.github.com/spec/v1
+oid sha256:3a1c583dae9b489b136dace7a2d31feac5dd952fb698d797a4c343b966bc5c48
+size 457

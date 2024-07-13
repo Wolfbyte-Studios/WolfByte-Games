@@ -1,35 +1,3 @@
-using System.Collections.Generic;
-
-namespace UnityEditor.VFX
-{
-    class VFXStripTopologyProvider : VariantProvider
-    {
-        public override IEnumerable<Variant> GetVariants()
-        {
-            yield return new Variant(
-                "Output ParticleStrip".AppendLabel("ShaderGraph").AppendLabel("Quad"),
-                VFXLibraryStringHelper.Separator("Output Strip", 3),
-                typeof(VFXComposedParticleStripOutput),
-                new[] { new KeyValuePair<string, object>("m_Topology", new ParticleTopologyQuadStrip()) });
-        }
-    }
-
-    [VFXInfo(variantProvider = typeof(VFXStripTopologyProvider), synonyms = new []{ "Trail", "Ribbon" })]
-    sealed class VFXComposedParticleStripOutput : VFXAbstractComposedParticleOutput
-    {
-        VFXComposedParticleStripOutput() : base(true) { }
-
-        internal override void GenerateErrors(VFXErrorReporter report)
-        {
-            base.GenerateErrors(report);
-            foreach (var attributeInfo in GetAttributesInfos())
-            {
-                if (attributeInfo.mode.HasFlag(VFXAttributeMode.Write) && attributeInfo.attrib.Equals(VFXAttribute.Position))
-                {
-                    report.RegisterError("WritePositionInStrip", VFXErrorType.Warning, VFXQuadStripOutput.WriteToPositionMessage, this);
-                    break;
-                }
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b57bffc1876f6d2c0d4548219fa9c9cf1c402186445888fe003e6b1826a5b0d0
+size 1379

@@ -1,7 +1,3 @@
-# Test and debug materials in different lighting conditions (Look Dev)
-
-Look Dev is an image-based lighting tool that you can use to test how your Assets look in various lighting conditions.
-
-For more information, see [the SRP Core documentation.](https://docs.unity3d.com/Packages/com.unity.render-pipelines.core@latest/index.html?subfolder=/manual/Look-Dev.html)
-
-![](Images/HDRPFeatures-LookDev.png)
+version https://git-lfs.github.com/spec/v1
+oid sha256:bd13a46010b5be8e764f224f31ec4fcea7c544fa503513f9567ed139ca7abc69
+size 403

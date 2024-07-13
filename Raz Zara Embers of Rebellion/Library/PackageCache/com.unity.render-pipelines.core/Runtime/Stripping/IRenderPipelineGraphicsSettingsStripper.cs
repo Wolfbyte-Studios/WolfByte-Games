@@ -1,19 +1,3 @@
-#if UNITY_EDITOR
-namespace UnityEngine.Rendering
-{
-    /// <summary>
-    /// Interface to define an stripper for a <see cref="IRenderPipelineGraphicsSettings"/>
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public interface IRenderPipelineGraphicsSettingsStripper<in T> : IStripper
-        where T : IRenderPipelineGraphicsSettings
-    {
-        /// <summary>
-        /// Specifies if a <see cref="IRenderPipelineGraphicsSettings"/> can be stripped from the build
-        /// </summary>
-        /// <param name="settings">The settings that will be stripped</param>
-        /// <returns>true if the setting is not used and can be stripped</returns>
-        public bool CanRemoveSettings(T settings);
-    }
-}
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:0ebde15550995e8d56d945d7829f9cc0c851c21d1c591c80be046a78026be582
+size 732

@@ -1,20 +1,3 @@
-using System;
-
-namespace UnityEngine.TestTools.Logging
-{
-    internal class LogEvent
-    {
-        public string Message { get; set; }
-
-        public string StackTrace { get; set; }
-
-        public LogType LogType { get; set; }
-
-        public bool IsHandled { get; set; }
-
-        public override string ToString()
-        {
-            return string.Format("[{0}] {1}", LogType, Message);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a6767e86bb48b8e764ebb7111ad2f45ed9c90ae01ccc7d53e8d9b6761416681d
+size 430

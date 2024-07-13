@@ -1,10 +1,3 @@
-# Plane
-
-An infinite plane, defined by a position and a normal vector.
-
-## Properties
-
-| **Property** | **Description**            |
-| ------------ | -------------------------- |
-| **Position** | The position of the plane. |
-| **Normal**   | The plane's normal vector. |
+version https://git-lfs.github.com/spec/v1
+oid sha256:259cece26ce344a15b44fc6e281199d4a4867a6dea781bcf4ec074a9b6500dd8
+size 271

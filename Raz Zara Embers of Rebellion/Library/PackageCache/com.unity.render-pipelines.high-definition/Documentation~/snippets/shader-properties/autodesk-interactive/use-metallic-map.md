@@ -1,4 +1,3 @@
-<tr>
-<td><strong>UseMetallicMap</strong></td>
-<td>Toggles whether the material uses the <strong>MetallicMap</strong> property or the <strong>Metallic</strong> property to specify the metallic value of its surface. Enable this checkbox to use the <strong>MetallicMap</strong> property, disable this checkbox to use the <strong>Metallic</strong> property.</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:19a6b8908a30751af895587315c85ed2dd07100c45b387a7699c55de74dd216f
+size 365

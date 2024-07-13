@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Coat Normal</strong></td>
-<td></td>
-<td></td>
-<td>Indicates whether to use an independent normal for the coat layer. When enabled, the <strong>Coat Normal</strong> property sets the normals specifically for the coat layer. When disabled, the <strong>Normal</strong> property sets the normals for both the coat layer and the base layer.</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:1ce88cfccd4c367032fee554dd754503920acdfb65ae3e39d935ff6ec31d4708
+size 364

@@ -1,16 +1,3 @@
-using UnityEngine.Rendering.HighDefinition;
-
-namespace UnityEditor.Rendering.HighDefinition
-{
-    [CustomEditor(typeof(MicroShadowing))]
-    sealed class MicroShadowingEditor : VolumeComponentEditor
-    {
-        static public readonly string k_DirectionnalWarning = "Micro Shadows only works with directional Lights";
-
-        public override void OnInspectorGUI()
-        {
-            base.OnInspectorGUI();
-            EditorGUILayout.HelpBox(k_DirectionnalWarning, MessageType.Info);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:66ee2caaba8b8cfa5ba78b48c0533608b91b7acd336bd064ee9b6432849cf17a
+size 507

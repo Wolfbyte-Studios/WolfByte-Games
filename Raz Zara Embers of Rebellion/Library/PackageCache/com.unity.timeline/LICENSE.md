@@ -1,5 +1,3 @@
-Timeline copyright © 2023 Unity Technologies
-
-Licensed under the Unity Companion License for Unity-dependent projects--see [Unity Companion License](http://www.unity3d.com/legal/licenses/Unity_Companion_License).
-
-Unless expressly provided otherwise, the Software under this license is made available strictly on an “AS IS” BASIS WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. Please review the license for details on these and other terms and conditions.
+version https://git-lfs.github.com/spec/v1
+oid sha256:73111ef76bd8a502c29b167865620de787af612b5f0ba6b3a517ade3b9519853
+size 464

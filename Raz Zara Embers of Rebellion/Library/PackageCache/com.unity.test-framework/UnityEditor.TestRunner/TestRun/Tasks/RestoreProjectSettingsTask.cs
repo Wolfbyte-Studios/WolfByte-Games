@@ -1,25 +1,3 @@
-using System;
-using System.Collections;
-using UnityEngine;
-
-namespace UnityEditor.TestTools.TestRunner.TestRun.Tasks
-{
-    internal class RestoreProjectSettingsTask : TestTaskBase
-    {
-        public RestoreProjectSettingsTask()
-        {
-            RunOnError = ErrorRunMode.RunAlways;
-            RunOnCancel = true;
-        }
-
-        public override IEnumerator Execute(TestJobData testJobData)
-        {
-            if (testJobData.OriginalProjectSettings == null)
-            {
-                yield break;
-            }
-            ConsoleWindow.SetConsoleErrorPause(testJobData.OriginalProjectSettings.consoleErrorPaused);
-            Application.runInBackground = testJobData.OriginalProjectSettings.runInBackgroundValue;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4dc82ac81262dcbf80ee31b43e7320cb2ba28250d27efbc32fe8ecf9ef777f2a
+size 776

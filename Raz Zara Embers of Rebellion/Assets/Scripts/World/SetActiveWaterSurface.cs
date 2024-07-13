@@ -1,16 +1,3 @@
-using UnityEngine;
-
-public class SetActiveWaterSurface : MonoBehaviour
-{
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ead9f5487a0e5533cac17140826a0cb59571029354795bd7ad4f6615c206e11f
+size 308

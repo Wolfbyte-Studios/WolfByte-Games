@@ -1,15 +1,3 @@
-# Volume (Torus)
-
-Menu Path : **Operator > Math > Geometry > Volume (Torus)**
-
-The **Volume (Torus)** Operator calculates the volume of a torus. This is equal to **2 π<sup>2</sup> R r<sup>2</sup>** where **R** is the major radius and **r** is the minor radius.
-
-## Operator properties
-
-| **Input** | **Type** | **Description**                                   |
-| --------- | -------- | ------------------------------------------------- |
-| **Torus** | Torus    | The torus this Operator calculates the volume of. |
-
-| **Output** | **Type** | **Description**          |
-| ---------- | -------- | ------------------------ |
-| **Volume** | float    | The volume of the torus. |
+version https://git-lfs.github.com/spec/v1
+oid sha256:3d13edbb08fd67d5d530b3c2a07518c98797daef8f1a376cef0ee462b619980d
+size 678

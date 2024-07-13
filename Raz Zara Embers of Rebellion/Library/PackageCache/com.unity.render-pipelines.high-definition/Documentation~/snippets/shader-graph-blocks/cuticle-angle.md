@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Cuticle Angle</strong></td>
-<td>The angle (in degrees) that the scales on a hair fiber tilt from the strand direction. For human hair, this value is usually between 2 to 3 degrees. Use this property to “shift” the highlight.</td>
-<td>&#8226; <strong>Material Type</strong> set to <strong>Physical</strong></td>
-<td>3</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:ca376fae6e23b28f863981ae89234a8109b6b8d1b5c6eeacd14719c7c388b5ed
+size 349

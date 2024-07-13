@@ -1,15 +1,3 @@
-using System.Runtime.CompilerServices;
-
-[assembly: InternalsVisibleTo("Unity.VisualEffectGraph.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.VisualEffectGraph.EditorTests-testable")]
-[assembly: InternalsVisibleTo("Unity.RenderPipelines.HighDefinition.Editor")]
-[assembly: InternalsVisibleTo("Unity.RenderPipelines.HighDefinition.Editor.Tests")]
-[assembly: InternalsVisibleTo("Unity.RenderPipelines.HighDefinition.Runtime.Tests")]
-[assembly: InternalsVisibleTo("HDRP_TestRunner")]
-[assembly: InternalsVisibleTo("HDRP_PlayModeTests")]
-[assembly: InternalsVisibleTo("Unity.TextMeshPro.Editor")]
-[assembly: InternalsVisibleTo("Unity.Industrial.Materials.AVRD.Runtime")]
-[assembly: InternalsVisibleTo("Unity.Industrial.Materials.AVRD.Editor")]
-[assembly: InternalsVisibleTo("Unity.RenderPipelines.Multiple_SRP.RuntimeTests")]
-[assembly: InternalsVisibleTo("Unity.RenderPipelines.Multiple_SRP.EditorTests")]
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:635beafdf5e8af0067c5e9b2bf91dec34493565d8c71efd2c77424776ada228d
+size 909

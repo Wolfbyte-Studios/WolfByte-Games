@@ -1,6 +1,3 @@
-<tr>
-<td>- <strong>Depth Offset</strong></td>
-<td></td>
-<td></td>
-<td>Indicates whether HDRP modifies the depth buffer according to the displacement. This allows effects that use the depth buffer (<a href="Override-Contact-Shadows.md">Contact Shadows</a> for example) to capture pixel displacement details.<br/>This property only appears if you set <strong>Displacement Mode</strong> to <strong>Pixel Displacement</strong>.</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:5bc4cf99c7960fce253f283ff2fed58404636b22f2e02ff319038a6f522122fb
+size 435

@@ -1,36 +1,3 @@
-using System;
-using System.Linq;
-using UnityEngine;
-
-namespace UnityEditor.VFX.Operator
-{
-    class ConeVolumeDeprecated : VFXOperator
-    {
-        public class InputProperties
-        {
-            [Tooltip("Sets the cone used for the volume calculation.")]
-            public Cone cone = new Cone();
-        }
-
-        public class OutputProperties
-        {
-            [Tooltip("Outputs the volume of the cone.")]
-            public float volume;
-        }
-
-        override public string name { get { return "Volume (Cone) (deprecated)"; } }
-
-        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
-        {
-            return new VFXExpression[] { VFXOperatorUtility.ConeVolume(inputExpression[1], inputExpression[2], inputExpression[3]) };
-        }
-
-        public override void Sanitize(int version)
-        {
-            var newVolume = ScriptableObject.CreateInstance<Operator.ConeVolume>();
-            SanitizeHelper.MigrateTConeFromCone(newVolume.inputSlots[0], inputSlots[0]);
-            VFXSlot.CopyLinksAndValue(newVolume.outputSlots[0], outputSlots[0], true);
-            ReplaceModel(newVolume, this);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0a253efc2daaa7d80e98e9f993da924729e9cc6ca22af9ca9625c5b6e34b1e96
+size 1185

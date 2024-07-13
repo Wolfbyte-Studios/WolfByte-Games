@@ -1,32 +1,3 @@
-using System;
-using System.Collections;
-using UnityEditor.SceneManagement;
-
-namespace UnityEditor.TestTools.TestRunner.TestRun.Tasks.Scene
-{
-    internal class RestoreSceneSetupTask : TestTaskBase
-    {
-        internal Action<SceneSetup[]> RestoreSceneManagerSetup = EditorSceneManager.RestoreSceneManagerSetup;
-        internal Func<NewSceneSetup, NewSceneMode, ISceneWrapper> NewScene = (setup, mode) => new SceneWrapper(EditorSceneManager.NewScene(setup, mode));
-
-        public RestoreSceneSetupTask()
-        {
-            RunOnError = ErrorRunMode.RunAlways;
-        }
-
-        public override IEnumerator Execute(TestJobData testJobData)
-        {
-            var sceneSetup = testJobData.SceneSetup;
-            if (sceneSetup != null && sceneSetup.Length > 0)
-            {
-                RestoreSceneManagerSetup(sceneSetup);
-            }
-            else
-            {
-                NewScene(NewSceneSetup.DefaultGameObjects, NewSceneMode.Single);
-            }
-
-            yield break;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:21db167bedfe24abd4a207ce390db9a1ac14e5a7bd1c4edfe9f36a7636261a3c
+size 1054

@@ -1,36 +1,3 @@
-namespace UnityEngine.Rendering.HighDefinition
-{
-    /// <summary>
-    /// Holds settings for the reflection system.
-    /// </summary>
-    struct ReflectionSystemParameters
-    {
-        public static ReflectionSystemParameters Default = new ReflectionSystemParameters
-        {
-            maxPlanarReflectionProbePerCamera = 128,
-            maxActivePlanarReflectionProbe = 512,
-            planarReflectionProbeSize = 128,
-            maxActiveEnvReflectionProbe = 512
-        };
-
-        /// <summary>
-        /// Maximum number of planar reflection that can be found in a cull result.
-        /// </summary>
-        public int maxPlanarReflectionProbePerCamera;
-
-        /// <summary>
-        /// Maximum number of active planar reflection in the world.
-        /// </summary>
-        public int maxActivePlanarReflectionProbe;
-
-        /// <summary>
-        /// Size of the planar probe textures.
-        /// </summary>
-        public int planarReflectionProbeSize;
-
-        /// <summary>
-        /// Maximum number of active non planar reflection in the world.
-        /// </summary>
-        public int maxActiveEnvReflectionProbe;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1f7c637e1cf0eb74d8cdc1f0d47d28ade151ef4cac2f2b6ff37c5d56b5294fe3
+size 1149

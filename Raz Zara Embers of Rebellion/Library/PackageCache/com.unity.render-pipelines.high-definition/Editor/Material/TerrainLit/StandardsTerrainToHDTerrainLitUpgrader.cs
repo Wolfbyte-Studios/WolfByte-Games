@@ -1,20 +1,3 @@
-using UnityEngine;
-using UnityEngine.Rendering.HighDefinition;
-
-namespace UnityEditor.Rendering.HighDefinition
-{
-    class StandardsTerrainToHDTerrainLitUpgrader : MaterialUpgrader
-    {
-        public StandardsTerrainToHDTerrainLitUpgrader(string sourceShaderName, string destShaderName, MaterialFinalizer finalizer = null)
-        {
-            RenameShader(sourceShaderName, destShaderName, finalizer);
-        }
-
-        public override void Convert(Material srcMaterial, Material dstMaterial)
-        {
-            base.Convert(srcMaterial, dstMaterial);
-
-            HDShaderUtils.ResetMaterialKeywords(dstMaterial);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef37ca775a05bb449e31bdcd8e5f3e9943aa6530699c34829ad5696c3020c681
+size 641

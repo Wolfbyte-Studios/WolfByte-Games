@@ -1,20 +1,3 @@
-namespace UnityEngine.Rendering.HighDefinition
-{
-    struct HDProbeCullState
-    {
-        CullingGroup m_CullingGroup;
-        HDProbe[] m_HDProbes;
-        Hash128 m_StateHash;
-
-        internal CullingGroup cullingGroup => m_CullingGroup;
-        internal HDProbe[] hdProbes => m_HDProbes;
-        internal Hash128 stateHash => m_StateHash;
-
-        internal HDProbeCullState(CullingGroup cullingGroup, HDProbe[] hdProbes, Hash128 stateHash)
-        {
-            m_CullingGroup = cullingGroup;
-            m_HDProbes = hdProbes;
-            m_StateHash = stateHash;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:429f0212e3ac04b230ba2527c00bf91a080f1dc43ce0143ed103560559a098c4
+size 588

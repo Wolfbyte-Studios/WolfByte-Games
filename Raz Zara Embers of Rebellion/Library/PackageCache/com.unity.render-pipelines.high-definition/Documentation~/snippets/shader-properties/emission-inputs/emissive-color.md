@@ -1,4 +1,3 @@
-<tr>
-<td><strong>Emissive Color</strong></td>
-<td>Specifies a Texture that defines the emissive color for this material. You can also select a color that HDRP multiplies with the Texture. If you do not set an emission texture then HDRP only uses the color to calculate the final emissive color of the Material. If you enable <strong>Use Emission Intensity</strong>, the color is LDR and <strong>Emission Intensity</strong> controls the intensity. If you disable <strong>Use Emission Intensity</strong>, the color is HDR and controls the intensity within the HDR color picker.</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:be3a66a82e4531ae59249eb3fa344dda9308da8f2bb77735a3017cf4b32f0ac1
+size 587

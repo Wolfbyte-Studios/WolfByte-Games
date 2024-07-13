@@ -1,15 +1,3 @@
-//
-// This file was automatically generated. Please don't edit by hand. Execute Editor command [ Edit > Rendering > Generate Shader Includes ] instead
-//
-
-#ifndef DIFFUSIONPROFILESETTINGS_CS_HLSL
-#define DIFFUSIONPROFILESETTINGS_CS_HLSL
-//
-// UnityEngine.Rendering.HighDefinition.DiffusionProfileConstants:  static fields
-//
-#define DIFFUSION_PROFILE_COUNT (16)
-#define DIFFUSION_PROFILE_NEUTRAL_ID (0)
-#define SSS_PIXELS_PER_SAMPLE (4)
-
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:f80e956cc520c76e6a7e9200d6bbeb1460abce8504cfd8d8761ab342a00f2d28
+size 446

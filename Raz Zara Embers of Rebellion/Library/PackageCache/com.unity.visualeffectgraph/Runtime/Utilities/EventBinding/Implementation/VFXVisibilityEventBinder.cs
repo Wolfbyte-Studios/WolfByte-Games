@@ -1,32 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace UnityEngine.VFX.Utility
-{
-    [RequireComponent(typeof(Renderer))]
-    class VFXVisibilityEventBinder : VFXEventBinderBase
-    {
-        public enum Activation
-        {
-            OnBecameVisible,
-            OnBecameInvisible
-        }
-
-        public Activation activation = Activation.OnBecameVisible;
-
-        protected override void SetEventAttribute(object[] parameters) { }
-
-        private void OnBecameVisible()
-        {
-            if (activation != Activation.OnBecameVisible) return;
-            SendEventToVisualEffect();
-        }
-
-        private void OnBecameInvisible()
-        {
-            if (activation != Activation.OnBecameInvisible) return;
-            SendEventToVisualEffect();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:02db2f4bd4872fd2cb4468da4ec1dc54007b040e5d9446f6fe86501f3d6a229e
+size 815

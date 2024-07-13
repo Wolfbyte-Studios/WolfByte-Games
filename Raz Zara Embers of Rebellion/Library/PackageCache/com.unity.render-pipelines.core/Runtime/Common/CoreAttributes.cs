@@ -1,32 +1,3 @@
-using System;
-
-namespace UnityEngine.Rendering
-{
-    /// <summary>
-    /// Attribute used to customize UI display.
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Field | AttributeTargets.Class, AllowMultiple = false)]
-    public class DisplayInfoAttribute : Attribute
-    {
-        /// <summary>Display name used in UI.</summary>
-        public string name;
-        /// <summary>Display order used in UI.</summary>
-        public int order;
-    }
-
-    /// <summary>
-    /// Attribute used to customize UI display to allow properties only be visible when "Show Additional Properties" is selected
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Field)]
-    public class AdditionalPropertyAttribute : Attribute
-    {
-    }
-
-    /// <summary>
-    /// Attribute used to hide enum values from Rendering Debugger UI
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Field)]
-    public class HideInDebugUIAttribute : Attribute
-    {
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6c085f9974d157c39ccaae5f33177ebbe78250a1bf1390e6809fe32945ccd7c5
+size 956

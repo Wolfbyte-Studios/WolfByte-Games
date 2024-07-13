@@ -1,16 +1,3 @@
-# Transform (Direction)
-
-Menu Path : **Operator > Math > Geometry > Transform (Direction)**
-
-The **Transform (Direction)** Operator applies a transformation to a Direction to position, rotate, or scale it.
-
-## Operator properties
-
-| **Input**     | **Type**  | **Description**                                       |
-| ------------- | --------- | ----------------------------------------------------- |
-| **Transform** | Transform | The Transform this Operator applies to the Direction. |
-| **Direction** | Direction | The Direction this Operator transforms.               |
-
-| **Output** | **Type**  | **Description**                          |
-| ---------- | --------- | ---------------------------------------- |
-| **tDir**   | Direction | The result of the transformed Direction. |
+version https://git-lfs.github.com/spec/v1
+oid sha256:7af5df6d2cb8718458a83e2c0a8bc07945ef64c754494ebfb388f319dd7c107d
+size 786

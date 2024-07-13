@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Iridescence Mask</strong></td>
-<td>The strength of the iridescence effect.</td>
-<td>&#8226; <strong>Material Type</strong> set to <strong>StackLit</strong> <br/>&#8226; <strong>Iridescence</strong> enabled.</td>
-<td>0.0</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:062cd626ec987854871ba4379d53ccf41cbfe483926cdfd274a0055e7faa0ec9
+size 248

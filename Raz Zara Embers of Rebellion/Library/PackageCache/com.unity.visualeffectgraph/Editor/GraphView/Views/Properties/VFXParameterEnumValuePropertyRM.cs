@@ -1,16 +1,3 @@
-namespace UnityEditor.VFX.UI
-{
-    class VFXListParameterEnumValuePropertyRM : ListPropertyRM<string, StringPropertyRM>
-    {
-        public VFXListParameterEnumValuePropertyRM(IPropertyRMProvider controller, float labelWidth) : base(controller, labelWidth)
-        {
-        }
-
-        protected override StringPropertyRM CreateField(IPropertyRMProvider provider)
-        {
-            return new StringPropertyRM(provider, 18);
-        }
-
-        protected override string CreateItem() => "New item";
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:09b382b4ee35afbc2abfa5e27d3d6acdba29dccb2cb0d7ca742b453136eeb3ab
+size 511

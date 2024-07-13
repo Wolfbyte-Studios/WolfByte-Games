@@ -1,27 +1,3 @@
-using System.Diagnostics;
-
-namespace UnityEngine.Rendering.HighDefinition
-{
-    [Conditional("UNITY_EDITOR")]
-    internal class HDRPHelpURLAttribute : CoreRPHelpURLAttribute
-    {
-        public HDRPHelpURLAttribute(string pageName)
-            : base(pageName, Documentation.packageName)
-        {
-        }
-    }
-
-    internal class Documentation : DocumentationInfo
-    {
-        /// <summary>
-        /// The name of the package
-        /// </summary>
-        public const string packageName = "com.unity.render-pipelines.high-definition";
-        /// <summary>
-        /// Generates a help url for the given package and page name
-        /// </summary>
-        /// <param name="pageName">The page name</param>
-        /// <returns>The full url page</returns>
-        public static string GetPageLink(string pageName) => GetPageLink(packageName, pageName);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cad762429ee3e3ed4044835020988d672ad20a21dcb1e969ef97258dbb450917
+size 870

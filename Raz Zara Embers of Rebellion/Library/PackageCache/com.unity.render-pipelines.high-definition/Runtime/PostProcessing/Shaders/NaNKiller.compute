@@ -1,24 +1,3 @@
-#pragma kernel KMain
-
-#pragma only_renderers d3d11 playstation xboxone xboxseries vulkan metal switch
-
-#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
-#include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariables.hlsl"
-#include "Packages/com.unity.render-pipelines.high-definition/Runtime/PostProcessing/Shaders/PostProcessDefines.hlsl"
-
-#pragma multi_compile _ ENABLE_ALPHA
-
-TEXTURE2D_X(_InputTexture);
-RW_TEXTURE2D_X(CTYPE, _OutputTexture);
-
-[numthreads(8, 8, 1)]
-void KMain(uint3 dispatchThreadId : SV_DispatchThreadID)
-{
-    UNITY_XR_ASSIGN_VIEW_INDEX(dispatchThreadId.z);
-    CTYPE color = LOAD_TEXTURE2D_X(_InputTexture, dispatchThreadId.xy).CTYPE_SWIZZLE;
-
-    if (AnyIsNaN(color) || AnyIsInf(color))
-        color.CTYPE_SWIZZLE = 0.0;
-
-    _OutputTexture[COORD_TEXTURE2D_X(dispatchThreadId.xy)] = color;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c021e2a9510c65493eb5a6db7030acde9e4bab4fe6de0922c96416fbba564356
+size 882

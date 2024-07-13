@@ -1,22 +1,3 @@
-using UnityEngine.Rendering.HighDefinition;
-
-namespace UnityEditor.Rendering.HighDefinition
-{
-    class SerializedGPUResidentDrawerSettings
-    {
-        public SerializedProperty root;
-        public SerializedProperty mode;
-        public SerializedProperty smallMeshScreenPercentage;
-        public SerializedProperty enableOcclusionCullingInCameras;
-        public SerializedProperty useDepthPrepassForOccluders;
-
-        public SerializedGPUResidentDrawerSettings(SerializedProperty root)
-        {
-            this.root = root;
-            mode = root.Find((GlobalGPUResidentDrawerSettings s) => s.mode);
-            smallMeshScreenPercentage = root.Find((GlobalGPUResidentDrawerSettings s) => s.smallMeshScreenPercentage);
-            enableOcclusionCullingInCameras = root.Find((GlobalGPUResidentDrawerSettings s) => s.enableOcclusionCullingInCameras);
-            useDepthPrepassForOccluders = root.Find((GlobalGPUResidentDrawerSettings s) => s.useDepthPrepassForOccluders);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:265105911fc5b73d0501b041d156bf1761f13010650aec8d5728e042fad30da5
+size 1002

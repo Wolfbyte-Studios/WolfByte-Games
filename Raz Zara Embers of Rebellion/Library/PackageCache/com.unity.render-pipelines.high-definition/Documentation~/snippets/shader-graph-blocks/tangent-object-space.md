@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Tangent Object Space</strong></td>
-<td>The direction of anisotropy in object space. This stretches the specular highlights in the given direction.</td>
-<td>&#8226; <strong>Material</strong> set to <strong>Lit</strong> <br/>&#8226; <strong>Material Type</strong> set to <strong>Anisotropy</strong> <br/>&#8226; <strong>Fragment Normal Space</strong> set to <strong>Object</strong> <br/>Or <br/>&#8226; <strong>Material</strong> set to <strong>StackLit</strong><br/>&#8226; <strong>Fragment Normal Space</strong> set to <strong>Object</strong> <br/>Or <br/>&#8226; <strong>Material</strong> set to Fabric and <strong>Material Type</strong> set to <strong>Silk</strong><br/>&#8226; <strong>Fragment Normal Space</strong> set to <strong>Object</strong></td>
-<td>CoordinateSpace.Object</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:055dafefcd28d1db7966d3b4f8f90a20d3e130663425c6bdd9f6587aa8ef37d4
+size 809

@@ -1,24 +1,3 @@
-namespace UnityEngine.Rendering
-{
-    /// <summary>
-    /// By implementing this interface, a render pipeline can indicate to its usage of the Adaptive Probe Volume system..
-    /// </summary>
-    public interface IProbeVolumeEnabledRenderPipeline
-    {
-        /// <summary>
-        /// Indicates if this render pipeline instance supports Adaptive Probe Volume.
-        /// </summary>
-        bool supportProbeVolume { get; }
-
-        /// <summary>
-        /// Indicates the maximum number of SH Bands used by this render pipeline instance.
-        /// </summary>
-        ProbeVolumeSHBands maxSHBands { get; }
-
-        /// <summary>
-        /// Returns the projects global ProbeVolumeSceneData instance.
-        /// </summary>
-        [System.Obsolete("This field is no longer necessary")]
-        ProbeVolumeSceneData probeVolumeSceneData { get; }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:12f280a62e296a7f1bc3af1f32a6b023b0caa44277e59f8d8c8070f9bc22e086
+size 859

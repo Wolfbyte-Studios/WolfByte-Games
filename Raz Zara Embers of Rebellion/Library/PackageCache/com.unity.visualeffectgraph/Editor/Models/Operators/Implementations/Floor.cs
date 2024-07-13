@@ -1,27 +1,3 @@
-namespace UnityEditor.VFX.Operator
-{
-    [VFXHelpURL("Operator-Floor")]
-    [VFXInfo(category = "Math/Clamp")]
-    class Floor : VFXOperatorNumericUniform
-    {
-        public class InputProperties
-        {
-            public float x = 0.0f;
-        }
-
-        protected override sealed string operatorName { get { return "Floor"; } }
-
-        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
-        {
-            return new[] { new VFXExpressionFloor(inputExpression[0]) };
-        }
-
-        protected sealed override ValidTypeRule typeFilter
-        {
-            get
-            {
-                return ValidTypeRule.allowEverythingExceptIntegerAndDirection;
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1538526e1d7e25ddef5edf59ea8d0b1d2318577d0a0f88920d897a0fb59f682d
+size 740

@@ -1,27 +1,3 @@
-using System;
-using System.Linq;
-using UnityEngine;
-
-// TODO: Remove after migration
-namespace UnityEditor.VFX
-{
-    class VFXSourceAttributeParameter : VFXAttributeParameter
-    {
-        VFXSourceAttributeParameter()
-        {
-            location = VFXAttributeLocation.Source;
-        }
-
-        public override void Sanitize(int version)
-        {
-            // Create new operator
-            var attrib = ScriptableObject.CreateInstance<VFXAttributeParameter>();
-            attrib.SetSettingValue("location", VFXAttributeLocation.Source);
-            attrib.SetSettingValue("attribute", attribute);
-            attrib.position = position;
-
-            VFXSlot.CopyLinksAndValue(attrib.GetOutputSlot(0), GetOutputSlot(0), true);
-            ReplaceModel(attrib, this);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0fe0edbea9a012d4ec17993308b82a4491cdf36eccb20c6cd45dad11433059b6
+size 795

@@ -1,16 +1,3 @@
-# Transform (Vector4)
-
-Menu Path : **Operator > Math > Geometry > Transform (Vector4)**
-
-The **Transform (Vector4)** Operator applies a transformation to a Vector4.
-
-## Operator properties
-
-| **Input**     | **Type**  | **Description**                                    |
-| ------------- | --------- | -------------------------------------------------- |
-| **Transform** | Transform | The Transform this Operator applies to the Vector. |
-| **Vec**       | Vector4   | The Vector4 this Operator transforms.              |
-
-| **Output** | **Type** | **Description**          |
-| ---------- | -------- | ------------------------ |
-| **tVec**   | Vector4  | The transformed Vector4. |
+version https://git-lfs.github.com/spec/v1
+oid sha256:5a193e6818986636690071dca59b2e7960261876596b01bb3871baf14fda3871
+size 682

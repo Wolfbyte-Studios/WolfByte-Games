@@ -1,13 +1,3 @@
-using System;
-
-namespace UnityEngine.Rendering.HighDefinition
-{
-    /// <summary>
-    /// Transparency debug settings.
-    /// </summary>
-    public class TransparencyDebugSettings
-    {
-        /// <summary>Max pixel cost for transparency overdraw display.</summary>
-        public float maxPixelCost = 10.0f;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2dc20926581b7f595a5c0a9af9f366723ec5ff22b55ce0caa44b30e650d9b521
+size 319

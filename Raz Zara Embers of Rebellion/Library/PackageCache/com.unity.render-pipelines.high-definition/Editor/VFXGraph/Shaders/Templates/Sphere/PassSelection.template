@@ -1,28 +1,3 @@
-// Forward pass
-Pass
-{
-    Name "SceneSelectionPass"
-	Tags { "LightMode"="SceneSelectionPass" }
-
-	ZWrite Off
-	Blend Off
-
-	HLSLPROGRAM
-	#define VFX_PASSDEPTH VFX_PASSDEPTH_SELECTION
-	${VFXIncludeRP("Templates/Sphere/PassDepthOrMV.template")}
-	ENDHLSL
-}
-
-Pass
-{
-    Name "Picking"
-	Tags { "LightMode"="Picking" }
-
-	ZWrite Off
-	Blend Off
-
-	HLSLPROGRAM
-	#define VFX_PASSDEPTH VFX_PASSDEPTH_PICKING
-	${VFXIncludeRP("Templates/Sphere/PassDepthOrMV.template")}
-	ENDHLSL
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6483af34d0602c81ffc38f71bf879e91e1767db1a0d8af9a798d6e440d124f1f
+size 465

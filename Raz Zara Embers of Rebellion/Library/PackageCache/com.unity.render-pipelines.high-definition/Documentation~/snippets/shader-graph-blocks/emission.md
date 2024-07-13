@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Emission</strong></td>
-<td>The color of light to emit from this material's surface. Emissive materials appear as a source of light in your scene.</td>
-<td>None</td>
-<td>Color.black</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:f080cb9b1b0b3b7a3e15ae51988cd753cffdb1ef96f4d173e6463d16dcdb1cd6
+size 209

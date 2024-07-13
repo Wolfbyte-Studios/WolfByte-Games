@@ -1,20 +1,3 @@
-# Matrix4x4
-
-Menu Path : **Operator > Inline > Matrix4x4**
-
-The **Matrix4x4** inline Operator allows you to store an instance of a Matrix4x4. This is one of the Visual Effect Graph's base[Types](VisualEffectGraphTypeReference.md). To modify a value in this inline Operator, either set the value explicitly in the Operator body, or connect it to a compatible output.
-
-[!include[](Snippets/Operator-InlineIntro.md)]
-
-
-## Operator properties
-
-| **Input** | **Type** | **Description**                                              |
-| --------- | -------- | ------------------------------------------------------------ |
-| **Input** | Matrix4x4   | The value of the Operator. You can either set this in the Operator's body, or connect to it from the output of another Operator. |
-
-| **Output** | **Type** | **Description**            |
-| ---------- | -------- | -------------------------- |
-| **Output** | Matrix4x4   | The value of the Operator. |
-
-[!include[](Snippets/Operator-InlineNotes.md)]
+version https://git-lfs.github.com/spec/v1
+oid sha256:23589b82c42bc89bc42c1234d9b2ee10707971dac01fbf36e5d56a014cae290b
+size 992

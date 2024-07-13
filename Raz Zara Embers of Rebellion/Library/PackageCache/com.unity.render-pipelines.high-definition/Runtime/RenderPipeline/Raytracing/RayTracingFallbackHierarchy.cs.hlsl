@@ -1,16 +1,3 @@
-//
-// This file was automatically generated. Please don't edit by hand. Execute Editor command [ Edit > Rendering > Generate Shader Includes ] instead
-//
-
-#ifndef RAYTRACINGFALLBACKHIERARCHY_CS_HLSL
-#define RAYTRACINGFALLBACKHIERARCHY_CS_HLSL
-//
-// UnityEngine.Rendering.HighDefinition.RayTracingFallbackHierachy:  static fields
-//
-#define RAYTRACINGFALLBACKHIERACHY_REFLECTION_PROBES_AND_SKY (3)
-#define RAYTRACINGFALLBACKHIERACHY_REFLECTION_PROBES (2)
-#define RAYTRACINGFALLBACKHIERACHY_SKY (1)
-#define RAYTRACINGFALLBACKHIERACHY_NONE (0)
-
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:6fadb208b7e78cf1e4cf8320b3aa47ce4de82807a44216eb26cf77ee9ce5c954
+size 550

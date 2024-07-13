@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Coat Normal Tangent Space</strong></td>
-<td>The normal, in tangent space, for the coat.</td>
-<td>&#8226; <strong>Material</strong> set to <strong>StackLit</strong> <br/>&#8226; <strong>Coat</strong> enabled <br/>&#8226; <strong>Coat Normal</strong> enabled <br/>&#8226; <strong>Fragment Normal Space</strong> set to <strong>Tangent</strong></td>
-<td>CoordinateSpace.Tangent</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:49ebb01fd34c6f9a7487b16150bb1917d71384f803e4c0d926b4463fa7b4da34
+size 402

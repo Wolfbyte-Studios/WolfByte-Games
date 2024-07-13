@@ -1,33 +1,3 @@
-﻿using UnityEngine;
-
-namespace Assets.MultiAudioListener.TestScripts
-{
-    public class MultiAudioListenerTestScript : MonoBehaviour
-    {
-        [SerializeField] private MultiAudioSource _audioSource = null;
-
-        private void Update()
-        {
-
-            if (Input.GetKeyDown(KeyCode.P)) _audioSource.Play();
-            if (Input.GetKeyDown(KeyCode.S)) _audioSource.Stop();
-
-            if (Input.GetKeyDown(KeyCode.Pause))
-            {
-                if (_audioSource.IsPaused)
-                {
-                    _audioSource.UnPause();
-                }
-                else
-                {
-                    _audioSource.Pause();
-                }
-            }
-
-            if (Input.GetKeyDown(KeyCode.M))
-            {
-                _audioSource.Mute = !_audioSource.Mute;
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:88db65e1f90143c9d3ae917f25829431fcfadc3e77be7e6b6d707c09bb32d4b7
+size 867

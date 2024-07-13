@@ -1,28 +1,3 @@
-using System;
-
-namespace UnityEngine.Rendering
-{
-    /// <summary>
-    /// Global XR Settings.
-    /// </summary>
-    [Serializable]
-    public struct GlobalXRSettings
-    {
-        internal static GlobalXRSettings NewDefault() => new GlobalXRSettings()
-        {
-            singlePass = true,
-            occlusionMesh = true,
-            cameraJitter = false,
-            allowMotionBlur = false
-        };
-
-        /// <summary>Use single pass.</summary>
-        public bool singlePass;
-        /// <summary>Use occlusion mesh.</summary>
-        public bool occlusionMesh;
-        /// <summary>Add jitter to camera for temporal effects.</summary>
-        public bool cameraJitter;
-        /// <summary>Allow motion blur when in XR.</summary>
-        public bool allowMotionBlur;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1d071ecbd1988182d1b9f849cef9f758987eb94d8dca9d73c87b1bab6b2960d3
+size 791

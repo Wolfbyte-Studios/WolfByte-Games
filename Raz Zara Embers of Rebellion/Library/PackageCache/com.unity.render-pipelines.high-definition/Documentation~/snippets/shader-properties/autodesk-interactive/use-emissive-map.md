@@ -1,4 +1,3 @@
-<tr>
-<td><strong>UseEmissiveMap</strong></td>
-<td>Toggles whether the material uses the <strong>EmissiveMap</strong> property or the <strong>Emissive</strong> property to set the emissive color of its surface. Enable this checkbox to use the <strong>EmissiveMap</strong> property, disable this checkbox to use the <strong>Emissive</strong> property.</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:05fce459db02414914e002209f90d4436022a7b45d359e1e56a62ed91fb098b9
+size 361

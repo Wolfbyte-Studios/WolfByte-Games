@@ -1,24 +1,3 @@
-#define RAYTRACING_BACKEND_COMPUTE
-#define GROUP_SIZE_X 64
-#define GROUP_SIZE_Y 1
-#define RAYTRACING_GROUP_SIZE (GROUP_SIZE_X*GROUP_SIZE_Y)
-
-#include "TraceVirtualOffset.hlsl"
-
-int g_DispatchWidth;
-int g_DispatchHeight;
-int g_DispatchDepth;
-
-#pragma kernel MainRayGenShader
-
-[numthreads(GROUP_SIZE_X, GROUP_SIZE_Y, 1)]
-void MainRayGenShader(uint3 gidx : SV_DispatchThreadID, uint lidx : SV_GroupIndex)
-{
-    UnifiedRT::DispatchInfo dispatchInfo;
-    dispatchInfo.dispatchThreadID = gidx;
-    dispatchInfo.dispatchDimensionsInThreads = int3(g_DispatchWidth, g_DispatchHeight, g_DispatchDepth);
-    dispatchInfo.localThreadIndex = lidx;
-    dispatchInfo.globalThreadIndex = gidx.x + gidx.y * g_DispatchWidth + gidx.z * (g_DispatchWidth* g_DispatchHeight);
-
-    RayGenExecute(dispatchInfo);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3289ef0fc80146bbacf81917c4c01c15ff9e4aa9daccdbccd3a08e17e794d174
+size 790

@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Smoothness B</strong></td>
-<td>The smoothness of the second specular lobe.</td>
-<td>&#8226; <strong>Material</strong> set to <strong>StackLit</strong> <br/>&#8226; <strong>Dual Specular Lobe</strong> enabled <br/>&#8226; <strong>Dual SpecularLobe Parametrization</strong> set to <strong>Direct</strong>.</td>
-<td>0.5</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:83a48224c40e615a7a19a9238bd51b08aa4788c7f762475bed1546f5096cb042
+size 345

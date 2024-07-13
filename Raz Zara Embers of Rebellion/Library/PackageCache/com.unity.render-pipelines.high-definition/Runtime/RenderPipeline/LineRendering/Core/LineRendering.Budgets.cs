@@ -1,18 +1,3 @@
-namespace UnityEngine.Rendering
-{
-    partial class LineRendering
-    {
-        internal static class Budgets
-        {
-            internal const int ByteSizeBinRecordPool = 256 * 1024 * 1024;
-            internal const int ByteSizeBinRecordFormat = 4 + 4 + 4;
-            internal static int BinRecordCount => (int)Mathf.Ceil(ByteSizeBinRecordPool / ByteSizeBinRecordFormat);
-
-            internal const int ByteSizeWorkQueuePool = 256 * 1024 * 1024;
-            internal const int ByteSizeWorkQueueFormat = 4;
-            internal static int WorkQueueCount => (int)Mathf.Ceil(ByteSizeWorkQueuePool / ByteSizeWorkQueueFormat);
-
-            internal const int TileSizeBin = 8;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b20177b971c2fbe0e9be9224c37034d1d811846cf06050d07004cbe4839f62f6
+size 696

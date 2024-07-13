@@ -1,17 +1,3 @@
-using System;
-
-namespace UnityEditor.TestTools
-{
-    /// <summary>
-    /// An interface for a callback modifying the <see cref="BuildPlayerOptions"/> when building a player for running tests in the runtime.
-    /// </summary>
-    public interface ITestPlayerBuildModifier
-    {
-        /// <summary>
-        /// A callback to modify the <see cref="BuildPlayerOptions"/> when building a player for test run. Return the modified version of the provided build options.
-        /// </summary>
-        /// <param name="playerOptions">The unmodified BuildPlayerOptions.</param>
-        /// <returns>The modified BuildPlayerOptions.</returns>
-        BuildPlayerOptions ModifyOptions(BuildPlayerOptions playerOptions);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:38379efc584a2f7ed532d769a7444101449800de1f72d8ede763096e00e1cb0e
+size 737

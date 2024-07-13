@@ -1,35 +1,3 @@
-using UnityEditor.Graphing;
-
-namespace UnityEditor.ShaderGraph
-{
-    [Title("Input", "Geometry", "Instance ID")]
-    class InstanceIDNode : AbstractMaterialNode, IMayRequireInstanceID
-    {
-        private const int kOutputSlotId = 0;
-        private const string kOutputSlotName = "Out";
-
-        public override bool hasPreview => false;
-
-        public InstanceIDNode()
-        {
-            name = "Instance ID";
-            UpdateNodeAfterDeserialization();
-        }
-
-        public sealed override void UpdateNodeAfterDeserialization()
-        {
-            AddSlot(new Vector1MaterialSlot(kOutputSlotId, kOutputSlotName, kOutputSlotName, SlotType.Output, (int)0, ShaderStageCapability.All));
-            RemoveSlotsNameNotMatching(new[] { kOutputSlotId });
-        }
-
-        public override string GetVariableNameForSlot(int slotId)
-        {
-            return string.Format("IN.{0}", ShaderGeneratorNames.InstanceID);
-        }
-
-        public bool RequiresInstanceID(ShaderStageCapability stageCapability)
-        {
-            return true;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f4e0bebbcdbb3667c150a0a0e9fe3a04f6a19aaa52dcdbbd80cb1936a953a129
+size 1071

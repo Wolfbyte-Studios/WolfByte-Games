@@ -1,33 +1,3 @@
-using UnityEngine;
-
-namespace UnityEditor.VFX.UI
-{
-    class VFXVector2Field : VFXVectorNField<Vector2>
-    {
-        protected override int componentCount => 2;
-
-        protected override void SetValueComponent(ref Vector2 value, int i, float componentValue)
-        {
-            switch (i)
-            {
-                case 0:
-                    value.x = componentValue;
-                    break;
-                default:
-                    value.y = componentValue;
-                    break;
-            }
-        }
-
-        protected override float GetValueComponent(ref Vector2 value, int i)
-        {
-            switch (i)
-            {
-                case 0:
-                    return value.x;
-                default:
-                    return value.y;
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c8bd7e0bd6edaa3c2893d28fa98d5d65f97256c7b038de1ff3f122c879f07c67
+size 805

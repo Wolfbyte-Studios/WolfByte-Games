@@ -1,15 +1,3 @@
-using System;
-using UnityEngine;
-
-namespace PlayModeTests_9s
-{
-    public class MovementScript : MonoBehaviour
-    {
-        public Vector3 velocity;
-
-        private void Update()
-        {
-            transform.position += velocity * Time.deltaTime;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c578300e7bdca9f4d283b0f363faceb7c43f8f733c3aa53b58445a415374a4c6
+size 283

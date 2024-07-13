@@ -1,13 +1,3 @@
-# Getting started in HDRP
-
-Set up a project to use the High Definition Render Pipeline (HDRP), and use Volumes to control lighting and effects.
-
-| Page | Description |
-|-|-|
-| [Project setup](project-setup.md) | Set up a project to use HDRP, and create an HDRP Asset. |
-| [Scene setup](scene-setup.md) | Understand and use the Volume framework to control lighting and effects in a scene. |
-
-## Additional resources
-
-- [HDRP overview](HDRP-Features.md)
-- [Achieving High Fidelity Graphics for Games with HDRP](https://resources.unity.com/unitenow/onlinesessions/achieving-high-fidelity-graphics-for-games-with-hdrp)
+version https://git-lfs.github.com/spec/v1
+oid sha256:30d98d6bdb89a42c6cabbb352e0450cc8c41c650cd1ba76cb11881343b2a3503
+size 615

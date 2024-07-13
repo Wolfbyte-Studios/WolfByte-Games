@@ -1,15 +1,3 @@
-{
-	SubShader
-	{
-	    Tags{ "RenderPipeline" = "HDRenderPipeline" }
-		Cull Off
-		
-		${VFXInclude("Shaders/VFXParticleHeader.template")}
-		${VFXIncludeRP("Templates/Sphere/PassSelection.template")}
-		${VFXIncludeRP("Templates/Sphere/PassDepth.template"),IS_OPAQUE_NOT_SIMPLE_LIT_PARTICLE}
-		${VFXIncludeRP("Templates/Sphere/PassDepthForwardOnly.template"),HDRP_MATERIAL_TYPE_SIMPLELIT}
-		${VFXIncludeRP("Templates/Sphere/PassGBuffer.template"),IS_OPAQUE_NOT_SIMPLE_LIT_PARTICLE}
-		${VFXIncludeRP("Templates/Sphere/PassForward.template")}
-		${VFXInclude("Shaders/ParticleSpheres/PassShadowCaster.template"),USE_CAST_SHADOWS_PASS}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aab26f8bce6d99f32044e99b498ce68dd2f353132a99adef47a148b74e620076
+size 632

@@ -1,10 +1,3 @@
-<tr>
-<td>- <strong>Transparent Depth Postpass</strong></td>
-<td></td>
-<td></td>
-<td>
-
-Indicates whether HDRP adds polygons to the depth buffer that post-processing uses. HDRP performs this operation before the lighting pass. Enabling this feature is useful if you want to use post-processing effects that use depth information, like <a href="Post-Processing-Motion-Blur.md">motion blur</a> or <a href="Post-Processing-Depth-of-Field.md">depth of field</a>.
-
-</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:8f7ffa0d0086c1a88407a6b8257b001e00cf3aa1a9c455e1dca933b3e4c6f43e
+size 470

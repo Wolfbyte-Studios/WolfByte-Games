@@ -1,6 +1,3 @@
-
-// For now we fake the GI sampling in fullscreen.
-float3 SampleBakedGI(float3 positionRWS, float3 normalWS, float2 uvStaticLightmap, float2 uvDynamicLightmap)
-{
-    return 0;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:60b956da4ed0effa13bc9f4ff33a239906c7b4bddd18dccb5a6a72189cb0885f
+size 178

@@ -1,36 +1,3 @@
-using System.Collections.Generic;
-using System.Reflection;
-using UnityEngine;
-using UnityEngine.Rendering;
-
-namespace UnityEditor.Rendering
-{
-    /// <summary>
-    /// Interface to extend to provide UI
-    /// </summary>
-    public interface ICoreRenderPipelinePreferencesProvider
-    {
-        /// <summary>
-        /// The list of keywords for user search
-        /// </summary>
-        List<string> keywords { get; }
-
-        /// <summary>
-        /// The header of the panel
-        /// </summary>
-        GUIContent header
-        {
-            get
-            {
-                var type = GetType();
-                var displayTypeInfoAttribute = type.GetCustomAttribute<DisplayInfoAttribute>();
-                return EditorGUIUtility.TrTextContent(displayTypeInfoAttribute != null ? displayTypeInfoAttribute.name : type.Name);
-            }
-        }
-
-        /// <summary>
-        /// Renders the Preferences UI for this provider
-        /// </summary>
-        void PreferenceGUI();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:536a810a51b59bf62c6dcaa4666486255c67311938d42dd20f5a38ace9ab6a18
+size 1000

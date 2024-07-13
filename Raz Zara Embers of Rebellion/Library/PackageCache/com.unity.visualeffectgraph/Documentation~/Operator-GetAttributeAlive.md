@@ -1,17 +1,3 @@
-# Get Attribute: alive
-
-Menu Path : **Operator > Attribute > Get Attribute: alive**
-
-The **Get Attribute: alive** returns the alive, which is a [standard attribute](Reference-Attributes.md), of a simulated element depending on [Location](Attributes.md#attribute-locations). This Operator outputs whether the simulated element is alive or not.
-
-[!include[](Snippets/Operator-GetAttributeOperatorSettings.md)]
-
-## Operator properties
-
-| **Output** | **Type** | **Description**                                              |
-| ---------- | -------- | ------------------------------------------------------------ |
-| alive      | bool     | The value of the alive attribute, based on **Location**.<br/>If this attribute has not been written to, this Operator returns the default attribute value. |
-
-## Details
-
-The value the attribute returns uses the system’s space (either local-space or world-space).
+version https://git-lfs.github.com/spec/v1
+oid sha256:65ceab56495f5f72a3f045d04ec865ae34ee624a070c5e5c567994a06bc61b7b
+size 902

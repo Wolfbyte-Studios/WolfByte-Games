@@ -1,19 +1,3 @@
-using UnityEngine;
-using UnityEngine.UIElements;
-
-namespace UnityEditor.Rendering
-{
-    public partial class RenderGraphViewer
-    {
-        internal class PassTitleLabel : Label
-        {
-            public PassTitleLabel(string text) : base(text) { }
-
-            public override bool ContainsPoint(Vector2 localPoint)
-            {
-                return localPoint.x >= 0 && localPoint.x <= resolvedStyle.width &&
-                       localPoint.y >= 0 && localPoint.y <= resolvedStyle.height;
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1e6381a483da654ce51ccee11491ae0144737280dc443864ddc524f3321ed5c8
+size 532

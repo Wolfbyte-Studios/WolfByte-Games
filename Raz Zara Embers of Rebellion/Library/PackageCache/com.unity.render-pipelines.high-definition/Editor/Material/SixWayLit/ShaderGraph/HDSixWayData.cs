@@ -1,25 +1,3 @@
-﻿using UnityEngine;
-
-namespace UnityEditor.Rendering.HighDefinition.ShaderGraph
-{
-    class HDSixWayData : HDTargetData
-    {
-        [SerializeField]
-        bool m_ReceiveShadows = true;
-
-        public bool receiveShadows
-        {
-            get => m_ReceiveShadows;
-            set => m_ReceiveShadows = value;
-        }
-
-        [SerializeField]
-        bool m_UseColorAbsorption = true;
-
-        public bool useColorAbsorption
-        {
-            get => m_UseColorAbsorption;
-            set => m_UseColorAbsorption = value;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a5a2bab17fbbf465abb198c887c6103bc004147d014ac08c75bb3909e393751d
+size 555

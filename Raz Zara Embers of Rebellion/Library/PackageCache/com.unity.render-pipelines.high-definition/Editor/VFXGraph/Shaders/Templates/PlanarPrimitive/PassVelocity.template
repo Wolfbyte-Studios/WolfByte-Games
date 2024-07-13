@@ -1,17 +1,3 @@
-Pass
-{
-    Name "MotionVectors"
-	Tags { "LightMode"="MotionVectors" }
-
-	${VFXStencilMotionVector}
-
-	ZWrite On
-	Blend Off
-
-	HLSLPROGRAM
-	#define VFX_PASSDEPTH VFX_PASSDEPTH_MOTION_VECTOR
-	#pragma multi_compile _ WRITE_NORMAL_BUFFER
-	#pragma multi_compile _ WRITE_MSAA_DEPTH
-	${VFXIncludeRP("Templates/PlanarPrimitive/PassDepthOrMV.template")}
-	ENDHLSL
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a312c37a6cf1f5a0ebeb1359ffad868e62d316641636347267e76c004abe51f
+size 353

@@ -1,13 +1,3 @@
-{
-	SubShader
-	{
-		HLSLINCLUDE
-		#define mainTexture baseColorMap
-		ENDHLSL
-
-		${VFXInclude("Shaders/VFXParticleHeader.template")}
-		${VFXInclude("Shaders/ParticleHexahedron/PassSelection.template")}
-		${VFXIncludeRP("Templates/HDRPDecal/PassDBuffer.template")}
-		${VFXIncludeRP("Templates/HDRPDecal/PassForwardEmissive.template"), NEEDS_FORWARD_EMISSIVE_PASS}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:17571c4eef95c622a2acf7ab6b42dd2f79c5bbe3aea2ba981166696bfb257f13
+size 365

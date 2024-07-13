@@ -1,7 +1,3 @@
-#ifdef SENSORSDK_ENABLE_LIDAR
-    // Custom Lidar integrator, implemented in the SensorSDK package
-    #include "Packages/com.unity.sensorsdk/Runtime/Sensors/PathTracing/SensorIntegrator.hlsl"
-#else
-    // Regular path tracing, using a forward integrator with multiple importance sampling
-    #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/PathTracing/Shaders/PathTracingIntegrator.hlsl"
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ac334f77814d67d0204b7a9bcd9f05b3e96f0434510687c22a7390f38746191
+size 433

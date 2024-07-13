@@ -1,13 +1,3 @@
-# Reflection probes
-
-Reflection probes capture a view of a scene to use to create reflections. 
-
-| Page | Description |
-|-|-|
-|[Understand reflection probes](Reflection-Probes-Intro.md)|Learn how reflection probes work and the different types you can use.|
-|[Use reflection probes](Reflection-Probe-Usage.md)|Create and control reflection probes in a scene.|
-|[Calculate accurate reflection and refraction](Reflection-Proxy-Volume.md)|Create a proxy volume that a reflection probe uses to create detailed reflection and refraction.|
-
-## Additional resources
-- [Planar reflection probe reference](Planar-Reflection-Probe.md)
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:7cb35cb7f5b61a933cd98dafff6d36ff9f9e5e5502e3ab63ef4fd849e82c4c5e
+size 625

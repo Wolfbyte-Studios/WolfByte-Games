@@ -1,14 +1,3 @@
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
-
-using Brick = UnityEngine.Rendering.ProbeBrickIndex.Brick;
-
-namespace UnityEngine.Rendering
-{
-    class ProbeSubdivisionResult
-    {
-        public List<(Vector3Int position, Bounds bounds, Brick[] bricks)> cells = new ();
-        public Dictionary<Vector3Int, HashSet<string>> scenesPerCells = new Dictionary<Vector3Int, HashSet<string>>();
-        public GIContributors? contributors = null;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:333ed81579e5124164f3b88c95fb15abe54f28d89d8e31a5850d1fa9dd8f2c23
+size 472

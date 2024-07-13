@@ -1,6 +1,3 @@
-<tr>
-<td><strong>Distortion Blur</strong></td>
-<td>The blur intensity of the distortion effect.</td>
-<td>&#8226; <strong>Distortion</strong> enabled</td>
-<td>0.0</td>
-</tr>
+version https://git-lfs.github.com/spec/v1
+oid sha256:cdf6f6a7e41714bacc07a8671ebd568013d4208737d4041513fc6c4d07729287
+size 173

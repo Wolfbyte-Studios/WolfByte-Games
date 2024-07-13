@@ -1,19 +1,3 @@
-using System;
-using UnityEngine;
-using UnityEditor.Rendering.BuiltIn;
-
-namespace UnityEditor.Rendering.Fullscreen.ShaderGraph
-{
-    [Serializable]
-    sealed class FullscreenMetaData : ScriptableObject
-    {
-        [SerializeField]
-        FullscreenMode m_FullscreenMode;
-
-        public FullscreenMode fullscreenMode
-        {
-            get => m_FullscreenMode;
-            set => m_FullscreenMode = value;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eca946bbb043b7a460bd4bf546edf239484ba624b8c2ae38c4c33267c54b6fe1
+size 430

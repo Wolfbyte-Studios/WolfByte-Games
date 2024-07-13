@@ -1,12 +1,3 @@
-using System;
-
-namespace UnityEditor.TestTools.TestRunner.TestRun
-{
-    internal interface ITestJobDataHolder
-    {
-        void RegisterRun(ITestJobRunner runner, TestJobData data);
-        void UnregisterRun(ITestJobRunner runner, TestJobData data);
-        ITestJobRunner GetRunner(string guid);
-        ITestJobRunner[] GetAllRunners();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7c242fe1049185fdbf9ad819b5ebdc67b79098e566929cee9e0ddbf26cefac62
+size 361

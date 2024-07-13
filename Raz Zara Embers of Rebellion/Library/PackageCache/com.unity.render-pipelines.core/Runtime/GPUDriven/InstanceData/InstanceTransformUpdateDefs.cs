@@ -1,23 +1,3 @@
-using Unity.Mathematics;
-using System.Runtime.InteropServices;
-
-namespace UnityEngine.Rendering
-{
-    [GenerateHLSL]
-    internal struct TransformUpdatePacket
-    {
-        public float4 localToWorld0;
-        public float4 localToWorld1;
-        public float4 localToWorld2;
-    }
-
-    //Must be a copy of SphericalHarmonicsL2
-    [GenerateHLSL]
-    [StructLayout(LayoutKind.Sequential)]
-    internal struct SHUpdatePacket
-    {
-        public float shr0, shr1, shr2, shr3, shr4, shr5, shr6, shr7, shr8;
-        public float shg0, shg1, shg2, shg3, shg4, shg5, shg6, shg7, shg8;
-        public float shb0, shb1, shb2, shb3, shb4, shb5, shb6, shb7, shb8;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:230c106a1ba840ecfd6516bb3d291a94f2257c604932e5d4270559cdffb38308
+size 663

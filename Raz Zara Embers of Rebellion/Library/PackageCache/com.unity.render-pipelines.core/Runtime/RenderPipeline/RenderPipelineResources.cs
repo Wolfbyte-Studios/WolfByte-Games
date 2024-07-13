@@ -1,16 +1,3 @@
-namespace UnityEngine.Rendering
-{
-    /// <summary>
-    /// Base of resources assets in SRP
-    /// </summary>
-    [Icon("Packages/com.unity.render-pipelines.core/Editor/Icons/Processed/RenderPipelineResources Icon.asset")]
-    public abstract class RenderPipelineResources : ScriptableObject
-    {
-        /// <summary>
-        /// Utility to add Reload All button at the end of your asset inspector.
-        /// It will provide your package path that you misu override in child class.
-        /// </summary>
-        protected virtual string packagePath => null;
-        internal string packagePath_Internal => packagePath;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c860a939d26165e5b4e537fdb568625f895a99cfbadc3ddd3cbe4b65a861fb05
+size 633

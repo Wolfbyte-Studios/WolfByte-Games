@@ -1,17 +1,3 @@
-using System;
-
-namespace UnityEngine.Rendering
-{
-    [GenerateHLSL(needAccessors = false, generateCBuffer = true)]
-    internal unsafe struct InstanceOcclusionCullerShaderVariables
-    {
-        public uint _DrawInfoAllocIndex;
-        public uint _DrawInfoCount;
-        public uint _InstanceInfoAllocIndex;
-        public uint _InstanceInfoCount;
-        public int _BoundingSphereInstanceDataAddress;
-        public int _DebugCounterIndex;
-        public int _InstanceMultiplierShift;
-        public int _InstanceOcclusionCullerPad0;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5b233a64c304e3affe733b3cdc8521ce531a03f3647a7261be8aaa34a1ac397e
+size 545

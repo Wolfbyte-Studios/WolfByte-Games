@@ -1,13 +1,3 @@
-//
-// This file was automatically generated. Please don't edit by hand. Execute Editor command [ Edit > Rendering > Generate Shader Includes ] instead
-//
-
-#ifndef INSTANCEWINDDATAUPDATEDEFS_CS_HLSL
-#define INSTANCEWINDDATAUPDATEDEFS_CS_HLSL
-//
-// UnityEngine.Rendering.SpeedTreeWindShaderDef:  static fields
-//
-#define MAX_WIND_PARAMS_COUNT (16)
-
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:a4d29a569b9db941fd652df6705afd1ecd745534972cc4974b6a30e62d03febc
+size 355

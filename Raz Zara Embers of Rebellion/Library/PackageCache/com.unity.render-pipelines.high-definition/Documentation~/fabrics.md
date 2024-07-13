@@ -1,8 +1,3 @@
-# Fabrics
-
-Create fabric material in the High Definition Render Pipeline (HDRP).
-
-|Page|Description|
-|-|-|
-|[Understand fabrics](understand-fabrics.md)|Learn about the Cotton/Wool shader, the Silk shader, and the Fabric Shader Graph in HDRP.|
-|[Create a fabric material](create-a-fabric-material.md)|Create a fabric material or import a sample.|
+version https://git-lfs.github.com/spec/v1
+oid sha256:7490ffb5cf48d7173ec00c264e5428f85bbd8873bd6e262870a81c2e488a311e
+size 346

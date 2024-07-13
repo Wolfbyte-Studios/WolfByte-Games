@@ -163,7 +163,9 @@ public class PlayerMovement : NetworkBehaviour
         else
         {
             rb.AddForce(moveDirection * moveSpeed);
-            rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, maxVelocity);
+            Vector2 normalized = new Vector2(rb.linearVelocity.x, rb.linearVelocity.z);
+            normalized = Vector2.ClampMagnitude(normalized, maxVelocity);
+            rb.linearVelocity = new Vector3(normalized.x, rb.linearVelocity.y, normalized.y);
         }
     }
 }

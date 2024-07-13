@@ -9,6 +9,7 @@ using Unity.Netcode.Components;
 public class Spin : NetworkBehaviour
 {
     public float spinSpeed;
+    public float oldSpeed;
     public Rigidbody rb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,6 +17,7 @@ public class Spin : NetworkBehaviour
     {
         base.OnNetworkSpawn();
         rb = gameObject.GetComponent<Rigidbody>();
+        oldSpeed = spinSpeed;
     }
 
     // Update is called once per frame
@@ -23,5 +25,13 @@ public class Spin : NetworkBehaviour
     {
         transform.Rotate(Vector3.up, spinSpeed);
         rb.rotation = transform.rotation;
+    }
+    public void overrideSpeed(float speed)
+    {
+        spinSpeed = spinSpeed * speed;
+    }
+    public void Reset()
+    {
+        spinSpeed = oldSpeed;
     }
 }

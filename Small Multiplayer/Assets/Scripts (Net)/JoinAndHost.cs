@@ -1,6 +1,8 @@
 using UnityEngine;
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
+using TMPro;
+using UnityEngine.UIElements;
 
 public class JoinAndHost : MonoBehaviour
 {
@@ -10,7 +12,7 @@ public class JoinAndHost : MonoBehaviour
     {
         // Set the network transport address and port
         UnityTransport transport = NetworkManager.Singleton.GetComponent<UnityTransport>();
-        transport.SetConnectionData("127.0.0.1", 9110);
+        transport.SetConnectionData(transform.FindDeepChild("IP").GetComponent<TMP_InputField>().text, ushort.Parse( transform.FindDeepChild("Port").GetComponent<TMP_InputField>().text));
     }
 
     // Method to start the game as host

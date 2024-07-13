@@ -38,7 +38,16 @@ public class AddComponentsBasedOnName
                 {
                     l = obj.AddComponent<LerpMovement>();
                 }
-                var mat = obj.GetComponent<MeshRenderer>().sharedMaterial = new Material(obj.GetComponent<MeshRenderer>().sharedMaterial.shader);
+                Material mat = null;
+                if(obj.GetComponent<MeshRenderer>() != null)
+                {
+                    mat = obj.GetComponent<MeshRenderer>().sharedMaterial = new Material(obj.GetComponent<MeshRenderer>().sharedMaterial.shader);
+                }
+                else
+                {
+                    mat = obj.transform.FindDeepChildrenByType<MeshRenderer>()[0].GetComponent<MeshRenderer>().sharedMaterial = new Material(obj.transform.FindDeepChildrenByType<MeshRenderer>()[0].GetComponent<MeshRenderer>().sharedMaterial.shader);
+                }
+                
                 mat.color = Color.magenta;
                 obj.tag = "Clickable";
                 obj.layer = 30;

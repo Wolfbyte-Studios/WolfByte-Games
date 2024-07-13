@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class Clickable : NetworkBehaviour
 {
     public UnityEvent myEvent;
+    public UnityEvent OnCoolDown;
+    public bool needsToCoolDown;
     public bool CoolDown;
     public float coolDown;
     public float timeFired;
@@ -28,7 +30,7 @@ public class Clickable : NetworkBehaviour
         meshRenderer = GetComponent<MeshRenderer>();
         OldMat = meshRenderer.sharedMaterial;
         NewMat = new Material(OldMat.shader);
-        timeFired = 1;
+        timeFired = -100000;
     }
 
     // Update is called once per frame
@@ -38,6 +40,10 @@ public class Clickable : NetworkBehaviour
         percentageFinished = timeElapsed / coolDown;
         if (percentageFinished >= 1)
         {
+            if (needsToCoolDown)
+            {
+                coolingDown();
+            }
             meshRenderer.material = OldMat;
             return;
         }
@@ -46,6 +52,11 @@ public class Clickable : NetworkBehaviour
             meshRenderer.material = NewMat;
             applyColors(percentageFinished);
         }
+    }
+    public void coolingDown()
+    {
+        OnCoolDown.Invoke();
+        needsToCoolDown = false;
     }
     public void applyColors(float percent)
     {
@@ -77,12 +88,14 @@ public class Clickable : NetworkBehaviour
             {
                 if (coolDown >= Time.time - timeFired)
                 {
+
                     return;
                 }
             }
             timeFired = Time.time;
             Debug.Log("Activation should happen");
             myEvent.Invoke();
+            needsToCoolDown = true;
 
         }
     }

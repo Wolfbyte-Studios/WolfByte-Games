@@ -1,383 +1,431 @@
 { "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
-,{ "pid":12345, "tid":0, "ts":1720851647266278, "dur":2950, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1720851647269237, "dur":228, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1720851647269524, "dur":378, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1720851647269916, "dur":3340, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1720851647273260, "dur":119046, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1720851647392307, "dur":208, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1720851647392700, "dur":1937, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
-,{ "pid":12345, "tid":1, "ts":1720851647269968, "dur":3301, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1720851647274996, "dur":927, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/il2cpp/build/deploy" }}
-,{ "pid":12345, "tid":1, "ts":1720851647275923, "dur":4352, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/il2cpp/libil2cpp" }}
-,{ "pid":12345, "tid":1, "ts":1720851647280276, "dur":79, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport" }}
-,{ "pid":12345, "tid":1, "ts":1720851647280355, "dur":1279, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono" }}
-,{ "pid":12345, "tid":1, "ts":1720851647281634, "dur":146, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/Data/Resources" }}
-,{ "pid":12345, "tid":1, "ts":1720851647281780, "dur":240, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Tools/BuildPipeline" }}
-,{ "pid":12345, "tid":1, "ts":1720851647282021, "dur":162, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"Library/PlayerDataCache/Win642/Data" }}
-,{ "pid":12345, "tid":1, "ts":1720851647273272, "dur":8993, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1720851647283082, "dur":239, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Cinemachine.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647283323, "dur":212, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Collections.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647283537, "dur":683, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647284221, "dur":52, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.ForUI.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647284277, "dur":379, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Mathematics.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647284786, "dur":56, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.Adapters.Ngo1.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647284920, "dur":57, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.Common.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647285147, "dur":76, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetStats.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647285266, "dur":66, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetStatsMonitor.Configuration.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647285334, "dur":83, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetStatsMonitor.Implementation.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647285510, "dur":74, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetworkProfiler.Runtime.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647285589, "dur":66, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetworkSimulator.Runtime.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647285696, "dur":71, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Netcode.Components.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647285768, "dur":231, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Netcode.Runtime.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647286002, "dur":170, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Networking.Transport.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647286173, "dur":51, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.ProBuilder.Csg.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647286225, "dur":212, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.ProBuilder.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647286438, "dur":50, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.ProBuilder.KdTree.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647286489, "dur":57, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.ProBuilder.Poly2Tri.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647286632, "dur":178, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Rendering.LightTransport.Runtime.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647286814, "dur":486, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.Core.Runtime.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647287402, "dur":150, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.GPUDriven.Runtime.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647287592, "dur":1960, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.HighDefinition.Runtime.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647289562, "dur":117, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647289681, "dur":90, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Splines.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647289773, "dur":260, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647290035, "dur":101, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647290137, "dur":107, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualEffectGraph.Runtime.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647290245, "dur":495, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647290741, "dur":286, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647291028, "dur":70, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647291099, "dur":177, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":1, "ts":1720851647291867, "dur":96, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\artifacts\\UnityLinkerInputs\\MethodsToPreserve.xml" }}
-,{ "pid":12345, "tid":1, "ts":1720851647292015, "dur":87, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\artifacts\\UnityLinkerInputs\\SerializedTypes.xml" }}
-,{ "pid":12345, "tid":1, "ts":1720851647292104, "dur":59, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Temp\\InputSystemLink.xml" }}
-,{ "pid":12345, "tid":1, "ts":1720851647292165, "dur":117, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\artifacts\\UnityLinkerInputs\\EditorToUnityLinkerData.json" }}
-,{ "pid":12345, "tid":1, "ts":1720851647282957, "dur":9787, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"UnityLinker C:/Users/user1/3d zeldaish/Small Multiplayer/Library/Bee/artifacts/unitylinker_dwek.traceevents" }}
-,{ "pid":12345, "tid":1, "ts":1720851647292746, "dur":3417, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1720851647297936, "dur":1411, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"GenerateNativePluginsForAssemblies Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker" }}
-,{ "pid":12345, "tid":1, "ts":1720851647299347, "dur":128, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1720851647299926, "dur":92289, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1720851647270114, "dur":3183, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1720851647273300, "dur":1347, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1720851647275210, "dur":778, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Microsoft.Build.Tasks.v4.0.dll" }}
-,{ "pid":12345, "tid":2, "ts":1720851647274647, "dur":1895, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1720851647276542, "dur":6070, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1720851647282613, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":2, "ts":1720851647282687, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1720851647283296, "dur":5042, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":2, "ts":1720851647288374, "dur":9755, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1720851647298212, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.ProBuilder.Poly2Tri.dll" }}
-,{ "pid":12345, "tid":2, "ts":1720851647298365, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1720851647298494, "dur":119, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.RenderPipelines.HighDefinition.Config.Runtime.dll" }}
-,{ "pid":12345, "tid":2, "ts":1720851647298712, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.UmbraModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1720851647298798, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1720851647299043, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1720851647299194, "dur":93027, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1720851647270021, "dur":3254, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1720851647274747, "dur":1229, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\Unity.Linker.Api.dll" }}
-,{ "pid":12345, "tid":3, "ts":1720851647273279, "dur":3095, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1720851647276375, "dur":6153, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1720851647282529, "dur":517, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":3, "ts":1720851647283046, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1720851647283099, "dur":15053, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1720851647298155, "dur":103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Multiplayer.Tools.Adapters.dll" }}
-,{ "pid":12345, "tid":3, "ts":1720851647298259, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1720851647298408, "dur":79, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Netcode.Components.dll" }}
-,{ "pid":12345, "tid":3, "ts":1720851647298604, "dur":90, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1720851647298694, "dur":98, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1720851647298832, "dur":98, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1720851647298981, "dur":221, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1720851647299209, "dur":93028, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1720851647270049, "dur":3235, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1720851647273765, "dur":520, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\Unity.IL2CPP.Bee.BuildLogic.Linux.dll" }}
-,{ "pid":12345, "tid":4, "ts":1720851647274565, "dur":1214, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\Unity.IL2CPP.Bee.BuildLogic.EmbeddedLinux.dll" }}
-,{ "pid":12345, "tid":4, "ts":1720851647273287, "dur":3434, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1720851647276722, "dur":6179, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1720851647282901, "dur":15346, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1720851647298251, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":4, "ts":1720851647298339, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1720851647298568, "dur":111, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1720851647298685, "dur":123, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.SubstanceModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1720851647298808, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1720851647298870, "dur":55, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.SubstanceModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1720851647298927, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.MarshallingModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1720851647299003, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1720851647299070, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1720851647299128, "dur":95, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1720851647299227, "dur":93042, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1720851647270102, "dur":3189, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1720851647273905, "dur":873, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.Web.HttpUtility.dll" }}
-,{ "pid":12345, "tid":5, "ts":1720851647274861, "dur":1448, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.ValueTuple.dll" }}
-,{ "pid":12345, "tid":5, "ts":1720851647273294, "dur":3544, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1720851647276838, "dur":5443, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1720851647282283, "dur":157, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":5, "ts":1720851647282441, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1720851647282541, "dur":135, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":5, "ts":1720851647282677, "dur":104, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1720851647283566, "dur":1929, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":5, "ts":1720851647285536, "dur":12605, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1720851647298149, "dur":237, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Multiplayer.Tools.MetricEvents.dll" }}
-,{ "pid":12345, "tid":5, "ts":1720851647298481, "dur":87, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1720851647298571, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1720851647298624, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1720851647298702, "dur":142, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.IMGUIModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1720851647298894, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.UIElementsModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1720851647299110, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1720851647299195, "dur":93029, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1720851647270136, "dur":3165, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1720851647274132, "dur":619, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647274751, "dur":529, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.Runtime.Numerics.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647273305, "dur":2618, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1720851647275923, "dur":6345, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1720851647282382, "dur":75, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win642\\Data\\boot.config" }}
-,{ "pid":12345, "tid":6, "ts":1720851647282469, "dur":50, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win642\\Data\\ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":6, "ts":1720851647282688, "dur":93, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647282783, "dur":89, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\IngameDebugConsole.Runtime.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647282873, "dur":163, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Burst.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647283038, "dur":239, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Cinemachine.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647283280, "dur":244, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Collections.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647283527, "dur":728, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647284257, "dur":116, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.ForUI.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647284376, "dur":533, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Mathematics.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647284921, "dur":119, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.Common.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647285044, "dur":106, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.MetricEvents.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647285155, "dur":126, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetStats.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647285286, "dur":138, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetStatsMonitor.Configuration.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647285429, "dur":108, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetStatsReporting.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647285541, "dur":110, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetworkProfiler.Runtime.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647285653, "dur":65, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetworkSimulator.Runtime.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647285720, "dur":77, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Netcode.Components.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647285798, "dur":207, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Netcode.Runtime.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647286007, "dur":153, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Networking.Transport.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647286204, "dur":232, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.ProBuilder.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647286486, "dur":53, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.ProBuilder.Poly2Tri.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647286632, "dur":185, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Rendering.LightTransport.Runtime.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647286818, "dur":483, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.Core.Runtime.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647287303, "dur":53, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.Core.Runtime.Shared.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647287404, "dur":169, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.GPUDriven.Runtime.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647287575, "dur":51, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647287627, "dur":1937, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.HighDefinition.Runtime.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647289570, "dur":68, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647289642, "dur":107, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Splines.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647289752, "dur":276, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647290029, "dur":103, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647290135, "dur":102, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualEffectGraph.Runtime.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647290239, "dur":451, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647290697, "dur":318, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647291021, "dur":59, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647291083, "dur":206, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":6, "ts":1720851647282370, "dur":9518, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"AddBootConfigGUID Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
-,{ "pid":12345, "tid":6, "ts":1720851647292270, "dur":141, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1720851647292819, "dur":88208, "ph":"X", "name": "AddBootConfigGUID",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
-,{ "pid":12345, "tid":6, "ts":1720851647388959, "dur":2165, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\boot.config" }}
-,{ "pid":12345, "tid":6, "ts":1720851647388941, "dur":2185, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/boot.config" }}
-,{ "pid":12345, "tid":6, "ts":1720851647391144, "dur":1006, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/boot.config" }}
-,{ "pid":12345, "tid":7, "ts":1720851647270168, "dur":3144, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1720851647275360, "dur":944, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.Net.WebSockets.dll" }}
-,{ "pid":12345, "tid":7, "ts":1720851647273322, "dur":2982, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1720851647276304, "dur":6168, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1720851647282474, "dur":139, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":7, "ts":1720851647282613, "dur":81, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1720851647282700, "dur":104, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":7, "ts":1720851647282804, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1720851647310680, "dur":1010, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":7, "ts":1720851647311731, "dur":80553, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1720851647270204, "dur":3122, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1720851647273329, "dur":1666, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1720851647274996, "dur":505, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1720851647275502, "dur":576, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1720851647276078, "dur":6197, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1720851647282279, "dur":130, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/config" }}
-,{ "pid":12345, "tid":8, "ts":1720851647282443, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":8, "ts":1720851647282503, "dur":129, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1720851647282634, "dur":189, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":8, "ts":1720851647282877, "dur":15062, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1720851647297941, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":8, "ts":1720851647298043, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1720851647298282, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/System.Net.Http.dll" }}
-,{ "pid":12345, "tid":8, "ts":1720851647298341, "dur":110, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1720851647298580, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1720851647298750, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.XRModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1720851647299077, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1720851647299207, "dur":93014, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1720851647270241, "dur":3091, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1720851647273911, "dur":723, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.IO.FileSystem.DriveInfo.dll" }}
-,{ "pid":12345, "tid":9, "ts":1720851647273335, "dur":2096, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1720851647275431, "dur":1235, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1720851647276666, "dur":6219, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1720851647282885, "dur":15369, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1720851647298265, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1720851647298423, "dur":166, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1720851647298592, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1720851647298688, "dur":167, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1720851647298856, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1720851647298912, "dur":90, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.GameCenterModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1720851647299114, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Multiplayer.Tools.Initialization.dll" }}
-,{ "pid":12345, "tid":9, "ts":1720851647299216, "dur":92999, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1720851647270268, "dur":3071, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1720851647273340, "dur":1915, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1720851647275255, "dur":474, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1720851647275730, "dur":640, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1720851647276370, "dur":6193, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1720851647282564, "dur":114, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
-,{ "pid":12345, "tid":10, "ts":1720851647282716, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/UnityPlayer.dll" }}
-,{ "pid":12345, "tid":10, "ts":1720851647284643, "dur":4216, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/level0" }}
-,{ "pid":12345, "tid":10, "ts":1720851647288893, "dur":9164, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1720851647298145, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Multiplayer.Playmode.dll" }}
-,{ "pid":12345, "tid":10, "ts":1720851647298230, "dur":312, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1720851647298761, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.VRModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1720851647299241, "dur":93073, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1720851647270302, "dur":3042, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1720851647274030, "dur":845, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.ComponentModel.Primitives.dll" }}
-,{ "pid":12345, "tid":11, "ts":1720851647275083, "dur":1287, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.ComponentModel.dll" }}
-,{ "pid":12345, "tid":11, "ts":1720851647273345, "dur":3488, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1720851647276833, "dur":6063, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1720851647282897, "dur":15337, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1720851647298239, "dur":90, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
-,{ "pid":12345, "tid":11, "ts":1720851647298399, "dur":219, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1720851647298680, "dur":154, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1720851647298837, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.AMDModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1720851647299092, "dur":109, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1720851647299203, "dur":92999, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1720851647270351, "dur":3016, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1720851647273368, "dur":1615, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1720851647275154, "dur":959, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Facades\\System.Security.Cryptography.Encoding.dll" }}
-,{ "pid":12345, "tid":12, "ts":1720851647274983, "dur":1736, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1720851647276719, "dur":5603, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1720851647282322, "dur":576, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":12, "ts":1720851647282933, "dur":15232, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1720851647298167, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.ProBuilder.Stl.dll" }}
-,{ "pid":12345, "tid":12, "ts":1720851647298289, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1720851647298347, "dur":252, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1720851647298600, "dur":133, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1720851647299072, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1720851647299171, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1720851647299230, "dur":93008, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1720851647270384, "dur":3024, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1720851647273410, "dur":2052, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1720851647275462, "dur":502, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1720851647275964, "dur":6306, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1720851647282286, "dur":118, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1720851647282440, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":13, "ts":1720851647282544, "dur":113, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":13, "ts":1720851647282701, "dur":76, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/D3D12/D3D12Core.dll" }}
-,{ "pid":12345, "tid":13, "ts":1720851647284375, "dur":6625, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/resources.assets" }}
-,{ "pid":12345, "tid":13, "ts":1720851647291028, "dur":6925, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1720851647298004, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1720851647298377, "dur":94, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1720851647298540, "dur":100, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Cinemachine.dll" }}
-,{ "pid":12345, "tid":13, "ts":1720851647298640, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1720851647298808, "dur":102, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1720851647298915, "dur":182, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.InputForUIModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1720851647299097, "dur":119, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1720851647299218, "dur":93083, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1720851647270422, "dur":3022, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1720851647273445, "dur":524, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\hostfxr.dll" }}
-,{ "pid":12345, "tid":14, "ts":1720851647274578, "dur":841, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\Bee.VisualStudioSolution.dll" }}
-,{ "pid":12345, "tid":14, "ts":1720851647273445, "dur":2295, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1720851647275740, "dur":816, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1720851647276557, "dur":6085, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1720851647282643, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":14, "ts":1720851647283855, "dur":6886, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/resources.assets.resS" }}
-,{ "pid":12345, "tid":14, "ts":1720851647290772, "dur":7188, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1720851647297963, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Newtonsoft.Json.dll" }}
-,{ "pid":12345, "tid":14, "ts":1720851647298082, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1720851647298175, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1720851647298655, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1720851647298924, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1720851647298980, "dur":129, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1720851647299180, "dur":93054, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1720851647270461, "dur":3039, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1720851647274006, "dur":817, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\Bee.Toolchain.EmbeddedLinux.dll" }}
-,{ "pid":12345, "tid":15, "ts":1720851647274923, "dur":1154, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\Bee.TinyProfiler2.dll" }}
-,{ "pid":12345, "tid":15, "ts":1720851647273502, "dur":3187, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1720851647276689, "dur":6205, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1720851647282895, "dur":15345, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1720851647298284, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1720851647298342, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Netcode.Runtime.dll" }}
-,{ "pid":12345, "tid":15, "ts":1720851647298403, "dur":242, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1720851647298911, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
-,{ "pid":12345, "tid":15, "ts":1720851647299022, "dur":123, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1720851647299205, "dur":92999, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1720851647270488, "dur":3015, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1720851647273505, "dur":908, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1720851647274413, "dur":557, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1720851647274970, "dur":564, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1720851647275534, "dur":575, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1720851647276109, "dur":6167, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1720851647282277, "dur":136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":16, "ts":1720851647282415, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1720851647282470, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":16, "ts":1720851647282570, "dur":120, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":16, "ts":1720851647282690, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1720851647283185, "dur":5510, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":16, "ts":1720851647288730, "dur":9394, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1720851647298315, "dur":81, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Multiplayer.Tools.NetworkProfiler.Runtime.dll" }}
-,{ "pid":12345, "tid":16, "ts":1720851647298423, "dur":60, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Multiplayer.Tools.NetworkProfiler.Runtime.dll" }}
-,{ "pid":12345, "tid":16, "ts":1720851647298484, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Burst.Unsafe.dll" }}
-,{ "pid":12345, "tid":16, "ts":1720851647298548, "dur":218, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1720851647298768, "dur":214, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.UIModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1720851647298983, "dur":151, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1720851647299139, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1720851647299201, "dur":93060, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1720851647270522, "dur":2986, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1720851647273951, "dur":677, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\Tools\\BuildPipeline\\BeeBuildProgramCommon.dll" }}
-,{ "pid":12345, "tid":17, "ts":1720851647273509, "dur":1513, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1720851647275022, "dur":696, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1720851647275718, "dur":859, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1720851647276577, "dur":6261, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1720851647284973, "dur":11971, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":17, "ts":1720851647296995, "dur":942, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1720851647297980, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1720851647298163, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.ProBuilder.KdTree.dll" }}
-,{ "pid":12345, "tid":17, "ts":1720851647298269, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
-,{ "pid":12345, "tid":17, "ts":1720851647298339, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1720851647298608, "dur":148, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.LocalizationModule.dll" }}
-,{ "pid":12345, "tid":17, "ts":1720851647298815, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1720851647298931, "dur":159, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.MultiplayerModule.dll" }}
-,{ "pid":12345, "tid":17, "ts":1720851647299130, "dur":102, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Multiplayer.Tools.MetricTestData.dll" }}
-,{ "pid":12345, "tid":17, "ts":1720851647299254, "dur":92997, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1720851647270543, "dur":2981, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1720851647273526, "dur":796, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1720851647275095, "dur":588, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Messaging.dll" }}
-,{ "pid":12345, "tid":18, "ts":1720851647274322, "dur":1481, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1720851647275803, "dur":6469, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1720851647282277, "dur":139, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":18, "ts":1720851647282417, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1720851647282487, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":18, "ts":1720851647282539, "dur":333, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1720851647282878, "dur":15057, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1720851647298189, "dur":133, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1720851647298325, "dur":116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":18, "ts":1720851647298442, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1720851647298523, "dur":361, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/System.Security.dll" }}
-,{ "pid":12345, "tid":18, "ts":1720851647298885, "dur":221, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1720851647299109, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll" }}
-,{ "pid":12345, "tid":18, "ts":1720851647299243, "dur":93066, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1720851647270566, "dur":2974, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1720851647273541, "dur":1378, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1720851647274919, "dur":1402, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1720851647276322, "dur":6204, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1720851647282527, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":19, "ts":1720851647282721, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":19, "ts":1720851647284170, "dur":14298, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/globalgamemanagers.assets.resS" }}
-,{ "pid":12345, "tid":19, "ts":1720851647298569, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
-,{ "pid":12345, "tid":19, "ts":1720851647298671, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.HotReloadModule.dll" }}
-,{ "pid":12345, "tid":19, "ts":1720851647298733, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1720851647298985, "dur":248, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1720851647299236, "dur":92962, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1720851647270602, "dur":2963, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1720851647273566, "dur":854, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1720851647274421, "dur":787, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1720851647275208, "dur":537, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1720851647275745, "dur":349, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1720851647276095, "dur":6471, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1720851647282567, "dur":309, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":20, "ts":1720851647282922, "dur":15274, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1720851647298199, "dur":408, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.ProBuilder.dll" }}
-,{ "pid":12345, "tid":20, "ts":1720851647298745, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.AIModule.dll" }}
-,{ "pid":12345, "tid":20, "ts":1720851647298813, "dur":136, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1720851647298952, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
-,{ "pid":12345, "tid":20, "ts":1720851647299007, "dur":97, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1720851647299237, "dur":92992, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1720851647398452, "dur":632, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid":12345, "tid":0, "ts":1720852108843132, "dur":2910, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1720852108846049, "dur":228, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1720852108846333, "dur":425, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1720852108846772, "dur":3140, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1720852108849915, "dur":115134, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1720852108965049, "dur":91, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1720852108965140, "dur":90, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1720852108965231, "dur":146, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1720852108965497, "dur":1947, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1720852108846895, "dur":3054, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1720852108849952, "dur":549, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1720852108850502, "dur":441, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1720852108850943, "dur":638, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1720852108851581, "dur":1128, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1720852108852709, "dur":6002, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1720852108873422, "dur":123, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1720852108861859, "dur":11920, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":1, "ts":1720852108874014, "dur":85, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1720852108874116, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1720852108874237, "dur":90814, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1720852108846852, "dur":3077, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1720852108849933, "dur":1133, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1720852108851149, "dur":1130, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1720852108852279, "dur":5828, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1720852108858151, "dur":194, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1720852108858349, "dur":394, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1720852108858744, "dur":85, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1720852108858832, "dur":13863, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1720852108872697, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":2, "ts":1720852108873010, "dur":118, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1720852108873131, "dur":153, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Splines.dll" }}
+,{ "pid":12345, "tid":2, "ts":1720852108873285, "dur":198, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1720852108873484, "dur":289, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Splines.dll" }}
+,{ "pid":12345, "tid":2, "ts":1720852108873774, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1720852108873850, "dur":142, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1720852108873995, "dur":225, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.ContentLoadModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1720852108874221, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1720852108874291, "dur":90824, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1720852108846887, "dur":3056, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1720852108851691, "dur":964, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.Threading.dll" }}
+,{ "pid":12345, "tid":3, "ts":1720852108849945, "dur":2711, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1720852108852656, "dur":5596, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1720852108858283, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1720852108858344, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1720852108858409, "dur":381, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1720852108858795, "dur":13887, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1720852108872684, "dur":449, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":3, "ts":1720852108873133, "dur":376, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1720852108873509, "dur":369, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":3, "ts":1720852108873879, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1720852108874022, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1720852108874077, "dur":107, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.MultiplayerModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1720852108874187, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1720852108874251, "dur":90786, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1720852108846953, "dur":3051, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1720852108850998, "dur":517, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.Memory.dll" }}
+,{ "pid":12345, "tid":4, "ts":1720852108850006, "dur":1781, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1720852108851787, "dur":555, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1720852108852342, "dur":5815, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1720852108858158, "dur":116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":4, "ts":1720852108858275, "dur":366, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1720852108858650, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1720852108862576, "dur":5520, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":4, "ts":1720852108868174, "dur":4528, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1720852108872703, "dur":275, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":4, "ts":1720852108872979, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1720852108873042, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":4, "ts":1720852108873143, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.ShaderVariantAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1720852108873200, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1720852108873271, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1720852108873345, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.RenderPipelines.Core.Runtime.Shared.dll" }}
+,{ "pid":12345, "tid":4, "ts":1720852108873427, "dur":139, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.RenderPipelines.Core.Runtime.Shared.dll" }}
+,{ "pid":12345, "tid":4, "ts":1720852108873567, "dur":114, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1720852108873682, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1720852108873756, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1720852108873813, "dur":282, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1720852108874098, "dur":90, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1720852108874188, "dur":91, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1720852108874300, "dur":90756, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1720852108846851, "dur":3072, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1720852108852404, "dur":687, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/il2cpp/build/deploy" }}
+,{ "pid":12345, "tid":5, "ts":1720852108853091, "dur":3626, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/il2cpp/libil2cpp" }}
+,{ "pid":12345, "tid":5, "ts":1720852108856717, "dur":64, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport" }}
+,{ "pid":12345, "tid":5, "ts":1720852108856781, "dur":879, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono" }}
+,{ "pid":12345, "tid":5, "ts":1720852108857709, "dur":144, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Tools/BuildPipeline" }}
+,{ "pid":12345, "tid":5, "ts":1720852108857853, "dur":162, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"Library/PlayerDataCache/Win642/Data" }}
+,{ "pid":12345, "tid":5, "ts":1720852108849926, "dur":8151, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1720852108858123, "dur":153, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1720852108858686, "dur":240, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108858928, "dur":165, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\IngameDebugConsole.Runtime.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108859094, "dur":260, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Burst.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108859356, "dur":846, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Cinemachine.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108860206, "dur":1098, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108861330, "dur":147, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetStats.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108861507, "dur":71, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetStatsMonitor.Configuration.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108861579, "dur":109, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetStatsMonitor.Implementation.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108861690, "dur":89, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetVis.Configuration.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108861786, "dur":161, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetworkProfiler.Runtime.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108861949, "dur":111, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetworkSimulator.Runtime.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108862061, "dur":133, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetworkSolutionInterface.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108862199, "dur":291, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Netcode.Runtime.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108862493, "dur":52, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.ProBuilder.Csg.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108862546, "dur":164, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.ProBuilder.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108862713, "dur":77, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.ProBuilder.Poly2Tri.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108862863, "dur":141, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Rendering.LightTransport.Runtime.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108863007, "dur":317, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.Core.Runtime.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108863407, "dur":140, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.GPUDriven.Runtime.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108863597, "dur":1506, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.HighDefinition.Runtime.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108865111, "dur":65, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108865181, "dur":92, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Splines.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108865276, "dur":271, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108865550, "dur":138, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108865693, "dur":71, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualEffectGraph.Runtime.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108865765, "dur":238, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108866004, "dur":203, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108866211, "dur":60, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108866273, "dur":160, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":5, "ts":1720852108866951, "dur":72, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\artifacts\\UnityLinkerInputs\\MethodsToPreserve.xml" }}
+,{ "pid":12345, "tid":5, "ts":1720852108867162, "dur":102, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\artifacts\\UnityLinkerInputs\\EditorToUnityLinkerData.json" }}
+,{ "pid":12345, "tid":5, "ts":1720852108858321, "dur":9314, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"UnityLinker C:/Users/user1/3d zeldaish/Small Multiplayer/Library/Bee/artifacts/unitylinker_dwek.traceevents" }}
+,{ "pid":12345, "tid":5, "ts":1720852108867636, "dur":3373, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1720852108872676, "dur":1692, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"GenerateNativePluginsForAssemblies Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker" }}
+,{ "pid":12345, "tid":5, "ts":1720852108874368, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1720852108874783, "dur":90283, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1720852108846915, "dur":3041, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1720852108850107, "dur":652, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.Runtime.Serialization.Json.dll" }}
+,{ "pid":12345, "tid":6, "ts":1720852108851735, "dur":723, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.Resources.Writer.dll" }}
+,{ "pid":12345, "tid":6, "ts":1720852108849959, "dur":2499, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1720852108852458, "dur":5680, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1720852108858139, "dur":241, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":6, "ts":1720852108858381, "dur":186, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1720852108858582, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/D3D12/D3D12Core.dll" }}
+,{ "pid":12345, "tid":6, "ts":1720852108858720, "dur":13969, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1720852108872691, "dur":167, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":6, "ts":1720852108872859, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1720852108872928, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":6, "ts":1720852108873054, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":6, "ts":1720852108873170, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1720852108873227, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Multiplayer.Tools.Adapters.Ngo1WithUtp2.dll" }}
+,{ "pid":12345, "tid":6, "ts":1720852108873330, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Cinemachine.dll" }}
+,{ "pid":12345, "tid":6, "ts":1720852108873398, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1720852108873472, "dur":204, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Cinemachine.dll" }}
+,{ "pid":12345, "tid":6, "ts":1720852108873678, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1720852108873861, "dur":114, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1720852108874014, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1720852108874166, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1720852108874260, "dur":90884, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1720852108846881, "dur":3055, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1720852108849939, "dur":981, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1720852108850921, "dur":644, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1720852108851720, "dur":956, "ph":"X", "name": "File",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll" }}
+,{ "pid":12345, "tid":7, "ts":1720852108851565, "dur":1567, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1720852108853132, "dur":5311, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1720852108858451, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":7, "ts":1720852108858518, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1720852108858593, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":7, "ts":1720852108858647, "dur":152, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1720852108858802, "dur":13966, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1720852108872769, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Multiplayer.Tools.MetricEvents.dll" }}
+,{ "pid":12345, "tid":7, "ts":1720852108872836, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1720852108872899, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Profiling.Core.dll" }}
+,{ "pid":12345, "tid":7, "ts":1720852108872966, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1720852108873040, "dur":180, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1720852108873295, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":7, "ts":1720852108873367, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1720852108873428, "dur":127, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":7, "ts":1720852108873556, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1720852108873691, "dur":127, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1720852108873883, "dur":292, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1720852108874257, "dur":90778, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1720852108846938, "dur":3025, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1720852108850218, "dur":525, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.Reflection.Emit.ILGeneration.dll" }}
+,{ "pid":12345, "tid":8, "ts":1720852108849965, "dur":1330, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1720852108851295, "dur":657, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1720852108851952, "dur":6476, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1720852108858428, "dur":187, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1720852108858616, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1720852108860316, "dur":78, "ph":"X", "name": "EmitNodeStart",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1720852108860417, "dur":4207, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":8, "ts":1720852108864807, "dur":7886, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1720852108872694, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll" }}
+,{ "pid":12345, "tid":8, "ts":1720852108872779, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1720852108872879, "dur":213, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1720852108873096, "dur":245, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Netcode.Components.dll" }}
+,{ "pid":12345, "tid":8, "ts":1720852108873342, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1720852108873488, "dur":302, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1720852108873791, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1720852108873850, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1720852108873955, "dur":123, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1720852108874297, "dur":90804, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1720852108846981, "dur":3047, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1720852108850029, "dur":1143, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1720852108851172, "dur":957, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1720852108852130, "dur":6039, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1720852108858170, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":9, "ts":1720852108858254, "dur":222, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":9, "ts":1720852108858508, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer.exe" }}
+,{ "pid":12345, "tid":9, "ts":1720852108859373, "dur":4983, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":9, "ts":1720852108864383, "dur":8314, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1720852108872699, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":9, "ts":1720852108872851, "dur":204, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1720852108873065, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Multiplayer.Tools.NetworkSimulator.Runtime.dll" }}
+,{ "pid":12345, "tid":9, "ts":1720852108873475, "dur":243, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1720852108873720, "dur":83, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1720852108873803, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1720852108873897, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1720852108873968, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1720852108874109, "dur":130, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1720852108874239, "dur":90808, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1720852108847002, "dur":3029, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1720852108850659, "dur":743, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.Diagnostics.Process.dll" }}
+,{ "pid":12345, "tid":10, "ts":1720852108850033, "dur":1657, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1720852108851690, "dur":1357, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1720852108853047, "dur":5624, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1720852108861216, "dur":4310, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/resources.assets" }}
+,{ "pid":12345, "tid":10, "ts":1720852108865582, "dur":7092, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1720852108872677, "dur":120, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":10, "ts":1720852108872798, "dur":306, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1720852108873146, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1720852108873368, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1720852108873502, "dur":331, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1720852108873833, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1720852108874066, "dur":55, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1720852108874122, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1720852108874182, "dur":87, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1720852108874271, "dur":90819, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1720852108847013, "dur":3079, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1720852108850093, "dur":877, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1720852108850970, "dur":858, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1720852108851828, "dur":321, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1720852108852149, "dur":6366, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1720852108858516, "dur":117, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":11, "ts":1720852108859839, "dur":1678, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":11, "ts":1720852108861549, "dur":11128, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1720852108872691, "dur":372, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":11, "ts":1720852108873064, "dur":79, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1720852108873149, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":11, "ts":1720852108873272, "dur":92, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
+,{ "pid":12345, "tid":11, "ts":1720852108873418, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1720852108873515, "dur":457, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1720852108873973, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.MarshallingModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1720852108874169, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":11, "ts":1720852108874293, "dur":90844, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1720852108847038, "dur":3081, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1720852108850717, "dur":633, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\mscordbi.dll" }}
+,{ "pid":12345, "tid":12, "ts":1720852108850121, "dur":1647, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1720852108851769, "dur":620, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1720852108852389, "dur":5716, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1720852108858106, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":12, "ts":1720852108858213, "dur":375, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":12, "ts":1720852108858589, "dur":188, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1720852108858779, "dur":13935, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1720852108872715, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1720852108873072, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Multiplayer.Tools.NetworkSolutionInterface.dll" }}
+,{ "pid":12345, "tid":12, "ts":1720852108873483, "dur":462, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1720852108873984, "dur":82, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1720852108874067, "dur":160, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1720852108874276, "dur":90803, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1720852108847068, "dur":3055, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1720852108850300, "dur":827, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1720852108851135, "dur":1100, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1720852108852235, "dur":6225, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1720852108858500, "dur":150, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1720852108861620, "dur":3134, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/level0" }}
+,{ "pid":12345, "tid":13, "ts":1720852108864794, "dur":8074, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1720852108872908, "dur":193, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1720852108873103, "dur":255, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Networking.Transport.dll" }}
+,{ "pid":12345, "tid":13, "ts":1720852108873359, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1720852108873428, "dur":166, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Networking.Transport.dll" }}
+,{ "pid":12345, "tid":13, "ts":1720852108873596, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1720852108873732, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1720852108873809, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":13, "ts":1720852108873942, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1720852108873994, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1720852108874060, "dur":141, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1720852108874233, "dur":90820, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1720852108847130, "dur":3191, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1720852108850879, "dur":668, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\createdump.exe" }}
+,{ "pid":12345, "tid":14, "ts":1720852108851713, "dur":576, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\Bee.Toolchain.Xcode.dll" }}
+,{ "pid":12345, "tid":14, "ts":1720852108850323, "dur":2068, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1720852108852392, "dur":5901, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1720852108858294, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":14, "ts":1720852108858384, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1720852108858480, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":14, "ts":1720852108858571, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1720852108859569, "dur":8327, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":14, "ts":1720852108867934, "dur":4752, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1720852108872693, "dur":102, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Multiplayer.Tools.NetStatsMonitor.Component.dll" }}
+,{ "pid":12345, "tid":14, "ts":1720852108872796, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1720852108872988, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1720852108873049, "dur":106, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":14, "ts":1720852108873195, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.InputSystem.ForUI.dll" }}
+,{ "pid":12345, "tid":14, "ts":1720852108873264, "dur":186, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1720852108873450, "dur":158, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.InputSystem.ForUI.dll" }}
+,{ "pid":12345, "tid":14, "ts":1720852108873608, "dur":102, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1720852108873758, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1720852108874027, "dur":76, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1720852108874253, "dur":90780, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1720852108847258, "dur":3139, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1720852108850398, "dur":1248, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1720852108851861, "dur":872, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\mono\\Managed\\UnityEngine.dll" }}
+,{ "pid":12345, "tid":15, "ts":1720852108851647, "dur":1440, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1720852108853087, "dur":5367, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1720852108858457, "dur":335, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":15, "ts":1720852108858827, "dur":13933, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1720852108872762, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1720852108872840, "dur":95, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1720852108872939, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":15, "ts":1720852108873038, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1720852108873098, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1720852108873193, "dur":93, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.RenderPipelines.GPUDriven.Runtime.dll" }}
+,{ "pid":12345, "tid":15, "ts":1720852108873287, "dur":84, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1720852108873403, "dur":147, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1720852108873601, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1720852108873718, "dur":80, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1720852108873852, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.AMDModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1720852108874229, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1720852108874292, "dur":90824, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1720852108847281, "dur":3134, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1720852108851723, "dur":501, "ph":"X", "name": "File",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\artifacts\\UnityLinkerInputs\\MethodsToPreserve.xml" }}
+,{ "pid":12345, "tid":16, "ts":1720852108850416, "dur":2254, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1720852108852671, "dur":5409, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1720852108858286, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1720852108858402, "dur":457, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1720852108858863, "dur":13961, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1720852108873049, "dur":214, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Multiplayer.Tools.NetworkProfiler.Runtime.dll" }}
+,{ "pid":12345, "tid":16, "ts":1720852108873264, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1720852108873343, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Multiplayer.Tools.NetStatsReporting.dll" }}
+,{ "pid":12345, "tid":16, "ts":1720852108873418, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1720852108873477, "dur":256, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Multiplayer.Tools.NetStatsReporting.dll" }}
+,{ "pid":12345, "tid":16, "ts":1720852108873734, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1720852108873794, "dur":86, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1720852108873899, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1720852108874079, "dur":111, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1720852108874263, "dur":90776, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1720852108847312, "dur":3171, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1720852108850486, "dur":817, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1720852108851706, "dur":1003, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Facades\\System.ComponentModel.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108851304, "dur":1543, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1720852108852847, "dur":5232, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1720852108858163, "dur":142, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win642\\Data\\boot.config" }}
+,{ "pid":12345, "tid":17, "ts":1720852108858341, "dur":86, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win642\\Data\\ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":17, "ts":1720852108858685, "dur":215, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108858904, "dur":120, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\IngameDebugConsole.Runtime.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108859026, "dur":215, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Burst.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108859242, "dur":204, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Cinemachine.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108859450, "dur":211, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Collections.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108859665, "dur":588, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108860255, "dur":50, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.ForUI.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108860310, "dur":398, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108860712, "dur":64, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Playmode.Common.Runtime.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108860996, "dur":93, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.Common.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108861140, "dur":59, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.MetricEvents.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108861204, "dur":55, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.MetricTestData.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108861264, "dur":61, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.MetricTypes.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108861330, "dur":81, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetStats.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108861464, "dur":86, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetStatsMonitor.Configuration.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108861551, "dur":59, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetStatsMonitor.Implementation.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108861653, "dur":182, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetVis.Configuration.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108861838, "dur":73, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetworkProfiler.Runtime.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108861923, "dur":101, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetworkSimulator.Runtime.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108862026, "dur":59, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Multiplayer.Tools.NetworkSolutionInterface.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108862087, "dur":75, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Netcode.Components.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108862164, "dur":184, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Netcode.Runtime.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108862351, "dur":104, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Networking.Transport.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108862495, "dur":175, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.ProBuilder.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108862719, "dur":76, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.ProBuilder.Poly2Tri.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108862796, "dur":55, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.ProBuilder.Stl.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108862890, "dur":143, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Rendering.LightTransport.Runtime.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108863035, "dur":310, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.Core.Runtime.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108863417, "dur":129, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.GPUDriven.Runtime.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108863547, "dur":50, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108863598, "dur":1593, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.HighDefinition.Runtime.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108865195, "dur":99, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Splines.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108865296, "dur":230, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108865529, "dur":101, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108865634, "dur":74, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualEffectGraph.Runtime.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108865712, "dur":278, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108865992, "dur":214, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108866211, "dur":67, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108866279, "dur":152, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Small Multiplayer\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":17, "ts":1720852108858154, "dur":8818, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"AddBootConfigGUID Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
+,{ "pid":12345, "tid":17, "ts":1720852108867334, "dur":98, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1720852108867951, "dur":87644, "ph":"X", "name": "AddBootConfigGUID",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
+,{ "pid":12345, "tid":17, "ts":1720852108963093, "dur":1089, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\boot.config" }}
+,{ "pid":12345, "tid":17, "ts":1720852108963076, "dur":1108, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/boot.config" }}
+,{ "pid":12345, "tid":17, "ts":1720852108964201, "dur":787, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/boot.config" }}
+,{ "pid":12345, "tid":18, "ts":1720852108847337, "dur":3150, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1720852108850489, "dur":916, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1720852108851448, "dur":961, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Facades\\Microsoft.Win32.Registry.dll" }}
+,{ "pid":12345, "tid":18, "ts":1720852108851405, "dur":1602, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1720852108853007, "dur":5699, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1720852108862273, "dur":13125, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/globalgamemanagers.assets.resS" }}
+,{ "pid":12345, "tid":18, "ts":1720852108875442, "dur":89607, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1720852108847355, "dur":3141, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1720852108850498, "dur":795, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1720852108851387, "dur":1248, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Facades\\System.Net.Utilities.dll" }}
+,{ "pid":12345, "tid":19, "ts":1720852108851294, "dur":1846, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1720852108853140, "dur":5296, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1720852108858438, "dur":333, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":19, "ts":1720852108858772, "dur":167, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1720852108858940, "dur":86, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":19, "ts":1720852108859027, "dur":13682, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1720852108872711, "dur":179, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":19, "ts":1720852108872934, "dur":229, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":19, "ts":1720852108873164, "dur":278, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1720852108873443, "dur":138, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":19, "ts":1720852108873738, "dur":201, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1720852108873940, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1720852108873996, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1720852108874047, "dur":148, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1720852108874295, "dur":90777, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1720852108847452, "dur":3074, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1720852108850526, "dur":686, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1720852108851868, "dur":525, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Facades\\System.Resources.ReaderWriter.dll" }}
+,{ "pid":12345, "tid":20, "ts":1720852108851212, "dur":1583, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1720852108852795, "dur":5794, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1720852108858592, "dur":141, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":20, "ts":1720852108858756, "dur":14001, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1720852108872759, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1720852108872894, "dur":213, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/Unity.ProBuilder.Csg.dll" }}
+,{ "pid":12345, "tid":20, "ts":1720852108873300, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":20, "ts":1720852108873404, "dur":108, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1720852108873579, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1720852108873734, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1720852108873810, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Multiplayer Net Tests/Small Multiplayer_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1720852108873871, "dur":186, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1720852108874266, "dur":90765, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1720852108971714, "dur":718, "ph":"X", "name": "ProfilerWriteOutput" }
 ,

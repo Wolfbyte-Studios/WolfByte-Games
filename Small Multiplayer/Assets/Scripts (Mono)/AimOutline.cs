@@ -38,12 +38,20 @@ public class AimOutline : NetworkBehaviour
         Debug.Log("Fuck");
         Fire_performed_ServerRpc();
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Clickable")
         {
+            if (target != null && target.gameObject != other.gameObject) 
+            {
+                target.layer = 30;
+            }
             target = other.gameObject;
             target.layer = 31;
+            if(other.gameObject.GetComponent<Clickable>().percentageFinished < 1)
+            {
+                target.layer = 29;
+            }
         }
         else
         {

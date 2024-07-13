@@ -36,7 +36,6 @@ public class PlayerMovement : NetworkBehaviour
             menu = actions.FindAction("Menu");
             menu.performed += Menu_performed;
             jump = actions.FindAction("Jump");
-            jump.performed += OnJump;
             crouch = actions.FindAction("Crouch");
             crouch.performed += OnCrouch;
         }
@@ -73,7 +72,7 @@ public class PlayerMovement : NetworkBehaviour
         throw new System.NotImplementedException();
     }
 
-    public void OnJump(InputAction.CallbackContext obj)
+    public void OnJump()
     {
         if (CanFly)
         {
@@ -128,6 +127,10 @@ public class PlayerMovement : NetworkBehaviour
         else
         {
             rb.useGravity = true;
+        }
+        if(jump.WasPerformedThisFrame())
+        {
+            OnJump();
         }
 
     }

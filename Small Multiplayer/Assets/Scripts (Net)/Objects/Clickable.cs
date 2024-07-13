@@ -28,7 +28,7 @@ public class Clickable : NetworkBehaviour
         meshRenderer = GetComponent<MeshRenderer>();
         OldMat = meshRenderer.sharedMaterial;
         NewMat = new Material(OldMat.shader);
-        timeFired = 1;
+        timeFired = -100000;
     }
 
     // Update is called once per frame

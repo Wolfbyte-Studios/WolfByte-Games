@@ -8,25 +8,33 @@ public class JoinAndHost : MonoBehaviour
 {
     // Public variable to store the player's network index
     UnityTransport transport;
+    TMP_InputField ip;
+    TMP_InputField port;
+
     private void Start()
     {
         // Set the network transport address and port
         transport = NetworkManager.Singleton.GetComponent<UnityTransport>();
-        transport.SetConnectionData(transform.FindDeepChild("IP").GetComponent<TMP_InputField>().text, ushort.Parse( transform.FindDeepChild("Port").GetComponent<TMP_InputField>().text));
+        ip = transform.FindDeepChild("IP").GetComponent<TMP_InputField>();
+        port = transform.FindDeepChild("Port").GetComponent<TMP_InputField>();
+        transport.SetConnectionData(ip.text, ushort.Parse( port.text));
     }
 
     // Method to start the game as host
     public void StartHost()
     {
-        NetworkManager.Singleton.StartHost();
+        
         transport.SetConnectionData(transform.FindDeepChild("IP").GetComponent<TMP_InputField>().text, ushort.Parse(transform.FindDeepChild("Port").GetComponent<TMP_InputField>().text));
+        Debug.Log(ip.text + " " + port.text);
+        NetworkManager.Singleton.StartHost();
     }
 
     // Method to start the game as client
     public void JoinGame()
     {
-        NetworkManager.Singleton.StartClient();
+        
         transport.SetConnectionData(transform.FindDeepChild("IP").GetComponent<TMP_InputField>().text, ushort.Parse(transform.FindDeepChild("Port").GetComponent<TMP_InputField>().text));
+        NetworkManager.Singleton.StartClient();
     }
 
     // Method to be called when the network object spawns

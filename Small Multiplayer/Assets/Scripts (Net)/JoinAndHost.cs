@@ -34,8 +34,8 @@ public class JoinAndHost : MonoBehaviour
     // Method to start the game as client
     public void JoinGame()
     {
-        PlayerPrefs.GetString("IP", ip.text);
-        PlayerPrefs.GetString("Port", port.text);
+        PlayerPrefs.SetString("IP", ip.text);
+        PlayerPrefs.SetString("Port", port.text);
 
         transport.SetConnectionData(transform.FindDeepChild("IP").GetComponent<TMP_InputField>().text, ushort.Parse(transform.FindDeepChild("Port").GetComponent<TMP_InputField>().text));
         NetworkManager.Singleton.StartClient();

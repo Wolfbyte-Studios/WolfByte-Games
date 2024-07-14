@@ -73,6 +73,9 @@ public class HoldItem : NetworkBehaviour
         this.journeyLength = journeyLength;
         this.isGrabbing = isGrabbing;
         isMoving = true;
+
+        // Update kinematic state on the client
+        rb.isKinematic = isGrabbing;
     }
 
     [ServerRpc]
@@ -89,6 +92,7 @@ public class HoldItem : NetworkBehaviour
     [ClientRpc]
     private void Throw_ClientRpc(Vector3 direction, float throwForce)
     {
+        rb.isKinematic = false;
         rb.AddForce(direction * throwForce, ForceMode.Impulse);
     }
 
@@ -101,7 +105,6 @@ public class HoldItem : NetworkBehaviour
             rb.isKinematic = false;
             rb.AddForce(direction * throwForce, ForceMode.Impulse);
             Throw_ClientRpc(direction, throwForce);
-            
         }
         else
         {

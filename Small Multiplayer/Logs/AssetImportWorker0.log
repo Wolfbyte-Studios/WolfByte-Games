@@ -5701,3 +5701,1128 @@ Memory consumption went from 273.6 MB to 266.6 MB.
 Total: 23.704000 ms (FindLiveObjects: 1.552500 ms CreateObjectMapping: 2.726400 ms MarkObjects: 11.639200 ms  DeleteObjects: 7.782000 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 2.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8768 unused Assets / (7.8 MB). Loaded Objects now: 10288.
+Memory consumption went from 273.8 MB to 266.0 MB.
+Total: 23.741100 ms (FindLiveObjects: 1.276500 ms CreateObjectMapping: 1.710100 ms MarkObjects: 13.241900 ms  DeleteObjects: 7.510100 ms)
+
+Prepare: number of updated asset objects reloaded= 1
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.080 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.16 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore..ctor (System.String directory) [0x0006e] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:55 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore.GetMain () [0x00000] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:36 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.WorkflowMainEditorContext..ctor (Unity.Multiplayer.Playmode.VirtualProjects.Editor.MainEditorContext mainEditorContext) [0x0002c] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Contexts\WorkflowMainEditorContext.cs:15 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow.InitializeMPPMContexts () [0x00018] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:84 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow+<>c.<.cctor>b__17_0 () [0x00036] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:58 
+  at Unity.Multiplayer.Playmode.VirtualProjects.Editor.EditorContexts.SendReadyEvent () [0x0002a] in .\Library\PackageCache\com.unity.multiplayer.playmode\VirtualProjects\Editor\Contexts\EditorContexts.cs:53 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <2ae8de24a0b242bca0c13cf1c78f500e>:0 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.500 seconds
+Domain Reload Profiling: 2575ms
+	BeginReloadAssembly (276ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (103ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (44ms)
+	LoadAllAssembliesAndSetupDomain (703ms)
+		LoadAssemblies (503ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (307ms)
+			TypeCache.Refresh (15ms)
+				TypeCache.ScanAssembly (2ms)
+			BuildScriptInfoCaches (275ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (1501ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1062ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (13ms)
+			BeforeProcessingInitializeOnLoad (82ms)
+			ProcessInitializeOnLoadAttributes (657ms)
+			ProcessInitializeOnLoadMethodAttributes (302ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (19ms)
+Refreshing native plugins compatible for Editor in 2.07 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8780 unused Assets / (7.8 MB). Loaded Objects now: 10290.
+Memory consumption went from 273.7 MB to 265.8 MB.
+Total: 27.559600 ms (FindLiveObjects: 1.600700 ms CreateObjectMapping: 2.275700 ms MarkObjects: 12.492000 ms  DeleteObjects: 11.188800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 8413.652559 seconds.
+  path: Assets/Scripts (Net)/Objects/Poop.cs
+  artifactKey: Guid(ce1c5d75384e84f46a389c8debe358cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts (Net)/Objects/Poop.cs using Guid(ce1c5d75384e84f46a389c8debe358cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '875d5f60abcaaaa61f76a2efc48c33aa') in 11.9049058 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 3.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8768 unused Assets / (6.4 MB). Loaded Objects now: 10290.
+Memory consumption went from 273.9 MB to 267.4 MB.
+Total: 20.689000 ms (FindLiveObjects: 1.770500 ms CreateObjectMapping: 1.709700 ms MarkObjects: 10.980200 ms  DeleteObjects: 6.226700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.875 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.03 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore..ctor (System.String directory) [0x0006e] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:55 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore.GetMain () [0x00000] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:36 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.WorkflowMainEditorContext..ctor (Unity.Multiplayer.Playmode.VirtualProjects.Editor.MainEditorContext mainEditorContext) [0x0002c] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Contexts\WorkflowMainEditorContext.cs:15 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow.InitializeMPPMContexts () [0x00018] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:84 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow+<>c.<.cctor>b__17_0 () [0x00036] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:58 
+  at Unity.Multiplayer.Playmode.VirtualProjects.Editor.EditorContexts.SendReadyEvent () [0x0002a] in .\Library\PackageCache\com.unity.multiplayer.playmode\VirtualProjects\Editor\Contexts\EditorContexts.cs:53 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <2ae8de24a0b242bca0c13cf1c78f500e>:0 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.208 seconds
+Domain Reload Profiling: 2083ms
+	BeginReloadAssembly (240ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (92ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (28ms)
+	LoadAllAssembliesAndSetupDomain (569ms)
+		LoadAssemblies (391ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (264ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (238ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1208ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (857ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (70ms)
+			ProcessInitializeOnLoadAttributes (545ms)
+			ProcessInitializeOnLoadMethodAttributes (230ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (30ms)
+Refreshing native plugins compatible for Editor in 2.13 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8780 unused Assets / (7.4 MB). Loaded Objects now: 10292.
+Memory consumption went from 273.7 MB to 266.3 MB.
+Total: 20.944400 ms (FindLiveObjects: 1.527900 ms CreateObjectMapping: 1.717000 ms MarkObjects: 10.890300 ms  DeleteObjects: 6.806600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 2.06 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8768 unused Assets / (6.8 MB). Loaded Objects now: 10292.
+Memory consumption went from 273.8 MB to 267.0 MB.
+Total: 26.957600 ms (FindLiveObjects: 1.429800 ms CreateObjectMapping: 2.527900 ms MarkObjects: 14.522400 ms  DeleteObjects: 8.475000 ms)
+
+Prepare: number of updated asset objects reloaded= 1
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.947 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.70 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore..ctor (System.String directory) [0x0006e] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:55 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore.GetMain () [0x00000] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:36 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.WorkflowMainEditorContext..ctor (Unity.Multiplayer.Playmode.VirtualProjects.Editor.MainEditorContext mainEditorContext) [0x0002c] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Contexts\WorkflowMainEditorContext.cs:15 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow.InitializeMPPMContexts () [0x00018] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:84 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow+<>c.<.cctor>b__17_0 () [0x00036] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:58 
+  at Unity.Multiplayer.Playmode.VirtualProjects.Editor.EditorContexts.SendReadyEvent () [0x0002a] in .\Library\PackageCache\com.unity.multiplayer.playmode\VirtualProjects\Editor\Contexts\EditorContexts.cs:53 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <2ae8de24a0b242bca0c13cf1c78f500e>:0 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.183 seconds
+Domain Reload Profiling: 2133ms
+	BeginReloadAssembly (227ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (73ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (34ms)
+	LoadAllAssembliesAndSetupDomain (646ms)
+		LoadAssemblies (469ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (269ms)
+			TypeCache.Refresh (14ms)
+				TypeCache.ScanAssembly (2ms)
+			BuildScriptInfoCaches (237ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1183ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (849ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (68ms)
+			ProcessInitializeOnLoadAttributes (539ms)
+			ProcessInitializeOnLoadMethodAttributes (231ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (19ms)
+Refreshing native plugins compatible for Editor in 2.03 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8780 unused Assets / (8.4 MB). Loaded Objects now: 10294.
+Memory consumption went from 273.7 MB to 265.4 MB.
+Total: 22.292100 ms (FindLiveObjects: 1.746800 ms CreateObjectMapping: 1.743500 ms MarkObjects: 10.871200 ms  DeleteObjects: 7.927600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 2.08 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8768 unused Assets / (8.2 MB). Loaded Objects now: 10294.
+Memory consumption went from 273.9 MB to 265.7 MB.
+Total: 16.744400 ms (FindLiveObjects: 1.643100 ms CreateObjectMapping: 0.707100 ms MarkObjects: 9.054300 ms  DeleteObjects: 5.338200 ms)
+
+Prepare: number of updated asset objects reloaded= 1
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.881 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 0.97 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore..ctor (System.String directory) [0x0006e] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:55 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore.GetMain () [0x00000] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:36 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.WorkflowMainEditorContext..ctor (Unity.Multiplayer.Playmode.VirtualProjects.Editor.MainEditorContext mainEditorContext) [0x0002c] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Contexts\WorkflowMainEditorContext.cs:15 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow.InitializeMPPMContexts () [0x00018] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:84 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow+<>c.<.cctor>b__17_0 () [0x00036] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:58 
+  at Unity.Multiplayer.Playmode.VirtualProjects.Editor.EditorContexts.SendReadyEvent () [0x0002a] in .\Library\PackageCache\com.unity.multiplayer.playmode\VirtualProjects\Editor\Contexts\EditorContexts.cs:53 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <2ae8de24a0b242bca0c13cf1c78f500e>:0 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.162 seconds
+Domain Reload Profiling: 2044ms
+	BeginReloadAssembly (206ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (67ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (611ms)
+		LoadAssemblies (440ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (252ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (223ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (1163ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (847ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (73ms)
+			ProcessInitializeOnLoadAttributes (541ms)
+			ProcessInitializeOnLoadMethodAttributes (222ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 1.97 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8780 unused Assets / (7.3 MB). Loaded Objects now: 10296.
+Memory consumption went from 273.7 MB to 266.5 MB.
+Total: 15.567900 ms (FindLiveObjects: 1.185100 ms CreateObjectMapping: 1.212700 ms MarkObjects: 6.964000 ms  DeleteObjects: 6.203200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.32 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8768 unused Assets / (7.9 MB). Loaded Objects now: 10296.
+Memory consumption went from 273.9 MB to 266.0 MB.
+Total: 14.511000 ms (FindLiveObjects: 0.855900 ms CreateObjectMapping: 0.722700 ms MarkObjects: 8.080600 ms  DeleteObjects: 4.850100 ms)
+
+Prepare: number of updated asset objects reloaded= 1
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  2.461 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 0.98 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore..ctor (System.String directory) [0x0006e] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:55 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore.GetMain () [0x00000] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:36 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.WorkflowMainEditorContext..ctor (Unity.Multiplayer.Playmode.VirtualProjects.Editor.MainEditorContext mainEditorContext) [0x0002c] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Contexts\WorkflowMainEditorContext.cs:15 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow.InitializeMPPMContexts () [0x00018] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:84 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow+<>c.<.cctor>b__17_0 () [0x00036] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:58 
+  at Unity.Multiplayer.Playmode.VirtualProjects.Editor.EditorContexts.SendReadyEvent () [0x0002a] in .\Library\PackageCache\com.unity.multiplayer.playmode\VirtualProjects\Editor\Contexts\EditorContexts.cs:53 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <2ae8de24a0b242bca0c13cf1c78f500e>:0 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.213 seconds
+Domain Reload Profiling: 3674ms
+	BeginReloadAssembly (223ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (72ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (2170ms)
+		LoadAssemblies (1970ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (291ms)
+			TypeCache.Refresh (14ms)
+				TypeCache.ScanAssembly (3ms)
+			BuildScriptInfoCaches (261ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1213ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (881ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (68ms)
+			ProcessInitializeOnLoadAttributes (560ms)
+			ProcessInitializeOnLoadMethodAttributes (241ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
+Refreshing native plugins compatible for Editor in 1.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8780 unused Assets / (7.5 MB). Loaded Objects now: 10298.
+Memory consumption went from 273.7 MB to 266.2 MB.
+Total: 17.580000 ms (FindLiveObjects: 1.080900 ms CreateObjectMapping: 1.357300 ms MarkObjects: 8.925900 ms  DeleteObjects: 6.213800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 2.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8768 unused Assets / (3.8 MB). Loaded Objects now: 10298.
+Memory consumption went from 273.9 MB to 270.0 MB.
+Total: 40.249300 ms (FindLiveObjects: 1.490800 ms CreateObjectMapping: 2.142300 ms MarkObjects: 17.940400 ms  DeleteObjects: 18.673300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.789 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.17 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore..ctor (System.String directory) [0x0006e] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:55 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore.GetMain () [0x00000] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:36 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.WorkflowMainEditorContext..ctor (Unity.Multiplayer.Playmode.VirtualProjects.Editor.MainEditorContext mainEditorContext) [0x0002c] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Contexts\WorkflowMainEditorContext.cs:15 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow.InitializeMPPMContexts () [0x00018] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:84 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow+<>c.<.cctor>b__17_0 () [0x00036] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:58 
+  at Unity.Multiplayer.Playmode.VirtualProjects.Editor.EditorContexts.SendReadyEvent () [0x0002a] in .\Library\PackageCache\com.unity.multiplayer.playmode\VirtualProjects\Editor\Contexts\EditorContexts.cs:53 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <2ae8de24a0b242bca0c13cf1c78f500e>:0 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.162 seconds
+Domain Reload Profiling: 1951ms
+	BeginReloadAssembly (196ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (61ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (530ms)
+		LoadAssemblies (359ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (246ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (221ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (1163ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (845ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (70ms)
+			ProcessInitializeOnLoadAttributes (543ms)
+			ProcessInitializeOnLoadMethodAttributes (222ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (17ms)
+Refreshing native plugins compatible for Editor in 1.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8780 unused Assets / (8.1 MB). Loaded Objects now: 10300.
+Memory consumption went from 273.7 MB to 265.7 MB.
+Total: 19.877200 ms (FindLiveObjects: 1.365400 ms CreateObjectMapping: 1.274300 ms MarkObjects: 10.786900 ms  DeleteObjects: 6.447900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 1334.838361 seconds.
+  path: Assets/Prefabs/For Runner/Poop.prefab
+  artifactKey: Guid(31afff0e4d1b5224baab2fbb592676f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/For Runner/Poop.prefab using Guid(31afff0e4d1b5224baab2fbb592676f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
+ -> (artifact id: '79ec289fea9f010d17abd80af3ba32ae') in 1.5956358 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 26
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Leak Detected : Persistent allocates 8 individual allocations. To find out more please enable 'Preferences > Jobs > Leak Detection Level > Enabled With Stack Trace' and reproduce the leak again.
+- Loaded All Assemblies, in  0.874 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.07 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore..ctor (System.String directory) [0x0006e] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:55 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore.GetMain () [0x00000] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:36 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.WorkflowMainEditorContext..ctor (Unity.Multiplayer.Playmode.VirtualProjects.Editor.MainEditorContext mainEditorContext) [0x0002c] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Contexts\WorkflowMainEditorContext.cs:15 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow.InitializeMPPMContexts () [0x00018] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:84 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow+<>c.<.cctor>b__17_0 () [0x00036] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:58 
+  at Unity.Multiplayer.Playmode.VirtualProjects.Editor.EditorContexts.SendReadyEvent () [0x0002a] in .\Library\PackageCache\com.unity.multiplayer.playmode\VirtualProjects\Editor\Contexts\EditorContexts.cs:53 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <2ae8de24a0b242bca0c13cf1c78f500e>:0 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.191 seconds
+Domain Reload Profiling: 2066ms
+	BeginReloadAssembly (280ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (30ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (115ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (28ms)
+	LoadAllAssembliesAndSetupDomain (527ms)
+		LoadAssemblies (360ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (249ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (227ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1192ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (864ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (69ms)
+			ProcessInitializeOnLoadAttributes (551ms)
+			ProcessInitializeOnLoadMethodAttributes (232ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (18ms)
+Refreshing native plugins compatible for Editor in 1.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8780 unused Assets / (6.9 MB). Loaded Objects now: 10375.
+Memory consumption went from 274.9 MB to 268.0 MB.
+Total: 20.719600 ms (FindLiveObjects: 1.732200 ms CreateObjectMapping: 1.720200 ms MarkObjects: 10.329700 ms  DeleteObjects: 6.934800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.879 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.32 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore..ctor (System.String directory) [0x0006e] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:55 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore.GetMain () [0x00000] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:36 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.WorkflowMainEditorContext..ctor (Unity.Multiplayer.Playmode.VirtualProjects.Editor.MainEditorContext mainEditorContext) [0x0002c] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Contexts\WorkflowMainEditorContext.cs:15 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow.InitializeMPPMContexts () [0x00018] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:84 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow+<>c.<.cctor>b__17_0 () [0x00036] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:58 
+  at Unity.Multiplayer.Playmode.VirtualProjects.Editor.EditorContexts.SendReadyEvent () [0x0002a] in .\Library\PackageCache\com.unity.multiplayer.playmode\VirtualProjects\Editor\Contexts\EditorContexts.cs:53 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <2ae8de24a0b242bca0c13cf1c78f500e>:0 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.223 seconds
+Domain Reload Profiling: 2102ms
+	BeginReloadAssembly (231ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (73ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (28ms)
+	LoadAllAssembliesAndSetupDomain (581ms)
+		LoadAssemblies (420ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (257ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (234ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1224ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (889ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (72ms)
+			ProcessInitializeOnLoadAttributes (574ms)
+			ProcessInitializeOnLoadMethodAttributes (231ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (18ms)
+Refreshing native plugins compatible for Editor in 1.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8780 unused Assets / (7.3 MB). Loaded Objects now: 10377.
+Memory consumption went from 274.6 MB to 267.3 MB.
+Total: 19.015000 ms (FindLiveObjects: 1.784000 ms CreateObjectMapping: 1.032800 ms MarkObjects: 8.944600 ms  DeleteObjects: 7.249800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.811 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.26 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore..ctor (System.String directory) [0x0006e] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:55 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore.GetMain () [0x00000] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:36 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.WorkflowMainEditorContext..ctor (Unity.Multiplayer.Playmode.VirtualProjects.Editor.MainEditorContext mainEditorContext) [0x0002c] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Contexts\WorkflowMainEditorContext.cs:15 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow.InitializeMPPMContexts () [0x00018] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:84 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow+<>c.<.cctor>b__17_0 () [0x00036] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:58 
+  at Unity.Multiplayer.Playmode.VirtualProjects.Editor.EditorContexts.SendReadyEvent () [0x0002a] in .\Library\PackageCache\com.unity.multiplayer.playmode\VirtualProjects\Editor\Contexts\EditorContexts.cs:53 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <2ae8de24a0b242bca0c13cf1c78f500e>:0 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.188 seconds
+Domain Reload Profiling: 2000ms
+	BeginReloadAssembly (207ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (67ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (535ms)
+		LoadAssemblies (361ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (256ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (233ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1189ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (864ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (70ms)
+			ProcessInitializeOnLoadAttributes (553ms)
+			ProcessInitializeOnLoadMethodAttributes (232ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 2.23 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8780 unused Assets / (7.4 MB). Loaded Objects now: 10379.
+Memory consumption went from 274.6 MB to 267.2 MB.
+Total: 18.008100 ms (FindLiveObjects: 1.458600 ms CreateObjectMapping: 1.311000 ms MarkObjects: 7.676500 ms  DeleteObjects: 7.559500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.42 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8768 unused Assets / (8.4 MB). Loaded Objects now: 10379.
+Memory consumption went from 274.7 MB to 266.3 MB.
+Total: 15.299100 ms (FindLiveObjects: 0.862000 ms CreateObjectMapping: 0.818600 ms MarkObjects: 8.369900 ms  DeleteObjects: 5.246700 ms)
+
+Prepare: number of updated asset objects reloaded= 1
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  2.595 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.07 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore..ctor (System.String directory) [0x0006e] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:55 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore.GetMain () [0x00000] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:36 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.WorkflowMainEditorContext..ctor (Unity.Multiplayer.Playmode.VirtualProjects.Editor.MainEditorContext mainEditorContext) [0x0002c] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Contexts\WorkflowMainEditorContext.cs:15 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow.InitializeMPPMContexts () [0x00018] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:84 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow+<>c.<.cctor>b__17_0 () [0x00036] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:58 
+  at Unity.Multiplayer.Playmode.VirtualProjects.Editor.EditorContexts.SendReadyEvent () [0x0002a] in .\Library\PackageCache\com.unity.multiplayer.playmode\VirtualProjects\Editor\Contexts\EditorContexts.cs:53 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <2ae8de24a0b242bca0c13cf1c78f500e>:0 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.999 seconds
+Domain Reload Profiling: 4595ms
+	BeginReloadAssembly (250ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (71ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (28ms)
+	LoadAllAssembliesAndSetupDomain (2269ms)
+		LoadAssemblies (2099ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (287ms)
+			TypeCache.Refresh (20ms)
+				TypeCache.ScanAssembly (2ms)
+			BuildScriptInfoCaches (249ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1999ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1509ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (94ms)
+			ProcessInitializeOnLoadAttributes (851ms)
+			ProcessInitializeOnLoadMethodAttributes (548ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (32ms)
+Refreshing native plugins compatible for Editor in 2.04 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8780 unused Assets / (8.6 MB). Loaded Objects now: 10381.
+Memory consumption went from 274.6 MB to 266.0 MB.
+Total: 40.951700 ms (FindLiveObjects: 1.707800 ms CreateObjectMapping: 2.376600 ms MarkObjects: 18.020300 ms  DeleteObjects: 18.843300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.913 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.07 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore..ctor (System.String directory) [0x0006e] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:55 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore.GetMain () [0x00000] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:36 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.WorkflowMainEditorContext..ctor (Unity.Multiplayer.Playmode.VirtualProjects.Editor.MainEditorContext mainEditorContext) [0x0002c] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Contexts\WorkflowMainEditorContext.cs:15 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow.InitializeMPPMContexts () [0x00018] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:84 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow+<>c.<.cctor>b__17_0 () [0x00036] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:58 
+  at Unity.Multiplayer.Playmode.VirtualProjects.Editor.EditorContexts.SendReadyEvent () [0x0002a] in .\Library\PackageCache\com.unity.multiplayer.playmode\VirtualProjects\Editor\Contexts\EditorContexts.cs:53 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <2ae8de24a0b242bca0c13cf1c78f500e>:0 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.241 seconds
+Domain Reload Profiling: 2155ms
+	BeginReloadAssembly (254ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (78ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (578ms)
+		LoadAssemblies (402ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (279ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (245ms)
+			ResolveRequiredComponents (20ms)
+	FinalizeReload (1241ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (895ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (86ms)
+			ProcessInitializeOnLoadAttributes (563ms)
+			ProcessInitializeOnLoadMethodAttributes (234ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Refreshing native plugins compatible for Editor in 1.95 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8780 unused Assets / (7.4 MB). Loaded Objects now: 10383.
+Memory consumption went from 274.5 MB to 267.1 MB.
+Total: 19.939200 ms (FindLiveObjects: 1.464800 ms CreateObjectMapping: 1.598800 ms MarkObjects: 10.603400 ms  DeleteObjects: 6.269500 ms)
+
+Prepare: number of updated asset objects reloaded= 1
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.794 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.09 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore..ctor (System.String directory) [0x0006e] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:55 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore.GetMain () [0x00000] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:36 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.WorkflowMainEditorContext..ctor (Unity.Multiplayer.Playmode.VirtualProjects.Editor.MainEditorContext mainEditorContext) [0x0002c] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Contexts\WorkflowMainEditorContext.cs:15 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow.InitializeMPPMContexts () [0x00018] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:84 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow+<>c.<.cctor>b__17_0 () [0x00036] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:58 
+  at Unity.Multiplayer.Playmode.VirtualProjects.Editor.EditorContexts.SendReadyEvent () [0x0002a] in .\Library\PackageCache\com.unity.multiplayer.playmode\VirtualProjects\Editor\Contexts\EditorContexts.cs:53 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <2ae8de24a0b242bca0c13cf1c78f500e>:0 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.195 seconds
+Domain Reload Profiling: 1991ms
+	BeginReloadAssembly (190ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (59ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (541ms)
+		LoadAssemblies (362ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (253ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (228ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1196ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (861ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (77ms)
+			ProcessInitializeOnLoadAttributes (552ms)
+			ProcessInitializeOnLoadMethodAttributes (220ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (18ms)
+Refreshing native plugins compatible for Editor in 1.76 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8780 unused Assets / (7.3 MB). Loaded Objects now: 10385.
+Memory consumption went from 274.5 MB to 267.1 MB.
+Total: 19.266700 ms (FindLiveObjects: 1.457800 ms CreateObjectMapping: 1.501400 ms MarkObjects: 10.552000 ms  DeleteObjects: 5.753200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.95 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8768 unused Assets / (4.1 MB). Loaded Objects now: 10385.
+Memory consumption went from 274.6 MB to 270.5 MB.
+Total: 61.526500 ms (FindLiveObjects: 1.675400 ms CreateObjectMapping: 2.070600 ms MarkObjects: 51.040600 ms  DeleteObjects: 6.736400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.924 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.72 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.NullReferenceException: Object reference not set to an instance of an object
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore..ctor (System.String directory) [0x0006e] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:55 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.ProjectDataStore.GetMain () [0x00000] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Configuration\ProjectDataStore.cs:36 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.WorkflowMainEditorContext..ctor (Unity.Multiplayer.Playmode.VirtualProjects.Editor.MainEditorContext mainEditorContext) [0x0002c] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Contexts\WorkflowMainEditorContext.cs:15 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow.InitializeMPPMContexts () [0x00018] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:84 
+  at Unity.Multiplayer.Playmode.Workflow.Editor.VirtualProjectWorkflow+<>c.<.cctor>b__17_0 () [0x00036] in .\Library\PackageCache\com.unity.multiplayer.playmode\Workflow\Editor\Workflow\VirtualProjectWorkflow.cs:58 
+  at Unity.Multiplayer.Playmode.VirtualProjects.Editor.EditorContexts.SendReadyEvent () [0x0002a] in .\Library\PackageCache\com.unity.multiplayer.playmode\VirtualProjects\Editor\Contexts\EditorContexts.cs:53 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+   --- End of inner exception stack trace ---
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00083] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <f22cb97e7aa5412ba04225fa1fc145f2>:0 
+  at UnityEditor.EditorAssemblies.ProcessInitializeOnLoadMethodAttributes () [0x00056] in <2ae8de24a0b242bca0c13cf1c78f500e>:0 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.306 seconds
+Domain Reload Profiling: 2231ms
+	BeginReloadAssembly (205ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (71ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (652ms)
+		LoadAssemblies (409ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (318ms)
+			TypeCache.Refresh (14ms)
+				TypeCache.ScanAssembly (2ms)
+			BuildScriptInfoCaches (286ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1306ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (951ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (73ms)
+			ProcessInitializeOnLoadAttributes (611ms)
+			ProcessInitializeOnLoadMethodAttributes (254ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (17ms)
+Refreshing native plugins compatible for Editor in 1.42 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 8780 unused Assets / (7.2 MB). Loaded Objects now: 10387.
+Memory consumption went from 274.5 MB to 267.3 MB.
+Total: 17.550700 ms (FindLiveObjects: 1.224000 ms CreateObjectMapping: 0.646500 ms MarkObjects: 9.967900 ms  DeleteObjects: 5.709500 ms)
+
+Prepare: number of updated asset objects reloaded= 0

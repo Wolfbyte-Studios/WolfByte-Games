@@ -483,7 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d72602f45fff15e4e9fdfa2c0d6467e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIndexTarget: 1
+  playerIndexTarget: 0
   playerCamera: {fileID: 0}
 --- !u!114 &2223605216837713576
 MonoBehaviour:
@@ -503,6 +503,8 @@ MonoBehaviour:
   FlyForce: 5
   jumpHeight: 2
   slowRate: 0.09
+  forwardVelocity: 0
+  strafingVelocity: 0
   playerCam: {fileID: 0}
   rb: {fileID: 0}
   actions: {fileID: 0}
@@ -899,7 +901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d72602f45fff15e4e9fdfa2c0d6467e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIndexTarget: 0
+  playerIndexTarget: 1
   playerCamera: {fileID: 0}
 --- !u!114 &3249347751654512399
 MonoBehaviour:
@@ -919,6 +921,8 @@ MonoBehaviour:
   FlyForce: 5
   jumpHeight: 2.5
   slowRate: 0.09
+  forwardVelocity: 0
+  strafingVelocity: 0
   playerCam: {fileID: 0}
   rb: {fileID: 0}
   actions: {fileID: 0}
@@ -2160,7 +2164,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3024
+  m_VersionIndex: 3027
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2285,6 +2289,15 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 63688fdf-f18d-4da0-a506-f34fee1cc4a1
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  Secondary:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d3f63827-2ce9-4ae7-bdd0-71c1ecb6aece
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []

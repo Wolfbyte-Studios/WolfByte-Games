@@ -24,7 +24,7 @@ public class JoinAndHost : MonoBehaviour
     public void StartHost()
     {
         
-        transport.SetConnectionData(transform.FindDeepChild("IP").GetComponent<TMP_InputField>().text, ushort.Parse(transform.FindDeepChild("Port").GetComponent<TMP_InputField>().text));
+        transport.SetConnectionData("0.0.0.0", ushort.Parse(transform.FindDeepChild("Port").GetComponent<TMP_InputField>().text));
         Debug.Log(ip.text + " " + port.text);
         NetworkManager.Singleton.StartHost();
     }

@@ -9,6 +9,9 @@ public class Clickable : NetworkBehaviour
     public bool ClicksCounted;
     public UnityEvent myEvent;
     public UnityEvent OnCoolDown;
+    public UnityEvent onSelect;
+    public UnityEvent onDeselect;
+    public UnityEvent secondaryEvent; // Add secondary event
     public bool needsToCoolDown;
     public bool CoolDown;
     public float coolDown;
@@ -26,18 +29,14 @@ public class Clickable : NetworkBehaviour
     public Color high;
     public Color done;
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
         meshRenderer = GetComponent<MeshRenderer>();
         OldMat = meshRenderer.sharedMaterial;
         NewMat = new Material(OldMat.shader);
         timeFired = -100000;
     }
 
-    // Update is called once per frame
     void Update()
     {
         timeElapsed = Time.time - timeFired;
@@ -61,17 +60,19 @@ public class Clickable : NetworkBehaviour
             applyColors(percentageFinished);
         }
     }
+
     public void coolingDown()
     {
         OnCoolDown.Invoke();
         needsToCoolDown = false;
     }
+
     public void applyColors(float percent)
     {
         percent = percent * 100f;
         switch (percent)
         {
-            case  0:
+            case 0:
                 NewMat.color = low;
                 return;
             case <= 40:
@@ -88,11 +89,12 @@ public class Clickable : NetworkBehaviour
                 return;
         }
     }
+
     public void TriggerEvent()
     {
-        if (myEvent != null )
+        if (myEvent != null)
         {
-            if(ClicksLeft == 0 && ClicksCounted)
+            if (ClicksLeft == 0 && ClicksCounted)
             {
                 return;
             }
@@ -100,19 +102,35 @@ public class Clickable : NetworkBehaviour
             {
                 if (coolDown >= Time.time - timeFired)
                 {
-
                     return;
                 }
             }
             timeFired = Time.time;
             Debug.Log("Activation should happen");
             myEvent.Invoke();
-            if(ClicksCounted)
+            if (ClicksCounted)
             {
                 ClicksLeft--;
             }
             needsToCoolDown = true;
-
         }
+    }
+
+    public void TriggerSecondary()
+    {
+        if (secondaryEvent != null)
+        {
+            secondaryEvent.Invoke();
+        }
+    }
+
+    public void OnSelect()
+    {
+        onSelect.Invoke();
+    }
+
+    public void OnDeselect()
+    {
+        onDeselect.Invoke();
     }
 }

@@ -1,63 +1,71 @@
 using UnityEngine;
 using Unity.Netcode;
 using UnityEngine.InputSystem;
-using System.Collections.Generic;
 
 public class AimOutline : NetworkBehaviour
 {
     public GameObject target;
     public InputActionAsset actions;
     public InputAction Fire;
+    public InputAction Secondary;
     private NetworkVariable<int> targetLayer = new NetworkVariable<int>();
     private NetworkVariable<ulong> targetNetworkObjectId = new NetworkVariable<ulong>();
 
     void Start()
     {
         Fire = actions.FindAction("Fire");
+        Secondary = actions.FindAction("Secondary");
         var playerInput = gameObject.transform.parent.parent.GetComponent<PlayerInput>();
         if (playerInput != null)
         {
             actions = playerInput.actions; // Get the actions from the PlayerInput component
             Fire = actions.FindAction("Fire");
-            //Fire.performed += OnFire;
+            Secondary = actions.FindAction("Secondary");
         }
 
         targetLayer.OnValueChanged += OnTargetLayerChanged;
         targetNetworkObjectId.OnValueChanged += OnTargetNetworkObjectIdChanged;
     }
 
-    // Update is called once per frame
     void Update()
-    {
-
-    }
-
-    public void FixedUpdate()
     {
         if (Fire.IsPressed())
         {
             OnFire();
         }
+
+        if (Secondary.IsPressed())
+        {
+            OnSecondary();
+        }
     }
 
-    public void OnFire()
+    private void OnFire()
     {
         Debug.Log("Fire");
         Fire_performed_ServerRpc();
+    }
+
+    private void OnSecondary()
+    {
+        Debug.Log("Secondary");
+        Secondary_performed_ServerRpc();
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Clickable")
         {
+            
             if (target != null && target.gameObject != other.gameObject)
             {
                 SetTargetLayer_ServerRpc(target.GetComponent<NetworkObject>().NetworkObjectId, 30);
             }
 
             target = other.gameObject;
-
-            int newLayer = (target.GetComponent<Clickable>().percentageFinished < 1) ? 29 : 31;
+            var click = target.GetComponent<Clickable>();
+            int newLayer = (click.percentageFinished < 1) ? 29 : 31;
+            click.OnDeselect();
             SetTargetLayer_ServerRpc(target.GetComponent<NetworkObject>().NetworkObjectId, newLayer);
         }
         else
@@ -69,9 +77,11 @@ public class AimOutline : NetworkBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (target == null) { return; }
+        var click = target.GetComponent<Clickable>();
         if (other.gameObject.tag == "Clickable")
         {
             SetTargetLayer_ServerRpc(target.GetComponent<NetworkObject>().NetworkObjectId, 30);
+            click.OnDeselect();
             target = null;
         }
         else
@@ -80,17 +90,20 @@ public class AimOutline : NetworkBehaviour
         }
     }
 
-    private void OnNetworkInstantiate()
-    {
-
-    }
-
     [ServerRpc]
     private void Fire_performed_ServerRpc()
     {
         if (target == null) { return; }
         var clObj = target.GetComponent<Clickable>();
         clObj.TriggerEvent();
+    }
+
+    [ServerRpc]
+    private void Secondary_performed_ServerRpc()
+    {
+        if (target == null) { return; }
+        var clObj = target.GetComponent<Clickable>();
+        clObj.TriggerSecondary();
     }
 
     [ServerRpc]

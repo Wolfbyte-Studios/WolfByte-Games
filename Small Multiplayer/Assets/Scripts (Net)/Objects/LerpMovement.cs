@@ -32,7 +32,7 @@ public class LerpMovement : NetworkBehaviour
         {
             rb = gameObject.AddComponent<Rigidbody>();
             networkRb = gameObject.AddComponent<NetworkRigidbody>();
-            rb.isKinematic = true;
+            rb.isKinematic = Stationary;
         }
         initialTransform.position = transform.position;
         initialTransform.rotation = transform.rotation;
@@ -70,15 +70,7 @@ public class LerpMovement : NetworkBehaviour
             if (rigBody)
             {
                 LerpToTarget();
-                if (Stationary)
-                {
-
-                    rb.isKinematic = true;
-                }
-                else
-                {
-                    rb.isKinematic = false;
-                }
+                rb.isKinematic = Stationary;
             }
             else
             {

@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class Clickable : NetworkBehaviour
 {
+    public static int ClicksLeft;
+    public bool ClicksCounted;
     public UnityEvent myEvent;
     public UnityEvent OnCoolDown;
     public bool needsToCoolDown;
@@ -82,8 +84,12 @@ public class Clickable : NetworkBehaviour
     }
     public void TriggerEvent()
     {
-        if (myEvent != null)
+        if (myEvent != null )
         {
+            if(ClicksLeft == 0 && ClicksCounted)
+            {
+                return;
+            }
             if (CoolDown)
             {
                 if (coolDown >= Time.time - timeFired)
@@ -95,6 +101,10 @@ public class Clickable : NetworkBehaviour
             timeFired = Time.time;
             Debug.Log("Activation should happen");
             myEvent.Invoke();
+            if(ClicksCounted)
+            {
+                ClicksLeft--;
+            }
             needsToCoolDown = true;
 
         }

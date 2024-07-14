@@ -72,8 +72,18 @@ SketchUpImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: '[Color C08]1'
+    second: {fileID: 2100000, guid: ea5f840cb09ab0142a6d94b683b1d860, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: '[Color D02]'
     second: {fileID: 2100000, guid: a02a7522d18b80448a06377591d7db40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: '[Color E01]'
+    second: {fileID: 2100000, guid: 3bab15df54139f6468c447f4f3502322, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -122,18 +132,68 @@ SketchUpImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: _auto_
+    second: {fileID: 2100000, guid: 498d6844d33f8ec4f8a57b195295cb71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _auto_1
+    second: {fileID: 2100000, guid: 37c4e39f9bb62734c965db061e3b795a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _auto_2
+    second: {fileID: 2100000, guid: 7df73d83eec3b7c4889df6da6d556e9d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _auto_3
+    second: {fileID: 2100000, guid: 985106477a080b8448b6e80acf2ae0c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _auto_4
+    second: {fileID: 2100000, guid: a628ac39780a1ed4e8d3b9eee70d0321, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _auto_5
+    second: {fileID: 2100000, guid: 452a416ea69ab7541af83befb95176b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _auto_6
+    second: {fileID: 2100000, guid: aace44673b686db41871b58dcd288f2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: _defaultMat
     second: {fileID: 2100000, guid: a84fd6fe7d2a35745a3642fe7c2c11af, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
+      name: FLYTCAB1
+    second: {fileID: 2800000, guid: df28492c0642c5d4c8b67214a3063d67, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FLYTCUE1
+    second: {fileID: 2800000, guid: 5d4d6a14b68b0054ba10ab28ec67318b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FLYTCUL1
+    second: {fileID: 2800000, guid: 583c3f2fa1d8ba54794bd5dcaacc3280, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
       name: Grass Light Green
-    second: {fileID: 2800000, guid: 09ce68d7754b9134aabe02ddea209d6a, type: 3}
+    second: {fileID: 2800000, guid: 612a0e5735d2a2946b9745403a153468, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Water_Pool
-    second: {fileID: 2800000, guid: b3a5e0c560ed3764eab9bbc0a2ed4299, type: 3}
+    second: {fileID: 2800000, guid: b6682f44fbb0ab44ca5d407f5efa3f5b, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
@@ -242,8 +302,8 @@ SketchUpImporter:
   assetBundleVariant: 
   generateBackFace: 1
   mergeCoplanarFaces: 0
-  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005b0000005c0000005d0000005e0000005f0000006200000063000000640000006500000066000000670000006a0000006b0000006c0000006d0000006e0000006f0000007000000071000000720000007300000074000000
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005400000055000000560000005700000058000000590000005a0000005d0000005e0000005f00000060000000610000006200000063000000640000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000
   assetHash:
     serializedVersion: 2
-    Hash: b2d831d8b7b5641dc6d1a44660347428
+    Hash: 3bc0f3dee0d3d49f1ae3d534f17503c1
   fileUnit: 0

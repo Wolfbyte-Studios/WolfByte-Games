@@ -12,6 +12,8 @@ public class Clickable : NetworkBehaviour
     public bool needsToCoolDown;
     public bool CoolDown;
     public float coolDown;
+    [Range(0f, 1f)]
+    public float coolDownEarlyPercentage = 1;
     public float timeFired;
     public float timeElapsed;
     public float percentageFinished;
@@ -51,6 +53,10 @@ public class Clickable : NetworkBehaviour
         }
         else
         {
+            if (percentageFinished >= coolDownEarlyPercentage)
+            {
+                OnCoolDown.Invoke();
+            }
             meshRenderer.material = NewMat;
             applyColors(percentageFinished);
         }

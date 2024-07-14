@@ -5,6 +5,7 @@ using Unity.Netcode.Components;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(NetworkRigidbody))]
+[RequireComponent(typeof(NetworkObject))]
 [RequireComponent(typeof(NetworkTransform))]
 public class Spin : NetworkBehaviour
 {
@@ -17,6 +18,7 @@ public class Spin : NetworkBehaviour
     {
         base.OnNetworkSpawn();
         rb = gameObject.GetComponent<Rigidbody>();
+        rb.isKinematic = true;
         oldSpeed = spinSpeed;
     }
 

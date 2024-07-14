@@ -17,6 +17,8 @@ public class JoinAndHost : MonoBehaviour
         transport = NetworkManager.Singleton.GetComponent<UnityTransport>();
         ip = transform.FindDeepChild("IP").GetComponent<TMP_InputField>();
         port = transform.FindDeepChild("Port").GetComponent<TMP_InputField>();
+        ip.text = PlayerPrefs.GetString("IP", ip.text);
+        port.text = PlayerPrefs.GetString("Port", port.text);
         transport.SetConnectionData(ip.text, ushort.Parse( port.text));
     }
 

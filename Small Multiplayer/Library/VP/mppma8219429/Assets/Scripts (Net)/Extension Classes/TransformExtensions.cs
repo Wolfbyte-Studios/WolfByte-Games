@@ -78,7 +78,10 @@ public static class TransformExtensions
 
         return resultList;
     }
-
+    public static Transform FindFirstChildOfType<T>(this Transform aParent) where T : Component
+    {
+       return FindDeepChildrenByType<Transform>(aParent)[0];
+    }
 
 
 public static void LookAtWithStrength(this Transform self, Vector3 targetPosition, float strength)

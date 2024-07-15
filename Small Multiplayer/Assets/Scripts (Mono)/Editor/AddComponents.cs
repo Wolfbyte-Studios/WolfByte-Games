@@ -91,6 +91,6 @@ public class AddComponentsBasedOnName
 
         }
 
-        Debug.Log("Components added based on object names.");
+        //Debug.Log("Components added based on object names.");
     }
 }

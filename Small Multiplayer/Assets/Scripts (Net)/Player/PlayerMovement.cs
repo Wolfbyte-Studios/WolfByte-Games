@@ -69,7 +69,7 @@ public class PlayerMovement : NetworkBehaviour
         if (CanFly)
         {
             OnFly(-FlyForce);
-            Debug.Log("Go down");
+            //Debug.Log("Go down");
             return;
         }
 

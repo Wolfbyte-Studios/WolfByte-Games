@@ -101,6 +101,6 @@ public class Shooter : NetworkBehaviour
             targetPoint = ray.GetPoint(100); // Set a far away point if nothing is hit
         }
 
-        Debug.DrawRay(ray.origin, ray.direction * 100, Color.red, 2.0f);
+        //Debug.DrawRay(ray.origin, ray.direction * 100, Color.red, 2.0f);
     }
 }

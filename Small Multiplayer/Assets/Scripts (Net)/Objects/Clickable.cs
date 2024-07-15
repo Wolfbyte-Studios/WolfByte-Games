@@ -106,7 +106,7 @@ public class Clickable : NetworkBehaviour
                 }
             }
             timeFired = Time.time;
-            Debug.Log("Activation should happen");
+            //Debug.Log("Activation should happen");
             myEvent.Invoke();
             if (ClicksCounted)
             {

@@ -484,7 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d72602f45fff15e4e9fdfa2c0d6467e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIndexTarget: 0
+  playerIndexTarget: 1
   playerCamera: {fileID: 0}
 --- !u!114 &2223605216837713576
 MonoBehaviour:
@@ -916,7 +916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d72602f45fff15e4e9fdfa2c0d6467e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIndexTarget: 1
+  playerIndexTarget: 0
   playerCamera: {fileID: 0}
 --- !u!114 &3249347751654512399
 MonoBehaviour:
@@ -1192,8 +1192,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5319691224319365378}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalRotation: {x: 0, y: 0.9418817, z: -0.33594477, w: 0}
+  m_LocalPosition: {x: 0, y: 7.17, z: 6.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1783,7 +1783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 969061630
+  GlobalObjectIdHash: 245167045
   InScenePlacedSourceGlobalObjectIdHash: 969061630
   AlwaysReplicateAsRoot: 1
   SynchronizeTransform: 0

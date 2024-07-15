@@ -45,7 +45,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3943017326338144122}
-  m_Mesh: {fileID: 4354493314420788051, guid: 56a6e38ce2ee11f48aafdd77b0ff4b1e, type: 3}
+  m_Mesh: {fileID: -4683105882877034633, guid: 56a6e38ce2ee11f48aafdd77b0ff4b1e, type: 3}
 --- !u!23 &1189192755502839293
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -112,7 +112,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 4354493314420788051, guid: 56a6e38ce2ee11f48aafdd77b0ff4b1e, type: 3}
+  m_Mesh: {fileID: -4683105882877034633, guid: 56a6e38ce2ee11f48aafdd77b0ff4b1e, type: 3}
 --- !u!114 &6855752231753029968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2280343904
+  GlobalObjectIdHash: 4099407430
   InScenePlacedSourceGlobalObjectIdHash: 3491404184
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -165,6 +165,15 @@ MonoBehaviour:
   OnCoolDown:
     m_PersistentCalls:
       m_Calls: []
+  onSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  secondaryEvent:
+    m_PersistentCalls:
+      m_Calls: []
   needsToCoolDown: 0
   CoolDown: 1
   coolDown: 10
@@ -192,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transforms:
-  - position: {x: -2.6113951, y: 1.9677, z: 32.34}
+  - position: {x: 6.2394247, y: 1.9677, z: 32.39}
     rotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
     speed: 0
   lerpSpeed: 1
@@ -210,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UseUnreliableDeltas: 1
+  UseUnreliableDeltas: 0
   SyncPositionX: 1
   SyncPositionY: 1
   SyncPositionZ: 1
@@ -220,7 +229,7 @@ MonoBehaviour:
   SyncScaleX: 1
   SyncScaleY: 1
   SyncScaleZ: 1
-  PositionThreshold: 0.000000001
+  PositionThreshold: 0.0001
   RotAngleThreshold: 0.001
   ScaleThreshold: 0.01
   UseQuaternionSynchronization: 0
@@ -228,4 +237,4 @@ MonoBehaviour:
   UseHalfFloatPrecision: 0
   InLocalSpace: 0
   Interpolate: 0
-  SlerpPosition: 1
+  SlerpPosition: 0

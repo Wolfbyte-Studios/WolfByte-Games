@@ -2,8 +2,7 @@ using Unity.Netcode;
 using Unity.Netcode.Components;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(NetworkAnimator))]
+
 public class Poop : NetworkBehaviour
 {
     public static Transform lastPooped;

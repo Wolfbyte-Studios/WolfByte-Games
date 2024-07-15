@@ -12,6 +12,9 @@ public class PlayerMovement : NetworkBehaviour
     public float FlyForce = 50;
     public float jumpHeight;
     public float slowRate;
+    
+
+    public bool Dizzy = false;
 
     public GameObject playerCam;
     public Rigidbody rb;
@@ -20,6 +23,7 @@ public class PlayerMovement : NetworkBehaviour
     public InputAction jump;
     public InputAction crouch;
     public InputAction menu;
+    public Animator anim;
 
     void Start()
     {
@@ -28,6 +32,7 @@ public class PlayerMovement : NetworkBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
 
         var playerInput = gameObject.GetComponent<PlayerInput>();
+        
 
         if (playerInput != null)
         {
@@ -138,7 +143,15 @@ public class PlayerMovement : NetworkBehaviour
     public void OnMove()
     {
         var v = move.ReadValue<Vector2>();
-
+        if (gameObject.GetComponent<PlayerNetworkIndex>().playerIndexTarget != 0)
+        {
+            anim.SetFloat("Forward", v.y);
+            anim.SetFloat("Strafe", v.x);
+        }
+        if (Dizzy)
+        {
+            v.y = Random.Range(-1, 1);
+        }
         // Convert the 2D input into 3D direction relative to the camera
         Vector3 forward = playerCam.transform.forward;
         Vector3 right = playerCam.transform.right;

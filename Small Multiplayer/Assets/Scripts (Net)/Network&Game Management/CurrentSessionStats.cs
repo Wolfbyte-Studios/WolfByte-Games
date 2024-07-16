@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System;
 
 using Unity.Collections;
+using NUnit.Framework;
+using Unity.VisualScripting;
 
 
 
@@ -23,14 +25,14 @@ public class CurrentSessionStats : NetworkBehaviour
     public static CurrentSessionStats Instance { get; private set; }
 
     public static float CurrentNumberOfPlayers;
-    public static float IndexOfSab;
-    public static float IndexOfRunner1;
-    public static float IndexOfRunner2;
-    public static float IndexOfRunner3;
+    public float IndexOfSab;
+    public float IndexOfRunner1;
+    public float IndexOfRunner2;
+    public float IndexOfRunner3;
     public UnityTransport transport;
     public NetworkManager nm;
 
-    public JoinAndHost joinAndHost;
+    
 
     [SerializeField]
     public List<PlayerDataInspector> playersList = new List<PlayerDataInspector>();
@@ -50,14 +52,9 @@ public class CurrentSessionStats : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
-        if (IsServer)
-        {
-            CallMethodClientRpc("setnames");
-        }
-        if (IsClient)
-        {
-            CallMethodServerRpc("setnames");
-        }
+
+        Start();
+
     }
 
     void Start()
@@ -65,47 +62,42 @@ public class CurrentSessionStats : NetworkBehaviour
         nm = NetworkManager.Singleton;
         transport = nm.GetComponent<UnityTransport>();
         playersList = new List<PlayerDataInspector>();
-        joinAndHost = FindFirstObjectByType<JoinAndHost>();
 
-        if (IsServer)
-        {
-
-        }
+        
     }
-
-
-    public void setnames()
+    public void Update()
     {
-
-    }
-    [ClientRpc]
-    public void CallMethodClientRpc(string methodName)
-    {
-        // Use reflection to find the method by name and invoke it
-        var method = GetType().GetMethod(methodName);
-        if (method != null)
-        {
-            method.Invoke(this, null);
-        }
-        else
-        {
-            Debug.LogWarning("Method not found: " + methodName);
-        }
+        UpdateServerRpc();
     }
     [ServerRpc]
-    public void CallMethodServerRpc(string methodName)
+    public void UpdateServerRpc()
     {
-        // Use reflection to find the method by name and invoke it
-        var method = GetType().GetMethod(methodName);
-        if (method != null)
-        {
-            method.Invoke(this, null);
-        }
-        else
-        {
-            Debug.LogWarning("Method not found: " + methodName);
-        }
-        CallMethodClientRpc(methodName);
+        GetPlayers();
+        UpdateClientRpc();
     }
+    [ClientRpc]
+    public void UpdateClientRpc()
+    {
+        GetPlayers();
+    }
+    public void GetPlayers()
+    {
+        foreach(var player in nm.ConnectedClientsIds)
+        {
+            var playerObj = nm.ConnectedClientsList[0].PlayerObject;
+            var name = playerObj.GetComponentInChildren<NameTag>(false).name;
+            PlayerDataInspector p = new PlayerDataInspector();
+            p.clientId = playerObj.OwnerClientId;
+            p.name = name;
+            if (!playersList.Contains(p))
+            {
+                playersList.Add(p);
+            }
+        }
+        //playersList.Add(;
+    }
+
+    
+   
 
 }

@@ -10,24 +10,24 @@ public class SetTextToPlayerName : NetworkBehaviour
     public int playerIndex;
     private void Start()
     {
-        label = GetComponent<TMP_Text>();
+        
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
-        UpdatePlayerName();
+        //UpdatePlayerName();
         label = GetComponent<TMP_Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        UpdatePlayerName();
+       // UpdatePlayerName();
     }
 
-    private void UpdatePlayerName()
+    /*private void UpdatePlayerName()
     {
         if (playerIndex >= 0 && playerIndex < CurrentSessionStats.Instance.playersListInspector.Count)
         {
@@ -37,5 +37,5 @@ public class SetTextToPlayerName : NetworkBehaviour
         {
             label.text = "Unknown";
         }
-    }
+    }*/
 }

@@ -1260,6 +1260,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &5786621515394323032
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,7 +2288,6 @@ GameObject:
   - component: {fileID: 1372200024660853007}
   - component: {fileID: 3627133010764614689}
   - component: {fileID: 5238437099878167529}
-  - component: {fileID: 8500523271700688310}
   m_Layer: 0
   m_Name: Network Manager
   m_TagString: Untagged
@@ -2351,10 +2362,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ProtocolType: 0
-  m_UseWebSockets: 1
+  m_UseWebSockets: 0
   m_UseEncryption: 0
-  m_MaxPacketQueueSize: 128
-  m_MaxPayloadSize: 6144
+  m_MaxPacketQueueSize: 1280
+  m_MaxPayloadSize: 61440
   m_HeartbeatTimeoutMS: 500
   m_ConnectTimeoutMS: 1000
   m_MaxConnectAttempts: 60
@@ -2379,21 +2390,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fb5776f4eb3925499ec49e88c729110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8500523271700688310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6952471791360668892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa414141cf0909d468d8f6ce0adbe83f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transport: {fileID: 0}
-  nm: {fileID: 0}
-  players: []
 --- !u!1 &6997230930826123841
 GameObject:
   m_ObjectHideFlags: 0
@@ -2726,6 +2722,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &7325639395272244740
 GameObject:

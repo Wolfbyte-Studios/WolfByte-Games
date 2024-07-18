@@ -25,8 +25,11 @@ public class PlayerMovement : NetworkBehaviour
     public InputAction menu;
     public Animator anim;
 
-    void Start()
+    public void Start()
     {
+        
+    
+    
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         rb = gameObject.GetComponent<Rigidbody>();

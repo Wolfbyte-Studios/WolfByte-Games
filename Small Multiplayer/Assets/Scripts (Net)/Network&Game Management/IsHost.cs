@@ -26,7 +26,7 @@ public class IsHost : NetworkBehaviour
                 }
                 return;
                 case forHostOrClient.Client:
-                if (!IsClient)
+                if (IsHost)
                 {
                     this.gameObject.SetActive(false);
                 }

@@ -36,6 +36,12 @@ public class GameManagementEvents : MonoBehaviour
             }
         }
     }
+    private void OnEnable()
+    {
+        OnStateChanged(state);
+        OnModeChanged(mode);
+    }
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -73,10 +79,13 @@ public class GameManagementEvents : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        check();
+    }
+    public void check()
+    {
         if (!CurrentSessionStats.Instance.netActive)
         { return; }
         State = CurrentSessionStats.Instance.GameState.Value;
         Mode = CurrentSessionStats.Instance.GameMode.Value;
-        Debug.Log("Should be changning game modes");
     }
 }

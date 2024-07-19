@@ -24,18 +24,33 @@ public class PlayerMovement : NetworkBehaviour
     public InputAction crouch;
     public InputAction menu;
     public Animator anim;
+    private PlayerNetworkIndex PLI;
 
-    public void Start()
+    public override void OnNetworkSpawn()
     {
-        
-    
-    
+        base.OnNetworkSpawn();
+        Setup();
+        DontDestroyOnLoad(gameObject.transform.parent.gameObject);
+
+    }
+    public void OnEnable()
+    {
+        Setup();
+    }
+    public void OnDisable()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+    public void Setup()
+    {
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         rb = gameObject.GetComponent<Rigidbody>();
 
         var playerInput = gameObject.GetComponent<PlayerInput>();
-        
+        PLI = gameObject.GetComponent<PlayerNetworkIndex>();
 
         if (playerInput != null)
         {
@@ -47,9 +62,9 @@ public class PlayerMovement : NetworkBehaviour
             crouch = actions.FindAction("Crouch");
             crouch.performed += OnCrouch;
         }
-        playerCam = gameObject.transform.FindDeepChildByTag("MainCamera").gameObject;
+        playerCam = PLI.playerCamera.gameObject;
         playerCam.transform.parent = gameObject.transform.parent;
-        if (gameObject.GetComponent<PlayerNetworkIndex>().playerIndexTarget == 0)
+        if (PLI.PlayerType == PlayerNetworkIndex.playerType.Sab)
         {
             CanFly = true;
         }
@@ -64,7 +79,6 @@ public class PlayerMovement : NetworkBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        throw new System.NotImplementedException();
     }
 
     public void OnCrouch(InputAction.CallbackContext obj)
@@ -77,7 +91,7 @@ public class PlayerMovement : NetworkBehaviour
         }
 
         //Add crouch animation
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 
     public void OnJump()
@@ -99,12 +113,12 @@ public class PlayerMovement : NetworkBehaviour
 
     void Update()
     {
-
+        
     }
 
     public void FaceCamera()
     {
-        if (gameObject.GetComponent<PlayerNetworkIndex>().playerIndexTarget == 0)
+        if (PLI.PlayerType == PlayerNetworkIndex.playerType.Sab)
         {
             gameObject.transform.eulerAngles = new Vector3(playerCam.transform.eulerAngles.x, playerCam.transform.eulerAngles.y, playerCam.transform.eulerAngles.z);
             return;
@@ -146,7 +160,7 @@ public class PlayerMovement : NetworkBehaviour
     public void OnMove()
     {
         var v = move.ReadValue<Vector2>();
-        if (gameObject.GetComponent<PlayerNetworkIndex>().playerIndexTarget != 0)
+        if (PLI.PlayerType == PlayerNetworkIndex.playerType.Runner)
         {
             anim.SetFloat("Forward", v.y);
             anim.SetFloat("Strafe", v.x);

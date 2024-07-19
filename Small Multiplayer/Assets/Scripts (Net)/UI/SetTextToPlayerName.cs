@@ -42,7 +42,7 @@ public class SetTextToPlayerName : NetworkBehaviour
         }
         else
         {
-            label.text = "Unknown";
+            label.text = "";
         }
     }
 }

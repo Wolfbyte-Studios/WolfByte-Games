@@ -11,7 +11,6 @@ public class LobbyPedestal : NetworkBehaviour
     public List<GameObject> target;
     public List<GameObject> players;
     public GameObject pedestal;
-    public int test = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public override void OnNetworkSpawn()
     {
@@ -64,7 +63,6 @@ public class LobbyPedestal : NetworkBehaviour
 
             //Debug.Log(player.name);
             int id = (int)player.transform.parent.GetComponent<NetworkObject>().OwnerClientId;
-            test = id;
             pedestal = pedestalParent.transform.Find("Player " + (id + 1).ToString()).gameObject;
 
             if (!target.Contains(pedestal))
@@ -73,6 +71,7 @@ public class LobbyPedestal : NetworkBehaviour
             }
 
             player.transform.position = target[id].transform.position;
+            player.transform.localEulerAngles = new Vector3(0, 180, 0);
         }
     }
 }

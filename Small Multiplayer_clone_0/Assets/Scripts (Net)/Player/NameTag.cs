@@ -8,8 +8,7 @@ using Unity.Collections;
 
 public class NameTag : NetworkBehaviour
 {
-    public NetworkVariable<FixedString64Bytes> Name = new NetworkVariable<FixedString64Bytes>(
-        new FixedString64Bytes("FUCK"),
+    public NetworkVariable<FixedString128Bytes> pName = new NetworkVariable<FixedString128Bytes>(default,
         NetworkVariableReadPermission.Everyone,
         NetworkVariableWritePermission.Owner
     );
@@ -19,23 +18,23 @@ public class NameTag : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
-        Start();
+        if (IsOwner)
+        {
+            pName.Value = PlayerPrefs.GetString("Name", "Toast");
+
+        }
     }
 
     public void Start()
     {
-        if (IsOwner)
-        {
-            Name.Value = PlayerPrefs.GetString("Name", "Toast");
-
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        localname = Name.Value.ToString();
+        localname = pName.Value.ToString();
 
         // Update logic (if any) goes here
     }

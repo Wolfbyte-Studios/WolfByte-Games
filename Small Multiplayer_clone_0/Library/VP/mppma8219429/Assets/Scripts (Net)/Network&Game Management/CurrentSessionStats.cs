@@ -4,31 +4,51 @@ using Unity.Netcode.Transports.UTP;
 using TMPro;
 using System.Collections.Generic;
 using System;
-
-using Unity.Collections;
-using NUnit.Framework;
+using UnityEngine.Rendering;
 using Unity.VisualScripting;
+using AYellowpaper.SerializedCollections;
+using Unity.Collections;
 
-[Serializable]
-public struct PlayerDataInspector
+[System.Serializable]
+public struct PlayerData : IEquatable<PlayerData>, INetworkSerializeByMemcpy
 {
     public ulong clientId;
-    public string name;
-    public GameObject PlayerParent;
+    public FixedString64Bytes name;
+
+    public bool Equals(PlayerData other)
+    {
+        return clientId == other.clientId && name.Equals(other.name);
+    }
+
+    public override bool Equals(object obj)
+    {
+        return obj is PlayerData other && Equals(other);
+    }
+
+    public override int GetHashCode()
+    {
+        return (clientId, name).GetHashCode();
+    }
+
+    public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
+    {
+        serializer.SerializeValue(ref clientId);
+        serializer.SerializeValue(ref name);
+    }
 }
 
+[GenerateSerializationForType(typeof(PlayerData))]
 public class CurrentSessionStats : NetworkBehaviour
 {
     public static CurrentSessionStats Instance { get; private set; }
-
     public static float CurrentNumberOfPlayers;
-    public float IndexOfSab;
-    public float IndexOfRunner1;
-    public float IndexOfRunner2;
-    public float IndexOfRunner3;
+    public bool netActive = false;
+    public NetworkVariable<int> IndexOfSab = new NetworkVariable<int>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     public UnityTransport transport;
     public NetworkManager nm;
     public GameObject playertemp;
+    public PlayerData lastPlayer;
+    public List<NetworkClient> clients = new List<NetworkClient>();
 
     public enum GameStateEnum
     {
@@ -42,130 +62,99 @@ public class CurrentSessionStats : NetworkBehaviour
         Standard
     }
 
-    public GameStateEnum GameState;
-    public GameModeEnum GameMode;
+    public NetworkVariable<GameModeEnum> GameMode = new NetworkVariable<GameModeEnum>(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+    public NetworkVariable<GameStateEnum> GameState = new NetworkVariable<GameStateEnum>(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+    public NetworkList<PlayerData> playersList = new NetworkList<PlayerData>(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+    public List<string> playernames = new List<string>();
 
-    [SerializeField]
-    public List<PlayerDataInspector> playersList = new List<PlayerDataInspector>();
-
-    void Awake()
+    public void Start()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
+        DontDestroyOnLoad(this);
+        Instance = this;
     }
 
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
-        Start();
-    }
-
-    void Start()
-    {
         nm = NetworkManager.Singleton;
-        transport = nm.GetComponent<UnityTransport>();
-        playersList = new List<PlayerDataInspector>();
+        Instance = this;
     }
 
-    void Update()
+    public void Update()
     {
-        if (IsServer)
+        netActive = NetworkManager.Singleton.IsListening;
+        playernames.Clear();
+        foreach (var player in playersList)
         {
-            UpdateServerRpc();
-        }
-    }
-
-    [ServerRpc(RequireOwnership = false)]
-    public void UpdateServerRpc()
-    {
-        GetPlayers();
-        UpdateGame();
-        UpdateGameServerRpc();
-        UpdateClientRpc();
-    }
-
-    [ClientRpc]
-    public void UpdateClientRpc()
-    {
-        GetPlayers();
-    }
-
-    [ServerRpc(RequireOwnership = false)]
-    public void UpdateGameServerRpc()
-    {
-        UpdateGame();
-        UpdateGameClientRpc();
-    }
-
-    [ClientRpc]
-    public void UpdateGameClientRpc()
-    {
-        UpdateGame();
-    }
-
-    public void UpdateGame()
-    {
-        switch (GameMode)
-        {
-            case GameModeEnum.Standard:
-                break;
+            playernames.Add(player.name.ToString());
         }
 
-        switch (GameState)
+        NetworkUtils.RpcHandler(this, GetPlayers);
+        Debug.Log("I am Server");
+    }
+
+    [ContextMenu("Rotate Players")]
+    public void RotatePlayers()
+    {
+        NetworkUtils.RpcHandler(this, doRotation);
+    }
+    public void doRotation() 
+    {
+        if (!IsServer) return;
+        var oldValue = IndexOfSab.Value;
+        IndexOfSab.Value = UnityEngine.Random.Range(0, playersList.Count);
+        if (playersList.Count > 1)
         {
-            case GameStateEnum.InGame:
-                foreach (PlayerDataInspector player in playersList)
+            if (oldValue == IndexOfSab.Value)
+            {
+                Start:
+                IndexOfSab.Value = UnityEngine.Random.Range(0, playersList.Count);
+                if (oldValue == IndexOfSab.Value)
                 {
-                    var rigidbody = player.PlayerParent.GetComponentInChildren<Rigidbody>(false);
-                    var playerMovement = player.PlayerParent.GetComponentInChildren<PlayerMovement>(false);
-                    if (rigidbody != null) rigidbody.isKinematic = false;
-                    if (playerMovement != null) playerMovement.enabled = true;
+                    goto Start;
                 }
-                break;
+            }
+        }
+        foreach (var p in NetworkManager.Singleton.ConnectedClientsList)
+        {
+            var refreshScript = p.PlayerObject.gameObject.GetComponentsInChildren<PlayerNetworkIndex>(true);
+            foreach (var script in refreshScript)
+            {
+                script.gameObject.SetActive(true);
+                StartCoroutine(script.delay());
+            }
 
-            case GameStateEnum.UI:
-                foreach (PlayerDataInspector player in playersList)
-                {
-                    var rigidbody = player.PlayerParent.GetComponentInChildren<Rigidbody>(false);
-                    var playerMovement = player.PlayerParent.GetComponentInChildren<PlayerMovement>(false);
-                    if (rigidbody != null) rigidbody.isKinematic = true;
-                    if (playerMovement != null) playerMovement.enabled = false;
-                }
-                break;
-
-            case GameStateEnum.Other:
-                break;
         }
     }
 
     public void GetPlayers()
     {
-        
-            playersList.Clear(); // Ensure we start fresh each time we get players
+        if (IsServer)
+        {
+            clients.Clear();
+            foreach (NetworkClient n in nm.ConnectedClientsList)
+            {
+                clients.Add(n);
+            }
 
-            foreach (var player in nm.ConnectedClientsList)
+            playersList.Clear();
+
+            foreach (var player in clients)
             {
                 var playerObj = player.PlayerObject;
+                Debug.Log(playerObj.name);
                 var nameTag = playerObj.gameObject.GetComponentInChildren<NameTag>(false);
 
                 if (nameTag != null)
                 {
-                    string name = nameTag.name;
-                    PlayerDataInspector p = new PlayerDataInspector
+                    string name = nameTag.pName.Value.ToString();
+                    PlayerData p = new PlayerData
                     {
                         clientId = playerObj.OwnerClientId,
-                        name = name,
-                        PlayerParent = playerObj.gameObject
+                        name = name
                     };
 
-                    if (!playersList.Exists(pl => pl.clientId == p.clientId))
+                    if (!playersList.Contains(p))
                     {
                         playersList.Add(p);
                     }
@@ -175,8 +164,6 @@ public class CurrentSessionStats : NetworkBehaviour
                     Debug.LogWarning($"PlayerObject for ClientId {playerObj.OwnerClientId} does not have a NameTag component.");
                 }
             }
-
-            Debug.Log($"Updated playersList with {playersList.Count} players.");
-        
+        }
     }
 }

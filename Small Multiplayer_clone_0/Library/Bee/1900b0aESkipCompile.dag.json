@@ -29,7 +29,7 @@
       "DisplayName": "Writing 6097564273297756792.rsp",
       "ActionType": "WriteFile",
       "PayloadOffset": 83,
-      "PayloadLength": 9813,
+      "PayloadLength": 10032,
       "PayloadDebugContentSnippet": "-a=\"C:\\Users\\user1\\3d zeldaish",
       "Inputs": [],
       "InputFlags": [],
@@ -49,6 +49,8 @@
         "C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Tools/netcorerun/netcorerun.exe",
         "C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Tools/BuildPlayerDataGenerator/BuildPlayerDataGenerator.exe",
         "Library/ScriptAssemblies/Assembly-CSharp.dll",
+        "Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll",
+        "Library/ScriptAssemblies/AYellowpaper.SerializedCollections.dll",
         "Library/ScriptAssemblies/IngameDebugConsole.Runtime.dll",
         "Library/ScriptAssemblies/Unity.Burst.dll",
         "Library/ScriptAssemblies/Unity.Cinemachine.dll",
@@ -122,6 +124,8 @@
         "Library/Bee/artifacts/rsp/6097564273297756792.rsp"
       ],
       "InputFlags": [
+        0,
+        0,
         0,
         0,
         0,
@@ -387,7 +391,13 @@
       "File": "Library/PackageCache/com.unity.visualscripting/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
     },
     {
+      "File": "Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll"
+    },
+    {
       "File": "Library/ScriptAssemblies/Assembly-CSharp.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/AYellowpaper.SerializedCollections.dll"
     },
     {
       "File": "Library/ScriptAssemblies/IngameDebugConsole.Runtime.dll"

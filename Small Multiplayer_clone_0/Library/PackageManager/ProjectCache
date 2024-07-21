@@ -566,8 +566,10 @@ m_ResolvedPackages:
     - 1.8.0
     - 1.8.1
     - 1.8.2
+    - 1.9.0
     compatible:
     - 1.8.2
+    - 1.9.0
     recommended: 1.8.2
     deprecated: []
   dependencies:
@@ -693,6 +695,7 @@ m_ResolvedPackages:
     - 1.3.0-exp.1
     - 1.3.0-exp.2
     - 1.3.0-exp.3
+    - 1.3.0-exp.4
     compatible:
     - 1.1.0
     - 1.2.0
@@ -700,6 +703,7 @@ m_ResolvedPackages:
     - 1.3.0-exp.1
     - 1.3.0-exp.2
     - 1.3.0-exp.3
+    - 1.3.0-exp.4
     recommended: 1.1.0
     deprecated: []
   dependencies:
@@ -5257,7 +5261,7 @@ m_ResolvedPackages:
     - 2.1.0
     - 2.2.1
     - 2.3.0
-    recommended: 2.2.1
+    recommended: 2.3.0
     deprecated: []
   dependencies:
   - name: com.unity.collections
@@ -5309,7 +5313,7 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 2.1.0
     nextVersion: 
-    recommendedVersion: 2.2.1
+    recommendedVersion: 2.3.0
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
@@ -6750,11 +6754,13 @@ m_ResolvedPackages:
     - 2.4.1
     - 2.4.2
     - 2.5.0-exp.1
+    - 2.5.0-pre.2
     compatible:
     - 2.4.0
     - 2.4.1
     - 2.4.2
     - 2.5.0-exp.1
+    - 2.5.0-pre.2
     recommended: 2.4.2
     deprecated: []
   dependencies:

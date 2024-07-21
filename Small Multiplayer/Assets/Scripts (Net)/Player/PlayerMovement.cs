@@ -2,6 +2,7 @@ using UnityEngine;
 using Unity.Netcode;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using Unity.Cinemachine;
 
 public class PlayerMovement : NetworkBehaviour
 {
@@ -72,12 +73,29 @@ public class PlayerMovement : NetworkBehaviour
         {
             CanFly = false;
         }
+        playerCam.gameObject.GetComponent<CinemachineCamera>().Follow = this.gameObject.transform;
+        if(PLI.PlayerType == PlayerNetworkIndex.playerType.Runner)
+        {
+            playerCam.gameObject.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(0, 2, 0);
+        }
+
     }
 
     private void Menu_performed(InputAction.CallbackContext obj)
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        bool on = Cursor.visible;
+        if(on)
+        {
+
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        
 
     }
 

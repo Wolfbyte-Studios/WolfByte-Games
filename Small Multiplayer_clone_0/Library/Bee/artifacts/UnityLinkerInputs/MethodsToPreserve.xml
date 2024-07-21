@@ -3,6 +3,10 @@
 		<type fullname="HoldItem">
 			<method name="Throw"/>
 			<method name="Throw"/>
+			<method name="Throw"/>
+			<method name="Throw"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
 			<method name="Trigger"/>
 			<method name="Trigger"/>
 		</type>
@@ -33,9 +37,17 @@
 			<method name="Trigger"/>
 			<method name="Trigger"/>
 			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
 		</type>
 		<type fullname="Nudge">
 			<method name="TriggerShake"/>
+			<method name="TriggerShake"/>
+		</type>
+		<type fullname="SceneManagement">
+			<method name="LoadScene"/>
 		</type>
 		<type fullname="SetName">
 			<method name="Set"/>
@@ -51,6 +63,12 @@
 			<method name="Reset"/>
 			<method name="Reset"/>
 			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="sink"/>
+			<method name="sink"/>
+			<method name="sink"/>
 			<method name="sink"/>
 			<method name="sink"/>
 			<method name="sink"/>
@@ -78,6 +96,50 @@
 			<method name="OverrideSpeed"/>
 			<method name="OverrideSpeed"/>
 			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="OverrideSpeed"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
+			<method name="Reset"/>
 			<method name="Reset"/>
 			<method name="Reset"/>
 			<method name="Reset"/>
@@ -132,6 +194,26 @@
 		<type fullname="UnityEngine.Behaviour">
 			<method name="set_enabled"/>
 			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
 		</type>
 		<type fullname="UnityEngine.GameObject">
 			<method name="SetActive"/>
@@ -146,6 +228,40 @@
 			<method name="SetActive"/>
 			<method name="SetActive"/>
 			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+		</type>
+	</assembly>
+	<assembly fullname="UnityEngine.PhysicsModule" ignoreIfMissing="1">
+		<type fullname="UnityEngine.Rigidbody">
+			<method name="set_isKinematic"/>
+			<method name="set_isKinematic"/>
+			<method name="set_isKinematic"/>
+			<method name="set_isKinematic"/>
+			<method name="set_isKinematic"/>
+			<method name="set_isKinematic"/>
+			<method name="set_isKinematic"/>
+			<method name="set_isKinematic"/>
+			<method name="set_isKinematic"/>
+			<method name="set_isKinematic"/>
+			<method name="set_isKinematic"/>
+			<method name="set_isKinematic"/>
+			<method name="set_isKinematic"/>
+			<method name="set_isKinematic"/>
+			<method name="set_isKinematic"/>
+			<method name="set_isKinematic"/>
+			<method name="set_isKinematic"/>
+			<method name="set_isKinematic"/>
+			<method name="set_isKinematic"/>
+			<method name="set_isKinematic"/>
 		</type>
 	</assembly>
 </linker>

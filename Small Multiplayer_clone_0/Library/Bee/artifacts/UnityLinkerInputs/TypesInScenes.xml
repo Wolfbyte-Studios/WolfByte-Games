@@ -6,7 +6,9 @@
 		<type fullname="CurrentSessionStats" preserve="nothing"/>
 		<type fullname="Dizzy" preserve="nothing"/>
 		<type fullname="FaceCamera" preserve="nothing"/>
+		<type fullname="GameManagementEvents" preserve="nothing"/>
 		<type fullname="HoldItem" preserve="nothing"/>
+		<type fullname="IsHost" preserve="nothing"/>
 		<type fullname="JoinAndHost" preserve="nothing"/>
 		<type fullname="LerpMovement" preserve="nothing"/>
 		<type fullname="LobbyPedestal" preserve="nothing"/>
@@ -17,9 +19,11 @@
 		<type fullname="PlayerMovement" preserve="nothing"/>
 		<type fullname="PlayerNetworkIndex" preserve="nothing"/>
 		<type fullname="Poop" preserve="nothing"/>
+		<type fullname="SceneManagement" preserve="nothing"/>
 		<type fullname="SetName" preserve="nothing"/>
 		<type fullname="SetTextToPlayerName" preserve="nothing"/>
 		<type fullname="Sink" preserve="nothing"/>
+		<type fullname="SpawnManagement" preserve="nothing"/>
 		<type fullname="Spin" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="IngameDebugConsole.Runtime">
@@ -48,9 +52,6 @@
 		<type fullname="UnityEngine.InputSystem.PlayerInput" preserve="nothing"/>
 		<type fullname="UnityEngine.InputSystem.RemoteInputPlayerConnection" preserve="nothing"/>
 		<type fullname="UnityEngine.InputSystem.UI.InputSystemUIInputModule" preserve="nothing"/>
-	</assembly>
-	<assembly fullname="Unity.Multiplayer.Tools.Common">
-		<type fullname="Unity.Multiplayer.Tools.Common.RuntimeUpdaterBehaviour" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.Netcode.Components">
 		<type fullname="Unity.Netcode.Components.NetworkAnimator" preserve="nothing"/>

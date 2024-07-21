@@ -24,18 +24,25 @@ public class SetTextToPlayerName : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-       // UpdatePlayerName();
+        if (CurrentSessionStats.Instance.netActive)
+        {
+            
+
+
+                NetworkUtils.RpcHandler(this, UpdatePlayerName);
+            
+        }
     }
 
-    /*private void UpdatePlayerName()
+    private void UpdatePlayerName()
     {
-        if (playerIndex >= 0 && playerIndex < CurrentSessionStats.Instance.playersListInspector.Count)
+        if (playerIndex >= 0 && playerIndex < CurrentSessionStats.Instance.playersList.Count)
         {
-            label.text = CurrentSessionStats.Instance.playersListInspector[playerIndex].name;
+            label.text = CurrentSessionStats.Instance.playersList[playerIndex].name.Value.ToString();
         }
         else
         {
-            label.text = "Unknown";
+            label.text = "";
         }
-    }*/
+    }
 }

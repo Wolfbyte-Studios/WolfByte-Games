@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638562670235725554
-    m_Hash: 3608770453
+      ticks: 638571233402052727
+    m_Hash: 791616655
   m_LockFileStatus:
     m_FilePath: C:/Users/user1/3d zeldaish/Small Multiplayer/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638562670235770646
-    m_Hash: 3080797900
+      ticks: 638571233402092765
+    m_Hash: 193351344
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,6 +22,72 @@ m_LocalPackages:
 m_ProjectPath: C:/Users/user1/3d zeldaish/Small Multiplayer/Packages
 m_EditorVersion: 6000.0.5f1 (17028576122a)
 m_ResolvedPackages:
+- packageId: com.rlabrecque.steamworks.net@https://github.com/rlabrecque/Steamworks.NET.git?path=/com.rlabrecque.steamworks.net#20.2.0
+  testable: 0
+  isDirectDependency: 1
+  version: 20.2.0
+  source: 5
+  resolvedPath: C:\Users\user1\3d zeldaish\Small Multiplayer\Library\PackageCache\com.rlabrecque.steamworks.net
+  assetPath: Packages/com.rlabrecque.steamworks.net
+  name: com.rlabrecque.steamworks.net
+  displayName: Steamworks.NET
+  author:
+    name: Riley Labrecque
+    email: support@rileylabrecque.com
+    url: https://steamworks.github.io
+  category: 
+  type: 
+  description: Steamworks.NET is a C# Wrapper for Valve's Steamworks API.
+  errors: []
+  versions:
+    all: []
+    compatible: []
+    recommended: 
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - steam
+  - steamworks
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: git+https://github.com/rlabrecque/Steamworks.NET.git?path=/com.rlabrecque.steamworks.net
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: a3fe8091f7237eef3f38becc3faa29b2dc6f9ce9
+    revision: 20.2.0
+  upmReserved: 
+  assetStore:
+    productId: 
+  fingerprint: 84080693369960b34634a9b3cdfb95a8b1c53e1f
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 
+    minimumUnityVersion: 2019.4.0a1
 - packageId: com.unity.cinemachine@3.1.1
   testable: 0
   isDirectDependency: 1
@@ -566,8 +632,10 @@ m_ResolvedPackages:
     - 1.8.0
     - 1.8.1
     - 1.8.2
+    - 1.9.0
     compatible:
     - 1.8.2
+    - 1.9.0
     recommended: 1.8.2
     deprecated: []
   dependencies:
@@ -692,12 +760,16 @@ m_ResolvedPackages:
     - 1.2.1
     - 1.3.0-exp.1
     - 1.3.0-exp.2
+    - 1.3.0-exp.3
+    - 1.3.0-exp.4
     compatible:
     - 1.1.0
     - 1.2.0
     - 1.2.1
     - 1.3.0-exp.1
     - 1.3.0-exp.2
+    - 1.3.0-exp.3
+    - 1.3.0-exp.4
     recommended: 1.1.0
     deprecated: []
   dependencies:
@@ -5255,7 +5327,7 @@ m_ResolvedPackages:
     - 2.1.0
     - 2.2.1
     - 2.3.0
-    recommended: 2.2.1
+    recommended: 2.3.0
     deprecated: []
   dependencies:
   - name: com.unity.collections
@@ -5307,7 +5379,7 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 2.1.0
     nextVersion: 
-    recommendedVersion: 2.2.1
+    recommendedVersion: 2.3.0
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
@@ -6748,11 +6820,13 @@ m_ResolvedPackages:
     - 2.4.1
     - 2.4.2
     - 2.5.0-exp.1
+    - 2.5.0-pre.2
     compatible:
     - 2.4.0
     - 2.4.1
     - 2.4.2
     - 2.5.0-exp.1
+    - 2.5.0-pre.2
     recommended: 2.4.2
     deprecated: []
   dependencies:

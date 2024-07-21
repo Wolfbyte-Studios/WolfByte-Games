@@ -7,7 +7,9 @@ ScriptsOnlyBuild:
     - CurrentSessionStats
     - Dizzy
     - FaceCamera
+    - GameManagementEvents
     - HoldItem
+    - IsHost
     - JoinAndHost
     - LerpMovement
     - LobbyPedestal
@@ -18,9 +20,11 @@ ScriptsOnlyBuild:
     - PlayerMovement
     - PlayerNetworkIndex
     - Poop
+    - SceneManagement
     - SetName
     - SetTextToPlayerName
     - Sink
+    - SpawnManagement
     - Spin
     IngameDebugConsole.Runtime.dll:
     - IngameDebugConsole.DebugLogItem
@@ -46,8 +50,6 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.PlayerInput
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
     - UnityEngine.InputSystem.UI.InputSystemUIInputModule
-    Unity.Multiplayer.Tools.Common.dll:
-    - Unity.Multiplayer.Tools.Common.RuntimeUpdaterBehaviour
     Unity.Netcode.Components.dll:
     - Unity.Netcode.Components.NetworkAnimator
     - Unity.Netcode.Components.NetworkRigidbody
@@ -219,7 +221,10 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
     Assembly-CSharp:
+    - .CurrentSessionStats/GameModeEnum
+    - .CurrentSessionStats/GameStateEnum
     - .LerpMovement/TransformData
+    - .PlayerData
     - CR.CleanOutlineCustomPass
     - CR.CleanOutlineDebugModeParameter
     - CR.OutlineDepthSampleParameter
@@ -237,6 +242,12 @@ ScriptsOnlyBuild:
     - Unity.Cinemachine.LensSettings/PhysicalSettings
     - Unity.Cinemachine.PrioritySettings
     - Unity.Cinemachine.TargetTracking.TrackerSettings
+    Unity.Collections:
+    - Unity.Collections.FixedBytes126
+    - Unity.Collections.FixedBytes16
+    - Unity.Collections.FixedBytes62
+    - Unity.Collections.FixedString128Bytes
+    - Unity.Collections.FixedString64Bytes
     Unity.InputSystem:
     - UnityEngine.InputSystem.InputAction
     - UnityEngine.InputSystem.InputActionMap
@@ -244,6 +255,7 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.InputControlScheme
     - UnityEngine.InputSystem.InputControlScheme/DeviceRequirement
     - UnityEngine.InputSystem.InputSettings/iOSSettings
+    - UnityEngine.InputSystem.PlayerInput/ActionEvent
     - UnityEngine.InputSystem.PlayerInput/ControlsChangedEvent
     - UnityEngine.InputSystem.PlayerInput/DeviceLostEvent
     - UnityEngine.InputSystem.PlayerInput/DeviceRegainedEvent
@@ -252,6 +264,7 @@ ScriptsOnlyBuild:
     - Unity.Netcode.NetworkConfig
     - Unity.Netcode.NetworkPrefab
     - Unity.Netcode.NetworkPrefabs
+    - Unity.Netcode.NetworkVariable`1
     - Unity.Netcode.Transports.UTP.UnityTransport/ConnectionAddressData
     - Unity.Netcode.Transports.UTP.UnityTransport/SimulatorParameters
     Unity.ProBuilder:
@@ -559,6 +572,69 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.Behaviour
     methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneManagement
+    methodName: LoadScene
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
     methodName: OnAction
@@ -737,6 +813,9 @@ ScriptsOnlyBuild:
     fullTypeName: LerpMovement
     methodName: Trigger
   - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
+  - assembly: Assembly-CSharp
     fullTypeName: HoldItem
     methodName: Trigger
   - assembly: Assembly-CSharp
@@ -748,6 +827,63 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: HoldItem
     methodName: Throw
+  - assembly: Assembly-CSharp
+    fullTypeName: Sink
+    methodName: sink
+  - assembly: Assembly-CSharp
+    fullTypeName: Sink
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Sink
+    methodName: sink
+  - assembly: Assembly-CSharp
+    fullTypeName: Sink
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Sink
+    methodName: sink
+  - assembly: Assembly-CSharp
+    fullTypeName: Sink
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
+  - assembly: Assembly-CSharp
+    fullTypeName: Nudge
+    methodName: TriggerShake
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -812,26 +948,233 @@ ScriptsOnlyBuild:
     fullTypeName: LerpMovement
     methodName: Trigger
   - assembly: Assembly-CSharp
-    fullTypeName: Sink
-    methodName: sink
+    fullTypeName: HoldItem
+    methodName: Trigger
   - assembly: Assembly-CSharp
-    fullTypeName: Sink
+    fullTypeName: HoldItem
+    methodName: Throw
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
     methodName: Reset
   - assembly: Assembly-CSharp
-    fullTypeName: Sink
-    methodName: sink
+    fullTypeName: Spin
+    methodName: OverrideSpeed
   - assembly: Assembly-CSharp
-    fullTypeName: Sink
+    fullTypeName: Spin
     methodName: Reset
   - assembly: Assembly-CSharp
-    fullTypeName: Sink
-    methodName: sink
+    fullTypeName: Spin
+    methodName: OverrideSpeed
   - assembly: Assembly-CSharp
-    fullTypeName: Sink
+    fullTypeName: Spin
     methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: OverrideSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: Spin
+    methodName: Reset
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
   - assembly: Assembly-CSharp
     fullTypeName: LerpMovement
     methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Throw
+  - assembly: Assembly-CSharp
+    fullTypeName: Sink
+    methodName: sink
+  - assembly: Assembly-CSharp
+    fullTypeName: Sink
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Sink
+    methodName: sink
+  - assembly: Assembly-CSharp
+    fullTypeName: Sink
+    methodName: Reset
+  - assembly: Assembly-CSharp
+    fullTypeName: Sink
+    methodName: sink
+  - assembly: Assembly-CSharp
+    fullTypeName: Sink
+    methodName: Reset
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.PhysicsModule
+    fullTypeName: UnityEngine.Rigidbody
+    methodName: set_isKinematic
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: Nudge
     methodName: TriggerShake
@@ -839,6 +1182,195 @@ ScriptsOnlyBuild:
     fullTypeName: LerpMovement
     methodName: Trigger
   sceneClasses:
+    Assets/Scenes/1st level mostly complete.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1988}
+    - Class: 114
+      Script: {instanceID: 35948}
+    - Class: 114
+      Script: {instanceID: 35966}
+    - Class: 114
+      Script: {instanceID: 36080}
+    - Class: 114
+      Script: {instanceID: 36712}
+    - Class: 114
+      Script: {instanceID: 36898}
+    - Class: 114
+      Script: {instanceID: 37114}
+    - Class: 114
+      Script: {instanceID: 37172}
+    - Class: 114
+      Script: {instanceID: 37558}
+    - Class: 114
+      Script: {instanceID: 37626}
+    - Class: 114
+      Script: {instanceID: 37868}
+    - Class: 114
+      Script: {instanceID: 38188}
+    - Class: 114
+      Script: {instanceID: 38350}
+    - Class: 114
+      Script: {instanceID: 38474}
+    - Class: 114
+      Script: {instanceID: 38718}
+    - Class: 114
+      Script: {instanceID: 39038}
+    - Class: 114
+      Script: {instanceID: 39102}
+    - Class: 114
+      Script: {instanceID: 39358}
+    - Class: 114
+      Script: {instanceID: 39768}
+    - Class: 114
+      Script: {instanceID: 39874}
+    - Class: 114
+      Script: {instanceID: 39950}
+    - Class: 114
+      Script: {instanceID: 40322}
+    - Class: 114
+      Script: {instanceID: 40618}
+    - Class: 114
+      Script: {instanceID: 40752}
+    - Class: 114
+      Script: {instanceID: 41186}
+    - Class: 114
+      Script: {instanceID: 41624}
+    - Class: 114
+      Script: {instanceID: 41644}
+    - Class: 114
+      Script: {instanceID: 42062}
+    - Class: 114
+      Script: {instanceID: 42372}
+    - Class: 114
+      Script: {instanceID: 42412}
+    - Class: 114
+      Script: {instanceID: 42552}
+    - Class: 114
+      Script: {instanceID: 42960}
+    - Class: 114
+      Script: {instanceID: 43282}
+    - Class: 114
+      Script: {instanceID: 43742}
+    - Class: 114
+      Script: {instanceID: 44492}
+    - Class: 114
+      Script: {instanceID: 44876}
+    - Class: 114
+      Script: {instanceID: 44928}
+    - Class: 114
+      Script: {instanceID: 45272}
+    - Class: 114
+      Script: {instanceID: 45398}
+    - Class: 114
+      Script: {instanceID: 45440}
+    - Class: 114
+      Script: {instanceID: 46262}
+    - Class: 114
+      Script: {instanceID: 46416}
+    - Class: 114
+      Script: {instanceID: 46738}
+    - Class: 114
+      Script: {instanceID: 46880}
+    - Class: 114
+      Script: {instanceID: 47244}
+    - Class: 114
+      Script: {instanceID: 47264}
+    - Class: 114
+      Script: {instanceID: 48140}
+    - Class: 114
+      Script: {instanceID: 49306}
+    - Class: 114
+      Script: {instanceID: 49768}
+    - Class: 114
+      Script: {instanceID: 49782}
+    - Class: 114
+      Script: {instanceID: 49784}
+    - Class: 114
+      Script: {instanceID: 49810}
+    - Class: 114
+      Script: {instanceID: 49960}
+    - Class: 114
+      Script: {instanceID: 50226}
+    - Class: 114
+      Script: {instanceID: 50668}
+    - Class: 114
+      Script: {instanceID: 50704}
+    - Class: 114
+      Script: {instanceID: 50868}
+    - Class: 114
+      Script: {instanceID: 51128}
+    - Class: 114
+      Script: {instanceID: 51818}
+    - Class: 114
+      Script: {instanceID: 51934}
+    - Class: 114
+      Script: {instanceID: 52048}
+    - Class: 114
+      Script: {instanceID: 164730}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 134
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
+      Script: {instanceID: 0}
     Assets/Scenes/SampleScene.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -883,139 +1415,145 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1988}
     - Class: 114
-      Script: {instanceID: 35850}
+      Script: {instanceID: 35948}
     - Class: 114
-      Script: {instanceID: 35868}
+      Script: {instanceID: 35966}
     - Class: 114
-      Script: {instanceID: 35980}
+      Script: {instanceID: 36080}
     - Class: 114
-      Script: {instanceID: 36612}
+      Script: {instanceID: 36712}
     - Class: 114
-      Script: {instanceID: 36798}
+      Script: {instanceID: 36898}
     - Class: 114
-      Script: {instanceID: 37006}
+      Script: {instanceID: 37114}
     - Class: 114
-      Script: {instanceID: 37446}
+      Script: {instanceID: 37172}
     - Class: 114
-      Script: {instanceID: 37468}
+      Script: {instanceID: 37558}
     - Class: 114
-      Script: {instanceID: 37514}
+      Script: {instanceID: 37580}
     - Class: 114
-      Script: {instanceID: 37756}
+      Script: {instanceID: 37626}
     - Class: 114
-      Script: {instanceID: 38076}
+      Script: {instanceID: 37868}
     - Class: 114
-      Script: {instanceID: 38238}
+      Script: {instanceID: 38188}
     - Class: 114
-      Script: {instanceID: 38362}
+      Script: {instanceID: 38350}
     - Class: 114
-      Script: {instanceID: 38604}
+      Script: {instanceID: 38474}
     - Class: 114
-      Script: {instanceID: 38832}
+      Script: {instanceID: 38718}
     - Class: 114
-      Script: {instanceID: 38922}
+      Script: {instanceID: 38948}
     - Class: 114
-      Script: {instanceID: 38986}
+      Script: {instanceID: 39038}
     - Class: 114
-      Script: {instanceID: 39240}
+      Script: {instanceID: 39102}
     - Class: 114
-      Script: {instanceID: 39394}
+      Script: {instanceID: 39358}
     - Class: 114
-      Script: {instanceID: 39648}
+      Script: {instanceID: 39512}
     - Class: 114
-      Script: {instanceID: 39754}
+      Script: {instanceID: 39768}
     - Class: 114
-      Script: {instanceID: 39830}
+      Script: {instanceID: 39874}
     - Class: 114
-      Script: {instanceID: 40202}
+      Script: {instanceID: 39950}
     - Class: 114
-      Script: {instanceID: 40496}
+      Script: {instanceID: 40322}
     - Class: 114
-      Script: {instanceID: 40630}
+      Script: {instanceID: 40618}
     - Class: 114
-      Script: {instanceID: 40756}
+      Script: {instanceID: 40752}
     - Class: 114
-      Script: {instanceID: 41060}
+      Script: {instanceID: 40878}
     - Class: 114
-      Script: {instanceID: 41488}
+      Script: {instanceID: 41186}
     - Class: 114
-      Script: {instanceID: 41508}
+      Script: {instanceID: 41624}
     - Class: 114
-      Script: {instanceID: 41926}
+      Script: {instanceID: 41644}
     - Class: 114
-      Script: {instanceID: 42236}
+      Script: {instanceID: 42062}
     - Class: 114
-      Script: {instanceID: 42276}
+      Script: {instanceID: 42372}
     - Class: 114
-      Script: {instanceID: 42414}
+      Script: {instanceID: 42412}
     - Class: 114
-      Script: {instanceID: 42822}
+      Script: {instanceID: 42552}
     - Class: 114
-      Script: {instanceID: 43144}
+      Script: {instanceID: 42960}
     - Class: 114
-      Script: {instanceID: 43602}
+      Script: {instanceID: 43282}
     - Class: 114
-      Script: {instanceID: 44348}
+      Script: {instanceID: 43742}
     - Class: 114
-      Script: {instanceID: 44730}
+      Script: {instanceID: 44492}
     - Class: 114
-      Script: {instanceID: 44782}
+      Script: {instanceID: 44876}
     - Class: 114
-      Script: {instanceID: 45126}
+      Script: {instanceID: 44928}
     - Class: 114
-      Script: {instanceID: 45252}
+      Script: {instanceID: 45272}
     - Class: 114
-      Script: {instanceID: 46110}
+      Script: {instanceID: 45398}
     - Class: 114
-      Script: {instanceID: 46260}
+      Script: {instanceID: 45440}
     - Class: 114
-      Script: {instanceID: 46578}
+      Script: {instanceID: 46262}
     - Class: 114
-      Script: {instanceID: 46720}
+      Script: {instanceID: 46416}
     - Class: 114
-      Script: {instanceID: 47078}
+      Script: {instanceID: 46652}
     - Class: 114
-      Script: {instanceID: 47098}
+      Script: {instanceID: 46738}
     - Class: 114
-      Script: {instanceID: 47966}
+      Script: {instanceID: 46880}
     - Class: 114
-      Script: {instanceID: 48366}
+      Script: {instanceID: 47244}
     - Class: 114
-      Script: {instanceID: 49122}
+      Script: {instanceID: 47264}
     - Class: 114
-      Script: {instanceID: 49582}
+      Script: {instanceID: 48140}
     - Class: 114
-      Script: {instanceID: 49596}
+      Script: {instanceID: 48544}
     - Class: 114
-      Script: {instanceID: 49598}
+      Script: {instanceID: 49306}
     - Class: 114
-      Script: {instanceID: 49624}
+      Script: {instanceID: 49768}
     - Class: 114
-      Script: {instanceID: 49774}
+      Script: {instanceID: 49782}
     - Class: 114
-      Script: {instanceID: 50040}
+      Script: {instanceID: 49784}
     - Class: 114
-      Script: {instanceID: 50480}
+      Script: {instanceID: 49810}
     - Class: 114
-      Script: {instanceID: 50516}
+      Script: {instanceID: 49960}
     - Class: 114
-      Script: {instanceID: 50678}
+      Script: {instanceID: 50226}
     - Class: 114
-      Script: {instanceID: 50938}
+      Script: {instanceID: 50668}
     - Class: 114
-      Script: {instanceID: 51314}
+      Script: {instanceID: 50704}
     - Class: 114
-      Script: {instanceID: 51626}
+      Script: {instanceID: 50868}
     - Class: 114
-      Script: {instanceID: 51742}
+      Script: {instanceID: 51128}
     - Class: 114
-      Script: {instanceID: 51856}
+      Script: {instanceID: 51504}
     - Class: 114
-      Script: {instanceID: 52012}
+      Script: {instanceID: 51818}
     - Class: 114
-      Script: {instanceID: 52660}
+      Script: {instanceID: 51934}
     - Class: 114
-      Script: {instanceID: 126492}
+      Script: {instanceID: 52048}
+    - Class: 114
+      Script: {instanceID: 52206}
+    - Class: 114
+      Script: {instanceID: 52854}
+    - Class: 114
+      Script: {instanceID: 164730}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1088,197 +1626,205 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1058}
     - Class: 114
-      Script: {instanceID: 35980}
+      Script: {instanceID: 36080}
     - Class: 114
-      Script: {instanceID: 36198}
+      Script: {instanceID: 36298}
     - Class: 114
-      Script: {instanceID: 36554}
+      Script: {instanceID: 36654}
     - Class: 114
-      Script: {instanceID: 36612}
+      Script: {instanceID: 36712}
     - Class: 114
-      Script: {instanceID: 36888}
+      Script: {instanceID: 36992}
     - Class: 114
-      Script: {instanceID: 37080}
+      Script: {instanceID: 37172}
     - Class: 114
-      Script: {instanceID: 37264}
+      Script: {instanceID: 37190}
     - Class: 114
-      Script: {instanceID: 37446}
+      Script: {instanceID: 37374}
     - Class: 114
-      Script: {instanceID: 37468}
+      Script: {instanceID: 37472}
     - Class: 114
-      Script: {instanceID: 37514}
+      Script: {instanceID: 37558}
     - Class: 114
-      Script: {instanceID: 37570}
+      Script: {instanceID: 37580}
     - Class: 114
-      Script: {instanceID: 37756}
+      Script: {instanceID: 37626}
     - Class: 114
-      Script: {instanceID: 38076}
+      Script: {instanceID: 37682}
     - Class: 114
-      Script: {instanceID: 38238}
+      Script: {instanceID: 37868}
     - Class: 114
-      Script: {instanceID: 38362}
+      Script: {instanceID: 38188}
     - Class: 114
-      Script: {instanceID: 38604}
+      Script: {instanceID: 38350}
     - Class: 114
-      Script: {instanceID: 38826}
+      Script: {instanceID: 38474}
     - Class: 114
-      Script: {instanceID: 38832}
+      Script: {instanceID: 38718}
     - Class: 114
-      Script: {instanceID: 38922}
+      Script: {instanceID: 38942}
     - Class: 114
-      Script: {instanceID: 38986}
+      Script: {instanceID: 38948}
     - Class: 114
-      Script: {instanceID: 39160}
+      Script: {instanceID: 39038}
     - Class: 114
-      Script: {instanceID: 39240}
+      Script: {instanceID: 39102}
     - Class: 114
-      Script: {instanceID: 39394}
+      Script: {instanceID: 39276}
     - Class: 114
-      Script: {instanceID: 39478}
+      Script: {instanceID: 39358}
     - Class: 114
-      Script: {instanceID: 39590}
+      Script: {instanceID: 39512}
     - Class: 114
-      Script: {instanceID: 39648}
+      Script: {instanceID: 39596}
     - Class: 114
-      Script: {instanceID: 39666}
+      Script: {instanceID: 39708}
     - Class: 114
-      Script: {instanceID: 39754}
+      Script: {instanceID: 39768}
     - Class: 114
-      Script: {instanceID: 39758}
+      Script: {instanceID: 39786}
     - Class: 114
-      Script: {instanceID: 39794}
+      Script: {instanceID: 39874}
     - Class: 114
-      Script: {instanceID: 39830}
+      Script: {instanceID: 39878}
     - Class: 114
-      Script: {instanceID: 40496}
+      Script: {instanceID: 39914}
     - Class: 114
-      Script: {instanceID: 40630}
+      Script: {instanceID: 39950}
     - Class: 114
-      Script: {instanceID: 40756}
+      Script: {instanceID: 40618}
     - Class: 114
-      Script: {instanceID: 41060}
+      Script: {instanceID: 40752}
     - Class: 114
-      Script: {instanceID: 41488}
+      Script: {instanceID: 40878}
     - Class: 114
-      Script: {instanceID: 41508}
+      Script: {instanceID: 41186}
     - Class: 114
-      Script: {instanceID: 42276}
+      Script: {instanceID: 41624}
     - Class: 114
-      Script: {instanceID: 42414}
+      Script: {instanceID: 41644}
     - Class: 114
-      Script: {instanceID: 42476}
+      Script: {instanceID: 42412}
     - Class: 114
-      Script: {instanceID: 42544}
+      Script: {instanceID: 42552}
     - Class: 114
-      Script: {instanceID: 42822}
+      Script: {instanceID: 42614}
     - Class: 114
-      Script: {instanceID: 42998}
+      Script: {instanceID: 42682}
     - Class: 114
-      Script: {instanceID: 43028}
+      Script: {instanceID: 42960}
     - Class: 114
-      Script: {instanceID: 43108}
+      Script: {instanceID: 43136}
     - Class: 114
-      Script: {instanceID: 43144}
+      Script: {instanceID: 43166}
     - Class: 114
-      Script: {instanceID: 43226}
+      Script: {instanceID: 43246}
     - Class: 114
-      Script: {instanceID: 43338}
+      Script: {instanceID: 43282}
     - Class: 114
-      Script: {instanceID: 43484}
+      Script: {instanceID: 43364}
     - Class: 114
-      Script: {instanceID: 43602}
+      Script: {instanceID: 43478}
     - Class: 114
-      Script: {instanceID: 44348}
+      Script: {instanceID: 43624}
     - Class: 114
-      Script: {instanceID: 44626}
+      Script: {instanceID: 43742}
+    - Class: 114
+      Script: {instanceID: 44492}
     - Class: 114
       Script: {instanceID: 44772}
     - Class: 114
-      Script: {instanceID: 44774}
+      Script: {instanceID: 44918}
     - Class: 114
-      Script: {instanceID: 44782}
+      Script: {instanceID: 44920}
     - Class: 114
-      Script: {instanceID: 45126}
+      Script: {instanceID: 44928}
     - Class: 114
-      Script: {instanceID: 45252}
+      Script: {instanceID: 45272}
     - Class: 114
-      Script: {instanceID: 46110}
+      Script: {instanceID: 45398}
     - Class: 114
-      Script: {instanceID: 46206}
+      Script: {instanceID: 45440}
     - Class: 114
-      Script: {instanceID: 46260}
+      Script: {instanceID: 46262}
     - Class: 114
-      Script: {instanceID: 46492}
+      Script: {instanceID: 46360}
     - Class: 114
-      Script: {instanceID: 46578}
+      Script: {instanceID: 46416}
     - Class: 114
-      Script: {instanceID: 47056}
+      Script: {instanceID: 46652}
     - Class: 114
-      Script: {instanceID: 47078}
+      Script: {instanceID: 46738}
     - Class: 114
-      Script: {instanceID: 47966}
+      Script: {instanceID: 47222}
     - Class: 114
-      Script: {instanceID: 48366}
+      Script: {instanceID: 47244}
     - Class: 114
-      Script: {instanceID: 48460}
+      Script: {instanceID: 48140}
     - Class: 114
-      Script: {instanceID: 49032}
+      Script: {instanceID: 48544}
     - Class: 114
-      Script: {instanceID: 49108}
+      Script: {instanceID: 48638}
     - Class: 114
-      Script: {instanceID: 49504}
+      Script: {instanceID: 49216}
     - Class: 114
-      Script: {instanceID: 49582}
+      Script: {instanceID: 49292}
     - Class: 114
-      Script: {instanceID: 49598}
+      Script: {instanceID: 49688}
     - Class: 114
-      Script: {instanceID: 49624}
+      Script: {instanceID: 49712}
     - Class: 114
-      Script: {instanceID: 49774}
+      Script: {instanceID: 49768}
     - Class: 114
-      Script: {instanceID: 50040}
+      Script: {instanceID: 49784}
     - Class: 114
-      Script: {instanceID: 50384}
+      Script: {instanceID: 49810}
     - Class: 114
-      Script: {instanceID: 50480}
+      Script: {instanceID: 49960}
     - Class: 114
-      Script: {instanceID: 50508}
+      Script: {instanceID: 50226}
     - Class: 114
-      Script: {instanceID: 50516}
+      Script: {instanceID: 50572}
     - Class: 114
-      Script: {instanceID: 50678}
+      Script: {instanceID: 50668}
     - Class: 114
-      Script: {instanceID: 50880}
+      Script: {instanceID: 50696}
     - Class: 114
-      Script: {instanceID: 50938}
+      Script: {instanceID: 50704}
     - Class: 114
-      Script: {instanceID: 51002}
+      Script: {instanceID: 50868}
     - Class: 114
-      Script: {instanceID: 51042}
+      Script: {instanceID: 51070}
     - Class: 114
-      Script: {instanceID: 51258}
+      Script: {instanceID: 51128}
     - Class: 114
-      Script: {instanceID: 51314}
+      Script: {instanceID: 51192}
     - Class: 114
-      Script: {instanceID: 51616}
+      Script: {instanceID: 51232}
     - Class: 114
-      Script: {instanceID: 51626}
+      Script: {instanceID: 51448}
     - Class: 114
-      Script: {instanceID: 51742}
+      Script: {instanceID: 51504}
     - Class: 114
-      Script: {instanceID: 51856}
+      Script: {instanceID: 51808}
     - Class: 114
-      Script: {instanceID: 52012}
+      Script: {instanceID: 51818}
     - Class: 114
-      Script: {instanceID: 52066}
+      Script: {instanceID: 51934}
     - Class: 114
-      Script: {instanceID: 52320}
+      Script: {instanceID: 52048}
     - Class: 114
-      Script: {instanceID: 52660}
+      Script: {instanceID: 52206}
     - Class: 114
-      Script: {instanceID: 90098}
+      Script: {instanceID: 52260}
     - Class: 114
-      Script: {instanceID: 126492}
+      Script: {instanceID: 52514}
+    - Class: 114
+      Script: {instanceID: 52854}
+    - Class: 114
+      Script: {instanceID: 149312}
+    - Class: 114
+      Script: {instanceID: 164730}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1588,6 +2134,12 @@ ScriptsOnlyBuild:
     className: Fizzle
   - hash:
       serializedVersion: 2
+      Hash: 0fbb4ff5fc60f4fffc157dd9c7960699
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: NameTag
+  - hash:
+      serializedVersion: 2
       Hash: f669be52680c88846b2093fd41d1e06e
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1708,7 +2260,7 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
-      Hash: f86a6f0023366201195382f452dcfb1e
+      Hash: cfabff0c32e560aaf411e7daa3ea2d78
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerNetworkIndex
@@ -2950,6 +3502,12 @@ ScriptsOnlyBuild:
     className: NetworkObject
   - hash:
       serializedVersion: 2
+      Hash: 16efa7d16ec6c22313e6223a855528b2
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameManagementEvents
+  - hash:
+      serializedVersion: 2
       Hash: 1ce63d97d1ca25cba2d91d5f32fd5f79
     assemblyName: Unity.VisualScripting.State
     namespaceName: Unity.VisualScripting
@@ -3002,6 +3560,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.HighDefinition.Runtime
     namespaceName: UnityEngine.Rendering.HighDefinition
     className: ChromaticAberration
+  - hash:
+      serializedVersion: 2
+      Hash: 8f4454ff8d0b0811f98b7622a5b20068
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AYellowpaper.SerializedCollections
+    className: SerializedDictionarySampleTwo
   - hash:
       serializedVersion: 2
       Hash: 6d94138b60a9299798dda96c1ee6725f
@@ -3124,7 +3688,7 @@ ScriptsOnlyBuild:
     className: HDAdditionalMeshRendererSettings
   - hash:
       serializedVersion: 2
-      Hash: 0fce0c5beb9c3f50bae0544e7605757a
+      Hash: a2734bced089b53ff70b30ac72d48d10
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CurrentSessionStats
@@ -3170,6 +3734,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.HighDefinition.Runtime
     namespaceName: UnityEngine.Rendering.HighDefinition
     className: WaterFoamGenerator
+  - hash:
+      serializedVersion: 2
+      Hash: f0549f06276664a0e35fe556fadccd3c
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AYellowpaper.SerializedCollections
+    className: SerializedDictionarySample
   - hash:
       serializedVersion: 2
       Hash: 25a70ac19eb2e03345166c9dc471ca06
@@ -3536,6 +4106,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerPersistentCanvas
+  - hash:
+      serializedVersion: 2
+      Hash: 3b5801916855f116ba8283feb0c6bd28
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LobbyPedestal
   - hash:
       serializedVersion: 2
       Hash: 50895f8a1445bc881a0d6b50f29eded7
@@ -3952,6 +4528,12 @@ ScriptsOnlyBuild:
     className: VisualEffectControlTrack
   - hash:
       serializedVersion: 2
+      Hash: 2a2e463a4ed430d2f1192dda6ea0d5e8
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AYellowpaper.SerializedCollections
+    className: SerializedDictionarySampleThree
+  - hash:
+      serializedVersion: 2
       Hash: 74567a712599a74cc971801fa1271dc9
     assemblyName: Assembly-CSharp
     namespaceName: 
@@ -4090,18 +4672,19 @@ ScriptsOnlyBuild:
     className: SplineExtrude
   - hash:
       serializedVersion: 2
-      Hash: 648f7bb97cbc8ab87bb584426144c51f
+      Hash: 70a510f69d0ed6167ad5fd94d3990cb3
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: LobbyPedestal
+    className: SceneManagement
   - hash:
       serializedVersion: 2
-      Hash: 8dee112ad40c6bfcdfa42609060de502
+      Hash: 9e26c8c14dcfd365668381a4a8472284
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: NameTag
+    className: SpawnManagement
   platform: 19
   scenePathNames:
   - Assets/Scenes/StartScreen.unity
+  - Assets/Scenes/1st level mostly complete.unity
   - Assets/Scenes/SampleScene.unity
   playerPath: C:/Users/user1/3d zeldaish/Builds/Net Test/Small Multiplayer.exe

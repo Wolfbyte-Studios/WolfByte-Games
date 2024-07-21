@@ -6,9 +6,9 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
-public class SceneManagement : NetworkBehaviour
+public class SceneStuff : NetworkBehaviour
 {
-    public static SceneManagement Instance { get; private set; }
+    public static SceneStuff Instance { get; private set; }
     public List<string> Scenes = new List<string>();
     public NetworkVariable<int> SceneToLoad = new NetworkVariable<int>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     // Start is called once before the first execution of Update after the MonoBehaviour is created

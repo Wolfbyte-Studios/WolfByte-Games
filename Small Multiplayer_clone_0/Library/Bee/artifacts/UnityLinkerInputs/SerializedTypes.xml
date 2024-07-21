@@ -1,6 +1,9 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname=".CurrentSessionStats/GameModeEnum" preserve="nothing" serialized="true"/>
+		<type fullname=".CurrentSessionStats/GameStateEnum" preserve="nothing" serialized="true"/>
 		<type fullname=".LerpMovement/TransformData" preserve="nothing" serialized="true"/>
+		<type fullname=".PlayerData" preserve="nothing" serialized="true"/>
 		<type fullname="CR.CleanOutlineCustomPass" preserve="nothing" serialized="true"/>
 		<type fullname="CR.CleanOutlineDebugModeParameter" preserve="nothing" serialized="true"/>
 		<type fullname="CR.OutlineDepthSampleParameter" preserve="nothing" serialized="true"/>
@@ -20,6 +23,13 @@
 		<type fullname="Unity.Cinemachine.PrioritySettings" preserve="nothing" serialized="true"/>
 		<type fullname="Unity.Cinemachine.TargetTracking.TrackerSettings" preserve="nothing" serialized="true"/>
 	</assembly>
+	<assembly fullname="Unity.Collections">
+		<type fullname="Unity.Collections.FixedBytes126" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Collections.FixedBytes16" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Collections.FixedBytes62" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Collections.FixedString128Bytes" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Collections.FixedString64Bytes" preserve="nothing" serialized="true"/>
+	</assembly>
 	<assembly fullname="Unity.InputSystem">
 		<type fullname="UnityEngine.InputSystem.InputAction" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.InputSystem.InputActionMap" preserve="nothing" serialized="true"/>
@@ -28,6 +38,7 @@
 		<type fullname="UnityEngine.InputSystem.InputControlScheme/DeviceRequirement" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.InputSystem.InputSettings/iOSSettings" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.InputSystem.iOS.PrivacyDataUsage" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.InputSystem.PlayerInput/ActionEvent" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.InputSystem.PlayerInput/ControlsChangedEvent" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.InputSystem.PlayerInput/DeviceLostEvent" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.InputSystem.PlayerInput/DeviceRegainedEvent" preserve="nothing" serialized="true"/>
@@ -36,6 +47,7 @@
 		<type fullname="Unity.Netcode.NetworkConfig" preserve="nothing" serialized="true"/>
 		<type fullname="Unity.Netcode.NetworkPrefab" preserve="nothing" serialized="true"/>
 		<type fullname="Unity.Netcode.NetworkPrefabs" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Netcode.NetworkVariable`1" preserve="nothing" serialized="true"/>
 		<type fullname="Unity.Netcode.Transports.UTP.UnityTransport/ConnectionAddressData" preserve="nothing" serialized="true"/>
 		<type fullname="Unity.Netcode.Transports.UTP.UnityTransport/SimulatorParameters" preserve="nothing" serialized="true"/>
 	</assembly>

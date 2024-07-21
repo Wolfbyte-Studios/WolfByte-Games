@@ -4,6 +4,7 @@ using Unity.Netcode.Transports.UTP;
 using TMPro;
 using System.Collections.Generic;
 using Steamworks;
+using UnityEngine.UI;
 
 public class JoinAndHost : MonoBehaviour
 {
@@ -36,7 +37,16 @@ public class JoinAndHost : MonoBehaviour
     // Method to start the game as host
     public void StartHost()
     {
-        transport.SetConnectionData("0.0.0.0", ushort.Parse(port.text));
+        bool playOnSteam = transform.GetComponentInChildren<Toggle>().isOn;
+        if (playOnSteam)
+        {
+            SetupSteamP2P();
+        }
+        else
+        {
+            transport.SetConnectionData("0.0.0.0", ushort.Parse(port.text));
+        }
+
         Debug.Log(ip.text + " " + port.text);
         NetworkManager.Singleton.StartHost();
     }
@@ -107,5 +117,11 @@ public class JoinAndHost : MonoBehaviour
         // Fill in the logic here to retrieve the IP address from Steam P2P
         // This is a placeholder implementation
         return ipAddr;
+    }
+
+    private void SetupSteamP2P()
+    {
+        // Set up Steam P2P networking
+        SteamNetworking.AllowP2PPacketRelay(true);
     }
 }

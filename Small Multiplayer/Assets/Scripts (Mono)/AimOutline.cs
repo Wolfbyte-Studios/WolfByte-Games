@@ -42,13 +42,13 @@ public class AimOutline : NetworkBehaviour
 
     private void OnFire()
     {
-        //Debug.Log("Fire");
+        ////Debug.Log("Fire");
         Fire_performed_ServerRpc();
     }
 
     private void OnSecondary()
     {
-        //Debug.Log("Secondary");
+        ////Debug.Log("Secondary");
         Secondary_performed_ServerRpc();
     }
 

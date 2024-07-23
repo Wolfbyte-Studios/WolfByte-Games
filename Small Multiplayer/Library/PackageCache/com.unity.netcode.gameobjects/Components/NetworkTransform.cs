@@ -1572,7 +1572,7 @@ namespace Unity.Netcode.Components
                 }
                 catch (Exception ex)
                 {
-                    Debug.LogException(ex);
+                    //Debug.LogException(ex);
                 }
 
                 // The below is part of assuring we only send a frame synch, when sending unreliable deltas, if 
@@ -3191,11 +3191,11 @@ namespace Unity.Netcode.Components
             bool isServerAuthoritative = OnIsServerAuthoritative();
             if (isServerAuthoritative && !IsServer)
             {
-                Debug.LogError($"Server authoritative {nameof(NetworkTransform)} can only be updated by the server!");
+                //Debug.LogError($"Server authoritative {nameof(NetworkTransform)} can only be updated by the server!");
             }
             else if (!isServerAuthoritative && !IsServer && !IsOwner)
             {
-                Debug.LogError($"Owner authoritative {nameof(NetworkTransform)} can only be updated by the owner!");
+                //Debug.LogError($"Owner authoritative {nameof(NetworkTransform)} can only be updated by the owner!");
             }
             var customMessageManager = m_CachedNetworkManager.CustomMessagingManager;
 

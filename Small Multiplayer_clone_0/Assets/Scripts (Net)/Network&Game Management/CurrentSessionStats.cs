@@ -90,7 +90,7 @@ public class CurrentSessionStats : NetworkBehaviour
         }
 
         NetworkUtils.RpcHandler(this, GetPlayers);
-        Debug.Log("I am Server");
+        //Debug.Log("I am Server");
     }
 
     [ContextMenu("Rotate Players")]
@@ -142,7 +142,7 @@ public class CurrentSessionStats : NetworkBehaviour
             foreach (var player in clients)
             {
                 var playerObj = player.PlayerObject;
-                Debug.Log(playerObj.name);
+                //Debug.Log(playerObj.name);
                 var nameTag = playerObj.gameObject.GetComponentInChildren<NameTag>(false);
 
                 if (nameTag != null)

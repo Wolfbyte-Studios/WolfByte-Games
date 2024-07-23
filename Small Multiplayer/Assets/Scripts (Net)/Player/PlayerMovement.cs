@@ -3,6 +3,9 @@ using Unity.Netcode;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Unity.Cinemachine;
+using System.Collections;
+using JetBrains.Annotations;
+using System;
 
 public class PlayerMovement : NetworkBehaviour
 {
@@ -18,6 +21,7 @@ public class PlayerMovement : NetworkBehaviour
     public bool Dizzy = false;
 
     public GameObject playerCam;
+    public GameObject Mallet = null;
     public Rigidbody rb;
     public InputActionAsset actions;
     public InputAction move;
@@ -75,6 +79,8 @@ public class PlayerMovement : NetworkBehaviour
         }
         else if(PLI.PlayerType == PlayerNetworkIndex.playerType.Runner)
         {
+            Mallet = this.gameObject.transform.FindDeepChild("mallet").gameObject;
+            Mallet.SetActive(false);
             playerCam.gameObject.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(0, 2, 0);
             CanFly = false;
             Fire = actions.FindAction("Fire");
@@ -96,7 +102,15 @@ public class PlayerMovement : NetworkBehaviour
     private void Fire_performed(InputAction.CallbackContext obj)
     {
         anim.SetTrigger("Primary");
+        StartCoroutine(mallet());
         throw new System.NotImplementedException();
+    }
+    IEnumerator mallet()
+    {
+        Mallet.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        Mallet.SetActive(false );
+            yield return null;
     }
 
     private void Menu_performed(InputAction.CallbackContext obj)
@@ -205,7 +219,7 @@ public class PlayerMovement : NetworkBehaviour
         }
         if (Dizzy)
         {
-            v.y = Random.Range(-1, 1);
+            v.y = UnityEngine.Random.Range(-1, 1);
         }
         // Convert the 2D input into 3D direction relative to the camera
         Vector3 forward = playerCam.transform.forward;

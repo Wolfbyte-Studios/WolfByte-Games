@@ -185,7 +185,7 @@ public class LerpMovement : NetworkBehaviour
             float estimatedTime = CalculateEstimatedTime();
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(initialTransform.position, 0.1f);
-            //Debug.Log("Estimated Total Lerp Time: " + estimatedTime + " seconds");
+            ////Debug.Log("Estimated Total Lerp Time: " + estimatedTime + " seconds");
         }
     }
 }

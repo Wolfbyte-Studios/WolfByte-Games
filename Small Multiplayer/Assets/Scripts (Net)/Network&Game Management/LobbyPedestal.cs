@@ -61,7 +61,7 @@ public class LobbyPedestal : NetworkBehaviour
 
 
 
-            //Debug.Log(player.name);
+            ////Debug.Log(player.name);
             int id = (int)player.transform.parent.GetComponent<NetworkObject>().OwnerClientId;
             pedestal = pedestalParent.transform.Find("Player " + (id + 1).ToString()).gameObject;
 

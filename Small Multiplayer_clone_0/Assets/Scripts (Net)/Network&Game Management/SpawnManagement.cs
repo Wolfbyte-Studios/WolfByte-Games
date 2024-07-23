@@ -40,7 +40,7 @@ public class SpawnManagement : NetworkBehaviour
 
 
 
-            //Debug.Log(player.name);
+            ////Debug.Log(player.name);
             int id = (int)player.transform.parent.GetComponent<NetworkObject>().OwnerClientId;
             var SpawnPoint = this.gameObject;
 

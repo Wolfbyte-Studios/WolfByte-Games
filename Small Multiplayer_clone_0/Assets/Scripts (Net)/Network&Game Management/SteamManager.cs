@@ -18,7 +18,7 @@ public class SteamManager : MonoBehaviour
     private SteamAPIWarningMessageHook_t m_SteamAPIWarningMessageHook;
     private static void SteamAPIDebugTextHook(int nSeverity, System.Text.StringBuilder pchDebugText)
     {
-        Debug.LogWarning(pchDebugText);
+        //Debug.LogWarning(pchDebugText);
     }
 
     private void Awake()
@@ -49,7 +49,7 @@ public class SteamManager : MonoBehaviour
         m_bInitialized = SteamAPI.Init();
         if (!m_bInitialized)
         {
-            Debug.LogError("SteamAPI_Init() failed.");
+            //Debug.LogError("SteamAPI_Init() failed.");
             return;
         }
 

@@ -8,7 +8,7 @@ public class SteamNamePrinter : MonoBehaviour
         // Initialize Steamworks
         if (SteamAPI.RestartAppIfNecessary((AppId_t)480))
         {
-            Application.Quit();
+            //Application.Quit();
             return;
         }
 

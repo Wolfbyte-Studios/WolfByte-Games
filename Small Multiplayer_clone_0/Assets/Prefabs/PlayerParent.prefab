@@ -171,6 +171,24 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  Fire:
+    m_Name: Fire
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 2d3fcc17-8bf7-4471-b47c-434f0e56d332
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  Secondary:
+    m_Name: Secondary
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 39954f2d-df5f-4dc4-bb34-6143d9636450
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   anim: {fileID: 3571399923324277435}
 --- !u!54 &7082935000621846428
 Rigidbody:
@@ -1312,6 +1330,24 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 3350b206-3c87-417c-b250-5ab8828243de
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  Fire:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a6014f9e-d136-4fef-8077-8cd8ee32cdad
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  Secondary:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: af7475f6-4ba9-43f3-ab99-fd4859256fbb
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -2600,7 +2636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 969061630
+  GlobalObjectIdHash: 1235211869
   InScenePlacedSourceGlobalObjectIdHash: 969061630
   AlwaysReplicateAsRoot: 1
   SynchronizeTransform: 1

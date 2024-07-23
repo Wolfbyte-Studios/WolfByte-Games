@@ -24,6 +24,8 @@ public class PlayerMovement : NetworkBehaviour
     public InputAction jump;
     public InputAction crouch;
     public InputAction menu;
+    public InputAction Fire;
+    public InputAction Secondary;
     public Animator anim;
     private PlayerNetworkIndex PLI;
 
@@ -62,23 +64,39 @@ public class PlayerMovement : NetworkBehaviour
             jump = actions.FindAction("Jump");
             crouch = actions.FindAction("Crouch");
             crouch.performed += OnCrouch;
+            
         }
         playerCam = PLI.playerCamera.gameObject;
         playerCam.transform.parent = gameObject.transform.parent;
         if (PLI.PlayerType == PlayerNetworkIndex.playerType.Sab)
         {
+            playerCam.gameObject.GetComponent<CinemachineFollow>().FollowOffset = Vector3.zero;
             CanFly = true;
         }
-        else
-        {
-            CanFly = false;
-        }
-        playerCam.gameObject.GetComponent<CinemachineCamera>().Follow = this.gameObject.transform;
-        if(PLI.PlayerType == PlayerNetworkIndex.playerType.Runner)
+        else if(PLI.PlayerType == PlayerNetworkIndex.playerType.Runner)
         {
             playerCam.gameObject.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(0, 2, 0);
+            CanFly = false;
+            Fire = actions.FindAction("Fire");
+            Fire.performed += Fire_performed;
+            Secondary = actions.FindAction("Secondary");
+            Secondary.performed += Secondary_performed;
         }
+        playerCam.gameObject.GetComponent<CinemachineCamera>().Follow = this.gameObject.transform;
+        
 
+    }
+
+    private void Secondary_performed(InputAction.CallbackContext obj)
+    {
+        anim.SetTrigger("Secondary");
+        throw new System.NotImplementedException();
+    }
+
+    private void Fire_performed(InputAction.CallbackContext obj)
+    {
+        anim.SetTrigger("Primary");
+        throw new System.NotImplementedException();
     }
 
     private void Menu_performed(InputAction.CallbackContext obj)
@@ -104,7 +122,7 @@ public class PlayerMovement : NetworkBehaviour
         if (CanFly)
         {
             OnFly(-FlyForce);
-            //Debug.Log("Go down");
+            ////Debug.Log("Go down");
             return;
         }
 
@@ -136,12 +154,14 @@ public class PlayerMovement : NetworkBehaviour
 
     public void FaceCamera()
     {
+        
         if (PLI.PlayerType == PlayerNetworkIndex.playerType.Sab)
         {
             gameObject.transform.eulerAngles = new Vector3(playerCam.transform.eulerAngles.x, playerCam.transform.eulerAngles.y, playerCam.transform.eulerAngles.z);
             return;
         }
         gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x, playerCam.transform.eulerAngles.y, gameObject.transform.eulerAngles.z);
+
     }
 
     public void FixedUpdate()
@@ -151,7 +171,7 @@ public class PlayerMovement : NetworkBehaviour
             return;
         }
         FaceCamera();
-
+        Debug.Log(this.gameObject.name + " is the one running this script!");
         if (move.IsPressed())
         {
             OnMove();

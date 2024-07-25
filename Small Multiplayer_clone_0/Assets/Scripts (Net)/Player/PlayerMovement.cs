@@ -1,5 +1,5 @@
 using UnityEngine;
-using Unity.Netcode;
+using Mirror;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Unity.Cinemachine;
@@ -33,9 +33,9 @@ public class PlayerMovement : NetworkBehaviour
     public Animator anim;
     private PlayerNetworkIndex PLI;
 
-    public override void OnNetworkSpawn()
+    public override void OnStartClient()
     {
-        base.OnNetworkSpawn();
+        base.OnStartClient();
         Setup();
         DontDestroyOnLoad(gameObject.transform.parent.gameObject);
 
@@ -180,7 +180,7 @@ public class PlayerMovement : NetworkBehaviour
 
     public void FixedUpdate()
     {
-        if (!IsOwner)
+        if (!isLocalPlayer)
         {
             return;
         }

@@ -26,8 +26,8 @@ public class LobbyPedestal : NetworkBehaviour
     public void updateGameModes()
     {
         
-        CurrentSessionStats.Instance.GameState.Value = CurrentSessionStats.GameStateEnum.UI;
-        CurrentSessionStats.Instance.GameMode.Value =  CurrentSessionStats.GameModeEnum.Standard;
+        CurrentSessionStats.Instance.GameState  = CurrentSessionStats.GameStateEnum.UI;
+        CurrentSessionStats.Instance.GameMode  =  CurrentSessionStats.GameModeEnum.Standard;
     }
     
 

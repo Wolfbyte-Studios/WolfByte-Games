@@ -109,8 +109,8 @@ public class AimOutline : NetworkBehaviour
     [ServerRpc]
     private void SetTargetLayer_ServerRpc(ulong targetNetworkObjectId, int layer)
     {
-        targetLayer.Value = layer;
-        this.targetNetworkObjectId.Value = targetNetworkObjectId;
+        targetLayer  = layer;
+        this.targetNetworkObjectId  = targetNetworkObjectId;
         SetTargetLayer_ClientRpc(targetNetworkObjectId, layer);
     }
 
@@ -134,7 +134,7 @@ public class AimOutline : NetworkBehaviour
         if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(newId, out var newTarget))
         {
             target = newTarget.gameObject;
-            target.layer = targetLayer.Value;
+            target.layer = targetLayer ;
         }
     }
 }

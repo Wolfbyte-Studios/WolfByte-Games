@@ -1,4 +1,4 @@
-using Unity.Netcode;
+using Mirror;
 using Unity.Netcode.Components;
 using UnityEngine;
 

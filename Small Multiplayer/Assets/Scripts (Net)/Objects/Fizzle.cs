@@ -1,6 +1,6 @@
 using System;
 using System.Collections;
-using Unity.Netcode;
+using Mirror;
 using UnityEngine;
 
 public class Fizzle : NetworkBehaviour

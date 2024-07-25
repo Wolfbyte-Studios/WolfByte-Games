@@ -52,7 +52,7 @@ public class SpawnManagement : NetworkBehaviour
     }
     public void StartGame()
     {
-        CurrentSessionStats.Instance.GameState.Value = CurrentSessionStats.GameStateEnum.InGame;
+        CurrentSessionStats.Instance.GameState  = CurrentSessionStats.GameStateEnum.InGame;
     }
 
     private void OnSceneLoad(Scene arg0, LoadSceneMode arg1)

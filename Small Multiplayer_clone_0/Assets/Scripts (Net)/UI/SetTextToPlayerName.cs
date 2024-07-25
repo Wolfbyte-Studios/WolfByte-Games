@@ -38,7 +38,7 @@ public class SetTextToPlayerName : NetworkBehaviour
     {
         if (playerIndex >= 0 && playerIndex < CurrentSessionStats.Instance.playersList.Count)
         {
-            label.text = CurrentSessionStats.Instance.playersList[playerIndex].name.Value.ToString();
+            label.text = CurrentSessionStats.Instance.playersList[playerIndex].name .ToString();
         }
         else
         {

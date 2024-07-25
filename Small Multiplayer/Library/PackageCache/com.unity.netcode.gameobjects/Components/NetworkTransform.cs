@@ -2893,7 +2893,7 @@ namespace Unity.Netcode.Components
 
             if (IsOwner)
             {
-                m_InternalStatNetVar.Value = m_LocalAuthoritativeNetworkState;
+                m_InternalStatNetVar  = m_LocalAuthoritativeNetworkState;
                 OnInitialize(ref m_InternalStatNetVar);
             }
         }
@@ -2971,9 +2971,9 @@ namespace Unity.Netcode.Components
                 return;
             }
 
-            Vector3 pos = posIn == null ? GetSpaceRelativePosition() : posIn.Value;
-            Quaternion rot = rotIn == null ? GetSpaceRelativeRotation() : rotIn.Value;
-            Vector3 scale = scaleIn == null ? transform.localScale : scaleIn.Value;
+            Vector3 pos = posIn == null ? GetSpaceRelativePosition() : posIn ;
+            Quaternion rot = rotIn == null ? GetSpaceRelativeRotation() : rotIn ;
+            Vector3 scale = scaleIn == null ? transform.localScale : scaleIn ;
 
             if (!CanCommitToTransform)
             {

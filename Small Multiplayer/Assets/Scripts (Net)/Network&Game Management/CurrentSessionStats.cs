@@ -1,23 +1,18 @@
 using UnityEngine;
-using Unity.Netcode;
-using Unity.Netcode.Transports.UTP;
+using Mirror;
 using TMPro;
 using System.Collections.Generic;
 using System;
-using UnityEngine.Rendering;
-using Unity.VisualScripting;
-using AYellowpaper.SerializedCollections;
-using Unity.Collections;
 
 [System.Serializable]
-public struct PlayerData : IEquatable<PlayerData>, INetworkSerializeByMemcpy
+public struct PlayerData : IEquatable<PlayerData>
 {
-    public ulong clientId;
-    public FixedString64Bytes name;
+    public uint netId;
+    public string name;
 
     public bool Equals(PlayerData other)
     {
-        return clientId == other.clientId && name.Equals(other.name);
+        return netId == other.netId && name.Equals(other.name);
     }
 
     public override bool Equals(object obj)
@@ -27,28 +22,21 @@ public struct PlayerData : IEquatable<PlayerData>, INetworkSerializeByMemcpy
 
     public override int GetHashCode()
     {
-        return (clientId, name).GetHashCode();
-    }
-
-    public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
-    {
-        serializer.SerializeValue(ref clientId);
-        serializer.SerializeValue(ref name);
+        return (netId, name).GetHashCode();
     }
 }
 
-[GenerateSerializationForType(typeof(PlayerData))]
 public class CurrentSessionStats : NetworkBehaviour
 {
     public static CurrentSessionStats Instance { get; private set; }
     public static float CurrentNumberOfPlayers;
     public bool netActive = false;
-    public NetworkVariable<int> IndexOfSab = new NetworkVariable<int>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
-    public UnityTransport transport;
+    [SyncVar]
+    public int IndexOfSab = 0;
     public NetworkManager nm;
     public GameObject playertemp;
     public PlayerData lastPlayer;
-    public List<NetworkClient> clients = new List<NetworkClient>();
+    public List<NetworkConnectionToClient> clients = new List<NetworkConnectionToClient>();
 
     public enum GameStateEnum
     {
@@ -61,11 +49,14 @@ public class CurrentSessionStats : NetworkBehaviour
     {
         Standard
     }
-
-    public NetworkVariable<GameModeEnum> GameMode = new NetworkVariable<GameModeEnum>(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
-    public NetworkVariable<GameStateEnum> GameState = new NetworkVariable<GameStateEnum>(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
-    public NetworkList<PlayerData> playersList = new NetworkList<PlayerData>(default, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
-    public List<string> playernames = new List<string>();
+    [SyncVar]
+    public GameModeEnum GameMode = GameModeEnum.Standard;
+    [SyncVar]
+    public GameStateEnum GameState = GameStateEnum.UI;
+    [SyncVar]
+    public List<PlayerData> playersList = new List<PlayerData>();
+    [SyncVar]
+    public SyncList<string> playernames = new SyncList<string>();
 
     public void Start()
     {
@@ -73,84 +64,76 @@ public class CurrentSessionStats : NetworkBehaviour
         Instance = this;
     }
 
-    public override void OnNetworkSpawn()
+    public override void OnStartServer()
     {
-        base.OnNetworkSpawn();
-        nm = NetworkManager.Singleton;
+        base.OnStartServer();
+        nm = NetworkManager.singleton;
         Instance = this;
     }
 
     public void Update()
     {
-        netActive = NetworkManager.Singleton.IsListening;
+        netActive = NetworkServer.active;
         playernames.Clear();
         foreach (var player in playersList)
         {
-            playernames.Add(player.name.ToString());
+            playernames.Add(player.name);
         }
-
-        NetworkUtils.RpcHandler(this, GetPlayers);
-        //Debug.Log("I am Server");
     }
 
     [ContextMenu("Rotate Players")]
     public void RotatePlayers()
     {
-        NetworkUtils.RpcHandler(this, doRotation);
-    }
-    public void doRotation() 
-    {
-        if (!IsServer) return;
-        var oldValue = IndexOfSab.Value;
-        IndexOfSab.Value = UnityEngine.Random.Range(0, playersList.Count);
+        if (!isServer) return;
+        var oldValue = IndexOfSab[0];
+        IndexOfSab[0] = UnityEngine.Random.Range(0, playersList.Count);
         if (playersList.Count > 1)
         {
-            if (oldValue == IndexOfSab.Value)
+            if (oldValue == IndexOfSab[0])
             {
                 Start:
-                IndexOfSab.Value = UnityEngine.Random.Range(0, playersList.Count);
-                if (oldValue == IndexOfSab.Value)
+                IndexOfSab[0] = UnityEngine.Random.Range(0, playersList.Count);
+                if (oldValue == IndexOfSab[0])
                 {
                     goto Start;
                 }
             }
         }
-        foreach (var p in NetworkManager.Singleton.ConnectedClientsList)
+        foreach (var conn in NetworkServer.connections)
         {
-            var refreshScript = p.PlayerObject.gameObject.GetComponentsInChildren<PlayerNetworkIndex>(true);
+            var playerObj = conn .identity;
+            var refreshScript = playerObj.GetComponentsInChildren<PlayerNetworkIndex>(true);
             foreach (var script in refreshScript)
             {
                 script.gameObject.SetActive(true);
                 StartCoroutine(script.delay());
             }
-
         }
     }
 
     public void GetPlayers()
     {
-        if (IsServer)
+        if (isServer)
         {
             clients.Clear();
-            foreach (NetworkClient n in nm.ConnectedClientsList)
+            foreach (var conn in NetworkServer.connections)
             {
-                clients.Add(n);
+                clients.Add(conn );
             }
 
             playersList.Clear();
 
-            foreach (var player in clients)
+            foreach (var conn in clients)
             {
-                var playerObj = player.PlayerObject;
-                //Debug.Log(playerObj.name);
-                var nameTag = playerObj.gameObject.GetComponentInChildren<NameTag>(false);
+                var playerObj = conn.identity;
+                var nameTag = playerObj.GetComponentInChildren<NameTag>(false);
 
                 if (nameTag != null)
                 {
-                    string name = nameTag.pName.Value.ToString();
+                    string name = nameTag.pName.ToString();
                     PlayerData p = new PlayerData
                     {
-                        clientId = playerObj.OwnerClientId,
+                        netId = playerObj.netId,
                         name = name
                     };
 
@@ -161,7 +144,7 @@ public class CurrentSessionStats : NetworkBehaviour
                 }
                 else
                 {
-                    Debug.LogWarning($"PlayerObject for ClientId {playerObj.OwnerClientId} does not have a NameTag component.");
+                    Debug.LogWarning($"PlayerObject for netId {playerObj.netId} does not have a NameTag component.");
                 }
             }
         }

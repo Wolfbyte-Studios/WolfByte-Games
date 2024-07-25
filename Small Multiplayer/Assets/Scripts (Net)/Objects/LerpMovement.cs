@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.Netcode;
+using Mirror;
 using Unity.Netcode.Components;
 
 

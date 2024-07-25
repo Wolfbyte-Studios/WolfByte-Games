@@ -20,7 +20,7 @@ public class NameTag : NetworkBehaviour
         base.OnNetworkSpawn();
         if (IsOwner)
         {
-            pName.Value = PlayerPrefs.GetString("Name", "Toast");
+            pName  = PlayerPrefs.GetString("Name", "Toast");
 
         }
     }
@@ -34,7 +34,7 @@ public class NameTag : NetworkBehaviour
     void Update()
     {
 
-        localname = pName.Value.ToString();
+        localname = pName .ToString();
 
         // Update logic (if any) goes here
     }

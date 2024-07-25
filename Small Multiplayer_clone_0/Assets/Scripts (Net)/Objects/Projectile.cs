@@ -1,5 +1,5 @@
 using UnityEngine;
-using Unity.Netcode;
+using Mirror;
 
 public class Projectile : NetworkBehaviour
 {

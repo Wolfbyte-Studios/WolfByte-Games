@@ -39,11 +39,11 @@ public class SceneStuff : NetworkBehaviour
     }
     public void ChooseScene()
     {
-        var mode = CurrentSessionStats.Instance.GameMode.Value;
+        var mode = CurrentSessionStats.Instance.GameMode ;
         switch (mode)
         {
             case CurrentSessionStats.GameModeEnum.Standard:
-                SceneToLoad.Value = Random.Range(0, Scenes.Count);
+                SceneToLoad  = Random.Range(0, Scenes.Count);
                 NetworkUtils.RpcHandler(this, LoadScene);
                 break;
         }
@@ -52,7 +52,7 @@ public class SceneStuff : NetworkBehaviour
     public void LoadScene()
     {
         
-       NetworkManager.SceneManager.LoadScene(Scenes[SceneToLoad.Value], LoadSceneMode.Single);
+       NetworkManager.SceneManager.LoadScene(Scenes[SceneToLoad ], LoadSceneMode.Single);
     }
     // Update is called once per frame
     void Update()

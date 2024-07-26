@@ -1,6 +1,6 @@
 using UnityEngine;
-using Unity.Netcode;
-using Unity.Netcode.Transports.UTP;
+using Mirror;
+using Mirror;
 using TMPro;
 using System.Collections.Generic;
 using System;
@@ -15,12 +15,12 @@ public class NameTag : NetworkBehaviour
     public string localname;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public override void OnNetworkSpawn()
+    public override void OnStartClient()
     {
-        base.OnNetworkSpawn();
+        base.OnStartClient();
         if (IsOwner)
         {
-            pName.Value = PlayerPrefs.GetString("Name", "Toast");
+            pName  = PlayerPrefs.GetString("Name", "Toast");
 
         }
     }
@@ -34,7 +34,7 @@ public class NameTag : NetworkBehaviour
     void Update()
     {
 
-        localname = pName.Value.ToString();
+        localname = pName .ToString();
 
         // Update logic (if any) goes here
     }

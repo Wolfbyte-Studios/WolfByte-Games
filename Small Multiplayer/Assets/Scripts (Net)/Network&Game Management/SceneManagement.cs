@@ -1,5 +1,5 @@
 using UnityEngine;
-using Unity.Netcode;
+using Mirror;
 using Unity.VisualScripting;
 using Newtonsoft.Json.Linq;
 using System.Collections;
@@ -14,7 +14,7 @@ public class SceneStuff : NetworkBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Start()
     {
-        base.OnNetworkSpawn();
+        base.OnStartClient();
         Instance = this;
         Scenes = GetScenesInBuild();
         //var totalScenes = SceneManager.sceneCountInBuildSettings;
@@ -39,11 +39,11 @@ public class SceneStuff : NetworkBehaviour
     }
     public void ChooseScene()
     {
-        var mode = CurrentSessionStats.Instance.GameMode.Value;
+        var mode = CurrentSessionStats.Instance.GameMode ;
         switch (mode)
         {
             case CurrentSessionStats.GameModeEnum.Standard:
-                SceneToLoad.Value = Random.Range(0, Scenes.Count);
+                SceneToLoad  = Random.Range(0, Scenes.Count);
                 NetworkUtils.RpcHandler(this, LoadScene);
                 break;
         }
@@ -52,7 +52,7 @@ public class SceneStuff : NetworkBehaviour
     public void LoadScene()
     {
         
-       NetworkManager.SceneManager.LoadScene(Scenes[SceneToLoad.Value], LoadSceneMode.Single);
+       NetworkManager.SceneManager.LoadScene(Scenes[SceneToLoad ], LoadSceneMode.Single);
     }
     // Update is called once per frame
     void Update()

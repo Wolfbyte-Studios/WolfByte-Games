@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.Netcode;
+using Mirror;
 using Unity.Netcode.Components;
 using Unity.VisualScripting;
 
@@ -19,9 +19,9 @@ public class Sink : NetworkBehaviour
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public override void OnNetworkSpawn()
+    public override void OnStartClient()
     {
-        base.OnNetworkSpawn();
+        base.OnStartClient();
         rb = gameObject.GetComponent<Rigidbody>();
         rb.isKinematic = true;
         originalHeight = transform.position.y;

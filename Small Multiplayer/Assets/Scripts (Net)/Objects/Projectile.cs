@@ -1,5 +1,5 @@
 using UnityEngine;
-using Unity.Netcode;
+using Mirror;
 
 public class Projectile : NetworkBehaviour
 {
@@ -10,7 +10,7 @@ public class Projectile : NetworkBehaviour
     public void Initialize(Vector3 force)
     {
         initialForce = force;
-        if (IsServer)
+        if (isServer)
         {
             ApplyForce();
         }
@@ -27,7 +27,7 @@ public class Projectile : NetworkBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (!IsServer) return;
+        if (!isServer) return;
 
         NetworkObject networkObject = collision.gameObject.GetComponent<NetworkObject>();
         if (networkObject != null && networkObject.IsPlayerObject)

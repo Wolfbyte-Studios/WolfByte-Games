@@ -1,6 +1,6 @@
 using UnityEngine;
-using Unity.Netcode;
-using Unity.Netcode.Transports.UTP;
+using Mirror;
+using Mirror;
 using TMPro;
 using System.Collections.Generic;
 using Steamworks;
@@ -25,6 +25,7 @@ public class JoinAndHost : MonoBehaviour
         port.text = PlayerPrefs.GetString("Port", port.text);
 
         transport.SetConnectionData(ip.text, ushort.Parse(port.text));
+        //SteamNetworkingUtils.InitRelayNetworkAccess();
         //NetworkManager.Singleton.OnClientDisconnectCallback += Singleton_OnClientDisconnectCallback;
     }
 
@@ -113,15 +114,17 @@ public class JoinAndHost : MonoBehaviour
     private SteamNetworkingIPAddr GetSteamIPAddress(CSteamID friendSteamID)
     {
         SteamNetworkingIPAddr ipAddr = new SteamNetworkingIPAddr();
-        // Assume we have a method to get IP from Steam (depends on your Steam P2P implementation)
-        // Fill in the logic here to retrieve the IP address from Steam P2P
-        // This is a placeholder implementation
+        SteamNetworkingIdentity identity = new SteamNetworkingIdentity();
+        identity.SetSteamID(friendSteamID);
+
+        SteamNetworkingSockets.ConnectP2P(ref identity, 0, 0, new SteamNetworkingConfigValue_t[0]);
         return ipAddr;
     }
 
     private void SetupSteamP2P()
     {
         // Set up Steam P2P networking
-        SteamNetworking.AllowP2PPacketRelay(true);
+        
+        SteamNetworkingSockets.CreateListenSocketP2P(0, 0, new SteamNetworkingConfigValue_t[0]);
     }
 }

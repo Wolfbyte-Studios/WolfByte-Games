@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.Netcode;
+using Mirror;
 using Unity.Netcode.Components;
 using UnityEngine.SceneManagement;
 public class SpawnManagement : NetworkBehaviour
@@ -52,7 +52,7 @@ public class SpawnManagement : NetworkBehaviour
     }
     public void StartGame()
     {
-        CurrentSessionStats.Instance.GameState.Value = CurrentSessionStats.GameStateEnum.InGame;
+        CurrentSessionStats.Instance.GameState  = CurrentSessionStats.GameStateEnum.InGame;
     }
 
     private void OnSceneLoad(Scene arg0, LoadSceneMode arg1)

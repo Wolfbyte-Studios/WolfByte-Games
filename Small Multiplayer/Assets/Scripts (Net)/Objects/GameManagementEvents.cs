@@ -1,4 +1,4 @@
-using Unity.Netcode;
+using Mirror;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -85,7 +85,7 @@ public class GameManagementEvents : MonoBehaviour
     {
         if (!CurrentSessionStats.Instance.netActive)
         { return; }
-        State = CurrentSessionStats.Instance.GameState.Value;
-        Mode = CurrentSessionStats.Instance.GameMode.Value;
+        State = CurrentSessionStats.Instance.GameState ;
+        Mode = CurrentSessionStats.Instance.GameMode ;
     }
 }

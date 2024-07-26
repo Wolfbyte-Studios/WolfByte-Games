@@ -1,5 +1,5 @@
 using UnityEngine;
-using Unity.Netcode;
+using Mirror;
 using UnityEngine.UIElements;
 
 public class HoldItem : NetworkBehaviour
@@ -21,9 +21,9 @@ public class HoldItem : NetworkBehaviour
     private float lastToggleTime = 0f;
     private const float toggleCooldown = 0.5f; // Cooldown time in seconds
 
-    public override void OnNetworkSpawn()
+    public override void OnStartClient()
     {
-        base.OnNetworkSpawn();
+        base.OnStartClient();
         toucher = GameObject.Find("Toucher").transform;
         player = toucher.parent.parent;
         rb = GetComponent<Rigidbody>();
@@ -98,7 +98,7 @@ public class HoldItem : NetworkBehaviour
 
     public void Throw()
     {
-        if (IsServer)
+        if (isServer)
         {
             isGrabbing = false;
             Vector3 direction = (toucher.position - transform.position).normalized;

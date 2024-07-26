@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.Netcode;
+using Mirror;
 using Unity.Netcode.Components;
 using System.Collections;
 public class Nudge : NetworkBehaviour
@@ -11,10 +11,10 @@ public class Nudge : NetworkBehaviour
     private Vector3 originalPosition;
     private Coroutine shakeCoroutine;
 
-    public override void OnNetworkSpawn()
+    public override void OnStartClient()
     {
-        base.OnNetworkSpawn();
-        if (IsClient && !IsServer)
+        base.OnStartClient();
+        if (isLocalPlayer && !isServer)
         {
             RequestOriginalPositionServerRpc();
         }
@@ -66,7 +66,7 @@ public class Nudge : NetworkBehaviour
 
     public void TriggerShake()
     {
-        if (IsServer)
+        if (isServer)
         {
             StartShake();
             
@@ -97,7 +97,7 @@ public class Nudge : NetworkBehaviour
     [ClientRpc]
     private void TriggerShakeClientRpc()
     {
-        if (!IsServer)
+        if (!isServer)
         {
             player.TriggerDizzy();
             player = null;

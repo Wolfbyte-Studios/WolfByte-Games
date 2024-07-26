@@ -1,5 +1,5 @@
 using UnityEngine;
-using Unity.Netcode;
+using Mirror;
 
 public class NetworkObjectIsActive : NetworkBehaviour
 {
@@ -17,12 +17,12 @@ public class NetworkObjectIsActive : NetworkBehaviour
     }
     public void OnEnable()
     {
-        isEnabled.Value = true;
+        isEnabled  = true;
         this.gameObject.SetActive(true);
     }
     public void OnDisable()
     {
-        isEnabled.Value = false;
+        isEnabled  = false;
         this.gameObject.SetActive(false);
     }
 }

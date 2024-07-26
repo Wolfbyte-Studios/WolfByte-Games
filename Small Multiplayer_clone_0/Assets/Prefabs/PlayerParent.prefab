@@ -17,8 +17,8 @@ GameObject:
   - component: {fileID: 1564744451239125012}
   - component: {fileID: 2872396761074685633}
   - component: {fileID: 2983219666276897949}
-  - component: {fileID: 7223834432425476983}
   - component: {fileID: 2349429794196869904}
+  - component: {fileID: 8387270572617073077}
   m_Layer: 31
   m_Name: Player 2
   m_TagString: Player
@@ -125,6 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce6ab45ac5f2a23418ed09bfa98713b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
   moveSpeed: 20
   maxVelocity: 5
   CanFly: 0
@@ -369,37 +372,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 1
   anim: {fileID: 0}
---- !u!114 &7223834432425476983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489124147165481460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b61428705f028342a8bee7d42bd4c7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseUnreliableDeltas: 0
-  SyncPositionX: 1
-  SyncPositionY: 1
-  SyncPositionZ: 1
-  SyncRotAngleX: 1
-  SyncRotAngleY: 1
-  SyncRotAngleZ: 1
-  SyncScaleX: 1
-  SyncScaleY: 1
-  SyncScaleZ: 1
-  PositionThreshold: 0.001
-  RotAngleThreshold: 0.01
-  ScaleThreshold: 0.01
-  UseQuaternionSynchronization: 0
-  UseQuaternionCompression: 0
-  UseHalfFloatPrecision: 0
-  InLocalSpace: 0
-  Interpolate: 1
-  SlerpPosition: 0
 --- !u!114 &2349429794196869904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,6 +446,40 @@ MonoBehaviour:
       m_Calls: []
   state: 0
   mode: 0
+--- !u!114 &8387270572617073077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489124147165481460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff3ba0becae47b8b9381191598957c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 1
+  syncMode: 0
+  syncInterval: 0
+  target: {fileID: 4214995074002705669}
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  onlySyncOnChange: 1
+  compressRotation: 1
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 1
+  coordinateSpace: 0
+  sendIntervalMultiplier: 1
+  timelineOffset: 0
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+  onlySyncOnChangeCorrectionMultiplier: 2
+  rotationSensitivity: 0.01
+  positionPrecision: 0.01
+  scalePrecision: 0.01
 --- !u!1 &688481578718284613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,6 +1295,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce6ab45ac5f2a23418ed09bfa98713b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
   moveSpeed: 15
   maxVelocity: 10
   CanFly: 1
@@ -2600,6 +2609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6521885051947890060}
   - component: {fileID: 5052746173538897342}
+  - component: {fileID: 2332664578663952467}
   m_Layer: 0
   m_Name: PlayerParent
   m_TagString: Untagged
@@ -2633,12 +2643,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8377055811415697539}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 969061630
+  GlobalObjectIdHash: 245167045
   InScenePlacedSourceGlobalObjectIdHash: 969061630
   AlwaysReplicateAsRoot: 1
   SynchronizeTransform: 1
@@ -2647,6 +2657,23 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
+--- !u!114 &2332664578663952467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8377055811415697539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  _assetId: 3676333967
+  serverOnly: 0
+  visibility: 0
+  hasSpawned: 0
 --- !u!1 &8778539114480139735
 GameObject:
   m_ObjectHideFlags: 0

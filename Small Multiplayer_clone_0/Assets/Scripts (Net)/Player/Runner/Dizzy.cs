@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.Netcode;
+using Mirror;
 using Unity.Netcode.Components;
 using System.Collections;
 using Unity.VisualScripting;
@@ -10,9 +10,9 @@ public class Dizzy : NetworkBehaviour
     public float time = 1f;
     public Animator anim;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public override void OnNetworkSpawn()
+    public override void OnStartClient()
     {
-        base.OnNetworkSpawn();
+        base.OnStartClient();
         anim = GetComponent<PlayerMovement>().anim;
     }
 

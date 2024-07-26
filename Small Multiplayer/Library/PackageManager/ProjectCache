@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638571233402052727
-    m_Hash: 791616655
+      ticks: 638574895360391547
+    m_Hash: 1697782161
   m_LockFileStatus:
     m_FilePath: C:/Users/user1/3d zeldaish/Small Multiplayer/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638571233402092765
-    m_Hash: 193351344
+      ticks: 638574895378592697
+    m_Hash: 3483757902
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -389,9 +389,11 @@ m_ResolvedPackages:
     - 2.2.0
     - 2.3.1
     - 2.4.3
+    - 2.4.4
     compatible:
     - 2.3.1
     - 2.4.3
+    - 2.4.4
     recommended: 2.3.1
     deprecated: []
   dependencies: []
@@ -955,91 +957,56 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 2.1.0
     minimumUnityVersion: 2023.3.0a1
-- packageId: com.unity.netcode.gameobjects@1.9.1
+- packageId: com.unity.nuget.newtonsoft-json@3.2.1
   testable: 0
   isDirectDependency: 1
-  version: 1.9.1
+  version: 3.2.1
   source: 1
-  resolvedPath: C:\Users\user1\3d zeldaish\Small Multiplayer\Library\PackageCache\com.unity.netcode.gameobjects
-  assetPath: Packages/com.unity.netcode.gameobjects
-  name: com.unity.netcode.gameobjects
-  displayName: Netcode for GameObjects
+  resolvedPath: C:\Users\user1\3d zeldaish\Small Multiplayer\Library\PackageCache\com.unity.nuget.newtonsoft-json
+  assetPath: Packages/com.unity.nuget.newtonsoft-json
+  name: com.unity.nuget.newtonsoft-json
+  displayName: Newtonsoft Json
   author:
     name: 
     email: 
     url: 
   category: 
-  type: assets
-  description: Netcode for GameObjects is a high-level netcode SDK that provides
-    networking capabilities to GameObject/MonoBehaviour workflows within Unity and
-    sits on top of underlying transport layer.
+  type: library
+  description: 'Newtonsoft Json for use in Unity projects and Unity packages. Currently
+    synced to version 13.0.2.
+
+
+    This package is used for advanced json serialization
+    and deserialization. Most Unity users will be better suited using the existing
+    json tools built into Unity.
+
+    To avoid assembly clashes, please use this
+    package if you intend to use Newtonsoft Json.'
   errors: []
   versions:
     all:
-    - 1.0.0-pre.2
-    - 1.0.0-pre.3
-    - 1.0.0-pre.4
-    - 1.0.0-pre.5
-    - 1.0.0-pre.6
-    - 1.0.0-pre.7
-    - 1.0.0-pre.8
-    - 1.0.0-pre.9
-    - 1.0.0-pre.10
-    - 1.0.0
-    - 1.0.1
-    - 1.0.2
-    - 1.1.0
-    - 1.2.0
-    - 1.3.1
-    - 1.4.0
-    - 1.5.1
-    - 1.5.2
-    - 1.6.0
-    - 1.7.0
-    - 1.7.1
-    - 1.8.0
-    - 1.8.1
-    - 1.9.1
-    - 2.0.0-exp.2
-    - 2.0.0-exp.4
-    - 2.0.0-exp.5
-    - 2.0.0-pre.1
-    - 2.0.0-pre.2
+    - 1.0.0-preview.2
+    - 1.0.0-preview.3
+    - 1.0.0-preview.4
+    - 1.0.1-preview.1
+    - 1.1.2
+    - 2.0.0-preview
+    - 2.0.0-preview.1
+    - 2.0.0-preview.2
+    - 2.0.0
+    - 2.0.1-preview.1
+    - 2.0.2
+    - 3.0.1
+    - 3.0.2
+    - 3.1.0
+    - 3.2.0
+    - 3.2.1
     compatible:
-    - 1.9.1
-    - 2.0.0-exp.2
-    - 2.0.0-exp.4
-    - 2.0.0-exp.5
-    - 2.0.0-pre.1
-    - 2.0.0-pre.2
-    recommended: 2.0.0-pre.2
+    - 3.2.1
+    recommended: 3.2.1
     deprecated: []
-  dependencies:
-  - name: com.unity.nuget.mono-cecil
-    version: 1.10.1
-  - name: com.unity.transport
-    version: 1.4.0
-  resolvedDependencies:
-  - name: com.unity.nuget.mono-cecil
-    version: 1.11.4
-  - name: com.unity.transport
-    version: 2.1.0
-  - name: com.unity.collections
-    version: 2.4.1
-  - name: com.unity.burst
-    version: 1.8.15
-  - name: com.unity.mathematics
-    version: 1.3.2
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.test-framework
-    version: 1.4.4
-  - name: com.unity.ext.nunit
-    version: 2.0.5
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  - name: com.unity.test-framework.performance
-    version: 3.0.3
+  dependencies: []
+  resolvedDependencies: []
   keywords: []
   registry:
     id: main
@@ -1053,18 +1020,18 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638494544970000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.netcode.gameobjects@1.9/manual/index.html
+  datePublishedTicks: 638186318800000000
+  documentationUrl: 
   hasRepository: 1
   repository:
     type: git
-    url: https://github.com/Unity-Technologies/com.unity.netcode.gameobjects.git
-    revision: 7d27c5141123e3b9f31419ccca7768a640a45d56
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.newtonsoft-json.git
+    revision: d8e49aef8979bef617144382052ec2f479645eaf
     path: 
   unityLifecycle:
-    version: 1.9.1
+    version: 3.2.1
     nextVersion: 
-    recommendedVersion: 2.0.0-pre.2
+    recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
@@ -1072,71 +1039,15 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Added\n- Added AnticipatedNetworkVariable<T>, which
-    adds support for client anticipation of NetworkVariable values, allowing for
-    more responsive gameplay (#2820)\n- Added AnticipatedNetworkTransform, which
-    adds support for client anticipation of NetworkTransforms (#2820)\n- Added NetworkVariableBase.ExceedsDirtinessThreshold
-    to allow network variables to throttle updates by only sending updates when the
-    difference between the current and previous values exceeds a threshold. (This
-    is exposed in NetworkVariable<T> with the callback NetworkVariable<T>.CheckExceedsDirtinessThreshold)
-    (#2820)\n- Added NetworkVariableUpdateTraits, which add additional throttling
-    support: MinSecondsBetweenUpdates will prevent the NetworkVariable from sending
-    updates more often than the specified time period (even if it exceeds the dirtiness
-    threshold), while MaxSecondsBetweenUpdates will force a dirty NetworkVariable
-    to send an update after the specified time period even if it has not yet exceeded
-    the dirtiness threshold. (#2820)\n- Added virtual method NetworkVariableBase.OnInitialize()
-    which can be used by NetworkVariable subclasses to add initialization code (#2820)\n-
-    Added virtual method NetworkVariableBase.Update(), which is called once per frame
-    to support behaviors such as interpolation between an anticipated value and an
-    authoritative one. (#2820)\n- Added NetworkTime.TickWithPartial, which represents
-    the current tick as a double that includes the fractional/partial tick value.
-    (#2820)\n- Added NetworkTickSystem.AnticipationTick, which can be helpful with
-    implementation of client anticipation. This value represents the tick the current
-    local client was at at the beginning of the most recent network round trip, which
-    enables it to correlate server update ticks with the client tick that may have
-    triggered them. (#2820)\n- `NetworkVariable` now includes built-in support for
-    `NativeHashSet`, `NativeHashMap`, `List`, `HashSet`, and `Dictionary` (#2813)\n-
-    `NetworkVariable` now includes delta compression for collection values (`NativeList`,
-    `NativeArray`, `NativeHashSet`, `NativeHashMap`, `List`, `HashSet`, `Dictionary`,
-    and `FixedString` types) to save bandwidth by only sending the values that changed.
-    (Note: For `NativeList`, `NativeArray`, and `List`, this algorithm works differently
-    than that used in `NetworkList`. This algorithm will use less bandwidth for \"set\"
-    and \"add\" operations, but `NetworkList` is more bandwidth-efficient if you
-    are performing frequent \"insert\" operations.) (#2813)\n- `UserNetworkVariableSerialization`
-    now has optional callbacks for `WriteDelta` and `ReadDelta`. If both are provided,
-    they will be used for all serialization operations on NetworkVariables of that
-    type except for the first one for each client. If either is missing, the existing
-    `Write` and `Read` will always be used. (#2813)\n- Network variables wrapping
-    `INetworkSerializable` types can perform delta serialization by setting `UserNetworkVariableSerialization<T>.WriteDelta`
-    and `UserNetworkVariableSerialization<T>.ReadDelta` for those types. The built-in
-    `INetworkSerializable` serializer will continue to be used for all other serialization
-    operations, but if those callbacks are set, it will call into them on all but
-    the initial serialization to perform delta serialization. (This could be useful
-    if you have a large struct where most values do not change regularly and you
-    want to send only the fields that did change.) (#2813)\n\n### Fixed\n\n- Fixed
-    issue where NetworkTransformEditor would throw and exception if you excluded
-    the physics package. (#2871)\n- Fixed issue where `NetworkTransform` could not
-    properly synchronize its base position when using half float precision. (#2845)\n-
-    Fixed issue where the host was not invoking `OnClientDisconnectCallback` for
-    its own local client when internally shutting down. (#2822)\n- Fixed issue where
-    NetworkTransform could potentially attempt to \"unregister\" a named message
-    prior to it being registered. (#2807)\n- Fixed issue where in-scene placed `NetworkObject`s
-    with complex nested children `NetworkObject`s (more than one child in depth)
-    would not synchronize properly if WorldPositionStays was set to true. (#2796)\n\n###
-    Changed\n\n- Changed `NetworkObjectReference` and `NetworkBehaviourReference`
-    to allow null references when constructing and serializing. (#2874)\n- Changed
-    `NetworkAnimator` no longer requires the `Animator` component to exist on the
-    same `GameObject`. (#2872)\n- Changed `NetworkTransform` to now use `NetworkTransformMessage`
-    as opposed to named messages for NetworkTransformState updates. (#2810)\n- Changed
-    `CustomMessageManager` so it no longer attempts to register or \"unregister\"
-    a null or empty string and will log an error if this condition occurs. (#2807)"}'
+  upmReserved: '{"changelog":"* Fixed Newtonsoft DLL when compiling with netstandard
+    2.0."}'
   assetStore:
     productId: 
-  fingerprint: 5f38aa6da4c16ce6d0d538f6f3707ef10aae9775
+  fingerprint: 74deb55db2a0c29ddfda576608bcb86abbd13ee6
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 1.9.1
-    minimumUnityVersion: 2021.3.0a1
+    minimumPackageVersion: 3.2.1
+    minimumUnityVersion: 2018.4.0a1
 - packageId: com.unity.probuilder@6.0.1
   testable: 0
   isDirectDependency: 1
@@ -5173,6 +5084,81 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 2.0.1
     minimumUnityVersion: 2018.4.0a1
+- packageId: com.unity.profiling.core@1.0.2
+  testable: 0
+  isDirectDependency: 0
+  version: 1.0.2
+  source: 1
+  resolvedPath: C:\Users\user1\3d zeldaish\Small Multiplayer\Library\PackageCache\com.unity.profiling.core
+  assetPath: Packages/com.unity.profiling.core
+  name: com.unity.profiling.core
+  displayName: Unity Profiling Core API
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: The Unity Profiling Core package provides an API for code instrumentation
+    markup, and for profiling statistic collection.
+  errors: []
+  versions:
+    all:
+    - 0.1.0-preview.1
+    - 0.2.0-preview.1
+    - 0.2.1-preview.1
+    - 1.0.0-pre.1
+    - 1.0.0
+    - 1.0.2
+    compatible:
+    - 1.0.2
+    recommended: 1.0.2
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - profiler
+  - profiling
+  - api
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637828752310000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/profiler.git
+    revision: 2189ba14439d76a4083f59fae87163b4bdfd49c2
+    path: 
+  unityLifecycle:
+    version: 1.0.2
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: 
+  assetStore:
+    productId: 
+  fingerprint: aac7b93912bc5df5fe06b04ff1b758493cdc2346
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 1.0.2
+    minimumUnityVersion: 2020.1.0a1
 - packageId: com.unity.nuget.mono-cecil@1.11.4
   testable: 0
   isDirectDependency: 0
@@ -5252,344 +5238,6 @@ m_ResolvedPackages:
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 1.11.4
-    minimumUnityVersion: 2018.4.0a1
-- packageId: com.unity.transport@2.1.0
-  testable: 0
-  isDirectDependency: 0
-  version: 2.1.0
-  source: 1
-  resolvedPath: C:\Users\user1\3d zeldaish\Small Multiplayer\Library\PackageCache\com.unity.transport
-  assetPath: Packages/com.unity.transport
-  name: com.unity.transport
-  displayName: Unity Transport
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: assets
-  description: Unity network transport layer - the low-level interface for connecting
-    and sending data through a network
-  errors: []
-  versions:
-    all:
-    - 0.2.0-preview.4
-    - 0.2.1-preview.1
-    - 0.2.2-preview.2
-    - 0.2.3-preview.0
-    - 0.2.4-preview.0
-    - 0.3.0-preview.6
-    - 0.3.1-preview.4
-    - 0.4.0-preview.3
-    - 0.4.1-preview.1
-    - 0.5.0-preview.5
-    - 0.6.0-preview.7
-    - 0.8.0-preview.8
-    - 1.0.0-pre.2
-    - 1.0.0-pre.3
-    - 1.0.0-pre.4
-    - 1.0.0-pre.5
-    - 1.0.0-pre.6
-    - 1.0.0-pre.7
-    - 1.0.0-pre.8
-    - 1.0.0-pre.9
-    - 1.0.0-pre.10
-    - 1.0.0-pre.12
-    - 1.0.0-pre.13
-    - 1.0.0-pre.14
-    - 1.0.0-pre.15
-    - 1.0.0-pre.16
-    - 1.0.0
-    - 1.1.0
-    - 1.2.0
-    - 1.3.0
-    - 1.3.1
-    - 1.3.2
-    - 1.3.3
-    - 1.3.4
-    - 1.4.0
-    - 1.4.1
-    - 2.0.0-exp.6
-    - 2.0.0-exp.7
-    - 2.0.0-exp.8
-    - 2.0.0-pre.2
-    - 2.0.0-pre.3
-    - 2.0.0-pre.5
-    - 2.0.0-pre.6
-    - 2.0.0-pre.7
-    - 2.0.0-pre.8
-    - 2.0.1
-    - 2.0.2
-    - 2.1.0
-    - 2.2.1
-    - 2.3.0
-    compatible:
-    - 2.1.0
-    - 2.2.1
-    - 2.3.0
-    recommended: 2.3.0
-    deprecated: []
-  dependencies:
-  - name: com.unity.collections
-    version: 2.2.1
-  - name: com.unity.burst
-    version: 1.8.8
-  - name: com.unity.mathematics
-    version: 1.3.1
-  resolvedDependencies:
-  - name: com.unity.collections
-    version: 2.4.1
-  - name: com.unity.burst
-    version: 1.8.15
-  - name: com.unity.mathematics
-    version: 1.3.2
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.nuget.mono-cecil
-    version: 1.11.4
-  - name: com.unity.test-framework
-    version: 1.4.4
-  - name: com.unity.ext.nunit
-    version: 2.0.5
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  - name: com.unity.test-framework.performance
-    version: 3.0.3
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 638312515290000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.transport@2.1/manual/index.html
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.transport.git
-    revision: 6f83b98fdc9ce9f33261055e34cedb5583730039
-    path: 
-  unityLifecycle:
-    version: 2.1.0
-    nextVersion: 
-    recommendedVersion: 2.3.0
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: '{"changelog":"### New features\n* It is now possible to configure
-    the maximum message size that the transport will send through a new `maxMessageSize`
-    parameter in `NetworkSettings.WithNetworkConfigParameters`. This is useful for
-    environments where network equipment mishandles larger packets (like some mobile
-    networks or VPNs). The value excludes IP and UDP headers, but includes headers
-    added by the transport itself (e.g. reliability headers). The default value is
-    1400. Note that it is recommended that both client and server be configured to
-    use the same value.\n* Added new values `AuthenticationFailure` and `ProtocolError`
-    to the `Error.DisconnectReason` enum. These values are respectively returned
-    when a connection fails to be established because of DTLS/TLS handshake failure,
-    and for unexpected and unrecoverable errors encountered by the transport (e.g.
-    unexpected socket errors or malformed WebSocket frames).\n* Added a new `NetworkFamily.Custom`
-    value and proper support for it in `NetworkEndpoint`. This value is intended
-    for usage with custom `INetworkInterface` implementations, where endpoints are
-    not IP addresses.\n\n### Changes\n* Updated Collections dependency to 2.2.1.\n*
-    Updated Burst dependency to 1.8.8.\n* Updated Mathematics dependency to 1.3.1.\n*
-    `NetworkDriver.GetRelayConnectionStatus` will now return the new enum value `RelayConnectionStatus.NotUsingRelay`
-    when called on a `NetworkDriver` that has not been configured to use Unity Relay.
-    The previous behavior was to throw an exception. This can be used to safely determine
-    if a driver is using Relay, even from Burst-compiled code.\n* `RelayServerData`
-    now exposes a `IsWebSocket` field that can be used to determine if the server
-    data will be using a WebSocket endpoint. This value is set automatically if constructing
-    the `RelayServerData` from an allocation object, and can be set through a new
-    optional `isWebSocket` parameter for low-level constructors.\n* `NetworkEndpoint.RawPort`
-    is now obsolete. There is little use for this API since it basically only converts
-    to/from network byte order. There are standard C# APIs to do this.\n\n### Fixes\n*
-    Fixed a possible crash when using secure WebSockets that would occur if a connection
-    was closed suddenly with pending packets waiting to be sent.\n* Fixed an issue
-    where empty messages would not properly be received if sent on a non-default
-    pipeline.\n* Fixed \"Input string was not in a correct format\" log when listening
-    on a port already in use."}'
-  assetStore:
-    productId: 
-  fingerprint: 6d461370b7a64478864ae52825d9050de835b1e3
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 2.1.0
-    minimumUnityVersion: 2022.2.0a18
-- packageId: com.unity.profiling.core@1.0.2
-  testable: 0
-  isDirectDependency: 0
-  version: 1.0.2
-  source: 1
-  resolvedPath: C:\Users\user1\3d zeldaish\Small Multiplayer\Library\PackageCache\com.unity.profiling.core
-  assetPath: Packages/com.unity.profiling.core
-  name: com.unity.profiling.core
-  displayName: Unity Profiling Core API
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: asset
-  description: The Unity Profiling Core package provides an API for code instrumentation
-    markup, and for profiling statistic collection.
-  errors: []
-  versions:
-    all:
-    - 0.1.0-preview.1
-    - 0.2.0-preview.1
-    - 0.2.1-preview.1
-    - 1.0.0-pre.1
-    - 1.0.0
-    - 1.0.2
-    compatible:
-    - 1.0.2
-    recommended: 1.0.2
-    deprecated: []
-  dependencies: []
-  resolvedDependencies: []
-  keywords:
-  - profiler
-  - profiling
-  - api
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 637828752310000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/profiler.git
-    revision: 2189ba14439d76a4083f59fae87163b4bdfd49c2
-    path: 
-  unityLifecycle:
-    version: 1.0.2
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
-  fingerprint: aac7b93912bc5df5fe06b04ff1b758493cdc2346
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 1.0.2
-    minimumUnityVersion: 2020.1.0a1
-- packageId: com.unity.nuget.newtonsoft-json@3.2.1
-  testable: 0
-  isDirectDependency: 0
-  version: 3.2.1
-  source: 1
-  resolvedPath: C:\Users\user1\3d zeldaish\Small Multiplayer\Library\PackageCache\com.unity.nuget.newtonsoft-json
-  assetPath: Packages/com.unity.nuget.newtonsoft-json
-  name: com.unity.nuget.newtonsoft-json
-  displayName: Newtonsoft Json
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: library
-  description: 'Newtonsoft Json for use in Unity projects and Unity packages. Currently
-    synced to version 13.0.2.
-
-
-    This package is used for advanced json serialization
-    and deserialization. Most Unity users will be better suited using the existing
-    json tools built into Unity.
-
-    To avoid assembly clashes, please use this
-    package if you intend to use Newtonsoft Json.'
-  errors: []
-  versions:
-    all:
-    - 1.0.0-preview.2
-    - 1.0.0-preview.3
-    - 1.0.0-preview.4
-    - 1.0.1-preview.1
-    - 1.1.2
-    - 2.0.0-preview
-    - 2.0.0-preview.1
-    - 2.0.0-preview.2
-    - 2.0.0
-    - 2.0.1-preview.1
-    - 2.0.2
-    - 3.0.1
-    - 3.0.2
-    - 3.1.0
-    - 3.2.0
-    - 3.2.1
-    compatible:
-    - 3.2.1
-    recommended: 3.2.1
-    deprecated: []
-  dependencies: []
-  resolvedDependencies: []
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 638186318800000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.newtonsoft-json.git
-    revision: d8e49aef8979bef617144382052ec2f479645eaf
-    path: 
-  unityLifecycle:
-    version: 3.2.1
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: '{"changelog":"* Fixed Newtonsoft DLL when compiling with netstandard
-    2.0."}'
-  assetStore:
-    productId: 
-  fingerprint: 74deb55db2a0c29ddfda576608bcb86abbd13ee6
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 3.2.1
     minimumUnityVersion: 2018.4.0a1
 - packageId: com.unity.burst@1.8.15
   testable: 0
@@ -5742,10 +5390,12 @@ m_ResolvedPackages:
     - 1.8.14
     - 1.8.15
     - 1.8.16
+    - 1.8.17
     compatible:
     - 1.8.15
     - 1.8.16
-    recommended: 1.8.16
+    - 1.8.17
+    recommended: 1.8.17
     deprecated: []
   dependencies:
   - name: com.unity.mathematics

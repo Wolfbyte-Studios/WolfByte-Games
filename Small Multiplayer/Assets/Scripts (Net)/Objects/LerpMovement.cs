@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.Netcode;
+using Mirror;
 using Unity.Netcode.Components;
 
 
@@ -25,9 +25,9 @@ public class LerpMovement : NetworkBehaviour
     private NetworkRigidbody networkRb;
     
 
-    public override void OnNetworkSpawn()
+    public override void OnStartClient()
     {
-        base.OnNetworkSpawn();
+        base.OnStartClient();
         if (rigBody)
         {
             rb = gameObject.AddComponent<Rigidbody>();
@@ -37,7 +37,7 @@ public class LerpMovement : NetworkBehaviour
         initialTransform.position = transform.position;
         initialTransform.rotation = transform.rotation;
         transform.position = initialTransform.position;
-        if (IsClient && !IsServer)
+        if (isLocalPlayer && !isServer)
         {
             RequestInitialTransformServerRpc();
         }
@@ -64,7 +64,7 @@ public class LerpMovement : NetworkBehaviour
 
     void Update()
     {
-        if (IsServer && isLerping)
+        if (isServer && isLerping)
         {
             
             if (rigBody)
@@ -93,7 +93,7 @@ public class LerpMovement : NetworkBehaviour
     [ClientRpc]
     private void TriggerClientRpc()
     {
-        if (!IsServer)
+        if (!isServer)
         {
             isLerping = true;
             currentTargetIndex = 0;
@@ -102,7 +102,7 @@ public class LerpMovement : NetworkBehaviour
 
     public void Trigger()
     {
-        if (IsServer)
+        if (isServer)
         {
             isLerping = true;
             currentTargetIndex = 0;

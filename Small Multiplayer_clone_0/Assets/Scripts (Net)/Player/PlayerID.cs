@@ -1,5 +1,5 @@
 using UnityEngine;
-using Unity.Netcode;
+using Mirror;
 using Unity.VisualScripting;
 using Newtonsoft.Json.Linq;
 using System.Collections;
@@ -16,7 +16,8 @@ public class PlayerNetworkIndex : NetworkBehaviour
     }
     public playerType PlayerType;
 
-    public NetworkVariable<bool> isEnabled = new NetworkVariable<bool>(true, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+    [SyncVar]
+    public bool isEnabled = true;
 
     public void OnEnable()
     {
@@ -32,20 +33,20 @@ public class PlayerNetworkIndex : NetworkBehaviour
         ApplyState();
     }
 
-    // OnNetworkSpawn is called when the object is initialized on the network
-    public override void OnNetworkSpawn()
+    // OnStartClient is called when the object is initialized on the network
+    public override void OnStartClient()
     {
-        if (IsServer)
+        if (isServer)
         {
             // Initialize state on the server
-            isEnabled.Value = gameObject.activeSelf;
+            isEnabled  = gameObject.activeSelf;
         }
 
         // Subscribe to state changes
-        isEnabled.OnValueChanged += OnIsEnabledChanged;
+        //isEnabled.OnValueChanged += OnIsEnabledChanged;
 
         // Only assign the playerIndex on the local player
-        if (!IsOwner)
+        if (!isLocalPlayer)
         {
             // Disable the camera if this is not the local player
             playerCamera.gameObject.SetActive(false);
@@ -61,10 +62,10 @@ public class PlayerNetworkIndex : NetworkBehaviour
         
     }
 
-    public override void OnNetworkDespawn()
+    public override void OnStopClient()
     {
         // Unsubscribe from state changes
-        isEnabled.OnValueChanged -= OnIsEnabledChanged;
+       // isEnabled. -= OnIsEnabledChanged;
     }
 
     private void OnIsEnabledChanged(bool oldValue, bool newValue)
@@ -74,20 +75,20 @@ public class PlayerNetworkIndex : NetworkBehaviour
 
     private void ApplyState()
     {
-        gameObject.SetActive(isEnabled.Value);
+        gameObject.SetActive(isEnabled );
     }
 
     
     public void SetEnabledState(bool state)
     {
-        isEnabled.Value = state;
+        isEnabled  = state;
         NetworkUtils.RpcHandler(this, ApplyState);
     }
 
     [ContextMenu("Enable Object")]
     public void EnableObject()
     {
-        if (IsServer)
+        if (isServer)
         {
             SetEnabledState(true);
         }
@@ -100,7 +101,7 @@ public class PlayerNetworkIndex : NetworkBehaviour
     [ContextMenu("Disable Object")]
     public void DisableObject()
     {
-        if (IsServer)
+        if (isServer)
         {
             SetEnabledState(false);
         }
@@ -112,7 +113,7 @@ public class PlayerNetworkIndex : NetworkBehaviour
 
     public IEnumerator delay()
     {
-        if (IsServer)
+        if (isServer)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -126,8 +127,8 @@ public class PlayerNetworkIndex : NetworkBehaviour
 
     public void refresh()
     {
-        int localId = (int)this.NetworkObject.OwnerClientId;
-        int sabId = CurrentSessionStats.Instance.IndexOfSab.Value;
+        int localId = 0; // (int)this.GetComponent<NetworkIdentity>().;
+        int sabId = CurrentSessionStats.Instance.IndexOfSab ;
 
         switch (PlayerType)
         {

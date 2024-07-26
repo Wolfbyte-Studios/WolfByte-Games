@@ -1,6 +1,6 @@
 using UnityEngine;
-using Unity.Netcode;
-using Unity.Netcode.Transports.UTP;
+using Mirror;
+using Mirror;
 using TMPro;
 using System.Collections.Generic;
 using System;
@@ -12,12 +12,12 @@ public class LobbyPedestal : NetworkBehaviour
     public List<GameObject> players;
     public GameObject pedestal;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public override void OnNetworkSpawn()
+    public override void OnStartClient()
     {
-        base.OnNetworkSpawn();
+        base.OnStartClient();
         target = new List<GameObject>();
         players = new List<GameObject>();
-        if (IsServer)
+        if (isServer)
         {
             NetworkUtils.RpcHandler(this, updateGameModes);
         }
@@ -26,8 +26,8 @@ public class LobbyPedestal : NetworkBehaviour
     public void updateGameModes()
     {
         
-        CurrentSessionStats.Instance.GameState.Value = CurrentSessionStats.GameStateEnum.UI;
-        CurrentSessionStats.Instance.GameMode.Value =  CurrentSessionStats.GameModeEnum.Standard;
+        CurrentSessionStats.Instance.GameState  = CurrentSessionStats.GameStateEnum.UI;
+        CurrentSessionStats.Instance.GameMode  =  CurrentSessionStats.GameModeEnum.Standard;
     }
     
 

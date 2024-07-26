@@ -1,6 +1,6 @@
 using UnityEngine;
-using Unity.Netcode;
-using Unity.Netcode.Transports.UTP;
+using Mirror;
+using Mirror;
 using TMPro;
 using System.Collections.Generic;
 
@@ -14,9 +14,9 @@ public class SetTextToPlayerName : NetworkBehaviour
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public override void OnNetworkSpawn()
+    public override void OnStartClient()
     {
-        base.OnNetworkSpawn();
+        base.OnStartClient();
         //UpdatePlayerName();
         label = GetComponent<TMP_Text>();
     }

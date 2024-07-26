@@ -1184,7 +1184,7 @@ namespace Unity.Netcode.Components
         /// Internally used by <see cref="NetworkTransform"/> to keep track of whether this <see cref="NetworkBehaviour"/> derived class instance
         /// was instantiated on the server side or not.
         /// </summary>
-        protected bool m_CachedIsServer; // Note: we no longer use this and are only keeping it until we decide to deprecate it
+        protected bool m_CachedisServer; // Note: we no longer use this and are only keeping it until we decide to deprecate it
 
         /// <summary>
         /// Internally used by <see cref="NetworkTransform"/> to keep track of the <see cref="NetworkManager"/> instance assigned to this
@@ -1400,7 +1400,7 @@ namespace Unity.Netcode.Components
         /// </summary>
         private bool ShouldSynchronizeHalfFloat(ulong targetClientId)
         {
-            if (!IsServerAuthoritative() && NetworkObject.OwnerClientId == targetClientId)
+            if (!isServerAuthoritative() && NetworkObject.OwnerClientId == targetClientId)
             {
                 // Return false for all client owners but return true for the server
                 return NetworkObject.IsOwnedByServer;
@@ -1482,7 +1482,7 @@ namespace Unity.Netcode.Components
             }
 
             // Only the server or the owner is allowed to commit a transform
-            if (!IsServer && !IsOwner)
+            if (!isServer && !IsOwner)
             {
                 var errorMessage = gameObject != NetworkObject.gameObject ?
                     $"Non-authority instance of {NetworkObject.gameObject.name} is trying to commit a transform on {gameObject.name}!" :
@@ -1501,7 +1501,7 @@ namespace Unity.Netcode.Components
                 var position = InLocalSpace ? transformToCommit.localPosition : transformToCommit.position;
                 var rotation = InLocalSpace ? transformToCommit.localRotation : transformToCommit.rotation;
                 // We are an owner requesting to update our state
-                if (!IsServer)
+                if (!isServer)
                 {
                     SetStateServerRpc(position, rotation, transformToCommit.localScale, false);
                 }
@@ -1537,7 +1537,7 @@ namespace Unity.Netcode.Components
         private void TryCommitTransform(ref Transform transformToCommit, bool synchronize = false, bool settingState = false)
         {
             // Only the server or the owner is allowed to commit a transform
-            if (!IsServer && !IsOwner)
+            if (!isServer && !IsOwner)
             {
                 NetworkLog.LogError($"[{name}] is trying to commit the transform without authority!");
                 return;
@@ -1880,7 +1880,7 @@ namespace Unity.Netcode.Components
                                 // If the server is the owner, in both server and owner authoritative modes,
                                 // or we are running in server authoritative mode, then we use the
                                 // HalfDeltaConvertedBack value as the delta position
-                                if (NetworkObject.IsOwnedByServer || IsServerAuthoritative())
+                                if (NetworkObject.IsOwnedByServer || isServerAuthoritative())
                                 {
                                     networkState.DeltaPosition = m_HalfPositionState.HalfDeltaConvertedBack;
                                 }
@@ -2754,11 +2754,11 @@ namespace Unity.Netcode.Components
         }
 
         /// <inheritdoc/>
-        public override void OnNetworkSpawn()
+        public override void OnStartClient()
         {
             ///////////////////////////////////////////////////////////////
             // NOTE: Legacy and no longer used (candidates for deprecation)
-            m_CachedIsServer = IsServer;
+            m_CachedisServer = isServer;
             ///////////////////////////////////////////////////////////////
 
             // Started using this again to avoid the getter processing cost of NetworkBehaviour.NetworkManager
@@ -2773,7 +2773,7 @@ namespace Unity.Netcode.Components
         }
 
         /// <inheritdoc/>
-        public override void OnNetworkDespawn()
+        public override void OnStopClient()
         {
             DeregisterForTickUpdate(this);
 
@@ -2853,7 +2853,7 @@ namespace Unity.Netcode.Components
                 return;
             }
 
-            CanCommitToTransform = IsServerAuthoritative() ? IsServer : IsOwner;
+            CanCommitToTransform = isServerAuthoritative() ? isServer : IsOwner;
             var currentPosition = GetSpaceRelativePosition();
             var currentRotation = GetSpaceRelativeRotation();
 
@@ -2869,7 +2869,7 @@ namespace Unity.Netcode.Components
                 RegisterForTickUpdate(this);
 
                 m_LocalAuthoritativeNetworkState.SynchronizeBaseHalfFloat = false;
-                if (UseHalfFloatPrecision && isOwnershipChange && !IsServerAuthoritative() && Interpolate)
+                if (UseHalfFloatPrecision && isOwnershipChange && !isServerAuthoritative() && Interpolate)
                 {
                     m_HalfFloatTargetTickOwnership = m_CachedNetworkManager.ServerTime.Tick;
                 }
@@ -2962,7 +2962,7 @@ namespace Unity.Netcode.Components
             }
 
             // Only the server or the owner is allowed to commit a transform
-            if (!IsServer && !IsOwner)
+            if (!isServer && !IsOwner)
             {
                 var errorMessage = gameObject != NetworkObject.gameObject ?
                     $"Non-authority instance of {NetworkObject.gameObject.name} is trying to commit a transform on {gameObject.name}!" :
@@ -2978,7 +2978,7 @@ namespace Unity.Netcode.Components
             if (!CanCommitToTransform)
             {
                 // Preserving the ability for owner authoritative mode to accept state changes from server
-                if (IsServer)
+                if (isServer)
                 {
                     m_ClientIds[0] = OwnerClientId;
                     m_ClientRpcParams.Send.TargetClientIds = m_ClientIds;
@@ -3078,7 +3078,7 @@ namespace Unity.Netcode.Components
                 // With owner authoritative mode, non-authority clients can lag behind
                 // by more than 1 tick period of time. The current "solution" for now
                 // is to make their cachedRenderTime run 2 ticks behind.
-                var ticksAgo = !IsServerAuthoritative() && !IsServer ? 2 : 1;
+                var ticksAgo = !isServerAuthoritative() && !isServer ? 2 : 1;
                 var cachedRenderTime = serverTime.TimeTicksAgo(ticksAgo).Time;
 
                 // Now only update the interpolators for the portions of the transform being synchronized
@@ -3145,7 +3145,7 @@ namespace Unity.Netcode.Components
         /// Override this method and return false to switch to owner authoritative mode
         /// </summary>
         /// <returns>(<see cref="true"/> or <see cref="false"/>) where when false it runs as owner-client authoritative</returns>
-        protected virtual bool OnIsServerAuthoritative()
+        protected virtual bool OnisServerAuthoritative()
         {
             return true;
         }
@@ -3157,9 +3157,9 @@ namespace Unity.Netcode.Components
         /// Used by <see cref="NetworkRigidbody"/> to determines if this is server or owner authoritative.
         /// </remarks>
         /// <returns><see cref="true"/> or <see cref="false"/></returns>
-        public bool IsServerAuthoritative()
+        public bool isServerAuthoritative()
         {
-            return OnIsServerAuthoritative();
+            return OnisServerAuthoritative();
         }
 
         /// <summary>
@@ -3188,12 +3188,12 @@ namespace Unity.Netcode.Components
                 return;
             }
 
-            bool isServerAuthoritative = OnIsServerAuthoritative();
-            if (isServerAuthoritative && !IsServer)
+            bool isServerAuthoritative = OnisServerAuthoritative();
+            if (isServerAuthoritative && !isServer)
             {
                 //Debug.LogError($"Server authoritative {nameof(NetworkTransform)} can only be updated by the server!");
             }
-            else if (!isServerAuthoritative && !IsServer && !IsOwner)
+            else if (!isServerAuthoritative && !isServer && !IsOwner)
             {
                 //Debug.LogError($"Owner authoritative {nameof(NetworkTransform)} can only be updated by the owner!");
             }
@@ -3216,7 +3216,7 @@ namespace Unity.Netcode.Components
                 ? NetworkDelivery.ReliableSequenced : NetworkDelivery.UnreliableSequenced;
 
             // Server-host always sends updates to all clients (but itself)
-            if (IsServer)
+            if (isServer)
             {
                 var clientCount = m_CachedNetworkManager.ConnectionManager.ConnectedClientsList.Count;
                 for (int i = 0; i < clientCount; i++)
@@ -3298,7 +3298,7 @@ namespace Unity.Netcode.Components
                 m_NetworkManager = networkManager;
                 m_NetworkTickUpdate = new Action(TickUpdate);
                 networkManager.NetworkTickSystem.Tick += m_NetworkTickUpdate;
-                if (networkManager.IsServer)
+                if (networkManager.isServer)
                 {
                     networkManager.OnServerStopped += OnNetworkManagerStopped;
                 }

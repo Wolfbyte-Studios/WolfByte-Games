@@ -1,6 +1,6 @@
 using UnityEngine;
-using Unity.Netcode;
-using Unity.Netcode.Transports.UTP;
+using Mirror;
+using Mirror;
 using TMPro;
 using System.Collections.Generic;
 using Steamworks;

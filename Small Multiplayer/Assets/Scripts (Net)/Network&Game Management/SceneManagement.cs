@@ -1,5 +1,5 @@
 using UnityEngine;
-using Unity.Netcode;
+using Mirror;
 using Unity.VisualScripting;
 using Newtonsoft.Json.Linq;
 using System.Collections;
@@ -14,7 +14,7 @@ public class SceneStuff : NetworkBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Start()
     {
-        base.OnNetworkSpawn();
+        base.OnStartClient();
         Instance = this;
         Scenes = GetScenesInBuild();
         //var totalScenes = SceneManager.sceneCountInBuildSettings;

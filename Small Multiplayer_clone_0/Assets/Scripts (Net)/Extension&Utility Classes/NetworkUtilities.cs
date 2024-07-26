@@ -9,7 +9,7 @@ public static class NetworkUtils
 
     public static void RpcHandler(NetworkBehaviour networkBehaviour, RpcDelegate Del)
     {
-        if (networkBehaviour.IsServer)
+        if (networkBehaviour.isServer)
         {
             CallClientRpc(networkBehaviour, Del);
         }
@@ -21,7 +21,7 @@ public static class NetworkUtils
 
     public static void RpcCoroutineHandler(NetworkBehaviour networkBehaviour, RpcCoroutineDelegate Del)
     {
-        if (networkBehaviour.IsServer)
+        if (networkBehaviour.isServer)
         {
             networkBehaviour.StartCoroutine(ClientRpcCoroutine(networkBehaviour, Del));
         }
@@ -34,7 +34,7 @@ public static class NetworkUtils
     [ServerRpc(RequireOwnership = false)]
     public static void CallServerRpc(NetworkBehaviour networkBehaviour, RpcDelegate serverRpcDelegate)
     {
-        if (!networkBehaviour.IsServer)
+        if (!networkBehaviour.isServer)
         {
             serverRpcDelegate.Invoke();
         }
@@ -43,7 +43,7 @@ public static class NetworkUtils
     [ClientRpc(RequireOwnership = false)]
     public static void CallClientRpc(NetworkBehaviour networkBehaviour, RpcDelegate clientRpcDelegate)
     {
-        if (networkBehaviour.IsServer)
+        if (networkBehaviour.isServer)
         {
             clientRpcDelegate.Invoke();
             CallServerRpc(networkBehaviour, clientRpcDelegate);
@@ -53,7 +53,7 @@ public static class NetworkUtils
     [ServerRpc(RequireOwnership = false)]
     public static void CallServerRpcCoroutineMethod(NetworkBehaviour networkBehaviour, RpcCoroutineDelegate serverRpcCoroutineDelegate)
     {
-        if (!networkBehaviour.IsServer)
+        if (!networkBehaviour.isServer)
         {
             networkBehaviour.StartCoroutine(serverRpcCoroutineDelegate());
         }
@@ -62,7 +62,7 @@ public static class NetworkUtils
     [ClientRpc(RequireOwnership = false)]
     public static void CallClientRpcCoroutineMethod(NetworkBehaviour networkBehaviour, RpcCoroutineDelegate clientRpcCoroutineDelegate)
     {
-        if (networkBehaviour.IsServer)
+        if (networkBehaviour.isServer)
         {
             networkBehaviour.StartCoroutine(clientRpcCoroutineDelegate());
             networkBehaviour.StartCoroutine(ServerRpcCoroutine(networkBehaviour, clientRpcCoroutineDelegate));
@@ -71,7 +71,7 @@ public static class NetworkUtils
 
     private static IEnumerator ServerRpcCoroutine(NetworkBehaviour networkBehaviour, RpcCoroutineDelegate coroutineDelegate)
     {
-        if (!networkBehaviour.IsServer)
+        if (!networkBehaviour.isServer)
         {
             yield return networkBehaviour.StartCoroutine(coroutineDelegate());
         }
@@ -79,7 +79,7 @@ public static class NetworkUtils
 
     private static IEnumerator ClientRpcCoroutine(NetworkBehaviour networkBehaviour, RpcCoroutineDelegate coroutineDelegate)
     {
-        if (networkBehaviour.IsServer)
+        if (networkBehaviour.isServer)
         {
             yield return networkBehaviour.StartCoroutine(coroutineDelegate());
             yield return networkBehaviour.StartCoroutine(ServerRpcCoroutine(networkBehaviour, coroutineDelegate));

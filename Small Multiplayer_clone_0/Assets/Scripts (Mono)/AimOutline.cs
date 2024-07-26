@@ -1,5 +1,5 @@
 using UnityEngine;
-using Unity.Netcode;
+using Mirror;
 using UnityEngine.InputSystem;
 
 public class AimOutline : NetworkBehaviour

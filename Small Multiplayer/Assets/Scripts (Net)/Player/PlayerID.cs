@@ -16,7 +16,7 @@ public class PlayerNetworkIndex : NetworkBehaviour
     }
     public playerType PlayerType;
 
-    [SyncVar, SyncDirection.ClientToServer]
+    [SyncVar]
     public bool isEnabled = true;
 
     public void OnEnable()
@@ -43,7 +43,7 @@ public class PlayerNetworkIndex : NetworkBehaviour
         }
 
         // Subscribe to state changes
-        isEnabled.OnValueChanged += OnIsEnabledChanged;
+        //isEnabled.OnValueChanged += OnIsEnabledChanged;
 
         // Only assign the playerIndex on the local player
         if (!isLocalPlayer)
@@ -65,7 +65,7 @@ public class PlayerNetworkIndex : NetworkBehaviour
     public override void OnStopClient()
     {
         // Unsubscribe from state changes
-        isEnabled.OnValueChanged -= OnIsEnabledChanged;
+       // isEnabled. -= OnIsEnabledChanged;
     }
 
     private void OnIsEnabledChanged(bool oldValue, bool newValue)
@@ -127,7 +127,7 @@ public class PlayerNetworkIndex : NetworkBehaviour
 
     public void refresh()
     {
-        int localId = (int)this.GetComponent<NetworkIdentity>().;
+        int localId = 0; // (int)this.GetComponent<NetworkIdentity>().;
         int sabId = CurrentSessionStats.Instance.IndexOfSab ;
 
         switch (PlayerType)

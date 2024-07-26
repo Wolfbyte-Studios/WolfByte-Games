@@ -134,8 +134,6 @@
 -define:MIRROR_85_OR_NEWER
 -define:MIRROR_86_OR_NEWER
 -define:MIRROR_89_OR_NEWER
--define:UTP_TRANSPORT_2_0_ABOVE
--define:UNITY_NETCODE_GAMEOBJECTS_1_1_ABOVE
 -define:NETVIS_AVAILABLE
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
@@ -412,8 +410,6 @@
 -r:"Library/PackageCache/com.unity.visualscripting/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Multiplayer.Tools.Common.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Multiplayer.Tools.NetStatsMonitor.Component.ref.dll"
--r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Multiplayer.Tools.NetworkSimulator.Runtime.ref.dll"
--r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Netcode.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
@@ -421,7 +417,6 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
--analyzer:"Library/PackageCache/com.unity.transport/Analyzers/Unity.Transport.Analyzers.dll"
 "Library/PackageCache/com.unity.multiplayer.tools/Editor/MultiplayerToolsWindow/Features/Decorator.cs"
 "Library/PackageCache/com.unity.multiplayer.tools/Editor/MultiplayerToolsWindow/Features/HierarchyWindowDecorator.cs"
 "Library/PackageCache/com.unity.multiplayer.tools/Editor/MultiplayerToolsWindow/Features/NetSceneVis.cs"

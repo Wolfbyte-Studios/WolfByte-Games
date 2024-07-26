@@ -1,6 +1,6 @@
 using UnityEngine;
-using Unity.Netcode;
-using Unity.Netcode.Transports.UTP;
+using Mirror;
+using Mirror;
 using TMPro;
 using System.Collections.Generic;
 using System;
@@ -15,9 +15,9 @@ public class NameTag : NetworkBehaviour
     public string localname;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public override void OnNetworkSpawn()
+    public override void OnStartClient()
     {
-        base.OnNetworkSpawn();
+        base.OnStartClient();
         if (IsOwner)
         {
             pName  = PlayerPrefs.GetString("Name", "Toast");

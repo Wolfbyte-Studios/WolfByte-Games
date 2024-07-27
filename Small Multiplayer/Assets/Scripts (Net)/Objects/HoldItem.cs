@@ -1,6 +1,5 @@
 using UnityEngine;
 using Mirror;
-using UnityEngine.UIElements;
 
 public class HoldItem : NetworkBehaviour
 {
@@ -49,8 +48,8 @@ public class HoldItem : NetworkBehaviour
         }
     }
 
-    [ServerRpc]
-    public void Trigger_ServerRpc()
+    [Command]
+    public void Trigger_Command()
     {
         if (Time.time - lastToggleTime >= toggleCooldown)
         {
@@ -78,8 +77,8 @@ public class HoldItem : NetworkBehaviour
         rb.isKinematic = isGrabbing;
     }
 
-    [ServerRpc]
-    public void Throw_ServerRpc()
+    [Command]
+    public void Throw_Command()
     {
         isGrabbing = false;
         Vector3 direction = (toucher.position - transform.position).normalized;
@@ -108,12 +107,12 @@ public class HoldItem : NetworkBehaviour
         }
         else
         {
-            Throw_ServerRpc();
+            Throw_Command();
         }
     }
 
     public void Trigger()
     {
-        Trigger_ServerRpc();
+        Trigger_Command();
     }
 }

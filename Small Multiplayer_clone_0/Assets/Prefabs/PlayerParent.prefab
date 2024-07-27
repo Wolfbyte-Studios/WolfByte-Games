@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 2983219666276897949}
   - component: {fileID: 2349429794196869904}
   - component: {fileID: 8387270572617073077}
+  - component: {fileID: 8874702547844702124}
   m_Layer: 31
   m_Name: Player 2
   m_TagString: Player
@@ -108,11 +109,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d72602f45fff15e4e9fdfa2c0d6467e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
   playerIndexTarget: 1
   playerCamera: {fileID: 6135488885850245533}
   PlayerType: 1
-  isEnabled:
-    m_InternalValue: 1
+  isEnabled: 1
 --- !u!114 &2223605216837713576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,6 +373,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8c97235f895c24ea820c25a92187cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
   time: 1
   anim: {fileID: 0}
 --- !u!114 &2349429794196869904
@@ -447,6 +453,40 @@ MonoBehaviour:
   state: 0
   mode: 0
 --- !u!114 &8387270572617073077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489124147165481460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff3ba0becae47b8b9381191598957c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 1
+  syncMode: 0
+  syncInterval: 0
+  target: {fileID: 4214995074002705669}
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  onlySyncOnChange: 1
+  compressRotation: 1
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 1
+  coordinateSpace: 0
+  sendIntervalMultiplier: 1
+  timelineOffset: 0
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+  onlySyncOnChangeCorrectionMultiplier: 2
+  rotationSensitivity: 0.01
+  positionPrecision: 0.01
+  scalePrecision: 0.01
+--- !u!114 &8874702547844702124
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -597,143 +637,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8217cfb0977b555478aeba0f1a61ac8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pName:
-    m_InternalValue:
-      utf8LengthInBytes: 0
-      bytes:
-        offset0000:
-          byte0000: 0
-          byte0001: 0
-          byte0002: 0
-          byte0003: 0
-          byte0004: 0
-          byte0005: 0
-          byte0006: 0
-          byte0007: 0
-          byte0008: 0
-          byte0009: 0
-          byte0010: 0
-          byte0011: 0
-          byte0012: 0
-          byte0013: 0
-          byte0014: 0
-          byte0015: 0
-        offset0016:
-          byte0000: 0
-          byte0001: 0
-          byte0002: 0
-          byte0003: 0
-          byte0004: 0
-          byte0005: 0
-          byte0006: 0
-          byte0007: 0
-          byte0008: 0
-          byte0009: 0
-          byte0010: 0
-          byte0011: 0
-          byte0012: 0
-          byte0013: 0
-          byte0014: 0
-          byte0015: 0
-        offset0032:
-          byte0000: 0
-          byte0001: 0
-          byte0002: 0
-          byte0003: 0
-          byte0004: 0
-          byte0005: 0
-          byte0006: 0
-          byte0007: 0
-          byte0008: 0
-          byte0009: 0
-          byte0010: 0
-          byte0011: 0
-          byte0012: 0
-          byte0013: 0
-          byte0014: 0
-          byte0015: 0
-        offset0048:
-          byte0000: 0
-          byte0001: 0
-          byte0002: 0
-          byte0003: 0
-          byte0004: 0
-          byte0005: 0
-          byte0006: 0
-          byte0007: 0
-          byte0008: 0
-          byte0009: 0
-          byte0010: 0
-          byte0011: 0
-          byte0012: 0
-          byte0013: 0
-          byte0014: 0
-          byte0015: 0
-        offset0064:
-          byte0000: 0
-          byte0001: 0
-          byte0002: 0
-          byte0003: 0
-          byte0004: 0
-          byte0005: 0
-          byte0006: 0
-          byte0007: 0
-          byte0008: 0
-          byte0009: 0
-          byte0010: 0
-          byte0011: 0
-          byte0012: 0
-          byte0013: 0
-          byte0014: 0
-          byte0015: 0
-        offset0080:
-          byte0000: 0
-          byte0001: 0
-          byte0002: 0
-          byte0003: 0
-          byte0004: 0
-          byte0005: 0
-          byte0006: 0
-          byte0007: 0
-          byte0008: 0
-          byte0009: 0
-          byte0010: 0
-          byte0011: 0
-          byte0012: 0
-          byte0013: 0
-          byte0014: 0
-          byte0015: 0
-        offset0096:
-          byte0000: 0
-          byte0001: 0
-          byte0002: 0
-          byte0003: 0
-          byte0004: 0
-          byte0005: 0
-          byte0006: 0
-          byte0007: 0
-          byte0008: 0
-          byte0009: 0
-          byte0010: 0
-          byte0011: 0
-          byte0012: 0
-          byte0013: 0
-          byte0014: 0
-          byte0015: 0
-        byte0112: 0
-        byte0113: 0
-        byte0114: 0
-        byte0115: 0
-        byte0116: 0
-        byte0117: 0
-        byte0118: 0
-        byte0119: 0
-        byte0120: 0
-        byte0121: 0
-        byte0122: 0
-        byte0123: 0
-        byte0124: 0
-        byte0125: 0
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  pName: 
   localname: 
 --- !u!1 &802078638890682530
 GameObject:
@@ -1165,8 +1072,8 @@ GameObject:
   - component: {fileID: 3249347751654512399}
   - component: {fileID: 3227681487332556732}
   - component: {fileID: 8217794928985525072}
-  - component: {fileID: 2742295663858396660}
   - component: {fileID: 2516774743614948060}
+  - component: {fileID: 4114032109445441161}
   m_Layer: 29
   m_Name: Player 1
   m_TagString: Player
@@ -1278,11 +1185,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d72602f45fff15e4e9fdfa2c0d6467e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
   playerIndexTarget: 0
   playerCamera: {fileID: 6135488885850245533}
   PlayerType: 0
-  isEnabled:
-    m_InternalValue: 1
+  isEnabled: 1
 --- !u!114 &3249347751654512399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1346,7 +1255,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   Fire:
-    m_Name: 
+    m_Name: Fire
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: a6014f9e-d136-4fef-8077-8cd8ee32cdad
@@ -1355,7 +1264,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   Secondary:
-    m_Name: 
+    m_Name: Secondary
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: af7475f6-4ba9-43f3-ab99-fd4859256fbb
@@ -1421,37 +1330,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &2742295663858396660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4220841097852570626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b61428705f028342a8bee7d42bd4c7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseUnreliableDeltas: 0
-  SyncPositionX: 1
-  SyncPositionY: 1
-  SyncPositionZ: 1
-  SyncRotAngleX: 1
-  SyncRotAngleY: 1
-  SyncRotAngleZ: 1
-  SyncScaleX: 1
-  SyncScaleY: 1
-  SyncScaleZ: 1
-  PositionThreshold: 0.001
-  RotAngleThreshold: 0.01
-  ScaleThreshold: 0.01
-  UseQuaternionSynchronization: 0
-  UseQuaternionCompression: 0
-  UseHalfFloatPrecision: 0
-  InLocalSpace: 0
-  Interpolate: 1
-  SlerpPosition: 0
 --- !u!114 &2516774743614948060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1526,6 +1404,40 @@ MonoBehaviour:
       m_Calls: []
   state: 0
   mode: 0
+--- !u!114 &4114032109445441161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4220841097852570626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff3ba0becae47b8b9381191598957c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 1
+  syncMode: 0
+  syncInterval: 0
+  target: {fileID: 801512427641743076}
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  onlySyncOnChange: 1
+  compressRotation: 1
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 1
+  coordinateSpace: 0
+  sendIntervalMultiplier: 1
+  timelineOffset: 0
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+  onlySyncOnChangeCorrectionMultiplier: 2
+  rotationSensitivity: 0.01
+  positionPrecision: 0.01
+  scalePrecision: 0.01
 --- !u!1 &5179927481869419101
 GameObject:
   m_ObjectHideFlags: 0
@@ -2335,143 +2247,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8217cfb0977b555478aeba0f1a61ac8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pName:
-    m_InternalValue:
-      utf8LengthInBytes: 0
-      bytes:
-        offset0000:
-          byte0000: 0
-          byte0001: 0
-          byte0002: 0
-          byte0003: 0
-          byte0004: 0
-          byte0005: 0
-          byte0006: 0
-          byte0007: 0
-          byte0008: 0
-          byte0009: 0
-          byte0010: 0
-          byte0011: 0
-          byte0012: 0
-          byte0013: 0
-          byte0014: 0
-          byte0015: 0
-        offset0016:
-          byte0000: 0
-          byte0001: 0
-          byte0002: 0
-          byte0003: 0
-          byte0004: 0
-          byte0005: 0
-          byte0006: 0
-          byte0007: 0
-          byte0008: 0
-          byte0009: 0
-          byte0010: 0
-          byte0011: 0
-          byte0012: 0
-          byte0013: 0
-          byte0014: 0
-          byte0015: 0
-        offset0032:
-          byte0000: 0
-          byte0001: 0
-          byte0002: 0
-          byte0003: 0
-          byte0004: 0
-          byte0005: 0
-          byte0006: 0
-          byte0007: 0
-          byte0008: 0
-          byte0009: 0
-          byte0010: 0
-          byte0011: 0
-          byte0012: 0
-          byte0013: 0
-          byte0014: 0
-          byte0015: 0
-        offset0048:
-          byte0000: 0
-          byte0001: 0
-          byte0002: 0
-          byte0003: 0
-          byte0004: 0
-          byte0005: 0
-          byte0006: 0
-          byte0007: 0
-          byte0008: 0
-          byte0009: 0
-          byte0010: 0
-          byte0011: 0
-          byte0012: 0
-          byte0013: 0
-          byte0014: 0
-          byte0015: 0
-        offset0064:
-          byte0000: 0
-          byte0001: 0
-          byte0002: 0
-          byte0003: 0
-          byte0004: 0
-          byte0005: 0
-          byte0006: 0
-          byte0007: 0
-          byte0008: 0
-          byte0009: 0
-          byte0010: 0
-          byte0011: 0
-          byte0012: 0
-          byte0013: 0
-          byte0014: 0
-          byte0015: 0
-        offset0080:
-          byte0000: 0
-          byte0001: 0
-          byte0002: 0
-          byte0003: 0
-          byte0004: 0
-          byte0005: 0
-          byte0006: 0
-          byte0007: 0
-          byte0008: 0
-          byte0009: 0
-          byte0010: 0
-          byte0011: 0
-          byte0012: 0
-          byte0013: 0
-          byte0014: 0
-          byte0015: 0
-        offset0096:
-          byte0000: 0
-          byte0001: 0
-          byte0002: 0
-          byte0003: 0
-          byte0004: 0
-          byte0005: 0
-          byte0006: 0
-          byte0007: 0
-          byte0008: 0
-          byte0009: 0
-          byte0010: 0
-          byte0011: 0
-          byte0012: 0
-          byte0013: 0
-          byte0014: 0
-          byte0015: 0
-        byte0112: 0
-        byte0113: 0
-        byte0114: 0
-        byte0115: 0
-        byte0116: 0
-        byte0117: 0
-        byte0118: 0
-        byte0119: 0
-        byte0120: 0
-        byte0121: 0
-        byte0122: 0
-        byte0123: 0
-        byte0124: 0
-        byte0125: 0
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  pName: 
   localname: 
 --- !u!1 &7409808008076300699
 GameObject:
@@ -2608,7 +2387,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6521885051947890060}
-  - component: {fileID: 5052746173538897342}
   - component: {fileID: 2332664578663952467}
   m_Layer: 0
   m_Name: PlayerParent
@@ -2636,27 +2414,6 @@ Transform:
   - {fileID: 7885508858452474852}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5052746173538897342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8377055811415697539}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 245167045
-  InScenePlacedSourceGlobalObjectIdHash: 969061630
-  AlwaysReplicateAsRoot: 1
-  SynchronizeTransform: 1
-  ActiveSceneSynchronization: 0
-  SceneMigrationSynchronization: 1
-  SpawnWithObservers: 1
-  DontDestroyWithOwner: 0
-  AutoObjectParentSync: 1
 --- !u!114 &2332664578663952467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3179,6 +2936,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc6ba3a65d42e043beb1fbb9ce2bccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
   target: {fileID: 0}
   actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   Fire:
@@ -3615,10 +3375,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6036922360325545441, guid: 73403024e6777364d973b28d952400e0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2317200208622012953}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 73403024e6777364d973b28d952400e0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 765156548943231311}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73403024e6777364d973b28d952400e0, type: 3}
 --- !u!95 &3571399923324277435 stripped
 Animator:
@@ -3635,29 +3392,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 73403024e6777364d973b28d952400e0, type: 3}
   m_PrefabInstance: {fileID: 6988105472668167978}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7799061611843703419 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 73403024e6777364d973b28d952400e0, type: 3}
-  m_PrefabInstance: {fileID: 6988105472668167978}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &765156548943231311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7799061611843703419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42dcb27b560cf1446ba44b6ca695b2dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TransitionStateInfoList:
-  - IsCrossFadeExit: 0
-    Layer: 0
-    OriginatingState: -186551269
-    DestinationState: -1407877797
-    TransitionDuration: 0.25
-    TriggerNameHash: -654781670
-    TransitionIndex: 2
-  m_Animator: {fileID: 3571399923324277435}

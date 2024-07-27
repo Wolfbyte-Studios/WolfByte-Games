@@ -16,6 +16,17 @@ public class AddComponentsBasedOnName
         // Loop through each object
         foreach (GameObject obj in allObjects)
         {
+            //if obj is root and doesn't have networkID
+            if(obj.GetComponent<NetworkBehaviour>() && obj.transform.root == obj.transform && obj.GetComponent<NetworkIdentity>() == null)
+            {
+                obj.AddComponent<NetworkIdentity>();
+            }
+            //if not root and has network ID
+            if (obj.GetComponent<NetworkBehaviour>() && obj.transform.root != obj.transform && obj.GetComponent<NetworkIdentity>() != null)
+            {
+                var NI = obj.GetComponent<NetworkIdentity>();
+                GameObject.DestroyImmediate(NI);
+            }
             // Check if the object name contains "Clickable"
             if (obj.name.Contains("Clickable"))
             {
@@ -30,9 +41,9 @@ public class AddComponentsBasedOnName
                 {
                     c = obj.GetComponent<Clickable>();
                 }
-                if (obj.GetComponent<NetworkObject>() == null)
+                if (obj.GetComponent<NetworkIdentity>() == null)
                 {
-                    obj.AddComponent<NetworkObject>();
+                    obj.AddComponent<NetworkIdentity>();
                 }
                 if (obj.GetComponent<LerpMovement>() == null)
                 {

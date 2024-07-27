@@ -3,7 +3,8 @@ using Mirror;
 
 public class NetworkObjectIsActive : NetworkBehaviour
 {
-    public NetworkVariable<bool> isEnabled = new NetworkVariable<bool>(true, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    [SyncVar]
+    public bool isEnabled = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

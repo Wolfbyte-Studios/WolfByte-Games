@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
-using Unity.Netcode.Components;
+ 
 using System.Collections;
 public class Nudge : NetworkBehaviour
 {
@@ -14,27 +14,12 @@ public class Nudge : NetworkBehaviour
     public override void OnStartClient()
     {
         base.OnStartClient();
-        if (isLocalPlayer && !isServer)
-        {
-            RequestOriginalPositionServerRpc();
-        }
-        originalPosition = transform.position;
+        
     }
 
-    [ServerRpc(RequireOwnership = false)]
-    private void RequestOriginalPositionServerRpc(ServerRpcParams rpcParams = default)
-    {
-        ApplyOriginalPositionClientRpc(transform.position, rpcParams.Receive.SenderClientId);
-    }
+    
 
-    [ClientRpc]
-    private void ApplyOriginalPositionClientRpc(Vector3 position, ulong clientId)
-    {
-        if (NetworkManager.Singleton.LocalClientId == clientId)
-        {
-            originalPosition = position;
-        }
-    }
+   
    
     public void StartShake()
     {
@@ -66,16 +51,12 @@ public class Nudge : NetworkBehaviour
 
     public void TriggerShake()
     {
-        if (isServer)
-        {
+        
             StartShake();
             
             TriggerShakeClientRpc();
-        }
-        else
-        {
-            TriggerShakeServerRpc();
-        }
+        
+       
     }
     public void OnCollisionEnter(UnityEngine.Collision collision)
     {
@@ -85,14 +66,7 @@ public class Nudge : NetworkBehaviour
         }
     }
 
-    [ServerRpc(RequireOwnership = false)]
-    public void TriggerShakeServerRpc()
-    {
-        StartShake();
-        player.TriggerDizzy();
-        player = null;
-        TriggerShakeClientRpc();
-    }
+    
 
     [ClientRpc]
     private void TriggerShakeClientRpc()

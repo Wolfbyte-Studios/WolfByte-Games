@@ -27,7 +27,7 @@ public class Fizzle : NetworkBehaviour
     {
         yield return new WaitForSeconds(countDown);
             
-        gameObject.GetComponent<NetworkObject>().Despawn();
+        NetworkServer.Destroy(this.gameObject);
         //Destroy(gameObject);
         yield return null;
     }

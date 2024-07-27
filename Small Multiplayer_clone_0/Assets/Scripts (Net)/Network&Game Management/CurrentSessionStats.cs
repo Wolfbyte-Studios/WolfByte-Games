@@ -4,38 +4,26 @@ using TMPro;
 using System.Collections.Generic;
 using System;
 
-[System.Serializable]
-public struct PlayerData : IEquatable<PlayerData>
+
+public struct PlayerData 
 {
-    public uint netId;
+    public int netId;
     public string name;
-
-    public bool Equals(PlayerData other)
-    {
-        return netId == other.netId && name.Equals(other.name);
-    }
-
-    public override bool Equals(object obj)
-    {
-        return obj is PlayerData other && Equals(other);
-    }
-
-    public override int GetHashCode()
-    {
-        return (netId, name).GetHashCode();
-    }
 }
 
 public class CurrentSessionStats : NetworkBehaviour
 {
     public static CurrentSessionStats Instance { get; private set; }
     public static float CurrentNumberOfPlayers;
+    [SyncVar]
     public bool netActive = false;
     [SyncVar]
     public int IndexOfSab = 0;
     public NetworkManager nm;
+    [SyncVar]
     public GameObject playertemp;
     public PlayerData lastPlayer;
+
     public List<NetworkConnectionToClient> clients = new List<NetworkConnectionToClient>();
 
     public enum GameStateEnum
@@ -49,14 +37,10 @@ public class CurrentSessionStats : NetworkBehaviour
     {
         Standard
     }
-    [SyncVar]
     public GameModeEnum GameMode = GameModeEnum.Standard;
-    [SyncVar]
     public GameStateEnum GameState = GameStateEnum.UI;
-    [SyncVar]
-    public List<PlayerData> playersList = new List<PlayerData>();
-    [SyncVar]
-    public SyncList<string> playernames = new SyncList<string>();
+    public readonly SyncList<PlayerData> playersList = new SyncList<PlayerData>();
+    public readonly SyncList<string> playernames = new SyncList<string>();
 
     public void Start()
     {
@@ -68,32 +52,38 @@ public class CurrentSessionStats : NetworkBehaviour
     {
         base.OnStartServer();
         nm = NetworkManager.singleton;
-        Instance = this;
+        //Instance = this;
+        GetPlayers();
     }
 
     public void Update()
     {
-        netActive = NetworkServer.active;
-        playernames.Clear();
-        foreach (var player in playersList)
+        if (isServer)
         {
-            playernames.Add(player.name);
+            netActive = NetworkServer.active;
+            playernames.Clear();
+            GetPlayers();
+            foreach (var player in playersList)
+            {
+                playernames.Add(player.name);
+            }
         }
     }
 
     [ContextMenu("Rotate Players")]
+    [ClientRpc]
     public void RotatePlayers()
     {
         if (!isServer) return;
-        var oldValue = IndexOfSab[0];
-        IndexOfSab[0] = UnityEngine.Random.Range(0, playersList.Count);
+        var oldValue = IndexOfSab;
+        IndexOfSab = UnityEngine.Random.Range(0, playersList.Count);
         if (playersList.Count > 1)
         {
-            if (oldValue == IndexOfSab[0])
+            if (oldValue == IndexOfSab)
             {
                 Start:
-                IndexOfSab[0] = UnityEngine.Random.Range(0, playersList.Count);
-                if (oldValue == IndexOfSab[0])
+                IndexOfSab = UnityEngine.Random.Range(0, playersList.Count);
+                if (oldValue == IndexOfSab)
                 {
                     goto Start;
                 }
@@ -101,8 +91,18 @@ public class CurrentSessionStats : NetworkBehaviour
         }
         foreach (var conn in NetworkServer.connections)
         {
-            var playerObj = conn .identity;
-            var refreshScript = playerObj.GetComponentsInChildren<PlayerNetworkIndex>(true);
+            var id = conn.Key;
+            GameObject playerObj = null;
+            if (NetworkServer.connections.TryGetValue(id, out NetworkConnectionToClient connection))
+            {
+                playerObj = connection.identity.gameObject;
+            }
+            else
+            {
+                playerObj = null;
+            }
+
+            var refreshScript = playerObj?.GetComponentsInChildren<PlayerNetworkIndex>(true);
             foreach (var script in refreshScript)
             {
                 script.gameObject.SetActive(true);
@@ -111,42 +111,46 @@ public class CurrentSessionStats : NetworkBehaviour
         }
     }
 
+    
+ 
     public void GetPlayers()
     {
-        if (isServer)
+        clients.Clear();
+        foreach (var conn in NetworkServer.connections)
         {
-            clients.Clear();
-            foreach (var conn in NetworkServer.connections)
+            clients.Add(conn.Value);
+            
+        }
+
+        playersList.Clear();
+
+        foreach (var conn in clients)
+        {
+            var playerObj = conn.identity;
+            var NetId = conn.connectionId;
+            var nameTag = playerObj?.GetComponentInChildren<NameTag>(false);
+
+            if (nameTag != null)
             {
-                clients.Add(conn );
+                string name = nameTag.pName.ToString();
+                PlayerData p = new PlayerData
+                {
+                    netId = NetId,
+                    name = name
+                };
+
+                if (!playersList.Contains(p))
+                {
+                    playersList.Add(p);
+                    //Debug.Log($"Added player {name} with netId {playerObj.netId} to playersList.");
+                }
             }
-
-            playersList.Clear();
-
-            foreach (var conn in clients)
+            else
             {
-                var playerObj = conn.identity;
-                var nameTag = playerObj.GetComponentInChildren<NameTag>(false);
-
-                if (nameTag != null)
-                {
-                    string name = nameTag.pName.ToString();
-                    PlayerData p = new PlayerData
-                    {
-                        netId = playerObj.netId,
-                        name = name
-                    };
-
-                    if (!playersList.Contains(p))
-                    {
-                        playersList.Add(p);
-                    }
-                }
-                else
-                {
-                    Debug.LogWarning($"PlayerObject for netId {playerObj.netId} does not have a NameTag component.");
-                }
+               // Debug.LogWarning($"PlayerObject for netId {playerObj.netId} does not have a NameTag component.");
             }
         }
+
+        Debug.Log($"Total players in list: {playersList.Count}");
     }
 }

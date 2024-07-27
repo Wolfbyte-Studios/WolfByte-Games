@@ -1,6 +1,5 @@
 using UnityEngine;
 using Mirror;
-using Mirror;
 using TMPro;
 using System.Collections.Generic;
 
@@ -29,7 +28,7 @@ public class SetTextToPlayerName : NetworkBehaviour
             
 
 
-                NetworkUtils.RpcHandler(this, UpdatePlayerName);
+               UpdatePlayerName();
             
         }
     }

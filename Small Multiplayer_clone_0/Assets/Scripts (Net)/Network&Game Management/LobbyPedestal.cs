@@ -1,6 +1,5 @@
 using UnityEngine;
 using Mirror;
-using Mirror;
 using TMPro;
 using System.Collections.Generic;
 using System;
@@ -19,7 +18,7 @@ public class LobbyPedestal : NetworkBehaviour
         players = new List<GameObject>();
         if (isServer)
         {
-            NetworkUtils.RpcHandler(this, updateGameModes);
+            updateGameModes();
         }
     }
 
@@ -37,7 +36,7 @@ public class LobbyPedestal : NetworkBehaviour
     {
         if (CurrentSessionStats.Instance.netActive)
         {
-            NetworkUtils.RpcHandler(this, updatePostitions);
+            updatePostitions();
         }
     }
     public void updatePostitions()
@@ -62,7 +61,7 @@ public class LobbyPedestal : NetworkBehaviour
 
 
             ////Debug.Log(player.name);
-            int id = (int)player.transform.parent.GetComponent<NetworkObject>().OwnerClientId;
+            int id = (int)player.transform.parent.GetComponent<NetworkIdentity>().netId;
             pedestal = pedestalParent.transform.Find("Player " + (id + 1).ToString()).gameObject;
 
             if (!target.Contains(pedestal))

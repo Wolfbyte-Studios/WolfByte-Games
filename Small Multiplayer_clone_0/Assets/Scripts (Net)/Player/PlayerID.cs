@@ -9,6 +9,10 @@ public class PlayerNetworkIndex : NetworkBehaviour
     // Public variable to store the player's network index
     public int playerIndexTarget;
     public GameObject playerCamera;
+    [SyncVar]
+    public int sabId;
+    [SyncVar]
+    public int localId;
     public enum playerType
     {
         Sab,
@@ -16,11 +20,12 @@ public class PlayerNetworkIndex : NetworkBehaviour
     }
     public playerType PlayerType;
 
-    [SyncVar]
+    [SyncVar (hook = nameof(OnIsEnabledChanged))]
     public bool isEnabled = true;
 
     public void OnEnable()
     {
+        if (CurrentSessionStats.Instance == null) { return; }
         if (CurrentSessionStats.Instance.netActive)
         {
             ApplyState();
@@ -34,16 +39,16 @@ public class PlayerNetworkIndex : NetworkBehaviour
     }
 
     // OnStartClient is called when the object is initialized on the network
+    
     public override void OnStartClient()
     {
-        if (isServer)
-        {
-            // Initialize state on the server
-            isEnabled  = gameObject.activeSelf;
-        }
 
+        // Initialize state on the server
+        isEnabled = gameObject.activeSelf;
+
+        
         // Subscribe to state changes
-        //isEnabled.OnValueChanged += OnIsEnabledChanged;
+        
 
         // Only assign the playerIndex on the local player
         if (!isLocalPlayer)
@@ -57,9 +62,9 @@ public class PlayerNetworkIndex : NetworkBehaviour
             playerCamera.gameObject.SetActive(true);
         }
 
-        
-            StartCoroutine(delay());
-        
+
+        StartCoroutine(delay());
+
     }
 
     public override void OnStopClient()
@@ -70,7 +75,7 @@ public class PlayerNetworkIndex : NetworkBehaviour
 
     private void OnIsEnabledChanged(bool oldValue, bool newValue)
     {
-        ApplyState();
+        delay();
     }
 
     private void ApplyState()
@@ -82,35 +87,12 @@ public class PlayerNetworkIndex : NetworkBehaviour
     public void SetEnabledState(bool state)
     {
         isEnabled  = state;
-        NetworkUtils.RpcHandler(this, ApplyState);
+        ApplyState();
     }
 
-    [ContextMenu("Enable Object")]
-    public void EnableObject()
-    {
-        if (isServer)
-        {
-            SetEnabledState(true);
-        }
-        else
-        {
-            SetEnabledState(true);
-        }
-    }
-
-    [ContextMenu("Disable Object")]
-    public void DisableObject()
-    {
-        if (isServer)
-        {
-            SetEnabledState(false);
-        }
-        else
-        {
-            SetEnabledState(false);
-        }
-    }
-
+   
+    
+    
     public IEnumerator delay()
     {
         if (isServer)
@@ -124,32 +106,32 @@ public class PlayerNetworkIndex : NetworkBehaviour
 
         yield return null;
     }
-
+ 
     public void refresh()
     {
-        int localId = 0; // (int)this.GetComponent<NetworkIdentity>().;
-        int sabId = CurrentSessionStats.Instance.IndexOfSab ;
+        localId = NetworkClient.connection.connectionId;
+        sabId = CurrentSessionStats.Instance.IndexOfSab ;
 
         switch (PlayerType)
         {
             case playerType.Sab:
                 if (sabId == localId)
                 {
-                    EnableObject();
+                    SetEnabledState(true);
                 }
                 else
                 {
-                    DisableObject();
+                    SetEnabledState(false);
                 }
                 break;
             case playerType.Runner:
                 if (sabId != localId)
                 {
-                    EnableObject();
+                    SetEnabledState(true);
                 }
                 else
                 {
-                    DisableObject();
+                    SetEnabledState(false);
                 }
                 break;
         }

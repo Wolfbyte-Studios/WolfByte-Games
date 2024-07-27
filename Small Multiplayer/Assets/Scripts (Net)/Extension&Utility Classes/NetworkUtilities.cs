@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 using Mirror;
 using System.Collections;
 
@@ -31,7 +31,7 @@ public static class NetworkUtils
         }
     }
 
-    [ServerRpc(RequireOwnership = false)]
+    [ClientRpc]
     public static void CallServerRpc(NetworkBehaviour networkBehaviour, RpcDelegate serverRpcDelegate)
     {
         if (!networkBehaviour.isServer)
@@ -86,3 +86,4 @@ public static class NetworkUtils
         }
     }
 }
+*/

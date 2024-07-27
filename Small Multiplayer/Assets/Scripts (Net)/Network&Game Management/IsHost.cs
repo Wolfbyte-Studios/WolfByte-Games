@@ -1,6 +1,5 @@
 using UnityEngine;
 using Mirror;
-using Mirror;
 using TMPro;
 using System.Collections.Generic;
 
@@ -20,13 +19,13 @@ public class IsHost : NetworkBehaviour
         switch (ForWho)
         {
             case forHostOrClient.Host:
-                if(!IsHost)
+                if(!isServer)
                 {
                     this.gameObject.SetActive(false);
                 }
                 return;
                 case forHostOrClient.Client:
-                if (IsHost)
+                if (isServer)
                 {
                     this.gameObject.SetActive(false);
                 }

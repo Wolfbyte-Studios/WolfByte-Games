@@ -1,6 +1,6 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
-using Unity.Netcode.Components;
+ 
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class OwnerNetworkAnimator : NetworkAnimator
@@ -9,4 +9,4 @@ public class OwnerNetworkAnimator : NetworkAnimator
     {
         return false;
     }
-}
+}*/

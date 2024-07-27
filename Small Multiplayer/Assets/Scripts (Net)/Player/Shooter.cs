@@ -32,7 +32,7 @@ public class Shooter : NetworkBehaviour
 
     private void OnFire(InputAction.CallbackContext obj)
     {
-        if (!IsOwner)
+        if (!isOwned)
         {
             return;
         }
@@ -43,7 +43,7 @@ public class Shooter : NetworkBehaviour
         }
     }
 
-    [ServerRpc]
+    [Command]
     private void RequestFireServerRpc(Vector3 firePosition, Vector3 targetPosition)
     {
         FireBullet(firePosition, targetPosition);
@@ -55,14 +55,14 @@ public class Shooter : NetworkBehaviour
         var bullet = Instantiate(bulletPrefab, firePosition, Quaternion.identity);
 
         // Ensure the bullet has a NetworkObject component
-        var networkObject = bullet.GetComponent<NetworkObject>();
+        var networkObject = bullet.GetComponent<NetworkIdentity>();
         if (networkObject == null)
         {
-            networkObject = bullet.AddComponent<NetworkObject>();
+            networkObject = bullet.AddComponent<NetworkIdentity>();
         }
 
         // Spawn the bullet on the network
-        networkObject.Spawn();
+        NetworkServer.Spawn(bullet);
 
         // Add Rigidbody and NetworkRigidbody components if they don't exist
         var rb = bullet.GetComponent<Rigidbody>();
@@ -85,7 +85,7 @@ public class Shooter : NetworkBehaviour
 
     void FixedUpdate()
     {
-        if (!IsOwner)
+        if (!isOwned)
         {
             return;
         }

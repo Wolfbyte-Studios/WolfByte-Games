@@ -1,10 +1,10 @@
 using UnityEngine;
 using Mirror;
+using Mirror.Examples.CCU;
 
 public class Projectile : NetworkBehaviour
 {
     public float displacementForce = 10f;
-
     private Vector3 initialForce;
 
     public void Initialize(Vector3 force)
@@ -29,8 +29,8 @@ public class Projectile : NetworkBehaviour
     {
         if (!isServer) return;
 
-        NetworkObject networkObject = collision.gameObject.GetComponent<NetworkObject>();
-        if (networkObject != null && networkObject.IsPlayerObject)
+        NetworkIdentity networkIdentity = collision.gameObject.GetComponent<NetworkIdentity>();
+        if (networkIdentity != null && IsPlayerObject(networkIdentity))
         {
             Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
             if (rb != null)
@@ -40,17 +40,18 @@ public class Projectile : NetworkBehaviour
             }
         }
 
-        DestroyProjectileServerRpc();
+        DestroyProjectile();
     }
 
-    [ServerRpc]
-    void DestroyProjectileServerRpc()
+    private bool IsPlayerObject(NetworkIdentity networkIdentity)
     {
-        NetworkObject networkObject = GetComponent<NetworkObject>();
-        if (networkObject != null)
-        {
-            networkObject.Despawn();
-        }
-        Destroy(gameObject);
+        // Check if the object has a Player component or tag
+        return networkIdentity.GetComponent<Player>() != null || networkIdentity.CompareTag("Player");
+    }
+
+    [Server]
+    void DestroyProjectile()
+    {
+        NetworkServer.Destroy(gameObject);
     }
 }

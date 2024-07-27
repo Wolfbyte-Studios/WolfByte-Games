@@ -2,7 +2,7 @@ using Mirror;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GameManagementEvents : MonoBehaviour
+public class GameManagementEvents : NetworkBehaviour
 {
 
     public UnityEvent OnStateUi;
@@ -36,8 +36,9 @@ public class GameManagementEvents : MonoBehaviour
             }
         }
     }
-    private void OnEnable()
+    public override void OnStartClient()
     {
+        base.OnStartClient();
         OnStateChanged(state);
         OnModeChanged(mode);
     }
@@ -49,6 +50,7 @@ public class GameManagementEvents : MonoBehaviour
     }
     public void OnStateChanged(CurrentSessionStats.GameStateEnum state)
     {
+        if(CurrentSessionStats.Instance == null) { return; }
         if (!CurrentSessionStats.Instance.netActive)
         { return; }
         switch (state)
@@ -66,6 +68,7 @@ public class GameManagementEvents : MonoBehaviour
     }
     public void OnModeChanged(CurrentSessionStats.GameModeEnum mode)
     {
+        if (CurrentSessionStats.Instance == null) { return; }
         if (!CurrentSessionStats.Instance.netActive)
         { return; }
         switch (mode)
@@ -83,6 +86,7 @@ public class GameManagementEvents : MonoBehaviour
     }
     public void check()
     {
+        if (CurrentSessionStats.Instance == null) { return; }
         if (!CurrentSessionStats.Instance.netActive)
         { return; }
         State = CurrentSessionStats.Instance.GameState ;

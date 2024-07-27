@@ -1,12 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.Netcode;
-using Unity.Netcode.Components;
+using Mirror;
+ 
 
 [RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(NetworkRigidbody))]
-[RequireComponent(typeof(NetworkObject))]
-[RequireComponent(typeof(NetworkTransform))]
+[RequireComponent(typeof(NetworkIdentity))]
+[RequireComponent(typeof(NetworkTransformReliable))]
 public class Spin : NetworkBehaviour
 {
     public float spinSpeed;
@@ -14,9 +13,9 @@ public class Spin : NetworkBehaviour
     private Rigidbody rb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public override void OnNetworkSpawn()
+    public override void OnStartClient()
     {
-        base.OnNetworkSpawn();
+        base.OnStartClient();
         rb = gameObject.GetComponent<Rigidbody>();
         rb.isKinematic = true;
         oldSpeed = spinSpeed;
@@ -25,7 +24,7 @@ public class Spin : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IsOwner)
+        if (isOwned)
         {
             transform.Rotate(Vector3.up, spinSpeed * Time.deltaTime);
             rb.rotation = transform.rotation;
@@ -33,7 +32,7 @@ public class Spin : NetworkBehaviour
         }
     }
 
-    [ServerRpc]
+    [Command]
     public void OverrideSpeedServerRpc(float speed)
     {
         spinSpeed *= speed;
@@ -49,13 +48,13 @@ public class Spin : NetworkBehaviour
 
     public void OverrideSpeed(float speed)
     {
-        if (IsOwner)
+        if (isOwned)
         {
             OverrideSpeedServerRpc(speed);
         }
     }
 
-    [ServerRpc]
+    [Command]
     public void ResetSpeedServerRpc()
     {
         spinSpeed = oldSpeed;
@@ -71,7 +70,7 @@ public class Spin : NetworkBehaviour
 
     public void Reset()
     {
-        if (IsOwner)
+        if (isOwned)
         {
             ResetSpeedServerRpc();
         }

@@ -10,7 +10,8 @@ public class SceneStuff : NetworkBehaviour
 {
     public static SceneStuff Instance { get; private set; }
     public List<string> Scenes = new List<string>();
-    public NetworkVariable<int> SceneToLoad = new NetworkVariable<int>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+    [SyncVar]
+    public int SceneToLoad;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Start()
     {
@@ -44,7 +45,7 @@ public class SceneStuff : NetworkBehaviour
         {
             case CurrentSessionStats.GameModeEnum.Standard:
                 SceneToLoad  = Random.Range(0, Scenes.Count);
-                NetworkUtils.RpcHandler(this, LoadScene);
+                LoadScene();
                 break;
         }
     }
@@ -52,7 +53,7 @@ public class SceneStuff : NetworkBehaviour
     public void LoadScene()
     {
         
-       NetworkManager.SceneManager.LoadScene(Scenes[SceneToLoad ], LoadSceneMode.Single);
+       SceneManager.LoadScene( Scenes[SceneToLoad ], LoadSceneMode.Single);
     }
     // Update is called once per frame
     void Update()

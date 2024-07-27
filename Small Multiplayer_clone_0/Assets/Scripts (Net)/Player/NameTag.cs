@@ -1,6 +1,5 @@
 using UnityEngine;
 using Mirror;
-using Mirror;
 using TMPro;
 using System.Collections.Generic;
 using System;
@@ -8,17 +7,15 @@ using Unity.Collections;
 
 public class NameTag : NetworkBehaviour
 {
-    public NetworkVariable<FixedString128Bytes> pName = new NetworkVariable<FixedString128Bytes>(default,
-        NetworkVariableReadPermission.Everyone,
-        NetworkVariableWritePermission.Owner
-    );
+    [SyncVar]
+    public string pName; 
     public string localname;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public override void OnStartClient()
     {
         base.OnStartClient();
-        if (IsOwner)
+        if (isOwned)
         {
             pName  = PlayerPrefs.GetString("Name", "Toast");
 

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
-using Unity.Netcode.Components;
+ 
 
 
 public class LerpMovement : NetworkBehaviour
@@ -22,7 +22,6 @@ public class LerpMovement : NetworkBehaviour
     private int currentTargetIndex = 0;
     public bool rigBody = true;
     private Rigidbody rb;
-    private NetworkRigidbody networkRb;
     
 
     public override void OnStartClient()
@@ -31,29 +30,20 @@ public class LerpMovement : NetworkBehaviour
         if (rigBody)
         {
             rb = gameObject.AddComponent<Rigidbody>();
-            networkRb = gameObject.AddComponent<NetworkRigidbody>();
             rb.isKinematic = Stationary;
         }
         initialTransform.position = transform.position;
         initialTransform.rotation = transform.rotation;
         transform.position = initialTransform.position;
-        if (isLocalPlayer && !isServer)
-        {
-            RequestInitialTransformServerRpc();
-        }
+      
     }
 
-    [ServerRpc(RequireOwnership = false)]
-    private void RequestInitialTransformServerRpc(ServerRpcParams rpcParams = default)
-    {
-        
-        // ApplyInitialTransformClientRpc(initialTransform.position, initialTransform.rotation, rpcParams.Receive.SenderClientId);
-    }
+    
 
     [ClientRpc]
     private void ApplyInitialTransformClientRpc(Vector3 position, Quaternion rotation, ulong clientId)
     {
-        if (NetworkManager.Singleton.LocalClientId == clientId)
+        if (this.gameObject.GetComponent<NetworkIdentity>().netId == clientId)
         {
             transform.position = position;
             transform.rotation = rotation;
@@ -79,7 +69,7 @@ public class LerpMovement : NetworkBehaviour
     }
     }
 
-    [ServerRpc(RequireOwnership = false)]
+    
     public void TriggerServerRpc()
     {
         if (transforms.Count > 0)
@@ -102,16 +92,11 @@ public class LerpMovement : NetworkBehaviour
 
     public void Trigger()
     {
-        if (isServer)
-        {
+       
             isLerping = true;
             currentTargetIndex = 0;
             TriggerClientRpc();
-        }
-        else
-        {
-            TriggerServerRpc();
-        }
+        
     }
     public void LerpToTargetNoRB()
     {
@@ -158,34 +143,7 @@ public class LerpMovement : NetworkBehaviour
         }
     }
 
-    public float CalculateEstimatedTime()
-    {
-        float totalDistance = 0f;
-        Vector3 previousPosition = initialTransform.position;
+    
 
-        // Calculate the distance between each consecutive transform and the initial position
-        foreach (var transformData in transforms)
-        {
-            totalDistance += Vector3.Distance(previousPosition, transformData.position);
-            previousPosition = transformData.position;
-        }
-
-        // Add the distance from the last transform back to the initial position
-        totalDistance += Vector3.Distance(previousPosition, initialTransform.position);
-
-        // Calculate total time
-        float totalTime = totalDistance / lerpSpeed;
-        return totalTime;
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        if (Application.isPlaying)
-        {
-            float estimatedTime = CalculateEstimatedTime();
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(initialTransform.position, 0.1f);
-            ////Debug.Log("Estimated Total Lerp Time: " + estimatedTime + " seconds");
-        }
-    }
+   
 }

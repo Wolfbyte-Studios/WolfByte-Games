@@ -22,7 +22,7 @@ public class SteamNamePrinter : MonoBehaviour
         string steamName = SteamFriends.GetPersonaName();
 
         // Print the Steam name
-        //Debug.Log("Steam Name: " + steamName);
+        Debug.Log("Steam Name: " + steamName);
     }
 
     private void OnDestroy()
@@ -34,6 +34,6 @@ public class SteamNamePrinter : MonoBehaviour
     private void Update()
     {
         // Run Steamworks callbacks
-        SteamAPI.RunCallbacks();
+        //SteamAPI.RunCallbacks();
     }
 }

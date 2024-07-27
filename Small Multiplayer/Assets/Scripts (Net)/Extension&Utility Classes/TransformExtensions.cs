@@ -83,8 +83,17 @@ public static class TransformExtensions
        return FindDeepChildrenByType<Transform>(aParent)[0];
     }
 
+    public static bool HasComponentInRootParent<T>(this Transform transform) where T : Component
+    {
+        // Get the root parent of the current Transform
+        Transform rootParent = transform.root;
 
-public static void LookAtWithStrength(this Transform self, Vector3 targetPosition, float strength)
+        // Check if the root parent has the given component
+        T component = rootParent.GetComponent<T>();
+
+        return component != null;
+    }
+    public static void LookAtWithStrength(this Transform self, Vector3 targetPosition, float strength)
     {
         // Compute the target rotation as if the transform is looking directly at the target position
         Quaternion targetRotation = Quaternion.LookRotation(targetPosition - self.position);

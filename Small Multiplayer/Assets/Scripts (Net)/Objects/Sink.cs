@@ -1,13 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
-using Unity.Netcode.Components;
+ 
 using Unity.VisualScripting;
 
 [RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(NetworkRigidbody))]
-[RequireComponent(typeof(NetworkObject))]
-[RequireComponent(typeof(NetworkTransform))]
+[RequireComponent(typeof(NetworkIdentity))]
+[RequireComponent(typeof(NetworkTransformReliable))]
 public class Sink : NetworkBehaviour
 {
     public float sinkAmount;
@@ -31,7 +30,7 @@ public class Sink : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IsOwner)
+        if (isOwned)
         {
             
             if (isSinking && !isRising)
@@ -55,7 +54,7 @@ public class Sink : NetworkBehaviour
         }
     }
 
-    [ServerRpc]
+    [Command]
     public void SinkServerRpc()
     {
         isSinking = true;
@@ -72,13 +71,13 @@ public class Sink : NetworkBehaviour
 
     public void sink()
     {
-        if (IsOwner)
+        if (isOwned)
         {
             SinkServerRpc();
         }
     }
 
-    [ServerRpc]
+    [Command]
     public void ResetSinkServerRpc()
     {
         isSinking = false;
@@ -95,7 +94,7 @@ public class Sink : NetworkBehaviour
 
     public void Reset()
     {
-        if (IsOwner)
+        if (isOwned)
         {
             ResetSinkServerRpc();
         }

@@ -1,9 +1,12 @@
+# Text files
 *.shader text
 *.cginc  text
+
 # Unity binary files
 *.unity  filter=lfs diff=lfs merge=lfs -text
 *.prefab binary
 *.asset filter=lfs diff=lfs merge=lfs -text
+
 # Unity LFS-tracked files
 *.fbx    filter=lfs diff=lfs merge=lfs -text
 *.mat    filter=lfs diff=lfs merge=lfs -text
@@ -17,14 +20,20 @@
 *.ogg    filter=lfs diff=lfs merge=lfs -text
 *.mp4    filter=lfs diff=lfs merge=lfs -text
 *.mov    filter=lfs diff=lfs merge=lfs -text
+
 # Blender files
 *.blend  filter=lfs diff=lfs merge=lfs -text
 *.blend1 filter=lfs diff=lfs merge=lfs -text
 *.blend2 filter=lfs diff=lfs merge=lfs -text
+
 # Other common 3D asset types
 *.obj    filter=lfs diff=lfs merge=lfs -text
 *.mtl    filter=lfs diff=lfs merge=lfs -text
 *.dae    filter=lfs diff=lfs merge=lfs -text
+
 # Other
 *.dylib filter=lfs diff=lfs merge=lfs -text
 *.skp filter=lfs diff=lfs merge=lfs -text
+
+# Ignore any folder with 'library' in the name
+**/[Ll]ibrary/**

@@ -1,4 +1,4 @@
-/*using UnityEngine;
+using UnityEngine;
 using Mirror;
 using System.Collections;
 
@@ -11,11 +11,11 @@ public static class NetworkUtils
     {
         if (networkBehaviour.isServer)
         {
-            CallClientRpc(networkBehaviour, Del);
+            networkBehaviour.RpcCallClientRpc(Del);
         }
         else
         {
-            CallServerRpc(networkBehaviour, Del);
+            networkBehaviour.CmdCallServerRpc(Del);
         }
     }
 
@@ -27,45 +27,59 @@ public static class NetworkUtils
         }
         else
         {
-            networkBehaviour.StartCoroutine(ServerRpcCoroutine(networkBehaviour, Del));
+            networkBehaviour.CmdCallServerRpcCoroutineMethod(Del);
         }
     }
 
     [ClientRpc]
-    public static void CallServerRpc(NetworkBehaviour networkBehaviour, RpcDelegate serverRpcDelegate)
+    private static void RpcCallClientRpc(this NetworkBehaviour networkBehaviour, RpcDelegate clientRpcDelegate)
     {
         if (!networkBehaviour.isServer)
+        {
+            clientRpcDelegate.Invoke();
+        }
+        else
+        {
+            networkBehaviour.CmdCallServerRpc(clientRpcDelegate);
+        }
+    }
+
+    [Command]
+    private static void CmdCallServerRpc(this NetworkBehaviour networkBehaviour, RpcDelegate serverRpcDelegate)
+    {
+        if (networkBehaviour.isServer)
         {
             serverRpcDelegate.Invoke();
         }
-    }
-
-    [ClientRpc(RequireOwnership = false)]
-    public static void CallClientRpc(NetworkBehaviour networkBehaviour, RpcDelegate clientRpcDelegate)
-    {
-        if (networkBehaviour.isServer)
+        else
         {
-            clientRpcDelegate.Invoke();
-            CallServerRpc(networkBehaviour, clientRpcDelegate);
+            networkBehaviour.RpcCallClientRpc(serverRpcDelegate);
         }
     }
 
-    [ServerRpc(RequireOwnership = false)]
-    public static void CallServerRpcCoroutineMethod(NetworkBehaviour networkBehaviour, RpcCoroutineDelegate serverRpcCoroutineDelegate)
+    [Command]
+    private static void CmdCallServerRpcCoroutineMethod(this NetworkBehaviour networkBehaviour, RpcCoroutineDelegate serverRpcCoroutineDelegate)
     {
-        if (!networkBehaviour.isServer)
+        if (networkBehaviour.isServer)
         {
             networkBehaviour.StartCoroutine(serverRpcCoroutineDelegate());
         }
+        else
+        {
+            networkBehaviour.RpcCallClientRpcCoroutineMethod(serverRpcCoroutineDelegate);
+        }
     }
 
-    [ClientRpc(RequireOwnership = false)]
-    public static void CallClientRpcCoroutineMethod(NetworkBehaviour networkBehaviour, RpcCoroutineDelegate clientRpcCoroutineDelegate)
+    [ClientRpc]
+    private static void RpcCallClientRpcCoroutineMethod(this NetworkBehaviour networkBehaviour, RpcCoroutineDelegate clientRpcCoroutineDelegate)
     {
-        if (networkBehaviour.isServer)
+        if (!networkBehaviour.isServer)
         {
             networkBehaviour.StartCoroutine(clientRpcCoroutineDelegate());
-            networkBehaviour.StartCoroutine(ServerRpcCoroutine(networkBehaviour, clientRpcCoroutineDelegate));
+        }
+        else
+        {
+            networkBehaviour.StartCoroutine(ClientRpcCoroutine(networkBehaviour, clientRpcCoroutineDelegate));
         }
     }
 
@@ -86,4 +100,3 @@ public static class NetworkUtils
         }
     }
 }
-*/

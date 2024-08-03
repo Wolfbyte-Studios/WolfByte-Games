@@ -52,8 +52,8 @@ public class PlayerMovement : NetworkBehaviour
     public void Setup()
     {
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
         rb = gameObject.GetComponent<Rigidbody>();
 
         var playerInput = gameObject.GetComponent<PlayerInput>();

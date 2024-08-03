@@ -13,6 +13,7 @@ public class PlayerNetworkIndex : NetworkBehaviour
     public int sabId;
     [SyncVar]
     public int localId;
+
     public enum playerType
     {
         Sab,
@@ -20,7 +21,7 @@ public class PlayerNetworkIndex : NetworkBehaviour
     }
     public playerType PlayerType;
 
-    [SyncVar (hook = nameof(OnIsEnabledChanged))]
+    [SyncVar(hook = nameof(OnIsEnabledChanged))]
     public bool isEnabled = true;
 
     public void OnEnable()
@@ -39,101 +40,75 @@ public class PlayerNetworkIndex : NetworkBehaviour
     }
 
     // OnStartClient is called when the object is initialized on the network
-    
     public override void OnStartClient()
     {
-
         // Initialize state on the server
         isEnabled = gameObject.activeSelf;
-
-        
-        // Subscribe to state changes
-        
 
         // Only assign the playerIndex on the local player
         if (!isLocalPlayer)
         {
             // Disable the camera if this is not the local player
-            playerCamera.gameObject.SetActive(false);
+            playerCamera.SetActive(false);
         }
         else
         {
             // Ensure the local player's camera is enabled
-            playerCamera.gameObject.SetActive(true);
+            playerCamera.SetActive(true);
         }
 
-
-        StartCoroutine(delay());
-
+        StartCoroutine(Delay());
     }
 
     public override void OnStopClient()
     {
         // Unsubscribe from state changes
-       // isEnabled. -= OnIsEnabledChanged;
     }
 
     private void OnIsEnabledChanged(bool oldValue, bool newValue)
     {
-        delay();
+        ApplyState();
     }
 
     private void ApplyState()
     {
-        gameObject.SetActive(isEnabled );
+        gameObject.SetActive(isEnabled);
     }
 
-    
     public void SetEnabledState(bool state)
     {
-        isEnabled  = state;
+        isEnabled = state;
         ApplyState();
     }
 
    
-    
-    
-    public IEnumerator delay()
+    private void RpcRefresh()
     {
-        if (isServer)
+        sabId = CurrentSessionStats.Instance.IndexOfSab;
+        if (isLocalPlayer)
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            yield return new WaitForSeconds(2);
-
-            refresh();
+           
+            localId = connectionToClient.connectionId;
+            Debug.Log(connectionToClient.connectionId + " Is my ID");
         }
-
-        yield return null;
-    }
- 
-    public void refresh()
-    {
-        localId = NetworkClient.connection.connectionId;
-        sabId = CurrentSessionStats.Instance.IndexOfSab ;
-
         switch (PlayerType)
         {
             case playerType.Sab:
-                if (sabId == localId)
-                {
-                    SetEnabledState(true);
-                }
-                else
-                {
-                    SetEnabledState(false);
-                }
+                SetEnabledState(sabId == localId);
                 break;
             case playerType.Runner:
-                if (sabId != localId)
-                {
-                    SetEnabledState(true);
-                }
-                else
-                {
-                    SetEnabledState(false);
-                }
+                SetEnabledState(sabId != localId);
                 break;
         }
+    }
+
+    [Server]
+    public IEnumerator Delay()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        yield return new WaitForSeconds(2);
+
+        RpcRefresh();
     }
 }

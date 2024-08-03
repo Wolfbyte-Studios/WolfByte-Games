@@ -37,7 +37,9 @@ public class CurrentSessionStats : NetworkBehaviour
     {
         Standard
     }
+    [SyncVar(hook = nameof(syncModeChanges))]
     public GameModeEnum GameMode = GameModeEnum.Standard;
+    [SyncVar(hook = nameof(syncStateChanges))]
     public GameStateEnum GameState = GameStateEnum.UI;
     public readonly SyncList<PlayerData> playersList = new SyncList<PlayerData>();
     public readonly SyncList<string> playernames = new SyncList<string>();
@@ -46,6 +48,18 @@ public class CurrentSessionStats : NetworkBehaviour
     {
         DontDestroyOnLoad(this);
         Instance = this;
+    }
+    [ClientRpc]
+    public void syncStateChanges(GameStateEnum oldValue, GameStateEnum newValue)
+    {
+        GameState = newValue;
+       
+    }
+    [ClientRpc]
+    public void syncModeChanges(GameModeEnum oldValue, GameModeEnum newValue)
+    {
+        GameMode = newValue;
+
     }
 
     public override void OnStartServer()
@@ -106,7 +120,7 @@ public class CurrentSessionStats : NetworkBehaviour
             foreach (var script in refreshScript)
             {
                 script.gameObject.SetActive(true);
-                StartCoroutine(script.delay());
+                StartCoroutine(script.Delay());
             }
         }
     }

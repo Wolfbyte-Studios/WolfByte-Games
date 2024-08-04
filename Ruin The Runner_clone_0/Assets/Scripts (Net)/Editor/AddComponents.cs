@@ -100,14 +100,18 @@ public class AddComponentsBasedOnName
                 obj.GetComponent<MeshRenderer>().enabled = false;
 
             }
-            if (obj.name.Contains("Spotlight".ToLower()))
+            if (obj.name.Contains("Spotlight"))
             {
                 var l = obj.AddComponent<Light>();
-                l.type = LightType.Rectangle;
-                l.areaSize = new Vector2(obj.GetComponent<MeshCollider>().bounds.extents.x, obj.GetComponent<MeshCollider>().bounds.extents.z);
-                l.range = obj.GetComponent<MeshCollider>().bounds.extents.y;
+                l.type = LightType.Box;
+                var hd = obj.AddComponent<HDAdditionalLightData>();
+                
+                var areaSize = new Vector2(obj.GetComponent<MeshCollider>().bounds.extents.x * 2, obj.GetComponent<MeshCollider>().bounds.extents.z * 2);
+                hd.SetBoxSpotSize(areaSize);
+                l.range = obj.GetComponent<MeshCollider>().bounds.extents.y * 2;
                 obj.transform.localEulerAngles = new Vector3(90, 0, 0);
-                obj.transform.position = obj.transform.position + new Vector3(0, obj.GetComponent<MeshCollider>().bounds.extents.y / 2, 0);
+                obj.GetComponent<MeshRenderer>().enabled = false;
+               // obj.transform.position = obj.transform.position - new Vector3(0, obj.GetComponent<MeshCollider>().bounds.extents.y, 0);
 
             }
 

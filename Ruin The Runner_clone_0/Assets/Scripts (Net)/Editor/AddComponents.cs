@@ -58,8 +58,8 @@ public class AddComponentsBasedOnName
                 {
                     mat = obj.transform.FindDeepChildrenByType<MeshRenderer>()[0].GetComponent<MeshRenderer>().sharedMaterial = new Material(obj.transform.FindDeepChildrenByType<MeshRenderer>()[0].GetComponent<MeshRenderer>().sharedMaterial.shader);
                 }
-                
-                mat.color = Color.magenta;
+
+                mat.color = Color.red;
                 obj.tag = "Clickable";
                 obj.layer = 30;
                 c.low = Color.red;

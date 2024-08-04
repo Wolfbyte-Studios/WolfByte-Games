@@ -17,7 +17,7 @@ public class AddComponentsBasedOnName
         foreach (GameObject obj in allObjects)
         {
             //if obj is root and doesn't have networkID
-            if(obj.GetComponent<NetworkBehaviour>() && obj.transform.root == obj.transform && obj.GetComponent<NetworkIdentity>() == null)
+            if (obj.GetComponent<NetworkBehaviour>() && obj.transform.root == obj.transform && obj.GetComponent<NetworkIdentity>() == null)
             {
                 obj.AddComponent<NetworkIdentity>();
             }
@@ -35,7 +35,7 @@ public class AddComponentsBasedOnName
                 // Add Clickable component if it doesn't already exist
                 if (obj.GetComponent<Clickable>() == null)
                 {
-                   c = obj.AddComponent<Clickable>();
+                    c = obj.AddComponent<Clickable>();
                 }
                 else
                 {
@@ -45,12 +45,16 @@ public class AddComponentsBasedOnName
                 {
                     obj.AddComponent<NetworkIdentity>();
                 }
+                if (obj.GetComponent<Rigidbody>() == null)
+                {
+                    obj.AddComponent<Rigidbody>();
+                }
                 if (obj.GetComponent<LerpMovement>() == null)
                 {
                     l = obj.AddComponent<LerpMovement>();
                 }
                 Material mat = null;
-                if(obj.GetComponent<MeshRenderer>() != null)
+                if (obj.GetComponent<MeshRenderer>() != null)
                 {
                     mat = obj.GetComponent<MeshRenderer>().sharedMaterial = new Material(obj.GetComponent<MeshRenderer>().sharedMaterial.shader);
                 }
@@ -66,8 +70,8 @@ public class AddComponentsBasedOnName
                 c.med = Color.yellow;
                 c.high = Color.green;
                 c.done = Color.white;
-                
-                if(obj.GetComponent<MeshCollider>() != null)
+
+                if (obj.GetComponent<MeshCollider>() != null)
                 {
                     if (l = null) { return; }
                     if (obj.GetComponent<LerpMovement>().rigBody == true)
@@ -80,7 +84,7 @@ public class AddComponentsBasedOnName
                     }
                 }
 
-               
+
             }
             if (obj.name.Contains("Water"))
             {
@@ -92,16 +96,22 @@ public class AddComponentsBasedOnName
                 var water = obj.GetComponent<WaterSurface>();
                 water.surfaceType = WaterSurfaceType.Pool;
                 water.geometryType = WaterGeometryType.Custom;
-                water.meshRenderers.Add( obj.GetComponent<MeshRenderer>());
+                water.meshRenderers.Add(obj.GetComponent<MeshRenderer>());
                 obj.GetComponent<MeshRenderer>().enabled = false;
 
             }
+            if (obj.name.Contains("Spotlight".ToLower()))
+            {
+                var l = obj.AddComponent<Light>();
+                l.type = LightType.Rectangle;
+                l.areaSize = new Vector2(obj.GetComponent<MeshCollider>().bounds.extents.x, obj.GetComponent<MeshCollider>().bounds.extents.z);
+                l.range = obj.GetComponent<MeshCollider>().bounds.extents.y;
+                obj.transform.localEulerAngles = new Vector3(90, 0, 0);
+                obj.transform.position = obj.transform.position + new Vector3(0, obj.GetComponent<MeshCollider>().bounds.extents.y / 2, 0);
 
-            // You can add more conditions here for other components
-            // For example, if an object name contains "Movable", add a Movable component
+            }
 
+            ////Debug.Log("Components added based on object names.");
         }
-
-        ////Debug.Log("Components added based on object names.");
     }
 }

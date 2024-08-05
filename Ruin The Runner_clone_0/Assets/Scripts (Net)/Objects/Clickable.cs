@@ -8,12 +8,17 @@ using UnityEngine.Events;
 public class Clickable : NetworkBehaviour
 {
     public static int ClicksLeft;
+    
     public bool ClicksCounted;
+    
     public UnityEvent myEvent;
+    
     public UnityEvent OnCoolDown;
     public UnityEvent onSelect;
     public UnityEvent onDeselect;
     public UnityEvent secondaryEvent; // Add secondary event
+    [SyncVar]
+    public UnityEvent placeholder;
     public bool needsToCoolDown;
     public bool CoolDown;
     public float coolDown;
@@ -56,7 +61,8 @@ public class Clickable : NetworkBehaviour
         {
             if (percentageFinished >= coolDownEarlyPercentage)
             {
-                OnCoolDown.Invoke();
+                placeholder = OnCoolDown;
+                NetworkUtils.RpcHandler(this, TriggerPlaceholder);
             }
             meshRenderer.material = NewMat;
             applyColors(percentageFinished);
@@ -65,7 +71,8 @@ public class Clickable : NetworkBehaviour
 
     public void coolingDown()
     {
-        OnCoolDown.Invoke();
+        placeholder = OnCoolDown;
+        NetworkUtils.RpcHandler(this, TriggerPlaceholder);
         needsToCoolDown = false;
     }
 
@@ -91,7 +98,7 @@ public class Clickable : NetworkBehaviour
                 return;
         }
     }
-
+    
     public void TriggerEvent()
     {
         if (myEvent != null)
@@ -109,7 +116,8 @@ public class Clickable : NetworkBehaviour
             }
             timeFired = Time.time;
             ////Debug.Log("Activation should happen");
-            myEvent.Invoke();
+            placeholder = myEvent;
+            NetworkUtils.RpcHandler(this, TriggerPlaceholder);
             if (ClicksCounted)
             {
                 ClicksLeft--;
@@ -117,22 +125,30 @@ public class Clickable : NetworkBehaviour
             needsToCoolDown = true;
         }
     }
+  
+    public void TriggerPlaceholder()
+    {
+        placeholder.Invoke();
+    }
 
     public void TriggerSecondary()
     {
         if (secondaryEvent != null)
         {
-            secondaryEvent.Invoke();
+            placeholder = secondaryEvent;
+            NetworkUtils.RpcHandler(this, TriggerPlaceholder);
         }
     }
 
     public void OnSelect()
     {
-        onSelect.Invoke();
+        placeholder = onSelect;
+        NetworkUtils.RpcHandler(this, TriggerPlaceholder);
     }
 
     public void OnDeselect()
     {
-        onDeselect.Invoke();
+        placeholder = onDeselect;
+        NetworkUtils.RpcHandler(this, TriggerPlaceholder);
     }
 }

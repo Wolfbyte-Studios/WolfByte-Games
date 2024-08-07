@@ -1,4 +1,14 @@
 <linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="GameManager">
+			<method name="RotatePlayers"/>
+		</type>
+		<type fullname="LerpMovement">
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+		</type>
+	</assembly>
 	<assembly fullname="Mirror.Components" ignoreIfMissing="1">
 		<type fullname="Mirror.Discovery.NetworkDiscoveryHUD">
 			<method name="OnDiscoveredServer"/>
@@ -28,6 +38,16 @@
 			<method name="OnDecrement"/>
 			<method name="OnIncrement"/>
 			<method name="OnIncrement"/>
+		</type>
+	</assembly>
+	<assembly fullname="UnityEngine.CoreModule" ignoreIfMissing="1">
+		<type fullname="UnityEngine.Behaviour">
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+		</type>
+		<type fullname="UnityEngine.Renderer">
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
 		</type>
 	</assembly>
 </linker>

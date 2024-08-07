@@ -64,7 +64,7 @@ public class AimOutline : NetworkBehaviour
             target = other.gameObject;
             var click = target.GetComponent<Clickable>();
             int newLayer = (click.percentageFinished < 1) ? 29 : 31;
-            click.OnSelect();
+            //click.OnSelect();
             SetTargetLayer_Command(target.GetComponent<NetworkIdentity>().netId, newLayer);
         }
     }

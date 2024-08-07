@@ -1,4 +1,8 @@
 <linker>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname=".LerpMovement/TransformData" preserve="nothing" serialized="true"/>
+		<type fullname="CR.CleanOutlineCustomPass" preserve="nothing" serialized="true"/>
+	</assembly>
 	<assembly fullname="Mirror">
 		<type fullname="Mirror.SnapshotInterpolationSettings" preserve="nothing" serialized="true"/>
 	</assembly>
@@ -6,12 +10,32 @@
 		<type fullname="Mirror.Discovery.ServerFoundUnityEvent`1" preserve="nothing" serialized="true"/>
 		<type fullname="Mirror.Discovery.ServerResponse" preserve="nothing" serialized="true"/>
 	</assembly>
+	<assembly fullname="Unity.Cinemachine">
+		<type fullname="Unity.Cinemachine.CameraTarget" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Cinemachine.CinemachineBlendDefinition" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Cinemachine.CinemachineBrain/LensModeOverrideSettings" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Cinemachine.CinemachineInputAxisController/Reader" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Cinemachine.DefaultInputAxisDriver" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Cinemachine.InputAxis" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Cinemachine.InputAxis/RecenteringSettings" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Cinemachine.InputAxisControllerBase`1/Controller" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Cinemachine.InputAxisControllerManager`1" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Cinemachine.LensSettings" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Cinemachine.LensSettings/PhysicalSettings" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Cinemachine.PrioritySettings" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Cinemachine.TargetTracking.TrackerSettings" preserve="nothing" serialized="true"/>
+	</assembly>
 	<assembly fullname="Unity.InputSystem">
 		<type fullname="UnityEngine.InputSystem.InputAction" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.InputSystem.InputActionMap" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.InputSystem.InputBinding" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.InputSystem.InputControlScheme" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.InputSystem.InputControlScheme/DeviceRequirement" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.InputSystem.InputSettings/iOSSettings" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.InputSystem.iOS.PrivacyDataUsage" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.InputSystem.PlayerInput/ControlsChangedEvent" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.InputSystem.PlayerInput/DeviceLostEvent" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.InputSystem.PlayerInput/DeviceRegainedEvent" preserve="nothing" serialized="true"/>
 	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime">
 		<type fullname="UnityEngine.Rendering.AnimationCurveParameter" preserve="nothing" serialized="true"/>
@@ -67,6 +91,12 @@
 		<type fullname="UnityEngine.Rendering.HighDefinition.BoolScalableSetting" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.BoolScalableSettingValue" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.CameraClampModeParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.CameraSettings" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.CameraSettings/BufferClearing" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.CameraSettings/Culling" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.CameraSettings/Frustum" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.CameraSettings/Volumes" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.CameraSettingsOverride" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.CascadeEndBorderParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.CascadePartitionSplitParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ColorGradingSettings" preserve="nothing" serialized="true"/>
@@ -98,6 +128,7 @@
 		<type fullname="UnityEngine.Rendering.HighDefinition.GlobalPostProcessSettings" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.GPUCacheSettingSRP" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDPhysicalCamera" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.HDProbe/RenderData" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDRACESPresetParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDRenderPipelineEditorAssets" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDRenderPipelineEditorMaterials" preserve="nothing" serialized="true"/>
@@ -112,6 +143,7 @@
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDRPRayTracingResources" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDShadowInitParameters" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDShadowInitParameters/HDShadowAtlasInitParams" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.InfluenceVolume" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.IntScalableSetting" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.IntScalableSettingValue" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.LensSettings" preserve="nothing" serialized="true"/>
@@ -120,11 +152,20 @@
 		<type fullname="UnityEngine.Rendering.HighDefinition.LuminanceSourceParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.MeteringModeParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.NeutralRangeReductionModeParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.ObsoleteCaptureSettings" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ObsoleteFrameSettings" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ObsoleteLightLoopSettings" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.PhysicallyBasedSky/RenderingMode" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.PhysicallyBasedSkyModel" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.PlanarReflectionAtlasResolution" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.ProbeSettings" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.ProbeSettings/CubeReflectionResolutionScalableSettingValue" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.ProbeSettings/Frustum" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.ProbeSettings/Lighting" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.ProbeSettings/PlanarReflectionAtlasResolutionScalableSettingValue" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.ProbeSettings/ProxySettings" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.ProbeSettingsOverride" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.ProxyVolume" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ReflectionAndPlanarProbeFormat" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ReflectionProbeTextureCacheResolution" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.RenderGraphSettings" preserve="nothing" serialized="true"/>
@@ -154,6 +195,7 @@
 		<type fullname="UnityEngine.Events.ArgumentCache" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Events.PersistentCallGroup" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Events.PersistentListenerMode" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Events.UnityEvent" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.RectOffset" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.RenderPipelineGraphicsSettingsCollection" preserve="nothing" serialized="true"/>
 	</assembly>

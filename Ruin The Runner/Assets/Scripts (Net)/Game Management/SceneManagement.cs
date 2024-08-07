@@ -54,6 +54,7 @@ public class SceneStuff : NetworkBehaviour
     {
         
        SceneManager.LoadScene( Scenes[SceneToLoad ], LoadSceneMode.Single);
+       NetworkManager.singleton.ServerChangeScene(Scenes[SceneToLoad]);
     }
     // Update is called once per frame
     void Update()

@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - LookAtRunner
     - PlayerIdentity
     - PlayerMovement
+    - SceneStuff
     - SteamLobby
     - SteamNamePrinter
     FizzySteamworks.dll:
@@ -123,8 +124,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -386,15 +389,18 @@ ScriptsOnlyBuild:
   - assembly: Mirror.Components
     fullTypeName: Mirror.Discovery.NetworkDiscoveryHUD
     methodName: OnDiscoveredServer
-  - assembly: Assembly-CSharp
-    fullTypeName: LerpMovement
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: LerpMovement
-    methodName: Trigger
   - assembly: Mirror.Components
     fullTypeName: Mirror.Discovery.NetworkDiscoveryHUD
     methodName: OnDiscoveredServer
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneStuff
+    methodName: ChooseScene
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.Behaviour
     methodName: set_enabled
@@ -456,6 +462,45 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
     methodName: ResetDebugManager
   sceneClasses:
+    Assets/OutdoorsScene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 35962}
+    - Class: 114
+      Script: {instanceID: 37322}
+    - Class: 114
+      Script: {instanceID: 38542}
+    - Class: 114
+      Script: {instanceID: 39270}
+    - Class: 114
+      Script: {instanceID: 42754}
+    - Class: 114
+      Script: {instanceID: 46766}
+    - Class: 114
+      Script: {instanceID: 47024}
+    - Class: 114
+      Script: {instanceID: 49186}
+    - Class: 114
+      Script: {instanceID: 51308}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
     Assets/Scenes/Start.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -679,6 +724,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 52272}
     - Class: 114
       Script: {instanceID: 52508}
+    - Class: 114
+      Script: {instanceID: 52844}
     - Class: 114
       Script: {instanceID: 52870}
     - Class: 114
@@ -5424,7 +5471,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Splines
     namespaceName: UnityEngine.Splines
     className: SplineExtrude
+  - hash:
+      serializedVersion: 2
+      Hash: cb1721924763eb392cf333b9eb3fe7a8
+    assemblyName: HierarchyIcons
+    namespaceName: HierarchyIcons
+    className: HierarchyIcon
   platform: 19
   scenePathNames:
   - Assets/Scenes/Start.unity
+  - Assets/OutdoorsScene.unity
   playerPath: C:/Users/user1/3d zeldaish/Builds/Ruin The Runner/Ruin The Runner.exe

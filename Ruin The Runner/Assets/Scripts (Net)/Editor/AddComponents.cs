@@ -53,17 +53,17 @@ public class AddComponentsBasedOnName
                 {
                     l = obj.AddComponent<LerpMovement>();
                 }
-                Material mat = null;
+                //Material mat = null;
                 if (obj.GetComponent<MeshRenderer>() != null)
                 {
-                    mat = obj.GetComponent<MeshRenderer>().sharedMaterial = new Material(obj.GetComponent<MeshRenderer>().sharedMaterial.shader);
+                    //mat = obj.GetComponent<MeshRenderer>().sharedMaterial = new Material(obj.GetComponent<MeshRenderer>().sharedMaterial.shader);
                 }
                 else
                 {
-                    mat = obj.transform.FindDeepChildrenByType<MeshRenderer>()[0].GetComponent<MeshRenderer>().sharedMaterial = new Material(obj.transform.FindDeepChildrenByType<MeshRenderer>()[0].GetComponent<MeshRenderer>().sharedMaterial.shader);
+                    //mat = obj.transform.FindDeepChildrenByType<MeshRenderer>()[0].GetComponent<MeshRenderer>().sharedMaterial = new Material(obj.transform.FindDeepChildrenByType<MeshRenderer>()[0].GetComponent<MeshRenderer>().sharedMaterial.shader);
                 }
 
-                mat.color = Color.red;
+                //mat.color = Color.red;
                 obj.tag = "Clickable";
                 obj.layer = 30;
                 c.low = Color.red;

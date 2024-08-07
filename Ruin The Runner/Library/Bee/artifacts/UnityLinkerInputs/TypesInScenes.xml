@@ -9,6 +9,8 @@
 		<type fullname="LookAtRunner" preserve="nothing"/>
 		<type fullname="PlayerIdentity" preserve="nothing"/>
 		<type fullname="PlayerMovement" preserve="nothing"/>
+		<type fullname="SteamLobby" preserve="nothing"/>
+		<type fullname="SteamNamePrinter" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="FizzySteamworks">
 		<type fullname="Mirror.FizzySteam.FizzySteamworks" preserve="nothing"/>
@@ -42,6 +44,7 @@
 		<type fullname="UnityEngine.InputSystem.InputSystemObject" preserve="nothing"/>
 		<type fullname="UnityEngine.InputSystem.PlayerInput" preserve="nothing"/>
 		<type fullname="UnityEngine.InputSystem.RemoteInputPlayerConnection" preserve="nothing"/>
+		<type fullname="UnityEngine.InputSystem.UI.InputSystemUIInputModule" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime">
 		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerBitField" preserve="nothing"/>
@@ -104,6 +107,13 @@
 		<type fullname="UnityEngine.Rendering.HighDefinition.VisualEnvironment" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.WaterRendering" preserve="nothing"/>
 	</assembly>
+	<assembly fullname="Unity.TextMeshPro">
+		<type fullname="TMPro.TextMeshProUGUI" preserve="nothing"/>
+		<type fullname="TMPro.TMP_FontAsset" preserve="nothing"/>
+		<type fullname="TMPro.TMP_Settings" preserve="nothing"/>
+		<type fullname="TMPro.TMP_SpriteAsset" preserve="nothing"/>
+		<type fullname="TMPro.TMP_StyleSheet" preserve="nothing"/>
+	</assembly>
 	<assembly fullname="Unity.VisualEffectGraph.Runtime">
 		<type fullname="UnityEngine.VFX.VFXRuntimeResources" preserve="nothing"/>
 	</assembly>
@@ -164,6 +174,7 @@
 		<type fullname="UnityEngine.Transform" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEngine.UI">
+		<type fullname="UnityEngine.EventSystems.EventSystem" preserve="nothing"/>
 		<type fullname="UnityEngine.EventSystems.EventTrigger" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Button" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.CanvasScaler" preserve="nothing"/>

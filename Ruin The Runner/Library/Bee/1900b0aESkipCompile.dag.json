@@ -29,7 +29,7 @@
       "DisplayName": "Writing 6097564273297756792.rsp",
       "ActionType": "WriteFile",
       "PayloadOffset": 83,
-      "PayloadLength": 8451,
+      "PayloadLength": 8660,
       "PayloadDebugContentSnippet": "-a=\"C:\\Users\\user1\\3d zeldaish",
       "Inputs": [],
       "InputFlags": [],
@@ -58,6 +58,8 @@
         "Library/ScriptAssemblies/FizzySteamworks.dll",
         "Library/ScriptAssemblies/Heathen.Core.dll",
         "Library/ScriptAssemblies/Heathen.Steamworks.dll",
+        "Library/ScriptAssemblies/Heathen.Steamworks.Examples.dll",
+        "Library/ScriptAssemblies/IngameDebugConsole.Runtime.dll",
         "Library/ScriptAssemblies/kcp2k.dll",
         "Library/ScriptAssemblies/Mirror.Authenticators.dll",
         "Library/ScriptAssemblies/Mirror.Components.dll",
@@ -113,6 +115,8 @@
         "Library/Bee/artifacts/rsp/6097564273297756792.rsp"
       ],
       "InputFlags": [
+        0,
+        0,
         0,
         0,
         0,
@@ -397,6 +401,12 @@
     },
     {
       "File": "Library/ScriptAssemblies/Heathen.Steamworks.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Heathen.Steamworks.Examples.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/IngameDebugConsole.Runtime.dll"
     },
     {
       "File": "Library/ScriptAssemblies/kcp2k.dll"

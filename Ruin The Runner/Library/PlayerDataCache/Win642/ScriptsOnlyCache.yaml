@@ -10,6 +10,8 @@ ScriptsOnlyBuild:
     - LookAtRunner
     - PlayerIdentity
     - PlayerMovement
+    - SteamLobby
+    - SteamNamePrinter
     FizzySteamworks.dll:
     - Mirror.FizzySteam.FizzySteamworks
     Mirror.Components.dll:
@@ -37,6 +39,7 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.InputSystemObject
     - UnityEngine.InputSystem.PlayerInput
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
+    - UnityEngine.InputSystem.UI.InputSystemUIInputModule
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
     - UnityEngine.Rendering.UI.DebugUIHandlerButton
@@ -104,6 +107,17 @@ ScriptsOnlyBuild:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.Splines.Editor.dll:
     - UnityEditor.Splines.SelectionContext
+    Unity.TextMeshPro:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     Unity.VisualEffectGraph.Runtime.dll:
     - UnityEngine.VFX.VFXRuntimeResources
     UnityEditor.Graphs.dll:
@@ -132,6 +146,12 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
   serializedClasses:
     Assembly-CSharp:
     - .LerpMovement/TransformData
@@ -318,6 +338,18 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.HighDefinition.WindParameter/WindParamaterValue
     - UnityEngine.Rendering.HighDefinition.WindSpeedParameter
     - UnityEngine.Rendering.LineRendering/MemoryBudget
+    Unity.TextMeshPro:
+    - TMPro.FaceInfo_Legacy
+    - TMPro.FontAssetCreationSettings
+    - TMPro.KerningTable
+    - TMPro.TMP_Character
+    - TMPro.TMP_FontFeatureTable
+    - TMPro.TMP_FontWeightPair
+    - TMPro.TMP_Sprite
+    - TMPro.TMP_SpriteCharacter
+    - TMPro.TMP_SpriteGlyph
+    - TMPro.TMP_Style
+    - TMPro.VertexGradient
     UnityEngine.CoreModule:
     - UnityEngine.Bounds
     - UnityEngine.Events.ArgumentCache
@@ -326,6 +358,14 @@ ScriptsOnlyBuild:
     - UnityEngine.Events.UnityEvent
     - UnityEngine.RectOffset
     - UnityEngine.Rendering.RenderPipelineGraphicsSettingsCollection
+    UnityEngine.TextCoreFontEngineModule:
+    - UnityEngine.TextCore.FaceInfo
+    - UnityEngine.TextCore.Glyph
+    - UnityEngine.TextCore.GlyphMetrics
+    - UnityEngine.TextCore.GlyphRect
+    - UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord
+    - UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord
+    - UnityEngine.TextCore.LowLevel.GlyphValueRecord
     UnityEngine.UI:
     - UnityEngine.EventSystems.EventTrigger/Entry
     - UnityEngine.EventSystems.EventTrigger/TriggerEvent
@@ -340,6 +380,12 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: SteamLobby
+    methodName: HostLobby
+  - assembly: Mirror.Components
+    fullTypeName: Mirror.Discovery.NetworkDiscoveryHUD
+    methodName: OnDiscoveredServer
   - assembly: Assembly-CSharp
     fullTypeName: LerpMovement
     methodName: Trigger
@@ -452,173 +498,191 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 35864}
+      Script: {instanceID: 35902}
     - Class: 114
-      Script: {instanceID: 36244}
+      Script: {instanceID: 36048}
     - Class: 114
-      Script: {instanceID: 36598}
+      Script: {instanceID: 36282}
     - Class: 114
-      Script: {instanceID: 37050}
+      Script: {instanceID: 36636}
     - Class: 114
-      Script: {instanceID: 37128}
+      Script: {instanceID: 36698}
     - Class: 114
-      Script: {instanceID: 37218}
+      Script: {instanceID: 36966}
     - Class: 114
-      Script: {instanceID: 37294}
+      Script: {instanceID: 37088}
     - Class: 114
-      Script: {instanceID: 37596}
+      Script: {instanceID: 37166}
     - Class: 114
-      Script: {instanceID: 37794}
+      Script: {instanceID: 37256}
     - Class: 114
-      Script: {instanceID: 38120}
+      Script: {instanceID: 37332}
     - Class: 114
-      Script: {instanceID: 38280}
+      Script: {instanceID: 37634}
     - Class: 114
-      Script: {instanceID: 38434}
+      Script: {instanceID: 37832}
     - Class: 114
-      Script: {instanceID: 38520}
+      Script: {instanceID: 38158}
     - Class: 114
-      Script: {instanceID: 38902}
+      Script: {instanceID: 38318}
     - Class: 114
-      Script: {instanceID: 38996}
+      Script: {instanceID: 38450}
     - Class: 114
-      Script: {instanceID: 39140}
+      Script: {instanceID: 38472}
     - Class: 114
-      Script: {instanceID: 39158}
+      Script: {instanceID: 38558}
     - Class: 114
-      Script: {instanceID: 39236}
+      Script: {instanceID: 38940}
     - Class: 114
-      Script: {instanceID: 39318}
+      Script: {instanceID: 39034}
     - Class: 114
-      Script: {instanceID: 39566}
+      Script: {instanceID: 39178}
     - Class: 114
-      Script: {instanceID: 39668}
+      Script: {instanceID: 39196}
     - Class: 114
-      Script: {instanceID: 39728}
+      Script: {instanceID: 39274}
     - Class: 114
-      Script: {instanceID: 39812}
+      Script: {instanceID: 39356}
     - Class: 114
-      Script: {instanceID: 39864}
+      Script: {instanceID: 39604}
+    - Class: 114
+      Script: {instanceID: 39706}
+    - Class: 114
+      Script: {instanceID: 39766}
+    - Class: 114
+      Script: {instanceID: 39850}
     - Class: 114
       Script: {instanceID: 39902}
     - Class: 114
-      Script: {instanceID: 39924}
+      Script: {instanceID: 39940}
     - Class: 114
-      Script: {instanceID: 40544}
+      Script: {instanceID: 39962}
     - Class: 114
-      Script: {instanceID: 41118}
+      Script: {instanceID: 40582}
     - Class: 114
-      Script: {instanceID: 41180}
+      Script: {instanceID: 41156}
     - Class: 114
-      Script: {instanceID: 41540}
+      Script: {instanceID: 41218}
     - Class: 114
-      Script: {instanceID: 41550}
+      Script: {instanceID: 41578}
     - Class: 114
-      Script: {instanceID: 42484}
+      Script: {instanceID: 41588}
     - Class: 114
-      Script: {instanceID: 42546}
+      Script: {instanceID: 42522}
     - Class: 114
-      Script: {instanceID: 42616}
+      Script: {instanceID: 42584}
     - Class: 114
-      Script: {instanceID: 42636}
+      Script: {instanceID: 42654}
     - Class: 114
-      Script: {instanceID: 42656}
+      Script: {instanceID: 42674}
     - Class: 114
-      Script: {instanceID: 43086}
+      Script: {instanceID: 42694}
     - Class: 114
-      Script: {instanceID: 43160}
+      Script: {instanceID: 43116}
     - Class: 114
-      Script: {instanceID: 43200}
+      Script: {instanceID: 43124}
     - Class: 114
-      Script: {instanceID: 43282}
+      Script: {instanceID: 43198}
     - Class: 114
-      Script: {instanceID: 43392}
+      Script: {instanceID: 43238}
     - Class: 114
-      Script: {instanceID: 43540}
+      Script: {instanceID: 43320}
     - Class: 114
-      Script: {instanceID: 44402}
+      Script: {instanceID: 43430}
     - Class: 114
-      Script: {instanceID: 44702}
+      Script: {instanceID: 43578}
     - Class: 114
-      Script: {instanceID: 44814}
+      Script: {instanceID: 44440}
     - Class: 114
-      Script: {instanceID: 44818}
-    - Class: 114
-      Script: {instanceID: 44850}
+      Script: {instanceID: 44740}
     - Class: 114
       Script: {instanceID: 44852}
     - Class: 114
-      Script: {instanceID: 45078}
+      Script: {instanceID: 44856}
     - Class: 114
-      Script: {instanceID: 45140}
+      Script: {instanceID: 44888}
     - Class: 114
-      Script: {instanceID: 45204}
+      Script: {instanceID: 44890}
     - Class: 114
-      Script: {instanceID: 45620}
+      Script: {instanceID: 45116}
     - Class: 114
-      Script: {instanceID: 45944}
+      Script: {instanceID: 45178}
     - Class: 114
-      Script: {instanceID: 46124}
+      Script: {instanceID: 45242}
     - Class: 114
-      Script: {instanceID: 46172}
+      Script: {instanceID: 45658}
     - Class: 114
-      Script: {instanceID: 46240}
+      Script: {instanceID: 45982}
+    - Class: 114
+      Script: {instanceID: 46162}
+    - Class: 114
+      Script: {instanceID: 46210}
     - Class: 114
       Script: {instanceID: 46278}
     - Class: 114
-      Script: {instanceID: 46642}
+      Script: {instanceID: 46316}
     - Class: 114
-      Script: {instanceID: 46900}
+      Script: {instanceID: 46680}
     - Class: 114
-      Script: {instanceID: 47116}
+      Script: {instanceID: 46938}
     - Class: 114
-      Script: {instanceID: 47140}
+      Script: {instanceID: 47154}
     - Class: 114
-      Script: {instanceID: 47650}
+      Script: {instanceID: 47178}
     - Class: 114
-      Script: {instanceID: 48504}
+      Script: {instanceID: 47688}
     - Class: 114
-      Script: {instanceID: 49056}
+      Script: {instanceID: 48544}
     - Class: 114
-      Script: {instanceID: 49094}
+      Script: {instanceID: 49096}
     - Class: 114
-      Script: {instanceID: 49168}
+      Script: {instanceID: 49134}
     - Class: 114
-      Script: {instanceID: 49578}
+      Script: {instanceID: 49208}
     - Class: 114
-      Script: {instanceID: 49688}
+      Script: {instanceID: 49618}
     - Class: 114
-      Script: {instanceID: 49838}
+      Script: {instanceID: 49728}
     - Class: 114
-      Script: {instanceID: 50576}
+      Script: {instanceID: 49878}
     - Class: 114
-      Script: {instanceID: 50584}
+      Script: {instanceID: 50486}
     - Class: 114
-      Script: {instanceID: 50732}
+      Script: {instanceID: 50616}
     - Class: 114
-      Script: {instanceID: 50888}
+      Script: {instanceID: 50624}
     - Class: 114
-      Script: {instanceID: 50918}
+      Script: {instanceID: 50772}
     - Class: 114
-      Script: {instanceID: 51042}
+      Script: {instanceID: 50928}
     - Class: 114
-      Script: {instanceID: 51084}
+      Script: {instanceID: 50958}
     - Class: 114
-      Script: {instanceID: 51090}
+      Script: {instanceID: 51082}
     - Class: 114
-      Script: {instanceID: 51160}
+      Script: {instanceID: 51124}
     - Class: 114
-      Script: {instanceID: 51316}
+      Script: {instanceID: 51130}
     - Class: 114
-      Script: {instanceID: 51636}
+      Script: {instanceID: 51200}
     - Class: 114
-      Script: {instanceID: 51686}
+      Script: {instanceID: 51356}
     - Class: 114
-      Script: {instanceID: 52118}
+      Script: {instanceID: 51676}
     - Class: 114
-      Script: {instanceID: 52354}
+      Script: {instanceID: 51726}
     - Class: 114
-      Script: {instanceID: 52852}
+      Script: {instanceID: 51846}
+    - Class: 114
+      Script: {instanceID: 52158}
+    - Class: 114
+      Script: {instanceID: 52394}
+    - Class: 114
+      Script: {instanceID: 52892}
+    - Class: 114
+      Script: {instanceID: 63846}
+    - Class: 114
+      Script: {instanceID: 97072}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -4042,6 +4106,12 @@ ScriptsOnlyBuild:
     className: VFXLightBinder
   - hash:
       serializedVersion: 2
+      Hash: bc70d735e9bacce37de9402c65535a5b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SteamManager
+  - hash:
+      serializedVersion: 2
       Hash: 049f6aa84fe1cb5359c9338e96d0b07e
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -5240,6 +5310,120 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Splines
     namespaceName: UnityEngine.Splines
     className: SplineExtrude
+  - hash:
+      serializedVersion: 2
+      Hash: 6b42fdffb6c9df9cd708efe26936781b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SteamNamePrinter
+  - hash:
+      serializedVersion: 2
+      Hash: 55a9f48d9c1f657ab0590998481aebab
+    assemblyName: IngameDebugConsole.Runtime
+    namespaceName: IngameDebugConsole
+    className: DebugLogItem
+  - hash:
+      serializedVersion: 2
+      Hash: 8611ff3cdc00e1a345ff1a7450423766
+    assemblyName: IngameDebugConsole.Runtime
+    namespaceName: IngameDebugConsole
+    className: DebugLogRecycledListView
+  - hash:
+      serializedVersion: 2
+      Hash: e751b5f4c4cfccbb64d2a3e48e3f479a
+    assemblyName: IngameDebugConsole.Runtime
+    namespaceName: IngameDebugConsole
+    className: EventSystemHandler
+  - hash:
+      serializedVersion: 2
+      Hash: ee09cdb1e65407a8534de58b159d3858
+    assemblyName: IngameDebugConsole.Runtime
+    namespaceName: IngameDebugConsole
+    className: DebugLogResizeListener
+  - hash:
+      serializedVersion: 2
+      Hash: 7de9b640073f8b824bdf146077f7f537
+    assemblyName: IngameDebugConsole.Runtime
+    namespaceName: IngameDebugConsole
+    className: DebugsOnScrollListener
+  - hash:
+      serializedVersion: 2
+      Hash: caea6c7a135e2bb2087d2239e3acb9bf
+    assemblyName: IngameDebugConsole.Runtime
+    namespaceName: IngameDebugConsole
+    className: InputFieldWarningsFixer
+  - hash:
+      serializedVersion: 2
+      Hash: a5cc26e480dac80500df3bc9cacb18c9
+    assemblyName: IngameDebugConsole.Runtime
+    namespaceName: IngameDebugConsole
+    className: DebugLogPopup
+  - hash:
+      serializedVersion: 2
+      Hash: c25fb85dc970959b3fe50d219a416d84
+    assemblyName: IngameDebugConsole.Runtime
+    namespaceName: IngameDebugConsole
+    className: DebugLogManager
+  - hash:
+      serializedVersion: 2
+      Hash: a6e10865511126605e1279f41036d019
+    assemblyName: Heathen.Steamworks.Examples
+    namespaceName: HeathenEngineering.DEMO
+    className: WorkshopDisplayItem
+  - hash:
+      serializedVersion: 2
+      Hash: 3ed32c56a08380bad1e9d357d2924a3e
+    assemblyName: Heathen.Steamworks.Examples
+    namespaceName: HeathenEngineering.DEMO
+    className: LobbyDemoButtonLogic
+  - hash:
+      serializedVersion: 2
+      Hash: e90e77115cca4c0a1983825f6fea6fa6
+    assemblyName: Heathen.Steamworks.Examples
+    namespaceName: HeathenEngineering.DEMO
+    className: WorkshopLogic
+  - hash:
+      serializedVersion: 2
+      Hash: 1eae01076aba73184d76577f2fb4406a
+    assemblyName: Heathen.Steamworks.Examples
+    namespaceName: HeathenEngineering.DEMO
+    className: LobbyMemberListLogic
+  - hash:
+      serializedVersion: 2
+      Hash: 847bdd99e069afed25c7fccf1569630e
+    assemblyName: Heathen.Steamworks.Examples
+    namespaceName: HeathenEngineering.DEMO
+    className: RemoteStorageLogic
+  - hash:
+      serializedVersion: 2
+      Hash: 9cb93077c5fc24caa64ae21305a4858e
+    assemblyName: Heathen.Steamworks.Examples
+    namespaceName: HeathenEngineering.DEMO
+    className: InputDemoLogic
+  - hash:
+      serializedVersion: 2
+      Hash: ca99881f4b43e23d433638f758ea6785
+    assemblyName: Heathen.Steamworks.Examples
+    namespaceName: HeathenEngineering.DEMO
+    className: OpenUrlButtonClick
+  - hash:
+      serializedVersion: 2
+      Hash: 454aa5f778984c207176167f7359ec48
+    assemblyName: Heathen.Steamworks.Examples
+    namespaceName: HeathenEngineering.DEMO
+    className: DemoDataDisplayRecord
+  - hash:
+      serializedVersion: 2
+      Hash: 250ec4e970644e03d5e17b580a622585
+    assemblyName: Heathen.Steamworks.Examples
+    namespaceName: HeathenEngineering.DEMO
+    className: LobbyChatUILogic
+  - hash:
+      serializedVersion: 2
+      Hash: a906aa0f818bb54c17bbb42d1ee4f518
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SteamLobby
   platform: 19
   scenePathNames:
   - Assets/Scenes/Start.unity

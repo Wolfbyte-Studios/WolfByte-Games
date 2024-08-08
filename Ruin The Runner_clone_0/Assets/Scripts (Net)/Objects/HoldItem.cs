@@ -48,8 +48,8 @@ public class HoldItem : NetworkBehaviour
         }
     }
 
-    [Command]
-    public void Trigger_Command()
+    
+    public void GrabDrop()
     {
         if (Time.time - lastToggleTime >= toggleCooldown)
         {
@@ -60,25 +60,14 @@ public class HoldItem : NetworkBehaviour
             isMoving = true;
             isGrabbing = !isGrabbing;
 
-            Trigger_ClientRpc(startPosition, startTime, journeyLength, isGrabbing);
+           
         }
     }
 
-    [ClientRpc]
-    private void Trigger_ClientRpc(Vector3 startPosition, float startTime, float journeyLength, bool isGrabbing)
-    {
-        this.startPosition = startPosition;
-        this.startTime = startTime;
-        this.journeyLength = journeyLength;
-        this.isGrabbing = isGrabbing;
-        isMoving = true;
+    
 
-        // Update kinematic state on the client
-        rb.isKinematic = isGrabbing;
-    }
-
-    [Command]
-    public void Throw_Command()
+    
+    public void ThrowLogic()
     {
         isGrabbing = false;
         Vector3 direction = (toucher.position - transform.position).normalized;
@@ -97,22 +86,11 @@ public class HoldItem : NetworkBehaviour
 
     public void Throw()
     {
-        if (isServer)
-        {
-            isGrabbing = false;
-            Vector3 direction = (toucher.position - transform.position).normalized;
-            rb.isKinematic = false;
-            rb.AddForce(direction * throwForce, ForceMode.Impulse);
-            Throw_ClientRpc(direction, throwForce);
-        }
-        else
-        {
-            Throw_Command();
-        }
+        NetworkUtils.RpcHandler(this, ThrowLogic);
     }
 
     public void Trigger()
     {
-        Trigger_Command();
+        NetworkUtils.RpcHandler(this, GrabDrop);
     }
 }

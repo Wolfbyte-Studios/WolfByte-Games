@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public static class TransformExtensions
 {
-    //Breadth-first search
+    // Breadth-first search
     public static Transform FindDeepChild(this Transform aParent, string aName)
     {
         Queue<Transform> queue = new Queue<Transform>();
@@ -19,6 +19,7 @@ public static class TransformExtensions
         }
         return null;
     }
+
     public static Transform FindDeepChildByTag(this Transform aParent, string tag)
     {
         Queue<Transform> queue = new Queue<Transform>();
@@ -33,6 +34,7 @@ public static class TransformExtensions
         }
         return null;
     }
+
     public static List<Transform> FindDeepChildrenByTag(this Transform aParent, string tag)
     {
         List<Transform> resultList = new List<Transform>();
@@ -54,7 +56,6 @@ public static class TransformExtensions
 
         return resultList;
     }
-
 
     public static List<Transform> FindDeepChildrenByType<T>(this Transform aParent) where T : Component
     {
@@ -78,9 +79,10 @@ public static class TransformExtensions
 
         return resultList;
     }
+
     public static Transform FindFirstChildOfType<T>(this Transform aParent) where T : Component
     {
-       return FindDeepChildrenByType<Transform>(aParent)[0];
+        return FindDeepChildrenByType<T>(aParent)[0];
     }
 
     public static bool HasComponentInRootParent<T>(this Transform transform) where T : Component
@@ -93,6 +95,7 @@ public static class TransformExtensions
 
         return component != null;
     }
+
     public static void LookAtWithStrength(this Transform self, Vector3 targetPosition, float strength)
     {
         // Compute the target rotation as if the transform is looking directly at the target position
@@ -101,19 +104,35 @@ public static class TransformExtensions
         // Interpolate between the current rotation and the target rotation by the strength factor
         self.rotation = Quaternion.Slerp(self.rotation, targetRotation, strength);
     }
-    /*
-	//Depth-first search
-	public static Transform FindDeepChild(this Transform aParent, string aName)
-	{
-		foreach(Transform child in aParent)
-		{
-			if(child.name == aName )
-				return child;
-			var result = child.FindDeepChild(aName);
-			if (result != null)
-				return result;
-		}
-		return null;
-	}
-	*/
+
+    public static List<T> GetAllComponentsInHierarchy<T>(this Transform target) where T : Component
+    {
+        List<T> components = new List<T>();
+
+        // Get components from the target itself
+        components.AddRange(target.GetComponents<T>());
+
+        // Get components from all parents
+        Transform currentParent = target.parent;
+        while (currentParent != null)
+        {
+            components.AddRange(currentParent.GetComponents<T>());
+            currentParent = currentParent.parent;
+        }
+
+        // Get components from all children
+        Queue<Transform> queue = new Queue<Transform>();
+        queue.Enqueue(target);
+        while (queue.Count > 0)
+        {
+            Transform current = queue.Dequeue();
+            components.AddRange(current.GetComponents<T>());
+            foreach (Transform child in current)
+            {
+                queue.Enqueue(child);
+            }
+        }
+
+        return components;
+    }
 }

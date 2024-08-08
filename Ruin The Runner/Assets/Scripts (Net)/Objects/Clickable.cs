@@ -1,4 +1,5 @@
 using Mirror;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -30,7 +31,7 @@ public class Clickable : NetworkBehaviour
 
     public Material NewMat;
     public Material OldMat;
-    public MeshRenderer meshRenderer;
+    public List<MeshRenderer> meshRenderers;
     public Color low;
     public Color med;
     public Color high;
@@ -38,9 +39,13 @@ public class Clickable : NetworkBehaviour
 
     void Start()
     {
-        meshRenderer = GetComponent<MeshRenderer>();
-        OldMat = meshRenderer.sharedMaterial;
-        NewMat = new Material(OldMat.shader);
+        meshRenderers = transform.GetAllComponentsInHierarchy<MeshRenderer>();
+        foreach( MeshRenderer mr in meshRenderers)
+        {
+            OldMat = mr.sharedMaterial;
+            NewMat = new Material(OldMat.shader);
+        }
+       
         timeFired = -100000;
     }
 
@@ -54,7 +59,11 @@ public class Clickable : NetworkBehaviour
             {
                 coolingDown();
             }
-            meshRenderer.material = OldMat;
+            foreach (MeshRenderer mr in meshRenderers)
+            {
+                mr.material = OldMat;
+            }
+            
             return;
         }
         else
@@ -64,7 +73,11 @@ public class Clickable : NetworkBehaviour
                 placeholder = OnCoolDown;
                 NetworkUtils.RpcHandler(this, TriggerPlaceholder);
             }
-            meshRenderer.material = NewMat;
+
+            foreach (MeshRenderer mr in meshRenderers)
+            {
+                mr.material = NewMat;
+            }
             applyColors(percentageFinished);
         }
     }

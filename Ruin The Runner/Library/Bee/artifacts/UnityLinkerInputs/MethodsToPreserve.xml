@@ -3,6 +3,22 @@
 		<type fullname="GameManager">
 			<method name="RotatePlayers"/>
 		</type>
+		<type fullname="HoldItem">
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+		</type>
 		<type fullname="LerpMovement">
 			<method name="Trigger"/>
 			<method name="Trigger"/>
@@ -51,8 +67,30 @@
 		<type fullname="UnityEngine.Behaviour">
 			<method name="set_enabled"/>
 			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+		</type>
+		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
 		</type>
 		<type fullname="UnityEngine.Renderer">
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
+			<method name="set_enabled"/>
 			<method name="set_enabled"/>
 			<method name="set_enabled"/>
 		</type>

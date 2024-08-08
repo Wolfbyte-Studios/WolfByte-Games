@@ -3,7 +3,12 @@ guid: 707d4ad2e5057a947a09cdeda62acd76
 SketchUpImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: d044275fd629c1c49bfa8082573033eb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 2

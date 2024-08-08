@@ -5,7 +5,9 @@ ScriptsOnlyBuild:
     - Clickable
     - DisableCamera
     - DontDestroy
+    - FitToWaterSurface
     - GameManager
+    - HoldItem
     - LerpMovement
     - LookAtRunner
     - PlayerIdentity
@@ -79,7 +81,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.VolumeProfile
     Unity.RenderPipelines.HighDefinition.Editor.dll:
     - UnityEditor.Rendering.HighDefinition.HDProjectSettings
-    - UnityEditor.Rendering.HighDefinition.HDRenderPipelineEditor
     - UnityEditor.Rendering.HighDefinition.HDUserSettings
     Unity.RenderPipelines.HighDefinition.Runtime.dll:
     - UnityEngine.Rendering.HighDefinition.Bloom
@@ -104,10 +105,14 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.HighDefinition.StaticLightingSky
     - UnityEngine.Rendering.HighDefinition.Tonemapping
     - UnityEngine.Rendering.HighDefinition.VisualEnvironment
+    - UnityEngine.Rendering.HighDefinition.WaterFoamGenerator
     - UnityEngine.Rendering.HighDefinition.WaterRendering
     - UnityEngine.Rendering.HighDefinition.WaterSurface
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.ShaderGraph.Editor.dll:
+    - UnityEditor.ShaderGraph.ShaderGraphProjectSettings
+    - UnityEditor.ShaderGraph.SubGraphAsset
     Unity.Splines.Editor.dll:
     - UnityEditor.Splines.SelectionContext
     Unity.TextMeshPro:
@@ -123,14 +128,6 @@ ScriptsOnlyBuild:
     - TMPro.TextMeshProUGUI
     Unity.VisualEffectGraph.Runtime.dll:
     - UnityEngine.VFX.VFXRuntimeResources
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.CommandLineTest.RunData
@@ -391,18 +388,78 @@ ScriptsOnlyBuild:
   - assembly: Mirror.Components
     fullTypeName: Mirror.Discovery.NetworkDiscoveryHUD
     methodName: OnDiscoveredServer
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Mirror.Components
     fullTypeName: Mirror.Discovery.NetworkDiscoveryHUD
     methodName: OnDiscoveredServer
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Renderer
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Renderer
+    methodName: set_enabled
   - assembly: Assembly-CSharp
     fullTypeName: LerpMovement
     methodName: Trigger
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Renderer
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Renderer
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Renderer
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Renderer
+    methodName: set_enabled
   - assembly: Assembly-CSharp
     fullTypeName: LerpMovement
     methodName: Trigger
   - assembly: Assembly-CSharp
     fullTypeName: SceneStuff
     methodName: ChooseScene
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Renderer
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Renderer
+    methodName: set_enabled
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.Behaviour
     methodName: set_enabled
@@ -425,24 +482,6 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
     methodName: OnAction
   - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
-    methodName: OnScrollbarClicked
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
-    methodName: OnScrollbarClicked
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
-    methodName: OnIncrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
-    methodName: OnDecrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
-    methodName: OnDecrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
-    methodName: OnIncrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
     methodName: OnDecrement
   - assembly: Unity.RenderPipelines.Core.Runtime
@@ -459,17 +498,75 @@ ScriptsOnlyBuild:
     methodName: OnDecrement
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField
+    methodName: OnIncrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
+    methodName: OnScrollbarClicked
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
+    methodName: OnScrollbarClicked
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
+    methodName: OnIncrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
+    methodName: OnDecrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
+    methodName: OnDecrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
     methodName: OnIncrement
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
     methodName: ResetDebugManager
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
   sceneClasses:
     Assets/Scenes/Levels/KingdomTest.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
@@ -487,42 +584,46 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
-    - Class: 81
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 35976}
+      Script: {instanceID: 1564}
     - Class: 114
-      Script: {instanceID: 36000}
+      Script: {instanceID: 35568}
     - Class: 114
-      Script: {instanceID: 37170}
+      Script: {instanceID: 35592}
     - Class: 114
-      Script: {instanceID: 37338}
+      Script: {instanceID: 36762}
     - Class: 114
-      Script: {instanceID: 38558}
+      Script: {instanceID: 36930}
     - Class: 114
-      Script: {instanceID: 38644}
+      Script: {instanceID: 38150}
     - Class: 114
-      Script: {instanceID: 39286}
+      Script: {instanceID: 38236}
     - Class: 114
-      Script: {instanceID: 40054}
+      Script: {instanceID: 38878}
     - Class: 114
-      Script: {instanceID: 42770}
+      Script: {instanceID: 39646}
     - Class: 114
-      Script: {instanceID: 44958}
+      Script: {instanceID: 42358}
     - Class: 114
-      Script: {instanceID: 45218}
+      Script: {instanceID: 44546}
     - Class: 114
-      Script: {instanceID: 46786}
+      Script: {instanceID: 44806}
     - Class: 114
-      Script: {instanceID: 47044}
+      Script: {instanceID: 46508}
     - Class: 114
-      Script: {instanceID: 49208}
+      Script: {instanceID: 46632}
     - Class: 114
-      Script: {instanceID: 51330}
+      Script: {instanceID: 47504}
+    - Class: 114
+      Script: {instanceID: 48798}
+    - Class: 114
+      Script: {instanceID: 50922}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -571,193 +672,193 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 35976}
+      Script: {instanceID: 35568}
     - Class: 114
-      Script: {instanceID: 36124}
+      Script: {instanceID: 35716}
     - Class: 114
-      Script: {instanceID: 36358}
+      Script: {instanceID: 35950}
     - Class: 114
-      Script: {instanceID: 36718}
+      Script: {instanceID: 36310}
     - Class: 114
-      Script: {instanceID: 36780}
+      Script: {instanceID: 36372}
     - Class: 114
-      Script: {instanceID: 37048}
+      Script: {instanceID: 36640}
     - Class: 114
-      Script: {instanceID: 37170}
+      Script: {instanceID: 36762}
     - Class: 114
-      Script: {instanceID: 37248}
+      Script: {instanceID: 36840}
     - Class: 114
-      Script: {instanceID: 37338}
+      Script: {instanceID: 36930}
     - Class: 114
-      Script: {instanceID: 37414}
+      Script: {instanceID: 37006}
     - Class: 114
-      Script: {instanceID: 37716}
+      Script: {instanceID: 37308}
     - Class: 114
-      Script: {instanceID: 37914}
+      Script: {instanceID: 37506}
     - Class: 114
-      Script: {instanceID: 38240}
+      Script: {instanceID: 37832}
     - Class: 114
-      Script: {instanceID: 38402}
+      Script: {instanceID: 37994}
     - Class: 114
-      Script: {instanceID: 38536}
+      Script: {instanceID: 38128}
     - Class: 114
-      Script: {instanceID: 38558}
+      Script: {instanceID: 38150}
     - Class: 114
-      Script: {instanceID: 38644}
+      Script: {instanceID: 38236}
     - Class: 114
-      Script: {instanceID: 39026}
+      Script: {instanceID: 38618}
     - Class: 114
-      Script: {instanceID: 39122}
+      Script: {instanceID: 38714}
     - Class: 114
-      Script: {instanceID: 39268}
+      Script: {instanceID: 38860}
     - Class: 114
-      Script: {instanceID: 39286}
+      Script: {instanceID: 38878}
     - Class: 114
-      Script: {instanceID: 39366}
+      Script: {instanceID: 38958}
     - Class: 114
-      Script: {instanceID: 39448}
+      Script: {instanceID: 39040}
     - Class: 114
-      Script: {instanceID: 39696}
+      Script: {instanceID: 39288}
     - Class: 114
-      Script: {instanceID: 39798}
+      Script: {instanceID: 39390}
     - Class: 114
-      Script: {instanceID: 39858}
+      Script: {instanceID: 39450}
     - Class: 114
-      Script: {instanceID: 39942}
+      Script: {instanceID: 39534}
     - Class: 114
-      Script: {instanceID: 39994}
+      Script: {instanceID: 39586}
     - Class: 114
-      Script: {instanceID: 40032}
+      Script: {instanceID: 39624}
     - Class: 114
-      Script: {instanceID: 40054}
+      Script: {instanceID: 39646}
     - Class: 114
-      Script: {instanceID: 40676}
+      Script: {instanceID: 40268}
     - Class: 114
-      Script: {instanceID: 41250}
+      Script: {instanceID: 40840}
     - Class: 114
-      Script: {instanceID: 41312}
+      Script: {instanceID: 40902}
     - Class: 114
-      Script: {instanceID: 41672}
+      Script: {instanceID: 41262}
     - Class: 114
-      Script: {instanceID: 41682}
+      Script: {instanceID: 41272}
     - Class: 114
-      Script: {instanceID: 42618}
+      Script: {instanceID: 42206}
     - Class: 114
-      Script: {instanceID: 42680}
+      Script: {instanceID: 42268}
     - Class: 114
-      Script: {instanceID: 42750}
+      Script: {instanceID: 42338}
     - Class: 114
-      Script: {instanceID: 42770}
+      Script: {instanceID: 42358}
     - Class: 114
-      Script: {instanceID: 42790}
+      Script: {instanceID: 42378}
     - Class: 114
-      Script: {instanceID: 43214}
+      Script: {instanceID: 42802}
     - Class: 114
-      Script: {instanceID: 43222}
+      Script: {instanceID: 42810}
     - Class: 114
-      Script: {instanceID: 43296}
+      Script: {instanceID: 42884}
     - Class: 114
-      Script: {instanceID: 43336}
+      Script: {instanceID: 42924}
     - Class: 114
-      Script: {instanceID: 43418}
+      Script: {instanceID: 43006}
     - Class: 114
-      Script: {instanceID: 43528}
+      Script: {instanceID: 43116}
     - Class: 114
-      Script: {instanceID: 43676}
+      Script: {instanceID: 43264}
+    - Class: 114
+      Script: {instanceID: 44130}
+    - Class: 114
+      Script: {instanceID: 44430}
     - Class: 114
       Script: {instanceID: 44542}
     - Class: 114
-      Script: {instanceID: 44842}
+      Script: {instanceID: 44546}
     - Class: 114
-      Script: {instanceID: 44954}
+      Script: {instanceID: 44578}
     - Class: 114
-      Script: {instanceID: 44958}
+      Script: {instanceID: 44580}
     - Class: 114
-      Script: {instanceID: 44990}
+      Script: {instanceID: 44806}
     - Class: 114
-      Script: {instanceID: 44992}
+      Script: {instanceID: 44868}
     - Class: 114
-      Script: {instanceID: 45218}
+      Script: {instanceID: 44932}
     - Class: 114
-      Script: {instanceID: 45280}
+      Script: {instanceID: 45090}
     - Class: 114
-      Script: {instanceID: 45344}
+      Script: {instanceID: 45350}
     - Class: 114
-      Script: {instanceID: 45502}
+      Script: {instanceID: 45676}
     - Class: 114
-      Script: {instanceID: 45762}
+      Script: {instanceID: 45856}
     - Class: 114
-      Script: {instanceID: 46088}
+      Script: {instanceID: 45904}
     - Class: 114
-      Script: {instanceID: 46268}
+      Script: {instanceID: 45972}
     - Class: 114
-      Script: {instanceID: 46316}
+      Script: {instanceID: 46010}
     - Class: 114
-      Script: {instanceID: 46384}
+      Script: {instanceID: 46374}
     - Class: 114
-      Script: {instanceID: 46422}
+      Script: {instanceID: 46632}
     - Class: 114
-      Script: {instanceID: 46786}
+      Script: {instanceID: 46850}
     - Class: 114
-      Script: {instanceID: 47044}
+      Script: {instanceID: 46874}
     - Class: 114
-      Script: {instanceID: 47262}
+      Script: {instanceID: 47388}
     - Class: 114
-      Script: {instanceID: 47286}
+      Script: {instanceID: 48246}
     - Class: 114
-      Script: {instanceID: 47800}
+      Script: {instanceID: 48798}
     - Class: 114
-      Script: {instanceID: 48656}
+      Script: {instanceID: 48836}
     - Class: 114
-      Script: {instanceID: 49208}
-    - Class: 114
-      Script: {instanceID: 49246}
+      Script: {instanceID: 48910}
     - Class: 114
       Script: {instanceID: 49320}
     - Class: 114
-      Script: {instanceID: 49730}
+      Script: {instanceID: 49434}
     - Class: 114
-      Script: {instanceID: 49844}
+      Script: {instanceID: 49584}
     - Class: 114
-      Script: {instanceID: 49994}
+      Script: {instanceID: 50198}
     - Class: 114
-      Script: {instanceID: 50608}
+      Script: {instanceID: 50330}
     - Class: 114
-      Script: {instanceID: 50740}
+      Script: {instanceID: 50338}
     - Class: 114
-      Script: {instanceID: 50748}
+      Script: {instanceID: 50490}
     - Class: 114
-      Script: {instanceID: 50900}
+      Script: {instanceID: 50648}
     - Class: 114
-      Script: {instanceID: 51056}
+      Script: {instanceID: 50678}
     - Class: 114
-      Script: {instanceID: 51086}
+      Script: {instanceID: 50804}
     - Class: 114
-      Script: {instanceID: 51212}
+      Script: {instanceID: 50846}
     - Class: 114
-      Script: {instanceID: 51254}
+      Script: {instanceID: 50852}
     - Class: 114
-      Script: {instanceID: 51260}
+      Script: {instanceID: 50922}
     - Class: 114
-      Script: {instanceID: 51330}
+      Script: {instanceID: 51078}
     - Class: 114
-      Script: {instanceID: 51486}
+      Script: {instanceID: 51398}
     - Class: 114
-      Script: {instanceID: 51806}
+      Script: {instanceID: 51450}
     - Class: 114
-      Script: {instanceID: 51858}
+      Script: {instanceID: 51572}
     - Class: 114
-      Script: {instanceID: 51980}
+      Script: {instanceID: 51886}
     - Class: 114
-      Script: {instanceID: 52294}
+      Script: {instanceID: 52122}
     - Class: 114
-      Script: {instanceID: 52530}
+      Script: {instanceID: 52460}
     - Class: 114
-      Script: {instanceID: 52868}
+      Script: {instanceID: 52486}
     - Class: 114
-      Script: {instanceID: 52894}
-    - Class: 114
-      Script: {instanceID: 53034}
+      Script: {instanceID: 52626}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -783,6 +884,12 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 995fcc80cfc20c74a729cb4189b801b4
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: HoldItem
   - hash:
       serializedVersion: 2
       Hash: 4031a3425e20192f004973326c2b30ac
@@ -2633,12 +2740,6 @@ ScriptsOnlyBuild:
     className: ClientCube
   - hash:
       serializedVersion: 2
-      Hash: 995fcc80cfc20c74a729cb4189b801b4
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: HoldItem
-  - hash:
-      serializedVersion: 2
       Hash: 5d33cf0cf3cc9cc1b5305186818d19ed
     assemblyName: Heathen.Core
     namespaceName: HeathenEngineering
@@ -3425,7 +3526,7 @@ ScriptsOnlyBuild:
     className: NetworkAnimator
   - hash:
       serializedVersion: 2
-      Hash: 2c3445d88d56b96cd2e16644d4f7e358
+      Hash: 68daab5790963f21b24a9cf2a9cc228b
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Clickable
@@ -4137,6 +4238,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Components
     namespaceName: Mirror.Experimental
     className: NetworkLerpRigidbody
+  - hash:
+      serializedVersion: 2
+      Hash: e32b6372647aefadef7782be1538a70d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: FitToWaterSurface
   - hash:
       serializedVersion: 2
       Hash: 8a53344512f969f0b1cfc2880b67cd59
@@ -5509,4 +5616,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Start.unity
   - Assets/Scenes/Levels/KingdomTest.unity
-  playerPath: C:/Users/user1/3d zeldaish/Builds/temp/Ruin The Runner.exe
+  playerPath: C:/Users/user1/3d zeldaish/Builds/temp2/Ruin The Runner.exe

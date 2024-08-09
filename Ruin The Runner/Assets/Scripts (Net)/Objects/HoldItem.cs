@@ -6,9 +6,9 @@ public class HoldItem : NetworkBehaviour
     public Vector3 targetLocation;
     public Transform holder;
     public Transform player;
-    public float speed = 15.0f; // Speed at which the item will move towards the target location
+    private float speed = 25.0f; // Speed at which the item will move towards the target location
     public float throwForce = 10.0f; // Amount of force to throw the object
-    public float threshold = 3;
+    private float threshold = 3;
     public bool isGrabbing = false;
     private bool isMoving = false;
     private Vector3 startPosition;
@@ -45,6 +45,7 @@ public class HoldItem : NetworkBehaviour
         else
         {
             rb.isKinematic = false;
+        
         }
     }
 

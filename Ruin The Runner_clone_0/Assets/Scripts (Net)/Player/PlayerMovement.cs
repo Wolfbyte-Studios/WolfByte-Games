@@ -109,7 +109,7 @@ public class PlayerMovement : NetworkBehaviour
             Debug.Log("Setup part 2 success");
             Mallet = this.gameObject.transform.FindDeepChild("mallet").gameObject;
             Mallet.SetActive(false);
-            playerCam.gameObject.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(0, 2, 0);
+            playerCam.gameObject.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(0, 1.75f, 0);
             CanFly = false;
             Fire = actions.FindAction("Fire");
             Fire.performed += Fire_performed;

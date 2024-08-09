@@ -112,7 +112,6 @@ ScriptsOnlyBuild:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.ShaderGraph.Editor.dll:
     - UnityEditor.ShaderGraph.ShaderGraphProjectSettings
-    - UnityEditor.ShaderGraph.SubGraphAsset
     Unity.Splines.Editor.dll:
     - UnityEditor.Splines.SelectionContext
     Unity.TextMeshPro:
@@ -128,6 +127,13 @@ ScriptsOnlyBuild:
     - TMPro.TextMeshProUGUI
     Unity.VisualEffectGraph.Runtime.dll:
     - UnityEngine.VFX.VFXRuntimeResources
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.CommandLineTest.RunData
@@ -404,6 +410,12 @@ ScriptsOnlyBuild:
     fullTypeName: Mirror.Discovery.NetworkDiscoveryHUD
     methodName: OnDiscoveredServer
   - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.Behaviour
     methodName: set_enabled
   - assembly: UnityEngine.CoreModule
@@ -448,18 +460,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: SceneStuff
     methodName: ChooseScene
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Behaviour
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Renderer
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Behaviour
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Renderer
-    methodName: set_enabled
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Throw
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.Behaviour
     methodName: set_enabled
@@ -520,27 +526,6 @@ ScriptsOnlyBuild:
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
     methodName: ResetDebugManager
-  - assembly: Assembly-CSharp
-    fullTypeName: HoldItem
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: HoldItem
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: HoldItem
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: HoldItem
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: HoldItem
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: HoldItem
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: HoldItem
-    methodName: Trigger
   - assembly: Assembly-CSharp
     fullTypeName: HoldItem
     methodName: Trigger
@@ -671,6 +656,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1564}
     - Class: 114
       Script: {instanceID: 35568}
     - Class: 114
@@ -886,7 +873,7 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 995fcc80cfc20c74a729cb4189b801b4
+      Hash: 005309ee5ccac15b98d6e120ac63104f
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: HoldItem
@@ -5612,8 +5599,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Splines
     namespaceName: UnityEngine.Splines
     className: SplineExtrude
+  - hash:
+      serializedVersion: 2
+      Hash: bf58e1532a52079bec0fc65a748b615f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: FillValueNumber
   platform: 19
   scenePathNames:
   - Assets/Scenes/Start.unity
   - Assets/Scenes/Levels/KingdomTest.unity
-  playerPath: C:/Users/user1/3d zeldaish/Builds/temp2/Ruin The Runner.exe
+  playerPath: C:/Users/user1/3d zeldaish/Builds/Ruin The Runner/Ruin The Runner.exe

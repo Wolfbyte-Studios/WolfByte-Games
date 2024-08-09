@@ -8,7 +8,7 @@ public class HoldItem : NetworkBehaviour
     public Transform player;
     public float speed = 15.0f; // Speed at which the item will move towards the target location
     public float throwForce = 10.0f; // Amount of force to throw the object
-    public float threshold;
+    public float threshold = 3;
     public bool isGrabbing = false;
     private bool isMoving = false;
     private Vector3 startPosition;
@@ -35,11 +35,11 @@ public class HoldItem : NetworkBehaviour
             rb.isKinematic = true;
             targetLocation = holder.position;
 
-            transform.position = Vector3.Lerp(transform.position, targetLocation, speed * Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, targetLocation, speed * Time.deltaTime / (rb.mass / 3));
 
-            if (Vector3.Distance(transform.position, targetLocation) < threshold)
+            if (Vector3.Distance(transform.position, targetLocation) > threshold)
             {
-                isMoving = false;
+                NetworkUtils.RpcHandler(this, GrabDrop);
             }
         }
         else
@@ -72,7 +72,7 @@ public class HoldItem : NetworkBehaviour
         isGrabbing = false;
         Vector3 direction = player.forward.normalized;
         rb.isKinematic = false;
-        rb.AddForce(direction * throwForce, ForceMode.Impulse);
+        rb.AddForce(direction * throwForce * rb.mass, ForceMode.Impulse);
 
         Throw_ClientRpc(direction, throwForce);
     }

@@ -90,11 +90,22 @@ public class PlayerMovement : NetworkBehaviour
         
         if (PlayerType == playertype.Sab)
         {
+            playerCam.gameObject.GetComponent<Camera>().cullingMask = -1;
+            // Get the current culling mask of the camera
+            int currentMask = playerCam.gameObject.GetComponent<Camera>().cullingMask;
+
+            // Calculate the new culling mask to exclude layer 11
+            int layer11Mask = 1 << 11;
+            int newMask = currentMask & ~layer11Mask;
+
+            // Set the new culling mask to the camera
+            playerCam.gameObject.GetComponent<Camera>().cullingMask = newMask;
             playerCam.gameObject.GetComponent<CinemachineFollow>().FollowOffset = Vector3.zero;
             CanFly = true;
         }
         else if (PlayerType == playertype.Runner)
         {
+            playerCam.gameObject.GetComponent<Camera>().cullingMask = -1;
             Debug.Log("Setup part 2 success");
             Mallet = this.gameObject.transform.FindDeepChild("mallet").gameObject;
             Mallet.SetActive(false);

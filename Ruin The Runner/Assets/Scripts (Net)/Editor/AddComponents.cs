@@ -66,6 +66,11 @@ public class AddComponentsBasedOnName
                 //mat.color = Color.red;
                 obj.tag = "Clickable";
                 obj.layer = 30;
+                var children = obj.transform.GetComponentsInChildren<Transform>(true);
+                foreach (Transform t in children)
+                {
+                    t.gameObject.layer = 30;
+                }
                 c.low = Color.red;
                 c.med = Color.yellow;
                 c.high = Color.green;

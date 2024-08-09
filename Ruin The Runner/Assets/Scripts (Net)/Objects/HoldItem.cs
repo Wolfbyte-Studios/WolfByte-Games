@@ -4,9 +4,9 @@ using Mirror;
 public class HoldItem : NetworkBehaviour
 {
     public Vector3 targetLocation;
-    private Transform player;
-    private Transform toucher;
-    public float speed = 1.0f; // Speed at which the item will move towards the target location
+    public Transform holder;
+    public Transform player;
+    public float speed = 15.0f; // Speed at which the item will move towards the target location
     public float throwForce = 10.0f; // Amount of force to throw the object
     public float threshold;
     public bool isGrabbing = false;
@@ -23,8 +23,8 @@ public class HoldItem : NetworkBehaviour
     public override void OnStartClient()
     {
         base.OnStartClient();
-        toucher = GameObject.Find("Toucher").transform;
-        player = toucher.parent.parent;
+        holder = GameObject.Find("Holder").transform;
+        player = holder.transform.parent;
         rb = GetComponent<Rigidbody>();
     }
 
@@ -33,7 +33,7 @@ public class HoldItem : NetworkBehaviour
         if (isGrabbing)
         {
             rb.isKinematic = true;
-            targetLocation = (player.position + toucher.position) / 2;
+            targetLocation = holder.position;
 
             transform.position = Vector3.Lerp(transform.position, targetLocation, speed * Time.deltaTime);
 
@@ -70,7 +70,7 @@ public class HoldItem : NetworkBehaviour
     public void ThrowLogic()
     {
         isGrabbing = false;
-        Vector3 direction = (toucher.position - transform.position).normalized;
+        Vector3 direction = player.forward.normalized;
         rb.isKinematic = false;
         rb.AddForce(direction * throwForce, ForceMode.Impulse);
 

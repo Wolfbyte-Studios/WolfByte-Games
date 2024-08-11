@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638587899601261624
-    m_Hash: 1464031090
+      ticks: 638589339337614504
+    m_Hash: 811617629
   m_LockFileStatus:
     m_FilePath: C:/Users/user1/3d zeldaish/Ruin The Runner/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638587899601266612
-    m_Hash: 576091589
+      ticks: 638589339864119142
+    m_Hash: 577348362
 m_EmbeddedPackageManifests:
   m_ManifestsStatus:
     C:/Users/user1/3d zeldaish/Ruin The Runner/Packages/com.heathen.steamworkscomplete/package.json:
@@ -23,7 +23,7 @@ m_EmbeddedPackageManifests:
       m_ContentTrackingEnabled: 1
       m_ModificationDate:
         serializedVersion: 2
-        ticks: 638587894744338050
+        ticks: 638574312770000000
       m_Hash: 1958984752
 m_LocalPackages:
   m_LocalFileStatus: []
@@ -1552,98 +1552,6 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 1.8.6
     minimumUnityVersion: 2019.3.0a1
-- packageId: com.unity.ugui@2.0.0
-  testable: 0
-  isDirectDependency: 1
-  version: 2.0.0
-  source: 2
-  resolvedPath: C:\Users\user1\3d zeldaish\Ruin The Runner\Library\PackageCache\com.unity.ugui
-  assetPath: Packages/com.unity.ugui
-  name: com.unity.ugui
-  displayName: Unity UI
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: 
-  description: "Unity UI is a set of tools for developing user interfaces for games
-    and applications. It is a GameObject-based UI system that uses Components and
-    the Game View to arrange, position, and style user interfaces. \u200B You cannot
-    use Unity UI to create or change user interfaces in the Unity Editor."
-  errors: []
-  versions:
-    all:
-    - 2.0.0
-    - 3.0.0-exp.1
-    - 3.0.0-exp.3
-    - 3.0.0-exp.4
-    compatible:
-    - 2.0.0
-    - 3.0.0-exp.1
-    - 3.0.0-exp.3
-    - 3.0.0-exp.4
-    recommended: 2.0.0
-    deprecated: []
-  dependencies:
-  - name: com.unity.modules.ui
-    version: 1.0.0
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.modules.ui
-    version: 1.0.0
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  keywords:
-  - UI
-  - ugui
-  - Unity UI
-  - Canvas
-  - TextMeshPro
-  - TextMesh Pro
-  - Text
-  - TMP
-  - SDF
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 0
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
-  hasRepository: 0
-  repository:
-    type: 
-    url: 
-    revision: 
-    path: 
-  unityLifecycle:
-    version: 2.0.0
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
-  fingerprint: 2f44a4a5aff4784510491db292fb1b2d6e9da5e2
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 2.0.0
-    minimumUnityVersion: 2019.2.0a1
 - packageId: com.unity.visualscripting@1.9.4
   testable: 0
   isDirectDependency: 1
@@ -4244,6 +4152,98 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.0
     minimumUnityVersion: 
+- packageId: com.unity.ugui@2.0.0
+  testable: 0
+  isDirectDependency: 0
+  version: 2.0.0
+  source: 2
+  resolvedPath: C:\Users\user1\3d zeldaish\Ruin The Runner\Library\PackageCache\com.unity.ugui
+  assetPath: Packages/com.unity.ugui
+  name: com.unity.ugui
+  displayName: Unity UI
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: "Unity UI is a set of tools for developing user interfaces for games
+    and applications. It is a GameObject-based UI system that uses Components and
+    the Game View to arrange, position, and style user interfaces. \u200B You cannot
+    use Unity UI to create or change user interfaces in the Unity Editor."
+  errors: []
+  versions:
+    all:
+    - 2.0.0
+    - 3.0.0-exp.1
+    - 3.0.0-exp.3
+    - 3.0.0-exp.4
+    compatible:
+    - 2.0.0
+    - 3.0.0-exp.1
+    - 3.0.0-exp.3
+    - 3.0.0-exp.4
+    recommended: 2.0.0
+    deprecated: []
+  dependencies:
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  keywords:
+  - UI
+  - ugui
+  - Unity UI
+  - Canvas
+  - TextMeshPro
+  - TextMesh Pro
+  - Text
+  - TMP
+  - SDF
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 2.0.0
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: 
+  assetStore:
+    productId: 
+  fingerprint: 2f44a4a5aff4784510491db292fb1b2d6e9da5e2
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 2.0.0
+    minimumUnityVersion: 2019.2.0a1
 - packageId: com.unity.render-pipelines.core@17.0.3
   testable: 0
   isDirectDependency: 0

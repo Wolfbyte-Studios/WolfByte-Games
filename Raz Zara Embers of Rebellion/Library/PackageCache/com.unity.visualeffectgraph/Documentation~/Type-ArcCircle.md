@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:da13065c9b7205f326eee45f18bf9d946bc005acccecd8cf4ea600d7fb287f6a
-size 488
+# ArcCircle
+
+A solid-arc of a circle, defined by an angle and a [Circle](Type-Circle.md). This is useful if you only want to use part of the circle, a semi-circle for example.
+
+## Properties
+
+| **Property** | **Description**                                        |
+| ------------ | ------------------------------------------------------ |
+| **Circle**   | The [Circle](Type-Circle.md) to take the segment from. |
+| **Arc**      | The angle, in radians, of the circle segment.          |

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d7d59066b549841325219ededaa0117e5c4484346f9afa708c5791285378c675
-size 805
+using UnityEngine;
+using UnityEngine.Rendering;
+
+namespace UnityEditor.Rendering
+{
+    [CustomEditor(typeof(Projector))]
+    [SupportedOnRenderPipeline]
+    [CanEditMultipleObjects]
+    class ProjectorEditor : Editor
+    {
+        static readonly GUIContent k_Message = EditorGUIUtility.TrTextContent("The active render pipeline does not support the Projector component. If using HDRP, use the Decal Projector component instead.");
+
+        public override void OnInspectorGUI()
+        {
+            EditorGUILayout.HelpBox(k_Message.text, MessageType.Warning);
+
+            using (new EditorGUI.DisabledScope(true))
+            {
+                // Projector doesn't have a CustomEditor, so we can just draw the default inspector.
+                DrawDefaultInspector();
+            }
+        }
+    }
+}

@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:80f72bdd15ded2a5173339cf9faeec3d9de77002a1a95714cab60d06b976c3b8
-size 973
+using UnityEngine;
+
+namespace UnityEditor.VFX.Operator
+{
+    [VFXHelpURL("Operator-SampleCurve")]
+    [VFXInfo(category = "Sampling")]
+    class SampleCurve : VFXOperator
+    {
+        override public string name { get { return "Sample Curve"; } }
+
+        public class InputProperties
+        {
+            [Tooltip("Sets the curve to sample from.")]
+            public AnimationCurve curve = VFXResources.defaultResources.animationCurve;
+            [Tooltip("Sets the time along the curve to take a sample from.")]
+            public float time = 0.0f;
+        }
+
+        public class OutputProperties
+        {
+            [Tooltip("Outputs the sampled value from the curve at the specified time.")]
+            public float s = 0;
+        }
+
+        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
+        {
+            return new[] { new VFXExpressionSampleCurve(inputExpression[0], inputExpression[1]) };
+        }
+    }
+}

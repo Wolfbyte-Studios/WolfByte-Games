@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:91e97ce43982e7a9fd8600487d1f0f76c521fae2d79192ea3a22636342ac2575
-size 357
+<tr>
+<td>- <strong>Postpass Threshold</strong></td>
+<td></td>
+<td></td>
+<td>
+
+The alpha value limit HDRP uses for the transparent depth postpass. This works in the same way as the main <strong>Threshold</strong> property described above.<br />This property only appears when you enable the <strong>Transparent Depth Postpass</strong> checkbox.
+
+</td>
+</tr>

@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3be24ae132918f84e9cc42c6b9d6865715a1107d3d335b3ff5a49dd1eb4806f4
-size 503
+//
+// This file was automatically generated. Please don't edit by hand. Execute Editor command [ Edit > Rendering > Generate Shader Includes ] instead
+//
+
+#ifndef BILATERALUPSAMPLEDEF_CS_HLSL
+#define BILATERALUPSAMPLEDEF_CS_HLSL
+// Generated from UnityEngine.Rendering.HighDefinition.ShaderVariablesBilateralUpsample
+// PackingRules = Exact
+CBUFFER_START(ShaderVariablesBilateralUpsample)
+    float4 _HalfScreenSize;
+    float4 _DistanceBasedWeights[12];
+    float4 _TapOffsets[8];
+CBUFFER_END
+
+
+#endif

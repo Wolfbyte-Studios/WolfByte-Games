@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ac983119e819903592f059618d5b918fc5ef6ff9ce1c6e80924e6e8dc82cef59
-size 872
+using UnityEngine;
+
+namespace UnityEditor.VFX.Operator
+{
+    //[VFXHelpURL("Operator-TransposeMatrix")]
+    [VFXInfo(name = "Transpose (Matrix)", category = "Math/Geometry")]
+    class TransposeMatrix : VFXOperator
+    {
+        public class InputProperties
+        {
+            [Tooltip("Sets the Matrix4x4 to be transposed.")]
+            public Matrix4x4 matrix = Matrix4x4.identity;
+        }
+
+        public class OutputProperties
+        {
+            [Tooltip("Outputs the transposed Matrix4x4.")]
+            public Matrix4x4 o = Matrix4x4.identity;
+        }
+
+        override public string name { get { return "Transpose (Matrix)"; } }
+
+        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
+        {
+            return new VFXExpression[] { new VFXExpressionTransposeMatrix(inputExpression[0]) };
+        }
+    }
+}

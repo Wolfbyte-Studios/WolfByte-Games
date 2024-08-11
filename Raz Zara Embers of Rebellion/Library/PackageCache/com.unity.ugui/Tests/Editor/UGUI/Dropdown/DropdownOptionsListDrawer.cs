@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e6245594909438eb8a06d0c72c0c310999003a3a1b339b383ac8178d9f08a68c
-size 1054
+using System.Collections;
+using UnityEngine;
+using UnityEngine.TestTools;
+using UnityEngine.UI;
+using UnityEditor;
+using NUnit.Framework;
+
+public class DropdownOptionsListDrawer : WrapperWindowFixture
+{
+    public class Fixture : MonoBehaviour
+    {
+        public Dropdown.OptionDataList options = new Dropdown.OptionDataList();
+    }
+
+    [UnityTest]
+    [Ignore("UUM-35053")]
+    public IEnumerator PropertyDrawerDoesNotThrowExceptionWhenObjectIsDisposed()
+    {
+        var go = new GameObject();
+        var component = go.AddComponent<Fixture>();
+        var so = new SerializedObject(component);
+        var win = GetWindow((wnd) => {
+            Assert.DoesNotThrow(() => EditorGUILayout.PropertyField(so.FindProperty("options")));
+            so.Dispose();
+            so = new SerializedObject(component);
+            Assert.DoesNotThrow(() => EditorGUILayout.PropertyField(so.FindProperty("options")));
+            return true;
+        });
+
+        while (win.TestCompleted == false)
+        {
+            yield return null;
+        }
+    }
+}

@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:97db9d6d7b316efa52a8a557e55fc5f8cf6d77e82bdf8745b2045562505d8144
-size 1460
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+namespace UnityEditor.VFX.Operator
+{
+    [VFXHelpURL("Operator-InverseLerp")]
+    [VFXInfo(category = "Math/Arithmetic", synonyms = new []{ "linear", "interpolation" })]
+    class InverseLerp : VFXOperatorNumericUnified, IVFXOperatorNumericUnifiedConstrained
+    {
+        public class InputProperties
+        {
+            [Tooltip("The start value.")]
+            public float x = 0.0f;
+            [Tooltip("The end value.")]
+            public float y = 1.0f;
+            [Tooltip("Linear parameter produced by interpolation between x and y.")]
+            public float s = 0.5f;
+        }
+
+        protected override sealed string operatorName { get { return "Inverse Lerp"; } }
+
+        public IEnumerable<int> slotIndicesThatMustHaveSameType
+        {
+            get
+            {
+                return Enumerable.Range(0, 3);
+            }
+        }
+        public IEnumerable<int> slotIndicesThatCanBeScalar
+        {
+            get
+            {
+                yield return 2;
+            }
+        }
+
+        protected override sealed ValidTypeRule typeFilter { get { return ValidTypeRule.allowEverythingExceptInteger; } }
+
+        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
+        {
+            return new[] { VFXOperatorUtility.InverseLerp(inputExpression[0], inputExpression[1], inputExpression[2]) };
+        }
+    }
+}

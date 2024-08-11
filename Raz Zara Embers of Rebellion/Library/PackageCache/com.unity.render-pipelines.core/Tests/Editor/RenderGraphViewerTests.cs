@@ -1,3 +1,47 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:889fe44e4920e0b3d57faf8d008c747be3b229adb8c4ab4cd7ba0db371f410b5
-size 2221
+﻿using System.IO;
+using System.Runtime.CompilerServices;
+using NUnit.Framework;
+using UnityEngine;
+
+namespace UnityEditor.Rendering.Tests
+{
+    class RenderGraphViewerTests
+    {
+        const string kExpectedCurrentFilePath = "Packages/com.unity.render-pipelines.core/Tests/Editor/RenderGraphViewerTests.cs";
+
+        static TestCaseData[] s_TestsCaseDatas =
+        {
+            new (@"Packages/com.unity.render-pipelines.core/Tests/Editor/RenderGraphViewerTests.cs"),
+            new (@"./Packages/com.unity.render-pipelines.core/Tests/Editor/RenderGraphViewerTests.cs"),
+            new (@"Packages\com.unity.render-pipelines.core\Tests\Editor\RenderGraphViewerTests.cs"),
+            new (@".\Packages\com.unity.render-pipelines.core\Tests\Editor\RenderGraphViewerTests.cs"),
+            new (@"Library/PackageCache/com.unity.render-pipelines.core/Tests/Editor/RenderGraphViewerTests.cs"),
+            new (@"./Library/PackageCache/com.unity.render-pipelines.core/Tests/Editor/RenderGraphViewerTests.cs"),
+            new (@"Library\PackageCache\com.unity.render-pipelines.core\Tests\Editor\RenderGraphViewerTests.cs"),
+            new (@".\Library\PackageCache\com.unity.render-pipelines.core\Tests\Editor\RenderGraphViewerTests.cs")
+        };
+
+        [Test, TestCaseSource(nameof(s_TestsCaseDatas))]
+        public void ScriptAbsolutePathToRelative(string absolutePath)
+        {
+            Assert.AreEqual(kExpectedCurrentFilePath, RenderGraphViewer.ScriptAbsolutePathToRelative(absolutePath));
+        }
+
+        [Test]
+        public void CallerFilePathToRelative()
+        {
+            var absolutePath = GetCallerFilePath();
+            Assert.AreEqual(kExpectedCurrentFilePath, RenderGraphViewer.ScriptAbsolutePathToRelative(absolutePath));
+        }
+
+        string GetCallerFilePath([CallerFilePath] string filePath = null) => filePath;
+
+        [Test]
+        public void ProjectAssetsFilePathToRelative()
+        {
+            const string kFileInsideProject = "File.cs";
+            var absolutePath = Path.Join(Application.dataPath, kFileInsideProject);
+            Assert.AreEqual($"Assets/{kFileInsideProject}", RenderGraphViewer.ScriptAbsolutePathToRelative(absolutePath));
+        }
+    }
+}

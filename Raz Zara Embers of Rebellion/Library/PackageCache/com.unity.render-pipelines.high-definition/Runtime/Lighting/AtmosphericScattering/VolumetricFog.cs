@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b2ed319faa1943894b0140a3d5aaa9a1adf949b0b9b509f76fae36943d4237e8
-size 1008
+using System;
+
+namespace UnityEngine.Rendering.HighDefinition
+{
+    // Deprecated, kept for migration
+    [Obsolete()]
+    [SupportedOnRenderPipeline(typeof(HDRenderPipelineAsset))]
+    class VolumetricFog : AtmosphericScattering
+    {
+        public ColorParameter albedo = new ColorParameter(Color.white);
+        public MinFloatParameter meanFreePath = new MinFloatParameter(1000000.0f, 1.0f);
+        public FloatParameter baseHeight = new FloatParameter(0.0f);
+        public FloatParameter maximumHeight = new FloatParameter(10.0f);
+        public ClampedFloatParameter anisotropy = new ClampedFloatParameter(0.0f, -1.0f, 1.0f);
+        public ClampedFloatParameter globalLightProbeDimmer = new ClampedFloatParameter(1.0f, 0.0f, 1.0f);
+        public BoolParameter enableDistantFog = new BoolParameter(false);
+
+        internal override void PushShaderParameters(HDCamera hdCamera, CommandBuffer cmd)
+        {
+        }
+
+        VolumetricFog() => displayName = "Volumetric Fog (Deprecated)";
+    }
+}

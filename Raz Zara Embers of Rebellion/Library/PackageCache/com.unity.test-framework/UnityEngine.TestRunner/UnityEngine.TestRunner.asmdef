@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c3c61b68e2d0edbcf154335d456653d62e76258a97ad0cc8d1b485202f90e126
-size 573
+{
+    "name": "UnityEngine.TestRunner",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_TESTS_FRAMEWORK"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.test-framework",
+            "expression": "",
+            "define": "UNITY_TESTS_FRAMEWORK"
+        }
+    ],
+    "noEngineReferences": false
+}

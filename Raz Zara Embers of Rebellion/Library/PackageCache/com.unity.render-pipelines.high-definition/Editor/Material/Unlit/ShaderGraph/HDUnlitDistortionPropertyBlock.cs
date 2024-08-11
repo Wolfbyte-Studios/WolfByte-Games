@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:789b8f1fb04f6140466a42dec6a4e3185b83761f43fb55b9331dfd447d66687e
-size 707
+// We share the name of the properties in the UI to avoid duplication
+using static UnityEditor.Rendering.HighDefinition.DistortionUIBlock.Styles;
+
+namespace UnityEditor.Rendering.HighDefinition.ShaderGraph
+{
+    class HDUnlitDistortionPropertyBlock : DistortionPropertyBlock
+    {
+        HDUnlitData unlitData;
+
+        public HDUnlitDistortionPropertyBlock(HDUnlitData unlitData) => this.unlitData = unlitData;
+
+        protected override void CreatePropertyGUI()
+        {
+            base.CreatePropertyGUI();
+            if (builtinData.distortion)
+                AddProperty(distortionOnlyText, () => unlitData.distortionOnly, (newValue) => unlitData.distortionOnly = newValue, 1);
+        }
+    }
+}

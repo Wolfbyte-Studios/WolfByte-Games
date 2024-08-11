@@ -1,3 +1,40 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e3aaf3343f6c59f844b6502913e6feab909c3af71f21eaf90be09e153e0adea6
-size 1815
+using System;
+using UnityEditor.ShaderGraph;
+using UnityEngine.Rendering;
+
+namespace UnityEditor.Rendering.HighDefinition.ShaderGraph
+{
+    static class CreateHairShaderGraph
+    {
+        [MenuItem("Assets/Create/Shader Graph/HDRP/Hair Shader Graph", priority = CoreUtils.Priorities.assetsCreateShaderMenuPriority + 4)]
+        public static void CreateHairGraph()
+        {
+            var target = (HDTarget)Activator.CreateInstance(typeof(HDTarget));
+            target.TrySetActiveSubTarget(typeof(HairSubTarget));
+
+            var blockDescriptors = new[]
+            {
+                BlockFields.VertexDescription.Position,
+                BlockFields.VertexDescription.Normal,
+                BlockFields.VertexDescription.Tangent,
+                BlockFields.SurfaceDescription.BaseColor,
+                BlockFields.SurfaceDescription.NormalTS,
+                HDBlockFields.SurfaceDescription.BentNormal,
+                HDBlockFields.SurfaceDescription.HairStrandDirection,
+                HDBlockFields.SurfaceDescription.Transmittance,
+                HDBlockFields.SurfaceDescription.RimTransmissionIntensity,
+                BlockFields.SurfaceDescription.Smoothness,
+                BlockFields.SurfaceDescription.Occlusion,
+                BlockFields.SurfaceDescription.Alpha,
+                HDBlockFields.SurfaceDescription.SpecularTint,
+                HDBlockFields.SurfaceDescription.SpecularShift,
+                HDBlockFields.SurfaceDescription.SecondarySpecularTint,
+                HDBlockFields.SurfaceDescription.SecondarySmoothness,
+                HDBlockFields.SurfaceDescription.SecondarySpecularShift,
+                BlockFields.SurfaceDescription.Emission,
+            };
+
+            GraphUtil.CreateNewGraphWithOutputs(new[] { target }, blockDescriptors);
+        }
+    }
+}

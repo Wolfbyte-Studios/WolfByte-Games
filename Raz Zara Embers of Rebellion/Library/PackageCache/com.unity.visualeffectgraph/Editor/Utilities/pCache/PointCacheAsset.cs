@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3491092109b7f5cb2334b52ba3a0e5ca6488268446052e50a2aa005fc6e3bb64
-size 256
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace UnityEditor.Experimental.VFX.Utility
+{
+    class PointCacheAsset : ScriptableObject
+    {
+        public int PointCount;
+        public Texture2D[] surfaces;
+    }
+}

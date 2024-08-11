@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:94aa9f4c42ac1da0c1b34d34f80f6779d45f2b14836569c386ba46bf54b19d37
-size 339
+# Additional shadow detail
+
+Create and control precise shadows for small details in geometry.
+
+| Page | Description |
+|-|-|
+|[Use contact shadows](Override-Contact-Shadows.md)|Create precise shadows based on small geometric details.|
+|[Use micro shadows](Override-Micro-Shadows.md)|Create precise shadows based on details in a material.|
+

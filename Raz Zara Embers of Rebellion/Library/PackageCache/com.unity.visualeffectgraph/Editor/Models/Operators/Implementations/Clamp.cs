@@ -1,3 +1,44 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:43dd4c3ed825f799174f157a0283e48ba89744e1f92b62d4737562ec13069881
-size 1301
+using System.Linq;
+using UnityEngine;
+using System.Collections.Generic;
+
+namespace UnityEditor.VFX.Operator
+{
+    [VFXHelpURL("Operator-Clamp")]
+    [VFXInfo(category = "Math/Clamp")]
+    class Clamp : VFXOperatorNumericUnified, IVFXOperatorNumericUnifiedConstrained
+    {
+        public class InputProperties
+        {
+            [Tooltip("The value to be clamped.")]
+            public float input = 0.0f;
+            [Tooltip("The lower bound to clamp the input to.")]
+            public float min = 0.0f;
+            [Tooltip("The upper bound to clamp the input to.")]
+            public float max = 1.0f;
+        }
+
+        protected override sealed string operatorName { get { return "Clamp"; } }
+
+        public IEnumerable<int> slotIndicesThatMustHaveSameType
+        {
+            get
+            {
+                return Enumerable.Range(0, 3);
+            }
+        }
+
+        public IEnumerable<int> slotIndicesThatCanBeScalar
+        {
+            get
+            {
+                return Enumerable.Range(1, 2);
+            }
+        }
+
+        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
+        {
+            return new[] { VFXOperatorUtility.Clamp(inputExpression[0], inputExpression[1], inputExpression[2], false) };
+        }
+    }
+}

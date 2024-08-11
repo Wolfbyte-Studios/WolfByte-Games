@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d51d8b2a602b577326d359b3a75fd226b0ccbbecf1f52f36807d365bc293fb0e
-size 895
+using UnityEngine;
+
+namespace UnityEditor.Rendering
+{
+    public static partial class CameraUI
+    {
+        public static partial class Environment
+        {
+            /// <summary>
+            /// Styles
+            /// </summary>
+            public static class Styles
+            {
+                /// <summary>
+                /// Header of the section
+                /// </summary>
+                public static readonly GUIContent header = EditorGUIUtility.TrTextContent("Environment", "These settings control what the camera background looks like.");
+
+                /// <summary>
+                /// Volume layer mask content
+                /// </summary>
+                public static readonly GUIContent volumeLayerMask = EditorGUIUtility.TrTextContent("Volume Mask", "This camera will only be affected by volumes in the selected scene-layers.");
+            }
+        }
+    }
+}

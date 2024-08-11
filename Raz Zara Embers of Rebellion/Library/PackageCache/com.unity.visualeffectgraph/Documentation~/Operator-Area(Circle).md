@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8446377032f6e3da9891da0fd73979e8bd50772a34e4e8d0fe1b3987833bead3
-size 653
+# Area (Circle)
+
+Menu Path : **Operator > Math > Geometry > Area (Circle)**
+
+The **Area (Circle)** Operator calculates the area of a circle. This is equal to **π r<sup>2</sup>**.
+
+## Operator properties
+
+| **Input**  | **Type** | **Description**                                  |
+| ---------- | -------- | ------------------------------------------------ |
+| **Circle** | Circle   | The circle this Operator calculates the area of. |
+
+| **Output** | **Type** | **Description**                             |
+| ---------- | -------- | ------------------------------------------- |
+| **Area**   | float    | The area of the circle based on its radius. |

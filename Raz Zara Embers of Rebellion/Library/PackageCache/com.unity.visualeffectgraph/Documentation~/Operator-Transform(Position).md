@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9499a9673f1a29af05bac4ad54d0acb2d314f34c465c0068b87c011e2f1f33c0
-size 923
+# Transform (Position)
+
+Menu Path : **Operator > Math > Geometry > Transform (Position)**
+
+The **Transform (Position)** Operator applies a transformation to a position to offset, rotate, or scale it.
+
+For example, this is useful if you want to spawn particles in a circle and then rotate the circle:
+
+![](Images/Operator-Transform(Position)Example.png)
+
+## Operator properties
+
+| **Input**     | **Type**  | **Description**                                      |
+| ------------- | --------- | ---------------------------------------------------- |
+| **Transform** | Transform | The Transform this Operator applies to the Position. |
+| **Position**  | Position  | The Position this Operator transforms.               |
+
+| **Output** | **Type** | **Description**                         |
+| ---------- | -------- | --------------------------------------- |
+| **pos**    | Position | The result of the transformed Position. |

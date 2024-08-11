@@ -1,3 +1,43 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b48137988f27f476a02bcfde4adc6172de5cfb83b969d88b9c7323ae284ace33
-size 1087
+using System;
+
+namespace UnityEditor.TestTools.TestRunner.CommandLineTest
+{
+    internal class RunData : ScriptableSingleton<RunData>, IRunData
+    {
+        private bool isRunning;
+        private ExecutionSettings executionSettings;
+        private string runId;
+        private TestRunState runState;
+        private string runErrorMessage;
+
+        public bool IsRunning
+        {
+            get { return isRunning; }
+            set { isRunning = value; }
+        }
+
+        public ExecutionSettings ExecutionSettings
+        {
+            get { return executionSettings; }
+            set { executionSettings = value; }
+        }
+
+        public string RunId
+        {
+            get { return runId; }
+            set { runId = value; }
+        }
+
+        public TestRunState RunState
+        {
+            get { return runState; }
+            set { runState = value; }
+        }
+
+        public string RunErrorMessage
+        {
+            get { return runErrorMessage; }
+            set { runErrorMessage = value; }
+        }
+    }
+}

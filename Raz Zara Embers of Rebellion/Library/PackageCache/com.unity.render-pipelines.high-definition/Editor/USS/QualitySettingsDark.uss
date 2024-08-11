@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bad7f1fcb31eae976ab122fa7ba7a126119fdff7b5ffb1d28b5e71acd087ab49
-size 349
+.unity-list-view .odd {
+    background-color: #3f3f3f;
+}
+
+/* We need to override the selected value in this case */
+.unity-list-view .odd:selected {
+    background-color: #3e5f96;
+}
+
+/* ========= Quality Settings Panel =========  */
+
+.unity-quality-header-list {
+    border-color: #1F1F1F;
+}
+
+.unity-quality-entry-tag {
+    border-color: #1F1F1F;
+}

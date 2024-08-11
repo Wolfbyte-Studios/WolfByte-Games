@@ -1,3 +1,3 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fa7d8af718024511e1efeedc9b538f02b00058373bb70a2afd497855ed01684a
-size 357
+This is the documentation for the Scripting APIs of this package.
+
+**Note**: The High Definition Render Pipeline (HDRP) is built on the Scriptable Render Pipeline (SRP) and uses some class types that you can only find in the [SRP Scripting API](https://docs.unity3d.com/Packages/com.unity.render-pipelines.core@latest/index.html?subfolder=/api/index.html).

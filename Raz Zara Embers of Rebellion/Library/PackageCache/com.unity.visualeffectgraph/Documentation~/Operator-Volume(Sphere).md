@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e2a8eb37f2665416a7d7bc1349c950568f828cee255d6df3ac4e20f986ab6b10
-size 652
+# Volume (Sphere)
+
+Menu Path : **Operator > Math > Geometry > Volume (Sphere)**
+
+The **Volume (Sphere)** Operator calculates the volume of a sphere. This is equal to **4/3 π r<sup>2</sup> h**.
+
+## Operator properties
+
+| **Input**  | **Type** | **Description**                                    |
+| ---------- | -------- | -------------------------------------------------- |
+| **Sphere** | Sphere   | The Sphere this Operator calculates the volume of. |
+
+| **Output** | **Type** | **Description**                      |
+| ---------- | -------- | ------------------------------------ |
+| **Volume** | Float    | The calculated volume of the Sphere. |

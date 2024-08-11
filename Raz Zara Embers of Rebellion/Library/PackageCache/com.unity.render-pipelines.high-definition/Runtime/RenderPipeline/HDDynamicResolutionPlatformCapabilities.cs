@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ff2f7d5b4504129dd14ffc9555c3be22666a5e4de34b48aab3db530af413eba4
-size 951
+using UnityEngine;
+
+namespace UnityEngine.Rendering.HighDefinition
+{
+    /// <summary>
+    /// Contains utility methods for HDRP to query DRS Capabilities.
+    /// </summary>
+    public static class HDDynamicResolutionPlatformCapabilities
+    {
+        /// <summary>
+        /// True if the render pipeline detected DLSS capable platform. False otherwise.
+        /// </summary>
+        public static bool DLSSDetected { get { return m_DLSSDetected; } }
+
+        /// <summary>
+        /// True if the render pipeline detected FSR2 capable platform. False otherwise.
+        /// </summary>
+        public static bool FSR2Detected { get { return m_FSR2Detected; } }
+
+        private static bool m_DLSSDetected = false;
+        private static bool m_FSR2Detected = false;
+
+        internal static void SetupFeatures()
+        {
+            m_DLSSDetected = DLSSPass.SetupFeature();
+            m_FSR2Detected = FSR2Pass.SetupFeature();
+        }
+    }
+}

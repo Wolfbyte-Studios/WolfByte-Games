@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2da828408c31be397c61376115487352ca25bb59d4e8ed46d2dfe8ccfb655634
-size 284
+# Optimization
+
+Optimize the High Definition Render Pipeline (HDRP) to improve the performance of your project.
+
+|Page|Description|
+|-|-|
+|[Reduce rendering work on the CPU](reduce-rendering-work-on-cpu.md)|Use the GPU Resident Drawer or GPU occlusion culling to speed up rendering.|

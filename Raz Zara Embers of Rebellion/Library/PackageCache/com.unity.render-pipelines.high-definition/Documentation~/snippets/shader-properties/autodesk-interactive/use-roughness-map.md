@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8b5e7eb02caef9527ef44a1937d9847267b69c9f53795eab94f0371abbf83a90
-size 361
+<tr>
+<td><strong>UseRoughnessMap</strong></td>
+<td>Toggles whether the material uses the <strong>RoughnessMap</strong> property or the <strong>Roughness</strong> property to set the roughness of its surface. Enable this checkbox to use the <strong>RoughnessMap</strong> property, disable this checkbox to use the <strong>Roughness</strong> property.</td>
+</tr>

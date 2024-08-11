@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:09a88a230e2c9f486284ddd4c87f7898ef518af837dc370f3bf2f0dc7f13a8e4
-size 490
+# Camera and scene composition
+
+Change how the High Definition Render Pipeline (HDRP) uses the camera to render the scene.
+
+|Page|Description|
+|-|-|
+|[Graphics Compositor](graphics-compositor.md)|Use the Graphics Compositor to composite operations between HDRP and external media sources, such as videos or images.|
+|[Camera-relative rendering](camera-relative-rendering.md)|Replace the world origin with the position of the camera, to avoid [z-fighting](Glossary.md#ZFighting) artifacts.|

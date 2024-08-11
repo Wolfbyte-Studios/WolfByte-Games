@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8e45f6aa7644b2a49bb7458bbdaccbf252ce81e15922138ad281fb7e839904ec
-size 217
+<tr>
+<td><strong>ReflectionsRoughnessMap</strong></td>
+<td>Specifies a texture that determines the reflection roughness across the surface. Note that this property only uses the red channel of the texture.</td>
+</tr>

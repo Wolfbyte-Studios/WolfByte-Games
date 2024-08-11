@@ -1,3 +1,51 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:90d22d438f953bff9057f5a310a93f5b6f9a9dbc14ea8874267f1e03a2848446
-size 1778
+namespace UnityEngine.Rendering.HighDefinition
+{
+    internal class HDDebugDisplaySettings : DebugDisplaySettings<HDDebugDisplaySettings>
+    {
+        /// <summary>
+        /// Rendering Debugger display stats.
+        /// </summary>
+        internal DebugDisplaySettingsStats<HDProfileId> displayStats { get; private set; }
+
+        /// <summary>
+        /// Volume-related Rendering Debugger settings.
+        /// </summary>
+        internal DebugDisplaySettingsVolume volumeSettings { get; private set; }
+
+        /// <summary>
+        /// Decal-related Rendering Debugger settings.
+        /// </summary>
+        internal DebugDisplaySettingsDecal decalSettings { get; private set; }
+
+        /// <summary>
+        /// GPU Resident Drawer Rendering Debugger settings and statistics.
+        /// </summary>
+        internal DebugDisplayGPUResidentDrawer gpuResidentDrawerSettings { get; private set; }
+
+#if ENABLE_VIRTUALTEXTURES
+        internal DebugDisplayVirtualTexturing vtSettings { get; private set; }
+#endif
+
+        public HDDebugDisplaySettings()
+        {
+        }
+
+        public override void Reset()
+        {
+            base.Reset();
+            displayStats = Add(new DebugDisplaySettingsStats<HDProfileId>(new HDDebugDisplayStats()));
+            volumeSettings = Add(new DebugDisplaySettingsVolume(new HDVolumeDebugSettings()));
+            decalSettings = Add(new DebugDisplaySettingsDecal());
+            gpuResidentDrawerSettings = Add(new DebugDisplayGPUResidentDrawer());
+#if ENABLE_VIRTUALTEXTURES
+            vtSettings = Add(new DebugDisplayVirtualTexturing());
+#endif
+        }
+
+        internal void UpdateDisplayStats()
+        {
+            if (displayStats != null)
+                displayStats.debugDisplayStats.Update();
+        }
+    }
+}

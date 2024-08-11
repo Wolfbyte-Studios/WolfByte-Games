@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2375b10a4121bca371e198fafc97cf85f232d123cfa5143474988544eabd33b4
-size 232
+// Forward pass
+Pass
+{
+    Name ${VFXPassForward}
+	Tags { "LightMode"=${VFXPassForward} }
+
+	${VFXStencilForward}
+
+	ZWrite Off
+
+	HLSLPROGRAM
+	${VFXPassForwardDefine}
+	${VFXInclude("Shaders/ParticleDecals/Pass.template")}
+
+	ENDHLSL
+}

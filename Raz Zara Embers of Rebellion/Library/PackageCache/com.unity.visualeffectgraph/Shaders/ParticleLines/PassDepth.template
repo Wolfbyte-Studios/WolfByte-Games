@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:437dbeaf85812030980a2155ca7ac700c0bf389ffcc9189377a1e11873fd2e4d
-size 272
+// Depth pass
+Pass
+{
+    Name ${VFXPassDepth}
+	Tags { "LightMode"=${VFXPassDepth} }
+
+	ZWrite On
+	Blend Off
+
+	HLSLPROGRAM
+	#define VFX_PASSDEPTH VFX_PASSDEPTH_ACTUAL
+	${VFXPassDepthAdditionalPragma}
+	${VFXInclude("Shaders/ParticleLines/PassDepthOrMV.template")}
+	ENDHLSL
+}

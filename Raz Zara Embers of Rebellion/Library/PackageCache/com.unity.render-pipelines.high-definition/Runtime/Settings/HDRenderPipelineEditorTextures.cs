@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2ef1a105aa8cfd2a639d764758ef65895c72753ad1bb9bb927bffca8ae50e810
-size 717
+#if UNITY_EDITOR
+using System;
+
+namespace UnityEngine.Rendering.HighDefinition
+{
+    [Serializable]
+    [SupportedOnRenderPipeline(typeof(HDRenderPipelineAsset))]
+    [Categorization.CategoryInfo(Name = "R: Editor Textures", Order = 1000), HideInInspector]
+    class HDRenderPipelineEditorTextures : IRenderPipelineResources
+    {
+        public int version => 0;
+
+        [SerializeField]
+        [ResourcePath("Runtime/RenderPipelineResources/Texture/MoonAlbedo.png")]
+        private Texture m_MoonAlbedo = null;
+
+        public virtual Texture moonAlbedo
+        {
+            get => m_MoonAlbedo;
+            set => this.SetValueAndNotify(ref m_MoonAlbedo, value, nameof(m_MoonAlbedo));
+        }
+    }
+}
+#endif

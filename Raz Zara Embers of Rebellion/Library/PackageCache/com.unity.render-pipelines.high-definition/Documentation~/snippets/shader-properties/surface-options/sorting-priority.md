@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8f6313402ef0300c2dab33017be9f54c677e84b2304570195f2a4da5b40e2f8e
-size 486
+<tr>
+  <td></td>
+  <td>Sorting Priority</td>
+  <td></td>
+  <td>Allows you to change the rendering order of overlaid transparent surfaces. For more information and an example of usage, see the <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@latest/index.html?subfolder=/manual/Renderer-And-Material-Priority.html#SortingByMaterial">Material sorting documentation</a>.<br>This property only appears if you set Surface Type to Transparent.</td>
+</tr>

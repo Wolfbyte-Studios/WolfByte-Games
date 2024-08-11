@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:61cb615bcffcb321e6c9f974957e2cbe99855bfd48a177d0aa3c4b310c751658
-size 760
+using System.Collections.Generic;
+
+using UnityEngine.VFX;
+
+
+namespace UnityEditor.VFX.Operator
+{
+    [VFXHelpURL("Operator-Epsilon")]
+    [VFXInfo(name = "Epsilon (ε)", category = "Math/Constants")]
+    class Epsilon : VFXOperator
+    {
+        override public string name { get { return "Epsilon (ε)"; } }
+
+        protected override IEnumerable<VFXPropertyWithValue> outputProperties
+        {
+            get
+            {
+                yield return new VFXPropertyWithValue(new VFXProperty(typeof(float), "ε"));
+            }
+        }
+
+        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
+        {
+            return new[] { VFXOperatorUtility.EpsilonExpression[VFXValueType.Float] };
+        }
+    }
+}

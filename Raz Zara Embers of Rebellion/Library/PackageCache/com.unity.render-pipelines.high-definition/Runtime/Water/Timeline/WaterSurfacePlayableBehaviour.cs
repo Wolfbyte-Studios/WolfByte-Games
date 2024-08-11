@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:04d150dd87726089ef48035da4f84530607fdf868872982b8139097fc7d98a0f
-size 391
+using UnityEngine.Playables;
+
+namespace UnityEngine.Rendering.HighDefinition
+{
+    // This structure's only goal is to keep track of the limits of the clip to be able to
+    // correctly update the simulation time of the water
+    class WaterSurfacePlayableBehaviour : PlayableBehaviour
+    {
+        public double clipStart { get; set; }
+        public double clipEnd { get; set; }
+    }
+}

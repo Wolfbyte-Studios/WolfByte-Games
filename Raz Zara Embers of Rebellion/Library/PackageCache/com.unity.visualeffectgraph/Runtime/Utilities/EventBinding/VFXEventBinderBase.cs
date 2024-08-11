@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9a94f051ea2a1c420c21d689c4b2b08346a611b2f0861b7c61ded3612cf94461
-size 1159
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.VFX;
+
+namespace UnityEngine.VFX.Utility
+{
+    abstract class VFXEventBinderBase : MonoBehaviour
+    {
+        [SerializeField]
+        protected VisualEffect target;
+        public string EventName = "Event";
+
+        [SerializeField, HideInInspector]
+        protected VFXEventAttribute eventAttribute;
+
+        protected virtual void OnEnable()
+        {
+            UpdateCacheEventAttribute();
+        }
+
+        private void OnValidate()
+        {
+            UpdateCacheEventAttribute();
+        }
+
+        private void UpdateCacheEventAttribute()
+        {
+            if (target != null)
+                eventAttribute = target.CreateVFXEventAttribute();
+            else
+                eventAttribute = null;
+        }
+
+        protected abstract void SetEventAttribute(object[] parameters = null);
+
+        protected void SendEventToVisualEffect(params object[] parameters)
+        {
+            if (target != null)
+            {
+                SetEventAttribute(parameters);
+                target.SendEvent(EventName, eventAttribute);
+            }
+        }
+    }
+}

@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:06eb0416a82394f96601b85697aa7d1c610315207a5b1d7debecb506f7b175df
-size 289
+<tr>
+<td>- <strong>Minimum Steps</strong></td>
+<td></td>
+<td></td>
+<td>The minimum number of Texture samples which Unity performs to process pixel displacement.<br/>This property only appears if you set <strong>Displacement Mode</strong> to <strong>Pixel Displacement</strong>.</td>
+</tr>

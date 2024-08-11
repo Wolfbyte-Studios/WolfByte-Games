@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:73d80f2dd270223ebaab91139e05a36dfbee38d7412fe9a6350a413ff64a27be
-size 408
+using System;
+using System.Collections.Generic;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.HighDefinition;
+using UnityEditor.ShaderGraph;
+using UnityEngine.UIElements;
+using UnityEditor.UIElements;
+
+namespace UnityEditor.Rendering.HighDefinition.ShaderGraph
+{
+    class HDPropertiesHeader : Toggle
+    {
+        public HDPropertiesHeader(string label) : base(label)
+        {
+        }
+    }
+}

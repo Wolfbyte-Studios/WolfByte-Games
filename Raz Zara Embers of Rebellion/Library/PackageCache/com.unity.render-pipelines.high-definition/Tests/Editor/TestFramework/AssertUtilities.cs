@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0056640b458e9b49719b1b83311839a15748b9ecce16a1e8e7ceb6671d0b6f87
-size 884
+using NUnit.Framework;
+using System;
+using UnityEngine;
+
+namespace UnityEditor.Rendering.TestFramework
+{
+    static class AssertUtilities
+    {
+        const float Epsilon = 1e-6f;
+
+        public static void AssertAreEqual(Vector3 l, Vector3 r)
+        {
+            Assert.True(
+                Mathf.Abs(l.x - r.x) < Epsilon
+                && Mathf.Abs(l.y - r.y) < Epsilon
+                && Mathf.Abs(l.z - r.z) < Epsilon
+            );
+        }
+
+        public static void AssertAreEqual(Quaternion l, Quaternion r)
+        {
+            AssertAreEqual(l.eulerAngles, r.eulerAngles);
+        }
+
+        public static void AssertAreEqual(Matrix4x4 l, Matrix4x4 r)
+        {
+            for (int y = 0; y < 4; ++y)
+            {
+                for (int x = 0; x < 4; ++x)
+                    Assert.True(Mathf.Abs(l[x, y] - r[x, y]) < Epsilon);
+            }
+        }
+    }
+}

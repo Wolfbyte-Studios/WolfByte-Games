@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9915bf9c20b27143acdd3f4dae7014cdefb15c04a45151493a1188507114eef0
-size 468
+<tr>
+<td><strong>Recursive Rendering</strong></td>
+<td></td>
+<td></td>
+<td>Indicates whether to include this material in the <a href="Ray-Tracing-Recursive-Rendering.md">recursive rendering pipeline</a>. When enabled, if your project supports <a href="Ray-Tracing-Getting-Started.md">ray tracing</a> and a <a href="Ray-Tracing-Recursive-Rendering.md">Recursive Rendering</a> Volume Profile override is active, HDRP uses ray tracing to render this material.</td>
+</tr>

@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1cdc7c1145917a04ef5a422122be0225fcd1e6d74ac0a11e5d7ce0fc6cd35678
-size 510
+﻿using System;
+using NUnit.Framework.Interfaces;
+
+namespace UnityEngine.TestRunner.NUnitExtensions.Filters
+{
+    internal class FullNameFilter : NUnit.Framework.Internal.Filters.FullNameFilter
+    {
+        public FullNameFilter(string expectedValue) : base(expectedValue)
+        {
+        }
+
+        public override bool Match(ITest test)
+        {
+            return Match(test.GetFullNameWithoutDllPath());
+        }
+
+        protected override string ElementName => "test";
+
+    }
+}

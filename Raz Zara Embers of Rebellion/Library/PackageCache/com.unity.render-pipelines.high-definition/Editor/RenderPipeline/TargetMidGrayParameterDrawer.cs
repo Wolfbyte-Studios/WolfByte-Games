@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:82f9dfbac2c38bdcf37d69f5c8e6082ce4b498fb36e53d8ea9e86c75e34690dd
-size 871
+using UnityEngine;
+using UnityEngine.Rendering.HighDefinition;
+
+namespace UnityEditor.Rendering.HighDefinition
+{
+    [VolumeParameterDrawer(typeof(TargetMidGrayParameter))]
+    sealed class TargetMidGrayParameterDrawer : VolumeParameterDrawer
+    {
+        static readonly GUIContent[] s_MidGrayNames =
+        {
+            EditorGUIUtility.TrTextContent("Grey 12.5%"),
+            EditorGUIUtility.TrTextContent("Grey 14.0%"),
+            EditorGUIUtility.TrTextContent("Grey 18.0%")
+        };
+
+        public override bool OnGUI(SerializedDataParameter parameter, GUIContent title)
+        {
+            var value = parameter.value;
+
+            if (value.propertyType != SerializedPropertyType.Enum)
+                return false;
+
+            value.intValue = EditorGUILayout.Popup(title, value.intValue, s_MidGrayNames);
+
+            return true;
+        }
+    }
+}

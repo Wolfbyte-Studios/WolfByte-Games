@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5a3f2a4c67d428a85ec3f4af1952966c210958b833344636d83a2788e86a2eb6
-size 526
+﻿SubShader
+	{
+	    Tags{ "RenderPipeline" = "HDRenderPipeline" }
+
+		// Required passes by ray tracing
+		${VFXIncludeRP("Templates/PlanarPrimitive/DXR/Lit/PassVisibilityDXRLit.template")}
+		${VFXIncludeRP("Templates/PlanarPrimitive/DXR/Lit/PassIndirectDXRLit.template")}
+		${VFXIncludeRP("Templates/PlanarPrimitive/DXR/Lit/PassGBufferDXRLit.template")}
+		${VFXIncludeRP("Templates/PlanarPrimitive/DXR/Lit/PassForwardDXRLit.template")}
+		${VFXIncludeRP("Templates/PlanarPrimitive/DXR/Common/PassRayTracingDebug.template")}
+	}

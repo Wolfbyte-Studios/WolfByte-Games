@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:607cbea6ac8443dd04dc5e302092d1385586675766d9d8733491684546417c90
-size 463
+//
+// This file was automatically generated. Please don't edit by hand.
+//
+
+#ifndef UBERPOSTFEATURES_CS_HLSL
+#define UBERPOSTFEATURES_CS_HLSL
+//
+// UnityEngine.Rendering.HighDefinition.UberPostFeatureFlags:  static fields
+//
+#define UBERPOSTFEATUREFLAGS_NONE (0)
+#define UBERPOSTFEATUREFLAGS_CHROMATIC_ABERRATION (1)
+#define UBERPOSTFEATUREFLAGS_VIGNETTE (2)
+#define UBERPOSTFEATUREFLAGS_LENS_DISTORTION (4)
+#define UBERPOSTFEATUREFLAGS_ENABLE_ALPHA (8)
+
+
+#endif

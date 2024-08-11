@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:75aaea6a3b0e215a4474a61f1f177071b3188bf15999879a38adc3661aa9770f
-size 675
+using System;
+using UnityEngine.Rendering;
+
+namespace UnityEngine.Rendering.HighDefinition.LTC
+{
+    struct BRDF_Marschner : IBRDF
+    {
+        public double Eval(ref Vector3 _tsView, ref Vector3 _tsLight, float _alpha, out double _pdf)
+        {
+            // Uniform sampled over a sphere.
+            _pdf = 1f / (4f * Math.PI);
+
+            return 0f;
+        }
+
+        public void GetSamplingDirection(ref Vector3 _tsView, float _alpha, float _U1, float _U2, ref Vector3 _direction)
+        {
+            _direction = Vector3.up;
+        }
+
+        public LTCLightingModel GetLightingModel()
+        {
+            return LTCLightingModel.Marschner;
+        }
+    }
+}

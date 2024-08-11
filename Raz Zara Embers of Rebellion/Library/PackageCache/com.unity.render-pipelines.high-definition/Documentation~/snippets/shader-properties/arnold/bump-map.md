@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:404ea725d6230f63fafe949086ce28818b89ea9221494961f7aa95035e64e79a
-size 227
+<tr>
+<td><strong>BumpMap</strong></td>
+<td>Specifies a tangent-space <a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterNormalMap.html">normal map</a> that applies a bump effect to the material.</td>
+</tr>

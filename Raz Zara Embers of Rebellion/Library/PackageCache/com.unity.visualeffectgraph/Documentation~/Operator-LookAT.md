@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:717da15b5fbefea4b04fe12214572b49613d756b5077f9addc591e0495fb4cd6
-size 835
+# Look At
+
+Menu Path : **Operator > Math > Vector**
+
+The **Look At** Operator calculates the [Look-At](https://docs.unity3d.com/ScriptReference/Transform.LookAt.html) Transform from position A to position B, given an up vector.
+
+## Operator properties
+
+| **Input** | **Type**  | **Description**                           |
+| --------- | --------- | ----------------------------------------- |
+| **From**  | Position  | The position of the source (the watcher). |
+| **To**    | Position  | The target position (the subject).        |
+| **Up**    | Direction | The up vector this Operator uses.         |
+
+| **Output** | **Type**  | **Description**                                 |
+| ---------- | --------- | ----------------------------------------------- |
+| **Output** | Transform | The look-at Transform this Operator calculates. |

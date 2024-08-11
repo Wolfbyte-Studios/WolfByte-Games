@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b606fe8b263e87382c54cab08e3e67b636d7fb3130cdbd847a2e86f42df47ee8
-size 312
+<tr>
+<td><strong>Distortion Depth Test</strong></td>
+<td>Indicates whether GameObjects that are closer to the Camera hide the distortion effect. Disable this setting to make the distortion effect appear on top of the rendering.<br/>This setting only appears if you enable <strong>Distortion</strong>.</td>
+</tr>

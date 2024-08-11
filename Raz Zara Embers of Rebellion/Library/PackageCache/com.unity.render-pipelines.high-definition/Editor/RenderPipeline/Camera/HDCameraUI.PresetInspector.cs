@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a806c80f88b43850add3f2c18cb4d23d585c644cc7c7f4d4f90622a09ed6ec0b
-size 975
+using UnityEngine;
+
+namespace UnityEditor.Rendering.HighDefinition
+{
+    using CED = CoreEditorDrawer<SerializedHDCamera>;
+
+    static partial class HDCameraUI
+    {
+        static readonly ExpandedState<Expandable, Camera> k_ExpandedStatePreset = new(Expandable.Projection, "HDRP-preset");
+
+        public static readonly CED.IDrawer PresetInspector = CED.Group(
+            CED.Group((serialized, owner) =>
+                EditorGUILayout.HelpBox(CameraUI.Styles.unsupportedPresetPropertiesMessage, MessageType.Info)),
+            CED.Group((serialized, owner) => EditorGUILayout.Space()),
+            CED.FoldoutGroup(
+                CameraUI.Styles.projectionSettingsHeaderContent,
+                Expandable.Projection,
+                k_ExpandedStatePreset,
+                FoldoutOption.Indent,
+                CED.Group(CameraUI.Drawer_Projection),
+                PhysicalCamera.DrawerPreset
+                ),
+            Rendering.DrawerPreset
+        );
+    }
+}

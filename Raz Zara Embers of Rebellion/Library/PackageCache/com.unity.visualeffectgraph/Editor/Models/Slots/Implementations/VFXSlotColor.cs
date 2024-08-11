@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:27bd42a8d5fe774498041ef42ea1f0ea3f711777df59dbaa72cf84f609e5525b
-size 791
+using System;
+using System.Linq;
+using UnityEngine;
+using UnityEngine.VFX;
+
+namespace UnityEditor.VFX
+{
+    [VFXInfo(type = typeof(Color))]
+    class VFXSlotColor : VFXSlotFloat4
+    {
+        sealed protected override bool CanConvertFrom(Type type)
+        {
+            return base.CanConvertFrom(type)
+                || type == typeof(Vector3)
+                || type == typeof(Vector4);
+        }
+
+        sealed protected override VFXExpression ConvertExpression(VFXExpression expression, VFXSlot sourceSlot)
+        {
+            if (expression.valueType == VFXValueType.Float3)
+            {
+                return VFXOperatorUtility.CastFloat(expression, VFXValueType.Float4, 1.0f);
+            }
+            return base.ConvertExpression(expression, sourceSlot);
+        }
+    }
+}

@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c0726f95e19114304dcc68426b0ca9441d3e800a362e9c6f0391bb71841e251d
-size 453
+﻿using UnityEngine.UIElements;
+
+namespace UnityEditor.VFX.UI
+{
+    class VFXIconBadge : VisualElement
+    {
+        public VFXIconBadge(string description, VFXErrorType vfxErrorType)
+        {
+            Add(new VisualElement { name = "tip"});
+            tooltip = description;
+
+            AddToClassList(vfxErrorType == VFXErrorType.Error ? "badge-error" : vfxErrorType == VFXErrorType.Warning ? "badge-warning" : "badge-perf");
+        }
+    }
+}

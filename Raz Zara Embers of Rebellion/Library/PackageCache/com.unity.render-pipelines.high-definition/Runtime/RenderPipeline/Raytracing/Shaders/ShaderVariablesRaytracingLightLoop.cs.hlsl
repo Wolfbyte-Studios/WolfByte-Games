@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fba7c9e76e691c3a7eee6ca4c34471d031a571d536d686e3672546765f254844
-size 536
+//
+// This file was automatically generated. Please don't edit by hand. Execute Editor command [ Edit > Rendering > Generate Shader Includes ] instead
+//
+
+#ifndef SHADERVARIABLESRAYTRACINGLIGHTLOOP_CS_HLSL
+#define SHADERVARIABLESRAYTRACINGLIGHTLOOP_CS_HLSL
+// Generated from UnityEngine.Rendering.HighDefinition.ShaderVariablesRaytracingLightLoop
+// PackingRules = Exact
+GLOBAL_CBUFFER_START(ShaderVariablesRaytracingLightLoop, b4)
+    float3 _MinClusterPos;
+    uint _LightPerCellCount;
+    float3 _MaxClusterPos;
+CBUFFER_END
+
+
+#endif

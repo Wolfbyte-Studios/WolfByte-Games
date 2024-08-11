@@ -1,3 +1,49 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9273508a5517a45c02e957ea57debf931023e8994ed373322934fadf337cda2a
-size 1853
+using System.Collections.Generic;
+
+using UnityEngine;
+
+namespace UnityEditor.VFX
+{
+    [VFXHelpURL("Context-OutputPoint")]
+    [VFXInfo(name = "Output Particle|Point", category = "#5Output Debug")]
+    class VFXPointOutput : VFXAbstractParticleOutput
+    {
+        public override string name => "Output Particle\nPoint";
+        public override string codeGeneratorTemplate { get { return RenderPipeTemplate("VFXParticlePoints"); } }
+        public override VFXTaskType taskType { get { return VFXTaskType.ParticlePointOutput; } }
+        public override bool implementsMotionVector { get { return true; } }
+
+        protected override IEnumerable<string> filteredOutSettings
+        {
+            get
+            {
+                foreach (var setting in base.filteredOutSettings)
+                    yield return setting;
+
+                yield return "cullMode";
+                yield return "colorMapping";
+            }
+        }
+
+        public override void OnEnable()
+        {
+            base.OnEnable();
+            cullMode = CullMode.Off;
+        }
+
+        public override IEnumerable<VFXAttributeInfo> attributes
+        {
+            get
+            {
+                yield return new VFXAttributeInfo(VFXAttribute.Position, VFXAttributeMode.Read);
+                yield return new VFXAttributeInfo(VFXAttribute.Color, VFXAttributeMode.Read);
+                yield return new VFXAttributeInfo(VFXAttribute.Alpha, VFXAttributeMode.Read);
+                yield return new VFXAttributeInfo(VFXAttribute.Alive, VFXAttributeMode.Read);
+
+                var asset = GetResource();
+                if (asset != null && asset.rendererSettings.motionVectorGenerationMode == MotionVectorGenerationMode.Object)
+                    yield return new VFXAttributeInfo(VFXAttribute.OldPosition, VFXAttributeMode.Read);
+            }
+        }
+    }
+}

@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:154ec94e824ad3aae838e196eb5c8a01b4afa9f4f3397d19def8eefc0f07dde8
-size 271
+#ifndef UNITY_PP_DEFINES_INCLUDED
+#define UNITY_PP_DEFINES_INCLUDED
+
+#if !defined(ENABLE_ALPHA)
+    #define CTYPE float3
+    #define CTYPE_SWIZZLE xyz
+#else
+    #define CTYPE float4
+    #define CTYPE_SWIZZLE xyzw
+#endif //ENABLE_ALPHA
+
+#endif //UNITY_PP_DEFINES_INCLUDED

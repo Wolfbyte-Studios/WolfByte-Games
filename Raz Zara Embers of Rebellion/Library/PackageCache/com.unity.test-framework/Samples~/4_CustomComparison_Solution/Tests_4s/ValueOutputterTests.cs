@@ -1,3 +1,42 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:635472e24118174b18438ce51a8192ec8d8ad02aa9792fb4d46b51fc544c2038
-size 1325
+using MyExercise_4s;
+using NUnit.Framework;
+using UnityEngine;
+using UnityEngine.TestTools.Utils;
+
+namespace Tests_4s
+{
+    internal class ValueOutputterTests
+    {
+        [Test]
+        public void Vector3ReturnsCorrectValue()
+        {
+            var valueOutputterUnderTest = new ValueOutputter();
+
+            var vector3 = valueOutputterUnderTest.GetVector3();
+
+            var expected = new Vector3(10.333f, 3f, 9.666f);
+            Assert.That(vector3, Is.EqualTo(expected).Using(new Vector3EqualityComparer(0.001f)));
+        }
+        
+        [Test]
+        public void FloatReturnsCorrectValue()
+        {
+            var valueOutputterUnderTest = new ValueOutputter();
+
+            var actualFloat = valueOutputterUnderTest.GetFloat();
+
+            Assert.That(actualFloat, Is.EqualTo(19.333f).Using(new FloatEqualityComparer(0.001f)));
+        }
+        
+        [Test]
+        public void QuaternionReturnsCorrectValue()
+        {
+            var valueOutputterUnderTest = new ValueOutputter();
+
+            var actualValue = valueOutputterUnderTest.GetQuaternion();
+
+            var expectedValue = new Quaternion(10f, 0f, 7.33333f, 0f);
+            Assert.That(actualValue, Is.EqualTo(expectedValue).Using(new QuaternionEqualityComparer(0.001f)));
+        }
+    }
+}

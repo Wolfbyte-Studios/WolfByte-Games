@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e4e5e3872afb3fe6ecd926cd7eadd6d2ac026764a611d6e7a555869757da4f85
-size 284
+<tr>
+<td>- <strong>Primitive Width</strong></td>
+<td></td>
+<td></td>
+<td>The width of the mesh (in meters) on which Unity applies the displacement mapping.<br/>This property only appears if you set <strong>Displacement Mode</strong> to <strong>Pixel Displacement</strong>.</td>
+</tr>

@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:780350199f4a5c4202a41156ecb48197ca56f9d93fb9521d26c2bdde461d70e1
-size 484
+using UnityEngine;
+using UnityEngine.Rendering.HighDefinition;
+using UnityEngine.Rendering;
+
+// Include material common properties names
+using static UnityEngine.Rendering.HighDefinition.HDMaterialProperties;
+
+namespace UnityEditor.Rendering.HighDefinition
+{
+    /// <summary>
+    /// GUI for HDRP Unlit shader graphs
+    /// </summary>
+    internal class HDUnlitGUI : UnlitShaderGraphGUI
+    {
+        // We keep this class for retro-compatibility with unlit shaderGraph UIs
+    }
+}

@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4973352766baf9e1c194ae4708cee6b6e2ae57bcbff5938dd91cb83db8cc752c
-size 850
+namespace UnityEngine.Rendering.UnifiedRayTracing
+{
+    internal class HardwareRayTracingBackend : IRayTracingBackend
+    {
+        public HardwareRayTracingBackend(RayTracingResources resources)
+        {
+            m_Resources = resources;
+        }
+
+        public IRayTracingShader CreateRayTracingShader(Object shader, string kernelName)
+        {
+            Debug.Assert(shader is RayTracingShader);
+            return new HardwareRayTracingShader((RayTracingShader)shader, kernelName);
+        }
+
+        public IRayTracingAccelStruct CreateAccelerationStructure(AccelerationStructureOptions options, GeometryPool geometryPool, ReferenceCounter counter)
+        {
+            return new HardwareRayTracingAccelStruct(geometryPool, m_Resources.hardwareRayTracingMaterial, counter);
+        }
+
+        RayTracingResources m_Resources;
+    }
+}

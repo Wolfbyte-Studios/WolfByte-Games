@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:686d4d8d61a912c9574a161a463b0422839018935e8c735e4255e4cbff4270b5
-size 797
+Shader "Hidden/HDRP/XRMirrorView"
+{
+    SubShader
+    {
+        Tags{ "RenderPipeline" = "HDRenderPipeline" }
+
+        HLSLINCLUDE
+            #pragma target 4.5
+            #pragma only_renderers d3d11 playstation xboxone xboxseries vulkan metal switch
+            #pragma multi_compile_local_fragment _ HDR_COLORSPACE_CONVERSION_AND_ENCODING
+            #pragma multi_compile_fragment _ DISABLE_TEXTURE2D_X_ARRAY
+        ENDHLSL
+
+        Pass
+        {
+            ZWrite Off ZTest Always Blend Off Cull Off
+
+            HLSLPROGRAM
+                #pragma vertex VertQuad
+                #pragma fragment FragBilinear
+
+                #include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/XRMirrorView.hlsl"
+            ENDHLSL
+        }
+    }
+
+    Fallback Off
+}

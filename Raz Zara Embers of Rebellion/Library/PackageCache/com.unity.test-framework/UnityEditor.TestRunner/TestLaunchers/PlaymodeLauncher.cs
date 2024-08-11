@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5e25c3a3958292e65e6f21b2382e6c116fce04b3db3225cbe9fecf56dadc21f6
-size 546
+using System;
+using System.Collections.Generic;
+using NUnit.Framework.Interfaces;
+using UnityEditor.TestTools.TestRunner.Api;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.TestRunner.Utils;
+using UnityEngine.TestTools.TestRunner;
+using UnityEngine.TestTools.TestRunner.Callbacks;
+
+namespace UnityEditor.TestTools.TestRunner
+{
+    internal class PlaymodeLauncher
+    {
+        public static bool IsRunning; // This flag is being used by the graphics test framework to detect EditMode/PlayMode.
+
+    }
+}

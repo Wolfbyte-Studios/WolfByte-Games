@@ -1,3 +1,51 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e64e35a2ea1be808f392052ef02b174bad25fafd76e82c03075fa5868592040f
-size 1271
+using System.Collections.Generic;
+
+namespace UnityEngine.Rendering.HighDefinition
+{
+    class CullingGroupManager
+    {
+        static CullingGroupManager m_Instance;
+        static public CullingGroupManager instance
+        {
+            get
+            {
+                if (m_Instance == null)
+                    m_Instance = new CullingGroupManager();
+                return m_Instance;
+            }
+        }
+
+        private Stack<CullingGroup> m_FreeList = new Stack<CullingGroup>();
+
+        public CullingGroup Alloc()
+        {
+            CullingGroup group;
+            if (m_FreeList.Count > 0)
+            {
+                group = m_FreeList.Pop();
+                group.enabled = true;
+            }
+            else
+            {
+                group = new CullingGroup();
+            }
+            return group;
+        }
+
+        public void Free(CullingGroup group)
+        {
+            // Disable group to ensure it is not being used anymore during culling
+            group.enabled = false;
+            m_FreeList.Push(group);
+        }
+
+        public void Cleanup()
+        {
+            foreach (CullingGroup group in m_FreeList)
+            {
+                group.Dispose();
+            }
+            m_FreeList.Clear();
+        }
+    }
+}

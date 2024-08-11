@@ -1,3 +1,42 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c236afcafefefe9d697bb07aa5f78c120e29d50be9bd34e32e34f09f9f42f8c7
-size 1234
+using System.Linq;
+using System.Collections.Generic;
+using UnityEngine;
+
+using System;
+
+namespace UnityEditor.VFX.Block
+{
+    enum ForceMode
+    {
+        Absolute,
+        Relative
+    }
+
+    static class ForceHelper
+    {
+        public class DragProperties
+        {
+            [Min(0.0f), Tooltip("Sets the drag coefficient. Higher drag leads to a stronger force influence over the particle velocity.")]
+            public float Drag = 1.0f;
+        }
+
+        public static IEnumerable<VFXAttributeInfo> attributes
+        {
+            get
+            {
+                yield return new VFXAttributeInfo(VFXAttribute.Velocity, VFXAttributeMode.ReadWrite);
+                yield return new VFXAttributeInfo(VFXAttribute.Mass, VFXAttributeMode.Read);
+            }
+        }
+
+        public static string ApplyForceString(ForceMode mode, string forceStr)
+        {
+            switch (mode)
+            {
+                case ForceMode.Absolute: return string.Format("({0} / mass) * deltaTime", forceStr);
+                case ForceMode.Relative: return string.Format("({0} - velocity) * min(1.0f,Drag * deltaTime / mass)", forceStr);
+                default: throw new NotImplementedException();
+            }
+        }
+    }
+}

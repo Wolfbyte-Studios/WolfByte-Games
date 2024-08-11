@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0bf895ae40c9130bdc7fb5e81aa02693b50a30b1358366e761b5483ff65ae226
-size 487
+# Subpixel Anti-Aliasing
+
+Menu Path : **Output > Subpixel Anti-Aliasing**
+
+The **Subpixel Anti-Aliasing** Block forces the ScaleX and ScaleY to cover at least one pixel of the screen. If this Block enlarges a particle to make it fit at least one pixel, it reduces the alpha of the particle to compensate for the particle contribution.
+
+![](Images/Block-SubpixelAntiAliasingExample.gif)
+
+## Block compatibility
+
+This Block is compatible with the following Contexts:
+
+- Any output Context

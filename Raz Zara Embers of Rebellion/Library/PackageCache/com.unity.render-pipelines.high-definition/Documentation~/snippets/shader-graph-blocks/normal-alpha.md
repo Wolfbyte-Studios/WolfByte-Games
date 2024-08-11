@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5b2b02f53d6172e91c1ef1cb8929cc10ba43cf4fddc4216f9e035cb58fa3fed1
-size 435
+<tr>
+<td><strong>Normal Alpha</strong></td>
+<td>The blend factor for the Material’s normals. A decal modifies the normals of the Material the decal projects onto. A value of 0 means that the decal does not affect the normals of the surface it projects onto. A value of 1 means that the decal fully overrides the normals of the surface.</td>
+<td>&#8226; <strong>Material</strong> set to <strong>Decal</strong></td>
+<td>1.0</td>
+</tr>

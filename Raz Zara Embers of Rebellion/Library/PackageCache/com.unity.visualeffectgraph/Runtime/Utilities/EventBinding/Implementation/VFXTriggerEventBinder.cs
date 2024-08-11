@@ -1,3 +1,54 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f7d4091ef06de173bfd9cf1c30abea6c2dc746e5ca8bec12541e77477d598aa7
-size 1449
+#if VFX_HAS_PHYSICS
+using System.Collections;
+using System.Collections.Generic;
+
+namespace UnityEngine.VFX.Utility
+{
+    [RequireComponent(typeof(Collider))]
+    class VFXTriggerEventBinder : VFXEventBinderBase
+    {
+        public enum Activation
+        {
+            OnEnter,
+            OnExit,
+            OnStay
+        }
+
+        public List<Collider> colliders = new List<Collider>();
+
+        public Activation activation = Activation.OnEnter;
+
+        private ExposedProperty positionParameter = "position";
+
+        protected override void SetEventAttribute(object[] parameters)
+        {
+            Collider collider = (Collider)parameters[0];
+            eventAttribute.SetVector3(positionParameter, collider.transform.position);
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (activation != Activation.OnEnter) return;
+            if (!colliders.Contains(other)) return;
+
+            SendEventToVisualEffect(other);
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (activation != Activation.OnExit) return;
+            if (!colliders.Contains(other)) return;
+
+            SendEventToVisualEffect(other);
+        }
+
+        private void OnTriggerStay(Collider other)
+        {
+            if (activation != Activation.OnStay) return;
+            if (!colliders.Contains(other)) return;
+
+            SendEventToVisualEffect(other);
+        }
+    }
+}
+#endif

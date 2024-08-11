@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c75bdfdd6cf79d6af59b84c4c7df660aeb0984be2d227fe3c85897d2754409b6
-size 467
+# Lookup textures
+
+You can use lookup textures (LUTs) in the High Definition Render Pipeline (HDRP) . To create a LUT, use external software. 
+
+|Page|Description|
+|-|-|
+|[Understand LUTs](rendering-luts-understand.md)|Learn about LUTs in HDRP.|
+|[Create an LUT in Adobe Photoshop](LUT-Authoring-Photoshop.md)|Use Adobe Photoshop to author an LUT texture.|
+|[Create an LUT in DaVinci Resolve](LUT-Authoring-Resolve.md)|Use DaVinci Resolve to author an LUT texture.|
+
+

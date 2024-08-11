@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b582bc6b89a935088ba52d10f16f1acd59831d2f74b37b9ee173c34bc1eae4f7
-size 993
+# Texture3D
+
+Menu Path : **Operator > Inline > Texture3D**
+
+The **Texture3D** inline Operator allows you to store an instance of a Texture3D. This is one of the Visual Effect Graph's base [Types](VisualEffectGraphTypeReference.md). To modify a value in this inline Operator, either set the value explicitly in the Operator body, or connect it to a compatible output.
+
+[!include[](Snippets/Operator-InlineIntro.md)]
+
+
+## Operator properties
+
+| **Input** | **Type** | **Description**                                              |
+| --------- | -------- | ------------------------------------------------------------ |
+| **Input** | Texture3D   | The value of the Operator. You can either set this in the Operator's body, or connect to it from the output of another Operator. |
+
+| **Output** | **Type** | **Description**            |
+| ---------- | -------- | -------------------------- |
+| **Output** | Texture3D   | The value of the Operator. |
+
+[!include[](Snippets/Operator-InlineNotes.md)]

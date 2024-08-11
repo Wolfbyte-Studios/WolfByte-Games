@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bb524232c587f2daba687419ec6a50c3cd80464ebd9a092e8b7e7aedd895da0b
-size 374
+<tr>
+<td><strong>Use IOR From Diffusion Profile</strong></td>
+<td></td>
+<td></td>
+<td>Indicates whether the Material computes the fresnel color from the IOR of the diffusion profile, or using the <strong>Dielectric IOR</strong> set in the graph output. This is only available if <strong>Subsurface Scattering</strong> or <strong>Transmission</strong> is enabled.</td>
+</tr>

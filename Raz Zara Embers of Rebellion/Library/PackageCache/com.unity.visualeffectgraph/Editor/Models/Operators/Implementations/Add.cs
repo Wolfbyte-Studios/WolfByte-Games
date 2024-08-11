@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:51ffc3391e33294d87e2a5a2f0fc7d5b54a5254b68981dbbde6777f599153448
-size 569
+using System;
+using UnityEditor.VFX;
+
+namespace UnityEditor.VFX.Operator
+{
+    [VFXHelpURL("Operator-Add")]
+    [VFXInfo(name = "Add", category = "Math/Arithmetic", synonyms = new []{ "Plus" })]
+    class Add : VFXOperatorNumericCascadedUnified
+    {
+        protected override sealed string operatorName { get { return "Add"; } }
+        protected override sealed double defaultValueDouble { get { return 0.0; } }
+        protected override sealed VFXExpression ComposeExpression(VFXExpression a, VFXExpression b)
+        {
+            return a + b;
+        }
+    }
+}

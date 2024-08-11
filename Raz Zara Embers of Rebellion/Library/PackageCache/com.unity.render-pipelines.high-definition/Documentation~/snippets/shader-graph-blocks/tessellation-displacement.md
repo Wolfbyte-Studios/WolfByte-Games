@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d2b79445fdb768860ef12eac649f08f68b05700d7d76606fac2ef49bfb35cdf7
-size 452
+<tr>
+<td><strong>Tessellation Displacement</strong></td>
+<td>The world space displacement to apply to the world position of mesh vertices after the tessellation process. It is recommended to displace along the world space normal with a displacement map, the displacement map must be sample with a Sample Texture 2D LOD, regular Sample Texture 2D isn't supported.</td>
+<td><strong>Tessellation</strong> enabled</td>
+<td>CoordinateSpace.World</td>
+</tr>

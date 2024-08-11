@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8740814c6c176d89a0baf16823d8f59c98de59692b36100f3efb10db3b8d0299
-size 473
+# Upgrading HDRP from 2022.2 to 2023.1
+
+In the High Definition Render Pipeline (HDRP), some features work differently between major versions. This document helps you upgrade HDRP from 14.x to 15.x.
+
+## Rendering Layers
+
+The Receive Decals property of Materials in HDRP does not affect emissive decals anymore when Decal Layers are enabled. To disable emissive decals on specific meshes, you will have to use a Decal Layer instead of relying on the Receive Decals property.

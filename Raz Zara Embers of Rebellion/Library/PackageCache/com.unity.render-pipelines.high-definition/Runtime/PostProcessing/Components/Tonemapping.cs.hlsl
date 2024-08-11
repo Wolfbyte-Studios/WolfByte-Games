@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4d76367c434e91f4ce9ec4745a0b4762225c11388128ecdba5a92d5bcfb61334
-size 472
+//
+// This file was automatically generated. Please don't edit by hand. Execute Editor command [ Edit > Rendering > Generate Shader Includes ] instead
+//
+
+#ifndef TONEMAPPING_CS_HLSL
+#define TONEMAPPING_CS_HLSL
+//
+// UnityEngine.Rendering.HighDefinition.TonemappingMode:  static fields
+//
+#define TONEMAPPINGMODE_NONE (0)
+#define TONEMAPPINGMODE_NEUTRAL (1)
+#define TONEMAPPINGMODE_ACES (2)
+#define TONEMAPPINGMODE_CUSTOM (3)
+#define TONEMAPPINGMODE_EXTERNAL (4)
+
+
+#endif

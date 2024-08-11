@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:275a77e75fd8d017e4f7078c09d07326f6c1a825f190e38831765b1c14005eba
-size 343
+<UXML xmlns:ui="UnityEngine.UIElements" xmlns:vfx="UnityEditor.VFX.UI">
+  <vfx:VFXComponentBoardEventUI name="container" pickingMode="Ignore">
+    <!--<ui:Label text="Event" />-->
+    <ui:TextField name="event-name" />
+    <ui:Button name="event-send" text="Send" tooltip="Send event to VFX asset" />
+  </vfx:VFXComponentBoardEventUI>
+</UXML>

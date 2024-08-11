@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:82dfed8b7b3cde91e1c94b68ab3f3e3a0585af86758e8422031cfdcc6ae04d07
-size 416
+//
+// This file was automatically generated. Please don't edit by hand. Execute Editor command [ Edit > Rendering > Generate Shader Includes ] instead
+//
+
+#ifndef DECALMESHBIASTYPEENUM_CS_HLSL
+#define DECALMESHBIASTYPEENUM_CS_HLSL
+//
+// UnityEditor.Rendering.HighDefinition.DecalMeshDepthBiasType:  static fields
+//
+#define DECALMESHDEPTHBIASTYPE_DEPTH_BIAS (0)
+#define DECALMESHDEPTHBIASTYPE_VIEW_BIAS (1)
+
+
+#endif

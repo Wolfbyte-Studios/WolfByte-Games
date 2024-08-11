@@ -1,3 +1,42 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:45f089e2a6fb96521c097d42a9ed52dae5c46431fb15061fcee2e0acd7c34b02
-size 1427
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEditor.TestTools.TestRunner.Api;
+using UnityEngine;
+
+namespace UnityEditor.TestTools.TestRunner.UnityTestProtocol
+{
+    [InitializeOnLoad]
+    internal static class UnityTestProtocolStarter
+    {
+        static UnityTestProtocolStarter()
+        {
+            var commandLineArgs = Environment.GetCommandLineArgs();
+            //Ensuring that it is used only when tests are run using UTR.
+            if (IsEnabled())
+            {
+                var api = ScriptableObject.CreateInstance<TestRunnerApi>();
+                var listener = new UnityTestProtocolListener(GetRepositoryPath(commandLineArgs));
+                api.RegisterCallbacks(listener);
+            }
+        }
+
+        internal static bool IsEnabled()
+        {
+            var commandLineArgs = Environment.GetCommandLineArgs();
+            return commandLineArgs.Contains("-automated") && commandLineArgs.Contains("-runTests");
+        }
+
+        private static string GetRepositoryPath(IReadOnlyList<string> commandLineArgs)
+        {
+            for (var i = 0; i < commandLineArgs.Count; i++)
+            {
+                if (commandLineArgs[i].Equals("-projectRepositoryPath"))
+                {
+                    return commandLineArgs[i + 1];
+                }
+            }
+            return string.Empty;
+        }
+    }
+}

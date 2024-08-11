@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c7ebe7a0b9eaabe5c7c44fb56dd4b3384452e2aba27725e2d7b1fa511e695dd3
-size 646
+<tr>
+<td><strong>Honor Per Light Max Smoothness</strong></td>
+<td></td>
+<td></td>
+<td>Indicates whether the StackLit shader uses the shape of directional, <a href="Glossary.md#punctual-lights">punctual</a>, and spot <a href="Light-Component.md">Lights</a> when it simulates the extent of the Lights.<br/>Depending on the smoothness values of the layers, enabling this option can produce unrealistic results for Lights that have large shapes. To fix this, enable Recompute Stack and Iridescence. These options are separate because recomputing the stack per Light instead of once for all Lights is significantly more resource intensive.</td>
+</tr>

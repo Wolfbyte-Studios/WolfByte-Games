@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:447582f1c9790edc3118f697bdaa2b50b47f2ec492c3cb9168ba06cbcd251141
-size 386
+{
+	SubShader
+	{
+	    Tags{ "RenderPipeline" = "HDRenderPipeline" }
+		Cull Back
+		
+		${VFXInclude("Shaders/VFXParticleHeader.template")}
+		${VFXInclude("Shaders/ParticleHexahedron/PassDepth.template"),IS_OPAQUE_PARTICLE}
+		${VFXInclude("Shaders/ParticleHexahedron/PassForward.template")}
+		${VFXInclude("Shaders/ParticleHexahedron/PassShadowCaster.template"),USE_CAST_SHADOWS_PASS}
+	}
+}

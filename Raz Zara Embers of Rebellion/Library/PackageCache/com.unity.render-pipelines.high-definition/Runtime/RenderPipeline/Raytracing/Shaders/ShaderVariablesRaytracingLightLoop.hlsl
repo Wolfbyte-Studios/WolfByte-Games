@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c286dca25753105a9870eca4e90d5e60a4e5f798b8ebe44000fffa6118a1f445
-size 703
+#ifndef UNITY_SHADER_VARIABLES_RAY_TRACING_LIGHT_LOOP_INCLUDED
+#define UNITY_SHADER_VARIABLES_RAY_TRACING_LIGHT_LOOP_INCLUDED
+
+#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/Shaders/ShaderVariablesRaytracingLightLoop.cs.hlsl"
+
+#define CELL_META_DATA_SIZE 5
+// Indices into metadata 
+#define CELL_META_DATA_TOTAL_INDEX 0
+#define CELL_META_DATA_PUNCTUAL_END_INDEX 1
+#define CELL_META_DATA_AREA_END_INDEX 2
+#define CELL_META_DATA_ENV_END_INDEX 3
+#define CELL_META_DATA_DECAL_END_INDEX 4
+
+
+GLOBAL_RESOURCE(StructuredBuffer<uint>, _RaytracingLightCluster, RAY_TRACING_LIGHT_CLUSTER_REGISTER);
+
+#endif // UNITY_SHADER_VARIABLES_RAY_TRACING_LIGHT_LOOP_INCLUDED

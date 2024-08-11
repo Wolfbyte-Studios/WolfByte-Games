@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:43c88b8c860f74c813c218f1dc3dbd906872868161d3e82a02300eec1b7b51fc
-size 378
+# ArcCone
+
+A solid-arc of 3D Cone defined by an angle and a [Cone](Type-Cone.md).
+
+## Properties
+
+| **Property** | **Description**                                    |
+| ------------ | -------------------------------------------------- |
+| **Cone**     | The [Cone](Type-Cone.md) to take the segment from. |
+| **Arc**      | The angle, in radians, of the cone segment.        |

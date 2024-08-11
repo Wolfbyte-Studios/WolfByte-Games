@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d01fd12fd3ee9a5dc8fae2c9bd3febafeef5789df764aad4eab44f61485690ef
-size 445
+Pass
+{
+    Name "SceneSelectionPass"
+	Tags { "LightMode"="SceneSelectionPass" }
+
+	ZWrite On
+	Blend Off
+
+	HLSLPROGRAM
+	#define VFX_PASSDEPTH VFX_PASSDEPTH_SELECTION
+	${VFXIncludeRP("Templates/Mesh/PassDepthOrMV.template")}
+
+	ENDHLSL
+}
+
+Pass
+{
+    Name "Picking"
+	Tags { "LightMode"="Picking" }
+
+	ZWrite On
+	Blend Off
+
+	HLSLPROGRAM
+	#define VFX_PASSDEPTH VFX_PASSDEPTH_PICKING
+	${VFXIncludeRP("Templates/Mesh/PassDepthOrMV.template")}
+
+	ENDHLSL
+}

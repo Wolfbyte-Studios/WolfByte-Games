@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d7ded27d895d9d91511a5d84875c6cbcacc1124d584766fd7218d3d592209f31
-size 466
+{
+    "name": "Tests_13",
+    "references": [
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": []
+}

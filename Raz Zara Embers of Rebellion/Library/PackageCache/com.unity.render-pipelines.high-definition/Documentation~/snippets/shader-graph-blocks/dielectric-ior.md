@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cede05479f981e5f796a96464ff1f7b022ffb328b714a2d4ca3b9a7917854b0a
-size 502
+<tr>
+<td><strong>Dielectric IOR</strong></td>
+<td>The index of refraction that determines the specular color of the material when the metallic value is 0.<br/>If the Material uses Subsurface Scattering or Transmission, this is only available if <strong>Use IOR from Diffusion Profile</strong> is unchecked.</td>
+<td>&#8226; <strong>Material</strong> set to <strong>StackLit</strong> <br/>&#8226; <strong>Base Color Parametrization</strong> set to <strong>Base Metallic</strong></td>
+<td>1.5</td>
+</tr>

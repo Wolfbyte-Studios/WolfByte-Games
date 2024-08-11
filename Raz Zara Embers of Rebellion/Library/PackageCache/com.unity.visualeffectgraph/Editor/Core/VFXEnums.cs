@@ -1,3 +1,44 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d263dfce4b1bfa73bf6d213ca90470f0f730d60f815f15ab77f393d9628b2462
-size 2017
+namespace UnityEditor.VFX
+{
+    // TODO Tmp Just map the task types from bindings so that the enum is accessible from outside the package (For HDRP)
+    enum VFXTaskType
+    {
+        None = UnityEngine.VFX.VFXTaskType.None,
+
+        Spawner = UnityEngine.VFX.VFXTaskType.Spawner,
+        Initialize = UnityEngine.VFX.VFXTaskType.Initialize,
+        Update = UnityEngine.VFX.VFXTaskType.Update,
+        Output = UnityEngine.VFX.VFXTaskType.Output,
+
+        // updates
+        CameraSort = UnityEngine.VFX.VFXTaskType.CameraSort,
+        GlobalSort = UnityEngine.VFX.VFXTaskType.GlobalSort,
+        PerCameraUpdate = UnityEngine.VFX.VFXTaskType.PerCameraUpdate,
+        PerOutputSort = UnityEngine.VFX.VFXTaskType.PerOutputSort,
+
+        // outputs
+        ParticlePointOutput = UnityEngine.VFX.VFXTaskType.ParticlePointOutput,
+        ParticleLineOutput = UnityEngine.VFX.VFXTaskType.ParticleLineOutput,
+        ParticleQuadOutput = UnityEngine.VFX.VFXTaskType.ParticleQuadOutput,
+        ParticleHexahedronOutput = UnityEngine.VFX.VFXTaskType.ParticleHexahedronOutput,
+        ParticleMeshOutput = UnityEngine.VFX.VFXTaskType.ParticleMeshOutput,
+        ParticleTriangleOutput = UnityEngine.VFX.VFXTaskType.ParticleTriangleOutput,
+        ParticleOctagonOutput = UnityEngine.VFX.VFXTaskType.ParticleOctagonOutput,
+
+        // spawners
+        ConstantRateSpawner = UnityEngine.VFX.VFXTaskType.ConstantRateSpawner,
+        BurstSpawner = UnityEngine.VFX.VFXTaskType.BurstSpawner,
+        PeriodicBurstSpawner = UnityEngine.VFX.VFXTaskType.PeriodicBurstSpawner,
+        VariableRateSpawner = UnityEngine.VFX.VFXTaskType.VariableRateSpawner,
+        CustomCallbackSpawner = UnityEngine.VFX.VFXTaskType.CustomCallbackSpawner,
+        SetAttributeSpawner = UnityEngine.VFX.VFXTaskType.SetAttributeSpawner,
+    }
+}
+
+/*namespace UnityEngine.Experimental.VFX
+{
+    class VFXTaskTypeExtension
+    {
+        public static implicit operator VFXTaskType(UnityEditor.VFX.VFXTaskType taskType) => (VFXTaskType)taskType;
+    }
+}*/

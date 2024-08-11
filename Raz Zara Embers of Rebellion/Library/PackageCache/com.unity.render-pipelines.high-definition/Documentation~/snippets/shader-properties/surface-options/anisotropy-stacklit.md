@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:41aa36b14d1437bc73951995506ff749f4a8af218edb1301293afd624054e794
-size 306
+<tr>
+<td><strong>Anisotropy</strong></td>
+<td></td>
+<td></td>
+<td>Indicates whether to apply anisotropy to the material. If you enable <strong>Dual Specular Lobe</strong> the two lobes have independent anisotropic intensity values (<strong>Anisotropy</strong> and <strong>AnisotropyB</strong>).</td>
+</tr>

@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:881cb9f44ad07feb2fb7c66ae3a3d82e3ab1e5aa29c8ebab9eb52250f9ac424e
-size 465
+<tr>
+<td><strong>Geometric Specular AA</strong></td>
+<td></td>
+<td></td>
+<td>Indicates whether HDRP performs geometric anti-aliasing on this material. This modifies the smoothness values on the surfaces of curved geometry to remove specular artifacts.<br/>For more information about the feature and for the list of properties this feature exposes, see the <a href="Geometric-Specular-Anti-Aliasing.md">Geometric Specular Anti-aliasing documentation</a>.</td>
+</tr>

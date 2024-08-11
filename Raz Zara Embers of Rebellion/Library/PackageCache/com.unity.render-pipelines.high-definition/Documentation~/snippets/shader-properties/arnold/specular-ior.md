@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ba302c9a462f2cc41a10bcc3a4d99c46e25f3f1087e2056b6f7f2b8c8b7f602d
-size 215
+<tr>
+<td><strong>SpecularIOR</strong></td>
+<td>The index of refraction to apply to the specular reflection. This defines the material's fresnel reflectivity and is, by default, the angular function used.</td>
+</tr>

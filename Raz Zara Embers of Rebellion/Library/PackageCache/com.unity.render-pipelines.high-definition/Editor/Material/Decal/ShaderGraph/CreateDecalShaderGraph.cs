@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c9c35334bfc537a28d731b6a490f590a6244bbe596a6848e36bd33111d3ef272
-size 1386
+using System;
+using UnityEditor.ShaderGraph;
+using UnityEngine.Rendering;
+
+namespace UnityEditor.Rendering.HighDefinition.ShaderGraph
+{
+    static class CreateDecalShaderGraph
+    {
+        [MenuItem("Assets/Create/Shader Graph/HDRP/Decal Shader Graph", priority = CoreUtils.Priorities.assetsCreateShaderMenuPriority + 1)]
+        public static void CreateDecalGraph()
+        {
+            var target = (HDTarget)Activator.CreateInstance(typeof(HDTarget));
+            target.TrySetActiveSubTarget(typeof(DecalSubTarget));
+
+            var blockDescriptors = new[]
+            {
+                BlockFields.VertexDescription.Position,
+                BlockFields.VertexDescription.Normal,
+                BlockFields.VertexDescription.Tangent,
+                BlockFields.SurfaceDescription.BaseColor,
+                BlockFields.SurfaceDescription.Alpha,
+                BlockFields.SurfaceDescription.NormalTS,
+                HDBlockFields.SurfaceDescription.NormalAlpha,
+                BlockFields.SurfaceDescription.Metallic,
+                BlockFields.SurfaceDescription.Occlusion,
+                BlockFields.SurfaceDescription.Smoothness,
+                HDBlockFields.SurfaceDescription.MAOSAlpha,
+                BlockFields.SurfaceDescription.Emission,
+            };
+
+            GraphUtil.CreateNewGraphWithOutputs(new[] { target }, blockDescriptors);
+        }
+    }
+}

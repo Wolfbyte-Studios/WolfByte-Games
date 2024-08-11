@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:936f6a4b8abf8ac90dd3596ba990104ffb6c3081c9209931be381166008f187e
-size 332
+// Shadow pass
+Pass
+{
+	Name ${VFXPassShadow}
+	Tags { "LightMode"=${VFXPassShadow} }
+
+	ZClip [_ZClip]
+	ZWrite On
+	Blend Off
+
+	HLSLPROGRAM
+	#define VFX_PASSDEPTH VFX_PASSDEPTH_SHADOW
+	#if !USE_ALPHA_TEST && IS_TRANSPARENT_PARTICLE
+	#define USE_ALPHA_TEST 1
+	#endif
+	${VFXIncludeRP("Templates/Mesh/PassDepthOrMV.template")}
+	ENDHLSL
+}

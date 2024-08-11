@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:80b9e2a46836582674b205981f97fdc01e5003c6951d439c186708c8dc149915
-size 395
+## Details
+
+You can convert this Operator to a [Property](../Properties.md) or an Exposed Property. To do this, right-click on the Operator's header and select either **Convert to Property** or **Convert to Exposed Property**.
+
+You can also convert [Properties](../Properties.md) and Exposed Properties to inline Operators. To do this, right-click the Property and select **Convert to Inline**.

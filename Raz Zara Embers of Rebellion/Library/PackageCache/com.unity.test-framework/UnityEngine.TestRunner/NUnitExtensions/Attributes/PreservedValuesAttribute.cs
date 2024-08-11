@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6252ae7cdf96654913c042d3001b505e7223f82deca703dfd79a27b47e217ae3
-size 761
+using NUnit.Framework;
+using UnityEngine.Scripting;
+
+namespace UnityEngine.TestTools
+{
+    /// <summary>
+    /// Like the ValuesAttribute it is used to provide literal arguments for
+    /// an individual parameter of a test. It has the Preserve attribute added,
+    /// allowing it to persist in players build at a high stripping level.
+    /// </summary>
+    [Preserve]
+    public class PreservedValuesAttribute : ValuesAttribute
+    {
+        /// <summary>
+        /// Construct the values attribute with a set of arguments.
+        /// </summary>
+        /// <param name="args">The set of arguments for the test parameter.</param>
+        public PreservedValuesAttribute(params object[] args) : base(args)
+        {
+
+        }
+    }
+}

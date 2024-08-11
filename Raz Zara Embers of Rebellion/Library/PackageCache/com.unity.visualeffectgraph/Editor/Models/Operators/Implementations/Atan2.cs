@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1042aa2e1344902b52f893a7a23c909270a69485c27f940d50b8279bdea2663a
-size 777
+namespace UnityEditor.VFX.Operator
+{
+    [VFXHelpURL("Operator-Atan2")]
+    [VFXInfo(name = "Atan2", category = "Math/Trigonometry", synonyms = new []{ "arc", "tangent" })]
+    class Atan2 : VFXOperatorNumericUniform
+    {
+        public class InputProperties
+        {
+            public float x = 1.0f;
+            public float y = 0.0f;
+        }
+
+        protected override sealed string operatorName { get { return "Atan2"; } }
+
+        protected override sealed ValidTypeRule typeFilter { get { return ValidTypeRule.allowEverythingExceptInteger; } }
+
+        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
+        {
+            return new[] { new VFXExpressionATan2(inputExpression[1], inputExpression[0]) };
+        }
+    }
+}

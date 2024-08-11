@@ -1,3 +1,54 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c65197ef3d8c2959db7911ff836feef1c5a07db4edb3086ba9dd368713910926
-size 2037
+using UnityEngine.Rendering.HighDefinition;
+
+namespace UnityEditor.Rendering.HighDefinition
+{
+    using CED = CoreEditorDrawer<SerializedHDCamera>;
+
+    static partial class HDCameraUI
+    {
+        partial class Environment
+        {
+            public static readonly CED.IDrawer Drawer;
+
+            static Environment()
+            {
+                Drawer = CED.FoldoutGroup(
+                    CameraUI.Environment.Styles.header,
+                    Expandable.Environment,
+                    k_ExpandedState,
+                    FoldoutOption.Indent,
+                    CED.Group(
+                        Drawer_Environment_Background,
+                        CameraUI.Environment.Drawer_Environment_VolumeLayerMask,
+                        Drawer_Environment_VolumeAnchorOverride,
+                        Drawer_Environment_ProbeLayerMask
+                    )
+                );
+            }
+
+            static void Drawer_Environment_Background(SerializedHDCamera p, Editor owner)
+            {
+                EditorGUILayout.PropertyField(p.clearColorMode, Styles.backgroundType);
+                if (p.clearColorMode.GetEnumValue<HDAdditionalCameraData.ClearColorMode>() == HDAdditionalCameraData.ClearColorMode.Color)
+                {
+                    EditorGUI.indentLevel++;
+                    EditorGUILayout.PropertyField(p.backgroundColorHDR, Styles.backgroundColor);
+                    EditorGUI.indentLevel--;
+                }
+
+                if (p.clearDepth.boolValue == false)
+                    p.clearDepth.boolValue = true;
+            }
+
+            static void Drawer_Environment_VolumeAnchorOverride(SerializedHDCamera p, Editor owner)
+            {
+                EditorGUILayout.PropertyField(p.volumeAnchorOverride, Styles.volumeAnchorOverride);
+            }
+
+            static void Drawer_Environment_ProbeLayerMask(SerializedHDCamera p, Editor owner)
+            {
+                EditorGUILayout.PropertyField(p.probeLayerMask, Styles.probeLayerMask);
+            }
+        }
+    }
+}

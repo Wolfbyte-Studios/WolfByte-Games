@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4014d2678f88153197dfe3123bd9210cf7a21b79ec4cad5a6c78f520ae640145
-size 404
+#include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Decal/Decal.cs.hlsl"
+
+StructuredBuffer<DecalData> _DecalDatas;
+
+TEXTURE2D(_DecalAtlas2D);
+SAMPLER(_trilinear_clamp_sampler_DecalAtlas2D);
+
+UNITY_INSTANCING_BUFFER_START(Decal)
+UNITY_DEFINE_INSTANCED_PROP(float4x4, _NormalToWorld)
+UNITY_DEFINE_INSTANCED_PROP(uint, _DecalLayerMaskFromDecal)
+UNITY_INSTANCING_BUFFER_END(Decal)

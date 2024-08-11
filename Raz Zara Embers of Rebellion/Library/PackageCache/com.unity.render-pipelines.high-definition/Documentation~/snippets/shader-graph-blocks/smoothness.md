@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:de4e565b5e78808e850bc252ed905755115a8d902d9cf1ac8ec8f43216e8d79c
-size 510
+<tr>
+<td><strong>Smoothness</strong></td>
+<td>The material's smoothness. Every light ray that hits a smooth surface bounces off at predictable and consistent angles. For a perfectly smooth surface that reflects light like a mirror, set this to a value of 1. Less smooth surfaces reflect light over a wider range of angles (because the light hits the bumps in the microsurface), so the reflections have less detail and spread across the surface in a more diffused pattern.</td>
+<td>None</td>
+<td>0.5</td>
+</tr>

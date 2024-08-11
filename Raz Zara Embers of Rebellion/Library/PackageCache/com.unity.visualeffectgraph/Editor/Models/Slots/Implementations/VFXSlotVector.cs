@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3cf7ea62ceb858ff06c9ddb1c9430ad750c5e90fdaea2a0f4920ded282d84d98
-size 741
+using System;
+using UnityEngine;
+using UnityEngine.VFX;
+
+namespace UnityEditor.VFX
+{
+    [VFXInfo(type = typeof(Vector))]
+    class VFXSlotVector : VFXSlotEncapsulated
+    {
+        sealed protected override bool CanConvertFrom(Type type)
+        {
+            return base.CanConvertFrom(type)
+                || VFXSlotFloat3.CanConvertFromVector3(type);
+        }
+
+        sealed protected override VFXExpression ConvertExpression(VFXExpression expression, VFXSlot sourceSlot)
+        {
+            return VFXSlotFloat3.ConvertExpressionToVector3(expression);
+        }
+
+        sealed public override VFXValue DefaultExpression(VFXValue.Mode mode)
+        {
+            return new VFXValue<Vector3>(Vector3.zero, mode);
+        }
+    }
+}

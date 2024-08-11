@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0626142f7a61084f1e6e3e273bc73f46bb4e4427887ebda7c165d5a6179ee981
-size 1830
+using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("Unity.VisualEffectGraph.EditorTests")]
+[assembly: InternalsVisibleTo("Unity.VisualEffectGraph.EditorTests-testable")]
+[assembly: InternalsVisibleTo("Unity.VisualEffectGraph.RuntimeTests")]
+[assembly: InternalsVisibleTo("Unity.VisualEffectGraph.RuntimeTests-testable")]
+[assembly: InternalsVisibleTo("Unity.Testing.VisualEffectGraph.Editor")]
+[assembly: InternalsVisibleTo("Unity.Testing.VisualEffectGraph.Editor-testable")]
+[assembly: InternalsVisibleTo("Unity.Testing.VisualEffectGraph.Tests")]
+[assembly: InternalsVisibleTo("Unity.Testing.VisualEffectGraph.Tests-testable")]
+[assembly: InternalsVisibleTo("Unity.Testing.VisualEffectGraph.EditorTests")]
+[assembly: InternalsVisibleTo("Unity.Testing.VisualEffectGraph.EditorTests-testable")]
+[assembly: InternalsVisibleTo("Unity.Testing.VisualEffectGraph.PerformanceEditorTests")]
+[assembly: InternalsVisibleTo("Unity.Testing.VisualEffectGraph.PerformanceEditorTests-testable")]
+[assembly: InternalsVisibleTo("Unity.Testing.VisualEffectGraph.PerformanceRuntimeTests")]
+[assembly: InternalsVisibleTo("Unity.Testing.VisualEffectGraph.PerformanceRuntimeTests-testable")]
+[assembly: InternalsVisibleTo("Unity.RenderPipelines.HighDefinition.Editor")]
+[assembly: InternalsVisibleTo("Unity.RenderPipelines.HighDefinition.Editor-testable")]
+[assembly: InternalsVisibleTo("Unity.RenderPipelines.Universal.Editor")]
+[assembly: InternalsVisibleTo("Unity.RenderPipelines.Universal.Editor-testable")]
+[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
+
+namespace UnityEditor.VFX
+{
+    static class VisualEffectGraphPackageInfo
+    {
+        public static string assetPackagePath
+        {
+            get
+            {
+                return "Packages/com.unity.visualeffectgraph";
+            }
+        }
+    }
+}

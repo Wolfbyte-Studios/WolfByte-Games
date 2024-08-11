@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f58c30e5401ac1f09522c364a160121101ffa0acf7dcfa4b7d41ce1e047fcf4e
-size 806
+using UnityEngine;
+
+namespace UnityEditor.VFX.Operator
+{
+    [VFXHelpURL("Operator-LogicNot")]
+    [VFXInfo(name = "Not", category = "Logic")]
+    class LogicalNot : VFXOperator
+    {
+        override public string name { get { return "Not"; } }
+
+        public class InputProperties
+        {
+            static public bool FallbackValue = false;
+            [Tooltip("Sets the operand.")]
+            public bool a = FallbackValue;
+        }
+
+        public class OutputProperties
+        {
+            [Tooltip("Outputs the opposite of the operand.")]
+            public bool o = false;
+        }
+
+        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
+        {
+            return new[] { new VFXExpressionLogicalNot(inputExpression[0]) };
+        }
+    }
+}

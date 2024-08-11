@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a9bc53fdc9ec003f2fc7a7b4f5ab20bc76fbf3f7379df6c6c244772c5ed66962
-size 1037
+{
+    "name": "Unity.VisualEffectGraph.Editor",
+    "references": [
+        "Unity.VisualEffectGraph.Runtime",
+        "Unity.Timeline",
+        "Unity.Timeline.Editor",
+        "Unity.ShaderGraph.Editor",
+        "Unity.RenderPipelines.Core.Editor",
+        "Unity.RenderPipelines.Core.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.timeline",
+            "expression": "[0.0.0-builtin]",
+            "define": "VFX_HAS_TIMELINE"
+        },
+        {
+            "name": "com.unity.timeline",
+            "expression": "1.0.0",
+            "define": "VFX_HAS_TIMELINE"
+        },
+        {
+          "name": "com.unity.testing.visualeffectgraph",
+          "expression": "1.0.0",
+          "define": "VFX_HAS_UNIT_TEST"
+        }
+    ],
+    "noEngineReferences": false
+}

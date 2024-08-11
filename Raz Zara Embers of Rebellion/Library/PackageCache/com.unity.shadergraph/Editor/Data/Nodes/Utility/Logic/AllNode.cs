@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5f5405c6ceede404a5001cb396511c08cd8946a22c2b8d062266b2c24546a8c1
-size 736
+using System.Reflection;
+using UnityEngine;
+
+namespace UnityEditor.ShaderGraph
+{
+    [Title("Utility", "Logic", "All")]
+    class AllNode : CodeFunctionNode
+    {
+        public AllNode()
+        {
+            name = "All";
+        }
+
+        public override bool hasPreview
+        {
+            get { return false; }
+        }
+
+        protected override MethodInfo GetFunctionToConvert()
+        {
+            return GetType().GetMethod("Unity_All", BindingFlags.Static | BindingFlags.NonPublic);
+        }
+
+        static string Unity_All(
+            [Slot(0, Binding.None)] DynamicDimensionVector In,
+            [Slot(1, Binding.None)] out Boolean Out)
+        {
+            return
+@"
+{
+    Out = all(In);
+}
+";
+        }
+    }
+}

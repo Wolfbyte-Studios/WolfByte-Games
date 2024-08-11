@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e0dd060d226cef9abfd138408f6c61899a254499042628d16254a0d330315fc3
-size 644
+<tr>
+<td><strong>Tessellation Factor</strong></td>
+<td>The number of subdivisions that a triangle can have. If you want more subdivisions, set this to a higher value. More subdivisions increase the strength of the tessellation effect and further smooths the geometry. Note that higher values also increase the resource intensity of the tessellation effect. To maintain good performance on the Xbox One or PlayStation 4, do not use values greater than 15. This is because these platforms cannot consistently handle this many subdivisions. A value of 1.0 mean no tessellation.</td>
+<td><strong>Tessellation</strong> enabled</td>
+<td>1</td>
+</tr>

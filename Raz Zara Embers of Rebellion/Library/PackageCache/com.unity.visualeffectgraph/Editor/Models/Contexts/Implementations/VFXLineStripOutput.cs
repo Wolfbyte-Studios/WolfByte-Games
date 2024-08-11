@@ -1,3 +1,43 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:596800b20dd6d2f99347e260acf1cd32a16b7bd1a90a3cd20c2ae731b32b1fe0
-size 1512
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.VFX;
+
+namespace UnityEditor.VFX
+{
+    [VFXInfo(name = "Output ParticleStrip|Line", category = "#5Output Debug", experimental = true)]
+    class VFXLineStripOutput : VFXAbstractParticleOutput
+    {
+        protected VFXLineStripOutput() : base(true) { }
+        public override string name => "Output ParticleStrip\nLine";
+        public override string codeGeneratorTemplate { get { return RenderPipeTemplate("VFXParticleLinesHW"); } }
+        public override VFXTaskType taskType { get { return VFXTaskType.ParticleLineOutput; } }
+        public override bool implementsMotionVector { get { return true; } }
+
+        protected override IEnumerable<string> filteredOutSettings
+        {
+            get
+            {
+                foreach (var setting in base.filteredOutSettings)
+                    yield return setting;
+
+                yield return "cullMode";
+            }
+        }
+
+        public override void OnEnable()
+        {
+            base.OnEnable();
+            cullMode = CullMode.Off;
+        }
+
+        public override IEnumerable<VFXAttributeInfo> attributes
+        {
+            get
+            {
+                yield return new VFXAttributeInfo(VFXAttribute.Position, VFXAttributeMode.Read);
+                yield return new VFXAttributeInfo(VFXAttribute.Color, VFXAttributeMode.Read);
+                yield return new VFXAttributeInfo(VFXAttribute.Alpha, VFXAttributeMode.Read);
+            }
+        }
+    }
+}

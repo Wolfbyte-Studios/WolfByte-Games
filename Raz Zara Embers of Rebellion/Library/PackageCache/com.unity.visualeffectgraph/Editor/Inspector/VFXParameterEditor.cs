@@ -1,3 +1,80 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4c3b00d982b5148cc72134b4f3e7974b11c275586d3e298bcadfe49fed021fd1
-size 2389
+using System;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEditor;
+using UnityEditor.Experimental;
+using UnityEditor.SceneManagement;
+using UnityEngine;
+using UnityEngine.VFX;
+using UnityEditor.VFX;
+using UnityEditor.VFX.UI;
+
+using Object = UnityEngine.Object;
+using UnityEditorInternal;
+using System.Reflection;
+
+[CustomEditor(typeof(VFXParameter), true)]
+[CanEditMultipleObjects]
+class VFXParameterEditor : VFXSlotContainerEditor
+{
+    VFXViewController controller;
+    protected void OnEnable()
+    {
+        VFXViewWindow current = VFXViewWindow.GetWindow(target as VFXParameter);
+        if (current != null)
+        {
+            controller = current.graphView.controller;
+            if (controller != null)
+                controller.useCount++;
+        }
+    }
+
+    protected void OnDisable()
+    {
+        if (controller != null)
+        {
+            controller.useCount--;
+            controller = null;
+        }
+    }
+
+    public override SerializedProperty DoInspectorGUI()
+    {
+        var saveEnabled = GUI.enabled;
+
+        var referenceModel = serializedObject.targetObject as VFXModel;
+        var resource = referenceModel.GetResource();
+        if (resource != null && !resource.IsAssetEditable())
+        {
+            GUI.enabled = false;
+            saveEnabled = false;
+        }
+
+        if (serializedObject.isEditingMultipleObjects)
+        {
+            GUI.enabled = false; // no sense to change the name in multiple selection because the name must be unique
+            EditorGUI.showMixedValue = true;
+            EditorGUILayout.TextField("Exposed Name", "-");
+            EditorGUI.showMixedValue = false;
+            GUI.enabled = saveEnabled;
+        }
+        else
+        {
+            VFXParameter parameter = (VFXParameter)target;
+
+            GUI.enabled = controller != null && saveEnabled;
+            string newName = EditorGUILayout.DelayedTextField("Exposed Name", parameter.exposedName);
+            GUI.enabled = saveEnabled;
+            if (GUI.changed)
+            {
+                VFXParameterController parameterController = controller.GetParameterController(parameter);
+                if (parameterController != null)
+                {
+                    parameterController.exposedName = newName;
+                }
+            }
+        }
+        return base.DoInspectorGUI();
+    }
+}

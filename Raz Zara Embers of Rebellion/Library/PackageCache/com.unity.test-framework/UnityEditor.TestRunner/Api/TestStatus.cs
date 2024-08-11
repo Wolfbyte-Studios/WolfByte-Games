@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d183c71470f4fc5c4c9854f85c0f26f2f85befcb7b6f440b796fbb310cf788fd
-size 649
+using System;
+
+namespace UnityEditor.TestTools.TestRunner.Api
+{
+    /// <summary>
+    /// The TestStatus enum indicates the test result status.
+    /// </summary>
+    public enum TestStatus
+    {
+        /// <summary>
+        /// The test ran with an inconclusive result.
+        /// </summary>
+        Inconclusive,
+
+        /// <summary>
+        /// The test was skipped.
+        /// </summary>
+        Skipped,
+
+        /// <summary>
+        /// The test ran and passed.
+        /// </summary>
+        Passed,
+
+        /// <summary>
+        /// The test ran and failed.
+        /// </summary>
+        Failed
+    }
+}

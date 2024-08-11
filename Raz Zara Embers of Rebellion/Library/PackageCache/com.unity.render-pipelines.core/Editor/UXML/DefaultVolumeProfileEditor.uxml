@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8a86dc4f9bede5e83eb7a26000f0db053f9c4d2906c5e831b1120ae72c524ce5
-size 496
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns:uib="Unity.UI.Builder">
+    <Style src="project://database/Packages/com.unity.render-pipelines.core/Editor/StyleSheets/DefaultVolumeProfileEditor.uss"/>
+    <ui:VisualElement class="content-container">
+        <uie:ToolbarSearchField class="search-field"/>
+        <ui:HelpBox message-type="Info" name="volume-override-info-box"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="component-list"/>
+</ui:UXML>

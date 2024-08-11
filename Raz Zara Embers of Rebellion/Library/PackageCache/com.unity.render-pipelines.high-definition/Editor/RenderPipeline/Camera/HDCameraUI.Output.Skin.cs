@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c9e7f041bbc0d8ba7b5f44146c8794bc662a7522173d1d8807677aaec3f45116
-size 685
+using UnityEngine;
+
+namespace UnityEditor.Rendering.HighDefinition
+{
+    static partial class HDCameraUI
+    {
+        partial class Output
+        {
+            class Styles
+            {
+#if ENABLE_MULTIPLE_DISPLAYS
+                public static readonly GUIContent targetDisplay = EditorGUIUtility.TrTextContent("Target Display");
+#endif
+
+#if ENABLE_VR && ENABLE_XR_MANAGEMENT
+                public static readonly GUIContent xrRenderingContent = EditorGUIUtility.TrTextContent("XR Rendering");
+#endif
+
+                public const string msaaWarningMessage = "Manual MSAA target set with deferred rendering. This will lead to undefined behavior.";
+            }
+        }
+    }
+}

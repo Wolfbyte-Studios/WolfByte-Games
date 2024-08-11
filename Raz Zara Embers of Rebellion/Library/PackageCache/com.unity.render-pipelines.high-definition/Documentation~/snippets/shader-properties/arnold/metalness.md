@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2299b7297b2efef4f0fb13271db9acbfd9e37db14ef4f45f2b297b6c919b23e1
-size 190
+<tr>
+<td><strong>Metalness</strong></td>
+<td>Determines how metal-like the surface is. A more metallic surface reflects the environment more and its albedo color is less visible.</td>
+</tr>

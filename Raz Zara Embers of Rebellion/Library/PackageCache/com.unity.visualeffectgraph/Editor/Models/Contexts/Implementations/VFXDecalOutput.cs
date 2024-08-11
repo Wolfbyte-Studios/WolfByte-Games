@@ -1,3 +1,60 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:70bf353fc0fd4d86cf217cc19d4520a5e563a5a8e02952c8ed47c48b5de09ed3
-size 2379
+using System.Collections.Generic;
+using System.Linq;
+
+using UnityEngine;
+
+namespace UnityEditor.VFX
+{
+    [VFXHelpURL("Context-OutputForwardDecal")]
+    [VFXInfo(name = "Output Particle|Forward Decal", category = "#6Output Deprecated")]
+    class VFXDecalOutput : VFXAbstractParticleOutput
+    {
+        public override string name => "Output Particle".AppendLabel("Forward Decal", false);
+        public override string codeGeneratorTemplate { get { return RenderPipeTemplate("VFXParticleDecal"); } }
+        public override VFXTaskType taskType { get { return VFXTaskType.ParticleHexahedronOutput; } }
+        public override bool supportsUV { get { return true; } }
+        public override CullMode defaultCullMode { get { return CullMode.Back; } }
+        public override bool hasShadowCasting { get { return false; } }
+        public override bool supportSoftParticles { get { return false; } }
+        protected override IEnumerable<VFXPropertyWithValue> inputProperties
+        {
+            get
+            {
+                foreach (var input in base.inputProperties)
+                    yield return input;
+
+                yield return new VFXPropertyWithValue(new VFXProperty(GetFlipbookType(), "mainTexture", new TooltipAttribute("Specifies the base color (RGB) and opacity (A) of the particle.")), (usesFlipbook ? null : VFXResources.defaultResources.particleTexture));
+            }
+        }
+
+        public override void OnEnable()
+        {
+            base.OnEnable();
+            cullMode = CullMode.Back;
+            zTestMode = ZTestMode.LEqual;
+            zWriteMode = ZWriteMode.Off;
+        }
+
+        protected override IEnumerable<string> filteredOutSettings
+        {
+            get
+            {
+                foreach (var setting in base.filteredOutSettings)
+                    yield return setting;
+
+                yield return "cullMode";
+                yield return "zWriteMode";
+                yield return "zTestMode";
+                yield return "castShadows";
+            }
+        }
+
+        protected override IEnumerable<VFXNamedExpression> CollectGPUExpressions(IEnumerable<VFXNamedExpression> slotExpressions)
+        {
+            foreach (var exp in base.CollectGPUExpressions(slotExpressions))
+                yield return exp;
+
+            yield return slotExpressions.First(o => o.name == "mainTexture");
+        }
+    }
+}

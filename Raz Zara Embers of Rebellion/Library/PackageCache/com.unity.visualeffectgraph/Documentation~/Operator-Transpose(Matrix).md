@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:83651019fec7d5c6b222eff116303e63c41015113efb65e31d5c7fcd17a8dd81
-size 753
+# Transpose (Matrix)
+
+Menu Path : **Operator > Math > Geometry > Transpose (Matrix)**
+
+The **Transpose (Matrix)** Operator flips a matrix across its diagonal, swapping the matrix’s column values and its row values. This is the same operation as [Matrix4x4.transpose](https://docs.unity3d.com/ScriptReference/Matrix4x4-transpose.html).
+
+## Operator properties
+
+| **Input**  | **Type** | **Description**                      |
+| ---------- | -------- | ------------------------------------ |
+| **Matrix** | Matrix   | The Matrix this Operator transposes. |
+
+| **Output** | **Type** | **Description**                      |
+| ---------- | -------- | ------------------------------------ |
+| **Matrix** | Matrix   | The result of the transposed Matrix. |

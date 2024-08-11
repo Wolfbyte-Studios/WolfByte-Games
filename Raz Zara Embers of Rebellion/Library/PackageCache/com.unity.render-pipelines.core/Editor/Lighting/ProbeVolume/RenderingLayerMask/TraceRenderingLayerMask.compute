@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:97e4eecc887e42c0dd36f39c40069d777beb392b8d9a75ccdd1625abbd367719
-size 832
+#define RAYTRACING_BACKEND_COMPUTE
+#define GROUP_SIZE_X 64
+#define GROUP_SIZE_Y 1
+#define RAYTRACING_GROUP_SIZE (GROUP_SIZE_X*GROUP_SIZE_Y)
+
+#include "TraceRenderingLayerMask.hlsl"
+
+int g_DispatchWidth;
+int g_DispatchHeight;
+int g_DispatchDepth;
+
+#pragma kernel MainRayGenShader
+//#pragma enable_d3d11_debug_symbols
+
+[numthreads(GROUP_SIZE_X, GROUP_SIZE_Y, 1)]
+void MainRayGenShader(uint3 gidx : SV_DispatchThreadID, uint lidx : SV_GroupIndex)
+{
+    UnifiedRT::DispatchInfo dispatchInfo;
+    dispatchInfo.dispatchThreadID = gidx;
+    dispatchInfo.dispatchDimensionsInThreads = int3(g_DispatchWidth, g_DispatchHeight, g_DispatchDepth);
+    dispatchInfo.localThreadIndex = lidx;
+    dispatchInfo.globalThreadIndex = gidx.x + gidx.y * g_DispatchWidth + gidx.z * (g_DispatchWidth* g_DispatchHeight);
+
+    RayGenExecute(dispatchInfo);
+}

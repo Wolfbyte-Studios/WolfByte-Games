@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:03f49e98a1f82390288b3998593716590110bb267ec4791a2dbd06b9e79422a0
-size 1017
+using UnityEngine;
+
+namespace UnityEditor.VFX.Operator
+{
+    [VFXHelpURL("Operator-SampleGradient")]
+    [VFXInfo(category = "Sampling")]
+    class SampleGradient : VFXOperator
+    {
+        override public string name { get { return "Sample Gradient"; } }
+
+        public class InputProperties
+        {
+            [Tooltip("Sets the gradient to sample from.")]
+            public Gradient gradient = VFXResources.defaultResources.gradient;
+            [Range(0.0f, 1.0f), Tooltip("Sets the time along the gradient to take a sample from.")]
+            public float time = 0.0f;
+        }
+
+        public class OutputProperties
+        {
+            [Tooltip("Outputs the sampled value from the gradient at the specified time.")]
+            public Vector4 s = Vector4.zero;
+        }
+
+        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
+        {
+            return new[] { new VFXExpressionSampleGradient(inputExpression[0], inputExpression[1]) };
+        }
+    }
+}

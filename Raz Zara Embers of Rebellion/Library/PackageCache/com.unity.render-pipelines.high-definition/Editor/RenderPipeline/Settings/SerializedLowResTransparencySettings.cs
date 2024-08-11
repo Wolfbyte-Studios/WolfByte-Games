@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ca39e44984e4bb466595aa7a217e7ce56df197dbc330a048eef8881786d1a444
-size 819
+using UnityEditor.Rendering;
+using UnityEngine.Rendering.HighDefinition;
+
+namespace UnityEditor.Rendering.HighDefinition
+{
+    class SerializedLowResTransparencySettings
+    {
+        public SerializedProperty root;
+
+        public SerializedProperty enabled;
+        public SerializedProperty checkerboardDepthBuffer;
+        public SerializedProperty upsampleType;
+
+        public SerializedLowResTransparencySettings(SerializedProperty root)
+        {
+            this.root = root;
+
+            enabled = root.Find((GlobalLowResolutionTransparencySettings s) => s.enabled);
+            checkerboardDepthBuffer = root.Find((GlobalLowResolutionTransparencySettings s) => s.checkerboardDepthBuffer);
+            upsampleType = root.Find((GlobalLowResolutionTransparencySettings s) => s.upsampleType);
+        }
+    }
+}

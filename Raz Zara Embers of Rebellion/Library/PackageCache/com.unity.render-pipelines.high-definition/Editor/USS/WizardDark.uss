@@ -1,3 +1,43 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c7c997ef0cef457e85ca1396d4640f315f5b86e5370375bae076a9ef670a2269
-size 502
+.HelpBox
+{
+    background-color: #4c4c4c;
+    border-color: #232323;
+}
+
+#OuterBox
+{
+    background-color: #424242;
+}
+
+#InnerBox
+{
+    background-color: #424242;
+    border-color: #181818;
+}
+
+.Radio
+{
+    background-color: #282828;
+    border-color: #181818;
+}
+
+.SelectedRadio
+{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+ToolbarRadio
+{
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #181818;
+}
+
+.ScopeBox
+{
+    border-color: #181818;
+}
+
+.ScopeBox > #Title
+{
+    background-color: #424242;
+}

@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b6840668d05697204a5cf8cdc82931817fb6025576d73c831d59126ebcd500b7
-size 500
+//
+// This file was automatically generated. Please don't edit by hand. Execute Editor command [ Edit > Rendering > Generate Shader Includes ] instead
+//
+
+#ifndef SCREENSPACEGLOBALILLUMINATION_CS_HLSL
+#define SCREENSPACEGLOBALILLUMINATION_CS_HLSL
+//
+// UnityEngine.Rendering.HighDefinition.IndirectDiffuseMode:  static fields
+//
+#define INDIRECTDIFFUSEMODE_OFF (0)
+#define INDIRECTDIFFUSEMODE_SCREEN_SPACE (1)
+#define INDIRECTDIFFUSEMODE_RAY_TRACED (2)
+#define INDIRECTDIFFUSEMODE_MIXED (3)
+
+
+#endif

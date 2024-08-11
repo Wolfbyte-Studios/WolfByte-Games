@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e2293deeac52a04e95651b7af5e8ba91dd65054f776edff458685257c6077ae8
-size 698
+using System;
+
+namespace UnityEditor.Rendering.HighDefinition
+{
+    /// <summary>
+    /// Tells a CustomPassDrawer which CustomPass class is intended for the GUI inside the CustomPassDrawer class
+    /// </summary>
+    [AttributeUsage(AttributeTargets.Class)]
+    public class CustomPassDrawerAttribute : Attribute
+    {
+        internal Type targetPassType;
+
+        /// <summary>
+        /// Indicates that the class is a Custom Pass drawer and that it replaces the default Custom Pass GUI.
+        /// </summary>
+        /// <param name="targetPassType">The Custom Pass type.</param>
+        public CustomPassDrawerAttribute(Type targetPassType) => this.targetPassType = targetPassType;
+    }
+}

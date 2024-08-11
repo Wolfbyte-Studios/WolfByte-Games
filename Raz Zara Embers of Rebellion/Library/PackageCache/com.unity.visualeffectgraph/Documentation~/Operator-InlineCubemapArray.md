@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:95adecd9a7366f8c99375b8d5108a8fcc7106c872e74266258092c1836bd15b4
-size 1011
+# CubemapArray
+
+Menu Path : **Operator > Inline > CubemapArray**
+
+The **CubemapArray** inline Operator allows you to store an instance of a CubemapArray. This is one of the Visual Effect Graph's base [Types](VisualEffectGraphTypeReference.md). To modify a value in this inline Operator, either set the value explicitly in the Operator body, or connect it to a compatible output.
+
+[!include[](Snippets/Operator-InlineIntro.md)]
+
+
+## Operator properties
+
+| **Input** | **Type** | **Description**                                              |
+| --------- | -------- | ------------------------------------------------------------ |
+| **Input** | CubemapArray   | The value of the Operator. You can either set this in the Operator's body, or connect to it from the output of another Operator. |
+
+| **Output** | **Type** | **Description**            |
+| ---------- | -------- | -------------------------- |
+| **Output** | CubemapArray   | The value of the Operator. |
+
+[!include[](Snippets/Operator-InlineNotes.md)]

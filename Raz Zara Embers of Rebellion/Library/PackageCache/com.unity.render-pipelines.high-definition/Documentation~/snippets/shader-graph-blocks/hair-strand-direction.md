@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1b6bf09eee9533c0116811e490309fda66af81791e4d53801828dc10b794be7f
-size 248
+<tr>
+<td><strong>Hair Strand Direction</strong></td>
+<td>The direction that hair flows, from root to tip, when modelling with hair cards.</td>
+<td>&#8226; <strong>Material</strong> set to <strong>Hair</strong></td>
+<td>Vector3(0, -1, 0)</td>
+</tr>

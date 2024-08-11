@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a59ade87109fe7d56e49072e9a81ca6b8c5b12c02d8b5e3f364ff894bb3fefe5
-size 590
+using System;
+
+namespace UnityEditor.TestTools.TestRunner.UnityTestProtocol
+{
+    internal class TestFinishedMessage : Message
+    {
+        public string name;
+        public TestState state;
+        public string message;
+        public ulong duration; // milliseconds
+        public ulong durationMicroseconds;
+        public string stackTrace;
+        public string fileName;
+        public int lineNumber;
+        public int iteration;
+
+        public TestFinishedMessage()
+        {
+            type = "TestStatus";
+            phase = "End";
+        }
+    }
+}

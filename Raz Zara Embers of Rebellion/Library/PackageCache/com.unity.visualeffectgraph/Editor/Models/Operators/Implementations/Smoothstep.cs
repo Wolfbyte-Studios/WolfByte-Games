@@ -1,3 +1,54 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:71438da9572ef0282874ec50e5a372f8c2420c148d328b3495fc6201c80cbc53
-size 1579
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+namespace UnityEditor.VFX.Operator
+{
+    [VFXHelpURL("Operator-Smoothstep")]
+    [VFXInfo(category = "Math/Arithmetic")]
+    class Smoothstep : VFXOperatorNumericUnified, IVFXOperatorNumericUnifiedConstrained
+    {
+        public class InputProperties
+        {
+            [Tooltip("The start value.")]
+            public float x = 0.0f;
+            [Tooltip("The end value.")]
+            public float y = 1.0f;
+            [Tooltip("Smoothstep returns a value between 0 and 1, and s is clamped between x and y.")]
+            public float s = 0.5f;
+        }
+
+        protected override sealed string operatorName { get { return "Smoothstep"; } }
+
+        public IEnumerable<int> slotIndicesThatMustHaveSameType
+        {
+            get
+            {
+                return Enumerable.Range(0, 3);
+            }
+        }
+
+        public IEnumerable<int> slotIndicesThatCanBeScalar
+        {
+            get
+            {
+                yield return 2;
+            }
+        }
+
+        protected override sealed double defaultValueDouble
+        {
+            get
+            {
+                return 0.5;
+            }
+        }
+
+        protected override sealed ValidTypeRule typeFilter { get { return ValidTypeRule.allowEverythingExceptInteger; } }
+
+        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
+        {
+            return new[] { VFXOperatorUtility.Smoothstep(inputExpression[0], inputExpression[1], inputExpression[2]) };
+        }
+    }
+}

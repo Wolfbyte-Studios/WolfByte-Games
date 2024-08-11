@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d077fd4de88d07f5e70337c4e1b03dff99282b8a6bc09a712824ae9abf848a2b
-size 300
+﻿<tr>
+<td><strong>Support High Quality Line Rendering</strong></td>
+<td>
+Indicates whether this Shader Graph supports the <a href="Override-High-Quality-Lines.md">High Quality Line Rendering</a> feature. Enabling this property will only have an effect on renderers with line topology. 
+</td>
+</tr>

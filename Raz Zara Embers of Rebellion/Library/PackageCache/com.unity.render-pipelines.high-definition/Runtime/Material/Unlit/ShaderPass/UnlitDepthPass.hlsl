@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a1ad2f6a375da1be6b838d3c413e1bab9689e77d190e58392519dcca5d188806
-size 334
+#ifndef SHADERPASS
+#error Undefine_SHADERPASS
+#endif
+
+#ifdef _ALPHATEST_ON
+#define ATTRIBUTES_NEED_TEXCOORD0
+
+#define VARYINGS_NEED_TEXCOORD0
+#endif
+
+// This include will define the various Attributes/Varyings structure
+#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/VaryingMesh.hlsl"

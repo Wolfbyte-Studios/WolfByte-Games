@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:98d305e3c2199e91e53b317bdcae00dcca11f799b327eb19b6b6e9797ffef184
-size 352
+<tr>
+<td><strong>Material Type</strong></td>
+<td></td>
+<td></td>
+<td>Specifies the type of Material the fabric Shader represents. The options are:<br/>&#8226; <strong>Cotton Wool</strong>: A variant inspired by the Imageworks’s cloth model.<br/>&#8226; <strong>Silk</strong>: A fabric variant based on an anisotropic DinseyGGX BRDF Model.</td>
+</tr>

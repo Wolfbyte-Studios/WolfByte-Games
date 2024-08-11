@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5a62c79a8135c5ca31d5b76c207004be877f66cb6cf625dae194b8ee9f98cd2e
-size 510
+# High quality line rendering reference
+
+Learn about the components you use to control  [High quality line rendering](high-quality-line-rendering.md).
+
+| Page | Description |
+| - | - |
+|[High Quality Line Rendering Volume Override reference](Override-High-Quality-Lines.md)|Properties in the High Quality Line Rendering Volume Override component.|
+|[Mesh Renderer extension reference](Mesh-Renderer-Extension.md)|Properties in the Mesh Renderer extension that you use to control High Quality Line Rendering.|
+

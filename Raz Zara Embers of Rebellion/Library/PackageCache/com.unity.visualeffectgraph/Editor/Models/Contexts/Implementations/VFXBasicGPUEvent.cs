@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b26d5ac262ff8b1515c6dc12ba77f6cb4f100f0972db05a3ace25604b38e4d2f
-size 970
+using System;
+using System.Linq;
+using UnityEngine;
+using UnityEngine.VFX;
+
+namespace UnityEditor.VFX
+{
+    [VFXType(VFXTypeAttribute.Usage.ExcludeFromProperty)]
+    struct GPUEvent
+    {
+        /* expected emptiness */
+    };
+
+    [VFXHelpURL("Context-GPUEvent")]
+    [VFXInfo(name = "GPU Event", category = "#1Event", experimental = true)]
+    class VFXBasicGPUEvent : VFXContext
+    {
+        public VFXBasicGPUEvent() : base(VFXContextType.SpawnerGPU, VFXDataType.None, VFXDataType.SpawnEvent) { }
+        public override string name { get { return "GPUEvent"; } }
+
+        public class InputProperties
+        {
+            public GPUEvent evt = new GPUEvent();
+        }
+
+        public override VFXExpressionMapper GetExpressionMapper(VFXDeviceTarget target)
+        {
+            return new VFXExpressionMapper();
+        }
+
+        public override bool CanBeCompiled()
+        {
+            return outputContexts.Any(c => c.CanBeCompiled());
+        }
+    }
+}

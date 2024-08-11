@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dbe8a9e42a648fe3356878e56d49c58cf992741ad0616c5ffe6562605303ea80
-size 576
+/* ========= Quality Settings Panel =========  */
+
+HDRPAssetHeaderEntry {
+    flex-direction: row;
+    align-items: center;
+}
+
+.unity-quality-entry-tag {
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    margin: 0px 2px;
+    padding: 0px 2px;
+}
+
+.unity-quality-header-list {
+    margin: 5px;
+    border-bottom-width: 1px;
+    border-color: #1F1F1F;
+    flex: 1 0 0;
+}

@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ad3a9d744c791b0e0f40bb298df6041c3200b5269687ca111eb953fc26cf48c9
-size 535
+#ifndef BLOOM_COMMON
+#define BLOOM_COMMON
+
+// Quadratic color thresholding
+// curve = (threshold - knee, knee * 2, 0.25 / knee)
+float3 QuadraticThreshold(float3 color, float threshold, float3 curve)
+{
+    // Pixel brightness
+    float br = Max3(color.r, color.g, color.b);
+
+    // Under-threshold part
+    float rq = clamp(br - curve.x, 0.0, curve.y);
+    rq = curve.z * rq * rq;
+
+    // Combine and apply the brightness response curve
+    color *= max(rq, br - threshold) / max(br, 1e-4);
+
+    return color;
+}
+
+#endif // BLOOM_COMMON

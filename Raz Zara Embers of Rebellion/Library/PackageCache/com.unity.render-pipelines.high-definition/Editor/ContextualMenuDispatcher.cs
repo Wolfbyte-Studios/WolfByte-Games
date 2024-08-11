@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3ffed902869708afb0661cc18a8998595a5cc25b51483cf55caf74f2269d5dc7
-size 464
+namespace UnityEditor.Rendering.HighDefinition
+{
+    static class ContextualMenuDispatcher
+    {
+        [MenuItem("CONTEXT/HDAdditionalReflectionData/Remove Component")]
+        [MenuItem("CONTEXT/HDAdditionalCameraData/Remove Component")]
+        [MenuItem("CONTEXT/HDAdditionalLightData/Remove Component")]
+        static void RemoveComponent(MenuCommand command)
+        {
+            RemoveAdditionalDataUtils.RemoveAdditionalData(command);
+        }
+    }
+}

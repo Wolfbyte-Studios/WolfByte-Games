@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:27871b6640bac1640de7e3dead1db6a6e23fe6e71d066c68f9340869abf51950
-size 352
+<tr>
+<td><strong>Specular Color</strong></td>
+<td>The material's specular color value. This defines the brightness and tint colour of specular highlights.<br/>If the Material uses Subsurface Scattering or Transmission, this is only available if <strong>Use IOR from Diffusion Profile</strong> is unchecked.</td>
+<td>None</td>
+<td>Color.grey</td>
+</tr>

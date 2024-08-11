@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:076331d8d8553f8f534205fb1f7b929e3c12cc6ad4ac83ba0978caaf0269cfdc
-size 240
+<tr>
+<td><strong>SpecularColorMap</strong></td>
+<td>Specifies a texture that determines the specular color across the surface. This determines the color and intensity of the specular highlights at different parts of the surface.</td>
+</tr>

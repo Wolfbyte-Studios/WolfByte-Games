@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:30002b00d39d58ff7ea8276ef8a8b0c491d7dbc13328ef528c9efb7b00aabaac
-size 385
+<tr>
+<td><strong>UseOpacityMap</strong></td>
+<td>Toggles whether the material uses the alpha channel of the <strong>ColorMap</strong> texture or the <strong>Opacity</strong> property to set the opacity of its surface. Enable this checkbox to use the alpha channel of the <strong>ColorMap</strong> texture, disable this checkbox to use the <strong>Opacity</strong> property.</td>
+</tr>

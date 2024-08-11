@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:634e8f42508b295be27ea5418a74e15daab991af19aa23795c2fa855e83f0625
-size 893
+using System;
+using System.Linq;
+using NUnit.Framework.Interfaces;
+using NUnit.Framework.Internal;
+using NUnit.Framework.Internal.Filters;
+
+namespace UnityEngine.TestRunner.NUnitExtensions.Filters
+{
+    internal class AndFilterExtended : AndFilter
+    {
+        public AndFilterExtended(params ITestFilter[] filters) : base(filters) {}
+
+        public override bool IsExplicitMatch(ITest test)
+        {
+            var explicitFilters = Filters.Where(filter => !(filter is NonExplicitFilter)).ToArray();
+            if (explicitFilters.Length == 0)
+            {
+                return false;
+            }
+
+            foreach (TestFilter filter in explicitFilters)
+            {
+                if (!filter.IsExplicitMatch(test))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+    }
+}

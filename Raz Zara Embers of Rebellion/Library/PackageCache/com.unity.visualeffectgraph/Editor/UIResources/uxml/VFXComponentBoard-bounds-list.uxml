@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:69cff3be2c193ed5b80ed90b043af34bb1c9b07e9742335aabc05f28e63d03e7
-size 434
+<UXML xmlns:ui="UnityEngine.UIElements" xmlns:vfx="UnityEditor.VFX.UI">
+  <vfx:VFXComponentBoardBoundsSystemUI name="container" pickingMode="Ignore">
+    <vfx:VFXBoundsRecorderField name="system-field">
+      <ui:Button name="system-button"/>
+    </vfx:VFXBoundsRecorderField>
+    <ui:VisualElement name="divider" class="horizontal"/>
+<!--    <vfx:VFXEnumField name="bounds-mode"/>-->
+  </vfx:VFXComponentBoardBoundsSystemUI>
+</UXML>

@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ce35612308bc523149c63840d5583a9a2342cf6de9cde1ed62ffafe3a4ac69c2
-size 366
+using System;
+using System.Runtime.InteropServices;
+
+namespace UnityEditor.ShaderGraph
+{
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Interface, Inherited = true, AllowMultiple = false)]
+    internal class GenerationAPIAttribute : Attribute
+    {
+        public GenerationAPIAttribute() { }
+    }
+}

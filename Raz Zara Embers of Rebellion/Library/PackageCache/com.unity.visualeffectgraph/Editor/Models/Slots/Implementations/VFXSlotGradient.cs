@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3d4d57e41a02e60a2cd14933815b08b661b658e426cc44eb80ba2aaa770f5a1f
-size 307
+using System;
+using UnityEngine;
+
+namespace UnityEditor.VFX
+{
+    [VFXInfo(type = typeof(Gradient))]
+    class VFXSlotGradient : VFXSlot
+    {
+        public override VFXValue DefaultExpression(VFXValue.Mode mode)
+        {
+            return new VFXValue<Gradient>(new Gradient(), mode);
+        }
+    }
+}

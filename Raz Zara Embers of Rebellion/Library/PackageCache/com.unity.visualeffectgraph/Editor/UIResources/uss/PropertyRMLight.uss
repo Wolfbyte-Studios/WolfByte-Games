@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9d1bf39b30520a8eaf6763bf14b725db864054d4bd4967675ee6d9ba943f5f5a
-size 523
+.propertyrm #indeterminate
+{
+    background-image: resource("Builtin Skins/LightSkin/Images/TextField.png");
+}
+.propertyrm .unity-toggle.indeterminate {
+    background-image: resource("Builtin Skins/LightSkin/Images/toggle mixed.png");
+}
+
+.propertyrm .unity-toggle.indeterminate:hover:active {
+    background-image: resource("Builtin Skins/LightSkin/Images/toggle mixed act.png");
+}
+
+.propertyrm .unity-toggle.indeterminate:focus {
+    background-image: resource("Builtin Skins/LightSkin/Images/toggle mixed focus.png");
+}

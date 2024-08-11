@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1941dace69d732c34aaefef2285821561b0af0eee8805a15f570bc8081a9c364
-size 278
+<tr>
+<td><strong>Rim Transmission Intensity</strong></td>
+<td>The intensity of back lit hair around the edge of the hair. Set this to 0 to completely remove the transmission effect.</td>
+<td>&#8226; <strong>Material</strong> set to <strong>Hair</strong></td>
+<td>0.2</td>
+</tr>

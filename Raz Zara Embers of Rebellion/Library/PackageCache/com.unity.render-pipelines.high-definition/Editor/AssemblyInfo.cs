@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:910a91c26c617fda3e052313909d0c6181a723e324bb74e3ba4159419a69165d
-size 349
+using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("Unity.RenderPipelines.HighDefinition.Samples.Common.Editor")]
+[assembly: InternalsVisibleTo("Unity.RenderPipelines.HighDefinition.Editor.Tests")]
+[assembly: InternalsVisibleTo("Unity.Industrial.Materials.AVRD.Editor")]
+[assembly: InternalsVisibleTo("Unity.TextMeshPro.Editor")]

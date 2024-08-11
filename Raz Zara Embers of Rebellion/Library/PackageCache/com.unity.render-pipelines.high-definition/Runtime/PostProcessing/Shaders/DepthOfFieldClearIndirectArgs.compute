@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:353424a09e3c23c2c1d2d0b171be52ade9577fed976446588f95a46e1a89af2c
-size 647
+#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
+
+#pragma only_renderers d3d11 playstation xboxone xboxseries vulkan metal switch
+
+#pragma kernel KClear
+
+// Indirect arguments have to be in a RWBuffer
+// The first three uints are near threadgroups, the last three are far threadgroups
+RWBuffer<uint> _IndirectBuffer;
+
+
+[numthreads(2, 1, 1)]
+void KClear(uint dispatchThreadId : SV_DispatchThreadID)
+{
+    _IndirectBuffer[dispatchThreadId * 3    ] = 0; // ThreadGroupCountX
+    _IndirectBuffer[dispatchThreadId * 3 + 1] = 1; // ThreadGroupCountY
+    _IndirectBuffer[dispatchThreadId * 3 + 2] = 1; // ThreadGroupCountZ
+}

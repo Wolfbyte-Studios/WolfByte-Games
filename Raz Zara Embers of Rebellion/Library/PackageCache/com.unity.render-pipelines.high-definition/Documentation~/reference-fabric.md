@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:18adcb56acbdc4a34c3e615ed124e7a2cc6aa27c18866dfce3a0b8b897991efd
-size 454
+# Fabric material reference
+
+Learn about the properties and behavior of different fabric materials. 
+
+| Page | Description |
+| - | - |
+|[Cotton/Wool Material Inspector reference](cotton-wool-material-inspector-reference.md)|Properties in the **Cotton/Wool** Material inspector.|
+|[Silk Material Inspector reference](silk-material-inspector-reference.md)|Properties in the **Silk** Material inspector.|
+
+## Additional resources
+
+- [Fabrics](fabrics.md) 
+

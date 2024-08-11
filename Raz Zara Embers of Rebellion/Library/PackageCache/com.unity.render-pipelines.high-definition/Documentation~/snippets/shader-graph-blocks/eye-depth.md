@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:56854a5fbdf8a8f3563148a6c92d724100a51ab2924149b1396eaddb960bebcc
-size 531
+<tr>
+<td><strong>Eye Depth</strong></td>
+<td>Scales a value to world space to represent the depth from the near plane. This value represents a point in world space, determined by the platform you use. For more information, see <a href="https://docs.unity3d.com/Manual/SL-PlatformDifferences.html">The Depth (Z) direction in Shaders</a>.</td>
+<td>In <strong>Graph Settings</strong>:
+&#8226; Enable <strong>Depth Write</strong>.<br/>&#8226; Set <strong>Depth Write Mode</strong> to <strong>LinearEye</strong>.</td>
+<td>0</td>
+</tr>
+

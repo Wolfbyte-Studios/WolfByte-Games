@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0cc835db32c24cadff89f017e427ac873d607c88cf88a495c3e49942762b141c
-size 533
+# Graphics Compositor
+
+The Graphics Compositor allows for real-time compositing operations between the High Definition Render Pipeline (HDRP) and external media sources, such as videos or images.
+
+|Page|Description|
+|-|-|
+|[Understand the Graphics Compositor](understand-the-graphics-compositor.md)|Overview of the Graphics Compositor.|
+|[Use the Graphics Compositor](use-the-graphics-compositor.md)|Create a Composition Graph, add or remove Composition Layers, and use camera output, a video or as content for a Composition Layer.|

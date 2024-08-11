@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b81d96f522e906f76ccc0e3573d6cb6c43f5b595a8620579f0dc42c2fd800dd8
-size 706
+# Transform (Vector)
+
+Menu Path : **Operator > Math > Geometry > Transform (Vector)**
+
+The **Transform (Vector)** Operator applies a transformation to a Vector to offset, rotate, or scale it.
+
+## Operator properties
+
+| **Input**     | **Type**  | **Description**                                    |
+| ------------- | --------- | -------------------------------------------------- |
+| **Transform** | Transform | The Transform this Operator applies to the Vector. |
+| **Vector**    | Vector    | The Vector this Operator transforms.               |
+
+| **Output** | **Type** | **Description**         |
+| ---------- | -------- | ----------------------- |
+| **vec**    | Vector   | The transformed Vector. |

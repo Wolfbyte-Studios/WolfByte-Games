@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:108de419b9cc0493f777d851442c3e8821ec3f1ca380902295696a0f402ab1be
-size 684
+#include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariablesGlobal.hlsl"
+#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/HDRaytracingManager.cs.hlsl"
+#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/Shaders/ShaderVariablesRaytracing.cs.hlsl"
+
+// The target acceleration acceleration structure should only be defined for non compute shaders
+#ifndef SHADER_STAGE_COMPUTE
+GLOBAL_RESOURCE(RaytracingAccelerationStructure, _RaytracingAccelerationStructure, RAY_TRACING_ACCELERATION_STRUCTURE_REGISTER);
+#endif
+
+RW_TEXTURE2D_ARRAY(uint, _RayCountTexture);

@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:784a2f42483859c793430ec989fec784edfcb110a0af4a65b260a360574315a3
-size 331
+using System;
+using UnityEngine;
+
+namespace UnityEditor.VFX
+{
+    [VFXInfo(type = typeof(SkinnedMeshRenderer))]
+    class VFXSlotSkinnedMeshRenderer : VFXSlotObject
+    {
+        public override VFXValue DefaultExpression(VFXValue.Mode mode)
+        {
+            return new VFXSkinnedMeshRendererValue(0, mode);
+        }
+    }
+}

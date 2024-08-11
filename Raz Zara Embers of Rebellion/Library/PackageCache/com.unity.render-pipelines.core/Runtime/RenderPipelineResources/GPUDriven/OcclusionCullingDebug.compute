@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:86a034e377b94624c0c35a2bc7569dad05df65f86bc8a9ec215e270b5a896c0e
-size 866
+#pragma kernel ClearOcclusionDebug
+
+#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
+
+#define OCCLUSION_DEBUG 1
+
+#include "Packages/com.unity.render-pipelines.core/Runtime/GPUDriven/OcclusionCullingCommon.hlsl"
+
+[numthreads(8, 8, 1)]
+void ClearOcclusionDebug(uint2 dispatchIndex : SV_DispatchThreadID, uint3 groupId : SV_GroupID)
+{
+#ifdef OCCLUSION_DEBUG
+    int clearSliceIndex = groupId.z;
+
+    for (int i = 0; i < OCCLUSIONCULLINGCOMMONCONFIG_MAX_OCCLUDER_MIPS; ++i)
+    {
+        uint4 bounds = _OccluderMipBounds[i];
+        bounds.y += clearSliceIndex * _OccluderMipLayoutSizeY;
+        if (all(dispatchIndex < bounds.zw))
+            _OcclusionDebugOverlay[OcclusionDebugOverlayOffset(bounds.xy + dispatchIndex)] = 0;
+    }
+
+    if (all(dispatchIndex == 0) && clearSliceIndex == 0)
+        _OcclusionDebugOverlay[0] = 0;
+#endif
+}

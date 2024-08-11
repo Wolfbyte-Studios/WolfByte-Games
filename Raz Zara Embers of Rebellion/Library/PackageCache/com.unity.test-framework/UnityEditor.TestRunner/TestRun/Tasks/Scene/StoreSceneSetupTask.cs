@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e640570dc39df6ef696f62302682c73314d1adeaa2a5979fb6533613a6608a86
-size 500
+using System;
+using System.Collections;
+using UnityEditor.SceneManagement;
+
+namespace UnityEditor.TestTools.TestRunner.TestRun.Tasks.Scene
+{
+    internal class StoreSceneSetupTask : TestTaskBase
+    {
+        internal Func<SceneSetup[]> GetSceneManagerSetup = EditorSceneManager.GetSceneManagerSetup;
+        public override IEnumerator Execute(TestJobData testJobData)
+        {
+            testJobData.SceneSetup = GetSceneManagerSetup();
+            yield break;
+        }
+    }
+}

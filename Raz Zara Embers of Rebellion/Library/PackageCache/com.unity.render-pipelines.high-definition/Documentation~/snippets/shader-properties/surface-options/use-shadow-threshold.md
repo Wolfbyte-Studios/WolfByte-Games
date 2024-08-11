@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4a93d33e80393edac24fa03fcd38a3605561cb1fcc8f000e288b6985764a95ee
-size 251
+<tr>
+<td>- <strong>Use Shadow Threshold</strong></td>
+<td></td>
+<td></td>
+<td>
+
+Indicates whether HDRP uses another threshold value for alpha clipping shadows.<br/>This property only appears if you enable <strong>Alpha Clipping</strong>.
+
+</td>
+</tr>

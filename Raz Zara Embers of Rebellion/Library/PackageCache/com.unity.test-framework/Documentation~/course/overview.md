@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:06517264bb4eba90cd25bc4761a2f394e9bbce512d5ec5c6c7f527ba03cde02a
-size 720
+# Unity Test Framework learning materials
+
+This section contains courses to help you learn Unity Test Framework through a series of applied exercises. The courses are:
+
+* The [Unity Test Framework General Introduction](./welcome.md), which gives you an opportunity to try out some of the framework's core features through general examples. Each exercise in this course is accompanied by a sample project and corresponding solution, which you can import from the Package Manager window.
+
+* [Testing Lost Crypt](./LostCrypt/welcome.md), which shows you how to use the framework to test an actual game project.
+
+We strongly recommend that you complete the General Introduction before you attempt Testing Lost Crypt.

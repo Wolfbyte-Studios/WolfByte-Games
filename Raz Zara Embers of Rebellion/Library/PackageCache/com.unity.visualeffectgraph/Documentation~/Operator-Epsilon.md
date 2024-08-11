@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:906387871269ae03f79125b511417a055e39ade60f70ec13871599c89c4c656a
-size 507
+# Epsilon (Ɛ)
+
+Menu Path : **Operator > Math > Constants > Epsilon (Ɛ)**
+
+The **Epsilon (Ɛ)** Operator returns a tiny value. This is useful for comparisons as it can help to avoid potential precision issues with floats.
+
+## Operator properties
+
+| **Output** | **Type** | **Description**                                           |
+| ---------- | -------- | --------------------------------------------------------- |
+| **Ɛ**      | float    | The Epsilon value. This is equal to `1e-05` or `0.00001`. |

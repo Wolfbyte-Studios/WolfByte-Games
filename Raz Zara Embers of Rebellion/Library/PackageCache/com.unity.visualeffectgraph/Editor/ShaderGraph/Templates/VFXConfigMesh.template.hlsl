@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:493e838d14cd8374cb29299a5b7417757b88d1efabc115e57f3b9fc428c8a341
-size 807
+// Output Type: Mesh
+
+bool GetMeshAndElementIndex(inout VFX_SRP_ATTRIBUTES input, inout AttributesElement element)
+{
+    uint index = VFX_GET_INSTANCE_ID(input);
+
+    $splice(VFXInitInstancing)
+    #ifdef UNITY_INSTANCING_ENABLED
+    input.instanceID = unity_InstanceID;
+    #endif
+    $splice(VFXLoadContextData)
+    uint systemSeed = contextData.systemSeed;
+    uint nbMax = contextData.maxParticleCount;
+    if (ShouldCullElement(index, instanceIndex, nbMax))
+        return false;
+
+    #if VFX_HAS_INDIRECT_DRAW
+    index = indirectBuffer[VFXGetIndirectBufferIndex(index, instanceActiveIndex)];
+    #endif
+
+    element.index = index;
+    element.instanceIndex = instanceIndex;
+    element.instanceActiveIndex = instanceActiveIndex;
+
+    // Mesh requires no preliminary configuration.
+    return true;
+}

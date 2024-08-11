@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c4b692269f18e51325c291e24639754bdda1b4b664475ed50c1fb23f23fdbc92
-size 1329
+using System;
+using UnityEditor.ShaderGraph;
+using UnityEngine.Rendering;
+
+namespace UnityEditor.Rendering.HighDefinition.ShaderGraph
+{
+    static class CreateFabricShaderGraph
+    {
+        [MenuItem("Assets/Create/Shader Graph/HDRP/Fabric Shader Graph", priority = CoreUtils.Priorities.assetsCreateShaderMenuPriority + 2)]
+        public static void CreateFabricGraph()
+        {
+            var target = (HDTarget)Activator.CreateInstance(typeof(HDTarget));
+            target.TrySetActiveSubTarget(typeof(FabricSubTarget));
+
+            var blockDescriptors = new[]
+            {
+                BlockFields.VertexDescription.Position,
+                BlockFields.VertexDescription.Normal,
+                BlockFields.VertexDescription.Tangent,
+                BlockFields.SurfaceDescription.BaseColor,
+                BlockFields.SurfaceDescription.NormalTS,
+                HDBlockFields.SurfaceDescription.BentNormal,
+                BlockFields.SurfaceDescription.Smoothness,
+                BlockFields.SurfaceDescription.Occlusion,
+                BlockFields.SurfaceDescription.Specular,
+                BlockFields.SurfaceDescription.Emission,
+                BlockFields.SurfaceDescription.Alpha,
+            };
+
+            GraphUtil.CreateNewGraphWithOutputs(new[] { target }, blockDescriptors);
+        }
+    }
+}

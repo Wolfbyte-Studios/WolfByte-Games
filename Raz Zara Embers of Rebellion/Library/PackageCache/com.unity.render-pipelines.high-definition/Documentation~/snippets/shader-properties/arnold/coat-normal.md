@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6d901847a6306ba902c8f383c0df6997f917e61c050093f9b769167cf1902806
-size 221
+<tr>
+<td><strong>CoatNormal</strong></td>
+<td>Specifies a tangent-space <a href="https://docs.unity3d.com/Manual/StandardShaderMaterialParameterNormalMap.html">normal map</a> that applies to the coating layer.</td>
+</tr>

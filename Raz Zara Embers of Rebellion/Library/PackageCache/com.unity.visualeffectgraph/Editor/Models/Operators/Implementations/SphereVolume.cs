@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4251a560f304b169ea8b3998eddc656f35b60c8868c59f2c7d0d9a2432bd5515
-size 976
+using UnityEngine;
+
+namespace UnityEditor.VFX.Operator
+{
+    [VFXHelpURL("Operator-Volume(Sphere)")]
+    [VFXInfo(name = "Volume (Sphere)", category = "Math/Geometry")]
+    class SphereVolume : VFXOperator
+    {
+        public class InputProperties
+        {
+            [Tooltip("Sets the sphere used for the volume calculation.")]
+            public TSphere sphere = TSphere.defaultValue;
+        }
+
+        public class OutputProperties
+        {
+            [Tooltip("Outputs the volume of the sphere.")]
+            public float volume;
+        }
+
+        override public string name { get { return "Volume (Sphere)"; } }
+
+        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
+        {
+            var scale = new VFXExpressionExtractScaleFromMatrix(inputExpression[0]);
+            var radius = inputExpression[1];
+            return new VFXExpression[] { VFXOperatorUtility.SphereVolume(radius, scale) };
+        }
+    }
+}

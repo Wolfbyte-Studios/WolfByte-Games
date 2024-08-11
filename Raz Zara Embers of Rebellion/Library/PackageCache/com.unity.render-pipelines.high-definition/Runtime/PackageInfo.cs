@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e0ab32f5a92e46afd638d199205fc0f94cc4c29e682fc5605ee7faa27b9958ee
-size 525
+using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("Unity.RenderPipelines.HighDefinition-Tests.Runtime")]
+[assembly: InternalsVisibleTo("Unity.RenderPipelines.HighDefinition-Tests.Editor")]
+[assembly: InternalsVisibleTo("Unity.GraphicTests.Performance.HDRP.Runtime")]
+[assembly: InternalsVisibleTo("Unity.GraphicTests.Performance.HDRP.Editor")]
+[assembly: InternalsVisibleTo("TestRuntime")]
+[assembly: InternalsVisibleTo("Unity.SensorSDK.Runtime")]
+[assembly: InternalsVisibleTo("Unity.SensorSDK.Editor")]

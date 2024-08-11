@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f4ba5dbda9129976ea0f2cbc983a861acd9176dc78aa82e18d90f2e71d37c1ed
-size 438
+<tr>
+<td><strong>Depth Offset</strong></td>
+<td>The value that the Shader uses to increase the depth of the fragment by. This Block requires you to input the result of the <a href="https://docs.unity3d.com/Packages/com.unity.shadergraph@latest?subfolder=/manual/Parallax-Occlusion-Mapping-Node.html">Parallax Occlusion Mapping</a> Node to produce a realistic result.</td>
+<td><strong>Depth Offset</strong> enabled</td>
+<td>0.0</td>
+</tr>

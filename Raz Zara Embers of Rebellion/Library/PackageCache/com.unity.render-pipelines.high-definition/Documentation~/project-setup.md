@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9f8c695e97c896bfe2deb2a568ad64928742537f2070bef0f3273d07970bf801
-size 497
+# Project setup
+
+Set up your project to use the High Definition Render Pipeline (HDRP).
+
+| Page | Description |
+|-|-|
+| [Configure build and project settings](configure-build-and-project-settings.md) | Configure HDRP for different projects and platforms using the HDRP Wizard, the HDRP Config package, Frame settings and Quality Settings. |
+| [Create an HDRP asset](create-an-hdrp-asset.md) | Create and use an HDRP Asset to control the global rendering settings and create an instance of HDRP. |

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ef7d4ceb6dd314832c4ec0509982fb4fd28d5c41c0a3b760a483c9e0e053e4e0
-size 823
+using System;
+using UnityEditor.ShaderGraph;
+using UnityEngine.Rendering;
+
+namespace UnityEditor.Rendering.HighDefinition.ShaderGraph
+{
+    internal static class CreateFogVolumeShaderGraph
+    {
+        [MenuItem("Assets/Create/Shader Graph/HDRP/Fog Volume Shader Graph", priority = CoreUtils.Priorities.assetsCreateShaderMenuPriority + 8)]
+        public static void Create()
+        {
+            var target = (HDTarget)Activator.CreateInstance(typeof(HDTarget));
+            target.TrySetActiveSubTarget(typeof(FogVolumeSubTarget));
+
+            var blockDescriptors = new[]
+            {
+                BlockFields.SurfaceDescription.BaseColor,
+                BlockFields.SurfaceDescription.Alpha,
+            };
+
+            GraphUtil.CreateNewGraphWithOutputs(new[] { target }, blockDescriptors);
+        }
+    }
+}

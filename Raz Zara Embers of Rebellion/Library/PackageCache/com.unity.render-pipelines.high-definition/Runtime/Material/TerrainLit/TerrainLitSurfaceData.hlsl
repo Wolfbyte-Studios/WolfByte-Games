@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b6d7ae041c467d6bf0b5b931292fe15ae39267419565e586babee3f5df54ac70
-size 359
+struct TerrainLitSurfaceData
+{
+    float3 albedo;
+    float3 normalData;
+    float smoothness;
+    float metallic;
+    float ao;
+};
+
+void InitializeTerrainLitSurfaceData(out TerrainLitSurfaceData surfaceData)
+{
+    surfaceData.albedo = 0;
+    surfaceData.normalData = 0;
+    surfaceData.smoothness = 0;
+    surfaceData.metallic = 0;
+    surfaceData.ao = 1;
+}

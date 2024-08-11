@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:56b28cb9bbf0af7d651763b0a1bd88a28d85bd05d03f3daa632ca5105bc92bb6
-size 489
+.clip-inspector-custom-properties {
+    margin-top: 5px;
+}
+
+.clip-inspector-custom-properties__foldout > Toggle {
+    background-color: var(--unity-colors-inspector_titlebar-background);
+    -unity-font-style: bold;
+    padding: var(--unity-metrics-default-border_radius);
+}
+
+.clip-inspector-custom-properties__inspector {
+    padding-left: 0;
+}
+
+.clip-inspector-custom-properties__foldout > Toggle :hover {
+    background-color: var(--unity-colors-inspector_titlebar-background-hover);
+}

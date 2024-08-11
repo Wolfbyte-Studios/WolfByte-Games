@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2f8c80dfdc4db48ece6ff34eb61c0ac6c83dc796101a6601fcbdd0b173e23497
-size 1238
+using System;
+using System.Collections;
+using NUnit.Framework.Internal;
+using UnityEngine.TestTools.NUnitExtensions;
+
+namespace UnityEditor.TestTools.TestRunner.TestRun.Tasks
+{
+    internal class SetupConstructDelegatorTask : TestTaskBase
+    {
+        internal Func<TestRunnerStateSerializer, ConstructDelegator> CreateConstructDelegator =
+            stateSerializer => new ConstructDelegator(stateSerializer);
+
+        internal Action<Func<Type, object[], object>> SetConstructorCallWrapper =
+            func => Reflect.ConstructorCallWrapper = func;
+
+        public SetupConstructDelegatorTask()
+        {
+            RerunAfterResume = true;
+        }
+
+        public override IEnumerator Execute(TestJobData testJobData)
+        {
+            var taskInfo = testJobData.taskInfoStack.Peek();
+            if (taskInfo.taskMode == TaskMode.Normal)
+            {
+                testJobData.testRunnerStateSerializer = new TestRunnerStateSerializer();
+            }
+
+            testJobData.ConstructDelegator = CreateConstructDelegator(testJobData.testRunnerStateSerializer);
+            SetConstructorCallWrapper(testJobData.ConstructDelegator.Delegate);
+            yield break;
+        }
+    }
+}

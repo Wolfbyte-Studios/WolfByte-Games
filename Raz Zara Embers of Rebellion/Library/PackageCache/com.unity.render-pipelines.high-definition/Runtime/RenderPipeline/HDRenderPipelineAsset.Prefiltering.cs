@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e90f50a374c5593007aac178ebc43bebf660943df91bc3ac3adeda235c2cb5df
-size 983
+#if UNITY_EDITOR
+using ShaderKeywordFilter = UnityEditor.ShaderKeywordFilter;
+
+namespace UnityEngine.Rendering.HighDefinition
+{
+    // This partial class is used for Shader Keyword Prefiltering
+    // It's an editor only file and used when making builds to determine what keywords can
+    // be removed early in the Shader Processing stage based on the settings in each HDRP Asset
+    public partial class HDRenderPipelineAsset
+    {
+        // Use legacy lightmaps (GPU resident drawer)
+        [ShaderKeywordFilter.SelectOrRemove(true, keywordNames: "USE_LEGACY_LIGHTMAPS")]
+        [SerializeField] private bool m_PrefilterUseLegacyLightmaps = false;
+
+        internal struct ShaderPrefilteringData
+        {
+            public bool useLegacyLightmaps;
+        }
+
+        internal void UpdateShaderKeywordPrefiltering(ref ShaderPrefilteringData prefilteringData)
+        {
+            m_PrefilterUseLegacyLightmaps = prefilteringData.useLegacyLightmaps;
+        }
+    }
+}
+
+#endif

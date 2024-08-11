@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ec6d3484c9da84c16473005b638ad74ace42533c4ebfcafbbdb5fe31faa7b073
-size 246
+using System;
+using UnityEditor.Experimental.GraphView;
+using UnityEngine;
+using UnityEngine.VFX;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Linq;
+
+using Object = UnityEngine.Object;
+
+namespace UnityEditor.VFX.UI
+{
+}

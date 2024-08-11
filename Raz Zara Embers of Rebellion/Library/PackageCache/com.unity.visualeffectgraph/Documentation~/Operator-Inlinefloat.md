@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6075dcc4be31218d4b447f6ec707e2389e51c46635fc050e90960217fe27cb78
-size 969
+# float
+
+Menu Path : **Operator > Inline > float**
+
+The **float** inline Operator allows you to store an instance of a float. This is one of the Visual Effect Graph's base [Types](VisualEffectGraphTypeReference.md). To modify a value in this inline Operator, either set the value explicitly in the Operator body, or connect it to a compatible output.
+
+[!include[](Snippets/Operator-InlineIntro.md)]
+
+
+## Operator properties
+
+| **Input** | **Type** | **Description**                                              |
+| --------- | -------- | ------------------------------------------------------------ |
+| **Input** | float   | The value of the Operator. You can either set this in the Operator's body, or connect to it from the output of another Operator. |
+
+| **Output** | **Type** | **Description**            |
+| ---------- | -------- | -------------------------- |
+| **Output** | float   | The value of the Operator. |
+
+[!include[](Snippets/Operator-InlineNotes.md)]

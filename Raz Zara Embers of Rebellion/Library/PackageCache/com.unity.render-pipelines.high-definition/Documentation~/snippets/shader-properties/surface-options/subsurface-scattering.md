@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bb21fdd1370be20fc47eea60bb10ee5e27405c5f8ba414effda6869226a3c247
-size 263
+<tr>
+<td><strong>Subsurface Scattering</strong></td>
+<td></td>
+<td></td>
+<td>Indicates whether the Material supports subsurface scattering. To disable subsurface scattering in specific regions of the Material, use the <strong>Subsurface Mask</strong>.</td>
+</tr>

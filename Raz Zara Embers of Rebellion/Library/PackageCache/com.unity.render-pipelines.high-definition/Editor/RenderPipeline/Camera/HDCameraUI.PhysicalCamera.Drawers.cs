@@ -1,3 +1,73 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:38af1543bff86a2eac04aab60a8661e064d8dc7ee74e0f3c2e048a7c344896cf
-size 3368
+namespace UnityEditor.Rendering.HighDefinition
+{
+    using CED = CoreEditorDrawer<SerializedHDCamera>;
+
+    static partial class HDCameraUI
+    {
+        partial class PhysicalCamera
+        {
+            public static readonly CED.IDrawer Drawer;
+            public static readonly CED.IDrawer DrawerPreset;
+
+            static PhysicalCamera()
+            {
+
+                Drawer = CED.Conditional(
+                    (serialized, owner) => serialized.projectionMatrixMode.intValue == (int)CameraUI.ProjectionMatrixMode.PhysicalPropertiesBased,
+                    CED.Group(
+                        CameraUI.PhysicalCamera.Styles.cameraBody,
+                        GroupOption.Indent,
+                        CED.Group(
+                            GroupOption.Indent,
+                            CameraUI.PhysicalCamera.Drawer_PhysicalCamera_CameraBody_Sensor,
+                            CameraUI.PhysicalCamera.Drawer_PhysicalCamera_CameraBody_ISO,
+                            CameraUI.PhysicalCamera.Drawer_PhysicalCamera_CameraBody_ShutterSpeed,
+                            CameraUI.PhysicalCamera.Drawer_PhysicalCamera_CameraBody_GateFit
+                        )
+                        ),
+                    CED.Group(
+                        CameraUI.PhysicalCamera.Styles.lens,
+                        GroupOption.Indent,
+                        CED.Group(
+                            GroupOption.Indent,
+                            CameraUI.PhysicalCamera.Drawer_PhysicalCamera_Lens_FocalLength,
+                            CameraUI.PhysicalCamera.Drawer_PhysicalCamera_Lens_Shift,
+                            CameraUI.PhysicalCamera.Drawer_PhysicalCamera_Lens_Aperture,
+                            CameraUI.PhysicalCamera.Drawer_PhysicalCamera_FocusDistance
+                        )
+                        ),
+                    CED.Group(
+                        CameraUI.PhysicalCamera.Styles.apertureShape,
+                        GroupOption.Indent,
+                        CED.Group(
+                            GroupOption.Indent,
+                            CameraUI.PhysicalCamera.Drawer_PhysicalCamera_ApertureShape
+                        )
+                    )
+                );
+
+                DrawerPreset = CED.Conditional(
+                    (serialized, owner) => serialized.projectionMatrixMode.intValue == (int)CameraUI.ProjectionMatrixMode.PhysicalPropertiesBased,
+                    CED.Group(
+                        CameraUI.PhysicalCamera.Styles.cameraBody,
+                        GroupOption.Indent,
+                        CED.Group(
+                            GroupOption.Indent,
+                            CameraUI.PhysicalCamera.Drawer_PhysicalCamera_CameraBody_Sensor,
+                            CameraUI.PhysicalCamera.Drawer_PhysicalCamera_CameraBody_GateFit
+                        )
+                        ),
+                    CED.Group(
+                        CameraUI.PhysicalCamera.Styles.lens,
+                        GroupOption.Indent,
+                        CED.Group(
+                            GroupOption.Indent,
+                            CameraUI.PhysicalCamera.Drawer_PhysicalCamera_Lens_FocalLength,
+                            CameraUI.PhysicalCamera.Drawer_PhysicalCamera_Lens_Shift
+                        )
+                    )
+                );
+            }
+        }
+    }
+}

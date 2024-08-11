@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:058a825ba4efbc251f71b10e53d69cb5df8d6ac7dec41cdb1e8326302f38c00d
-size 531
+# TerrainType
+
+A Unity Terrain defined by a set of bounds, a heightmap, and a height.
+
+## Properties
+
+| **Property**   | **Description**                                              |
+| -------------- | ------------------------------------------------------------ |
+| **Bounds**     | The bounds of the terrain. This is an [AABox](Type-AABox.md). |
+| **Height Map** | The heightmap of the terrain.                                |
+| **Height**     | The height of the terrain. This is the highest elevation the terrain can have. |

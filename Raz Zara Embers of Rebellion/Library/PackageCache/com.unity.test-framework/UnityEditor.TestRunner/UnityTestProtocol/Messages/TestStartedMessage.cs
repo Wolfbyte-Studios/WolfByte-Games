@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0b15980120750138845ca85873d6355bdf7c925d5df83f464b109efd1b2087f0
-size 380
+using System;
+
+namespace UnityEditor.TestTools.TestRunner.UnityTestProtocol
+{
+    internal class TestStartedMessage : Message
+    {
+        public string name;
+        public TestState state;
+
+        public TestStartedMessage()
+        {
+            type = "TestStatus";
+            phase = "Begin";
+            state = TestState.Inconclusive;
+        }
+    }
+}

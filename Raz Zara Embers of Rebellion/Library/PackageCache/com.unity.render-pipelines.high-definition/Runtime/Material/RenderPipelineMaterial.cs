@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fb2884c3db1171415362b94c6dd11f54879f944a0d3f73058cf45962875d2a64
-size 788
+using System.Collections.Generic;
+using UnityEngine.Experimental.Rendering;
+
+namespace UnityEngine.Rendering.HighDefinition
+{
+    class RenderPipelineMaterial : Object
+    {
+        // GBuffer management
+        public virtual bool IsDefferedMaterial() { return false; }
+
+        // Regular interface
+        public virtual void Build(HDRenderPipeline renderPipeline) { }
+
+        // Optionally build resources offline (in editor).
+        public virtual void BuildOffline(ref List<RenderTexture> resourceList) { }
+
+        public virtual void Cleanup() { }
+
+        // Following function can be use to initialize GPU resource (once or each frame) and bind them
+        public virtual void RenderInit(CommandBuffer cmd) { }
+        public virtual void Bind(CommandBuffer cmd) { }
+    }
+}

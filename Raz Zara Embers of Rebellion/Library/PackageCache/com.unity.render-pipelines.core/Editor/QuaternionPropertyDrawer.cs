@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6a727527426a6c7cce2177c6472f461c928e1e5da44625dd217fc389365d2aba
-size 704
+using UnityEngine;
+
+namespace UnityEditor.Rendering
+{
+    [CustomPropertyDrawer(typeof(Quaternion))]
+    class QuaternionPropertyDrawer : PropertyDrawer
+    {
+        public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+        {
+            var euler = property.quaternionValue.eulerAngles;
+            EditorGUI.BeginChangeCheck();
+            var w = EditorGUIUtility.wideMode;
+            EditorGUIUtility.wideMode = true;
+            euler = EditorGUI.Vector3Field(position, label, euler);
+            EditorGUIUtility.wideMode = w;
+            if (EditorGUI.EndChangeCheck())
+                property.quaternionValue = Quaternion.Euler(euler);
+        }
+    }
+}

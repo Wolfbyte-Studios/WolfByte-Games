@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:923790956bd5ee90a9b383700d493df2dea1b03327661414b73aea63291c23fa
-size 405
+<tr>
+<td><strong>Double Sided Global Illumination</strong></td>
+<td>When enabled, the lightmapper accounts for both sides of the geometry when calculating Global Illumination. Backfaces are not rendered or added to lightmaps, but get treated as valid when seen from other objects. When using the Progressive Lightmapper, backfaces bounce light using the same emission and albedo as frontfaces.</td>
+</tr>

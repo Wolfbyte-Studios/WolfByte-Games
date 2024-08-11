@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1513ef32170c5b1b94b16ba48d64468d41848d655c873d7c77929cd31898761e
-size 574
+{
+	SubShader
+	{
+		Tags{ "RenderPipeline" = "HDRenderPipeline" }
+		${VFXInclude("Shaders/VFXParticleHeader.template")}
+		${VFXInclude("Shaders/ParticleMeshes/PassSelection.template")}
+		${VFXInclude("Shaders/ParticleMeshes/PassDepth.template"),IS_OPAQUE_PARTICLE}
+		${VFXInclude("Shaders/ParticleMeshes/PassVelocity.template"),USE_MOTION_VECTORS_PASS}
+		${VFXInclude("Shaders/ParticleMeshes/PassForward.template")}
+		${VFXIncludeRP("Templates/Mesh/PassFullScreenDebug.template")}
+		${VFXInclude("Shaders/ParticleMeshes/PassShadowCaster.template"),USE_CAST_SHADOWS_PASS}
+	}
+}

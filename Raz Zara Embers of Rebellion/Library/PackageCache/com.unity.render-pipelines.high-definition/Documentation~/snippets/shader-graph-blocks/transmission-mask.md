@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ff4723d76c1bfe72249a6bd5e9abc89fed4b57fbafebe2ab6d81c7babfefbc4b
-size 422
+<tr>
+<td><strong>Transmission Mask</strong></td>
+<td>The strength of transmitted light across the Material.</td>
+<td>&#8226; <strong>Material</strong> set to <strong>Lit</strong> <br/>&#8226; <strong>Material Type</strong> set to <strong>Subsurface Scattering</strong> and <strong>Transmission</strong> enabled.<br/>Or<br/>&#8226; <strong>Material Type</strong> set to <strong>Translucent</strong></td>
+<td>1.0</td>
+</tr>

@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f7ffdff7ec948050d1fa72b4b41dc91a66cf914a966b45a152628fb706aaca36
-size 262
+// Forward pass
+Pass
+{
+    Name ${VFXPassForward}
+	Tags { "LightMode"=${VFXPassForward} }
+
+	${VFXStencilForward}
+
+	HLSLPROGRAM
+	#pragma target 4.5
+	${VFXPassForwardAdditionalPragma}
+
+	${VFXInclude("Shaders/ParticlePoints/PassForwardCommon.template")}
+	ENDHLSL
+}

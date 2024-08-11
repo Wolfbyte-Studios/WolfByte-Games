@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ce895f42d996943c6421f6239b061b70dca1a07613e458e2fcac9127a19dc6b0
-size 508
+using System.Collections;
+using System.Collections.Generic;
+using NUnit.Framework;
+using UnityEngine;
+using UnityEngine.TestTools;
+using UnityEngine.SceneManagement;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
+class SampleRuntimeTests
+{
+    const float k_Epsilon = 1e-4f;
+
+    static List<string> s_Scenes = new List<string> { };
+
+    public IEnumerator SampleLoadSceneTest()
+    {
+        SceneManager.LoadScene(s_Scenes[0]);
+
+        yield return null; // Skip a frame
+
+        Assert.True(true);
+    }
+}

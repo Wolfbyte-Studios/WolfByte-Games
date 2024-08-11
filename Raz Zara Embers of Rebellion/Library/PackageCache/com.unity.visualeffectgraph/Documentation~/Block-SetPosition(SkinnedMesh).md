@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:507666c9f9bc8d2350dc2fc50c5ed87c5c09f78c8cddb21e5f40d2c8d3b93007
-size 549
+# Set Position (Skinned Mesh)
+
+Menu Path: **Position > Set Position (Skinned Mesh)**
+
+Use the **Set Position (Skinned Mesh)** Block to set particle positions based on the shape of a Skinned Mesh Renderer component.
+
+The Block calculates positions from the vertex data of the mesh, and stores the results in the [position attributes](Reference-Attributes.md).
+
+Note: [Velocity from Direction and Speed](Block-VelocityFromDirection&Speed(NewDirection).md) Blocks can then process the direction attribute.
+
+[!include[](Snippets/Block-SetPosition.md)]
+

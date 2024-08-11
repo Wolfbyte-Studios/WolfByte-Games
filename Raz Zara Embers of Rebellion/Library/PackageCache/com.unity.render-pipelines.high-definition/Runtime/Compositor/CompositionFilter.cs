@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4d4bc56033a99063f1831cf813ec1d7c7b526271c88ed8d26c859a409b422183
-size 731
+using UnityEngine;
+
+namespace UnityEngine.Rendering.HighDefinition.Compositor
+{
+    [System.Serializable]
+    internal class CompositionFilter
+    {
+        public enum FilterType
+        {
+            CHROMA_KEYING = 0,
+            ALPHA_MASK
+        }
+
+        public FilterType filterType;
+        public Color maskColor;
+        public float keyThreshold = 0.8f;
+        public float keyTolerance = 0.5f;
+
+        [Range(0.0f, 1.0f)]
+        public float spillRemoval = 0.0f;
+        public Texture alphaMask;
+
+        static public CompositionFilter Create(FilterType type)
+        {
+            var newFilter = new CompositionFilter();
+            newFilter.filterType = type;
+            return newFilter;
+        }
+    }
+}

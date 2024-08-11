@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ca08c52857074ae748b15cf81f793e96d7f63a9c87146a75154c18249c2120e8
-size 211
+<tr>
+<td><strong>Use Light Facing Normal</strong></td>
+<td>Indicates whether or not hair normals always appear to face towards light sources in the Scene. This mimics the behavior of real-world hair.</td>
+</tr>

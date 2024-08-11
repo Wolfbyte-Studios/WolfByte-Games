@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a19d0fa389535e7830215e24aa68dabe659b61bd836f8b975edd829ab4327c90
-size 355
+//
+// This file was automatically generated. Please don't edit by hand. Execute Editor command [ Edit > Rendering > Generate Shader Includes ] instead
+//
+
+#ifndef PREINTEGRATEDFGD_CS_HLSL
+#define PREINTEGRATEDFGD_CS_HLSL
+//
+// UnityEngine.Rendering.HighDefinition.PreIntegratedFGD+FGDTexture:  static fields
+//
+#define FGDTEXTURE_RESOLUTION (64)
+
+
+#endif

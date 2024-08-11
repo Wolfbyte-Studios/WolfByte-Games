@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:58306ecc6ced2772a1e114cef52ba2e16190964972e68c8cf357bbbf1627229b
-size 901
+using UnityEngine;
+using UnityEngine.VFX.Utility;
+namespace UnityEditor.VFX.Utility
+{
+    [CustomEditor(typeof(VFXOutputEventUnityEvent))]
+    class VFXOutputEventUnityEventEditor : VFXOutputEventHandlerEditor
+    {
+        SerializedProperty m_OnEvent;
+
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+            m_OnEvent = serializedObject.FindProperty(nameof(VFXOutputEventUnityEvent.onEvent));
+        }
+
+        public override void OnInspectorGUI()
+        {
+            serializedObject.Update();
+            EditorGUI.BeginChangeCheck();
+
+            DrawOutputEventProperties();
+            EditorGUILayout.PropertyField(m_OnEvent);
+            HelpBox("Attribute Usage", "VFX Attributes are not used for this Output Event Handler");
+            if (EditorGUI.EndChangeCheck())
+                serializedObject.ApplyModifiedProperties();
+        }
+    }
+}

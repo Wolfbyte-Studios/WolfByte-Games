@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a78470c3c617c87c9c860b70f87e999c7a96741fd7560cf56c4d28373218df84
-size 331
+using System;
+using UnityEngine;
+
+namespace UnityEditor.VFX
+{
+    [VFXInfo(type = typeof(AnimationCurve))]
+    class VFXSlotAnimationCurve : VFXSlot
+    {
+        public override VFXValue DefaultExpression(VFXValue.Mode mode)
+        {
+            return new VFXValue<AnimationCurve>(new AnimationCurve(), mode);
+        }
+    }
+}

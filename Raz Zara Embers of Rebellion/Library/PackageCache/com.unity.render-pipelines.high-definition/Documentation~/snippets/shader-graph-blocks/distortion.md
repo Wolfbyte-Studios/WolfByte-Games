@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:28848392a102082a8fdd1f1e01677e1ff386073f63f9691e346e73a3e2802970
-size 317
+<tr>
+<td><strong>Distortion</strong></td>
+<td>The screen space, per-direction amount that HDRP distorts light that passes through the material. For example, if you set this to (1, 0), the output is offset by 1 pixel to the right.</td>
+<td>&#8226; <strong>Distortion</strong> enabled</td>
+<td>Vector2(0, 0)</td>
+</tr>

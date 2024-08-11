@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d5a7a6df55947c551cce69a2df6d4581d45b8159824592d7d20a786bec3ac759
-size 394
+<tr>
+<td><strong>Coat Normal World Space</strong></td>
+<td>The normal, in world space, for the coat.</td>
+<td>&#8226; <strong>Material</strong> set to <strong>StackLit</strong> <br/>&#8226; <strong>Coat</strong> enabled <br/>&#8226; <strong>Coat Normal</strong> enabled <br/>&#8226; <strong>Fragment Normal Space</strong> set to <strong>World</strong></td>
+<td>CoordinateSpace.World</td>
+</tr>

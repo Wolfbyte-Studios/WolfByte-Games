@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:58bc5b41e400a563fbc58a5f7fd3e9d525d28583d5db92ee7dbdc1479bbae49c
-size 603
+using System.Collections.Generic;
+using System.Linq;
+
+namespace UnityEditor.Rendering.HighDefinition
+{
+    static class RenderPipelineSettingsUtilities
+    {
+        public static IEnumerable<string> RemoveDLSSKeywords(IEnumerable<string> keywords)
+        {
+#if ENABLE_NVIDIA && !ENABLE_NVIDIA_MODULE
+            // Case 1358409 workaround:
+            // Remove all DLSS keyword when the NVIDIA package is not installed.
+            return keywords.Where(keyword => keyword.IndexOf("dlss", System.StringComparison.OrdinalIgnoreCase) == -1);
+#else
+            return keywords;
+#endif
+        }
+    }
+}

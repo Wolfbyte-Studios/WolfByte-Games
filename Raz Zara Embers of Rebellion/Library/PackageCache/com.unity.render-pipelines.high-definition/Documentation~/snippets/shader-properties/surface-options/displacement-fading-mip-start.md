@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bcd53a00856b953e04145fdf6f376d001682b8dc508d8f09af29500eb12bd736
-size 281
+<tr>
+<td>- <strong>Fading Mip Level Start</strong></td>
+<td></td>
+<td></td>
+<td>The mip level at which the pixel displacement effect begins to fade out.<br/>This property only appears if you set <strong>Displacement Mode</strong> to <strong>Pixel Displacement</strong>.</td>
+</tr>

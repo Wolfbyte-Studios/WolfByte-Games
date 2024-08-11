@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7e872aa7118a7abe295d0442cc77f74b209d1eb6341d06cc207a4e081410fc1a
-size 447
+<tr>
+  <td></td>
+  <td>Global Illumination</td>
+  <td>The mode HDRP uses to determine how color emission interacts with global illumination.<br>• Realtime: Select this option to make emission affect the result of real-time global illumination.<br>• Baked: Select this option to make emission only affect global illumination during the baking process.<br>• None: Select this option to make emission not affect global illumination.</td>
+</tr>

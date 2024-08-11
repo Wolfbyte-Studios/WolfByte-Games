@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a8866c01500d3ea3205e1d39a83fbe580348a4cda89b1dc93d9b53415bf40c70
-size 374
+﻿using System.Collections;
+using System.Collections.Generic;
+using NUnit.Framework;
+using UnityEngine;
+using UnityEngine.TestTools;
+
+namespace PlayModeTests_8
+{
+    public class ApplicationPlayingTests
+    {
+        [Test]
+        public void VerifyApplicationPlaying()
+        {
+            Assert.That(Application.isPlaying, Is.True);
+        }
+    }
+}

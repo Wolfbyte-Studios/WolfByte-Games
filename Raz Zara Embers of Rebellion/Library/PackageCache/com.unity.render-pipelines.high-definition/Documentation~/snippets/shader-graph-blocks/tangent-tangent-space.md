@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4b4790afe9e9c10c25f1aa153f09afbc4e4b7cc8ea50c3e9b088e508676eac6c
-size 815
+<tr>
+<td><strong>Tangent Tangent Space</strong></td>
+<td>The direction of anisotropy in tangent space. This stretches the specular highlights in the given direction.</td>
+<td>&#8226; <strong>Material</strong> set to <strong>Lit</strong> <br/>&#8226; <strong>Material Type</strong> set to <strong>Anisotropy</strong> <br/>&#8226; <strong>Fragment Normal Space</strong> set to <strong>Tangent</strong> <br/>Or <br/>&#8226; <strong>Material</strong> set to <strong>StackLit</strong><br/>&#8226; <strong>Fragment Normal Space</strong> set to <strong>Tangent</strong> <br/>Or <br/>&#8226; <strong>Material</strong> set to Fabric and <strong>Material Type</strong> set to <strong>Silk</strong><br/>&#8226; <strong>Fragment Normal Space</strong> set to <strong>Tangent</strong></td>
+<td>CoordinateSpace.Tangent</td>
+</tr>

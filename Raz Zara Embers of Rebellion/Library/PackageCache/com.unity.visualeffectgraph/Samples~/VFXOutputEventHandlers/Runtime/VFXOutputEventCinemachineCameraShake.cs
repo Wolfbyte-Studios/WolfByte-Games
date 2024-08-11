@@ -1,3 +1,49 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:569cceda15abc7446e870f86f9c68cca1e811c86a36eb6c28e615239ab7cf55a
-size 1587
+#if VFX_OUTPUTEVENT_CINEMACHINE_2_6_0_OR_NEWER
+
+#if VFX_OUTPUTEVENT_CINEMACHINE_3_0_0_OR_NEWER
+using Unity.Cinemachine;
+#else
+using Cinemachine;
+#endif
+
+namespace UnityEngine.VFX.Utility
+{
+    [ExecuteAlways]
+    [RequireComponent(typeof(VisualEffect))]
+    class VFXOutputEventCinemachineCameraShake : VFXOutputEventAbstractHandler
+    {
+        public override bool canExecuteInEditor => true;
+
+        public enum Space
+        {
+            Local,
+            World
+        }
+
+        static readonly int k_Position = Shader.PropertyToID("position");
+        static readonly int k_Velocity = Shader.PropertyToID("velocity");
+
+        [Tooltip("The Cinemachine Impulse Source to use in order to send impulses.")]
+        public CinemachineImpulseSource cinemachineImpulseSource;
+        [Tooltip("The space in which the position and velocity attributes values are defined (local to the VFX, or world).")]
+        public Space attributeSpace;
+
+        public override void OnVFXOutputEvent(VFXEventAttribute eventAttribute)
+        {
+            if (cinemachineImpulseSource != null)
+            {
+                Vector3 pos = eventAttribute.GetVector3(k_Position);
+                Vector3 vel = eventAttribute.GetVector3(k_Velocity);
+
+                if (attributeSpace == Space.Local)
+                {
+                    pos = transform.localToWorldMatrix.MultiplyPoint(pos);
+                    vel = transform.localToWorldMatrix.MultiplyVector(vel);
+                }
+
+                cinemachineImpulseSource.GenerateImpulseAt(pos, vel);
+            }
+        }
+    }
+}
+#endif

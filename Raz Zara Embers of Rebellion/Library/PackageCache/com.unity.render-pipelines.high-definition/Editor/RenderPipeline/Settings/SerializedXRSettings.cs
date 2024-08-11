@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5db977a12f88ec67523822d0289211993f023f6cab81f1d662bcc31d2a1b48a2
-size 788
+using UnityEngine.Rendering;
+
+namespace UnityEditor.Rendering.HighDefinition
+{
+    class SerializedXRSettings
+    {
+        public SerializedProperty root;
+
+        public SerializedProperty singlePass;
+        public SerializedProperty occlusionMesh;
+        public SerializedProperty cameraJitter;
+        public SerializedProperty allowMotionBlur;
+
+        public SerializedXRSettings(SerializedProperty root)
+        {
+            this.root = root;
+
+            singlePass = root.Find((GlobalXRSettings s) => s.singlePass);
+            occlusionMesh = root.Find((GlobalXRSettings s) => s.occlusionMesh);
+            cameraJitter = root.Find((GlobalXRSettings s) => s.cameraJitter);
+            allowMotionBlur = root.Find((GlobalXRSettings s) => s.allowMotionBlur);
+        }
+    }
+}

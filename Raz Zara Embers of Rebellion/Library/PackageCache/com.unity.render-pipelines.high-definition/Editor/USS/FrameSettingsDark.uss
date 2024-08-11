@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c131f8cfc9ef8496e26316db6e4e7ffd3136c1bfd97e277462a13f383ef6cbbe
-size 164
+.frame-settings-override-header > Button
+{
+	/* there is no variable for disabled label yet */
+	color: rgba(255, 255, 255, 0.5); /*from BuilderInspectorLight.uss*/
+}

@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a19e96f55ad67bab757423292976208da1b4649b134281079f9ef0704dc16070
-size 825
+using System.Text.RegularExpressions;
+using MyExercise_5s;
+using NUnit.Framework;
+using UnityEngine;
+using UnityEngine.TestTools;
+
+namespace Tests_5s
+{
+    internal class MyLoggingClassTests
+    {
+        [Test]
+        public void DoSomethingLogsMessage()
+        {
+            var loggingClassUnderTest = new MyLoggingClass();
+            
+            loggingClassUnderTest.DoSomething();
+            
+            LogAssert.Expect(LogType.Log, "Doing something");
+        }
+
+        [Test]
+        public void DoSomethingElseLogsError()
+        {
+            var loggingClassUnderTest = new MyLoggingClass();
+            
+            loggingClassUnderTest.DoSomethingElse();
+            
+            LogAssert.Expect(LogType.Error, new Regex("An error happened. Code: \\d"));
+        }
+    }
+}

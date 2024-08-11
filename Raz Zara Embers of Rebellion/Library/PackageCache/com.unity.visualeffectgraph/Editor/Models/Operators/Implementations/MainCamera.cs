@@ -1,3 +1,42 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fc9023aec5fb9411c942fa67a8ce2b2f267fc99f35910de88faa6682538522c1
-size 2057
+using UnityEngine.VFX;
+
+namespace UnityEditor.VFX.Operator
+{
+    [VFXHelpURL("Operator-MainCamera")]
+    [VFXInfo(category = "Camera")]
+    class MainCamera : VFXOperator
+    {
+        public class OutputProperties
+        {
+            public CameraType o = new CameraType();
+        }
+
+        override public string name { get { return "Main Camera"; } }
+
+        public sealed override VFXSpace GetOutputSpaceFromSlot(VFXSlot slot)
+        {
+            if (slot.spaceable && slot.property.type == typeof(CameraType))
+                return VFXSpace.World;
+
+            return VFXSpace.None;
+        }
+
+        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
+        {
+            VFXExpression matrix = new VFXExpressionExtractMatrixFromMainCamera();
+            VFXExpression orthographic = new VFXExpressionIsMainCameraOrthographic();
+            VFXExpression fov = new VFXExpressionExtractFOVFromMainCamera();
+            VFXExpression nearPlane = new VFXExpressionExtractNearPlaneFromMainCamera();
+            VFXExpression farPlane = new VFXExpressionExtractFarPlaneFromMainCamera();
+            VFXExpression orthographicSize = new VFXExpressionGetOrthographicSizeFromMainCamera();
+            VFXExpression aspectRatio = new VFXExpressionExtractAspectRatioFromMainCamera();
+            VFXExpression pixelDimensions = new VFXExpressionExtractPixelDimensionsFromMainCamera();
+            VFXExpression lensShift = new VFXExpressionExtractLensShiftFromMainCamera();
+            VFXExpression depthBuffer = new VFXExpressionGetBufferFromMainCamera(VFXCameraBufferTypes.Depth);
+            VFXExpression colorBuffer = new VFXExpressionGetBufferFromMainCamera(VFXCameraBufferTypes.Color);
+            VFXExpression scaledPixelDimensions = new VFXExpressionExtractScaledPixelDimensionsFromMainCamera();
+
+            return new[] { matrix, orthographic, fov, nearPlane, farPlane, orthographicSize, aspectRatio, pixelDimensions, scaledPixelDimensions, lensShift, depthBuffer, colorBuffer };
+        }
+    }
+}

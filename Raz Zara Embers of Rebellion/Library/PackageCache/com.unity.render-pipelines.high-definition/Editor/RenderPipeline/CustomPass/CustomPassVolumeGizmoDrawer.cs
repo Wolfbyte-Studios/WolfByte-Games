@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:798067165e5a0935fe3957aa903c2a97846d6b1722484d52f7be37d56339afd9
-size 1367
+using System;
+using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.HighDefinition;
+
+namespace UnityEditor.Rendering
+{
+    class CustomVolumePassGizmoDrawer : IVolumeAdditionalGizmo
+    {
+        public Type type => typeof(CustomPassVolume);
+
+        public void OnBoxColliderDraw(IVolume scr, BoxCollider c)
+        {
+            var customPass = scr as CustomPassVolume;
+            if (customPass.fadeRadius > 0)
+            {
+                var twiceFadeRadius = customPass.fadeRadius * 2;
+                // invert te scale for the fade radius because it's in fixed units
+                Vector3 s = new Vector3(
+                    twiceFadeRadius / customPass.transform.localScale.x,
+                    twiceFadeRadius / customPass.transform.localScale.y,
+                    twiceFadeRadius / customPass.transform.localScale.z
+                );
+                Gizmos.DrawWireCube(c.center, c.size + s);
+            }
+        }
+
+        public void OnMeshColliderDraw(IVolume scr, MeshCollider c)
+        {
+        }
+
+        public void OnSphereColliderDraw(IVolume scr, SphereCollider c)
+        {
+            var customPass = scr as CustomPassVolume;
+            if (customPass.fadeRadius > 0)
+                Gizmos.DrawWireSphere(c.center, c.radius + customPass.fadeRadius / customPass.transform.lossyScale.x);
+        }
+    }
+}

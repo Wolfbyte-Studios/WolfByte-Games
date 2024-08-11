@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dc1c73162735178cd98268d0ee64979c16667e198fec02e433cf3c76ab39d791
-size 804
+using System;
+using System.Collections.Generic;
+using NUnit.Framework.Interfaces;
+using UnityEngine.TestRunner.TestLaunchers;
+
+namespace UnityEditor.TestTools.TestRunner.Api
+{
+    internal interface ITestAdaptorFactory
+    {
+        ITestAdaptor Create(ITest test);
+        ITestAdaptor Create(RemoteTestData testData);
+        ITestResultAdaptor Create(ITestResult testResult);
+        ITestAdaptor Create(ITest test, ITestFilter filter);
+        ITestResultAdaptor Create(RemoteTestResultData testResult, RemoteTestResultDataWithTestData allData);
+        ITestAdaptor BuildTree(RemoteTestResultDataWithTestData data);
+        IEnumerator<ITestAdaptor> BuildTreeAsync(RemoteTestResultDataWithTestData data);
+        void ClearResultsCache();
+        void ClearTestsCache();
+    }
+}

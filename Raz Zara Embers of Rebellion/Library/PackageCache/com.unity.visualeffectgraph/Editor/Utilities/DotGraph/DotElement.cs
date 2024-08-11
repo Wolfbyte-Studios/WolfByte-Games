@@ -1,3 +1,58 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:647eed665640fe053e41a8998662046c0710c01004dc30db5a90081d079c35fa
-size 1309
+using System.Collections.Generic;
+
+namespace UnityEditor.Dot
+{
+    abstract class DotElement
+    {
+        public abstract string Name { get; }
+
+        public string Label
+        {
+            get
+            {
+                if (attributes.ContainsKey(DotAttribute.Label))
+                    return attributes[DotAttribute.Label];
+                return string.Empty;
+            }
+            set
+            {
+                attributes[DotAttribute.Label] = value;
+            }
+        }
+
+        public Dictionary<string, string> attributes = new Dictionary<string, string>();
+
+        public bool HasAttributes()
+        {
+            return attributes.Count > 0;
+        }
+    }
+
+    class DotNode : DotElement
+    {
+        public DotNode() { }
+        public DotNode(string name)
+        {
+            Label = name;
+        }
+
+        public override string Name { get { return "node"; } }
+    }
+
+    class DotEdge : DotElement
+    {
+        public DotEdge(DotNode from, DotNode to)
+        {
+            m_From = from;
+            m_To = to;
+        }
+
+        public override string Name { get { return "edge"; } }
+
+        public DotNode From { get { return m_From; } }
+        public DotNode To { get { return m_To; } }
+
+        private DotNode m_From;
+        private DotNode m_To;
+    }
+}

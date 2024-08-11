@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d32361b060eabaef1cf9c2b373de75c973824922a37c6f9df9a21663da052de0
-size 221
+<tr>
+<td><strong>Normal World Space</strong></td>
+<td>The normal, in world space, for the material.</td>
+<td> <strong>Fragment Normal Space</strong> set to <strong>World</strong></td>
+<td>CoordinateSpace.World</td>
+</tr>

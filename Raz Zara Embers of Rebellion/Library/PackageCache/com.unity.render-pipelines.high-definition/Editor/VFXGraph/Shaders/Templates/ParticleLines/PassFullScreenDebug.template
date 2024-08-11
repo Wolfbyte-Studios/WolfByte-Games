@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bd064effefa8c343ee3bac4e0126d93908e54eba7daf137a7179d68c40c2c71a
-size 797
+Pass
+{
+    Name "FullScreenDebug"
+    Tags{ "LightMode" = "FullScreenDebug" }
+    
+    HLSLPROGRAM
+    #pragma target 4.5
+    #define DEBUG_DISPLAY
+    #include "Packages/com.unity.render-pipelines.high-definition/Runtime/Debug/DebugDisplay.hlsl"
+    #include "Packages/com.unity.render-pipelines.high-definition/Runtime/Debug/FullScreenDebug.hlsl"
+    
+    struct ps_input
+    {
+        float4 pos : SV_POSITION;
+        UNITY_VERTEX_OUTPUT_STEREO
+        VFX_VERTEX_OUTPUT_INSTANCE_INDEX
+    };
+    
+    #define VFX_VARYING_PS_INPUTS ps_input
+    #define VFX_VARYING_POSCS pos
+
+    ${VFXBegin:VFXVertexAdditionalProcess}
+    ${VFXPassFullScreenDebugCommonVertex}
+    ${VFXEnd}
+
+    ${VFXInclude("Shaders/ParticleLines/Pass.template")}
+
+    ${VFXPassFullScreenDebugCommonFragment}
+
+    ENDHLSL
+}

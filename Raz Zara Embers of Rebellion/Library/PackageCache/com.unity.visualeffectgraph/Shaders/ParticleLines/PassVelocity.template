@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0d3478dc62f38d4784bbc8ef30a3347fc607a456b6f1b782316c666e0d491597
-size 303
+Pass
+{
+    Name ${VFXPassVelocity}
+	Tags { "LightMode"=${VFXPassVelocity} }
+
+	${VFXStencilMotionVector}
+
+	ZWrite On
+	Blend Off
+
+	HLSLPROGRAM
+	#define VFX_PASSDEPTH VFX_PASSDEPTH_MOTION_VECTOR
+	${VFXPassVelocityAdditionalPragma}
+	${VFXInclude("Shaders/ParticleLines/PassDepthOrMV.template")}
+
+	ENDHLSL
+}

@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8a0ec6afaaf4a9131771136635f21a589adfadf12fc965f2313d93733b864213
-size 299
+# Fuzz Maps
+The fabric shaders can use a fuzz map to provide additional fuzz detail to the surface. A fuzz map is a single-channel texture. To apply it, the fabric shader mixes it in with the base color map to produce a final color used for shading the fabric material.
+
+![](../Images/fuzz-map.png)

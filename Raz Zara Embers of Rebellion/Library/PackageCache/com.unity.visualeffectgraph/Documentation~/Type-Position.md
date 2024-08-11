@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b6e23d3fcd8263bec05d548ccf3bbd8ba00619e8d17f5bb2050ac630ee4fb3fa
-size 558
+# Position
+
+A world-space or local-space three-component position vector. When the Visual Effect Graph transforms a Position, it takes translation, rotation, and scale into account. This is different to a [Vector](Type-Vector.md) because when the Visual Effect Graph transforms a Vector, it only takes rotation and scale into account.
+
+## Properties
+
+| **Property** | **Description**                                   |
+| ------------ | ------------------------------------------------- |
+| **Position** | The value of the three-component position vector. |

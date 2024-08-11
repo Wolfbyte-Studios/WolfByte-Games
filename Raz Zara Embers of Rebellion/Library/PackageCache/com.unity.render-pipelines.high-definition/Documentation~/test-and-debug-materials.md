@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7ee070a443633c904437994548a78e24b8beab8cf753624fda6ec522c867bf7e
-size 525
+# Test and debug materials
+
+Use HDRP modes and tools to test your scene and assets in different lighting.
+
+|Page|Description|
+|-|-|
+|[Debug materials and shaders (MatCap mode)](debug-materials-and-shaders-matcap.md)|Use MatCap mode to get a sense of a scene without setting up the scene lighting.|
+|[Test and debug materials in different lighting conditions (Look Dev)](test-and-debug-materials-in-different-lighting-conditions-look-dev.md)|Use the Look Dev tool to test how your assets look in various lighting conditions.|

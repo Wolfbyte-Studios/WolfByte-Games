@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:17b8f4689195ad45472424ce4e13b1d29771ccf9db2f3f104ad0d71b3dbf1637
-size 384
+.unity-toolbar > .unity-toolbar-toggle .unity-label
+{
+    color: #000;
+}
+
+.unity-toolbar.unity-disabled
+{
+    opacity: 1;
+    background-color: #767676;
+    -unity-background-image-tint-color: #808080;
+}
+
+.unity-toolbar.unity-disabled *
+{
+    background-color: rgba(0,0,0,0);
+    color: #444;
+}
+
+.unity-toolbar.unity-disabled > .unity-toolbar-toggle .unity-label
+{
+    color: #444;
+}

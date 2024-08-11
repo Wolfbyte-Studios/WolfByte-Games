@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c1c895e33527cbb52e401f3e1aac4a3e37409abcd92e7bb1f75023ef63a398df
-size 523
+<tr>
+<td><strong>Hazy Gloss Max Dielectric F0</strong></td>
+<td>The maximum intensity the specular highlight can be when <strong>Metallic</strong> is 0. As the metallic value increases, the maximum intensity relaxes towards 1.</td>
+<td>&#8226; <strong>Material</strong> set to <strong>StackLit</strong> <br/>&#8226; <strong>Base Color Parametrization</strong> set to <strong>Base Metallic</strong> <br/>&#8226; <strong>Duel Specular Lobe Parametrization</strong> set to <strong>Hazy Gloss</strong></td>
+<td>0.25</td>
+</tr>

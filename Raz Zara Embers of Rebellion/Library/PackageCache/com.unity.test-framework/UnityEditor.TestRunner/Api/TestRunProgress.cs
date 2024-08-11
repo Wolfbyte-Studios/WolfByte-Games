@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:00f67253076a4e2b96dd3298065f30d569888cff61ace37e7dd718c80b31a59b
-size 553
+using System;
+using UnityEngine;
+
+namespace UnityEditor.TestTools.TestRunner.Api
+{
+    [Serializable]
+    internal class TestRunProgress
+    {
+        [SerializeField]
+        public string RunGuid;
+        [SerializeField]
+        public ExecutionSettings ExecutionSettings;
+
+        [SerializeField]
+        public bool HasFinished;
+
+        [SerializeField]
+        public float Progress;
+        [SerializeField]
+        public string CurrentStepName;
+        [SerializeField]
+        public string CurrentStageName;
+    }
+}

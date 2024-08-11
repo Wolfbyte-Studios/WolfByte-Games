@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b3b109c1d7e8fa730405ad2994fb18cc3e7b9033801fba7186638b2bdea9dce7
-size 1118
+using UnityEditor.Rendering;
+using UnityEngine.Rendering.HighDefinition;
+
+namespace UnityEditor.Rendering.HighDefinition
+{
+    internal sealed class SerializedVirtualTexturingSettings
+    {
+        public SerializedProperty root;
+
+        public SerializedProperty streamingCpuCacheSizeInMegaBytes;
+        public SerializedProperty streamingGpuCacheSettings;
+        public SerializedProperty streamingMipPreloadTexturesPerFrame;
+        public SerializedProperty streamingPreloadMipCount;
+
+        public SerializedVirtualTexturingSettings(SerializedProperty root)
+        {
+            this.root = root;
+
+            streamingCpuCacheSizeInMegaBytes = root.Find((VirtualTexturingSettingsSRP s) => s.streamingCpuCacheSizeInMegaBytes);
+            streamingGpuCacheSettings = root.Find((VirtualTexturingSettingsSRP s) => s.streamingGpuCacheSettings);
+            streamingMipPreloadTexturesPerFrame = root.Find((VirtualTexturingSettingsSRP s) => s.streamingMipPreloadTexturesPerFrame);
+            streamingPreloadMipCount = root.Find((VirtualTexturingSettingsSRP s) => s.streamingPreloadMipCount);
+        }
+    }
+}

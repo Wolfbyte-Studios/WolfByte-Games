@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7223f9ff05db412f63b0b18a6ab7736d51c3818cfbc0e720e13e64495e663775
-size 617
+using System;
+
+namespace UnityEngine.Rendering.HighDefinition
+{
+    /// <summary>Implement this interface to use with <see cref="MigrationDescription{TVersion, TTarget}"/></summary>
+    /// <typeparam name="TVersion">An enum to use to describe the version.</typeparam>
+    public interface IVersionable<TVersion>
+        where TVersion : struct, IConvertible
+    {
+        /// <summary>Accessors to the current version of the instance.</summary>
+        TVersion version { get; set; }
+    }
+
+    interface IMigratableAsset
+    {
+#if UNITY_EDITOR
+        bool Migrate();
+        bool IsAtLastVersion();
+#endif
+    }
+}

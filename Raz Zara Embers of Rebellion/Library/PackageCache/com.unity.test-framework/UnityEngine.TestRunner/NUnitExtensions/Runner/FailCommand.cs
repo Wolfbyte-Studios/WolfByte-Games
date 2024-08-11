@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f1d37f14e98896323a8d39a8ae525a027621c229da9fbb23c611b53cda721ce4
-size 1011
+using System;
+using System.Collections;
+using NUnit.Framework.Interfaces;
+using NUnit.Framework.Internal;
+using NUnit.Framework.Internal.Commands;
+
+namespace UnityEngine.TestRunner.NUnitExtensions.Runner
+{
+    internal class FailCommand : TestCommand, IEnumerableTestMethodCommand
+    {
+        private ResultState m_ResultState;
+        private string m_Message;
+
+        public FailCommand(Test test, ResultState resultState, string message)
+            : base(test)
+        {
+            m_ResultState = resultState;
+            m_Message = message;
+        }
+
+        public override TestResult Execute(ITestExecutionContext context)
+        {
+            context.CurrentResult.SetResult(m_ResultState, m_Message);
+            return context.CurrentResult;
+        }
+
+        public IEnumerable ExecuteEnumerable(ITestExecutionContext context)
+        {
+            context.CurrentResult.SetResult(m_ResultState, m_Message);
+            yield return null;
+        }
+    }
+}

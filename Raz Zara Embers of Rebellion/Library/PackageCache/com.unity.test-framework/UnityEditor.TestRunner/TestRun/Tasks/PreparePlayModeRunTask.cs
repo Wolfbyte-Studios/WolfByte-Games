@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1cf041d04e21ca9fde328db5795d5831fc5ed9f27a9784c4f69ae533b6684cae
-size 881
+using System;
+using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+namespace UnityEditor.TestTools.TestRunner.TestRun.Tasks
+{
+    internal class PreparePlayModeRunTask : TestTaskBase
+    {
+        public override IEnumerator Execute(TestJobData testJobData)
+        {
+            testJobData.OriginalProjectSettings = new TestJobData.SavedProjectSettings
+            {
+                consoleErrorPaused = ConsoleWindow.GetConsoleErrorPause(),
+                runInBackgroundValue = Application.runInBackground
+            };
+            ConsoleWindow.SetConsoleErrorPause(false);
+            Application.runInBackground = true;
+            if (testJobData.InitTestScene.IsValid())
+            {
+                SceneManager.SetActiveScene(testJobData.InitTestScene);
+            }
+
+            yield break;
+        }
+    }
+}

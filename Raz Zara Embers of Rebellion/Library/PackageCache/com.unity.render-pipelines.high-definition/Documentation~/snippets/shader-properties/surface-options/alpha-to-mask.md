@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a0f507de8eea4261aece7758f0e91386d1e21d4d67d26f3c50621d0613ffc7d7
-size 436
+<tr>
+<td>- <strong>Alpha to Mask</strong></td>
+<td></td>
+<td></td>
+<td>
+
+Indicates whether to turn on alpha-to-coverage. If your Project uses MSAA, alpha-to-coverage modifies the multi-sample coverage mask proportionally to the pixel shader result alpha value. This is typically used for anti-aliasing vegetation and other alpha-tested shaders.<br/>This property only appears if you enable <strong>Alpha Clipping</strong>.
+
+</td>
+</tr>

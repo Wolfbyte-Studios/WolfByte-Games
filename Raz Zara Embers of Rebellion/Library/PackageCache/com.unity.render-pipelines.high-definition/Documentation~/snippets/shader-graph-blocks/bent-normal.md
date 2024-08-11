@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:10ea86a09505000a1d3ba6b845443ba47f3732be8d60b3fed3d31864d37e3ad2
-size 405
+<tr>
+<td><strong>Bent Normal</strong></td>
+<td>The bent normal of the fragment. HDRP uses bent normal maps to simulate more accurate ambient occlusion. Bent normals only work with diffuse lighting.</td>
+<td><strong>Material</strong> set to <strong>Eye</strong>, <strong>Fabric</strong>, <strong>Hair</strong>, <strong>Lit</strong>, or <strong>StackLit</strong></td>
+<td>CoordinateSpace.Tangent</td>
+</tr>

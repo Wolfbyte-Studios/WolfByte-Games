@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a7388e220454951383ed7365960e15e9171fc7f5b7d6c6c61d4599f9d1276dee
-size 761
+namespace UnityEditor.VFX.Operator
+{
+    [VFXHelpURL("Operator-Fractional")]
+    [VFXInfo(category = "Math/Arithmetic")]
+    class Fractional : VFXOperatorNumericUniform
+    {
+        public class InputProperties
+        {
+            public float x = 0.0f;
+        }
+
+        protected override sealed string operatorName { get { return "Fractional"; } }
+
+        protected override sealed VFXExpression[] BuildExpression(VFXExpression[] inputExpression)
+        {
+            return new[] { VFXOperatorUtility.Frac(inputExpression[0]) };
+        }
+
+        protected sealed override ValidTypeRule typeFilter
+        {
+            get
+            {
+                return ValidTypeRule.allowEverythingExceptIntegerAndDirection;
+            }
+        }
+    }
+}

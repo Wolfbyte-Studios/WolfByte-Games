@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:88d871d18d27ae0601bb1aae9f8cab2f7bbe188ff26ebf7265b3ca8302abe837
-size 557
+//
+// This file was automatically generated. Please don't edit by hand. Execute Editor command [ Edit > Rendering > Generate Shader Includes ] instead
+//
+
+#ifndef PROBEGIBAKING_DILATE_CS_HLSL
+#define PROBEGIBAKING_DILATE_CS_HLSL
+// Generated from UnityEngine.Rendering.AdaptiveProbeVolumes+DilatedProbe
+// PackingRules = Exact
+struct DilatedProbe
+{
+    float3 L0;
+    float3 L1_0;
+    float3 L1_1;
+    float3 L1_2;
+    float3 L2_0;
+    float3 L2_1;
+    float3 L2_2;
+    float3 L2_3;
+    float3 L2_4;
+    float4 SO_L0L1;
+    float3 SO_Direction;
+};
+
+
+#endif

@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fe0087f8c86c7ca547696b6aedc0c429df756f2899fb60edc997aba324d2b242
-size 578
+#include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/Shaders/RaytracingIntersection.hlsl"
+#include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/MaterialGBufferMacros.hlsl"
+#include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/RaytracingMaterialGBufferMacros.hlsl"
+
+// Structure that defines the current state of the intersection
+struct RayIntersectionGBuffer
+{
+    float t;
+    GBufferType0 gbuffer0;
+    GBufferType1 gbuffer1;
+    GBufferType2 gbuffer2;
+    GBufferType3 gbuffer3;
+};

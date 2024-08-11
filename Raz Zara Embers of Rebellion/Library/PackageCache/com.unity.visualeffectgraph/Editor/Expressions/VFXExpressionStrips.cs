@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c5a06233275e1500741c25d2ba27204cb85f345c0567e0cfb7231cd299a26a1c
-size 830
+using System.Collections.Generic;
+using UnityEngine.VFX;
+
+namespace UnityEditor.VFX
+{
+    class VFXExpressionStripTangent : VFXExpression
+    {
+        public VFXExpressionStripTangent() : base(VFXExpression.Flags.PerElement | VFXExpression.Flags.InvalidOnCPU) { }
+
+        public override VFXValueType valueType => VFXValueType.Float3;
+        public override VFXExpressionOperation operation => VFXExpressionOperation.None;
+
+        public override string GetCodeString(string[] parents)
+        {
+            return string.Format("GetStripTangent(attributes.position, instanceIndex, relativeIndexInStrip, stripData)");
+        }
+
+        public override IEnumerable<VFXAttributeInfo> GetNeededAttributes()
+        {
+            yield return new VFXAttributeInfo(VFXAttribute.Position, VFXAttributeMode.Read);
+        }
+    }
+}

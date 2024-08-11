@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0959c9f6d84d9c0c70895df45689bf228a3a6918ba3fa60a18b5bb3aa082757e
-size 956
+
+namespace UnityEngine.Rendering.UnifiedRayTracing
+{
+    internal interface IRayTracingShader
+    {
+        void SetAccelerationStructure(CommandBuffer cmd, string name, IRayTracingAccelStruct accelStruct);
+        void SetIntParam(CommandBuffer cmd, int nameID, int val);
+        void SetFloatParam(CommandBuffer cmd, int nameID, float val);
+        void SetVectorParam(CommandBuffer cmd, int nameID, Vector4 val);
+        void SetMatrixParam(CommandBuffer cmd, int nameID, Matrix4x4 val);
+        void SetTextureParam(CommandBuffer cmd, int nameID, RenderTargetIdentifier rt);
+        void SetBufferParam(CommandBuffer cmd, int nameID, GraphicsBuffer buffer);
+        void SetBufferParam(CommandBuffer cmd, int nameID, ComputeBuffer buffer);
+        void Dispatch(CommandBuffer cmd, GraphicsBuffer scratchBuffer, uint width, uint height, uint depth);
+        ulong GetTraceScratchBufferRequiredSizeInBytes(uint width, uint height, uint depth);
+    }
+}
+
+

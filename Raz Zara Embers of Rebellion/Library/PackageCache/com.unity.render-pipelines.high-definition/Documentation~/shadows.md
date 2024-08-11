@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f580c9f3d0a7acbdea5467c928736ee94fafac2635f09504cabd57f7f4a1c3db
-size 783
+# Shadows
+
+[Lights](Light-Component.md) in the High Definition Render Pipeline (HDRP) can cast shadows from one GameObject onto another. Use shadows to add depth and realism to a Scene.
+
+| Page | Description |
+|-|-|
+|[Use the shadows volume component override](Override-Shadows.md)|Control the quality of shadows over distance from the Camera.|
+|[Visualize and adjust shadows](shadows-visualize-and-adjust.md)|Control the size and boundaries of shadow cascades.|
+|[Control shadow resolution and quality](Shadows-in-HDRP.md)|Use multiple methods to set the resolution of shadows in a scene.|
+|[Realtime shadows](realtime-shadows.md)|Create and use shadows that HDRP updates at runtime.|
+|[Additional shadow detail](shadows-additional-detail.md)|Create and control detailed shadows.|
+

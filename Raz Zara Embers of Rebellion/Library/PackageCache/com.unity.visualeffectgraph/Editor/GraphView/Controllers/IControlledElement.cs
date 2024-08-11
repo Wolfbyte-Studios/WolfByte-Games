@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:68a6f46251c921da9d3ffe072166cf7e0297a7762dd1af964bbb0b9ecfd24b02
-size 771
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+namespace UnityEditor.VFX.UI
+{
+    interface IControlledElement
+    {
+        Controller controller
+        {
+            get;
+        }
+        void OnControllerChanged(ref ControllerChangedEvent e);
+    }
+
+    interface IControllerListener
+    {
+        void OnControllerEvent(ControllerEvent e);
+    }
+
+    interface IControlledElement<T> : IControlledElement where T : Controller
+    {
+        new T controller
+        {
+            get;
+        }
+    }
+    interface ISettableControlledElement<T> where T : Controller
+    {
+        T controller
+        {
+            get;
+            set;
+        }
+    }
+}

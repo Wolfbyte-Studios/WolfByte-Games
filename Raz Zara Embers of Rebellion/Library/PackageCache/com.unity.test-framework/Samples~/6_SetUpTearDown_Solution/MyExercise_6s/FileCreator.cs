@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b3645be6939d6d18b7e725ed8970a03e4585e394e8a1533090369ffd57edd40c
-size 547
+using System;
+using System.IO;
+
+namespace MyExercise_6s
+{
+    public class FileCreator
+    {
+        public const string k_Directory = "OutputFiles";
+
+        public void CreateEmptyFile(string fileName)
+        {
+            CreateFile(fileName, String.Empty);
+        }
+        
+        public void CreateFile(string fileName, string content)
+        {
+            using (var stream = File.CreateText(Path.Combine(k_Directory, fileName)))
+            {
+                stream.Write(content);
+            }
+        }
+    }
+}

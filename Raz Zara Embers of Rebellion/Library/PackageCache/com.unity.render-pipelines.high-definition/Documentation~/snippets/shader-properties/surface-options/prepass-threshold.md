@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:21264e3de5129b3b4aa7371233769e13934554d83a81594f17b07e5c6bc881a5
-size 354
+<tr>
+<td>- <strong>Prepass Threshold</strong></td>
+<td></td>
+<td></td>
+<td>
+
+The alpha value limit HDRP uses for the transparent depth prepass. This works in the same way as the main <strong>Threshold</strong> property described above.<br />This property only appears when you enable the <strong>Transparent Depth Prepass</strong> checkbox.
+
+</td>
+</tr>

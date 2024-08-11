@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f94ccd2502cb4cd4e58e41ab2050b16fbd755785ef1254b15af4456c56bd00e8
-size 444
+using System;
+using NUnit.Framework;
+using NUnit.Framework.Interfaces;
+
+namespace UnityEngine.TestTools.TestRunner
+{
+    internal class InvalidSignatureException : ResultStateException
+    {
+        public InvalidSignatureException(string message)
+            : base(message)
+        {
+        }
+
+        public override ResultState ResultState
+        {
+            get { return ResultState.NotRunnable; }
+        }
+    }
+}

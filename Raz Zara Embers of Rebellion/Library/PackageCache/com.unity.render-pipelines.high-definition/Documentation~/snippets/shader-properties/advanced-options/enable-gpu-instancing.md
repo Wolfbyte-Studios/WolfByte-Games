@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:57701e13c4153d0bd9edba2e2250437a415019bbf735435d4281f6d8402239a7
-size 534
+<tr>
+<td><strong>Enable GPU Instancing</strong></td>
+<td>Enable the checkbox to tell HDRP to render Meshes with the same geometry and Material in one batch when possible. This makes rendering faster. HDRP cannot render Meshes in one batch if they have different Materials, or if the hardware does not support GPU instancing. For example, you cannot <a href="https://docs.unity3d.com/Manual/DrawCallBatching.html">static-batch</a> GameObjects that have an animation based on the object pivot, but the GPU can instance them.</td>
+</tr>

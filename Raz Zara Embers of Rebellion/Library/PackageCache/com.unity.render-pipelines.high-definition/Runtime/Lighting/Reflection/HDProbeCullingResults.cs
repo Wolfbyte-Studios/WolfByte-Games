@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a8bea08529ebd7d0734e64d128225027da75da78883729a113cae45eb18780fa
-size 636
+using System.Collections.Generic;
+using UnityEngine.Assertions;
+
+namespace UnityEngine.Rendering.HighDefinition
+{
+    class HDProbeCullingResults
+    {
+        static readonly IReadOnlyList<HDProbe> s_EmptyList = new List<HDProbe>();
+
+        List<HDProbe> m_VisibleProbes = new List<HDProbe>();
+
+        public IReadOnlyList<HDProbe> visibleProbes => m_VisibleProbes;
+
+        internal void Reset()
+        {
+            m_VisibleProbes.Clear();
+        }
+
+        internal void AddProbe(HDProbe visibleProbes)
+        {
+            Assert.IsNotNull(m_VisibleProbes);
+
+            m_VisibleProbes.Add(visibleProbes);
+        }
+    }
+}

@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:13cfab6a368baefe83070f182928beb49c53dcf9154f8a5bfef6a43f9005b71c
-size 299
+<tr>
+<td><strong>- Tiling</strong></td>
+<td>The per-axis tile rate for the <strong>Emission Map</strong> UV. HDRP uses the <strong>X</strong> and <strong>Y</strong> values to tile the Texture assigned to the <strong>Emission Map</strong> across the Material’s surface, in object space.</td>
+</tr>

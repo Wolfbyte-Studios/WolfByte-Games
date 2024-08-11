@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cb41a5bca7d143880292324bf31febe1f723761dce4a432bec5c2610d82d1976
-size 602
+namespace UnityEngine.Rendering.HighDefinition
+{
+    /// <summary>
+    /// The shape of the influence volume
+    /// </summary>
+    public enum InfluenceShape
+    {
+        /// <summary>A Box shape.</summary>
+        Box,
+        /// <summary>A Sphere shape.</summary>
+        Sphere,
+    }
+
+    /// <summary>
+    /// The shape of the proxy volume
+    /// </summary>
+    public enum ProxyShape
+    {
+        /// <summary>A Box shape.</summary>
+        Box,
+        /// <summary>A Sphere shape.</summary>
+        Sphere,
+        /// <summary>A sphere at the infinity.</summary>
+        Infinite
+    }
+}

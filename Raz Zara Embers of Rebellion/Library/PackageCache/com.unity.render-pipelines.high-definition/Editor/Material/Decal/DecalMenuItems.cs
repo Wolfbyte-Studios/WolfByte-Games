@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:da2510e8c03764402fb7a1de3498cfd01959695ccdd552e85cca8eddc2327cbe
-size 674
+using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.HighDefinition;
+
+namespace UnityEditor.Rendering.HighDefinition
+{
+    class DecalMenuItems
+    {
+        [MenuItem("GameObject/Rendering/HDRP Decal Projector", priority = CoreUtils.Priorities.gameObjectMenuPriority)]
+        static void CreateDecal(MenuCommand menuCommand)
+        {
+            var parent = menuCommand.context as GameObject;
+            var go = CoreEditorUtils.CreateGameObject("Decal Projector", parent);
+            var decal = go.AddComponent<DecalProjector>();
+            decal.transform.RotateAround(decal.transform.position, decal.transform.right, 90);
+        }
+    }
+}

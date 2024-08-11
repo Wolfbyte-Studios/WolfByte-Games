@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:00f5233e7d028403203ae672d4ed450436894f80692d5dbde5f023f4297b3bbf
-size 558
+using UnityEditor.ShaderGraph;
+
+namespace UnityEditor.VFX
+{
+    interface IRequireVFXContext
+    {
+        void ConfigureContextData(VFXContext context, VFXTaskCompiledData data);
+    }
+
+    static class RequireVFXContextExtensions
+    {
+        public static bool TryConfigureContextData(this Target target, VFXContext context, VFXTaskCompiledData data)
+        {
+            if (!(target is IRequireVFXContext vfxTarget))
+                return false;
+
+            vfxTarget.ConfigureContextData(context, data);
+
+            return true;
+        }
+    }
+}

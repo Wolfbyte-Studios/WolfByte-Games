@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:29f9833e2ba8a8d480b282dbb75b5456eaf714acada4417ceeece378f73e23e5
-size 507
+//
+// This file was automatically generated. Please don't edit by hand. Execute Editor command [ Edit > Rendering > Generate Shader Includes ] instead
+//
+
+#ifndef COLORPICKERDEBUG_CS_HLSL
+#define COLORPICKERDEBUG_CS_HLSL
+//
+// UnityEngine.Rendering.HighDefinition.ColorPickerDebugMode:  static fields
+//
+#define COLORPICKERDEBUGMODE_NONE (0)
+#define COLORPICKERDEBUGMODE_BYTE (1)
+#define COLORPICKERDEBUGMODE_BYTE4 (2)
+#define COLORPICKERDEBUGMODE_FLOAT (3)
+#define COLORPICKERDEBUGMODE_FLOAT4 (4)
+
+
+#endif

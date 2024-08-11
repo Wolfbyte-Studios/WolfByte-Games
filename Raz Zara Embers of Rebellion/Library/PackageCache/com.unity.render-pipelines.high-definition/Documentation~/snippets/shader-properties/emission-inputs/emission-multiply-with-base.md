@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:309d889e872fd0809828f7d3a36fd106f8dabdfcc6d584b4b44a1e3e8e72e841
-size 305
+<tr>
+<td><strong>Emission multiply with Base</strong></td>
+<td>Indicates whether to use the base color of the Material when HDRP calculates the final color of the emission. If you enable this property, HDRP multiplies the emission color by the base color to calculate the final emission color.</td>
+</tr>

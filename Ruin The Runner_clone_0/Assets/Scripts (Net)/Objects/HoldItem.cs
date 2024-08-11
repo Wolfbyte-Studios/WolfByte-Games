@@ -15,17 +15,26 @@ public class HoldItem : NetworkBehaviour
     private float startTime;
     private float journeyLength;
 
-    private Rigidbody rb;
+    public Rigidbody rb;
 
     private float lastToggleTime = 0f;
     private const float toggleCooldown = 0.5f; // Cooldown time in seconds
 
+    public void Start()
+    {
+        Setup();
+    }
     public override void OnStartClient()
     {
         base.OnStartClient();
+        Setup();
+        
+    }
+    public void Setup()
+    {
+        rb = GetComponent<Rigidbody>();
         holder = GameObject.Find("Holder").transform;
         player = holder.transform.parent;
-        rb = GetComponent<Rigidbody>();
     }
 
     void Update()

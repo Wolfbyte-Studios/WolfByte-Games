@@ -88,7 +88,14 @@ public class AimOutline : NetworkBehaviour
         if (target == null) return;
 
         var clObj = target.GetComponent<Clickable>();
+        if (target.GetComponent<HoldItem>() != null)
+        {
+            var HI = target.GetComponent<HoldItem>();
+            HI.player = this.transform.GetAllComponentsInHierarchy<PlayerMovement>()[0].transform;
+            HI.holder = HI.player.transform.Find("Holder");
+        }
         clObj.TriggerEvent();
+
     }
 
     [Command]

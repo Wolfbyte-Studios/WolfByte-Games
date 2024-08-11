@@ -51,6 +51,7 @@ public class Clickable : NetworkBehaviour
 
     void Update()
     {
+
         timeElapsed = Time.time - timeFired;
         percentageFinished = timeElapsed / coolDown;
         if (percentageFinished >= 1)
@@ -79,6 +80,12 @@ public class Clickable : NetworkBehaviour
                 mr.material = NewMat;
             }
             applyColors(percentageFinished);
+        }
+        var l = this.gameObject.layer;
+        foreach (Transform t in transform.GetComponentsInChildren<Transform>(true))
+        {
+            t.gameObject.layer = l;
+            Debug.Log(t.name + " is now on layer " + l);
         }
     }
 

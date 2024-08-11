@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638589339337614504
-    m_Hash: 811617629
+      ticks: 638589436556278526
+    m_Hash: 1339957859
   m_LockFileStatus:
     m_FilePath: C:/Users/user1/3d zeldaish/Ruin The Runner/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638589339864119142
-    m_Hash: 577348362
+      ticks: 638589436582939443
+    m_Hash: 3836693846
 m_EmbeddedPackageManifests:
   m_ManifestsStatus:
     C:/Users/user1/3d zeldaish/Ruin The Runner/Packages/com.heathen.steamworkscomplete/package.json:
@@ -863,6 +863,129 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 1.8.2
     minimumUnityVersion: 2019.4.0a1
+- packageId: com.unity.memoryprofiler@1.1.0
+  testable: 0
+  isDirectDependency: 1
+  version: 1.1.0
+  source: 1
+  resolvedPath: C:\Users\user1\3d zeldaish\Ruin The Runner\Library\PackageCache\com.unity.memoryprofiler
+  assetPath: Packages/com.unity.memoryprofiler
+  name: com.unity.memoryprofiler
+  displayName: Memory Profiler
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: The Memory Profiler offers a unified solution allowing you to profile
+    both small projects on mobile devices and big AAA projects on high end machines.
+    It provides actionable information about allocations in the engine to allow developers
+    to manage and reduce memory usage.
+  errors: []
+  versions:
+    all:
+    - 0.1.0-preview.1
+    - 0.1.0-preview.2
+    - 0.1.0-preview.3
+    - 0.1.0-preview.4
+    - 0.1.0-preview.5
+    - 0.1.0-preview.6
+    - 0.1.0-preview.7
+    - 0.1.0-preview.8
+    - 0.1.0-preview.9
+    - 0.2.0-preview.1
+    - 0.2.1-preview.1
+    - 0.2.1-preview.2
+    - 0.2.2-preview.1
+    - 0.2.3-preview.1
+    - 0.2.3-preview.2
+    - 0.2.4-preview.1
+    - 0.2.5-preview.1
+    - 0.2.6-preview.1
+    - 0.2.7-preview.1
+    - 0.2.8-preview.1
+    - 0.2.8-preview.2
+    - 0.2.9-preview.1
+    - 0.2.9-preview.3
+    - 0.2.10-preview.1
+    - 0.4.0-preview.1
+    - 0.4.0-preview.2
+    - 0.4.1-preview.1
+    - 0.4.2-preview.1
+    - 0.4.3-preview.1
+    - 0.4.4-preview.2
+    - 0.5.0-preview.1
+    - 0.5.1-preview.1
+    - 0.6.0-preview.1
+    - 0.7.0-preview.1
+    - 0.7.0-preview.2
+    - 0.7.1-preview.1
+    - 1.0.0-pre.1
+    - 1.0.0-pre.2
+    - 1.0.0-pre.3
+    - 1.0.0
+    - 1.1.0-exp.1
+    - 1.1.0-exp.2
+    - 1.1.0-pre.1
+    - 1.1.0-pre.3
+    - 1.1.0
+    compatible:
+    - 1.1.0
+    recommended: 1.1.0
+    deprecated: []
+  dependencies:
+  - name: com.unity.editorcoroutines
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.editorcoroutines
+    version: 1.0.0
+  keywords:
+  - profiler
+  - memory
+  - memoryprofiler
+  - snapshot
+  - profiling
+  - tool
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638334775400000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.memoryprofiler@1.1/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.memoryprofiler.git
+    revision: 2297acd0384cc2f42d24e670a5990104bedc19c5
+    path: 
+  unityLifecycle:
+    version: 1.1.0
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"- Bump version to 1.1.0 from 1.1.0-pre.3."}'
+  assetStore:
+    productId: 
+  fingerprint: 6c5b50ddc4851bd4c22071ec973401e3d65a995e
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 1.1.0
+    minimumUnityVersion: 2022.3.0a1
 - packageId: com.unity.nuget.newtonsoft-json@3.2.1
   testable: 0
   isDirectDependency: 1
@@ -1136,6 +1259,81 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 6.0.1
     minimumUnityVersion: 6000.0.0a1
+- packageId: com.unity.profiling.core@1.0.2
+  testable: 0
+  isDirectDependency: 1
+  version: 1.0.2
+  source: 1
+  resolvedPath: C:\Users\user1\3d zeldaish\Ruin The Runner\Library\PackageCache\com.unity.profiling.core
+  assetPath: Packages/com.unity.profiling.core
+  name: com.unity.profiling.core
+  displayName: Unity Profiling Core API
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: The Unity Profiling Core package provides an API for code instrumentation
+    markup, and for profiling statistic collection.
+  errors: []
+  versions:
+    all:
+    - 0.1.0-preview.1
+    - 0.2.0-preview.1
+    - 0.2.1-preview.1
+    - 1.0.0-pre.1
+    - 1.0.0
+    - 1.0.2
+    compatible:
+    - 1.0.2
+    recommended: 1.0.2
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - profiler
+  - profiling
+  - api
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637828752310000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/profiler.git
+    revision: 2189ba14439d76a4083f59fae87163b4bdfd49c2
+    path: 
+  unityLifecycle:
+    version: 1.0.2
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: 
+  assetStore:
+    productId: 
+  fingerprint: aac7b93912bc5df5fe06b04ff1b758493cdc2346
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 1.0.2
+    minimumUnityVersion: 2020.1.0a1
 - packageId: com.unity.render-pipelines.high-definition@17.0.3
   testable: 0
   isDirectDependency: 1
@@ -5057,6 +5255,83 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 2.0.1
     minimumUnityVersion: 2018.4.0a1
+- packageId: com.unity.editorcoroutines@1.0.0
+  testable: 0
+  isDirectDependency: 0
+  version: 1.0.0
+  source: 1
+  resolvedPath: C:\Users\user1\3d zeldaish\Ruin The Runner\Library\PackageCache\com.unity.editorcoroutines
+  assetPath: Packages/com.unity.editorcoroutines
+  name: com.unity.editorcoroutines
+  displayName: Editor Coroutines
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: 'The editor coroutines package allows developers to start constructs
+    similar to Unity''s monobehaviour based coroutines within the editor using abitrary
+    objects. '
+  errors: []
+  versions:
+    all:
+    - 0.0.1-preview.3
+    - 0.0.1-preview.4
+    - 0.0.1-preview.5
+    - 0.0.2-preview.1
+    - 0.1.0-preview.1
+    - 0.1.0-preview.2
+    - 1.0.0
+    compatible:
+    - 1.0.0
+    recommended: 1.0.0
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - coroutine
+  - coroutines
+  - editor
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 637232611380000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.editorcoroutines.git
+    revision: f67fc9992bbc7a553b17375de53a8b2db136528e
+    path: 
+  unityLifecycle:
+    version: 1.0.0
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: 
+  assetStore:
+    productId: 
+  fingerprint: 7d48783e7b8cfcee5f8ef9ba787ed0d9dad4ebca
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 1.0.0
+    minimumUnityVersion: 2018.1.0a1
 - packageId: com.unity.ide.visualstudio@2.0.22
   testable: 0
   isDirectDependency: 0
@@ -5280,83 +5555,6 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 3.0.28
     minimumUnityVersion: 2019.2.6f1
-- packageId: com.unity.editorcoroutines@1.0.0
-  testable: 0
-  isDirectDependency: 0
-  version: 1.0.0
-  source: 1
-  resolvedPath: C:\Users\user1\3d zeldaish\Ruin The Runner\Library\PackageCache\com.unity.editorcoroutines
-  assetPath: Packages/com.unity.editorcoroutines
-  name: com.unity.editorcoroutines
-  displayName: Editor Coroutines
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: asset
-  description: 'The editor coroutines package allows developers to start constructs
-    similar to Unity''s monobehaviour based coroutines within the editor using abitrary
-    objects. '
-  errors: []
-  versions:
-    all:
-    - 0.0.1-preview.3
-    - 0.0.1-preview.4
-    - 0.0.1-preview.5
-    - 0.0.2-preview.1
-    - 0.1.0-preview.1
-    - 0.1.0-preview.2
-    - 1.0.0
-    compatible:
-    - 1.0.0
-    recommended: 1.0.0
-    deprecated: []
-  dependencies: []
-  resolvedDependencies: []
-  keywords:
-  - coroutine
-  - coroutines
-  - editor
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 0
-  isAssetStorePackage: 0
-  datePublishedTicks: 637232611380000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.editorcoroutines.git
-    revision: f67fc9992bbc7a553b17375de53a8b2db136528e
-    path: 
-  unityLifecycle:
-    version: 1.0.0
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: 
-  assetStore:
-    productId: 
-  fingerprint: 7d48783e7b8cfcee5f8ef9ba787ed0d9dad4ebca
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 1.0.0
-    minimumUnityVersion: 2018.1.0a1
 - packageId: com.unity.performance.profile-analyzer@1.2.2
   testable: 0
   isDirectDependency: 0

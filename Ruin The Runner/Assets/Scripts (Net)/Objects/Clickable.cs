@@ -51,6 +51,12 @@ public class Clickable : NetworkBehaviour
 
     void Update()
     {
+        var l = this.gameObject.layer;
+        foreach (Transform t in transform.GetComponentsInChildren<Transform>(true))
+        {
+            t.gameObject.layer = l;
+            Debug.Log(t.name + " is now on layer " + l);
+        }
 
         timeElapsed = Time.time - timeFired;
         percentageFinished = timeElapsed / coolDown;
@@ -81,12 +87,7 @@ public class Clickable : NetworkBehaviour
             }
             applyColors(percentageFinished);
         }
-        var l = this.gameObject.layer;
-        foreach (Transform t in transform.GetComponentsInChildren<Transform>(true))
-        {
-            t.gameObject.layer = l;
-            Debug.Log(t.name + " is now on layer " + l);
-        }
+        
     }
 
     public void coolingDown()

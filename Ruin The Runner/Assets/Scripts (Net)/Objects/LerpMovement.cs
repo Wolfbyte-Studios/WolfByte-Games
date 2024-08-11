@@ -58,13 +58,17 @@ public class LerpMovement : NetworkBehaviour
 
     void Update()
     {
-        if (isServer && isLerping)
+        if (rigBody)
+        {
+            rb.isKinematic = Stationary;
+        }
+            if (isServer && isLerping)
         {
             
             if (rigBody)
             {
                 LerpToTarget();
-                rb.isKinematic = Stationary;
+                
             }
             else
             {

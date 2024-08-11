@@ -1,11 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
- 
-
 
 public class LerpMovement : NetworkBehaviour
 {
+    public bool repeat;
     [System.Serializable]
     public struct TransformData
     {
@@ -13,7 +12,7 @@ public class LerpMovement : NetworkBehaviour
         public Quaternion rotation;
         public float speed;
     }
-    
+
     public List<TransformData> transforms = new List<TransformData>();
     private TransformData initialTransform;
     private bool isLerping = false;
@@ -22,7 +21,6 @@ public class LerpMovement : NetworkBehaviour
     private int currentTargetIndex = 0;
     public bool rigBody = true;
     private Rigidbody rb;
-    
 
     public override void OnStartClient()
     {
@@ -39,10 +37,7 @@ public class LerpMovement : NetworkBehaviour
         initialTransform.position = transform.position;
         initialTransform.rotation = transform.rotation;
         transform.position = initialTransform.position;
-      
     }
-
-    
 
     [ClientRpc]
     private void ApplyInitialTransformClientRpc(Vector3 position, Quaternion rotation, ulong clientId)
@@ -58,26 +53,20 @@ public class LerpMovement : NetworkBehaviour
 
     void Update()
     {
-        if (rigBody)
+        if (isServer && isLerping)
         {
-            rb.isKinematic = Stationary;
-        }
-            if (isServer && isLerping)
-        {
-            
             if (rigBody)
             {
                 LerpToTarget();
-                
+                rb.isKinematic = Stationary;
             }
             else
             {
                 LerpToTargetNoRB();
             }
-    }
+        }
     }
 
-    
     public void TriggerServerRpc()
     {
         if (transforms.Count > 0)
@@ -100,12 +89,18 @@ public class LerpMovement : NetworkBehaviour
 
     public void Trigger()
     {
-       
-            isLerping = true;
-            currentTargetIndex = 0;
-            TriggerClientRpc();
-        
+        isLerping = true;
+        currentTargetIndex = 0;
+        TriggerClientRpc();
     }
+    public void Start()
+    {
+        if (repeat)
+        {
+            Trigger();
+        }
+    }
+
     public void LerpToTargetNoRB()
     {
         TransformData targetTransform = currentTargetIndex < transforms.Count ? transforms[currentTargetIndex] : initialTransform;
@@ -119,13 +114,21 @@ public class LerpMovement : NetworkBehaviour
         if (Vector3.Distance(transform.position, targetTransform.position) < 0.1f && Quaternion.Angle(transform.rotation, targetTransform.rotation) < 1.0f)
         {
             currentTargetIndex++;
-            if (currentTargetIndex > transforms.Count)
+            if (currentTargetIndex >= transforms.Count)
             {
-                isLerping = false;
-                currentTargetIndex = 0;
+                if (repeat)
+                {
+                    currentTargetIndex = 0; // Reset to loop over the positions again
+                }
+                else
+                {
+                    isLerping = false;
+                    currentTargetIndex = 0;
+                }
             }
         }
     }
+
     public void LerpToTarget()
     {
         TransformData targetTransform = currentTargetIndex < transforms.Count ? transforms[currentTargetIndex] : initialTransform;
@@ -143,15 +146,18 @@ public class LerpMovement : NetworkBehaviour
         if (Vector3.Distance(transform.position, targetTransform.position) < 0.1f && Quaternion.Angle(transform.rotation, targetTransform.rotation) < 1.0f)
         {
             currentTargetIndex++;
-            if (currentTargetIndex > transforms.Count)
+            if (currentTargetIndex >= transforms.Count)
             {
-                isLerping = false;
-                currentTargetIndex = 0;
+                if (repeat)
+                {
+                    currentTargetIndex = 0; // Reset to loop over the positions again
+                }
+                else
+                {
+                    isLerping = false;
+                    currentTargetIndex = 0;
+                }
             }
         }
     }
-
-    
-
-   
 }

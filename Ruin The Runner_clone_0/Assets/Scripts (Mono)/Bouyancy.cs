@@ -78,13 +78,16 @@ public class FitToWaterSurface : MonoBehaviour
         if (objectsToFit == null)
         {
             var newGO = other.gameObject.transform.GetAllComponentsInHierarchy<Rigidbody>()[0].gameObject;
+            if (other.gameObject.transform.GetAllComponentsInHierarchy<DontFloat>() != null)
+            { return; }
 
-           
             objectsToFit.Add(newGO.gameObject, newGO.transform.rotation);
         }
         if (other.gameObject.transform.GetAllComponentsInHierarchy<Rigidbody>() != null)
         {
-            var newGO = other.gameObject.transform.GetAllComponentsInHierarchy<Rigidbody>()[0].gameObject;
+            if (other.gameObject.transform.GetAllComponentsInHierarchy<DontFloat>() != null)
+            { return; }
+                var newGO = other.gameObject.transform.GetAllComponentsInHierarchy<Rigidbody>()[0].gameObject;
             if (!objectsToFit.ContainsKey(newGO.gameObject))
             {
                

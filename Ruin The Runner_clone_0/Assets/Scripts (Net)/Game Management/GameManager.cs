@@ -1,5 +1,6 @@
 using UnityEngine;
 using Mirror;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(NetworkIdentity))]
 public class GameManager : NetworkBehaviour
@@ -23,6 +24,10 @@ public class GameManager : NetworkBehaviour
     public int SabId = 5;
     [SyncVar(hook = nameof(updateCount))]
     public int playerCount = 0;
+    [SyncVar]
+    public List<Poop> poopList = new List<Poop>();
+    [SyncVar]
+    public Transform lastPooped;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Start()
     {
@@ -31,6 +36,7 @@ public class GameManager : NetworkBehaviour
         singleton = this;
 
     }
+    
     public override void OnStartClient()
     {
         base.OnStartClient();
@@ -52,6 +58,11 @@ public class GameManager : NetworkBehaviour
     void Update()
     {
        playerCount = NetworkServer.connections.Count;
+        if (poopList.Count > 1)
+        {
+            NetworkServer.Destroy(poopList[0].gameObject);
+            poopList.RemoveAt(0);
+        }
     }
     [ContextMenu("Rotate Sab")]
     public void RotatePlayers()

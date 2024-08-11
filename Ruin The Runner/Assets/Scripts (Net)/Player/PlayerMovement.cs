@@ -41,6 +41,8 @@ public class PlayerMovement : NetworkBehaviour
     public InputAction Secondary;
     public Animator anim;
     public NetworkAnimator NAnim;
+    public GameObject Shit;
+    public Vector3 shitOffset;
     //private PlayerNetworkIndex PLI;
 
     public override void OnStartClient()
@@ -125,6 +127,7 @@ public class PlayerMovement : NetworkBehaviour
     {
         anim.SetTrigger("Secondary");
         NAnim.SetTrigger("Secondary");
+        NetworkUtils.RpcHandler(this, onPoop);
         //throw new System.NotImplementedException();
     }
 
@@ -152,8 +155,14 @@ public class PlayerMovement : NetworkBehaviour
     }
     private void Menu_performed(InputAction.CallbackContext obj)
     {
-        bool on = Cursor.visible;
-        if (on)
+        var cursorVis = !Cursor.visible;
+        CursorFree(cursorVis);
+        Debug.Log("The cursor was " + Cursor.visible + " and now it is " + cursorVis);
+
+    }
+    public void CursorFree(bool tru)
+    {
+        if (tru)
         {
 
             Cursor.visible = false;
@@ -164,10 +173,18 @@ public class PlayerMovement : NetworkBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
-
-
+        
     }
+    [Command]
+    public void onPoop()
+    {
+        Vector3 offset = (shitOffset.x * this.gameObject.transform.right) +
+                  (shitOffset.y * this.gameObject.transform.up) +
+                  (shitOffset.z * this.gameObject.transform.forward);
 
+        var poop = Instantiate(Shit, this.gameObject.transform.position + offset, Quaternion.identity);
+        NetworkServer.Spawn(poop, netIdentity.gameObject);
+    }
     public void OnCrouch(InputAction.CallbackContext obj)
     {
         if (CanFly)

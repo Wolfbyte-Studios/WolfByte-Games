@@ -30,66 +30,13 @@ public class AddComponentsBasedOnName
             // Check if the object name contains "Clickable"
             if (obj.name.Contains("Clickable"))
             {
-                Clickable c = null;
-                LerpMovement l = null;
-                // Add Clickable component if it doesn't already exist
-                if (obj.GetComponent<Clickable>() == null)
-                {
-                    c = obj.AddComponent<Clickable>();
-                }
-                else
-                {
-                    c = obj.GetComponent<Clickable>();
-                }
-                if (obj.GetComponent<NetworkIdentity>() == null)
-                {
-                    obj.AddComponent<NetworkIdentity>();
-                }
-                if (obj.GetComponent<Rigidbody>() == null)
-                {
-                    obj.AddComponent<Rigidbody>();
-                }
-                if (obj.GetComponent<LerpMovement>() == null)
-                {
-                    l = obj.AddComponent<LerpMovement>();
-                }
-                //Material mat = null;
-                if (obj.GetComponent<MeshRenderer>() != null)
-                {
-                    //mat = obj.GetComponent<MeshRenderer>().sharedMaterial = new Material(obj.GetComponent<MeshRenderer>().sharedMaterial.shader);
-                }
-                else
-                {
-                    //mat = obj.transform.FindDeepChildrenByType<MeshRenderer>()[0].GetComponent<MeshRenderer>().sharedMaterial = new Material(obj.transform.FindDeepChildrenByType<MeshRenderer>()[0].GetComponent<MeshRenderer>().sharedMaterial.shader);
-                }
+                AddClick(obj);
 
-                //mat.color = Color.red;
-                obj.tag = "Clickable";
-                obj.layer = 30;
-                var children = obj.transform.GetComponentsInChildren<Transform>(true);
-                foreach (Transform t in children)
-                {
-                    t.gameObject.layer = 30;
-                }
-                c.low = Color.red;
-                c.med = Color.yellow;
-                c.high = Color.green;
-                c.done = Color.white;
-
-                if (obj.GetComponent<MeshCollider>() != null)
-                {
-                    if (l = null) { return; }
-                    if (obj.GetComponent<LerpMovement>().rigBody == true)
-                    {
-                        obj.GetComponent<MeshCollider>().convex = true;
-                    }
-                    else
-                    {
-                        obj.GetComponent<MeshCollider>().convex = false;
-                    }
-                }
-
-
+            }
+            if (obj.name.ToLower().Contains("throwing"))
+            {
+                AddClick(obj);
+                obj.GetComponent<Clickable>().ClickableType = Clickable.clickableType.Holdable;
             }
             if (obj.name.Contains("Water"))
             {
@@ -122,5 +69,69 @@ public class AddComponentsBasedOnName
 
             ////Debug.Log("Components added based on object names.");
         }
+    }
+    private static void AddClick(GameObject obj)
+    {
+        Clickable c = null;
+        LerpMovement l = null;
+        // Add Clickable component if it doesn't already exist
+        if (obj.GetComponent<Clickable>() == null)
+        {
+            c = obj.AddComponent<Clickable>();
+        }
+        else
+        {
+            c = obj.GetComponent<Clickable>();
+        }
+        if (obj.GetComponent<NetworkIdentity>() == null)
+        {
+            obj.AddComponent<NetworkIdentity>();
+        }
+        if (obj.GetComponent<Rigidbody>() == null)
+        {
+            obj.AddComponent<Rigidbody>();
+        }
+        if (obj.GetComponent<LerpMovement>() == null)
+        {
+            l = obj.AddComponent<LerpMovement>();
+        }
+        //Material mat = null;
+        if (obj.GetComponent<MeshRenderer>() != null)
+        {
+            //mat = obj.GetComponent<MeshRenderer>().sharedMaterial = new Material(obj.GetComponent<MeshRenderer>().sharedMaterial.shader);
+        }
+        else
+        {
+            //mat = obj.transform.FindDeepChildrenByType<MeshRenderer>()[0].GetComponent<MeshRenderer>().sharedMaterial = new Material(obj.transform.FindDeepChildrenByType<MeshRenderer>()[0].GetComponent<MeshRenderer>().sharedMaterial.shader);
+        }
+
+
+        //mat.color = Color.red;
+        obj.tag = "Clickable";
+        obj.layer = 30;
+        var children = obj.transform.GetComponentsInChildren<Transform>(true);
+        foreach (Transform t in children)
+        {
+            t.gameObject.layer = 30;
+        }
+        c.low = Color.red;
+        c.med = Color.yellow;
+        c.high = Color.green;
+        c.done = Color.white;
+
+        if (obj.GetComponent<MeshCollider>() != null)
+        {
+            if (l = null) { return; }
+            if (obj.GetComponent<LerpMovement>().rigBody == true)
+            {
+                obj.GetComponent<MeshCollider>().convex = true;
+            }
+            else
+            {
+                obj.GetComponent<MeshCollider>().convex = false;
+            }
+        }
+        var clickeditor = new ClickableEditor();
+        clickeditor.HandleClickableTypeChange(c);
     }
 }

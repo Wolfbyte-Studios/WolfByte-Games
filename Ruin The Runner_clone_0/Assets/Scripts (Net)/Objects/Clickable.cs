@@ -8,6 +8,27 @@ using UnityEngine.Events;
 [RequireComponent(typeof(NetworkRigidbodyReliable))]
 public class Clickable : NetworkBehaviour
 {
+    public enum clickableType
+    {
+        Moving,
+        Rotating,
+        Pause,
+        Shake,
+        Toggle,
+        Holdable
+    }
+    public clickableType ClickableType;
+    /*
+    Enum Class value equivalents
+    
+
+    Moving = LerpMovement
+    Rotating = Spin
+    Pause = Sine
+    Shake = Earthquake
+    Toggle = Toggle
+    Holdable = HoldItem
+     */
     public static int ClicksLeft;
     
     public bool ClicksCounted;
@@ -47,6 +68,7 @@ public class Clickable : NetworkBehaviour
         }
        
         timeFired = -100000;
+        
     }
 
     void Update()

@@ -271,6 +271,11 @@ public class PlayerMovement : NetworkBehaviour
         }
 
     }
+    public void Respawn()
+    {
+        this.gameObject.transform.position = GameManager.singleton.lastPooped.position;
+        Debug.Log("respawned");
+    }
     public void slowVelocity()
     {
         velocity = rb.linearVelocity;

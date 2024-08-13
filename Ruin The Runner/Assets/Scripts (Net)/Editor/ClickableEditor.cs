@@ -48,6 +48,7 @@ public class ClickableEditor : Editor
             case Clickable.clickableType.Pause:
                 AddComponentIfNotExists<Sine>(clickable);
                 UnityEventTools.AddPersistentListener(clickable.myEvent, clickable.GetComponent<Sine>().Pause);
+                UnityEventTools.AddPersistentListener(clickable.OnCoolDown, clickable.GetComponent<Sine>().Resume);
                 break;
 
             case Clickable.clickableType.Holdable:

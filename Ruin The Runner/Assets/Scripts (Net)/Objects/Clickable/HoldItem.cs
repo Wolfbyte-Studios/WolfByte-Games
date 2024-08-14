@@ -12,9 +12,13 @@ public class HoldItem : NetworkBehaviour
     public bool isGrabbing = false;
     private bool isMoving = false;
     private Vector3 startPosition;
+    [SyncVar]
+    public Vector3 velocity;
     private float startTime;
     private float journeyLength;
-
+    [SyncVar]
+    public float Strength = 5f;
+    private Rigidbody PlayerRb;
     public Rigidbody rb;
 
     private float lastToggleTime = 0f;
@@ -28,8 +32,8 @@ public class HoldItem : NetworkBehaviour
     {
         base.OnStartClient();
         Setup();
-        
     }
+
     public void Setup()
     {
         rb = GetComponent<Rigidbody>();
@@ -39,6 +43,8 @@ public class HoldItem : NetworkBehaviour
 
     void Update()
     {
+        var renderer = GetComponent<MeshRenderer>();
+        var origColor = renderer.material.color;
         if (isGrabbing)
         {
             rb.isKinematic = true;
@@ -50,15 +56,30 @@ public class HoldItem : NetworkBehaviour
             {
                 NetworkUtils.RpcHandler(this, GrabDrop);
             }
+            var newcolor = origColor;
+            newcolor.a = 0.0000001f;
+            renderer.material.color = newcolor;
         }
         else
         {
             rb.isKinematic = false;
-        
+           
+            gameObject.GetComponent<MeshRenderer>().material.color = origColor;
         }
+        velocity = rb.linearVelocity.normalized;
     }
 
     
+
+    [ClientRpc]
+    private void AddForce_ClientRpc(Vector3 direction, float strength)
+    {
+        if (PlayerRb != null)
+        {
+            PlayerRb.AddForce(direction * strength, ForceMode.Impulse);
+        }
+    }
+
     public void GrabDrop()
     {
         if (Time.time - lastToggleTime >= toggleCooldown)
@@ -69,14 +90,9 @@ public class HoldItem : NetworkBehaviour
             journeyLength = Vector3.Distance(startPosition, targetLocation);
             isMoving = true;
             isGrabbing = !isGrabbing;
-
-           
         }
     }
 
-    
-
-    
     public void ThrowLogic()
     {
         isGrabbing = false;
@@ -97,6 +113,7 @@ public class HoldItem : NetworkBehaviour
     public void Throw()
     {
         NetworkUtils.RpcHandler(this, ThrowLogic);
+       
     }
 
     public void Trigger()

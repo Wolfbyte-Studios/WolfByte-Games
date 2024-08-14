@@ -26,7 +26,10 @@ public class ClickableEditor : Editor
     public void HandleClickableTypeChange(Clickable clickable)
     {
         // Clear all existing listeners from the event
-
+        if(clickable.ClickableType == Clickable.clickableType.Custom)
+        {
+            return;
+        }
         removeEvents(clickable.myEvent);
         removeEvents(clickable.OnCoolDown);
         removeEvents(clickable.secondaryEvent);
@@ -49,6 +52,8 @@ public class ClickableEditor : Editor
                 AddComponentIfNotExists<Sine>(clickable);
                 UnityEventTools.AddPersistentListener(clickable.myEvent, clickable.GetComponent<Sine>().Pause);
                 UnityEventTools.AddPersistentListener(clickable.OnCoolDown, clickable.GetComponent<Sine>().Resume);
+                clickable.CoolDown = true;
+                clickable.coolDown = 3f;
                 break;
 
             case Clickable.clickableType.Holdable:

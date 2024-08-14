@@ -144,6 +144,7 @@
 -define:ENABLE_MATHEMATICS_1_2_1
 -define:ENABLE_BURST_1_5_0_OR_NEWER
 -define:HDRP_HAS_TIMELINE
+-define:ENABLE_UNITY_DENOISING_PLUGIN
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"Assets/Mirror/Plugins/BouncyCastle/BouncyCastle.Cryptography.dll"
@@ -413,6 +414,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Burst.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Collections.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Mathematics.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Rendering.Denoising.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.RenderPipelines.Core.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.RenderPipelines.Core.Runtime.Shared.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.RenderPipelines.GPUDriven.Runtime.ref.dll"

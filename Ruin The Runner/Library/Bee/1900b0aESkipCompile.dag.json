@@ -29,7 +29,7 @@
       "DisplayName": "Writing 6097564273297756792.rsp",
       "ActionType": "WriteFile",
       "PayloadOffset": 83,
-      "PayloadLength": 8752,
+      "PayloadLength": 9059,
       "PayloadDebugContentSnippet": "-a=\"C:\\Users\\user1\\3d zeldaish",
       "Inputs": [],
       "InputFlags": [],
@@ -76,12 +76,15 @@
         "Library/ScriptAssemblies/Unity.InputSystem.ForUI.dll",
         "Library/ScriptAssemblies/Unity.InputSystem.TestFramework.dll",
         "Library/ScriptAssemblies/Unity.Mathematics.dll",
+        "Library/ScriptAssemblies/Unity.MemoryProfiler.dll",
         "Library/ScriptAssemblies/Unity.PerformanceTesting.dll",
         "Library/ScriptAssemblies/Unity.ProBuilder.Csg.dll",
         "Library/ScriptAssemblies/Unity.ProBuilder.dll",
         "Library/ScriptAssemblies/Unity.ProBuilder.KdTree.dll",
         "Library/ScriptAssemblies/Unity.ProBuilder.Poly2Tri.dll",
         "Library/ScriptAssemblies/Unity.ProBuilder.Stl.dll",
+        "Library/ScriptAssemblies/Unity.Profiling.Core.dll",
+        "Library/ScriptAssemblies/Unity.Rendering.Denoising.Runtime.dll",
         "Library/ScriptAssemblies/Unity.Rendering.LightTransport.Runtime.dll",
         "Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll",
         "Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Shared.dll",
@@ -116,6 +119,9 @@
         "Library/Bee/artifacts/rsp/6097564273297756792.rsp"
       ],
       "InputFlags": [
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -459,6 +465,9 @@
       "File": "Library/ScriptAssemblies/Unity.Mathematics.dll"
     },
     {
+      "File": "Library/ScriptAssemblies/Unity.MemoryProfiler.dll"
+    },
+    {
       "File": "Library/ScriptAssemblies/Unity.PerformanceTesting.dll"
     },
     {
@@ -475,6 +484,12 @@
     },
     {
       "File": "Library/ScriptAssemblies/Unity.ProBuilder.Stl.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Profiling.Core.dll"
+    },
+    {
+      "File": "Library/ScriptAssemblies/Unity.Rendering.Denoising.Runtime.dll"
     },
     {
       "File": "Library/ScriptAssemblies/Unity.Rendering.LightTransport.Runtime.dll"

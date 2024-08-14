@@ -9,7 +9,7 @@ public class FitToWaterSurface : MonoBehaviour
     public Vector3 offSet;
     public float rotationSpeed = 1.0f; // Speed at which the object rotates to align with the water surface
 
-    public List<PlayerMovement.playertype> acceptedPlayers = new List<PlayerMovement.playertype>();
+    
     // Internal search params
     WaterSearchParameters searchParameters = new WaterSearchParameters();
     WaterSearchResult searchResult = new WaterSearchResult();
@@ -76,14 +76,7 @@ public class FitToWaterSurface : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.transform.GetAllComponentsInHierarchy<PlayerMovement>() != null)
-        {
-            var pM = other.gameObject.transform.GetAllComponentsInHierarchy<PlayerMovement>()[0];
-            if (acceptedPlayers.Contains(pM.PlayerType))
-            {
-                pM.Respawn();
-            }
-        }
+        
         if (objectsToFit == null)
         {
             var newGO = other.gameObject.transform.GetAllComponentsInHierarchy<Rigidbody>()[0].gameObject;

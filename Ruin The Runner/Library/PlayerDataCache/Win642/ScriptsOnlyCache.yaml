@@ -1,10 +1,15 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-Editor.dll:
+    - CR.CleanOutlineEditor
     Assembly-CSharp.dll:
     - AimOutline
+    - AutoStartHost
+    - CR.CleanOutline
     - Clickable
     - DisableCamera
     - DontDestroy
+    - DontFloat
     - FitToWaterSurface
     - GameManager
     - HoldItem
@@ -12,7 +17,10 @@ ScriptsOnlyBuild:
     - LookAtRunner
     - PlayerIdentity
     - PlayerMovement
+    - Poop
     - SceneStuff
+    - Sine
+    - Spin
     - SteamLobby
     - SteamNamePrinter
     FizzySteamworks.dll:
@@ -36,6 +44,7 @@ ScriptsOnlyBuild:
     - Unity.Cinemachine.CinemachineInputAxisController
     - Unity.Cinemachine.CinemachinePanTilt
     Unity.InputSystem.dll:
+    - UnityEngine.InputSystem.Editor.InputActionsEditorWindow
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
     - UnityEngine.InputSystem.InputSettings
@@ -43,6 +52,9 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.PlayerInput
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
     - UnityEngine.InputSystem.UI.InputSystemUIInputModule
+    Unity.RenderPipelines.Core.Editor.dll:
+    - UnityEditor.Rendering.ProbeVolumesOptionsEditor
+    - UnityEditor.Rendering.VolumeComponentEditor
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
     - UnityEngine.Rendering.UI.DebugUIHandlerButton
@@ -77,20 +89,68 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.UI.DebugUIHandlerVector4
     - UnityEngine.Rendering.UI.UIFoldout
     Unity.RenderPipelines.Core.Runtime.dll:
+    - UnityEngine.Rendering.ProbeVolumeBakingSet
+    - UnityEngine.Rendering.ProbeVolumePerSceneData
+    - UnityEngine.Rendering.ProbeVolumesOptions
     - UnityEngine.Rendering.Volume
     - UnityEngine.Rendering.VolumeProfile
     Unity.RenderPipelines.HighDefinition.Editor.dll:
+    - UnityEditor.Experimental.Rendering.HighDefinition.PathTracingEditor
+    - UnityEditor.Experimental.Rendering.HighDefinition.RecursiveRenderingEditor
+    - UnityEditor.Rendering.HighDefinition.BloomEditor
+    - UnityEditor.Rendering.HighDefinition.ChromaticAberrationEditor
+    - UnityEditor.Rendering.HighDefinition.CloudLayerEditor
+    - UnityEditor.Rendering.HighDefinition.ColorCurvesEditor
+    - UnityEditor.Rendering.HighDefinition.ContactShadowsEditor
+    - UnityEditor.Rendering.HighDefinition.DepthOfFieldEditor
+    - UnityEditor.Rendering.HighDefinition.DiffusionProfileListEditor
+    - UnityEditor.Rendering.HighDefinition.ExposureEditor
+    - UnityEditor.Rendering.HighDefinition.FilmGrainEditor
+    - UnityEditor.Rendering.HighDefinition.FogEditor
+    - UnityEditor.Rendering.HighDefinition.GlobalIlluminatorEditor
+    - UnityEditor.Rendering.HighDefinition.GradientSkySettingsEditor
     - UnityEditor.Rendering.HighDefinition.HDProjectSettings
+    - UnityEditor.Rendering.HighDefinition.HDRISkyEditor
+    - UnityEditor.Rendering.HighDefinition.HDRenderPipelineEditor
+    - UnityEditor.Rendering.HighDefinition.HDScreenSpaceReflectionEditor
+    - UnityEditor.Rendering.HighDefinition.HDShadowSettingsEditor
     - UnityEditor.Rendering.HighDefinition.HDUserSettings
+    - UnityEditor.Rendering.HighDefinition.HighQualityLineRenderingVolumeComponentEditor
+    - UnityEditor.Rendering.HighDefinition.IndirectLightingControllerEditor
+    - UnityEditor.Rendering.HighDefinition.LiftGammaGainEditor
+    - UnityEditor.Rendering.HighDefinition.LightClusterEditor
+    - UnityEditor.Rendering.HighDefinition.MicroShadowingEditor
+    - UnityEditor.Rendering.HighDefinition.MotionBlurEditor
+    - UnityEditor.Rendering.HighDefinition.PhysicallyBasedSkyEditor
+    - UnityEditor.Rendering.HighDefinition.RayTracingSettingsEditor
+    - UnityEditor.Rendering.HighDefinition.ScreenSpaceAmbientOcclusionEditor
+    - UnityEditor.Rendering.HighDefinition.ScreenSpaceLensFlareEditor
+    - UnityEditor.Rendering.HighDefinition.ScreenSpaceRefractionEditor
+    - UnityEditor.Rendering.HighDefinition.ShadowsMidtonesHighlightsEditor
+    - UnityEditor.Rendering.HighDefinition.SubSurfaceScatteringEditor
+    - UnityEditor.Rendering.HighDefinition.TonemappingEditor
+    - UnityEditor.Rendering.HighDefinition.VignetteEditor
+    - UnityEditor.Rendering.HighDefinition.VisualEnvironmentEditor
+    - UnityEditor.Rendering.HighDefinition.VolumetricCloudsEditor
+    - UnityEditor.Rendering.HighDefinition.WaterRenderingEditor
     Unity.RenderPipelines.HighDefinition.Runtime.dll:
     - UnityEngine.Rendering.HighDefinition.Bloom
+    - UnityEngine.Rendering.HighDefinition.ChannelMixer
+    - UnityEngine.Rendering.HighDefinition.ChromaticAberration
+    - UnityEngine.Rendering.HighDefinition.CloudLayer
+    - UnityEngine.Rendering.HighDefinition.ColorAdjustments
+    - UnityEngine.Rendering.HighDefinition.ColorCurves
     - UnityEngine.Rendering.HighDefinition.ComputeMaterialLibrary
     - UnityEngine.Rendering.HighDefinition.ContactShadows
     - UnityEngine.Rendering.HighDefinition.CustomPassVolume
+    - UnityEngine.Rendering.HighDefinition.DepthOfField
     - UnityEngine.Rendering.HighDefinition.DiffusionProfileList
     - UnityEngine.Rendering.HighDefinition.DiffusionProfileSettings
     - UnityEngine.Rendering.HighDefinition.Exposure
+    - UnityEngine.Rendering.HighDefinition.FilmGrain
     - UnityEngine.Rendering.HighDefinition.Fog
+    - UnityEngine.Rendering.HighDefinition.GlobalIllumination
+    - UnityEngine.Rendering.HighDefinition.GradientSky
     - UnityEngine.Rendering.HighDefinition.HDAdditionalCameraData
     - UnityEngine.Rendering.HighDefinition.HDAdditionalLightData
     - UnityEngine.Rendering.HighDefinition.HDRISky
@@ -98,20 +158,36 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.HighDefinition.HDRenderPipelineGlobalSettings
     - UnityEngine.Rendering.HighDefinition.HDShadowSettings
     - UnityEngine.Rendering.HighDefinition.HighQualityLineRenderingVolumeComponent
+    - UnityEngine.Rendering.HighDefinition.IndirectLightingController
+    - UnityEngine.Rendering.HighDefinition.LensDistortion
+    - UnityEngine.Rendering.HighDefinition.LiftGammaGain
+    - UnityEngine.Rendering.HighDefinition.LightCluster
+    - UnityEngine.Rendering.HighDefinition.LocalVolumetricFog
+    - UnityEngine.Rendering.HighDefinition.MicroShadowing
     - UnityEngine.Rendering.HighDefinition.MotionBlur
+    - UnityEngine.Rendering.HighDefinition.PaniniProjection
+    - UnityEngine.Rendering.HighDefinition.PathTracing
     - UnityEngine.Rendering.HighDefinition.PhysicallyBasedSky
     - UnityEngine.Rendering.HighDefinition.PlanarReflectionProbe
+    - UnityEngine.Rendering.HighDefinition.RayTracingSettings
+    - UnityEngine.Rendering.HighDefinition.RecursiveRendering
     - UnityEngine.Rendering.HighDefinition.ScreenSpaceAmbientOcclusion
+    - UnityEngine.Rendering.HighDefinition.ScreenSpaceLensFlare
+    - UnityEngine.Rendering.HighDefinition.ScreenSpaceReflection
+    - UnityEngine.Rendering.HighDefinition.ScreenSpaceRefraction
+    - UnityEngine.Rendering.HighDefinition.ShadowsMidtonesHighlights
+    - UnityEngine.Rendering.HighDefinition.SplitToning
     - UnityEngine.Rendering.HighDefinition.StaticLightingSky
+    - UnityEngine.Rendering.HighDefinition.SubSurfaceScattering
     - UnityEngine.Rendering.HighDefinition.Tonemapping
+    - UnityEngine.Rendering.HighDefinition.Vignette
     - UnityEngine.Rendering.HighDefinition.VisualEnvironment
-    - UnityEngine.Rendering.HighDefinition.WaterFoamGenerator
+    - UnityEngine.Rendering.HighDefinition.VolumetricClouds
     - UnityEngine.Rendering.HighDefinition.WaterRendering
     - UnityEngine.Rendering.HighDefinition.WaterSurface
+    - UnityEngine.Rendering.HighDefinition.WhiteBalance
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    Unity.ShaderGraph.Editor.dll:
-    - UnityEditor.ShaderGraph.ShaderGraphProjectSettings
     Unity.Splines.Editor.dll:
     - UnityEditor.Splines.SelectionContext
     Unity.TextMeshPro:
@@ -130,10 +206,9 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.CommandLineTest.RunData
@@ -163,7 +238,10 @@ ScriptsOnlyBuild:
   serializedClasses:
     Assembly-CSharp:
     - .LerpMovement/TransformData
+    - .Sine/TransformData
     - CR.CleanOutlineCustomPass
+    - CR.CleanOutlineDebugModeParameter
+    - CR.OutlineDepthSampleParameter
     Mirror:
     - Mirror.SnapshotInterpolationSettings
     Mirror.Components:
@@ -195,6 +273,7 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.PlayerInput/DeviceRegainedEvent
     - UnityEngine.InputSystem.iOS.PrivacyDataUsage
     Unity.RenderPipelines.Core.Runtime:
+    - UnityEngine.Rendering.APVLeakReductionModeParameter
     - UnityEngine.Rendering.AnimationCurveParameter
     - UnityEngine.Rendering.BitArray128
     - UnityEngine.Rendering.BoolParameter
@@ -207,6 +286,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.FloatRangeParameter
     - UnityEngine.Rendering.GlobalDynamicResolutionSettings
     - UnityEngine.Rendering.IncludeAdditionalRPAssets
+    - UnityEngine.Rendering.IntParameter
     - UnityEngine.Rendering.LayerMaskParameter
     - UnityEngine.Rendering.MaterialParameter
     - UnityEngine.Rendering.MinFloatParameter
@@ -226,14 +306,19 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.RenderGraphGlobalSettings
     - UnityEngine.Rendering.RenderGraphModule.Util.RenderGraphUtilsResources
     - UnityEngine.Rendering.RenderPipelineGraphicsSettingsContainer
+    - UnityEngine.Rendering.RenderingLayerMaskParameter
     - UnityEngine.Rendering.STP/RuntimeResources
     - UnityEngine.Rendering.SerializedDictionary`2
     - UnityEngine.Rendering.ShaderStrippingSetting
     - UnityEngine.Rendering.Texture2DParameter
     - UnityEngine.Rendering.Texture3DParameter
+    - UnityEngine.Rendering.TextureCurve
+    - UnityEngine.Rendering.TextureCurveParameter
+    - UnityEngine.Rendering.TextureParameter
     - UnityEngine.Rendering.UI.DebugUIPrefabBundle
     - UnityEngine.Rendering.Vector2Parameter
     - UnityEngine.Rendering.Vector3Parameter
+    - UnityEngine.Rendering.Vector4Parameter
     - UnityEngine.Rendering.VolumeParameter`1
     Unity.RenderPipelines.GPUDriven.Runtime:
     - UnityEngine.Rendering.GPUResidentDrawerResources
@@ -256,6 +341,11 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.HighDefinition.CameraSettingsOverride
     - UnityEngine.Rendering.HighDefinition.CascadeEndBorderParameter
     - UnityEngine.Rendering.HighDefinition.CascadePartitionSplitParameter
+    - UnityEngine.Rendering.HighDefinition.CloudDistortionMode
+    - UnityEngine.Rendering.HighDefinition.CloudLayer/CloudMap
+    - UnityEngine.Rendering.HighDefinition.CloudMapMode
+    - UnityEngine.Rendering.HighDefinition.CloudResolution
+    - UnityEngine.Rendering.HighDefinition.CloudShadowsResolution
     - UnityEngine.Rendering.HighDefinition.ColorGradingSettings
     - UnityEngine.Rendering.HighDefinition.ComputeMaterialDictionary
     - UnityEngine.Rendering.HighDefinition.CookieAtlasGraphicsFormat
@@ -263,13 +353,18 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.HighDefinition.CubeReflectionResolution
     - UnityEngine.Rendering.HighDefinition.CustomPostProcessOrdersSettings
     - UnityEngine.Rendering.HighDefinition.CustomPostProcessVolumeComponentList
+    - UnityEngine.Rendering.HighDefinition.DenoiserParameter
+    - UnityEngine.Rendering.HighDefinition.DepthOfFieldModeParameter
+    - UnityEngine.Rendering.HighDefinition.DepthOfFieldResolutionParameter
     - UnityEngine.Rendering.HighDefinition.DiffusionProfile
     - UnityEngine.Rendering.HighDefinition.DiffusionProfileDefaultSettings
     - UnityEngine.Rendering.HighDefinition.DiffusionProfileSettingsParameter
     - UnityEngine.Rendering.HighDefinition.EnvUpdateParameter
     - UnityEngine.Rendering.HighDefinition.ExposureModeParameter
     - UnityEngine.Rendering.HighDefinition.FallbackHDRTonemapParameter
+    - UnityEngine.Rendering.HighDefinition.FilmGrainLookupParameter
     - UnityEngine.Rendering.HighDefinition.FloatScalableSetting
+    - UnityEngine.Rendering.HighDefinition.FocusDistanceModeParameter
     - UnityEngine.Rendering.HighDefinition.FogColorParameter
     - UnityEngine.Rendering.HighDefinition.FogControlParameter
     - UnityEngine.Rendering.HighDefinition.FogDenoisingModeParameter
@@ -300,10 +395,14 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.HighDefinition.HDRenderPipelineRuntimeTextures
     - UnityEngine.Rendering.HighDefinition.HDShadowInitParameters
     - UnityEngine.Rendering.HighDefinition.HDShadowInitParameters/HDShadowAtlasInitParams
+    - UnityEngine.Rendering.HighDefinition.HighQualityLineRenderingVolumeComponent/LinesCompositionModeParameter
+    - UnityEngine.Rendering.HighDefinition.HighQualityLineRenderingVolumeComponent/LinesSortingQualityParameter
+    - UnityEngine.Rendering.HighDefinition.IndirectLightingController/LightLayerEnumParameter
     - UnityEngine.Rendering.HighDefinition.InfluenceVolume
     - UnityEngine.Rendering.HighDefinition.IntScalableSetting
     - UnityEngine.Rendering.HighDefinition.IntScalableSettingValue
     - UnityEngine.Rendering.HighDefinition.LensSettings
+    - UnityEngine.Rendering.HighDefinition.LocalVolumetricFogArtistParameters
     - UnityEngine.Rendering.HighDefinition.LocalVolumetricFogResolution
     - UnityEngine.Rendering.HighDefinition.LookDevVolumeProfileSettings
     - UnityEngine.Rendering.HighDefinition.LuminanceSourceParameter
@@ -323,6 +422,12 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.HighDefinition.ProbeSettings/ProxySettings
     - UnityEngine.Rendering.HighDefinition.ProbeSettingsOverride
     - UnityEngine.Rendering.HighDefinition.ProxyVolume
+    - UnityEngine.Rendering.HighDefinition.RTASBuildModeParameter
+    - UnityEngine.Rendering.HighDefinition.RTASCullingModeParameter
+    - UnityEngine.Rendering.HighDefinition.RayCastingModeParameter
+    - UnityEngine.Rendering.HighDefinition.RayMarchingFallbackHierarchyParameter
+    - UnityEngine.Rendering.HighDefinition.RayTracingFallbackHierachyParameter
+    - UnityEngine.Rendering.HighDefinition.RayTracingModeParameter
     - UnityEngine.Rendering.HighDefinition.ReflectionAndPlanarProbeFormat
     - UnityEngine.Rendering.HighDefinition.ReflectionProbeTextureCacheResolution
     - UnityEngine.Rendering.HighDefinition.RenderGraphSettings
@@ -332,16 +437,28 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.HighDefinition.RenderPipelineSettings/ReflectionProbeResolutionScalableSetting
     - UnityEngine.Rendering.HighDefinition.RenderingPathFrameSettings
     - UnityEngine.Rendering.HighDefinition.RenderingSpace
+    - UnityEngine.Rendering.HighDefinition.SSRAlgoParameter
     - UnityEngine.Rendering.HighDefinition.ScalableSettingLevelParameter
     - UnityEngine.Rendering.HighDefinition.ScalableSettingSchemaId
+    - UnityEngine.Rendering.HighDefinition.ScreenSpaceLensFlareResolutionParameter
+    - UnityEngine.Rendering.HighDefinition.SeedModeParameter
     - UnityEngine.Rendering.HighDefinition.SkyAmbientModeParameter
+    - UnityEngine.Rendering.HighDefinition.SkyImportanceSamplingParameter
     - UnityEngine.Rendering.HighDefinition.SkyIntensityParameter
     - UnityEngine.Rendering.HighDefinition.SkyResolution
     - UnityEngine.Rendering.HighDefinition.SpecularFadeSettings
     - UnityEngine.Rendering.HighDefinition.TargetMidGrayParameter
     - UnityEngine.Rendering.HighDefinition.TonemappingModeParameter
+    - UnityEngine.Rendering.HighDefinition.VignetteModeParameter
     - UnityEngine.Rendering.HighDefinition.VirtualTexturingSettingsSRP
     - UnityEngine.Rendering.HighDefinition.VisualEnvironment/PlanetMode
+    - UnityEngine.Rendering.HighDefinition.VolumetricClouds/CloudControl
+    - UnityEngine.Rendering.HighDefinition.VolumetricClouds/CloudErosionNoise
+    - UnityEngine.Rendering.HighDefinition.VolumetricClouds/CloudFadeInMode
+    - UnityEngine.Rendering.HighDefinition.VolumetricClouds/CloudMapResolution
+    - UnityEngine.Rendering.HighDefinition.VolumetricClouds/CloudPresets
+    - UnityEngine.Rendering.HighDefinition.VolumetricClouds/CloudShadowResolution
+    - UnityEngine.Rendering.HighDefinition.VolumetricClouds/CloudSimpleMode
     - UnityEngine.Rendering.HighDefinition.WindOrientationParameter
     - UnityEngine.Rendering.HighDefinition.WindParameter/WindParamaterValue
     - UnityEngine.Rendering.HighDefinition.WindSpeedParameter
@@ -394,6 +511,12 @@ ScriptsOnlyBuild:
   - assembly: Mirror.Components
     fullTypeName: Mirror.Discovery.NetworkDiscoveryHUD
     methodName: OnDiscoveredServer
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -488,24 +611,6 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
     methodName: OnAction
   - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
-    methodName: OnDecrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
-    methodName: OnIncrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
-    methodName: OnIncrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
-    methodName: OnDecrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField
-    methodName: OnDecrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
-    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField
-    methodName: OnIncrement
-  - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
     methodName: OnScrollbarClicked
   - assembly: Unity.RenderPipelines.Core.Runtime
@@ -522,36 +627,134 @@ ScriptsOnlyBuild:
     methodName: OnDecrement
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerIntField
+    methodName: OnIncrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
+    methodName: OnDecrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
+    methodName: OnIncrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
+    methodName: OnIncrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
+    methodName: OnDecrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField
+    methodName: OnDecrement
+  - assembly: Unity.RenderPipelines.Core.Runtime
+    fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField
     methodName: OnIncrement
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
     methodName: ResetDebugManager
   - assembly: Assembly-CSharp
-    fullTypeName: HoldItem
+    fullTypeName: SteamLobby
+    methodName: HostLobby
+  - assembly: Assembly-CSharp
+    fullTypeName: SteamLobby
+    methodName: HostLobby
+  - assembly: Mirror.Components
+    fullTypeName: Mirror.Discovery.NetworkDiscoveryHUD
+    methodName: OnDiscoveredServer
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Pause
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Pause
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Resume
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Pause
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Pause
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Resume
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Pause
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Pause
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Pause
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Resume
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Pause
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Resume
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
     methodName: Trigger
   - assembly: Assembly-CSharp
     fullTypeName: HoldItem
     methodName: Trigger
   - assembly: Assembly-CSharp
     fullTypeName: HoldItem
+    methodName: Throw
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
     methodName: Trigger
   - assembly: Assembly-CSharp
-    fullTypeName: HoldItem
+    fullTypeName: LerpMovement
     methodName: Trigger
   - assembly: Assembly-CSharp
-    fullTypeName: HoldItem
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: HoldItem
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: HoldItem
+    fullTypeName: LerpMovement
     methodName: Trigger
   sceneClasses:
     Assets/Scenes/Levels/KingdomTest.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
@@ -571,49 +774,175 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1564}
+      Script: {instanceID: 36368}
     - Class: 114
-      Script: {instanceID: 35568}
+      Script: {instanceID: 36392}
     - Class: 114
-      Script: {instanceID: 35592}
+      Script: {instanceID: 36518}
     - Class: 114
-      Script: {instanceID: 36762}
+      Script: {instanceID: 36904}
     - Class: 114
-      Script: {instanceID: 36930}
+      Script: {instanceID: 37382}
     - Class: 114
-      Script: {instanceID: 38150}
+      Script: {instanceID: 37594}
     - Class: 114
-      Script: {instanceID: 38236}
+      Script: {instanceID: 37772}
     - Class: 114
-      Script: {instanceID: 38878}
+      Script: {instanceID: 37858}
     - Class: 114
-      Script: {instanceID: 39646}
+      Script: {instanceID: 37878}
     - Class: 114
-      Script: {instanceID: 42358}
+      Script: {instanceID: 38360}
     - Class: 114
-      Script: {instanceID: 44546}
+      Script: {instanceID: 38854}
     - Class: 114
-      Script: {instanceID: 44806}
+      Script: {instanceID: 39014}
     - Class: 114
-      Script: {instanceID: 46508}
+      Script: {instanceID: 39100}
     - Class: 114
-      Script: {instanceID: 46632}
+      Script: {instanceID: 39128}
     - Class: 114
-      Script: {instanceID: 47504}
+      Script: {instanceID: 39588}
     - Class: 114
-      Script: {instanceID: 48798}
+      Script: {instanceID: 39734}
     - Class: 114
-      Script: {instanceID: 50922}
+      Script: {instanceID: 39756}
+    - Class: 114
+      Script: {instanceID: 39918}
+    - Class: 114
+      Script: {instanceID: 40524}
+    - Class: 114
+      Script: {instanceID: 40542}
+    - Class: 114
+      Script: {instanceID: 41182}
+    - Class: 114
+      Script: {instanceID: 41834}
+    - Class: 114
+      Script: {instanceID: 42198}
+    - Class: 114
+      Script: {instanceID: 42550}
+    - Class: 114
+      Script: {instanceID: 42976}
+    - Class: 114
+      Script: {instanceID: 43160}
+    - Class: 114
+      Script: {instanceID: 43312}
+    - Class: 114
+      Script: {instanceID: 43334}
+    - Class: 114
+      Script: {instanceID: 43776}
+    - Class: 114
+      Script: {instanceID: 43890}
+    - Class: 114
+      Script: {instanceID: 44306}
+    - Class: 114
+      Script: {instanceID: 44732}
+    - Class: 114
+      Script: {instanceID: 45550}
+    - Class: 114
+      Script: {instanceID: 45554}
+    - Class: 114
+      Script: {instanceID: 45820}
+    - Class: 114
+      Script: {instanceID: 45882}
+    - Class: 114
+      Script: {instanceID: 45948}
+    - Class: 114
+      Script: {instanceID: 46108}
+    - Class: 114
+      Script: {instanceID: 46288}
+    - Class: 114
+      Script: {instanceID: 46334}
+    - Class: 114
+      Script: {instanceID: 46372}
+    - Class: 114
+      Script: {instanceID: 46704}
+    - Class: 114
+      Script: {instanceID: 46890}
+    - Class: 114
+      Script: {instanceID: 46942}
+    - Class: 114
+      Script: {instanceID: 47012}
+    - Class: 114
+      Script: {instanceID: 47042}
+    - Class: 114
+      Script: {instanceID: 47416}
+    - Class: 114
+      Script: {instanceID: 47684}
+    - Class: 114
+      Script: {instanceID: 47828}
+    - Class: 114
+      Script: {instanceID: 47936}
+    - Class: 114
+      Script: {instanceID: 47966}
+    - Class: 114
+      Script: {instanceID: 48462}
+    - Class: 114
+      Script: {instanceID: 48578}
+    - Class: 114
+      Script: {instanceID: 49914}
+    - Class: 114
+      Script: {instanceID: 50324}
+    - Class: 114
+      Script: {instanceID: 51132}
+    - Class: 114
+      Script: {instanceID: 51476}
+    - Class: 114
+      Script: {instanceID: 51632}
+    - Class: 114
+      Script: {instanceID: 52000}
+    - Class: 114
+      Script: {instanceID: 52080}
+    - Class: 114
+      Script: {instanceID: 52560}
+    - Class: 114
+      Script: {instanceID: 52738}
+    - Class: 114
+      Script: {instanceID: 53010}
+    - Class: 114
+      Script: {instanceID: 53668}
+    - Class: 114
+      Script: {instanceID: 53808}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
+    - Class: 187
+      Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
+    - Class: 850595691
       Script: {instanceID: 0}
     Assets/Scenes/Start.unity:
     - Class: 1
@@ -657,195 +986,217 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1564}
+      Script: {instanceID: 36368}
     - Class: 114
-      Script: {instanceID: 35568}
+      Script: {instanceID: 36518}
     - Class: 114
-      Script: {instanceID: 35716}
+      Script: {instanceID: 36758}
     - Class: 114
-      Script: {instanceID: 35950}
+      Script: {instanceID: 36904}
     - Class: 114
-      Script: {instanceID: 36310}
+      Script: {instanceID: 37128}
     - Class: 114
-      Script: {instanceID: 36372}
+      Script: {instanceID: 37194}
     - Class: 114
-      Script: {instanceID: 36640}
+      Script: {instanceID: 37466}
     - Class: 114
-      Script: {instanceID: 36762}
+      Script: {instanceID: 37594}
     - Class: 114
-      Script: {instanceID: 36840}
+      Script: {instanceID: 37676}
     - Class: 114
-      Script: {instanceID: 36930}
+      Script: {instanceID: 37772}
     - Class: 114
-      Script: {instanceID: 37006}
+      Script: {instanceID: 37850}
     - Class: 114
-      Script: {instanceID: 37308}
+      Script: {instanceID: 37878}
     - Class: 114
-      Script: {instanceID: 37506}
+      Script: {instanceID: 38160}
     - Class: 114
-      Script: {instanceID: 37832}
+      Script: {instanceID: 38360}
     - Class: 114
-      Script: {instanceID: 37994}
+      Script: {instanceID: 38690}
     - Class: 114
-      Script: {instanceID: 38128}
+      Script: {instanceID: 38854}
     - Class: 114
-      Script: {instanceID: 38150}
+      Script: {instanceID: 38990}
     - Class: 114
-      Script: {instanceID: 38236}
+      Script: {instanceID: 39014}
     - Class: 114
-      Script: {instanceID: 38618}
+      Script: {instanceID: 39100}
     - Class: 114
-      Script: {instanceID: 38714}
+      Script: {instanceID: 39492}
     - Class: 114
-      Script: {instanceID: 38860}
+      Script: {instanceID: 39588}
     - Class: 114
-      Script: {instanceID: 38878}
+      Script: {instanceID: 39734}
     - Class: 114
-      Script: {instanceID: 38958}
+      Script: {instanceID: 39756}
     - Class: 114
-      Script: {instanceID: 39040}
+      Script: {instanceID: 39836}
     - Class: 114
-      Script: {instanceID: 39288}
+      Script: {instanceID: 39918}
     - Class: 114
-      Script: {instanceID: 39390}
+      Script: {instanceID: 40174}
     - Class: 114
-      Script: {instanceID: 39450}
+      Script: {instanceID: 40284}
     - Class: 114
-      Script: {instanceID: 39534}
+      Script: {instanceID: 40344}
     - Class: 114
-      Script: {instanceID: 39586}
+      Script: {instanceID: 40428}
     - Class: 114
-      Script: {instanceID: 39624}
+      Script: {instanceID: 40480}
     - Class: 114
-      Script: {instanceID: 39646}
+      Script: {instanceID: 40520}
     - Class: 114
-      Script: {instanceID: 40268}
+      Script: {instanceID: 40524}
     - Class: 114
-      Script: {instanceID: 40840}
+      Script: {instanceID: 40542}
     - Class: 114
-      Script: {instanceID: 40902}
+      Script: {instanceID: 41182}
     - Class: 114
-      Script: {instanceID: 41262}
+      Script: {instanceID: 41772}
     - Class: 114
-      Script: {instanceID: 41272}
+      Script: {instanceID: 41834}
     - Class: 114
-      Script: {instanceID: 42206}
+      Script: {instanceID: 42198}
     - Class: 114
-      Script: {instanceID: 42268}
+      Script: {instanceID: 42208}
     - Class: 114
-      Script: {instanceID: 42338}
+      Script: {instanceID: 42550}
     - Class: 114
-      Script: {instanceID: 42358}
+      Script: {instanceID: 43160}
     - Class: 114
-      Script: {instanceID: 42378}
+      Script: {instanceID: 43222}
     - Class: 114
-      Script: {instanceID: 42802}
+      Script: {instanceID: 43292}
     - Class: 114
-      Script: {instanceID: 42810}
+      Script: {instanceID: 43312}
     - Class: 114
-      Script: {instanceID: 42884}
+      Script: {instanceID: 43334}
     - Class: 114
-      Script: {instanceID: 42924}
+      Script: {instanceID: 43768}
     - Class: 114
-      Script: {instanceID: 43006}
+      Script: {instanceID: 43776}
     - Class: 114
-      Script: {instanceID: 43116}
+      Script: {instanceID: 43850}
     - Class: 114
-      Script: {instanceID: 43264}
+      Script: {instanceID: 43890}
     - Class: 114
-      Script: {instanceID: 44130}
+      Script: {instanceID: 43974}
     - Class: 114
-      Script: {instanceID: 44430}
+      Script: {instanceID: 44090}
     - Class: 114
-      Script: {instanceID: 44542}
+      Script: {instanceID: 44244}
     - Class: 114
-      Script: {instanceID: 44546}
+      Script: {instanceID: 44306}
     - Class: 114
-      Script: {instanceID: 44578}
+      Script: {instanceID: 44732}
     - Class: 114
-      Script: {instanceID: 44580}
+      Script: {instanceID: 45132}
     - Class: 114
-      Script: {instanceID: 44806}
+      Script: {instanceID: 45436}
     - Class: 114
-      Script: {instanceID: 44868}
+      Script: {instanceID: 45550}
     - Class: 114
-      Script: {instanceID: 44932}
+      Script: {instanceID: 45554}
     - Class: 114
-      Script: {instanceID: 45090}
+      Script: {instanceID: 45586}
     - Class: 114
-      Script: {instanceID: 45350}
+      Script: {instanceID: 45588}
     - Class: 114
-      Script: {instanceID: 45676}
+      Script: {instanceID: 45820}
     - Class: 114
-      Script: {instanceID: 45856}
+      Script: {instanceID: 45882}
     - Class: 114
-      Script: {instanceID: 45904}
+      Script: {instanceID: 45948}
     - Class: 114
-      Script: {instanceID: 45972}
+      Script: {instanceID: 46108}
     - Class: 114
-      Script: {instanceID: 46010}
+      Script: {instanceID: 46288}
     - Class: 114
-      Script: {instanceID: 46374}
+      Script: {instanceID: 46372}
     - Class: 114
-      Script: {instanceID: 46632}
+      Script: {instanceID: 46704}
     - Class: 114
-      Script: {instanceID: 46850}
+      Script: {instanceID: 46890}
     - Class: 114
-      Script: {instanceID: 46874}
+      Script: {instanceID: 46942}
     - Class: 114
-      Script: {instanceID: 47388}
+      Script: {instanceID: 47012}
     - Class: 114
-      Script: {instanceID: 48246}
+      Script: {instanceID: 47042}
     - Class: 114
-      Script: {instanceID: 48798}
+      Script: {instanceID: 47050}
     - Class: 114
-      Script: {instanceID: 48836}
+      Script: {instanceID: 47416}
     - Class: 114
-      Script: {instanceID: 48910}
+      Script: {instanceID: 47684}
     - Class: 114
-      Script: {instanceID: 49320}
+      Script: {instanceID: 47828}
     - Class: 114
-      Script: {instanceID: 49434}
+      Script: {instanceID: 47910}
     - Class: 114
-      Script: {instanceID: 49584}
+      Script: {instanceID: 47936}
     - Class: 114
-      Script: {instanceID: 50198}
+      Script: {instanceID: 47966}
     - Class: 114
-      Script: {instanceID: 50330}
+      Script: {instanceID: 48462}
     - Class: 114
-      Script: {instanceID: 50338}
+      Script: {instanceID: 49350}
     - Class: 114
-      Script: {instanceID: 50490}
+      Script: {instanceID: 49914}
     - Class: 114
-      Script: {instanceID: 50648}
+      Script: {instanceID: 49952}
     - Class: 114
-      Script: {instanceID: 50678}
+      Script: {instanceID: 50028}
     - Class: 114
-      Script: {instanceID: 50804}
+      Script: {instanceID: 50324}
     - Class: 114
-      Script: {instanceID: 50846}
+      Script: {instanceID: 50440}
     - Class: 114
-      Script: {instanceID: 50852}
+      Script: {instanceID: 50554}
     - Class: 114
-      Script: {instanceID: 50922}
+      Script: {instanceID: 50714}
     - Class: 114
-      Script: {instanceID: 51078}
+      Script: {instanceID: 51132}
     - Class: 114
-      Script: {instanceID: 51398}
+      Script: {instanceID: 51334}
     - Class: 114
-      Script: {instanceID: 51450}
+      Script: {instanceID: 51468}
     - Class: 114
-      Script: {instanceID: 51572}
+      Script: {instanceID: 51476}
     - Class: 114
-      Script: {instanceID: 51886}
+      Script: {instanceID: 51632}
     - Class: 114
-      Script: {instanceID: 52122}
+      Script: {instanceID: 51800}
     - Class: 114
-      Script: {instanceID: 52460}
+      Script: {instanceID: 51830}
     - Class: 114
-      Script: {instanceID: 52486}
+      Script: {instanceID: 51958}
     - Class: 114
-      Script: {instanceID: 52626}
+      Script: {instanceID: 52000}
+    - Class: 114
+      Script: {instanceID: 52006}
+    - Class: 114
+      Script: {instanceID: 52080}
+    - Class: 114
+      Script: {instanceID: 52238}
+    - Class: 114
+      Script: {instanceID: 52560}
+    - Class: 114
+      Script: {instanceID: 52612}
+    - Class: 114
+      Script: {instanceID: 52738}
+    - Class: 114
+      Script: {instanceID: 53054}
+    - Class: 114
+      Script: {instanceID: 53296}
+    - Class: 114
+      Script: {instanceID: 53640}
+    - Class: 114
+      Script: {instanceID: 53668}
+    - Class: 114
+      Script: {instanceID: 53808}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -871,12 +1222,6 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
-  - hash:
-      serializedVersion: 2
-      Hash: 005309ee5ccac15b98d6e120ac63104f
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: HoldItem
   - hash:
       serializedVersion: 2
       Hash: 4031a3425e20192f004973326c2b30ac
@@ -1317,7 +1662,7 @@ ScriptsOnlyBuild:
     className: CinemachineOrbitalTransposer
   - hash:
       serializedVersion: 2
-      Hash: b0da5044e07e8c6d129185022151d3d4
+      Hash: dac024f2f25d38fcf246e635f804f006
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: LerpMovement
@@ -1393,6 +1738,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualEffectGraph.Runtime
     namespaceName: UnityEngine.VFX.Utility
     className: VFXVisibilityEventBinder
+  - hash:
+      serializedVersion: 2
+      Hash: bd6c2e6281c6d925a4e31408fad14139
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DontFloat
   - hash:
       serializedVersion: 2
       Hash: 9507f221948bbd40853cc0ec75374d07
@@ -1789,6 +2140,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror
     namespaceName: Mirror
     className: NetworkIdentity
+  - hash:
+      serializedVersion: 2
+      Hash: 60277e22a3470b1f5cfa415cb16aa822
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Sine
   - hash:
       serializedVersion: 2
       Hash: 0f47d98c3cb5ca5df1a4969253eec160
@@ -2727,6 +3084,12 @@ ScriptsOnlyBuild:
     className: ClientCube
   - hash:
       serializedVersion: 2
+      Hash: 5a37e283f5a8ad0e644e7008c6975c8e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: HoldItem
+  - hash:
+      serializedVersion: 2
       Hash: 5d33cf0cf3cc9cc1b5305186818d19ed
     assemblyName: Heathen.Core
     namespaceName: HeathenEngineering
@@ -2761,6 +3124,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples
     namespaceName: Mirror.Examples.MultipleMatch
     className: RoomGUI
+  - hash:
+      serializedVersion: 2
+      Hash: bf58e1532a52079bec0fc65a748b615f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: FillValueNumber
   - hash:
       serializedVersion: 2
       Hash: a90a860eb6f2ed68366952a6bcc0af25
@@ -3099,16 +3468,16 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerFloatField
   - hash:
       serializedVersion: 2
-      Hash: 76aa07b2d58894482e3d5ff4d45cb1b7
-    assemblyName: Mirror.Examples
-    namespaceName: Mirror.Examples.AdditiveScenes
-    className: ShootingTankBehaviour
-  - hash:
-      serializedVersion: 2
       Hash: a5b008dcf3e82b568c0b84066aef8fc9
     assemblyName: Unity.RenderPipelines.HighDefinition.Runtime
     namespaceName: UnityEngine.Rendering.HighDefinition
     className: HDShadowSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 76aa07b2d58894482e3d5ff4d45cb1b7
+    assemblyName: Mirror.Examples
+    namespaceName: Mirror.Examples.AdditiveScenes
+    className: ShootingTankBehaviour
   - hash:
       serializedVersion: 2
       Hash: e81bf7d4290eb9291aa9e23e90b97774
@@ -3139,6 +3508,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Components
     namespaceName: Mirror
     className: DistanceInterestManagementCustomRange
+  - hash:
+      serializedVersion: 2
+      Hash: 294ef0341151865d3589f6393b4f1df5
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MeshCombiner
   - hash:
       serializedVersion: 2
       Hash: c4b85a67513b4f0cf7b5fb2d5ded04b0
@@ -3513,7 +3888,7 @@ ScriptsOnlyBuild:
     className: NetworkAnimator
   - hash:
       serializedVersion: 2
-      Hash: 68daab5790963f21b24a9cf2a9cc228b
+      Hash: fb44ebfa366bd1e284d784066e640161
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Clickable
@@ -3699,6 +4074,12 @@ ScriptsOnlyBuild:
     className: UnityOnMouseUpMessageListener
   - hash:
       serializedVersion: 2
+      Hash: b043e29f0efa5c97d4a033698204761c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AutoStartHost
+  - hash:
+      serializedVersion: 2
       Hash: 41fc4ec3ebad096dcc702dca9973e5f3
     assemblyName: Heathen.Core
     namespaceName: HeathenEngineering.Events
@@ -3717,7 +4098,7 @@ ScriptsOnlyBuild:
     className: PanelRaycaster
   - hash:
       serializedVersion: 2
-      Hash: f4cc84146deb5088e3fa7f39cf0aa1f7
+      Hash: 2f4ba3be9e6461c216a537c97ed2f9c0
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerMovement
@@ -4227,7 +4608,7 @@ ScriptsOnlyBuild:
     className: NetworkLerpRigidbody
   - hash:
       serializedVersion: 2
-      Hash: e32b6372647aefadef7782be1538a70d
+      Hash: f2d96316ed8a41648702eac5a2f6aa43
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: FitToWaterSurface
@@ -4623,7 +5004,7 @@ ScriptsOnlyBuild:
     className: PlayerControllerScript
   - hash:
       serializedVersion: 2
-      Hash: 344eda256b1c252e0d5c75290ce069ac
+      Hash: 5d0ba4c903ca2bd615894a961d103afd
     assemblyName: Unity.RenderPipelines.HighDefinition.Runtime
     namespaceName: UnityEngine.Rendering.HighDefinition
     className: PathTracing
@@ -5055,7 +5436,7 @@ ScriptsOnlyBuild:
     className: GameEvent
   - hash:
       serializedVersion: 2
-      Hash: cedb66c948119dd2d5aa30faf92af657
+      Hash: bf1b46509bebccc7b78a8be77d584845
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameManager
@@ -5599,12 +5980,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Splines
     namespaceName: UnityEngine.Splines
     className: SplineExtrude
-  - hash:
-      serializedVersion: 2
-      Hash: bf58e1532a52079bec0fc65a748b615f
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: FillValueNumber
   platform: 19
   scenePathNames:
   - Assets/Scenes/Start.unity

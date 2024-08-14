@@ -1,7 +1,10 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
 		<type fullname=".LerpMovement/TransformData" preserve="nothing" serialized="true"/>
+		<type fullname=".Sine/TransformData" preserve="nothing" serialized="true"/>
 		<type fullname="CR.CleanOutlineCustomPass" preserve="nothing" serialized="true"/>
+		<type fullname="CR.CleanOutlineDebugModeParameter" preserve="nothing" serialized="true"/>
+		<type fullname="CR.OutlineDepthSampleParameter" preserve="nothing" serialized="true"/>
 	</assembly>
 	<assembly fullname="Mirror">
 		<type fullname="Mirror.SnapshotInterpolationSettings" preserve="nothing" serialized="true"/>
@@ -39,6 +42,7 @@
 	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime">
 		<type fullname="UnityEngine.Rendering.AnimationCurveParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.APVLeakReductionModeParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.BitArray128" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.BoolParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.ClampedFloatParameter" preserve="nothing" serialized="true"/>
@@ -50,6 +54,7 @@
 		<type fullname="UnityEngine.Rendering.FloatRangeParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.GlobalDynamicResolutionSettings" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.IncludeAdditionalRPAssets" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.IntParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.LayerMaskParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.MaterialParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.MinFloatParameter" preserve="nothing" serialized="true"/>
@@ -68,15 +73,20 @@
 		<type fullname="UnityEngine.Rendering.ProbeVolumeTextureMemoryBudget" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.RenderGraphGlobalSettings" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.RenderGraphModule.Util.RenderGraphUtilsResources" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.RenderingLayerMaskParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.RenderPipelineGraphicsSettingsContainer" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.SerializedDictionary`2" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.ShaderStrippingSetting" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.STP/RuntimeResources" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.Texture2DParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.Texture3DParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.TextureCurve" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.TextureCurveParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.TextureParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.UI.DebugUIPrefabBundle" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.Vector2Parameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.Vector3Parameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.Vector4Parameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.VolumeParameter`1" preserve="nothing" serialized="true"/>
 	</assembly>
 	<assembly fullname="Unity.RenderPipelines.GPUDriven.Runtime">
@@ -99,6 +109,11 @@
 		<type fullname="UnityEngine.Rendering.HighDefinition.CameraSettingsOverride" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.CascadeEndBorderParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.CascadePartitionSplitParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.CloudDistortionMode" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.CloudLayer/CloudMap" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.CloudMapMode" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.CloudResolution" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.CloudShadowsResolution" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ColorGradingSettings" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ComputeMaterialDictionary" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.CookieAtlasGraphicsFormat" preserve="nothing" serialized="true"/>
@@ -106,13 +121,18 @@
 		<type fullname="UnityEngine.Rendering.HighDefinition.CubeReflectionResolution" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.CustomPostProcessOrdersSettings" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.CustomPostProcessVolumeComponentList" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.DenoiserParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.DepthOfFieldModeParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.DepthOfFieldResolutionParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.DiffusionProfile" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.DiffusionProfileDefaultSettings" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.DiffusionProfileSettingsParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.EnvUpdateParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ExposureModeParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.FallbackHDRTonemapParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.FilmGrainLookupParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.FloatScalableSetting" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.FocusDistanceModeParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.FogColorParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.FogControlParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.FogDenoisingModeParameter" preserve="nothing" serialized="true"/>
@@ -143,10 +163,14 @@
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDRPRayTracingResources" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDShadowInitParameters" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDShadowInitParameters/HDShadowAtlasInitParams" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.HighQualityLineRenderingVolumeComponent/LinesCompositionModeParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.HighQualityLineRenderingVolumeComponent/LinesSortingQualityParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.IndirectLightingController/LightLayerEnumParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.InfluenceVolume" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.IntScalableSetting" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.IntScalableSettingValue" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.LensSettings" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.LocalVolumetricFogArtistParameters" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.LocalVolumetricFogResolution" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.LookDevVolumeProfileSettings" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.LuminanceSourceParameter" preserve="nothing" serialized="true"/>
@@ -166,6 +190,10 @@
 		<type fullname="UnityEngine.Rendering.HighDefinition.ProbeSettings/ProxySettings" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ProbeSettingsOverride" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ProxyVolume" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.RayCastingModeParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.RayMarchingFallbackHierarchyParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.RayTracingFallbackHierachyParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.RayTracingModeParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ReflectionAndPlanarProbeFormat" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ReflectionProbeTextureCacheResolution" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.RenderGraphSettings" preserve="nothing" serialized="true"/>
@@ -175,16 +203,30 @@
 		<type fullname="UnityEngine.Rendering.HighDefinition.RenderPipelineSettings/LightSettings" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.RenderPipelineSettings/PlanarReflectionAtlasResolutionScalableSetting" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.RenderPipelineSettings/ReflectionProbeResolutionScalableSetting" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.RTASBuildModeParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.RTASCullingModeParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ScalableSettingLevelParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ScalableSettingSchemaId" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.ScreenSpaceLensFlareResolutionParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.SeedModeParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.SkyAmbientModeParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.SkyImportanceSamplingParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.SkyIntensityParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.SkyResolution" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.SpecularFadeSettings" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.SSRAlgoParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.TargetMidGrayParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.TonemappingModeParameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.VignetteModeParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.VirtualTexturingSettingsSRP" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.VisualEnvironment/PlanetMode" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.VolumetricClouds/CloudControl" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.VolumetricClouds/CloudErosionNoise" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.VolumetricClouds/CloudFadeInMode" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.VolumetricClouds/CloudMapResolution" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.VolumetricClouds/CloudPresets" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.VolumetricClouds/CloudShadowResolution" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.VolumetricClouds/CloudSimpleMode" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.WindOrientationParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.WindParameter/WindParamaterValue" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.WindSpeedParameter" preserve="nothing" serialized="true"/>

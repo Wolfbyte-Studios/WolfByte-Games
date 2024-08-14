@@ -15,7 +15,8 @@ public class Clickable : NetworkBehaviour
         Pause,
         Shake,
         Toggle,
-        Holdable
+        Holdable,
+        Custom
     }
     public clickableType ClickableType;
     /*

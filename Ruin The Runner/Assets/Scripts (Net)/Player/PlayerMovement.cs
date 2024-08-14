@@ -43,6 +43,7 @@ public class PlayerMovement : NetworkBehaviour
     public NetworkAnimator NAnim;
     public GameObject Shit;
     public Vector3 shitOffset;
+    private Collision lastCollided;
     //private PlayerNetworkIndex PLI;
 
     public override void OnStartClient()
@@ -78,7 +79,7 @@ public class PlayerMovement : NetworkBehaviour
 
         if (playerInput != null)
         {
-            Debug.Log("Setup part 1 success");
+            //Debug.log("Setup part 1 success");
             actions = playerInput.actions; // Get the actions from the PlayerInput component
             move = actions.FindAction("Move");
             menu = actions.FindAction("Menu");
@@ -108,7 +109,7 @@ public class PlayerMovement : NetworkBehaviour
         else if (PlayerType == playertype.Runner)
         {
             playerCam.gameObject.GetComponent<Camera>().cullingMask = -1;
-            Debug.Log("Setup part 2 success");
+            //Debug.log("Setup part 2 success");
             Mallet = this.gameObject.transform.FindDeepChild("mallet").gameObject;
             Mallet.SetActive(false);
             playerCam.gameObject.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(0, 1.75f, 0);
@@ -157,7 +158,7 @@ public class PlayerMovement : NetworkBehaviour
     {
         var cursorVis = !Cursor.visible;
         CursorFree(cursorVis);
-        Debug.Log("The cursor was " + Cursor.visible + " and now it is " + cursorVis);
+        //Debug.log("The cursor was " + Cursor.visible + " and now it is " + cursorVis);
 
     }
     public void CursorFree(bool tru)
@@ -189,8 +190,9 @@ public class PlayerMovement : NetworkBehaviour
     {
         if (CanFly)
         {
-            OnFly(-FlyForce);
-            ////Debug.Log("Go down");
+            FlyForce = -Math.Abs(FlyForce);
+            NetworkUtils.RpcHandler(this, OnFly);
+            //////Debug.log("Go down");
             return;
         }
 
@@ -202,16 +204,17 @@ public class PlayerMovement : NetworkBehaviour
     {
         if (CanFly)
         {
-            OnFly(FlyForce);
+            FlyForce = Mathf.Abs(FlyForce);
+            NetworkUtils.RpcHandler(this, OnFly);
             return;
         }
-        rb.linearVelocity = new Vector3(rb.linearVelocity.x, Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y), rb.linearVelocity.z);
+        velocity.y = Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y);
     }
 
-    public void OnFly(float upDownStrength)
+    public void OnFly()
     {
-        Vector3 velocity = rb.linearVelocity;
-        velocity.y = upDownStrength;
+        
+        velocity.y = FlyForce;
         rb.linearVelocity = velocity;
     }
 
@@ -236,9 +239,46 @@ public class PlayerMovement : NetworkBehaviour
         
 
     }
-    
+    public void OnCollisionEnter(Collision collision)
+    {
+        lastCollided = collision;
+        NetworkUtils.RpcHandler(this, handleCollision);
+    }
+    public void handleCollision()
+    {
+        if (lastCollided.gameObject.GetComponent<HoldItem>() != null)
+        {
+            var holdable = lastCollided.gameObject.GetComponent<HoldItem>();
+            if (holdable.velocity.magnitude > 0)
+            {
+                // Normalize the direction and scale by the magnitude and strength
+                Vector3 direction = holdable.velocity.normalized;
+                float magnitude = holdable.velocity.magnitude * holdable.Strength;
+
+                velocity = direction * magnitude;
+                rb.linearVelocity = direction * magnitude;
+                Debug.LogWarning(direction * magnitude);
+            }
+        }
+        else if (lastCollided.gameObject.name == "mallet")
+        {
+            var malletrb = lastCollided.gameObject.GetComponent<Rigidbody>();
+            if (malletrb.linearVelocity.magnitude > 0)
+            {
+                // Normalize the direction and scale by the magnitude and factor
+                Vector3 direction = malletrb.linearVelocity.normalized;
+                float magnitude = malletrb.linearVelocity.magnitude * 50;
+
+                velocity = direction * magnitude;
+                rb.linearVelocity = direction * magnitude;
+            }
+        }
+    }
+
     public void FixedUpdate()
     {
+        velocity = rb.linearVelocity;
+        
         centerModel();
         if (!isLocalPlayer)
         {
@@ -246,10 +286,10 @@ public class PlayerMovement : NetworkBehaviour
             return;
         }
         FaceCamera();
-        Debug.Log(this.gameObject.name + " is the one running this script!");
+        //Debug.log(this.gameObject.name + " is the one running this script!");
         if (move.IsPressed())
         {
-            Debug.Log("Moving success");
+            //Debug.log("Moving success");
             NetworkUtils.RpcHandler(this,  OnMove);
         }
         if (CanFly)
@@ -263,28 +303,38 @@ public class PlayerMovement : NetworkBehaviour
         else
         {
             rb.useGravity = true;
+            NetworkUtils.RpcHandler(this, slowVelocity);
         }
         if (jump.WasPerformedThisFrame())
         {
-            Debug.Log("Jump success");
+            //Debug.log("Jump success");
             OnJump();
         }
-
+        rb.linearVelocity = velocity;
     }
     public void Respawn()
     {
         this.gameObject.transform.position = GameManager.singleton.lastPooped.position;
-        Debug.Log("respawned");
+        //Debug.log("respawned");
     }
     public void slowVelocity()
     {
-        velocity = rb.linearVelocity;
-        velocity = Vector3.Lerp(velocity, Vector3.zero, slowRate);
-        rb.linearVelocity = velocity;
+        if (CanFly)
+        {
+            velocity = rb.linearVelocity;
+            velocity = Vector3.Lerp(velocity, Vector3.zero, slowRate);
+            rb.linearVelocity = velocity;
+        }
+        else
+        {
+            rb.linearVelocity = velocity;
+            velocity = Vector3.Lerp(velocity, new Vector3( 0, velocity.y, 0), slowRate);
+            rb.linearVelocity = velocity;
+        }
     }
     public void OnMove()
     {
-        Debug.Log("Moving");
+        //Debug.log("Moving");
         var v = move.ReadValue<Vector2>();
         if (PlayerType == playertype.Runner)
         {
@@ -323,5 +373,6 @@ public class PlayerMovement : NetworkBehaviour
             normalized = Vector2.ClampMagnitude(normalized, maxVelocity);
             rb.linearVelocity = new Vector3(normalized.x, rb.linearVelocity.y, normalized.y);
         }
+        velocity = rb.linearVelocity;
     }
 }

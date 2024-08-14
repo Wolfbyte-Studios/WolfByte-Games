@@ -560,7 +560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16f2671360a8bf348bfa1fb1cdf5a88a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncDirection: 0
+  syncDirection: 1
   syncMode: 0
   syncInterval: 0
   PlayerType: 0
@@ -983,7 +983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16f2671360a8bf348bfa1fb1cdf5a88a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncDirection: 0
+  syncDirection: 1
   syncMode: 0
   syncInterval: 0
   PlayerType: 1
@@ -1296,6 +1296,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -6843846536160940139, guid: 914fbcaa8d8234b4887995e943f69229, type: 3}
+      propertyPath: m_Name
+      value: mallet
+      objectReference: {fileID: 0}
+    - target: {fileID: -6843846536160940139, guid: 914fbcaa8d8234b4887995e943f69229, type: 3}
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
@@ -1318,6 +1322,10 @@ PrefabInstance:
     - target: {fileID: -1057209538917863067, guid: 914fbcaa8d8234b4887995e943f69229, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -910168554888888556, guid: 914fbcaa8d8234b4887995e943f69229, type: 3}
+      propertyPath: m_Name
+      value: mallet
       objectReference: {fileID: 0}
     - target: {fileID: -910168554888888556, guid: 914fbcaa8d8234b4887995e943f69229, type: 3}
       propertyPath: m_Layer

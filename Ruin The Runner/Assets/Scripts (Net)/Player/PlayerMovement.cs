@@ -47,6 +47,7 @@ public class PlayerMovement : NetworkBehaviour
     private Collision lastCollided;
     public Transform followTarget;
     public Vector3 GroundcheckOrigin;
+    public float GroundcheckLength;
     //private PlayerNetworkIndex PLI;
 
     public override void OnStartClient()
@@ -69,6 +70,10 @@ public class PlayerMovement : NetworkBehaviour
         //Cursor.lockState = CursorLockMode.None;
         //Cursor.visible = true;
         debugSwitch.performed -= DebugSwitch_performed;
+        menu.performed -= Menu_performed;
+        crouch.performed -= OnCrouch;
+        Fire.performed -= Fire_performed;
+        Secondary.performed -= Secondary_performed;
     }
 
     public void Setup()
@@ -229,7 +234,17 @@ public class PlayerMovement : NetworkBehaviour
             NetworkUtils.RpcHandler(this, OnFly);
             return;
         }
-        velocity.y = Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y);
+        if (anim.GetBool("Grounded"))
+        {
+
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y);
+            if (PlayerType == playertype.Runner)
+            {
+                anim.SetTrigger("Jump");
+                NAnim.SetTrigger("Jump");
+            }
+        }
+       
     }
 
     public void OnFly()
@@ -302,25 +317,27 @@ public class PlayerMovement : NetworkBehaviour
         RaycastHit hit;
         Ray ray = new Ray(origin, Vector3.down);
         float angle;
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        if (Physics.Raycast(ray, out hit, GroundcheckLength))
         {
             // Calculate the angle between the hit normal and the up vector (90 degrees is a flat surface)
             angle = Vector3.Angle(hit.normal, Vector3.up);
 
             // Log the angle as a warning
-            Debug.LogWarning("Surface angle: " + angle + " degrees");
+            //Debug.LogWarning("Surface angle: " + angle + " degrees");
 
             // If the raycast hits something, you can handle it here
-            Debug.Log("Ground detected at distance: " + hit.distance);
+            // Debug.Log("Ground detected at distance: " + hit.distance);
+            anim.SetBool("Grounded", true);
         }
         else
         {
+            anim.SetBool("Grounded", false);
             // If no hit is detected
-            Debug.Log("No ground detected");
+            //Debug.Log("No ground detected");
         }
         //if(angle )
         // Draw the raycast line for visualization in the Scene view
-        Debug.DrawRay(origin, Vector3.down * 1000, Color.red);
+        Debug.DrawRay(origin, Vector3.down * GroundcheckLength, Color.red);
     }
 
     public void FixedUpdate()
@@ -339,6 +356,15 @@ public class PlayerMovement : NetworkBehaviour
         {
             //Debug.log("Moving success");
             NetworkUtils.RpcHandler(this, OnMove);
+            var v = move.ReadValue<Vector2>();
+            anim.SetFloat("Forward", v.y * velocity.magnitude);
+            anim.SetFloat("Strafe", v.x);
+
+        }
+        else
+        {
+            anim.SetFloat("Forward", 0f);
+            anim.SetFloat("Strafe", 0f);
         }
         if (CanFly)
         {
@@ -375,6 +401,7 @@ public class PlayerMovement : NetworkBehaviour
         }
         else
         {
+            
             rb.linearVelocity = velocity;
             velocity = Vector3.Lerp(velocity, new Vector3( 0, velocity.y, 0), slowRate);
             rb.linearVelocity = velocity;
@@ -386,8 +413,8 @@ public class PlayerMovement : NetworkBehaviour
         var v = move.ReadValue<Vector2>();
         if (PlayerType == playertype.Runner)
         {
-            anim.SetFloat("Forward", v.y);
-            anim.SetFloat("Strafe", v.x);
+            //anim.SetFloat("Forward", v.y);
+            //anim.SetFloat("Strafe", v.x);
         }
         if (Dizzy)
         {

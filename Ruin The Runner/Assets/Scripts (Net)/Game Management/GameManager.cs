@@ -108,6 +108,7 @@ public class GameManager : NetworkBehaviour
         //SabId = UnityEngine.Random.Range(0, NetworkServer.connections.Count);
         if (NetworkServer.connections.Count != 1)
         {
+            RotatePlayers();
             return;
         }
         foreach (var conn in NetworkServer.connections)

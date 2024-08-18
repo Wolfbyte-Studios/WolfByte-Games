@@ -301,11 +301,11 @@ public class PlayerMovement : NetworkBehaviour
         // Perform a raycast
         RaycastHit hit;
         Ray ray = new Ray(origin, Vector3.down);
-
+        float angle;
         if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
             // Calculate the angle between the hit normal and the up vector (90 degrees is a flat surface)
-            float angle = Vector3.Angle(hit.normal, Vector3.up);
+            angle = Vector3.Angle(hit.normal, Vector3.up);
 
             // Log the angle as a warning
             Debug.LogWarning("Surface angle: " + angle + " degrees");
@@ -318,7 +318,7 @@ public class PlayerMovement : NetworkBehaviour
             // If no hit is detected
             Debug.Log("No ground detected");
         }
-
+        //if(angle )
         // Draw the raycast line for visualization in the Scene view
         Debug.DrawRay(origin, Vector3.down * 1000, Color.red);
     }

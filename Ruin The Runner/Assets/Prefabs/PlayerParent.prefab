@@ -644,6 +644,7 @@ MonoBehaviour:
   Shit: {fileID: 569198885197537436, guid: 0114d2108c9f402448b736f62d4b83f6, type: 3}
   shitOffset: {x: 0, y: 0, z: 0}
   followTarget: {fileID: 5458994532147475133}
+  GroundcheckOrigin: {x: 0, y: 0, z: 0}
 --- !u!54 &2565956750009814011
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -890,7 +891,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6984225569943750780
 Transform:
   m_ObjectHideFlags: 0
@@ -1064,7 +1065,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   debugSwitch:
-    m_Name: 
+    m_Name: Debug Switch
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: ed51eb2e-c09d-4104-a4f0-9f0fab08124a
@@ -1077,6 +1078,7 @@ MonoBehaviour:
   Shit: {fileID: 569198885197537436, guid: 0114d2108c9f402448b736f62d4b83f6, type: 3}
   shitOffset: {x: 0, y: 0.5, z: -0.5}
   followTarget: {fileID: 7203228848194695166}
+  GroundcheckOrigin: {x: 0, y: 0.25, z: 0.325}
 --- !u!54 &901711816562286119
 Rigidbody:
   m_ObjectHideFlags: 0

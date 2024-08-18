@@ -14,10 +14,6 @@
 			<method name="Throw"/>
 			<method name="Throw"/>
 			<method name="Throw"/>
-			<method name="Throw"/>
-			<method name="Throw"/>
-			<method name="Trigger"/>
-			<method name="Trigger"/>
 			<method name="Trigger"/>
 			<method name="Trigger"/>
 			<method name="Trigger"/>
@@ -33,7 +29,6 @@
 			<method name="Trigger"/>
 		</type>
 		<type fullname="LerpMovement">
-			<method name="Trigger"/>
 			<method name="Trigger"/>
 			<method name="Trigger"/>
 			<method name="Trigger"/>
@@ -69,13 +64,10 @@
 		</type>
 		<type fullname="SteamLobby">
 			<method name="HostLobby"/>
-			<method name="HostLobby"/>
-			<method name="HostLobby"/>
 		</type>
 	</assembly>
 	<assembly fullname="Mirror.Components" ignoreIfMissing="1">
 		<type fullname="Mirror.Discovery.NetworkDiscoveryHUD">
-			<method name="OnDiscoveredServer"/>
 			<method name="OnDiscoveredServer"/>
 			<method name="OnDiscoveredServer"/>
 		</type>

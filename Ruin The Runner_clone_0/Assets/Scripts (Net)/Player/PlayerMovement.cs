@@ -9,7 +9,7 @@ using System;
 
 public class PlayerMovement : NetworkBehaviour
 {
-    
+
     public enum playertype
     {
         Sab,
@@ -39,11 +39,14 @@ public class PlayerMovement : NetworkBehaviour
     public InputAction menu;
     public InputAction Fire;
     public InputAction Secondary;
+    public InputAction debugSwitch;
     public Animator anim;
     public NetworkAnimator NAnim;
     public GameObject Shit;
     public Vector3 shitOffset;
     private Collision lastCollided;
+    public Transform followTarget;
+    public Vector3 GroundcheckOrigin;
     //private PlayerNetworkIndex PLI;
 
     public override void OnStartClient()
@@ -63,17 +66,20 @@ public class PlayerMovement : NetworkBehaviour
     }
     public void OnDisable()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        //Cursor.lockState = CursorLockMode.None;
+        //Cursor.visible = true;
+        debugSwitch.performed -= DebugSwitch_performed;
     }
+
     public void Setup()
     {
-        if(!isLocalPlayer) { return; }
+        if (!isLocalPlayer) { return; }
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         rb = gameObject.GetComponent<Rigidbody>();
         NAnim = GetComponent<NetworkAnimator>();
-
+        debugSwitch = actions.FindAction("debugSwitch");
+        debugSwitch.performed += DebugSwitch_performed;
         var playerInput = gameObject.transform.parent.GetComponent<PlayerInput>();
         //PLI = gameObject.GetComponent<PlayerNetworkIndex>();
 
@@ -90,7 +96,7 @@ public class PlayerMovement : NetworkBehaviour
 
         }
         playerCam = transform.parent.Find("PlayerCam").gameObject;
-        
+
         if (PlayerType == playertype.Sab)
         {
             playerCam.gameObject.GetComponent<Camera>().cullingMask = -1;
@@ -112,16 +118,22 @@ public class PlayerMovement : NetworkBehaviour
             //Debug.log("Setup part 2 success");
             Mallet = this.gameObject.transform.FindDeepChild("mallet").gameObject;
             Mallet.SetActive(false);
-            playerCam.gameObject.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(0, 1.75f, 0);
+            //playerCam.gameObject.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(0, 1.75f, 0);
             CanFly = false;
             Fire = actions.FindAction("Fire");
             Fire.performed += Fire_performed;
             Secondary = actions.FindAction("Secondary");
             Secondary.performed += Secondary_performed;
         }
-        playerCam.gameObject.GetComponent<CinemachineCamera>().Follow = this.gameObject.transform;
-        
+        playerCam.gameObject.GetComponent<CinemachineCamera>().Follow = this.followTarget;
 
+
+    }
+
+    private void DebugSwitch_performed(InputAction.CallbackContext obj)
+    {
+        GameManager.singleton.RotatePlayersDebug();
+        //throw new NotImplementedException();
     }
 
     private void Secondary_performed(InputAction.CallbackContext obj)
@@ -136,16 +148,18 @@ public class PlayerMovement : NetworkBehaviour
     {
         anim.SetTrigger("Primary");
         NAnim.SetTrigger("Primary");
+
         if (PlayerType == playertype.Sab)
         {
             return;
         }
         StartCoroutine(mallet());
+        StartCoroutine(resetTriggers());
         //throw new System.NotImplementedException();
     }
     IEnumerator resetTriggers()
     {
-        yield return new WaitForSeconds(.25f);
+        yield return new WaitForSeconds(.15f);
         anim.ResetTrigger("Primary");
         NAnim.ResetTrigger("Primary");
         yield return null;
@@ -181,7 +195,7 @@ public class PlayerMovement : NetworkBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
-        
+
     }
     [Command]
     public void onPoop()
@@ -220,7 +234,7 @@ public class PlayerMovement : NetworkBehaviour
 
     public void OnFly()
     {
-        
+
         velocity.y = FlyForce;
         rb.linearVelocity = velocity;
     }
@@ -236,14 +250,14 @@ public class PlayerMovement : NetworkBehaviour
     }
     public void FaceCamera()
     {
-        
+
         if (PlayerType == playertype.Sab)
         {
             gameObject.transform.eulerAngles = new Vector3(playerCam.transform.eulerAngles.x, playerCam.transform.eulerAngles.y, playerCam.transform.eulerAngles.z);
             return;
         }
         gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x, playerCam.transform.eulerAngles.y, gameObject.transform.eulerAngles.z);
-        
+
 
     }
     public void OnCollisionEnter(Collision collision)
@@ -281,15 +295,42 @@ public class PlayerMovement : NetworkBehaviour
             }
         }
     }
+    public void checkGround()
+    {
+        Vector3 origin = transform.TransformPoint(GroundcheckOrigin);
+        // Perform a raycast
+        RaycastHit hit;
+        Ray ray = new Ray(origin, Vector3.down);
+
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        {
+            // Calculate the angle between the hit normal and the up vector (90 degrees is a flat surface)
+            float angle = Vector3.Angle(hit.normal, Vector3.up);
+
+            // Log the angle as a warning
+            Debug.LogWarning("Surface angle: " + angle + " degrees");
+
+            // If the raycast hits something, you can handle it here
+            Debug.Log("Ground detected at distance: " + hit.distance);
+        }
+        else
+        {
+            // If no hit is detected
+            Debug.Log("No ground detected");
+        }
+
+        // Draw the raycast line for visualization in the Scene view
+        Debug.DrawRay(origin, Vector3.down * 1000, Color.red);
+    }
 
     public void FixedUpdate()
     {
         velocity = rb.linearVelocity;
-       
+        checkGround();
         centerModel();
         if (!isLocalPlayer)
         {
-           
+
             return;
         }
         FaceCamera();
@@ -297,7 +338,7 @@ public class PlayerMovement : NetworkBehaviour
         if (move.IsPressed())
         {
             //Debug.log("Moving success");
-            NetworkUtils.RpcHandler(this,  OnMove);
+            NetworkUtils.RpcHandler(this, OnMove);
         }
         if (CanFly)
         {

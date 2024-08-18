@@ -100,4 +100,25 @@ public class GameManager : NetworkBehaviour
             Debug.Log(playerObj.name);
         }
     }
+    [ContextMenu("Rotate debug")]
+    public void RotatePlayersDebug()
+    {
+        if (!isServer) return;
+        var oldValue = SabId;
+        //SabId = UnityEngine.Random.Range(0, NetworkServer.connections.Count);
+        if (NetworkServer.connections.Count != 1)
+        {
+            return;
+        }
+        foreach (var conn in NetworkServer.connections)
+        {
+            var p = conn.Value.identity;
+
+            var sab = p.transform.FindDeepChild("Sab").gameObject;
+            var Runner = p.transform.FindDeepChild("Runner").gameObject;
+            Debug.Log(Runner.name);
+            sab.SetActive(!sab.activeSelf);
+            Runner.SetActive(!Runner.activeSelf);
+        }
+    }
 }

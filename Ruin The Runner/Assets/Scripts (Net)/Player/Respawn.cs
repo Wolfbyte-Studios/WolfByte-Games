@@ -11,7 +11,7 @@ public class Respawn : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.transform.GetAllComponentsInHierarchy<PlayerMovement>().Count < 0 && !other.name.ToLower().Contains("toucher"))
+        if (other.gameObject.transform.GetAllComponentsInHierarchy<PlayerMovement>().Count > 0 && !other.name.ToLower().Contains("toucher"))
         {
             var pM = other.gameObject.transform.GetAllComponentsInHierarchy<PlayerMovement>()[0];
             if (acceptedPlayers.Contains(pM.PlayerType))

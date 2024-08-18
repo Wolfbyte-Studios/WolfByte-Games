@@ -630,10 +630,20 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  debugSwitch:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 2b89bc63-e18b-47c5-8c31-cf3dcd7f8df6
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   anim: {fileID: 0}
   NAnim: {fileID: 0}
   Shit: {fileID: 569198885197537436, guid: 0114d2108c9f402448b736f62d4b83f6, type: 3}
   shitOffset: {x: 0, y: 0, z: 0}
+  followTarget: {fileID: 5458994532147475133}
 --- !u!54 &2565956750009814011
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -673,9 +683,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6f3bf89aa97405989c802ba270f815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncDirection: 1
+  syncDirection: 0
   syncMode: 0
-  syncInterval: 0
+  syncInterval: 0.001
   clientAuthority: 1
   animator: {fileID: 1128401161021138022}
 --- !u!114 &7055027285635299692
@@ -880,7 +890,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6984225569943750780
 Transform:
   m_ObjectHideFlags: 0
@@ -1053,10 +1063,20 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  debugSwitch:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: ed51eb2e-c09d-4104-a4f0-9f0fab08124a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   anim: {fileID: 3378993227831576555}
   NAnim: {fileID: 0}
   Shit: {fileID: 569198885197537436, guid: 0114d2108c9f402448b736f62d4b83f6, type: 3}
-  shitOffset: {x: 0, y: 0, z: 0}
+  shitOffset: {x: 0, y: 0.5, z: -0.5}
+  followTarget: {fileID: 7203228848194695166}
 --- !u!54 &901711816562286119
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1096,9 +1116,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6f3bf89aa97405989c802ba270f815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncDirection: 1
+  syncDirection: 0
   syncMode: 0
-  syncInterval: 0
+  syncInterval: 0.001
   clientAuthority: 1
   animator: {fileID: 3378993227831576555}
 --- !u!114 &7898577097500833688
@@ -2099,6 +2119,11 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 73403024e6777364d973b28d952400e0, type: 3}
   m_PrefabInstance: {fileID: 9191299118802844282}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &7203228848194695166 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7171683748438141564, guid: 73403024e6777364d973b28d952400e0, type: 3}
+  m_PrefabInstance: {fileID: 9191299118802844282}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8308969824060933931 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 73403024e6777364d973b28d952400e0, type: 3}
@@ -2111,7 +2136,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8308969824060933931}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a12851ffb605f874ba4c5fbc03c65124, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

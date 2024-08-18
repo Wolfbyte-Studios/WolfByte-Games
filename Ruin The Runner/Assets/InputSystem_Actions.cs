@@ -126,6 +126,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""debugSwitch"",
+                    ""type"": ""Button"",
+                    ""id"": ""45a98650-f4b2-45c6-83d3-2a033e7fbb31"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -544,6 +553,17 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Secondary"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""636ec246-b20b-4b81-a08d-f807f2fea217"",
+                    ""path"": ""<Keyboard>/backquote"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""debugSwitch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1142,6 +1162,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
         m_Player_Menu = m_Player.FindAction("Menu", throwIfNotFound: true);
         m_Player_Secondary = m_Player.FindAction("Secondary", throwIfNotFound: true);
+        m_Player_debugSwitch = m_Player.FindAction("debugSwitch", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1232,6 +1253,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Sprint;
     private readonly InputAction m_Player_Menu;
     private readonly InputAction m_Player_Secondary;
+    private readonly InputAction m_Player_debugSwitch;
     public struct PlayerActions
     {
         private @InputSystem_Actions m_Wrapper;
@@ -1247,6 +1269,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
         public InputAction @Menu => m_Wrapper.m_Player_Menu;
         public InputAction @Secondary => m_Wrapper.m_Player_Secondary;
+        public InputAction @debugSwitch => m_Wrapper.m_Player_debugSwitch;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1289,6 +1312,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Secondary.started += instance.OnSecondary;
             @Secondary.performed += instance.OnSecondary;
             @Secondary.canceled += instance.OnSecondary;
+            @debugSwitch.started += instance.OnDebugSwitch;
+            @debugSwitch.performed += instance.OnDebugSwitch;
+            @debugSwitch.canceled += instance.OnDebugSwitch;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -1326,6 +1352,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Secondary.started -= instance.OnSecondary;
             @Secondary.performed -= instance.OnSecondary;
             @Secondary.canceled -= instance.OnSecondary;
+            @debugSwitch.started -= instance.OnDebugSwitch;
+            @debugSwitch.performed -= instance.OnDebugSwitch;
+            @debugSwitch.canceled -= instance.OnDebugSwitch;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1519,6 +1548,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         void OnSprint(InputAction.CallbackContext context);
         void OnMenu(InputAction.CallbackContext context);
         void OnSecondary(InputAction.CallbackContext context);
+        void OnDebugSwitch(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

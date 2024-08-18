@@ -143,10 +143,17 @@ public class PlayerMovement : NetworkBehaviour
         StartCoroutine(mallet());
         //throw new System.NotImplementedException();
     }
+    IEnumerator resetTriggers()
+    {
+        yield return new WaitForSeconds(.25f);
+        anim.ResetTrigger("Primary");
+        NAnim.ResetTrigger("Primary");
+        yield return null;
+    }
     IEnumerator mallet()
     {
         NetworkUtils.RpcHandler(this, setMallet);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.93f);
         NetworkUtils.RpcHandler(this, setMallet);
         yield return null;
     }
@@ -278,7 +285,7 @@ public class PlayerMovement : NetworkBehaviour
     public void FixedUpdate()
     {
         velocity = rb.linearVelocity;
-        
+       
         centerModel();
         if (!isLocalPlayer)
         {

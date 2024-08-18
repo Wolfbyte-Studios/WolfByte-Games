@@ -276,6 +276,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Respawn",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "RuntimeInitializeOnLoadManager",
             "fullManagedTypeName": "",
@@ -286,6 +293,13 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "SceneStuff",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "SetSceneName",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -657,13 +671,6 @@
         {
             "managedAssemblyName": "Unity.InputSystem.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.InputSystem.Editor.InputActionsEditorWindow",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.InputSystem.dll",
-            "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.InputSystem.InputActionAsset",
             "moduleName": "",
             "usedInScenes": []
@@ -745,7 +752,8 @@
             "fullManagedTypeName": "UnityEngine.LightProbes",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/Levels/KingdomTest.unity"
+                "Assets/Scenes/Levels/KingdomTest.unity",
+                "Assets/Scenes/Start.unity"
             ]
         },
         {
@@ -1223,6 +1231,13 @@
             "managedAssemblyName": "Unity.RenderPipelines.HighDefinition.Runtime.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.Rendering.HighDefinition.WhiteBalance",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.RenderPipelines.Core.Runtime.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Rendering.ProbeVolume",
             "moduleName": "",
             "usedInScenes": []
         },

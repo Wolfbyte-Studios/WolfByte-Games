@@ -40,6 +40,9 @@
 		<type fullname="UnityEngine.InputSystem.PlayerInput/DeviceLostEvent" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.InputSystem.PlayerInput/DeviceRegainedEvent" preserve="nothing" serialized="true"/>
 	</assembly>
+	<assembly fullname="Unity.Mathematics">
+		<type fullname="Unity.Mathematics.uint4" preserve="nothing" serialized="true"/>
+	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime">
 		<type fullname="UnityEngine.Rendering.AnimationCurveParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.APVLeakReductionModeParameter" preserve="nothing" serialized="true"/>
@@ -63,13 +66,22 @@
 		<type fullname="UnityEngine.Rendering.NoInterpIntParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.NoInterpMinFloatParameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.NoInterpVector2Parameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.ProbeDilationSettings" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.ProbeReferenceVolume/CellDesc" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.ProbeReferenceVolume/IndirectionEntryInfo" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.ProbeVolumeBakingProcessSettings" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.ProbeVolumeBakingResources" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.ProbeVolumeBakingSet/PerScenarioDataInfo" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.ProbeVolumeBakingSet/SceneBakeData" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.ProbeVolumeBakingSet/SerializedPerSceneCellList" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.ProbeVolumeBlendingTextureMemoryBudget" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.ProbeVolumeDebugResources" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.ProbeVolumeGlobalSettings" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.ProbeVolumeRuntimeResources" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.ProbeVolumeSceneData" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.ProbeVolumeSHBands" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.ProbeVolumeStreamableAsset" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.ProbeVolumeStreamableAsset/StreamableCellDesc" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.ProbeVolumeTextureMemoryBudget" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.RenderGraphGlobalSettings" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.RenderGraphModule.Util.RenderGraphUtilsResources" preserve="nothing" serialized="true"/>
@@ -87,6 +99,7 @@
 		<type fullname="UnityEngine.Rendering.Vector2Parameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.Vector3Parameter" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.Vector4Parameter" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Rendering.VirtualOffsetSettings" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Rendering.VolumeParameter`1" preserve="nothing" serialized="true"/>
 	</assembly>
 	<assembly fullname="Unity.RenderPipelines.GPUDriven.Runtime">

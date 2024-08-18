@@ -1,7 +1,5 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-Editor.dll:
-    - CR.CleanOutlineEditor
     Assembly-CSharp.dll:
     - AimOutline
     - AutoStartHost
@@ -18,7 +16,9 @@ ScriptsOnlyBuild:
     - PlayerIdentity
     - PlayerMovement
     - Poop
+    - Respawn
     - SceneStuff
+    - SetSceneName
     - Sine
     - Spin
     - SteamLobby
@@ -44,7 +44,6 @@ ScriptsOnlyBuild:
     - Unity.Cinemachine.CinemachineInputAxisController
     - Unity.Cinemachine.CinemachinePanTilt
     Unity.InputSystem.dll:
-    - UnityEngine.InputSystem.Editor.InputActionsEditorWindow
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
     - UnityEngine.InputSystem.InputSettings
@@ -52,9 +51,6 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.PlayerInput
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
     - UnityEngine.InputSystem.UI.InputSystemUIInputModule
-    Unity.RenderPipelines.Core.Editor.dll:
-    - UnityEditor.Rendering.ProbeVolumesOptionsEditor
-    - UnityEditor.Rendering.VolumeComponentEditor
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
     - UnityEngine.Rendering.UI.DebugUIHandlerButton
@@ -89,50 +85,15 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.UI.DebugUIHandlerVector4
     - UnityEngine.Rendering.UI.UIFoldout
     Unity.RenderPipelines.Core.Runtime.dll:
+    - UnityEngine.Rendering.ProbeVolume
     - UnityEngine.Rendering.ProbeVolumeBakingSet
     - UnityEngine.Rendering.ProbeVolumePerSceneData
     - UnityEngine.Rendering.ProbeVolumesOptions
     - UnityEngine.Rendering.Volume
     - UnityEngine.Rendering.VolumeProfile
     Unity.RenderPipelines.HighDefinition.Editor.dll:
-    - UnityEditor.Experimental.Rendering.HighDefinition.PathTracingEditor
-    - UnityEditor.Experimental.Rendering.HighDefinition.RecursiveRenderingEditor
-    - UnityEditor.Rendering.HighDefinition.BloomEditor
-    - UnityEditor.Rendering.HighDefinition.ChromaticAberrationEditor
-    - UnityEditor.Rendering.HighDefinition.CloudLayerEditor
-    - UnityEditor.Rendering.HighDefinition.ColorCurvesEditor
-    - UnityEditor.Rendering.HighDefinition.ContactShadowsEditor
-    - UnityEditor.Rendering.HighDefinition.DepthOfFieldEditor
-    - UnityEditor.Rendering.HighDefinition.DiffusionProfileListEditor
-    - UnityEditor.Rendering.HighDefinition.ExposureEditor
-    - UnityEditor.Rendering.HighDefinition.FilmGrainEditor
-    - UnityEditor.Rendering.HighDefinition.FogEditor
-    - UnityEditor.Rendering.HighDefinition.GlobalIlluminatorEditor
-    - UnityEditor.Rendering.HighDefinition.GradientSkySettingsEditor
     - UnityEditor.Rendering.HighDefinition.HDProjectSettings
-    - UnityEditor.Rendering.HighDefinition.HDRISkyEditor
-    - UnityEditor.Rendering.HighDefinition.HDRenderPipelineEditor
-    - UnityEditor.Rendering.HighDefinition.HDScreenSpaceReflectionEditor
-    - UnityEditor.Rendering.HighDefinition.HDShadowSettingsEditor
     - UnityEditor.Rendering.HighDefinition.HDUserSettings
-    - UnityEditor.Rendering.HighDefinition.HighQualityLineRenderingVolumeComponentEditor
-    - UnityEditor.Rendering.HighDefinition.IndirectLightingControllerEditor
-    - UnityEditor.Rendering.HighDefinition.LiftGammaGainEditor
-    - UnityEditor.Rendering.HighDefinition.LightClusterEditor
-    - UnityEditor.Rendering.HighDefinition.MicroShadowingEditor
-    - UnityEditor.Rendering.HighDefinition.MotionBlurEditor
-    - UnityEditor.Rendering.HighDefinition.PhysicallyBasedSkyEditor
-    - UnityEditor.Rendering.HighDefinition.RayTracingSettingsEditor
-    - UnityEditor.Rendering.HighDefinition.ScreenSpaceAmbientOcclusionEditor
-    - UnityEditor.Rendering.HighDefinition.ScreenSpaceLensFlareEditor
-    - UnityEditor.Rendering.HighDefinition.ScreenSpaceRefractionEditor
-    - UnityEditor.Rendering.HighDefinition.ShadowsMidtonesHighlightsEditor
-    - UnityEditor.Rendering.HighDefinition.SubSurfaceScatteringEditor
-    - UnityEditor.Rendering.HighDefinition.TonemappingEditor
-    - UnityEditor.Rendering.HighDefinition.VignetteEditor
-    - UnityEditor.Rendering.HighDefinition.VisualEnvironmentEditor
-    - UnityEditor.Rendering.HighDefinition.VolumetricCloudsEditor
-    - UnityEditor.Rendering.HighDefinition.WaterRenderingEditor
     Unity.RenderPipelines.HighDefinition.Runtime.dll:
     - UnityEngine.Rendering.HighDefinition.Bloom
     - UnityEngine.Rendering.HighDefinition.ChannelMixer
@@ -206,9 +167,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimatorControllerTool
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.CommandLineTest.RunData
@@ -272,6 +234,8 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.PlayerInput/DeviceLostEvent
     - UnityEngine.InputSystem.PlayerInput/DeviceRegainedEvent
     - UnityEngine.InputSystem.iOS.PrivacyDataUsage
+    Unity.Mathematics:
+    - Unity.Mathematics.uint4
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.APVLeakReductionModeParameter
     - UnityEngine.Rendering.AnimationCurveParameter
@@ -295,13 +259,22 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.NoInterpIntParameter
     - UnityEngine.Rendering.NoInterpMinFloatParameter
     - UnityEngine.Rendering.NoInterpVector2Parameter
+    - UnityEngine.Rendering.ProbeDilationSettings
+    - UnityEngine.Rendering.ProbeReferenceVolume/CellDesc
+    - UnityEngine.Rendering.ProbeReferenceVolume/IndirectionEntryInfo
+    - UnityEngine.Rendering.ProbeVolumeBakingProcessSettings
     - UnityEngine.Rendering.ProbeVolumeBakingResources
+    - UnityEngine.Rendering.ProbeVolumeBakingSet/PerScenarioDataInfo
+    - UnityEngine.Rendering.ProbeVolumeBakingSet/SceneBakeData
+    - UnityEngine.Rendering.ProbeVolumeBakingSet/SerializedPerSceneCellList
     - UnityEngine.Rendering.ProbeVolumeBlendingTextureMemoryBudget
     - UnityEngine.Rendering.ProbeVolumeDebugResources
     - UnityEngine.Rendering.ProbeVolumeGlobalSettings
     - UnityEngine.Rendering.ProbeVolumeRuntimeResources
     - UnityEngine.Rendering.ProbeVolumeSHBands
     - UnityEngine.Rendering.ProbeVolumeSceneData
+    - UnityEngine.Rendering.ProbeVolumeStreamableAsset
+    - UnityEngine.Rendering.ProbeVolumeStreamableAsset/StreamableCellDesc
     - UnityEngine.Rendering.ProbeVolumeTextureMemoryBudget
     - UnityEngine.Rendering.RenderGraphGlobalSettings
     - UnityEngine.Rendering.RenderGraphModule.Util.RenderGraphUtilsResources
@@ -319,6 +292,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Vector2Parameter
     - UnityEngine.Rendering.Vector3Parameter
     - UnityEngine.Rendering.Vector4Parameter
+    - UnityEngine.Rendering.VirtualOffsetSettings
     - UnityEngine.Rendering.VolumeParameter`1
     Unity.RenderPipelines.GPUDriven.Runtime:
     - UnityEngine.Rendering.GPUResidentDrawerResources
@@ -523,12 +497,30 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneStuff
+    methodName: ChooseSceneForwardBackward
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Throw
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Throw
   - assembly: Mirror.Components
     fullTypeName: Mirror.Discovery.NetworkDiscoveryHUD
     methodName: OnDiscoveredServer
@@ -538,75 +530,42 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Behaviour
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Renderer
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Behaviour
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Renderer
-    methodName: set_enabled
-  - assembly: Assembly-CSharp
-    fullTypeName: LerpMovement
-    methodName: Trigger
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Behaviour
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Renderer
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Behaviour
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Renderer
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Behaviour
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Renderer
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Behaviour
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Renderer
-    methodName: set_enabled
-  - assembly: Assembly-CSharp
-    fullTypeName: LerpMovement
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: SceneStuff
-    methodName: ChooseScene
   - assembly: Assembly-CSharp
     fullTypeName: HoldItem
     methodName: Trigger
   - assembly: Assembly-CSharp
     fullTypeName: HoldItem
     methodName: Throw
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Behaviour
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Renderer
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Behaviour
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Renderer
-    methodName: set_enabled
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Throw
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneStuff
+    methodName: ChooseSceneForwardBackward
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneStuff
+    methodName: LoadScene
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Throw
   - assembly: Assembly-CSharp
     fullTypeName: LerpMovement
     methodName: Trigger
   - assembly: Assembly-CSharp
-    fullTypeName: GameManager
-    methodName: RotatePlayers
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Throw
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
     methodName: OnAction
@@ -665,69 +624,6 @@ ScriptsOnlyBuild:
     fullTypeName: Sine
     methodName: Pause
   - assembly: Assembly-CSharp
-    fullTypeName: LerpMovement
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: LerpMovement
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: LerpMovement
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: Sine
-    methodName: Pause
-  - assembly: Assembly-CSharp
-    fullTypeName: Sine
-    methodName: Resume
-  - assembly: Assembly-CSharp
-    fullTypeName: LerpMovement
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: LerpMovement
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: LerpMovement
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: LerpMovement
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: LerpMovement
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: LerpMovement
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: Sine
-    methodName: Pause
-  - assembly: Assembly-CSharp
-    fullTypeName: Sine
-    methodName: Pause
-  - assembly: Assembly-CSharp
-    fullTypeName: Sine
-    methodName: Resume
-  - assembly: Assembly-CSharp
-    fullTypeName: LerpMovement
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: Sine
-    methodName: Pause
-  - assembly: Assembly-CSharp
-    fullTypeName: Sine
-    methodName: Pause
-  - assembly: Assembly-CSharp
-    fullTypeName: LerpMovement
-    methodName: Trigger
-  - assembly: Assembly-CSharp
-    fullTypeName: Sine
-    methodName: Pause
-  - assembly: Assembly-CSharp
-    fullTypeName: Sine
-    methodName: Resume
-  - assembly: Assembly-CSharp
-    fullTypeName: Sine
-    methodName: Pause
-  - assembly: Assembly-CSharp
     fullTypeName: Sine
     methodName: Resume
   - assembly: Assembly-CSharp
@@ -740,11 +636,101 @@ ScriptsOnlyBuild:
     fullTypeName: HoldItem
     methodName: Throw
   - assembly: Assembly-CSharp
-    fullTypeName: LerpMovement
+    fullTypeName: HoldItem
     methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Throw
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Pause
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Resume
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Throw
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Throw
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Throw
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Throw
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Throw
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Pause
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Resume
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Pause
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Resume
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Pause
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Resume
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Pause
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Resume
   - assembly: Assembly-CSharp
     fullTypeName: LerpMovement
     methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Pause
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Resume
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Pause
+  - assembly: Assembly-CSharp
+    fullTypeName: Sine
+    methodName: Resume
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Throw
+  - assembly: Assembly-CSharp
+    fullTypeName: LerpMovement
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Trigger
+  - assembly: Assembly-CSharp
+    fullTypeName: HoldItem
+    methodName: Throw
   - assembly: Assembly-CSharp
     fullTypeName: LerpMovement
     methodName: Trigger
@@ -829,81 +815,83 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 40542}
     - Class: 114
-      Script: {instanceID: 41182}
+      Script: {instanceID: 40702}
     - Class: 114
-      Script: {instanceID: 41834}
+      Script: {instanceID: 41184}
     - Class: 114
-      Script: {instanceID: 42198}
+      Script: {instanceID: 41836}
     - Class: 114
-      Script: {instanceID: 42550}
+      Script: {instanceID: 42200}
     - Class: 114
-      Script: {instanceID: 42976}
+      Script: {instanceID: 42552}
     - Class: 114
-      Script: {instanceID: 43160}
+      Script: {instanceID: 42978}
     - Class: 114
-      Script: {instanceID: 43312}
+      Script: {instanceID: 43162}
     - Class: 114
-      Script: {instanceID: 43334}
+      Script: {instanceID: 43314}
     - Class: 114
-      Script: {instanceID: 43776}
+      Script: {instanceID: 43336}
     - Class: 114
-      Script: {instanceID: 43890}
+      Script: {instanceID: 43778}
     - Class: 114
-      Script: {instanceID: 44306}
+      Script: {instanceID: 43892}
     - Class: 114
-      Script: {instanceID: 44732}
+      Script: {instanceID: 44308}
     - Class: 114
-      Script: {instanceID: 45550}
+      Script: {instanceID: 44734}
     - Class: 114
-      Script: {instanceID: 45554}
+      Script: {instanceID: 45552}
     - Class: 114
-      Script: {instanceID: 45820}
+      Script: {instanceID: 45556}
     - Class: 114
-      Script: {instanceID: 45882}
+      Script: {instanceID: 45822}
     - Class: 114
-      Script: {instanceID: 45948}
+      Script: {instanceID: 45884}
     - Class: 114
-      Script: {instanceID: 46108}
+      Script: {instanceID: 45950}
     - Class: 114
-      Script: {instanceID: 46288}
+      Script: {instanceID: 46110}
     - Class: 114
-      Script: {instanceID: 46334}
+      Script: {instanceID: 46290}
     - Class: 114
-      Script: {instanceID: 46372}
+      Script: {instanceID: 46336}
     - Class: 114
-      Script: {instanceID: 46704}
+      Script: {instanceID: 46374}
     - Class: 114
-      Script: {instanceID: 46890}
+      Script: {instanceID: 46706}
     - Class: 114
-      Script: {instanceID: 46942}
+      Script: {instanceID: 46892}
     - Class: 114
-      Script: {instanceID: 47012}
+      Script: {instanceID: 46944}
     - Class: 114
-      Script: {instanceID: 47042}
+      Script: {instanceID: 47014}
     - Class: 114
-      Script: {instanceID: 47416}
+      Script: {instanceID: 47044}
     - Class: 114
-      Script: {instanceID: 47684}
+      Script: {instanceID: 47418}
     - Class: 114
-      Script: {instanceID: 47828}
+      Script: {instanceID: 47686}
     - Class: 114
-      Script: {instanceID: 47936}
+      Script: {instanceID: 47830}
     - Class: 114
-      Script: {instanceID: 47966}
+      Script: {instanceID: 47938}
     - Class: 114
-      Script: {instanceID: 48462}
+      Script: {instanceID: 47968}
     - Class: 114
-      Script: {instanceID: 48578}
+      Script: {instanceID: 48464}
     - Class: 114
-      Script: {instanceID: 49914}
+      Script: {instanceID: 48580}
     - Class: 114
-      Script: {instanceID: 50324}
+      Script: {instanceID: 49916}
     - Class: 114
-      Script: {instanceID: 51132}
+      Script: {instanceID: 50326}
     - Class: 114
-      Script: {instanceID: 51476}
+      Script: {instanceID: 51134}
     - Class: 114
-      Script: {instanceID: 51632}
+      Script: {instanceID: 51478}
+    - Class: 114
+      Script: {instanceID: 51634}
     - Class: 114
       Script: {instanceID: 52000}
     - Class: 114
@@ -1014,6 +1002,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 38360}
     - Class: 114
+      Script: {instanceID: 38478}
+    - Class: 114
       Script: {instanceID: 38690}
     - Class: 114
       Script: {instanceID: 38854}
@@ -1052,121 +1042,125 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 40542}
     - Class: 114
-      Script: {instanceID: 41182}
+      Script: {instanceID: 41184}
     - Class: 114
-      Script: {instanceID: 41772}
+      Script: {instanceID: 41774}
     - Class: 114
-      Script: {instanceID: 41834}
+      Script: {instanceID: 41836}
     - Class: 114
-      Script: {instanceID: 42198}
+      Script: {instanceID: 42200}
     - Class: 114
-      Script: {instanceID: 42208}
+      Script: {instanceID: 42210}
     - Class: 114
-      Script: {instanceID: 42550}
+      Script: {instanceID: 42228}
     - Class: 114
-      Script: {instanceID: 43160}
+      Script: {instanceID: 42552}
     - Class: 114
-      Script: {instanceID: 43222}
+      Script: {instanceID: 42978}
     - Class: 114
-      Script: {instanceID: 43292}
+      Script: {instanceID: 43162}
     - Class: 114
-      Script: {instanceID: 43312}
+      Script: {instanceID: 43224}
     - Class: 114
-      Script: {instanceID: 43334}
+      Script: {instanceID: 43294}
     - Class: 114
-      Script: {instanceID: 43768}
+      Script: {instanceID: 43314}
     - Class: 114
-      Script: {instanceID: 43776}
+      Script: {instanceID: 43336}
     - Class: 114
-      Script: {instanceID: 43850}
+      Script: {instanceID: 43770}
     - Class: 114
-      Script: {instanceID: 43890}
+      Script: {instanceID: 43778}
     - Class: 114
-      Script: {instanceID: 43974}
+      Script: {instanceID: 43852}
     - Class: 114
-      Script: {instanceID: 44090}
+      Script: {instanceID: 43892}
     - Class: 114
-      Script: {instanceID: 44244}
+      Script: {instanceID: 43976}
     - Class: 114
-      Script: {instanceID: 44306}
+      Script: {instanceID: 44092}
     - Class: 114
-      Script: {instanceID: 44732}
+      Script: {instanceID: 44246}
     - Class: 114
-      Script: {instanceID: 45132}
+      Script: {instanceID: 44308}
     - Class: 114
-      Script: {instanceID: 45436}
+      Script: {instanceID: 44734}
     - Class: 114
-      Script: {instanceID: 45550}
+      Script: {instanceID: 45134}
     - Class: 114
-      Script: {instanceID: 45554}
+      Script: {instanceID: 45438}
     - Class: 114
-      Script: {instanceID: 45586}
+      Script: {instanceID: 45552}
+    - Class: 114
+      Script: {instanceID: 45556}
     - Class: 114
       Script: {instanceID: 45588}
     - Class: 114
-      Script: {instanceID: 45820}
+      Script: {instanceID: 45590}
     - Class: 114
-      Script: {instanceID: 45882}
+      Script: {instanceID: 45822}
     - Class: 114
-      Script: {instanceID: 45948}
+      Script: {instanceID: 45884}
     - Class: 114
-      Script: {instanceID: 46108}
+      Script: {instanceID: 45950}
     - Class: 114
-      Script: {instanceID: 46288}
+      Script: {instanceID: 46110}
     - Class: 114
-      Script: {instanceID: 46372}
+      Script: {instanceID: 46290}
     - Class: 114
-      Script: {instanceID: 46704}
+      Script: {instanceID: 46374}
     - Class: 114
-      Script: {instanceID: 46890}
+      Script: {instanceID: 46706}
     - Class: 114
-      Script: {instanceID: 46942}
+      Script: {instanceID: 46892}
     - Class: 114
-      Script: {instanceID: 47012}
+      Script: {instanceID: 46944}
     - Class: 114
-      Script: {instanceID: 47042}
+      Script: {instanceID: 47014}
     - Class: 114
-      Script: {instanceID: 47050}
+      Script: {instanceID: 47044}
     - Class: 114
-      Script: {instanceID: 47416}
+      Script: {instanceID: 47052}
     - Class: 114
-      Script: {instanceID: 47684}
+      Script: {instanceID: 47418}
     - Class: 114
-      Script: {instanceID: 47828}
+      Script: {instanceID: 47686}
     - Class: 114
-      Script: {instanceID: 47910}
+      Script: {instanceID: 47830}
     - Class: 114
-      Script: {instanceID: 47936}
+      Script: {instanceID: 47912}
     - Class: 114
-      Script: {instanceID: 47966}
+      Script: {instanceID: 47938}
     - Class: 114
-      Script: {instanceID: 48462}
+      Script: {instanceID: 47968}
     - Class: 114
-      Script: {instanceID: 49350}
+      Script: {instanceID: 48464}
     - Class: 114
-      Script: {instanceID: 49914}
+      Script: {instanceID: 49352}
     - Class: 114
-      Script: {instanceID: 49952}
+      Script: {instanceID: 49916}
     - Class: 114
-      Script: {instanceID: 50028}
+      Script: {instanceID: 49954}
     - Class: 114
-      Script: {instanceID: 50324}
+      Script: {instanceID: 50030}
     - Class: 114
-      Script: {instanceID: 50440}
+      Script: {instanceID: 50326}
     - Class: 114
-      Script: {instanceID: 50554}
+      Script: {instanceID: 50442}
     - Class: 114
-      Script: {instanceID: 50714}
+      Script: {instanceID: 50556}
     - Class: 114
-      Script: {instanceID: 51132}
+      Script: {instanceID: 50716}
     - Class: 114
-      Script: {instanceID: 51334}
+      Script: {instanceID: 51134}
     - Class: 114
-      Script: {instanceID: 51468}
+      Script: {instanceID: 51336}
     - Class: 114
-      Script: {instanceID: 51476}
+      Script: {instanceID: 51470}
     - Class: 114
-      Script: {instanceID: 51632}
+      Script: {instanceID: 51478}
+    - Class: 114
+      Script: {instanceID: 51634}
     - Class: 114
       Script: {instanceID: 51800}
     - Class: 114
@@ -1197,6 +1191,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 53668}
     - Class: 114
       Script: {instanceID: 53808}
+    - Class: 114
+      Script: {instanceID: 259104}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1220,6 +1216,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -2652,6 +2650,12 @@ ScriptsOnlyBuild:
     className: MultiSceneNetManager
   - hash:
       serializedVersion: 2
+      Hash: 39b1fb25a4e860dd527f2aa7b0aa8493
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Respawn
+  - hash:
+      serializedVersion: 2
       Hash: 4773991192a82aaac45904d407cf2c02
     assemblyName: Heathen.Core
     namespaceName: HeathenEngineering
@@ -3084,7 +3088,7 @@ ScriptsOnlyBuild:
     className: ClientCube
   - hash:
       serializedVersion: 2
-      Hash: 5a37e283f5a8ad0e644e7008c6975c8e
+      Hash: d4a61cbdc032da60628d78b40617fc48
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: HoldItem
@@ -4608,7 +4612,7 @@ ScriptsOnlyBuild:
     className: NetworkLerpRigidbody
   - hash:
       serializedVersion: 2
-      Hash: f2d96316ed8a41648702eac5a2f6aa43
+      Hash: e32b6372647aefadef7782be1538a70d
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: FitToWaterSurface
@@ -5844,7 +5848,7 @@ ScriptsOnlyBuild:
     className: Vector2ChangeEventListener
   - hash:
       serializedVersion: 2
-      Hash: 26edbc1c49b59ab926114c23dd906130
+      Hash: 40de714c0edf28f2e49489336d900eef
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: SceneStuff
@@ -5980,6 +5984,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Splines
     namespaceName: UnityEngine.Splines
     className: SplineExtrude
+  - hash:
+      serializedVersion: 2
+      Hash: 1341b804f695f9f53ccadb67610dfb64
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SetSceneName
   platform: 19
   scenePathNames:
   - Assets/Scenes/Start.unity

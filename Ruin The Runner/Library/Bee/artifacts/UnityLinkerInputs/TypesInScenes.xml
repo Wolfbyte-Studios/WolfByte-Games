@@ -15,7 +15,9 @@
 		<type fullname="PlayerIdentity" preserve="nothing"/>
 		<type fullname="PlayerMovement" preserve="nothing"/>
 		<type fullname="Poop" preserve="nothing"/>
+		<type fullname="Respawn" preserve="nothing"/>
 		<type fullname="SceneStuff" preserve="nothing"/>
+		<type fullname="SetSceneName" preserve="nothing"/>
 		<type fullname="Sine" preserve="nothing"/>
 		<type fullname="Spin" preserve="nothing"/>
 		<type fullname="SteamLobby" preserve="nothing"/>
@@ -47,7 +49,6 @@
 		<type fullname="Unity.Cinemachine.CinemachinePanTilt" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.InputSystem">
-		<type fullname="UnityEngine.InputSystem.Editor.InputActionsEditorWindow" preserve="nothing"/>
 		<type fullname="UnityEngine.InputSystem.InputActionAsset" preserve="nothing"/>
 		<type fullname="UnityEngine.InputSystem.InputActionReference" preserve="nothing"/>
 		<type fullname="UnityEngine.InputSystem.InputSettings" preserve="nothing"/>
@@ -57,6 +58,7 @@
 		<type fullname="UnityEngine.InputSystem.UI.InputSystemUIInputModule" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime">
+		<type fullname="UnityEngine.Rendering.ProbeVolume" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.ProbeVolumeBakingSet" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.ProbeVolumePerSceneData" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.ProbeVolumesOptions" preserve="nothing"/>

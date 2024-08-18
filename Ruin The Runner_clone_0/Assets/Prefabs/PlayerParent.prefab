@@ -880,7 +880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6984225569943750780
 Transform:
   m_ObjectHideFlags: 0
@@ -1643,6 +1643,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 70f27ff67cc5dea4f88e28e9f3855ca5, type: 3}
+      propertyPath: m_UpdateMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 70f27ff67cc5dea4f88e28e9f3855ca5, type: 3}
+      propertyPath: m_AnimatePhysics
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 70f27ff67cc5dea4f88e28e9f3855ca5, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6443852219947562045, guid: 70f27ff67cc5dea4f88e28e9f3855ca5, type: 3}
       propertyPath: m_Layer
       value: 11
@@ -2033,6 +2045,10 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 73403024e6777364d973b28d952400e0, type: 3}
       propertyPath: m_AnimatePhysics
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 73403024e6777364d973b28d952400e0, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5968899053719554083, guid: 73403024e6777364d973b28d952400e0, type: 3}
       propertyPath: m_Layer

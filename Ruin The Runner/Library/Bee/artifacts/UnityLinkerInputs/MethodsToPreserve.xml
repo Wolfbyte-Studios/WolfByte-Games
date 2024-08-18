@@ -1,11 +1,34 @@
 <linker>
 	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
-		<type fullname="GameManager">
-			<method name="RotatePlayers"/>
-		</type>
 		<type fullname="HoldItem">
 			<method name="Throw"/>
 			<method name="Throw"/>
+			<method name="Throw"/>
+			<method name="Throw"/>
+			<method name="Throw"/>
+			<method name="Throw"/>
+			<method name="Throw"/>
+			<method name="Throw"/>
+			<method name="Throw"/>
+			<method name="Throw"/>
+			<method name="Throw"/>
+			<method name="Throw"/>
+			<method name="Throw"/>
+			<method name="Throw"/>
+			<method name="Throw"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
+			<method name="Trigger"/>
 			<method name="Trigger"/>
 			<method name="Trigger"/>
 		</type>
@@ -20,20 +43,11 @@
 			<method name="Trigger"/>
 			<method name="Trigger"/>
 			<method name="Trigger"/>
-			<method name="Trigger"/>
-			<method name="Trigger"/>
-			<method name="Trigger"/>
-			<method name="Trigger"/>
-			<method name="Trigger"/>
-			<method name="Trigger"/>
-			<method name="Trigger"/>
-			<method name="Trigger"/>
-			<method name="Trigger"/>
-			<method name="Trigger"/>
-			<method name="Trigger"/>
 		</type>
 		<type fullname="SceneStuff">
-			<method name="ChooseScene"/>
+			<method name="ChooseSceneForwardBackward"/>
+			<method name="ChooseSceneForwardBackward"/>
+			<method name="LoadScene"/>
 		</type>
 		<type fullname="Sine">
 			<method name="Pause"/>
@@ -44,6 +58,10 @@
 			<method name="Pause"/>
 			<method name="Pause"/>
 			<method name="Pause"/>
+			<method name="Resume"/>
+			<method name="Resume"/>
+			<method name="Resume"/>
+			<method name="Resume"/>
 			<method name="Resume"/>
 			<method name="Resume"/>
 			<method name="Resume"/>
@@ -89,16 +107,6 @@
 		</type>
 	</assembly>
 	<assembly fullname="UnityEngine.CoreModule" ignoreIfMissing="1">
-		<type fullname="UnityEngine.Behaviour">
-			<method name="set_enabled"/>
-			<method name="set_enabled"/>
-			<method name="set_enabled"/>
-			<method name="set_enabled"/>
-			<method name="set_enabled"/>
-			<method name="set_enabled"/>
-			<method name="set_enabled"/>
-			<method name="set_enabled"/>
-		</type>
 		<type fullname="UnityEngine.GameObject">
 			<method name="SetActive"/>
 			<method name="SetActive"/>
@@ -106,16 +114,6 @@
 			<method name="SetActive"/>
 			<method name="SetActive"/>
 			<method name="SetActive"/>
-		</type>
-		<type fullname="UnityEngine.Renderer">
-			<method name="set_enabled"/>
-			<method name="set_enabled"/>
-			<method name="set_enabled"/>
-			<method name="set_enabled"/>
-			<method name="set_enabled"/>
-			<method name="set_enabled"/>
-			<method name="set_enabled"/>
-			<method name="set_enabled"/>
 		</type>
 	</assembly>
 </linker>

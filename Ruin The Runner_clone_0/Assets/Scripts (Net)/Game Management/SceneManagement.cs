@@ -11,7 +11,9 @@ public class SceneStuff : NetworkBehaviour
     public static SceneStuff Instance { get; private set; }
     public List<string> Scenes = new List<string>();
     [SyncVar]
-    public int SceneToLoad;
+    public int SceneToLoadInt;
+    [SyncVar]
+    public string SceneToLoadString;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Start()
     {
@@ -38,23 +40,28 @@ public class SceneStuff : NetworkBehaviour
 
         return scenesInBuild;
     }
-    public void ChooseScene()
+    public void ChooseRandomScene()
     {
         var mode = GameManager.singleton.Mode;
         switch (mode)
         {
             case GameManager.GameMode.Standard:
-                SceneToLoad  = Random.Range(0, Scenes.Count);
-                LoadScene();
+                SceneToLoadInt  = Random.Range(0, Scenes.Count);
+                //LoadScene();
                 break;
         }
+    }
+    public void ChooseSceneForwardBackward(int direction)
+    {
+        SceneToLoadInt =  Mathf.Clamp(SceneToLoadInt + direction, 0,  Scenes.Count - 1);
+        SceneToLoadString = Scenes[SceneToLoadInt];
     }
 
     public void LoadScene()
     {
         
-       SceneManager.LoadScene( Scenes[SceneToLoad ], LoadSceneMode.Single);
-       NetworkManager.singleton.ServerChangeScene(Scenes[SceneToLoad]);
+       SceneManager.LoadScene( SceneToLoadString, LoadSceneMode.Single);
+       NetworkManager.singleton.ServerChangeScene(Scenes[SceneToLoadInt]);
     }
     // Update is called once per frame
     void Update()

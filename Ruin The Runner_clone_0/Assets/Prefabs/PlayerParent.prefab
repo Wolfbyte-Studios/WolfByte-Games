@@ -572,7 +572,7 @@ MonoBehaviour:
   slowRate: 0.1
   velocity: {x: 0, y: 0, z: 0}
   Dizzy: 0
-  playerCam: {fileID: 0}
+  playerCam: {fileID: 2666239700749873811}
   Mallet: {fileID: 0}
   rb: {fileID: 0}
   actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
@@ -635,6 +635,15 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 2b89bc63-e18b-47c5-8c31-cf3dcd7f8df6
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  respawn:
+    m_Name: Respawn
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 0dec57b5-e2c9-405a-ac60-e8df277201d9
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -1007,7 +1016,7 @@ MonoBehaviour:
   slowRate: 0.1
   velocity: {x: 0, y: 0, z: 0}
   Dizzy: 0
-  playerCam: {fileID: 0}
+  playerCam: {fileID: 2666239700749873811}
   Mallet: {fileID: 0}
   rb: {fileID: 0}
   actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
@@ -1070,6 +1079,15 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: ed51eb2e-c09d-4104-a4f0-9f0fab08124a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  respawn:
+    m_Name: Respawn
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 04370d7b-e132-4c8d-986f-670e53d1ba5a
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -1853,6 +1871,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5cebecdd870b3b449746e549bcbd2a0, type: 3}
+--- !u!1 &2666239700749873811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5448612832852954483, guid: e5cebecdd870b3b449746e549bcbd2a0, type: 3}
+  m_PrefabInstance: {fileID: 7970595503155494880}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5316710628562918299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2834451110807331963, guid: e5cebecdd870b3b449746e549bcbd2a0, type: 3}

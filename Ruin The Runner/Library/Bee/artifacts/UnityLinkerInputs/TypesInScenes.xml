@@ -2,6 +2,7 @@
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="AimOutline" preserve="nothing"/>
 		<type fullname="Clickable" preserve="nothing"/>
+		<type fullname="CR.CleanOutline" preserve="nothing"/>
 		<type fullname="DisableCamera" preserve="nothing"/>
 		<type fullname="DontDestroy" preserve="nothing"/>
 		<type fullname="DontFloat" preserve="nothing"/>
@@ -12,6 +13,7 @@
 		<type fullname="LookAtRunner" preserve="nothing"/>
 		<type fullname="PlayerIdentity" preserve="nothing"/>
 		<type fullname="PlayerMovement" preserve="nothing"/>
+		<type fullname="PlayerPedestal" preserve="nothing"/>
 		<type fullname="Poop" preserve="nothing"/>
 		<type fullname="Respawn" preserve="nothing"/>
 		<type fullname="SceneStuff" preserve="nothing"/>
@@ -23,6 +25,9 @@
 	</assembly>
 	<assembly fullname="FizzySteamworks">
 		<type fullname="Mirror.FizzySteam.FizzySteamworks" preserve="nothing"/>
+	</assembly>
+	<assembly fullname="HierarchyIcons">
+		<type fullname="HierarchyIcons.HierarchyIcon" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Mirror.Components">
 		<type fullname="Mirror.Discovery.NetworkDiscovery" preserve="nothing"/>

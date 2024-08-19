@@ -6,6 +6,7 @@ using Unity.Cinemachine;
 using System.Collections;
 using JetBrains.Annotations;
 using System;
+using System.Linq;
 
 public class PlayerMovement : NetworkBehaviour
 {
@@ -40,6 +41,7 @@ public class PlayerMovement : NetworkBehaviour
     public InputAction Fire;
     public InputAction Secondary;
     public InputAction debugSwitch;
+    public InputAction respawn;
     public Animator anim;
     public NetworkAnimator NAnim;
     public GameObject Shit;
@@ -48,7 +50,7 @@ public class PlayerMovement : NetworkBehaviour
     public Transform followTarget;
     public Vector3 GroundcheckOrigin;
     public float GroundcheckLength;
-    //private PlayerNetworkIndex PLI;
+    private PlayerIdentity PLI;
 
     public override void OnStartClient()
     {
@@ -60,6 +62,7 @@ public class PlayerMovement : NetworkBehaviour
     public void OnEnable()
     {
         Setup();
+
     }
     public void Start()
     {
@@ -70,6 +73,8 @@ public class PlayerMovement : NetworkBehaviour
         //Cursor.lockState = CursorLockMode.None;
         //Cursor.visible = true;
         debugSwitch.performed -= DebugSwitch_performed;
+        respawn.performed -= Respawn_performed;
+
         menu.performed -= Menu_performed;
         crouch.performed -= OnCrouch;
         Fire.performed -= Fire_performed;
@@ -85,8 +90,10 @@ public class PlayerMovement : NetworkBehaviour
         NAnim = GetComponent<NetworkAnimator>();
         debugSwitch = actions.FindAction("debugSwitch");
         debugSwitch.performed += DebugSwitch_performed;
+        respawn = actions.FindAction("Respawn");
+        respawn.performed += Respawn_performed;
         var playerInput = gameObject.transform.parent.GetComponent<PlayerInput>();
-        //PLI = gameObject.GetComponent<PlayerNetworkIndex>();
+        PLI = gameObject.transform.parent.GetComponent<PlayerIdentity>();
 
         if (playerInput != null)
         {
@@ -132,7 +139,13 @@ public class PlayerMovement : NetworkBehaviour
         }
         playerCam.gameObject.GetComponent<CinemachineCamera>().Follow = this.followTarget;
 
+        Respawn();
+    }
 
+    private void Respawn_performed(InputAction.CallbackContext obj)
+    {
+        Respawn();
+        throw new NotImplementedException();
     }
 
     private void DebugSwitch_performed(InputAction.CallbackContext obj)
@@ -386,9 +399,37 @@ public class PlayerMovement : NetworkBehaviour
         }
         rb.linearVelocity = velocity;
     }
+    [ContextMenu("Respawn")]
     public void Respawn()
     {
-        this.gameObject.transform.position = GameManager.singleton.lastPooped.position;
+        if (GameManager.singleton.lastPooped != null)
+        {
+            this.gameObject.transform.position = GameManager.singleton.lastPooped.position;
+        }
+        else
+        {
+            var pedestals = GameObject.FindObjectsByType(typeof(PlayerPedestal), sortMode: FindObjectsSortMode.None)
+                                 .Cast<PlayerPedestal>()
+                                 .ToArray();
+
+            // Sort the pedestals by distance from the current object (this script's GameObject)
+            var sortedPedestals = pedestals.OrderBy(pedestal => Vector3.Distance(transform.position, pedestal.transform.position)).ToArray();
+
+            // Now you can iterate over the sortedPedestals
+            foreach (var pedestal in sortedPedestals)
+            {
+                if (pedestal.AcceptedPlayers.Contains(PLI.playerId) && pedestal.AcceptedPlayertypes.Contains(this.PlayerType))
+                {
+                    this.gameObject.transform.position = pedestal.transform.position;
+
+                    this.gameObject.transform.localEulerAngles = new Vector3(0, pedestal.transform.localEulerAngles.y, 0);
+                    playerCam.GetComponent<CinemachinePanTilt>().PanAxis.Value = pedestal.transform.localEulerAngles.y;
+
+                    return;
+                }
+                // Your logic here
+            }
+        }
         //Debug.log("respawned");
     }
     public void slowVelocity()

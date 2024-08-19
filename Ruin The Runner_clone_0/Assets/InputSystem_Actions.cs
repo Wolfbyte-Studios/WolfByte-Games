@@ -126,15 +126,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""debugSwitch"",
-                    ""type"": ""Button"",
-                    ""id"": ""45a98650-f4b2-45c6-83d3-2a033e7fbb31"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -553,17 +544,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Secondary"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""636ec246-b20b-4b81-a08d-f807f2fea217"",
-                    ""path"": ""<Keyboard>/backquote"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""debugSwitch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1084,6 +1064,54 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""debugActions"",
+            ""id"": ""4f8fda2a-5bc1-4c31-8b4c-c7676bd7352c"",
+            ""actions"": [
+                {
+                    ""name"": ""debugSwitch"",
+                    ""type"": ""Button"",
+                    ""id"": ""4ec139ea-35a2-49b2-bdd3-6eda70bb47bb"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Respawn"",
+                    ""type"": ""Button"",
+                    ""id"": ""1ff71a29-5cfe-4633-aa41-d84553649a24"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""d08b3fcd-ff98-4d0d-802d-b25660a81755"",
+                    ""path"": ""<Keyboard>/backquote"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""debugSwitch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""42154f7f-a14a-4961-aec8-8ccdbdd2230b"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Respawn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -1162,7 +1190,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
         m_Player_Menu = m_Player.FindAction("Menu", throwIfNotFound: true);
         m_Player_Secondary = m_Player.FindAction("Secondary", throwIfNotFound: true);
-        m_Player_debugSwitch = m_Player.FindAction("debugSwitch", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1175,12 +1202,17 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_UI_ScrollWheel = m_UI.FindAction("ScrollWheel", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
+        // debugActions
+        m_debugActions = asset.FindActionMap("debugActions", throwIfNotFound: true);
+        m_debugActions_debugSwitch = m_debugActions.FindAction("debugSwitch", throwIfNotFound: true);
+        m_debugActions_Respawn = m_debugActions.FindAction("Respawn", throwIfNotFound: true);
     }
 
     ~@InputSystem_Actions()
     {
         Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, InputSystem_Actions.Player.Disable() has not been called.");
         Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, InputSystem_Actions.UI.Disable() has not been called.");
+        Debug.Assert(!m_debugActions.enabled, "This will cause a leak and performance issues, InputSystem_Actions.debugActions.Disable() has not been called.");
     }
 
     public void Dispose()
@@ -1253,7 +1285,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Sprint;
     private readonly InputAction m_Player_Menu;
     private readonly InputAction m_Player_Secondary;
-    private readonly InputAction m_Player_debugSwitch;
     public struct PlayerActions
     {
         private @InputSystem_Actions m_Wrapper;
@@ -1269,7 +1300,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
         public InputAction @Menu => m_Wrapper.m_Player_Menu;
         public InputAction @Secondary => m_Wrapper.m_Player_Secondary;
-        public InputAction @debugSwitch => m_Wrapper.m_Player_debugSwitch;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1312,9 +1342,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Secondary.started += instance.OnSecondary;
             @Secondary.performed += instance.OnSecondary;
             @Secondary.canceled += instance.OnSecondary;
-            @debugSwitch.started += instance.OnDebugSwitch;
-            @debugSwitch.performed += instance.OnDebugSwitch;
-            @debugSwitch.canceled += instance.OnDebugSwitch;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -1352,9 +1379,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Secondary.started -= instance.OnSecondary;
             @Secondary.performed -= instance.OnSecondary;
             @Secondary.canceled -= instance.OnSecondary;
-            @debugSwitch.started -= instance.OnDebugSwitch;
-            @debugSwitch.performed -= instance.OnDebugSwitch;
-            @debugSwitch.canceled -= instance.OnDebugSwitch;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1490,6 +1514,60 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
+
+    // debugActions
+    private readonly InputActionMap m_debugActions;
+    private List<IDebugActionsActions> m_DebugActionsActionsCallbackInterfaces = new List<IDebugActionsActions>();
+    private readonly InputAction m_debugActions_debugSwitch;
+    private readonly InputAction m_debugActions_Respawn;
+    public struct DebugActionsActions
+    {
+        private @InputSystem_Actions m_Wrapper;
+        public DebugActionsActions(@InputSystem_Actions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @debugSwitch => m_Wrapper.m_debugActions_debugSwitch;
+        public InputAction @Respawn => m_Wrapper.m_debugActions_Respawn;
+        public InputActionMap Get() { return m_Wrapper.m_debugActions; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(DebugActionsActions set) { return set.Get(); }
+        public void AddCallbacks(IDebugActionsActions instance)
+        {
+            if (instance == null || m_Wrapper.m_DebugActionsActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_DebugActionsActionsCallbackInterfaces.Add(instance);
+            @debugSwitch.started += instance.OnDebugSwitch;
+            @debugSwitch.performed += instance.OnDebugSwitch;
+            @debugSwitch.canceled += instance.OnDebugSwitch;
+            @Respawn.started += instance.OnRespawn;
+            @Respawn.performed += instance.OnRespawn;
+            @Respawn.canceled += instance.OnRespawn;
+        }
+
+        private void UnregisterCallbacks(IDebugActionsActions instance)
+        {
+            @debugSwitch.started -= instance.OnDebugSwitch;
+            @debugSwitch.performed -= instance.OnDebugSwitch;
+            @debugSwitch.canceled -= instance.OnDebugSwitch;
+            @Respawn.started -= instance.OnRespawn;
+            @Respawn.performed -= instance.OnRespawn;
+            @Respawn.canceled -= instance.OnRespawn;
+        }
+
+        public void RemoveCallbacks(IDebugActionsActions instance)
+        {
+            if (m_Wrapper.m_DebugActionsActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IDebugActionsActions instance)
+        {
+            foreach (var item in m_Wrapper.m_DebugActionsActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_DebugActionsActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public DebugActionsActions @debugActions => new DebugActionsActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -1548,7 +1626,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         void OnSprint(InputAction.CallbackContext context);
         void OnMenu(InputAction.CallbackContext context);
         void OnSecondary(InputAction.CallbackContext context);
-        void OnDebugSwitch(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
@@ -1562,5 +1639,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         void OnScrollWheel(InputAction.CallbackContext context);
         void OnTrackedDevicePosition(InputAction.CallbackContext context);
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
+    }
+    public interface IDebugActionsActions
+    {
+        void OnDebugSwitch(InputAction.CallbackContext context);
+        void OnRespawn(InputAction.CallbackContext context);
     }
 }

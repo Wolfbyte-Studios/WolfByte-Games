@@ -103,15 +103,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "debugSwitch",
-                    "type": "Button",
-                    "id": "45a98650-f4b2-45c6-83d3-2a033e7fbb31",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -530,17 +521,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Secondary",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "636ec246-b20b-4b81-a08d-f807f2fea217",
-                    "path": "<Keyboard>/backquote",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "debugSwitch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -1057,6 +1037,54 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "debugActions",
+            "id": "4f8fda2a-5bc1-4c31-8b4c-c7676bd7352c",
+            "actions": [
+                {
+                    "name": "debugSwitch",
+                    "type": "Button",
+                    "id": "4ec139ea-35a2-49b2-bdd3-6eda70bb47bb",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Respawn",
+                    "type": "Button",
+                    "id": "1ff71a29-5cfe-4633-aa41-d84553649a24",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d08b3fcd-ff98-4d0d-802d-b25660a81755",
+                    "path": "<Keyboard>/backquote",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "debugSwitch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "42154f7f-a14a-4961-aec8-8ccdbdd2230b",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Respawn",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

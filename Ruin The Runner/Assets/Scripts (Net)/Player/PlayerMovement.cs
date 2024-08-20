@@ -48,12 +48,7 @@ public class PlayerMovement : NetworkBehaviour
     public Vector3 shitOffset;
     private Collision lastCollided;
     public Transform followTarget;
-    public LayerMask excludedLayers;
-    public Vector3 GroundcheckOrigin;
-    public float GroundcheckLength;
-    [SerializeField]
-    private float angle;
-    public float stairSpeed;
+    
     private PlayerIdentity PLI;
 
     public override void OnStartClient()
@@ -276,7 +271,7 @@ public class PlayerMovement : NetworkBehaviour
 
     void Update()
     {
-
+        checkGround();
     }
     public void centerModel()
     {
@@ -333,44 +328,58 @@ public class PlayerMovement : NetworkBehaviour
     public Vector3 stairOffset;
     public void Stairs(Vector3 target)
     {
-        float step = stairSpeed * Time.deltaTime; // Calculate movement step based on speed
-        if (target.y - transform.position.y > 0.1f && target.y - transform.position.y < 0.4f && move.ReadValue<Vector2>().y > 0)
+        if (!move.IsPressed())
         {
-            var newTarget = target + transform.TransformDirection(stairOffset);
-            transform.position = Vector3.Lerp(transform.position, newTarget, step);
-
-            // Draw a point at newTarget's position
-            Debug.DrawLine(newTarget, newTarget + Vector3.up * 0.1f, Color.red, 2f); // Adjust the Vector3.up * 0.1f to control the size of the point
-
-            Debug.Log(step);
+            return;
         }
 
+        // Calculate the direction to move
+        Vector3 moveDirection = target - transform.position;
+        moveDirection.y = 0; // Ignore vertical movement
+
+        // Normalize the direction vector
+        moveDirection.Normalize();
+
+        // Calculate the distance to the target
+        float distanceToTarget = Vector3.Distance(transform.position, target);
+
+        // Check if the player is close enough to the target to start moving upwards
+        if (distanceToTarget <= 0.1f)
+        {
+            // Move the player upwards
+            moveDirection.y = 1; // Adjust the value as needed for the desired upward movement speed
+        }
+
+        // Apply the movement force to the Rigidbody
+        rb.AddForce(moveDirection * moveSpeed * stairSpeed);
     }
+    public LayerMask excludedLayers;
+    public Vector3 GroundcheckOrigin;
+    public float GroundcheckLength;
+    [SerializeField]
+    private float angle;
+    public Vector3 StaircheckOrigin;
+    public float stairSpeed;
     public void checkGround()
     {
         Vector3 origin = transform.TransformPoint(GroundcheckOrigin);
         // Perform a raycast with a LayerMask
         RaycastHit hit;
         Ray ray = new Ray(origin, Vector3.down);
-
+        //Grounded Check
         if (Physics.Raycast(ray, out hit, GroundcheckLength, excludedLayers, QueryTriggerInteraction.Ignore))
         {
-            if (hit.collider.gameObject != gameObject && hit.collider.isTrigger == false)
-            {
-                Debug.Log(hit.collider.name + ": " + hit.collider.gameObject.name);
+           
                 // Calculate the angle between the hit normal and the up vector (90 degrees is a flat surface)
-                angle = Vector3.Angle(hit.normal, Vector3.up);
+               
                 anim.SetBool("Grounded", true);
-                if (Mathf.Abs(angle) <= 35 && hit.point.y - transform.position.y >= 0.1f)
-                {
-                    Stairs(hit.point);
-                }
+                
                 // Log the angle as a warning
                 // Debug.LogWarning("Surface angle: " + angle + " degrees");
 
                 // If the raycast hits something, you can handle it here
                 // Debug.Log("Ground detected at distance: " + hit.distance);
-            }
+            
         }
         else
         {
@@ -378,15 +387,24 @@ public class PlayerMovement : NetworkBehaviour
             // If no hit is detected
             // Debug.Log("No ground detected");
         }
-
+        ray = new Ray(transform.TransformPoint(StaircheckOrigin), Vector3.down);
+        if (Physics.Raycast(ray, out hit, GroundcheckLength, excludedLayers, QueryTriggerInteraction.Ignore))
+        {
+            angle = Vector3.Angle(hit.normal, Vector3.up);
+            if (Mathf.Abs(angle) <= 35 && hit.point.y - transform.position.y >= 0.1f)
+            {
+                Stairs(hit.point);
+            }
+        }
         // Draw the raycast line for visualization in the Scene view
         Debug.DrawRay(origin, Vector3.down * GroundcheckLength, Color.red);
+        Debug.DrawRay(transform.TransformPoint(StaircheckOrigin), Vector3.down * GroundcheckLength, Color.blue);
     }
 
     public void FixedUpdate()
     {
         velocity = rb.linearVelocity;
-        checkGround();
+        //checkGround();
         centerModel();
         if (!isLocalPlayer)
         {

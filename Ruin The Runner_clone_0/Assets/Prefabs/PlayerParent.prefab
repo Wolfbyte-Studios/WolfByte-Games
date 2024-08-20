@@ -802,12 +802,14 @@ MonoBehaviour:
   Shit: {fileID: 569198885197537436, guid: 0114d2108c9f402448b736f62d4b83f6, type: 3}
   shitOffset: {x: 0, y: 0, z: 0}
   followTarget: {fileID: 5458994532147475133}
+  stairOffset: {x: 0, y: 0, z: 0}
   excludedLayers:
     serializedVersion: 2
     m_Bits: 0
   GroundcheckOrigin: {x: 0, y: 0, z: 0}
   GroundcheckLength: 0
   angle: 0
+  StaircheckOrigin: {x: 0, y: 0, z: 0}
   stairSpeed: 0
 --- !u!54 &2565956750009814011
 Rigidbody:
@@ -1445,12 +1447,14 @@ MonoBehaviour:
   Shit: {fileID: 569198885197537436, guid: 0114d2108c9f402448b736f62d4b83f6, type: 3}
   shitOffset: {x: 0, y: 0.5, z: -0.5}
   followTarget: {fileID: 7203228848194695166}
+  stairOffset: {x: 0, y: 0, z: 0}
   excludedLayers:
     serializedVersion: 2
     m_Bits: 1879048193
-  GroundcheckOrigin: {x: 0, y: 0.25, z: 0.35}
+  GroundcheckOrigin: {x: 0, y: 0.25, z: 0}
   GroundcheckLength: 0.5
   angle: 0
+  StaircheckOrigin: {x: 0, y: 0.5, z: 0.275}
   stairSpeed: 17
 --- !u!54 &901711816562286119
 Rigidbody:

@@ -59,9 +59,10 @@ public class SceneStuff : NetworkBehaviour
 
     public void LoadScene()
     {
-        
-       SceneManager.LoadScene( SceneToLoadString, LoadSceneMode.Single);
-       NetworkManager.singleton.ServerChangeScene(Scenes[SceneToLoadInt]);
+        GameManager.singleton.respawnAllPlayers(true);
+        //SceneManager.LoadScene( SceneToLoadString, LoadSceneMode.Single);
+        NetworkManager.singleton.ServerChangeScene(SceneToLoadString);
+        //GameManager.singleton.respawnAllPlayers(false);
     }
     // Update is called once per frame
     void Update()

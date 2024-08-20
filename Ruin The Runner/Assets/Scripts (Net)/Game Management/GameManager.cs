@@ -1,6 +1,7 @@
 using UnityEngine;
 using Mirror;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(NetworkIdentity))]
 public class GameManager : NetworkBehaviour
@@ -34,9 +35,16 @@ public class GameManager : NetworkBehaviour
 
 
         singleton = this;
+        
 
     }
-    
+
+    private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
+    {
+        respawnAllPlayers(false);
+        //throw new System.NotImplementedException();
+    }
+
     public override void OnStartClient()
     {
         base.OnStartClient();
@@ -45,6 +53,7 @@ public class GameManager : NetworkBehaviour
     public override void OnStartServer()
     {
         base.OnStartServer();
+        SceneManager.sceneLoaded += SceneManager_sceneLoaded;
         NetworkUtils.RpcHandler(this, RotatePlayers);
 
     }
@@ -62,6 +71,23 @@ public class GameManager : NetworkBehaviour
         {
             NetworkServer.Destroy(poopList[0].gameObject);
             poopList.RemoveAt(0);
+        }
+    }
+    
+    public void respawnAllPlayers(bool isZeroed)
+    {
+        foreach(var con in NetworkServer.connections)
+        {
+            if (isZeroed)
+            {
+                con.Value.identity.gameObject.transform.position = Vector3.zero;
+                con.Value.identity.gameObject.transform.GetChild(0).position = Vector3.zero;
+                con.Value.identity.gameObject.transform.GetChild(1).position = Vector3.zero;
+                con.Value.identity.gameObject.transform.GetChild(2).position = Vector3.zero;
+                con.Value.identity.gameObject.transform.GetChild(3).position = Vector3.zero;
+                return;
+            }
+            con.Value.identity.gameObject.GetComponentInChildren<PlayerMovement>(false).Respawn();
         }
     }
     [ContextMenu("Rotate Sab")]

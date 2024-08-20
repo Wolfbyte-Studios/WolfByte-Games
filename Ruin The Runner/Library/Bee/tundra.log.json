@@ -1200,6 +1200,7 @@
 {"msg":"enqueueNode","enqueuedNodeAnnotation":"WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll.mvfrm.rsp","enqueuedNodeIndex":808,"enqueueingNodeAnnotation":"MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll.mvfrm","enqueueingNodeIndex":809}
 {"msg":"enqueueNode","enqueuedNodeAnnotation":"WriteResponseFile Library/Bee/artifacts/rsp/2781082588993088484.rsp","enqueuedNodeIndex":998,"enqueueingNodeAnnotation":"ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)","enqueueingNodeIndex":999}
 {"msg":"enqueueNode","enqueuedNodeAnnotation":"CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb","enqueuedNodeIndex":1201,"enqueueingNodeAnnotation":"ScriptAssemblies","enqueueingNodeIndex":6}
+<<<<<<< HEAD
 {"msg":"nodeOutputsMissing","annotation":"CopyFiles Library/ScriptAssemblies/UnityEngine.TestRunner.dll","index":1000,"files":["Library\\ScriptAssemblies\\UnityEngine.TestRunner.dll"],"directories":[]}
 {"msg":"nodeOutputsMissing","annotation":"CopyFiles Library/ScriptAssemblies/UnityEngine.TestRunner.pdb","index":1001,"files":["Library\\ScriptAssemblies\\UnityEngine.TestRunner.pdb"],"directories":[]}
 {"msg":"runNodeAction","annotation":"CopyFiles Library/ScriptAssemblies/UnityEngine.TestRunner.dll","displayName":"Copying UnityEngine.TestRunner.dll","index":1000}
@@ -1726,3 +1727,8 @@
 {"msg":"noderesult","processed_node_count":1197,"number_of_nodes_ever_queued":1201,"annotation":"CopyFiles Library/ScriptAssemblies/Unity.Collections.pdb","index":1091,"exitcode":0,"outputfile":"Library\\ScriptAssemblies\\Unity.Collections.pdb"}
 {"msg":"noderesult","processed_node_count":1197,"number_of_nodes_ever_queued":1201,"annotation":"CopyFiles Library/ScriptAssemblies/Mirror.Components.pdb","index":1125,"exitcode":0,"outputfile":"Library\\ScriptAssemblies\\Mirror.Components.pdb"}
 {"msg":"noderesult","processed_node_count":1199,"number_of_nodes_ever_queued":1201,"annotation":"CopyFiles Library/ScriptAssemblies/Unity.TextMeshPro.pdb","index":1071,"exitcode":0,"outputfile":"Library\\ScriptAssemblies\\Unity.TextMeshPro.pdb"}
+=======
+{"msg":"nodeOutputsMissing","annotation":"ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput","index":811,"files":["Library\\ilpp-configuration.nevergeneratedoutput"],"directories":[]}
+{"msg":"runNodeAction","annotation":"ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput","displayName":"ILPP-Configuration ilpp-configuration","index":811}
+{"msg":"noderesult","processed_node_count":917,"number_of_nodes_ever_queued":1201,"annotation":"ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput","index":811,"exitcode":0,"outputfile":"Library\\ilpp-configuration.nevergeneratedoutput"}
+>>>>>>> 3c4bf4bdebd7e076214c7e614400567973a6b7a7

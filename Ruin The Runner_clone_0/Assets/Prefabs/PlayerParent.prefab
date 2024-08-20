@@ -143,12 +143,12 @@ MonoBehaviour:
   syncPosition: 1
   syncRotation: 1
   syncScale: 0
-  onlySyncOnChange: 1
+  onlySyncOnChange: 0
   compressRotation: 1
   interpolatePosition: 1
   interpolateRotation: 1
   interpolateScale: 1
-  coordinateSpace: 0
+  coordinateSpace: 1
   sendIntervalMultiplier: 1
   timelineOffset: 0
   showGizmos: 0
@@ -449,6 +449,7 @@ GameObject:
   - component: {fileID: 2565956750009814011}
   - component: {fileID: 2195824401428436927}
   - component: {fileID: 7055027285635299692}
+  - component: {fileID: 6884492925666699460}
   m_Layer: 11
   m_Name: Sab
   m_TagString: Untagged
@@ -574,7 +575,7 @@ MonoBehaviour:
   Dizzy: 0
   playerCam: {fileID: 2666239700749873811}
   Mallet: {fileID: 0}
-  rb: {fileID: 0}
+  rb: {fileID: 2565956750009814011}
   actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   move:
     m_Name: Move
@@ -724,6 +725,40 @@ MonoBehaviour:
   interpolateRotation: 1
   interpolateScale: 1
   coordinateSpace: 0
+  sendIntervalMultiplier: 1
+  timelineOffset: 0
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+  onlySyncOnChangeCorrectionMultiplier: 2
+  rotationSensitivity: 0.01
+  positionPrecision: 0.01
+  scalePrecision: 0.01
+--- !u!114 &6884492925666699460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5273292936446191080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff3ba0becae47b8b9381191598957c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 1
+  syncMode: 0
+  syncInterval: 0
+  target: {fileID: 5458994532147475133}
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  onlySyncOnChange: 0
+  compressRotation: 1
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 1
+  coordinateSpace: 1
   sendIntervalMultiplier: 1
   timelineOffset: 0
   showGizmos: 0
@@ -895,6 +930,7 @@ GameObject:
   - component: {fileID: 901711816562286119}
   - component: {fileID: 781966518083545754}
   - component: {fileID: 7898577097500833688}
+  - component: {fileID: 8743141682083197276}
   m_Layer: 10
   m_Name: Runner
   m_TagString: Runner
@@ -1017,8 +1053,8 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   Dizzy: 0
   playerCam: {fileID: 2666239700749873811}
-  Mallet: {fileID: 0}
-  rb: {fileID: 0}
+  Mallet: {fileID: 2684674129935250818}
+  rb: {fileID: 901711816562286119}
   actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   move:
     m_Name: Move
@@ -1168,6 +1204,40 @@ MonoBehaviour:
   interpolateRotation: 1
   interpolateScale: 1
   coordinateSpace: 0
+  sendIntervalMultiplier: 1
+  timelineOffset: 0
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+  onlySyncOnChangeCorrectionMultiplier: 2
+  rotationSensitivity: 0.01
+  positionPrecision: 0.01
+  scalePrecision: 0.01
+--- !u!114 &8743141682083197276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6970713463893321012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff3ba0becae47b8b9381191598957c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 1
+  syncMode: 0
+  syncInterval: 0
+  target: {fileID: 6984225569943750780}
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  onlySyncOnChange: 0
+  compressRotation: 1
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 1
+  coordinateSpace: 1
   sendIntervalMultiplier: 1
   timelineOffset: 0
   showGizmos: 0
@@ -1395,6 +1465,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6139466114833824494}
   m_SourcePrefab: {fileID: 100100000, guid: 914fbcaa8d8234b4887995e943f69229, type: 3}
+--- !u!1 &2684674129935250818 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 914fbcaa8d8234b4887995e943f69229, type: 3}
+  m_PrefabInstance: {fileID: 2990541010220976339}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3317517166521675576 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 914fbcaa8d8234b4887995e943f69229, type: 3}

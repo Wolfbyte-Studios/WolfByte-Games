@@ -45,6 +45,13 @@ public class HoldItem : NetworkBehaviour
 
     public void Setup()
     {
+        foreach(var con in NetworkServer.connections)
+        {
+            if (!con.Value.isReady)
+            {
+                return;
+            }
+        }
         rb = GetComponent<Rigidbody>();
         holder = GameObject.Find("Holder").transform;
         player = holder.transform.parent;

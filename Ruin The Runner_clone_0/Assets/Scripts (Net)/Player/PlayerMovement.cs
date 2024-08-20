@@ -56,7 +56,7 @@ public class PlayerMovement : NetworkBehaviour
     {
         base.OnStartClient();
         Setup();
-        DontDestroyOnLoad(gameObject.transform.parent.gameObject);
+        //DontDestroyOnLoad(gameObject.transform.parent.gameObject);
 
     }
     public void OnEnable()
@@ -158,8 +158,11 @@ public class PlayerMovement : NetworkBehaviour
     {
         anim.SetTrigger("Secondary");
         NAnim.SetTrigger("Secondary");
-        NetworkUtils.RpcHandler(this, onPoop);
-        //throw new System.NotImplementedException();
+        if (PlayerType == playertype.Runner)
+        {
+            NetworkUtils.RpcHandler(this, onPoop);
+            //throw new System.NotImplementedException();
+        }
     }
 
     private void Fire_performed(InputAction.CallbackContext obj)
@@ -418,7 +421,9 @@ public class PlayerMovement : NetworkBehaviour
             // Now you can iterate over the sortedPedestals
             foreach (var pedestal in sortedPedestals)
             {
-                if (pedestal.AcceptedPlayers.Contains(PLI.playerId) && pedestal.AcceptedPlayertypes.Contains(this.PlayerType))
+                if (pedestal.AcceptedPlayers.Contains(PLI.playerId)
+                    &&
+                    pedestal.AcceptedPlayertypes.Contains(this.PlayerType))
                 {
                     this.gameObject.transform.position = pedestal.transform.position;
 

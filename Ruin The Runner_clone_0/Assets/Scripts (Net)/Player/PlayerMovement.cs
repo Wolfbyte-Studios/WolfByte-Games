@@ -50,6 +50,9 @@ public class PlayerMovement : NetworkBehaviour
     public Transform followTarget;
     public Vector3 GroundcheckOrigin;
     public float GroundcheckLength;
+    [SerializeField]
+    private float angle;
+    public float stairSpeed;
     private PlayerIdentity PLI;
 
     public override void OnStartClient()
@@ -326,24 +329,38 @@ public class PlayerMovement : NetworkBehaviour
             }
         }
     }
+    public void Stairs(Vector3 target)
+    {
+        float step = stairSpeed * Time.deltaTime; // Calculate movement step based on speed
+        if(target.y - transform.position.y > 0.1f && target.y - transform.position.y < .4f && move.ReadValue<Vector2>().y > 0)
+        {
+            transform.position = Vector3.Lerp(transform.position, target, step);
+            Debug.Log(step);
+        }
+        
+    }
     public void checkGround()
     {
         Vector3 origin = transform.TransformPoint(GroundcheckOrigin);
         // Perform a raycast
         RaycastHit hit;
         Ray ray = new Ray(origin, Vector3.down);
-        float angle;
+        
         if (Physics.Raycast(ray, out hit, GroundcheckLength))
         {
             // Calculate the angle between the hit normal and the up vector (90 degrees is a flat surface)
             angle = Vector3.Angle(hit.normal, Vector3.up);
-
-            // Log the angle as a warning
-            //Debug.LogWarning("Surface angle: " + angle + " degrees");
-
-            // If the raycast hits something, you can handle it here
-            // Debug.Log("Ground detected at distance: " + hit.distance);
             anim.SetBool("Grounded", true);
+            if (Mathf.Abs(angle) <= 35 && hit.point.y - transform.position.y >= 0.1f)
+            {
+                Stairs(hit.point);
+            }
+                // Log the angle as a warning
+                //Debug.LogWarning("Surface angle: " + angle + " degrees");
+
+                // If the raycast hits something, you can handle it here
+                // Debug.Log("Ground detected at distance: " + hit.distance);
+               
         }
         else
         {
@@ -351,7 +368,7 @@ public class PlayerMovement : NetworkBehaviour
             // If no hit is detected
             //Debug.Log("No ground detected");
         }
-        //if(angle )
+        
         // Draw the raycast line for visualization in the Scene view
         Debug.DrawRay(origin, Vector3.down * GroundcheckLength, Color.red);
     }

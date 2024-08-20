@@ -1,18 +1,20 @@
 using Mirror;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
 public class SetSceneName : NetworkBehaviour
 {
     public TextMeshProUGUI tmp;
+    public SceneStuff scenestuff;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public override void OnStartClient()
+    public override void OnStartServer()
     {
-        base.OnStartClient();
+        base.OnStartServer();
     
         tmp = GetComponent<TextMeshProUGUI>();
-        SceneStuff.Instance.ChooseRandomScene();
     }
+    
 
     // Update is called once per frame
     void Update()

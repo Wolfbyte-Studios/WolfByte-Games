@@ -22,6 +22,10 @@ public class SceneStuff : NetworkBehaviour
         Scenes = GetScenesInBuild();
         //var totalScenes = SceneManager.sceneCountInBuildSettings;
         Scenes.RemoveAt(0);
+        if(SceneToLoadString == null)
+        {
+            ChooseRandomScene();
+        }
         //uncomment when added win screen and any others at end of build scenes
         //scenesInBuild.RemoveAt(totalScenes - 1);
     }

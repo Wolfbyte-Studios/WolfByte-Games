@@ -48,6 +48,7 @@ public class PlayerMovement : NetworkBehaviour
     public Vector3 shitOffset;
     private Collision lastCollided;
     public Transform followTarget;
+    public LayerMask excludedLayers;
     public Vector3 GroundcheckOrigin;
     public float GroundcheckLength;
     [SerializeField]
@@ -329,46 +330,55 @@ public class PlayerMovement : NetworkBehaviour
             }
         }
     }
+    public Vector3 stairOffset;
     public void Stairs(Vector3 target)
     {
         float step = stairSpeed * Time.deltaTime; // Calculate movement step based on speed
-        if(target.y - transform.position.y > 0.1f && target.y - transform.position.y < .4f && move.ReadValue<Vector2>().y > 0)
+        if (target.y - transform.position.y > 0.1f && target.y - transform.position.y < 0.4f && move.ReadValue<Vector2>().y > 0)
         {
-            transform.position = Vector3.Lerp(transform.position, target, step);
+            var newTarget = target + transform.TransformDirection(stairOffset);
+            transform.position = Vector3.Lerp(transform.position, newTarget, step);
+
+            // Draw a point at newTarget's position
+            Debug.DrawLine(newTarget, newTarget + Vector3.up * 0.1f, Color.red, 2f); // Adjust the Vector3.up * 0.1f to control the size of the point
+
             Debug.Log(step);
         }
-        
+
     }
     public void checkGround()
     {
         Vector3 origin = transform.TransformPoint(GroundcheckOrigin);
-        // Perform a raycast
+        // Perform a raycast with a LayerMask
         RaycastHit hit;
         Ray ray = new Ray(origin, Vector3.down);
-        
-        if (Physics.Raycast(ray, out hit, GroundcheckLength))
+
+        if (Physics.Raycast(ray, out hit, GroundcheckLength, excludedLayers, QueryTriggerInteraction.Ignore))
         {
-            // Calculate the angle between the hit normal and the up vector (90 degrees is a flat surface)
-            angle = Vector3.Angle(hit.normal, Vector3.up);
-            anim.SetBool("Grounded", true);
-            if (Mathf.Abs(angle) <= 35 && hit.point.y - transform.position.y >= 0.1f)
+            if (hit.collider.gameObject != gameObject && hit.collider.isTrigger == false)
             {
-                Stairs(hit.point);
-            }
+                Debug.Log(hit.collider.name + ": " + hit.collider.gameObject.name);
+                // Calculate the angle between the hit normal and the up vector (90 degrees is a flat surface)
+                angle = Vector3.Angle(hit.normal, Vector3.up);
+                anim.SetBool("Grounded", true);
+                if (Mathf.Abs(angle) <= 35 && hit.point.y - transform.position.y >= 0.1f)
+                {
+                    Stairs(hit.point);
+                }
                 // Log the angle as a warning
-                //Debug.LogWarning("Surface angle: " + angle + " degrees");
+                // Debug.LogWarning("Surface angle: " + angle + " degrees");
 
                 // If the raycast hits something, you can handle it here
                 // Debug.Log("Ground detected at distance: " + hit.distance);
-               
+            }
         }
         else
         {
             anim.SetBool("Grounded", false);
             // If no hit is detected
-            //Debug.Log("No ground detected");
+            // Debug.Log("No ground detected");
         }
-        
+
         // Draw the raycast line for visualization in the Scene view
         Debug.DrawRay(origin, Vector3.down * GroundcheckLength, Color.red);
     }

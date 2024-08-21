@@ -24,12 +24,31 @@ public class StairClimb : MonoBehaviour
 
     private void FixedUpdate()
     {
-        var moveDirection = transform.TransformDirection(new Vector3(pm.move.ReadValue<Vector2>().x, 0, pm.move.ReadValue<Vector2>().y));
+        // Calculate the initial moveDirection based on the input
+        Vector3 moveDirection = transform.TransformDirection(new Vector3(pm.move.ReadValue<Vector2>().x, 0, pm.move.ReadValue<Vector2>().y));
 
-        
-        if(pm.move.IsPressed() && StepClimb(moveDirection, upperOffset.y) && StepClimb(moveDirection, upperOffset.y*2 && StepClimb(moveDirection, upperOffset.y*3)) && StepClimb(moveDirection, upperOffset.y*4) && StepClimb(moveDirection, upperOffset.y*5))
+        // Calculate the right diagonal direction (45 degrees to the right of moveDirection)
+        Vector3 rightDiagonal = Quaternion.Euler(0, 45, 0) * moveDirection;
+
+        // Calculate the left diagonal direction (45 degrees to the left of moveDirection)
+        Vector3 leftDiagonal = Quaternion.Euler(0, -45, 0) * moveDirection;
+
+
+
+        if (CheckRays(moveDirection) || CheckRays(rightDiagonal) || CheckRays(leftDiagonal))
         {       
             ClimbStep();
+        }
+    }
+    public bool CheckRays(Vector3 moveDirection)
+    {
+        if (pm.move.IsPressed() && StepClimb(moveDirection, upperOffset.y) && StepClimb(moveDirection, upperOffset.y * 2) && StepClimb(moveDirection, upperOffset.y * 3) && StepClimb(moveDirection, upperOffset.y * 4) && StepClimb(moveDirection, upperOffset.y * 5))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
@@ -60,18 +79,18 @@ public class StairClimb : MonoBehaviour
                 //rigidBody.linearVelocity = Physics.gravity;
             }
         }
-
+        return false;
     }
     public void WallPushback(RaycastHit hit, Ray ray)
     {
         rigidBody.position = rigidBody.position - ((hit.point - ray.origin) * bounceBackMultiplier);
-        pm.velocity = new Vector3(0, pm.velocity.y, 0) + Physics.gravity * bounceBackMultiplier;
+        
+        pm.velocity = new Vector3(0, pm.velocity.y, 0) + (Physics.gravity * bounceBackMultiplier);
         rigidBody.linearVelocity = pm.velocity;
     }
     public void ClimbStep()
     {
-        if (!moving)
-        { return; }
+        
         rigidBody.position += new Vector3(0f, stepSmooth * Time.deltaTime, 0f);
     }
 }

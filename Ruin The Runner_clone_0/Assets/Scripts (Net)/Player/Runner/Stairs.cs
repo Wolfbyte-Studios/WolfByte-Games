@@ -26,16 +26,20 @@ public class StairClimb : MonoBehaviour
     {
         var moveDirection = transform.TransformDirection(new Vector3(pm.move.ReadValue<Vector2>().x, 0, pm.move.ReadValue<Vector2>().y));
 
-        StepClimb(moveDirection);
+        
+        if(pm.move.IsPressed() && StepClimb(moveDirection, upperOffset.y) && StepClimb(moveDirection, upperOffset.y*2 && StepClimb(moveDirection, upperOffset.y*3)) && StepClimb(moveDirection, upperOffset.y*4) && StepClimb(moveDirection, upperOffset.y*5))
+        {       
+            ClimbStep();
+        }
     }
 
-    void StepClimb(Vector3 direction)
+    public bool StepClimb(Vector3 direction, float YOffset)
     {
        
         var moving = pm.move.IsPressed();
         RaycastHit hitLower;
         Ray ray1 = new Ray(transform.position + new Vector3(0, lowerOffset.y, lowerOffset.x), direction);
-        Ray ray2 = new Ray(transform.position + new Vector3(0, upperOffset.y, upperOffset.x), direction);
+        Ray ray2 = new Ray(transform.position + new Vector3(0, YOffset, upperOffset.x), direction);
         Debug.DrawLine(ray1.origin, ray1.origin + ray1.direction * maxDistance1, Color.green);
         Debug.DrawLine(ray2.origin, ray2.origin + ray2.direction * maxDistance2, Color.red);
         
@@ -46,61 +50,13 @@ public class StairClimb : MonoBehaviour
 
             if (!Physics.Raycast(ray2, out hitUpper, maxDistance2, layerMask, QueryTriggerInteraction.Ignore))
             {
-                if (!moving)
-                { return; }
-                rigidBody.position += new Vector3(0f, stepSmooth * Time.deltaTime, 0f);
-                var ray3 = new Ray(transform.position + new Vector3(0, upperOffset.y * 2, upperOffset.x), direction);
-                Debug.DrawLine(ray3.origin, ray3.origin + ray3.direction * maxDistance2, Color.red);
-                if (!Physics.Raycast(ray3, out hitUpper, maxDistance2, layerMask, QueryTriggerInteraction.Ignore))
-                {
-                    if (!moving)
-                    { return; }
-                    rigidBody.position += new Vector3(0f, stepSmooth * Time.deltaTime, 0f);
-
-                    var ray4 = new Ray(transform.position + new Vector3(0, upperOffset.y * 3, upperOffset.x), direction);
-                    Debug.DrawLine(ray4.origin, ray4.origin + ray4.direction * maxDistance2, Color.red);
-                    if (!Physics.Raycast(ray4, out hitUpper, maxDistance2, layerMask, QueryTriggerInteraction.Ignore))
-                    {
-                        if (!moving)
-                        { return; }
-                        rigidBody.position += new Vector3(0f, stepSmooth * Time.deltaTime, 0f);
-
-                        var ray5 = new Ray(transform.position + new Vector3(0, upperOffset.y * 4, upperOffset.x), direction);
-                        Debug.DrawLine(ray5.origin, ray5.origin + ray5.direction * maxDistance2, Color.red);
-                        if (!Physics.Raycast(ray5, out hitUpper, maxDistance2, layerMask, QueryTriggerInteraction.Ignore))
-                        {
-                            if (!moving)
-                            { return; }
-                            rigidBody.position += new Vector3(0f, stepSmooth * Time.deltaTime, 0f);
-
-
-                        }
-                        else
-                        {
-                            WallPushback(hitUpper, ray5);
-                            return;
-                            //rigidBody.linearVelocity = Physics.gravity;
-                        }
-                    }
-                    else
-                    {
-                        WallPushback(hitUpper, ray4);
-                        return;
-                        //rigidBody.linearVelocity = Physics.gravity;
-                    }
-                }
-                else
-                {
-                    WallPushback(hitUpper, ray3);
-                    return;
-                    //rigidBody.linearVelocity = Physics.gravity;
-                }
-               
+                
+                return true;
             }
             else
             {
                 WallPushback(hitUpper, ray2);
-                return;
+                return false;
                 //rigidBody.linearVelocity = Physics.gravity;
             }
         }
@@ -111,5 +67,11 @@ public class StairClimb : MonoBehaviour
         rigidBody.position = rigidBody.position - ((hit.point - ray.origin) * bounceBackMultiplier);
         pm.velocity = new Vector3(0, pm.velocity.y, 0) + Physics.gravity * bounceBackMultiplier;
         rigidBody.linearVelocity = pm.velocity;
+    }
+    public void ClimbStep()
+    {
+        if (!moving)
+        { return; }
+        rigidBody.position += new Vector3(0f, stepSmooth * Time.deltaTime, 0f);
     }
 }

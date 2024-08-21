@@ -14,7 +14,7 @@ public class SteamNamePrinter : MonoBehaviour
 
         if (!SteamAPI.Init())
         {
-            //Debug.LogError("SteamAPI_Init() failed.");
+            ////Debug.LogError("SteamAPI_Init() failed.");
             return;
         }
 
@@ -25,8 +25,8 @@ public class SteamNamePrinter : MonoBehaviour
         ulong steamID64 = SteamUser.GetSteamID().m_SteamID;
 
         // Print the Steam name and SteamID64
-        Debug.Log("Steam Name: " + steamName);
-        Debug.Log("SteamID64: " + steamID64);
+        //Debug.Log("Steam Name: " + steamName);
+        //Debug.Log("SteamID64: " + steamID64);
     }
 
     private void OnDestroy()

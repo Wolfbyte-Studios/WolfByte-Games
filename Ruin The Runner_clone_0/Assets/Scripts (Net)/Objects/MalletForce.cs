@@ -22,7 +22,7 @@ public class MalletForce : NetworkBehaviour
     public void OnTriggerEnter(Collider other)
     {
         target = other.gameObject;
-        Debug.Log(target.name);
+        //Debug.Log(target.name);
     }
     public void addForceToObject()
     {

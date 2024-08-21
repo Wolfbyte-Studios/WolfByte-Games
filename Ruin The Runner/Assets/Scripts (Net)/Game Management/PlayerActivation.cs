@@ -23,7 +23,7 @@ public class PlayerActivation : NetworkBehaviour
     {
         isActive = newvalue;
         this.gameObject.SetActive(isActive);
-        Debug.Log("the active status of object " + gameObject.name + " should be " + isActive);
+        //Debug.Log("the active status of object " + gameObject.name + " should be " + isActive);
     }
     [ContextMenu("Refresh Players")]
     public void RefreshPlayers()

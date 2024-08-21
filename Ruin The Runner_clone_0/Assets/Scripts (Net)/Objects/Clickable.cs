@@ -78,7 +78,7 @@ public class Clickable : NetworkBehaviour
         foreach (Transform t in transform.GetComponentsInChildren<Transform>(true))
         {
             t.gameObject.layer = l;
-            Debug.Log(t.name + " is now on layer " + l);
+            //Debug.Log(t.name + " is now on layer " + l);
         }
 
         timeElapsed = Time.time - timeFired;
@@ -159,7 +159,7 @@ public class Clickable : NetworkBehaviour
                 }
             }
             timeFired = Time.time;
-            ////Debug.Log("Activation should happen");
+            //////Debug.Log("Activation should happen");
             placeholder = myEvent;
             NetworkUtils.RpcHandler(this, TriggerPlaceholder);
             if (ClicksCounted)

@@ -53,7 +53,7 @@ public class FitToWaterSurface : MonoBehaviour
                     }
                     else
                     {
-                        Debug.LogError("Can't Find Projected Position for " + obj.name);
+                        //Debug.LogError("Can't Find Projected Position for " + obj.name);
                     }
                 }
             }

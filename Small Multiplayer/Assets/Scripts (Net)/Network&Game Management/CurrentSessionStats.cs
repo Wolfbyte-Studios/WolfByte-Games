@@ -156,15 +156,15 @@ public class CurrentSessionStats : NetworkBehaviour
                 if (!playersList.Contains(p))
                 {
                     playersList.Add(p);
-                    //Debug.Log($"Added player {name} with netId {playerObj.netId} to playersList.");
+                    ////Debug.Log($"Added player {name} with netId {playerObj.netId} to playersList.");
                 }
             }
             else
             {
-               // Debug.LogWarning($"PlayerObject for netId {playerObj.netId} does not have a NameTag component.");
+               // //Debug.LogWarning($"PlayerObject for netId {playerObj.netId} does not have a NameTag component.");
             }
         }
 
-        Debug.Log($"Total players in list: {playersList.Count}");
+        //Debug.Log($"Total players in list: {playersList.Count}");
     }
 }

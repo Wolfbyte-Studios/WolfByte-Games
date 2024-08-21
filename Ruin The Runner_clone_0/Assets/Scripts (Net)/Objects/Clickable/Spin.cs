@@ -28,7 +28,7 @@ public class Spin : NetworkBehaviour
         {
             transform.Rotate(Vector3.up, spinSpeed * Time.deltaTime);
             rb.rotation = transform.rotation;
-            //Debug.Log($"Spinning with speed: {spinSpeed}");
+            ////Debug.Log($"Spinning with speed: {spinSpeed}");
         }
     }
 
@@ -43,7 +43,7 @@ public class Spin : NetworkBehaviour
     private void OverrideSpeedClientRpc(float newSpeed)
     {
         spinSpeed = newSpeed;
-        //Debug.Log($"Speed overridden to: {spinSpeed}");
+        ////Debug.Log($"Speed overridden to: {spinSpeed}");
     }
 
     public void OverrideSpeed(float speed)
@@ -65,7 +65,7 @@ public class Spin : NetworkBehaviour
     private void ResetSpeedClientRpc(float newSpeed)
     {
         spinSpeed = newSpeed;
-        //Debug.Log($"Speed reset to: {spinSpeed}");
+        ////Debug.Log($"Speed reset to: {spinSpeed}");
     }
 
     public void Reset()

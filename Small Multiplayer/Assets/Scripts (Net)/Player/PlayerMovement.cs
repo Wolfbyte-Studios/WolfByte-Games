@@ -136,7 +136,7 @@ public class PlayerMovement : NetworkBehaviour
         if (CanFly)
         {
             OnFly(-FlyForce);
-            ////Debug.Log("Go down");
+            //////Debug.Log("Go down");
             return;
         }
 
@@ -185,7 +185,7 @@ public class PlayerMovement : NetworkBehaviour
             return;
         }
         FaceCamera();
-        Debug.Log(this.gameObject.name + " is the one running this script!");
+        //Debug.Log(this.gameObject.name + " is the one running this script!");
         if (move.IsPressed())
         {
             OnMove();

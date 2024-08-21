@@ -96,7 +96,7 @@ public class PlayerMovement : NetworkBehaviour
 
         if (playerInput != null)
         {
-            //Debug.log("Setup part 1 success");
+            ////Debug.Log("Setup part 1 success");
             actions = playerInput.actions; // Get the actions from the PlayerInput component
             move = actions.FindAction("Move");
             menu = actions.FindAction("Menu");
@@ -126,7 +126,7 @@ public class PlayerMovement : NetworkBehaviour
         else if (PlayerType == playertype.Runner)
         {
             playerCam.gameObject.GetComponent<Camera>().cullingMask = -1;
-            //Debug.log("Setup part 2 success");
+            ////Debug.Log("Setup part 2 success");
             Mallet = this.gameObject.transform.FindDeepChild("mallet").gameObject;
             Mallet.SetActive(false);
             //playerCam.gameObject.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(0, 1.75f, 0);
@@ -199,7 +199,7 @@ public class PlayerMovement : NetworkBehaviour
     {
         var cursorVis = !Cursor.visible;
         CursorFree(cursorVis);
-        //Debug.log("The cursor was " + Cursor.visible + " and now it is " + cursorVis);
+        ////Debug.Log("The cursor was " + Cursor.visible + " and now it is " + cursorVis);
 
     }
     public void CursorFree(bool tru)
@@ -233,7 +233,7 @@ public class PlayerMovement : NetworkBehaviour
         {
             FlyForce = -Math.Abs(FlyForce);
             NetworkUtils.RpcHandler(this, OnFly);
-            //////Debug.log("Go down");
+            ////////Debug.Log("Go down");
             return;
         }
 
@@ -308,7 +308,7 @@ public class PlayerMovement : NetworkBehaviour
 
                 velocity = direction * magnitude;
                 rb.linearVelocity = direction * magnitude;
-                Debug.LogWarning(direction * magnitude);
+                //Debug.LogWarning(direction * magnitude);
             }
         }
         else if (lastCollided.gameObject.name == "mallet")
@@ -325,41 +325,12 @@ public class PlayerMovement : NetworkBehaviour
             }
         }
     }
-    public Vector3 stairOffset;
-    public void Stairs(Vector3 target)
-    {
-        if (!move.IsPressed())
-        {
-            return;
-        }
-
-        // Calculate the direction to move
-        Vector3 moveDirection = target - transform.position;
-        moveDirection.y = 0; // Ignore vertical movement
-
-        // Normalize the direction vector
-        moveDirection.Normalize();
-
-        // Calculate the distance to the target
-        float distanceToTarget = Vector3.Distance(transform.position, target);
-
-        // Check if the player is close enough to the target to start moving upwards
-        if (distanceToTarget <= 0.1f)
-        {
-            // Move the player upwards
-            moveDirection.y = 1; // Adjust the value as needed for the desired upward movement speed
-        }
-
-        // Apply the movement force to the Rigidbody
-        rb.AddForce(moveDirection * moveSpeed * stairSpeed);
-    }
+    
     public LayerMask excludedLayers;
     public Vector3 GroundcheckOrigin;
     public float GroundcheckLength;
-    [SerializeField]
-    private float angle;
-    public Vector3 StaircheckOrigin;
-    public float stairSpeed;
+    public float angle;
+   
     public void checkGround()
     {
         Vector3 origin = transform.TransformPoint(GroundcheckOrigin);
@@ -371,34 +342,25 @@ public class PlayerMovement : NetworkBehaviour
         {
            
                 // Calculate the angle between the hit normal and the up vector (90 degrees is a flat surface)
-               
-                anim.SetBool("Grounded", true);
+               angle = Vector3.Angle(hit.normal, Vector3.up);
+            anim.SetBool("Grounded", true);
                 
                 // Log the angle as a warning
-                // Debug.LogWarning("Surface angle: " + angle + " degrees");
+                // //Debug.LogWarning("Surface angle: " + angle + " degrees");
 
                 // If the raycast hits something, you can handle it here
-                // Debug.Log("Ground detected at distance: " + hit.distance);
+                // //Debug.Log("Ground detected at distance: " + hit.distance);
             
         }
         else
         {
             anim.SetBool("Grounded", false);
             // If no hit is detected
-            // Debug.Log("No ground detected");
+            // //Debug.Log("No ground detected");
         }
-        ray = new Ray(transform.TransformPoint(StaircheckOrigin), Vector3.down);
-        if (Physics.Raycast(ray, out hit, GroundcheckLength, excludedLayers, QueryTriggerInteraction.Ignore))
-        {
-            angle = Vector3.Angle(hit.normal, Vector3.up);
-            if (Mathf.Abs(angle) <= 35 && hit.point.y - transform.position.y >= 0.1f)
-            {
-                Stairs(hit.point);
-            }
-        }
+       
         // Draw the raycast line for visualization in the Scene view
         Debug.DrawRay(origin, Vector3.down * GroundcheckLength, Color.red);
-        Debug.DrawRay(transform.TransformPoint(StaircheckOrigin), Vector3.down * GroundcheckLength, Color.blue);
     }
 
     public void FixedUpdate()
@@ -412,10 +374,10 @@ public class PlayerMovement : NetworkBehaviour
             return;
         }
         FaceCamera();
-        //Debug.log(this.gameObject.name + " is the one running this script!");
+        ////Debug.Log(this.gameObject.name + " is the one running this script!");
         if (move.IsPressed())
         {
-            //Debug.log("Moving success");
+            ////Debug.Log("Moving success");
             NetworkUtils.RpcHandler(this, OnMove);
             var v = move.ReadValue<Vector2>();
             anim.SetFloat("Forward", v.y * velocity.magnitude);
@@ -442,7 +404,7 @@ public class PlayerMovement : NetworkBehaviour
         }
         if (jump.WasPerformedThisFrame())
         {
-            //Debug.log("Jump success");
+            ////Debug.Log("Jump success");
             OnJump();
         }
         rb.linearVelocity = velocity;
@@ -480,7 +442,7 @@ public class PlayerMovement : NetworkBehaviour
                 // Your logic here
             }
         }
-        //Debug.log("respawned");
+        ////Debug.Log("respawned");
     }
     public void slowVelocity()
     {
@@ -500,7 +462,7 @@ public class PlayerMovement : NetworkBehaviour
     }
     public void OnMove()
     {
-        //Debug.log("Moving");
+        ////Debug.Log("Moving");
         var v = move.ReadValue<Vector2>();
         if (PlayerType == playertype.Runner)
         {

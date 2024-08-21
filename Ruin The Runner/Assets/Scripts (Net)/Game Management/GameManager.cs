@@ -59,7 +59,7 @@ public class GameManager : NetworkBehaviour
     }
     public void updateCount(int oldvalue, int newvalue)
     {
-        Debug.Log("Player count has changed!");
+        //Debug.Log("Player count has changed!");
         NetworkUtils.RpcHandler(this, RotatePlayers);
     }
     // Update is called once per frame
@@ -123,7 +123,7 @@ public class GameManager : NetworkBehaviour
             }
             var script = playerObj?.GetComponent<PlayerIdentity>();
             NetworkUtils.RpcHandler(this , script.RefreshPlayers);
-            Debug.Log(playerObj.name);
+            //Debug.Log(playerObj.name);
         }
     }
     [ContextMenu("Rotate debug")]
@@ -143,7 +143,7 @@ public class GameManager : NetworkBehaviour
 
             var sab = p.transform.FindDeepChild("Sab").gameObject;
             var Runner = p.transform.FindDeepChild("Runner").gameObject;
-            Debug.Log(Runner.name);
+            //Debug.Log(Runner.name);
             sab.SetActive(!sab.activeSelf);
             Runner.SetActive(!Runner.activeSelf);
         }

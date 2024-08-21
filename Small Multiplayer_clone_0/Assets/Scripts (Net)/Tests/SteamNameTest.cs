@@ -14,7 +14,7 @@ public class SteamNamePrinter : MonoBehaviour
 
         if (!SteamAPI.Init())
         {
-            //Debug.LogError("SteamAPI_Init() failed.");
+            ////Debug.LogError("SteamAPI_Init() failed.");
             return;
         }
 
@@ -22,7 +22,7 @@ public class SteamNamePrinter : MonoBehaviour
         string steamName = SteamFriends.GetPersonaName();
 
         // Print the Steam name
-        Debug.Log("Steam Name: " + steamName);
+        //Debug.Log("Steam Name: " + steamName);
     }
 
     private void OnDestroy()

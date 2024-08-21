@@ -89,7 +89,7 @@ public class PlayerNetworkIndex : NetworkBehaviour
         {
            
             localId = connectionToClient.connectionId;
-            Debug.Log(connectionToClient.connectionId + " Is my ID");
+            //Debug.Log(connectionToClient.connectionId + " Is my ID");
         }
         switch (PlayerType)
         {

@@ -48,7 +48,7 @@ public class JoinAndHost : MonoBehaviour
             transport.SetConnectionData("0.0.0.0", ushort.Parse(port.text));
         }
 
-        //Debug.Log(ip.text + " " + port.text);
+        ////Debug.Log(ip.text + " " + port.text);
         NetworkManager.Singleton.StartHost();
     }
 
@@ -70,14 +70,14 @@ public class JoinAndHost : MonoBehaviour
         string friendName = steamUsername.text;
         if (!SteamManager.Initialized)
         {
-            //Debug.LogError("Steam is not initialized.");
+            ////Debug.LogError("Steam is not initialized.");
             return;
         }
 
         CSteamID friendSteamID = GetFriendSteamID(friendName);
         if (friendSteamID == CSteamID.Nil)
         {
-            //Debug.LogError("Friend not found on Steam.");
+            ////Debug.LogError("Friend not found on Steam.");
             return;
         }
 
@@ -86,14 +86,14 @@ public class JoinAndHost : MonoBehaviour
         if (ipAddr.IsIPv4())
         {
             string friendIP = ipAddr.ToString();
-            //Debug.Log("Friend's IP: " + friendIP);
+            ////Debug.Log("Friend's IP: " + friendIP);
 
             transport.SetConnectionData(friendIP, ushort.Parse(port.text));
             NetworkManager.Singleton.StartClient();
         }
         else
         {
-            //Debug.LogError("Failed to get IP address from Steam.");
+            ////Debug.LogError("Failed to get IP address from Steam.");
         }
     }
 

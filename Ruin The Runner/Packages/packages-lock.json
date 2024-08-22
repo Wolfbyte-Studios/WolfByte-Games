@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.cratesmith.assetui": {
+      "version": "https://github.com/Cratesmith/Cratesmith.AssetUI.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "cfcde2d6cc694e631290a7110c9bf26ce2452f66"
+    },
     "com.heathen.steamworkscomplete": {
       "version": "file:com.heathen.steamworkscomplete",
       "depth": 0,
@@ -66,8 +73,8 @@
       "source": "registry",
       "dependencies": {
         "com.unity.burst": "1.8.13",
-        "com.unity.test-framework": "1.4.3",
         "com.unity.nuget.mono-cecil": "1.11.4",
+        "com.unity.test-framework": "1.4.3",
         "com.unity.test-framework.performance": "3.0.3"
       },
       "url": "https://packages.unity.com"
@@ -169,9 +176,9 @@
       "source": "registry",
       "dependencies": {
         "com.unity.shadergraph": "17.0.2",
-        "com.unity.modules.imgui": "1.0.0",
+        "com.unity.settings-manager": "1.0.3",
         "com.unity.modules.physics": "1.0.0",
-        "com.unity.settings-manager": "1.0.3"
+        "com.unity.modules.imgui": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -263,9 +270,9 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.ugui": "1.0.0",
+        "com.unity.settings-manager": "1.0.3",
         "com.unity.mathematics": "1.2.1",
-        "com.unity.settings-manager": "1.0.3"
+        "com.unity.ugui": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -305,9 +312,9 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.director": "1.0.0",
         "com.unity.modules.animation": "1.0.0",
+        "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0"
       },
       "url": "https://packages.unity.com"

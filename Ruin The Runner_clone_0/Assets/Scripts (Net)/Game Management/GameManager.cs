@@ -2,6 +2,7 @@ using UnityEngine;
 using Mirror;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(NetworkIdentity))]
 public class GameManager : NetworkBehaviour
@@ -35,8 +36,16 @@ public class GameManager : NetworkBehaviour
 
 
         singleton = this;
-        
+        SceneManager.activeSceneChanged += OnSceneChange;
 
+
+    }
+
+    private void OnSceneChange(Scene arg0, Scene arg1)
+    {
+
+        poopList.Clear();
+        //throw new System.NotImplementedException();
     }
 
     private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
@@ -44,6 +53,7 @@ public class GameManager : NetworkBehaviour
         respawnAllPlayers(false);
         //throw new System.NotImplementedException();
     }
+    
 
     public override void OnStartClient()
     {

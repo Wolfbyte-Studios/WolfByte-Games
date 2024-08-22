@@ -14,6 +14,8 @@ public class StairClimb : MonoBehaviour
     [SerializeField] float stepSmooth = .1f;
     public float bounceBackMultiplier = 1f;
     PlayerMovement pm;
+    public List<string> AcceptedTagsForClimb = new List<string>() { "Ladder", "Climbable"};
+    string tagOfPotentialClimbable;
 
     private void Awake()
     {
@@ -54,6 +56,7 @@ public class StairClimb : MonoBehaviour
 
     public bool StepClimb(Vector3 direction, float YOffset)
     {
+        tagOfPotentialClimbable = "";
        
         var moving = pm.move.IsPressed();
         RaycastHit hitLower;
@@ -65,7 +68,12 @@ public class StairClimb : MonoBehaviour
         if (Physics.Raycast(ray1, out hitLower, maxDistance1, layerMask, QueryTriggerInteraction.Ignore))
         {
             RaycastHit hitUpper;
-
+            if(AcceptedTagsForClimb.Contains(hitLower.collider.gameObject.tag))
+            {
+                tagOfPotentialClimbable = hitLower.collider.gameObject.tag;
+                Debug.Log(tagOfPotentialClimbable);
+                return true;
+            }
 
             if (!Physics.Raycast(ray2, out hitUpper, maxDistance2, layerMask, QueryTriggerInteraction.Ignore))
             {
@@ -74,11 +82,18 @@ public class StairClimb : MonoBehaviour
             }
             else
             {
+                if (AcceptedTagsForClimb.Contains(hitUpper.collider.gameObject.tag))
+                {
+                    tagOfPotentialClimbable = hitLower.collider.gameObject.tag;
+                    Debug.Log(tagOfPotentialClimbable);
+                    return true;
+                }
                 WallPushback(hitUpper, ray2);
                 return false;
                 //rigidBody.linearVelocity = Physics.gravity;
             }
         }
+        
         return false;
     }
     public void WallPushback(RaycastHit hit, Ray ray)
@@ -88,9 +103,14 @@ public class StairClimb : MonoBehaviour
         pm.velocity = new Vector3(0, pm.velocity.y, 0) + (Physics.gravity * bounceBackMultiplier);
         rigidBody.linearVelocity = pm.velocity;
     }
+    public float ladderScale = 2;
     public void ClimbStep()
     {
-        
-        rigidBody.position += new Vector3(0f, stepSmooth * Time.deltaTime, 0f);
+        var stepAmount = stepSmooth;
+        if(tagOfPotentialClimbable == "Ladder" || tagOfPotentialClimbable == "Climbable")
+        {
+            stepAmount = stepSmooth * ladderScale;
+        }
+        rigidBody.position += new Vector3(0f, stepAmount * Time.deltaTime, 0f);
     }
 }

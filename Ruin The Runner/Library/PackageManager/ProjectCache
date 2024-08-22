@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638589643975782333
-    m_Hash: 2028093586
+      ticks: 638599064325774425
+    m_Hash: 4171587927
   m_LockFileStatus:
     m_FilePath: C:/Users/user1/3d zeldaish/Ruin The Runner/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638597847648863130
-    m_Hash: 4163477450
+      ticks: 638599064325809498
+    m_Hash: 3027138949
 m_EmbeddedPackageManifests:
   m_ManifestsStatus:
     C:/Users/user1/3d zeldaish/Ruin The Runner/Packages/com.merry-yellow.code-assist/package.json:
@@ -38,6 +38,71 @@ m_LocalPackages:
 m_ProjectPath: C:/Users/user1/3d zeldaish/Ruin The Runner/Packages
 m_EditorVersion: 6000.0.5f1 (17028576122a)
 m_ResolvedPackages:
+- packageId: com.cratesmith.assetui@https://github.com/Cratesmith/Cratesmith.AssetUI.git
+  testable: 0
+  isDirectDependency: 1
+  version: 0.1.1
+  source: 5
+  resolvedPath: C:\Users\user1\3d zeldaish\Ruin The Runner\Library\PackageCache\com.cratesmith.assetui
+  assetPath: Packages/com.cratesmith.assetui
+  name: com.cratesmith.assetui
+  displayName: Cratesmith.AssetUI
+  author:
+    name: Kieran Lord
+    email: cratesmith@cratesmith.com
+    url: https://github.com/cratesmith
+  category: 
+  type: 
+  description: Popout Inspector and ScriptableObject aware default object reference
+    PropertyDrawer
+  errors: []
+  versions:
+    all: []
+    compatible: []
+    recommended: 
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: https://github.com/Cratesmith/Cratesmith.AssetUI
+  hasRepository: 1
+  repository:
+    type: git
+    url: git+https://github.com/Cratesmith/Cratesmith.AssetUI.git
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: cfcde2d6cc694e631290a7110c9bf26ce2452f66
+    revision: HEAD
+  upmReserved: 
+  assetStore:
+    productId: 
+  fingerprint: cfcde2d6cc694e631290a7110c9bf26ce2452f66
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 
+    minimumUnityVersion: 2021.1.0a1
 - packageId: com.heathen.systemcore@https://github.com/heathen-engineering/SystemCore.git?path=/com.heathen.systemcore
   testable: 0
   isDirectDependency: 1
@@ -259,8 +324,8 @@ m_ResolvedPackages:
     name: 
     email: 
     url: 
-  category: 
-  type: 
+  category: cinematography
+  type: assets
   description: "Smart camera tools for passionate creators. \n\nCinemachine 3 is
     a newer and better version of Cinemachine, but upgrading an existing project
     from 2.X will likely require some effort.  If you're considering upgrading an
@@ -358,7 +423,7 @@ m_ResolvedPackages:
     - 3.0.1
     - 3.1.0
     - 3.1.1
-    recommended: 2.10.1
+    recommended: 3.1.1
     deprecated: []
   dependencies:
   - name: com.unity.splines
@@ -366,16 +431,16 @@ m_ResolvedPackages:
   resolvedDependencies:
   - name: com.unity.splines
     version: 2.6.1
+  - name: com.unity.settings-manager
+    version: 2.0.1
+  - name: com.unity.mathematics
+    version: 1.3.2
   - name: com.unity.ugui
     version: 2.0.0
   - name: com.unity.modules.ui
     version: 1.0.0
   - name: com.unity.modules.imgui
     version: 1.0.0
-  - name: com.unity.mathematics
-    version: 1.3.2
-  - name: com.unity.settings-manager
-    version: 2.0.1
   keywords:
   - camera
   - follow
@@ -422,7 +487,7 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 2.10.0
     nextVersion: 3.0.0-pre.3
-    recommendedVersion: 
+    recommendedVersion: 3.1.0
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
@@ -467,8 +532,8 @@ m_ResolvedPackages:
     name: 
     email: 
     url: 
-  category: 
-  type: 
+  category: Editor
+  type: assets
   description: The package gives you the ability to use Unity Version Control in
     the Unity editor. To use Unity Version Control, a subscription is required. Learn
     more about how you can get started for free by visiting https://unity.com/solutions/version-control
@@ -726,7 +791,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: assets
   description: A new input system which can be used as a more extensible and customizable
     alternative to Unity's classic input system in UnityEngine.Input.
   errors: []
@@ -885,7 +950,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: assets
   description: The Memory Profiler offers a unified solution allowing you to profile
     both small projects on mobile devices and big AAA projects on high end machines.
     It provides actionable information about allocations in the engine to allow developers
@@ -1008,7 +1073,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: library
   description: 'Newtonsoft Json for use in Unity projects and Unity packages. Currently
     synced to version 13.0.2.
 
@@ -1099,7 +1164,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: assets
   description: 'Build, edit, and texture custom geometry in Unity. Use ProBuilder
     for in-scene level design, prototyping, collision meshes, all with on-the-fly
     play-testing.
@@ -1167,12 +1232,12 @@ m_ResolvedPackages:
   dependencies:
   - name: com.unity.shadergraph
     version: 17.0.2
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  - name: com.unity.modules.physics
-    version: 1.0.0
   - name: com.unity.settings-manager
     version: 1.0.3
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
   resolvedDependencies:
   - name: com.unity.shadergraph
     version: 17.0.3
@@ -1192,12 +1257,12 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.collections
     version: 2.4.1
+  - name: com.unity.nuget.mono-cecil
+    version: 1.11.4
   - name: com.unity.test-framework
     version: 1.4.4
   - name: com.unity.ext.nunit
     version: 2.0.5
-  - name: com.unity.nuget.mono-cecil
-    version: 1.11.4
   - name: com.unity.test-framework.performance
     version: 3.0.3
   - name: com.unity.modules.physics
@@ -1284,7 +1349,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: The Unity Profiling Core package provides an API for code instrumentation
     markup, and for profiling statistic collection.
   errors: []
@@ -1513,12 +1578,12 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.collections
     version: 2.4.1
+  - name: com.unity.nuget.mono-cecil
+    version: 1.11.4
   - name: com.unity.test-framework
     version: 1.4.4
   - name: com.unity.ext.nunit
     version: 2.0.5
-  - name: com.unity.nuget.mono-cecil
-    version: 1.11.4
   - name: com.unity.test-framework.performance
     version: 3.0.3
   - name: com.unity.modules.physics
@@ -1664,7 +1729,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: assets
   description: Use Unity Timeline to create cinematic content, game-play sequences,
     audio sequences, and complex particle effects.
   errors: []
@@ -1762,18 +1827,18 @@ m_ResolvedPackages:
     recommended: 1.8.7
     deprecated: []
   dependencies:
-  - name: com.unity.modules.audio
-    version: 1.0.0
   - name: com.unity.modules.director
     version: 1.0.0
   - name: com.unity.modules.animation
     version: 1.0.0
+  - name: com.unity.modules.audio
+    version: 1.0.0
   - name: com.unity.modules.particlesystem
     version: 1.0.0
   resolvedDependencies:
-  - name: com.unity.modules.audio
-    version: 1.0.0
   - name: com.unity.modules.director
+    version: 1.0.0
+  - name: com.unity.modules.audio
     version: 1.0.0
   - name: com.unity.modules.animation
     version: 1.0.0
@@ -1845,7 +1910,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: tool
   description: 'Visual scripting is a workflow that uses visual, node-based graphs
     to design behaviors rather than write lines of C# script.
 
@@ -4765,12 +4830,12 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.collections
     version: 2.4.1
+  - name: com.unity.nuget.mono-cecil
+    version: 1.11.4
   - name: com.unity.test-framework
     version: 1.4.4
   - name: com.unity.ext.nunit
     version: 2.0.5
-  - name: com.unity.nuget.mono-cecil
-    version: 1.11.4
   - name: com.unity.test-framework.performance
     version: 3.0.3
   - name: com.unity.modules.physics
@@ -4966,12 +5031,12 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.collections
     version: 2.4.1
+  - name: com.unity.nuget.mono-cecil
+    version: 1.11.4
   - name: com.unity.test-framework
     version: 1.4.4
   - name: com.unity.ext.nunit
     version: 2.0.5
-  - name: com.unity.nuget.mono-cecil
-    version: 1.11.4
   - name: com.unity.test-framework.performance
     version: 3.0.3
   - name: com.unity.modules.physics
@@ -5140,12 +5205,12 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.collections
     version: 2.4.1
+  - name: com.unity.nuget.mono-cecil
+    version: 1.11.4
   - name: com.unity.test-framework
     version: 1.4.4
   - name: com.unity.ext.nunit
     version: 2.0.5
-  - name: com.unity.nuget.mono-cecil
-    version: 1.11.4
   - name: com.unity.test-framework.performance
     version: 3.0.3
   - name: com.unity.modules.physics
@@ -5290,12 +5355,12 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.collections
     version: 2.4.1
+  - name: com.unity.nuget.mono-cecil
+    version: 1.11.4
   - name: com.unity.test-framework
     version: 1.4.4
   - name: com.unity.ext.nunit
     version: 2.0.5
-  - name: com.unity.nuget.mono-cecil
-    version: 1.11.4
   - name: com.unity.test-framework.performance
     version: 3.0.3
   - name: com.unity.modules.physics
@@ -5358,7 +5423,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: A framework for making any serializable field a setting, complete
     with a pre-built settings interface.
   errors: []
@@ -5432,7 +5497,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: 'The editor coroutines package allows developers to start constructs
     similar to Unity''s monobehaviour based coroutines within the editor using abitrary
     objects. '
@@ -5466,7 +5531,7 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   entitlements:
-    licensingModel: 1
+    licensingModel: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637232611380000000
   documentationUrl: 
@@ -5509,7 +5574,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: assets
   description: Code editor integration for supporting Visual Studio as code editor
     for unity. Adds support for generating csproj files for intellisense purposes,
     auto discovery of installations, etc.
@@ -5732,7 +5797,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: "The Profile Analyzer tool supports the standard Unity Profiler. You
     can use it to analyze multiple frames and multiple data sets of the CPU data
     in the Profiler.\n\nMain features: \n\u25AA Multi-frame analysis of a single
@@ -5815,8 +5880,8 @@ m_ResolvedPackages:
     name: 
     email: 
     url: 
-  category: 
-  type: 
+  category: Unity Test Framework
+  type: assets
   description: Test framework for running Edit mode and Play mode tests in Unity.
   errors: []
   versions:
@@ -5957,7 +6022,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: assets
   description: Use this package to export code coverage data and reports from your
     automated tests. Additionally, the Code Coverage package offers a Coverage Recording
     feature which allows capturing coverage data on demand, for manual testing or
@@ -6078,8 +6143,8 @@ m_ResolvedPackages:
     name: 
     email: 
     url: 
-  category: 
-  type: 
+  category: Tool
+  type: tool
   description: Work with curves and paths. Use the Splines package to generate objects
     and behaviors along paths, create trajectories, and draw shapes.
   errors: []
@@ -6109,23 +6174,23 @@ m_ResolvedPackages:
     recommended: 2.6.1
     deprecated: []
   dependencies:
-  - name: com.unity.ugui
-    version: 1.0.0
-  - name: com.unity.mathematics
-    version: 1.2.1
   - name: com.unity.settings-manager
     version: 1.0.3
+  - name: com.unity.mathematics
+    version: 1.2.1
+  - name: com.unity.ugui
+    version: 1.0.0
   resolvedDependencies:
+  - name: com.unity.settings-manager
+    version: 2.0.1
+  - name: com.unity.mathematics
+    version: 1.3.2
   - name: com.unity.ugui
     version: 2.0.0
   - name: com.unity.modules.ui
     version: 1.0.0
   - name: com.unity.modules.imgui
     version: 1.0.0
-  - name: com.unity.mathematics
-    version: 1.3.2
-  - name: com.unity.settings-manager
-    version: 2.0.1
   keywords:
   - spline
   - curve
@@ -6194,7 +6259,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: General search window for use in the Editor. First target use is for
     GraphView node search.
   errors: []
@@ -6278,7 +6343,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: assets
   description: Burst is a compiler that translates from IL/.NET bytecode to highly
     optimized native code using LLVM.
   errors: []
@@ -6490,7 +6555,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: assets
   description: Unity's C# SIMD math library providing vector types and math functions
     with a shader like syntax.
   errors: []
@@ -6580,7 +6645,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: assets
   description: A C# collections library providing data structures that can be used
     in jobs, and optimized by Burst compiler.
   errors: []
@@ -6667,10 +6732,10 @@ m_ResolvedPackages:
   dependencies:
   - name: com.unity.burst
     version: 1.8.13
-  - name: com.unity.test-framework
-    version: 1.4.3
   - name: com.unity.nuget.mono-cecil
     version: 1.11.4
+  - name: com.unity.test-framework
+    version: 1.4.3
   - name: com.unity.test-framework.performance
     version: 3.0.3
   resolvedDependencies:
@@ -6680,14 +6745,14 @@ m_ResolvedPackages:
     version: 1.3.2
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
+  - name: com.unity.nuget.mono-cecil
+    version: 1.11.4
   - name: com.unity.test-framework
     version: 1.4.4
   - name: com.unity.ext.nunit
     version: 2.0.5
   - name: com.unity.modules.imgui
     version: 1.0.0
-  - name: com.unity.nuget.mono-cecil
-    version: 1.11.4
   - name: com.unity.test-framework.performance
     version: 3.0.3
   keywords:
@@ -6775,14 +6840,14 @@ m_ResolvedPackages:
     version: 1.3.2
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
+  - name: com.unity.nuget.mono-cecil
+    version: 1.11.4
   - name: com.unity.test-framework
     version: 1.4.4
   - name: com.unity.ext.nunit
     version: 2.0.5
   - name: com.unity.modules.imgui
     version: 1.0.0
-  - name: com.unity.nuget.mono-cecil
-    version: 1.11.4
   - name: com.unity.test-framework.performance
     version: 3.0.3
   - name: com.unity.modules.terrain
@@ -6843,8 +6908,8 @@ m_ResolvedPackages:
     name: 
     email: 
     url: 
-  category: 
-  type: 
+  category: Libraries
+  type: assets
   description: A custom version of NUnit used by Unity Test Framework. Based on NUnit
     version 3.5 and works with all platforms, il2cpp and Mono AOT.
   errors: []
@@ -6923,7 +6988,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: library
   description: 'The mono cecil library from https://www.nuget.org/packages/Mono.Cecil/
 
 
@@ -7003,7 +7068,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: assets
   description: Package that extends Unity Test Framework package. Adds performance
     testing capabilities and collects configuration metadata.
   errors: []

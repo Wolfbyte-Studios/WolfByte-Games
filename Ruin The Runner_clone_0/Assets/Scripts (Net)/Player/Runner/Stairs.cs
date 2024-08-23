@@ -41,6 +41,7 @@ public class StairClimb : MonoBehaviour
         if (CheckRays(moveDirection) || CheckRays(rightDiagonal) || CheckRays(leftDiagonal))
         {
             ClimbStep();
+            pm.fg.enabled = false;
         }
         
     }

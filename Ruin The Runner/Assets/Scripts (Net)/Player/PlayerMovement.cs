@@ -135,6 +135,7 @@ public class PlayerMovement : NetworkBehaviour
             Fire.performed += Fire_performed;
             Secondary = actions.FindAction("Secondary");
             Secondary.performed += Secondary_performed;
+            fg = transform.GetComponentInChildren<FeetGrounder>(false);
         }
         playerCam.gameObject.GetComponent<CinemachineCamera>().Follow = this.followTarget;
 
@@ -334,8 +335,13 @@ public class PlayerMovement : NetworkBehaviour
     public Transform rightFoot;
     public Transform leftKnee;
     public Transform rightKnee;
+    public FeetGrounder fg;
     public void checkGround()
     {
+        if(fg != null   )
+        {
+            fg.enabled = false;
+        }
         Vector3 origin = transform.TransformPoint(GroundcheckOrigin);
         // Perform a raycast with a LayerMask
         RaycastHit lefthit;
@@ -377,9 +383,14 @@ public class PlayerMovement : NetworkBehaviour
         {
             anim.SetBool("Grounded", true);
         }
+        
         else
         {
             anim.SetBool("Grounded", false);
+        }
+        if (  l && r && !o)
+        {
+            fg.enabled = true;
         }
         // Draw the raycast line for visualization in the Scene view
         Debug.DrawRay(leftRay.origin, Vector3.down * GroundcheckLength, Color.red);

@@ -1640,8 +1640,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lowerOffset: {x: 0, y: 0.01}
   upperOffset: {x: 0, y: 0.45}
-  maxDistance1: 0.5
-  maxDistance2: 0.5
+  maxDistance1: 0.75
+  maxDistance2: 0.75
   stepHeight: 0.3
   stepSmooth: 3
   bounceBackMultiplier: 0.05
@@ -1705,8 +1705,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7834521376227375610}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1896219, y: 0.16, z: 13.036307}
+  m_LocalRotation: {x: 0.061145667, y: 0.76410735, z: -0.07323226, w: 0.63799554}
+  m_LocalPosition: {x: -2.4448447, y: 2.6725812, z: -3.959057}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2715,6 +2715,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 73403024e6777364d973b28d952400e0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8006560808862271080}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 73403024e6777364d973b28d952400e0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2900197387711954793}
     - targetCorrespondingSourceObject: {fileID: 1650635601388029877, guid: 73403024e6777364d973b28d952400e0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1517143046928610195}
@@ -3241,6 +3244,31 @@ CapsuleCollider:
   m_Height: 0.5
   m_Direction: 1
   m_Center: {x: 0, y: 0.25, z: 0}
+--- !u!114 &2900197387711954793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8308969824060933931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f73a6e6bab87c743b81b1b644e0a72c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableFeetIk: 1
+  heightFromGroundRaycast: 1.14
+  raycastDownDistance: 1.5
+  enviromentLayer:
+    serializedVersion: 2
+    m_Bits: 1879048247
+  pelvisOffset: 0
+  pelvisUpAndDownSpeed: 0.28
+  feetToIkPositionSpeed: 0.5
+  leftFootAnimVariableName: LeftFootCurve
+  rightFootAnimVariableName: RightFootCurve
+  useProIkFeature: 0
+  showSolverDebug: 1
 --- !u!1 &8346225927104527119 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 891094368648348021, guid: 73403024e6777364d973b28d952400e0, type: 3}

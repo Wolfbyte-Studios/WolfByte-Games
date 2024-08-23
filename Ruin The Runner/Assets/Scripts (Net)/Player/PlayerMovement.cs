@@ -330,36 +330,60 @@ public class PlayerMovement : NetworkBehaviour
     public Vector3 GroundcheckOrigin;
     public float GroundcheckLength;
     public float angle;
-   
+    public Transform leftFoot;
+    public Transform rightFoot;
+    public Transform leftKnee;
+    public Transform rightKnee;
     public void checkGround()
     {
         Vector3 origin = transform.TransformPoint(GroundcheckOrigin);
         // Perform a raycast with a LayerMask
-        RaycastHit hit;
+        RaycastHit lefthit;
+        RaycastHit righthit;
         Ray ray = new Ray(origin, Vector3.down);
+        Ray leftRay = new Ray(new Vector3(leftFoot.position.x,leftKnee.position.y, leftFoot.position.z), Vector3.down);
+        Ray rightRay = new Ray(new Vector3(rightFoot.position.x, rightKnee.position.y, rightFoot.position.z), Vector3.down);
+        float Rangle;
+        float Langle;
+        bool l = false;
+        bool r = false;
+        bool o = false;
         //Grounded Check
+        if (Physics.Raycast(leftRay, out lefthit, GroundcheckLength, excludedLayers, QueryTriggerInteraction.Ignore))
+        {
+            Langle = Vector3.Angle(lefthit.normal, Vector3.up);
+            l = true;
+        }
+        else
+        {
+            Langle = 0;
+        }
+        RaycastHit hit;
         if (Physics.Raycast(ray, out hit, GroundcheckLength, excludedLayers, QueryTriggerInteraction.Ignore))
         {
-           
-                // Calculate the angle between the hit normal and the up vector (90 degrees is a flat surface)
-               angle = Vector3.Angle(hit.normal, Vector3.up);
+            o = true;
+        }
+            if (Physics.Raycast(rightRay, out righthit, GroundcheckLength, excludedLayers, QueryTriggerInteraction.Ignore))
+        {
+            Rangle = Vector3.Angle(righthit.normal, Vector3.up);
+            r = true;
+        }
+        else
+        {
+            Rangle = 0;
+        }
+        angle = (Langle + Rangle) / 2;
+        if(l|| r || o)
+        {
             anim.SetBool("Grounded", true);
-                
-                // Log the angle as a warning
-                // //Debug.LogWarning("Surface angle: " + angle + " degrees");
-
-                // If the raycast hits something, you can handle it here
-                // //Debug.Log("Ground detected at distance: " + hit.distance);
-            
         }
         else
         {
             anim.SetBool("Grounded", false);
-            // If no hit is detected
-            // //Debug.Log("No ground detected");
         }
-       
         // Draw the raycast line for visualization in the Scene view
+        Debug.DrawRay(leftRay.origin, Vector3.down * GroundcheckLength, Color.red);
+        Debug.DrawRay(rightRay.origin, Vector3.down * GroundcheckLength, Color.red);
         Debug.DrawRay(origin, Vector3.down * GroundcheckLength, Color.red);
     }
 
@@ -407,6 +431,7 @@ public class PlayerMovement : NetworkBehaviour
             ////Debug.Log("Jump success");
             OnJump();
         }
+        anim.SetFloat("UpDown", velocity.y);
         rb.linearVelocity = velocity;
     }
     [ContextMenu("Respawn")]

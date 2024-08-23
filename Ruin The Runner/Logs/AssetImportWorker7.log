@@ -15,7 +15,7 @@ C:/Users/user1/3d zeldaish/Ruin The Runner
 -logFile
 Logs/AssetImportWorker7.log
 -srvPort
-54351
+50829
 -job-worker-count
 9
 -background-job-worker-count
@@ -59,20 +59,20 @@ C:/Users/user1/3d zeldaish/Ruin The Runner
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [376]  Target information:
+Player connection [26844]  Target information:
 
-Player connection [376]  * "[IP] 192.168.86.27 [Port] 0 [Flags] 2 [Guid] 1838744677 [EditorId] 1838744677 [Version] 1048832 [Id] WindowsEditor(7,MotherShip) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [26844]  * "[IP] 192.168.86.27 [Port] 0 [Flags] 2 [Guid] 3309449585 [EditorId] 3309449585 [Version] 1048832 [Id] WindowsEditor(7,MotherShip) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [376]  * "[IP] 25.13.96.105 [Port] 0 [Flags] 2 [Guid] 1838744677 [EditorId] 1838744677 [Version] 1048832 [Id] WindowsEditor(7,MotherShip) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [26844]  * "[IP] 25.13.96.105 [Port] 0 [Flags] 2 [Guid] 3309449585 [EditorId] 3309449585 [Version] 1048832 [Id] WindowsEditor(7,MotherShip) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [376]  * "[IP] 10.241.78.62 [Port] 0 [Flags] 2 [Guid] 1838744677 [EditorId] 1838744677 [Version] 1048832 [Id] WindowsEditor(7,MotherShip) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [26844]  * "[IP] 10.241.78.62 [Port] 0 [Flags] 2 [Guid] 3309449585 [EditorId] 3309449585 [Version] 1048832 [Id] WindowsEditor(7,MotherShip) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [376] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [376] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [26844] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [26844] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 9
 Library Redirect Path: Library/
 [PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-Refreshing native plugins compatible for Editor in 8.63 ms, found 9 plugins.
+Refreshing native plugins compatible for Editor in 7.76 ms, found 9 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.5f1 (17028576122a)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Resources/UnitySubsystems
@@ -89,43 +89,43 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56520
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56972
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002715 seconds.
-- Loaded All Assemblies, in  0.358 seconds
+Registered in 0.002335 seconds.
+- Loaded All Assemblies, in  0.357 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.399 seconds
-Domain Reload Profiling: 755ms
-	BeginReloadAssembly (125ms)
+- Finished resetting the current domain, in  0.358 seconds
+Domain Reload Profiling: 713ms
+	BeginReloadAssembly (124ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (36ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (50ms)
-	LoadAllAssembliesAndSetupDomain (134ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (143ms)
 		LoadAssemblies (122ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (132ms)
-			TypeCache.Refresh (130ms)
-				TypeCache.ScanAssembly (120ms)
+		AnalyzeDomain (142ms)
+			TypeCache.Refresh (140ms)
+				TypeCache.ScanAssembly (127ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (399ms)
+	FinalizeReload (359ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (343ms)
+		SetupLoadedEditorAssemblies (302ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (25ms)
+			InitializePlatformSupportModulesInManaged (22ms)
 			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (158ms)
-			ProcessInitializeOnLoadMethodAttributes (151ms)
+			BeforeProcessingInitializeOnLoad (5ms)
+			ProcessInitializeOnLoadAttributes (139ms)
+			ProcessInitializeOnLoadMethodAttributes (132ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -134,17 +134,17 @@ Domain Reload Profiling: 755ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.495 seconds
+- Loaded All Assemblies, in  1.216 seconds
 'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 5.48 ms, found 9 plugins.
+Refreshing native plugins compatible for Editor in 5.68 ms, found 9 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-Refreshing native plugins compatible for Editor in 5.28 ms, found 9 plugins.
+Refreshing native plugins compatible for Editor in 6.08 ms, found 9 plugins.
 [MODES] ModeService[none].Initialize
 [MODES] ModeService[none].LoadModes
 [MODES] Loading mode Default (0) for mode-current-id-Ruin The Runner
@@ -163,749 +163,103 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
 (Filename: Assets/Mirror/Editor/Welcome.cs Line: 18)
 
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.646 seconds
-Domain Reload Profiling: 3136ms
-	BeginReloadAssembly (372ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (35ms)
-	RebuildCommonClasses (33ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (43ms)
-	LoadAllAssembliesAndSetupDomain (1031ms)
-		LoadAssemblies (478ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (651ms)
-			TypeCache.Refresh (526ms)
-				TypeCache.ScanAssembly (496ms)
-			BuildScriptInfoCaches (105ms)
-			ResolveRequiredComponents (16ms)
-	FinalizeReload (1646ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1320ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (87ms)
-			ProcessInitializeOnLoadAttributes (652ms)
-			ProcessInitializeOnLoadMethodAttributes (569ms)
-			AfterProcessingInitializeOnLoad (5ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (7ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 5.50 ms, found 9 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 500 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 9099 unused Assets / (7.4 MB). Loaded Objects now: 10149.
-Memory consumption went from 310.7 MB to 303.3 MB.
-Total: 13.643800 ms (FindLiveObjects: 0.848500 ms CreateObjectMapping: 1.453100 ms MarkObjects: 7.176200 ms  DeleteObjects: 4.164800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 91443.686319 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry/Brick 1/Brick 1 Texture/Brick 1_Floor Bricke_Normal.png
-  artifactKey: Guid(ae61b1f88a053ac4d8042583e0a2bcd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry/Brick 1/Brick 1 Texture/Brick 1_Floor Bricke_Normal.png using Guid(ae61b1f88a053ac4d8042583e0a2bcd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '69271a3970a8ff42e0e5a35beaeb7ef6') in 0.072996 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/ATM/Textures/Dirty tile floor normal map.png
-  artifactKey: Guid(4e4def477a142d143918686f1d4db68e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Textures/Dirty tile floor normal map.png using Guid(4e4def477a142d143918686f1d4db68e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'fcc9fd68fd7a3b7fe34e3cf760783748') in 0.0196149 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry 2/Complete/Entry Texture/Entry 2_Big Woods_Normal.png
-  artifactKey: Guid(1e949919d434ae24ca4d8c5492609641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry 2/Complete/Entry Texture/Entry 2_Big Woods_Normal.png using Guid(1e949919d434ae24ca4d8c5492609641) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '8d2e1c5cd604dd5e385047bf68c98c46') in 0.0193259 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry 2/Complete/Entry Texture/Entry 2_Glass_Normal.png
-  artifactKey: Guid(7d3930b54cd24c243969988f3d7d0715) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry 2/Complete/Entry Texture/Entry 2_Glass_Normal.png using Guid(7d3930b54cd24c243969988f3d7d0715) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'c43100dc1969beb1832846b8f5c10135') in 0.0189878 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry 2/Entry 2 Modular FBX/CandleStick/CandleStick Textures/Entry 2 CandleStick_Emissiv_Normal.png
-  artifactKey: Guid(1be86252258ee0c48a160ea7cae486f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry 2/Entry 2 Modular FBX/CandleStick/CandleStick Textures/Entry 2 CandleStick_Emissiv_Normal.png using Guid(1be86252258ee0c48a160ea7cae486f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '9d52be754753a7adaa8c9ecc7b1999e5') in 0.0210084 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry 2/Entry 2 Modular FBX/Big Wood/Big Wood Textures/Entry 2 Big Wood_Big Woods_Normal.png
-  artifactKey: Guid(17f6dfbe7556d7548bd1528576141d15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry 2/Entry 2 Modular FBX/Big Wood/Big Wood Textures/Entry 2 Big Wood_Big Woods_Normal.png using Guid(17f6dfbe7556d7548bd1528576141d15) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '6083a5d8caa0c3cc6d480d84f8c4e856') in 0.0179211 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry 2/Complete/Entry Texture/Entry 2_Wall 4 Piece_Normal.png
-  artifactKey: Guid(be745f5d94205bb4cb98a01ebdf2ab3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry 2/Complete/Entry Texture/Entry 2_Wall 4 Piece_Normal.png using Guid(be745f5d94205bb4cb98a01ebdf2ab3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '726ee4d8aea9e237442319885cefa43a') in 0.0175552 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.239224 seconds.
-  path: Assets/ATM/Textures/095 1.mat
-  artifactKey: Guid(fa2d2af1c2fd5254f8716d956d2340fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Textures/095 1.mat using Guid(fa2d2af1c2fd5254f8716d956d2340fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '16a429af66b67c042c8049db68eb66cb') in 8.8254259 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Leak Detected : Persistent allocates 9 individual allocations. To find out more please enable 'Preferences > Jobs > Leak Detection Level > Enabled With Stack Trace' and reproduce the leak again.
-- Loaded All Assemblies, in  0.919 seconds
-'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 4.66 ms, found 9 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.128 seconds
-Domain Reload Profiling: 2047ms
-	BeginReloadAssembly (269ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (34ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (100ms)
-	RebuildCommonClasses (29ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (26ms)
-	LoadAllAssembliesAndSetupDomain (585ms)
-		LoadAssemblies (388ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (279ms)
-			TypeCache.Refresh (12ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (249ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (1128ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (766ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (80ms)
-			ProcessInitializeOnLoadAttributes (482ms)
-			ProcessInitializeOnLoadMethodAttributes (195ms)
-			AfterProcessingInitializeOnLoad (4ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (11ms)
-Refreshing native plugins compatible for Editor in 4.50 ms, found 9 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 31 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 9097 unused Assets / (6.9 MB). Loaded Objects now: 10286.
-Memory consumption went from 291.3 MB to 284.4 MB.
-Total: 9.545400 ms (FindLiveObjects: 0.670200 ms CreateObjectMapping: 0.650900 ms MarkObjects: 4.692300 ms  DeleteObjects: 3.530700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.786 seconds
-'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 5.55 ms, found 9 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.958 seconds
-Domain Reload Profiling: 1746ms
-	BeginReloadAssembly (187ms)
+- Finished resetting the current domain, in  1.395 seconds
+Domain Reload Profiling: 2606ms
+	BeginReloadAssembly (330ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (58ms)
-	RebuildCommonClasses (26ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (32ms)
 	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (26ms)
-	LoadAllAssembliesAndSetupDomain (538ms)
-		LoadAssemblies (357ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (799ms)
+		LoadAssemblies (450ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (254ms)
-			TypeCache.Refresh (8ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (229ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (958ms)
+		AnalyzeDomain (436ms)
+			TypeCache.Refresh (305ms)
+				TypeCache.ScanAssembly (279ms)
+			BuildScriptInfoCaches (95ms)
+			ResolveRequiredComponents (32ms)
+	FinalizeReload (1395ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (669ms)
+		SetupLoadedEditorAssemblies (1135ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (79ms)
+			ProcessInitializeOnLoadAttributes (600ms)
+			ProcessInitializeOnLoadMethodAttributes (443ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 5.63 ms, found 9 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 501 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 9109 unused Assets / (7.4 MB). Loaded Objects now: 10160.
+Memory consumption went from 312.8 MB to 305.3 MB.
+Total: 15.971000 ms (FindLiveObjects: 0.986300 ms CreateObjectMapping: 1.029200 ms MarkObjects: 8.879000 ms  DeleteObjects: 5.074200 ms)
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.799 seconds
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.UIElement.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Configuration.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.high-definition/Editor/Wizard/HDWizard.Window.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 5.47 ms, found 9 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.034 seconds
+Domain Reload Profiling: 1834ms
+	BeginReloadAssembly (183ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (53ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (553ms)
+		LoadAssemblies (361ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (268ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (241ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1035ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (719ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (64ms)
-			ProcessInitializeOnLoadAttributes (419ms)
-			ProcessInitializeOnLoadMethodAttributes (177ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (77ms)
+			ProcessInitializeOnLoadAttributes (441ms)
+			ProcessInitializeOnLoadMethodAttributes (190ms)
 			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (11ms)
-Refreshing native plugins compatible for Editor in 4.88 ms, found 9 plugins.
+Refreshing native plugins compatible for Editor in 4.62 ms, found 9 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 19 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 9097 unused Assets / (7.3 MB). Loaded Objects now: 10288.
-Memory consumption went from 300.2 MB to 292.9 MB.
-Total: 9.457100 ms (FindLiveObjects: 0.664700 ms CreateObjectMapping: 0.784000 ms MarkObjects: 4.716200 ms  DeleteObjects: 3.290800 ms)
+Unloading 32 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 9107 unused Assets / (6.9 MB). Loaded Objects now: 10176.
+Memory consumption went from 287.5 MB to 280.7 MB.
+Total: 8.826200 ms (FindLiveObjects: 0.695800 ms CreateObjectMapping: 0.613800 ms MarkObjects: 4.694500 ms  DeleteObjects: 2.820900 ms)
 
 Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 750.874916 seconds.
-  path: Assets/ATM/Levels/Materials
-  artifactKey: Guid(63b779f56d72f3049a236d2721b8f3a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Levels/Materials using Guid(63b779f56d72f3049a236d2721b8f3a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'af0c8f7fc6c8bb994a2d0f1056218f35') in 0.0065288 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 130.536907 seconds.
-  path: Assets/ATM/Materials/[0134_DimGray].mat
-  artifactKey: Guid(de95d0301b8b2364eaaa5603b5dcab48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Materials/[0134_DimGray].mat using Guid(de95d0301b8b2364eaaa5603b5dcab48) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '1bc0b1422a1d44fd8461c0829cf1c231') in 0.9220689 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 197.682694 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Scissors for Grass/Texture Scissors for Grass/Scissors for Grass_Blade Holder_AO.png
-  artifactKey: Guid(8ce15a1a5a39ac64d95ba30bb54ce44e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Scissors for Grass/Texture Scissors for Grass/Scissors for Grass_Blade Holder_AO.png using Guid(8ce15a1a5a39ac64d95ba30bb54ce44e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '50313acc9750cad1730ee80ed162dc44') in 0.0254878 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Scissors for Grass/Texture Scissors for Grass/Scissors for Grass_Holder_AlbedoTransparency.png
-  artifactKey: Guid(b2c79889e76c8e14dbd5e2abcceb7169) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Scissors for Grass/Texture Scissors for Grass/Scissors for Grass_Holder_AlbedoTransparency.png using Guid(b2c79889e76c8e14dbd5e2abcceb7169) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'cc57854273a395d809df51f0f10c6442') in 0.0187143 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Scissors for Grass/Texture Scissors for Grass/Scissors for Grass_Metal_MetallicSmoothness.png
-  artifactKey: Guid(a6a464a222361524bbc642c11f88eb4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Scissors for Grass/Texture Scissors for Grass/Scissors for Grass_Metal_MetallicSmoothness.png using Guid(a6a464a222361524bbc642c11f88eb4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '2a9530e82e5b8c8f634c33011b1cc624') in 0.021779 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Scissors for Grass/Texture Scissors for Grass/Scissors for Grass_Holder_MetallicSmoothness.png
-  artifactKey: Guid(8d2e75d0922a75f4a8083c706602e603) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Scissors for Grass/Texture Scissors for Grass/Scissors for Grass_Holder_MetallicSmoothness.png using Guid(8d2e75d0922a75f4a8083c706602e603) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'bc2ac134855db8111d922d368e5a6ae1') in 0.0184368 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Scissors for Grass/Texture Scissors for Grass/Scissors for Grass_Metal_AO.png
-  artifactKey: Guid(3df6c650f7509a245a2accfc5723c757) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Scissors for Grass/Texture Scissors for Grass/Scissors for Grass_Metal_AO.png using Guid(3df6c650f7509a245a2accfc5723c757) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '5c265c3f15c2042176255d044fa9ad32') in 0.0228873 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Scissors for Grass/Texture Scissors for Grass/Scissors for Grass_Holder_Normal.png
-  artifactKey: Guid(f82e5c06d4a65ff43ad31712030016a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Scissors for Grass/Texture Scissors for Grass/Scissors for Grass_Holder_Normal.png using Guid(f82e5c06d4a65ff43ad31712030016a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'c2447fd87ed8d37287b417998d644161') in 0.0620824 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Scissors for Grass/Texture Scissors for Grass/Scissors for Grass_Metal_Normal.png
-  artifactKey: Guid(deff90a5e09df114fb0e2c29ba28532e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Scissors for Grass/Texture Scissors for Grass/Scissors for Grass_Metal_Normal.png using Guid(deff90a5e09df114fb0e2c29ba28532e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '99b5dc2b30cc6683a02c775046bf048b') in 0.0217821 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Scissors for Grass/Texture Scissors for Grass/Scissors for Grass_Plastic_Normal.png
-  artifactKey: Guid(2de34036404d8a54a9d042d96c38395a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Scissors for Grass/Texture Scissors for Grass/Scissors for Grass_Plastic_Normal.png using Guid(2de34036404d8a54a9d042d96c38395a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'e62dd0dd2c3f1616f3adb601cac4fa5f') in 0.0148104 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.023146 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/_Fences/Fence 2/Fence 2/Fance 2_Material_Normal.png
-  artifactKey: Guid(c983d516249752e45a724a628f967df2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/_Fences/Fence 2/Fence 2/Fance 2_Material_Normal.png using Guid(c983d516249752e45a724a628f967df2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'ef6d77aa86c56e5f3914e6ca7afd676e') in 0.0380248 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/_Fences/Fence 5/Fence 5/Fance_Material_Normal.png
-  artifactKey: Guid(0f33d0a67a1c2244985523c2f1069bbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/_Fences/Fence 5/Fence 5/Fance_Material_Normal.png using Guid(0f33d0a67a1c2244985523c2f1069bbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '15584ec6b1008c2d0d7762f7a345881c') in 0.0368892 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000060 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/_Fences/Fence 4/Fence 4/Fance 4_Material_Normal.png
-  artifactKey: Guid(9143270b05047f848a2dd55146fa63ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/_Fences/Fence 4/Fence 4/Fance 4_Material_Normal.png using Guid(9143270b05047f848a2dd55146fa63ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'c4565cd48f1910e911b7c12709ca3809') in 0.0266308 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/ATM/Materials/Forest floor normal map.png
-  artifactKey: Guid(0994e4cbe0f6c034dacfd89d9b322d60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Materials/Forest floor normal map.png using Guid(0994e4cbe0f6c034dacfd89d9b322d60) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'd9b409bc4759c293623baccb9d71f337') in 0.0178554 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry/Floor/Floor Texture/Floor_Floor_Normal.png
-  artifactKey: Guid(6675f9394e101af478c3f4a1d69332e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry/Floor/Floor Texture/Floor_Floor_Normal.png using Guid(6675f9394e101af478c3f4a1d69332e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '430c82c7f3c1942188003c437b9be73e') in 0.0236629 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.559714 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Fork/Texture Fork/Fork_Metal_Normal.png
-  artifactKey: Guid(2007ea69ffa48b94fa6d82cf58b5f824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Fork/Texture Fork/Fork_Metal_Normal.png using Guid(2007ea69ffa48b94fa6d82cf58b5f824) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '1a17f256cf9a8eb876d59e985cd4c206') in 0.0289105 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Gripper/Texture Gripper/Gripper_Holder_Normal.png
-  artifactKey: Guid(815ac9cdb2ab7654fa1158b42f248194) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Gripper/Texture Gripper/Gripper_Holder_Normal.png using Guid(815ac9cdb2ab7654fa1158b42f248194) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '6ff0cea5b6db3005e0c595a00d316d15') in 0.0311145 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000059 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Bucket/Texture Bucket/Kova_Handle_Normal.png
-  artifactKey: Guid(d574f4a505191ce43a996661641ed9af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Bucket/Texture Bucket/Kova_Handle_Normal.png using Guid(d574f4a505191ce43a996661641ed9af) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '4dba5ba6657a974c7d263508ab84339d') in 0.0217024 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/_Bridge/_Last Bridge Part/Texter Last Bridge Part/Last Bridge Part_Main Holders_Normal.png
-  artifactKey: Guid(c04b31befdc12224889d8a5b360f02d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/_Bridge/_Last Bridge Part/Texter Last Bridge Part/Last Bridge Part_Main Holders_Normal.png using Guid(c04b31befdc12224889d8a5b360f02d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'cd17887e85892274da6fb1b491cf24b0') in 0.0215116 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Screwdriver/Texture Screwdriver/Kacavid_DefaultMaterial_Normal.png
-  artifactKey: Guid(59d18f64407dac24fae4eb9f9d3a5f2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Screwdriver/Texture Screwdriver/Kacavid_DefaultMaterial_Normal.png using Guid(59d18f64407dac24fae4eb9f9d3a5f2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '4aa3aa6f7f28f3dd34ad921cefbf4575') in 0.0222009 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000056 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Hammer 2/Texture Hammer 2/Hammer 2_Material_Normal.png
-  artifactKey: Guid(edfb52622501e2640a4596832b580bf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Hammer 2/Texture Hammer 2/Hammer 2_Material_Normal.png using Guid(edfb52622501e2640a4596832b580bf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '21d62224d06d784a22260af0a52e10a1') in 0.0284829 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.930894 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry/Floor/Floor Texture/Floor_Floor_AlbedoTransparency.png
-  artifactKey: Guid(f46b5fb8679c67347aba8cae5b065fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry/Floor/Floor Texture/Floor_Floor_AlbedoTransparency.png using Guid(f46b5fb8679c67347aba8cae5b065fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '2004e6bbfef9c73cc91e4f409840bc29') in 0.0138078 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000047 seconds.
-  path: Assets/ATM/items_entities/FLYTCAB1.JPG
-  artifactKey: Guid(a7980f031c4d5fb43baeecc60f243d00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/items_entities/FLYTCAB1.JPG using Guid(a7980f031c4d5fb43baeecc60f243d00) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'f8bbe3e3a08051b627d7fcb3be7fb532') in 0.0128047 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Materials and Textures/Eye frames/frame_03_delay-0.03s.png
-  artifactKey: Guid(bedfe010cc6ba7b4db1965cb3165994d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials and Textures/Eye frames/frame_03_delay-0.03s.png using Guid(bedfe010cc6ba7b4db1965cb3165994d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '06b820d9dd2de90b4f01008d4716e295') in 0.0150992 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Materials and Textures/Eye frames/frame_07_delay-0.03s.png
-  artifactKey: Guid(a1dd0ac9fd9299b42a11779581753935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials and Textures/Eye frames/frame_07_delay-0.03s.png using Guid(a1dd0ac9fd9299b42a11779581753935) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '78b91e227a1ab3d1fc7a9ba05710ac4a') in 0.0195342 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Fork/Texture Fork/Fork_Wood_AO.png
-  artifactKey: Guid(d3114b87085ac8f488ae04f7a28989b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Fork/Texture Fork/Fork_Wood_AO.png using Guid(d3114b87085ac8f488ae04f7a28989b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '98b06bd1a1b15016f38ded112d074372') in 0.0192945 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Fork/Texture Fork/Fork_Wood_AlbedoTransparency.png
-  artifactKey: Guid(a7daff4fb6c87614288c5f45e9231b1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Fork/Texture Fork/Fork_Wood_AlbedoTransparency.png using Guid(a7daff4fb6c87614288c5f45e9231b1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '0b5585985aa614b143e5d75d695b6dd4') in 0.0206403 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/ATM/Materials/Forest floor diffuse map.png
-  artifactKey: Guid(6d71146fa4ede3c429332d38c525f8af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Materials/Forest floor diffuse map.png using Guid(6d71146fa4ede3c429332d38c525f8af) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'c002b7e97d7984cd4518025169257d3b') in 0.0188245 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Fork/Texture Fork/Fork_Holder_MetallicSmoothness.png
-  artifactKey: Guid(ffcfe7957ba370641aa03ee39fab13ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Fork/Texture Fork/Fork_Holder_MetallicSmoothness.png using Guid(ffcfe7957ba370641aa03ee39fab13ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '9fa302223b3c0059000ceee2d05f67d5') in 0.0209469 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/ATM/items_entities/FLYTCUE1.JPG
-  artifactKey: Guid(6b7f2693dd4aa1942b799acacdec39cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/items_entities/FLYTCUE1.JPG using Guid(6b7f2693dd4aa1942b799acacdec39cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '312d2135994405677577f6eb9a80cd33') in 0.0154765 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000047 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Fork/Texture Fork/Fork_Holder_AO.png
-  artifactKey: Guid(afa51a44d64f3ba4eb24aeee4ea90246) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Fork/Texture Fork/Fork_Holder_AO.png using Guid(afa51a44d64f3ba4eb24aeee4ea90246) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'ca7efa38ab6328166a4efa67fd52ffa7') in 0.0178248 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Materials and Textures/Eye frames/frame_00_delay-0.03s.png
-  artifactKey: Guid(392aad06039299540a7c93f29544a71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials and Textures/Eye frames/frame_00_delay-0.03s.png using Guid(392aad06039299540a7c93f29544a71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '02a7edafdc2c60493f0e8c378e2267df') in 0.0203434 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/ATM/Materials/Forest floor height map.png
-  artifactKey: Guid(250fb69a13a11db4f85795b9f100d2f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Materials/Forest floor height map.png using Guid(250fb69a13a11db4f85795b9f100d2f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '7fdbc469cda25cf01809fc4d4bdfd467') in 0.0150919 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.552237 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry/Metal Fence/Metal Fance Texture/Metal Fance_Side Metal_Normal.png
-  artifactKey: Guid(82a9f0aaa98643946bc6dd959d3f5804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry/Metal Fence/Metal Fance Texture/Metal Fance_Side Metal_Normal.png using Guid(82a9f0aaa98643946bc6dd959d3f5804) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'e149661507dcac518784cada455fe54b') in 0.021105 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.737355 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry 2/Entry 2 Little Objects/Object 2 Texture/Object 2_Object 2_Normal.png
-  artifactKey: Guid(555a90e8fe326e445aadb3b3959f2c70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry 2/Entry 2 Little Objects/Object 2 Texture/Object 2_Object 2_Normal.png using Guid(555a90e8fe326e445aadb3b3959f2c70) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'ac76cbc4de8cf1dc989b4661ce9551a4') in 0.0244311 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry 2/Entry 2 Little Objects/Object 3 Texture/Object 3_Object 3_Normal.png
-  artifactKey: Guid(62e7b2e493182cd479190e301f525a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry 2/Entry 2 Little Objects/Object 3 Texture/Object 3_Object 3_Normal.png using Guid(62e7b2e493182cd479190e301f525a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '35e3b9a36d0fa5293d7fe7d18dff1b6f') in 0.0231944 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry 2/Entry 2 Little Objects/Object 6 Texture/Object 6_Object 6_Normal.png
-  artifactKey: Guid(b4bd2614a7ddc1e46a3a968d57113b9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry 2/Entry 2 Little Objects/Object 6 Texture/Object 6_Object 6_Normal.png using Guid(b4bd2614a7ddc1e46a3a968d57113b9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '1b3040c0d24718aae43f163f43da86b9') in 0.0220166 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.966950 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry/Complete/Complete Texture/Part 11_Door_Normal.png
-  artifactKey: Guid(66d789a4dc7ded54c8545187f741bc52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Courtyard and Entrance/Entry/Complete/Complete Texture/Part 11_Door_Normal.png using Guid(66d789a4dc7ded54c8545187f741bc52) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '2689a0fbac799e6fd573aa41e5cb95c6') in 0.0196827 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.214714 seconds.
-  path: Assets/ATM/Materials/Rough steel normal map.png
-  artifactKey: Guid(f1063d639b2e47e4891022269508a5f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Materials/Rough steel normal map.png using Guid(f1063d639b2e47e4891022269508a5f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'c81527e03976fcdc93e73d8ff69bd08a') in 0.016214 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000079 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Shed/Texture Shed 2K/Shed_Handle_Normal.png
-  artifactKey: Guid(601ae5a09cd73044e8369a41745b3f0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Shed/Texture Shed 2K/Shed_Handle_Normal.png using Guid(601ae5a09cd73044e8369a41745b3f0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '4fc1071c5569dc4869b543fd9025ddbf') in 0.022212 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.218278 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Shed/Texture Shed 2K/Shed_Second Holder_Normal.png
-  artifactKey: Guid(dfc12fc6f2ff8024e8a77208d681a9e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Shed/Texture Shed 2K/Shed_Second Holder_Normal.png using Guid(dfc12fc6f2ff8024e8a77208d681a9e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'a0bbd797697efdf35ada276a02b4933c') in 0.0220438 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Sickle/Texture Sickle/Sickle_Holder_Normal.png
-  artifactKey: Guid(a2729a3c1fd0a8b4eb78997db7aaeae9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Sickle/Texture Sickle/Sickle_Holder_Normal.png using Guid(a2729a3c1fd0a8b4eb78997db7aaeae9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'c7d609767cac4d2c4d8f7fd01ed8ff5f') in 0.0255441 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Saw/Texture Saw/sow_Metal_Normal.png
-  artifactKey: Guid(632ce9235056f514e846c0687d1ec827) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Saw/Texture Saw/sow_Metal_Normal.png using Guid(632ce9235056f514e846c0687d1ec827) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '862d1ccab402c5d26f6388de7593fbc9') in 0.0170973 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.738756 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Object 4/Materials/PotsUpsideDownMat_MaskMap.png
-  artifactKey: Guid(b659ee31414464749bebb59bad23c9f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Object 4/Materials/PotsUpsideDownMat_MaskMap.png using Guid(b659ee31414464749bebb59bad23c9f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'd123379f02c8bccdeb68385b12435663') in 0.0168998 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/ATM/Materials/Rock Tiles A_tint0xB4B4B4FF.jpg
-  artifactKey: Guid(cf31fa5d5a0772b4c93b4845e1d83f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Materials/Rock Tiles A_tint0xB4B4B4FF.jpg using Guid(cf31fa5d5a0772b4c93b4845e1d83f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '745f5ab519633487ce95916e39e29219') in 0.0147176 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000100 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Rope/Texter Rope/Rope_DefaultMaterial_MetallicSmoothness.png
-  artifactKey: Guid(5787351faeda4e945bb61a964ed6b288) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Rope/Texter Rope/Rope_DefaultMaterial_MetallicSmoothness.png using Guid(5787351faeda4e945bb61a964ed6b288) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '637c73ec61aceba654e1a635b9e3bfc6') in 0.0121446 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/ATM/Materials/rusted wall_tint0x514E4AFF 1.jpg
-  artifactKey: Guid(f7dbdd69b232d684f9dc26ebcb293868) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Materials/rusted wall_tint0x514E4AFF 1.jpg using Guid(f7dbdd69b232d684f9dc26ebcb293868) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '2e5897daa81ea9736d5bcf404ef5014f') in 0.0126446 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Rope/Texter Rope/Rope_DefaultMaterial_AlbedoTransparency.png
-  artifactKey: Guid(5fadb106352c4e542bbe1b83d78ea00a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Test Models/TheGamingPeople/Shed Bridge Tools and Fences/FreshModels/Rope/Texter Rope/Rope_DefaultMaterial_AlbedoTransparency.png using Guid(5fadb106352c4e542bbe1b83d78ea00a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '40a030140c854520f35456d93e7e4b83') in 0.0190584 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/ATM/Materials/Sandy rock soil diffuse map_tint0x4E4B51FF 3.png
-  artifactKey: Guid(c9c614c1e831bba4d989e22bcb90a2e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Materials/Sandy rock soil diffuse map_tint0x4E4B51FF 3.png using Guid(c9c614c1e831bba4d989e22bcb90a2e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: '212de2c4a0e150da7285c9956a0bf96e') in 0.0154148 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/ATM/Materials/Sandy rock soil diffuse map_tint0x474449FF 3.png
-  artifactKey: Guid(4adff8eee446b8c47a2882bfd839f7f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Materials/Sandy rock soil diffuse map_tint0x474449FF 3.png using Guid(4adff8eee446b8c47a2882bfd839f7f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'e0e7fe1915b98e86aba967cc19654401') in 0.0161845 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/ATM/Materials/rusted wall.jpg
-  artifactKey: Guid(b610d89a7e949114e8721dcf62ef6a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ATM/Materials/rusted wall.jpg using Guid(b610d89a7e949114e8721dcf62ef6a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 10 workers.
- -> (artifact id: 'afe0a794f30f8ef916ae4e8fe8a6917f') in 0.0147724 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

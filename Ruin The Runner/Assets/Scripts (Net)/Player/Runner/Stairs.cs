@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class StairClimb : MonoBehaviour
@@ -38,18 +39,21 @@ public class StairClimb : MonoBehaviour
 
 
         if (CheckRays(moveDirection) || CheckRays(rightDiagonal) || CheckRays(leftDiagonal))
-        {       
+        {
             ClimbStep();
         }
+        
     }
     public bool CheckRays(Vector3 moveDirection)
     {
-        if (pm.move.IsPressed() && StepClimb(moveDirection, upperOffset.y) && StepClimb(moveDirection, upperOffset.y * 2) && StepClimb(moveDirection, upperOffset.y * 3) && StepClimb(moveDirection, upperOffset.y * 4) && StepClimb(moveDirection, upperOffset.y * 5))
+        if (StepClimb(moveDirection, upperOffset.y) && StepClimb(moveDirection, upperOffset.y * 2) && StepClimb(moveDirection, upperOffset.y * 3) && StepClimb(moveDirection, upperOffset.y * 4) && StepClimb(moveDirection, upperOffset.y * 5))
         {
             return true;
         }
         else
         {
+
+            
             return false;
         }
     }
@@ -60,8 +64,8 @@ public class StairClimb : MonoBehaviour
        
         var moving = pm.move.IsPressed();
         RaycastHit hitLower;
-        Ray ray1 = new Ray(transform.position + new Vector3(0, lowerOffset.y, lowerOffset.x), direction);
-        Ray ray2 = new Ray(transform.position + new Vector3(0, YOffset, upperOffset.x), direction);
+        Ray ray1 = new Ray(new Vector3(((pm.leftFoot.position.x + pm.rightFoot.position.x) / 2), transform.position.y + lowerOffset.y, ((pm.leftFoot.position.z + pm.rightFoot.position.z) / 2)), direction);
+        Ray ray2 = new Ray(new Vector3(((pm.leftKnee.position.x + pm.rightKnee.position.x) / 2), ((pm.leftKnee.position.y + pm.rightKnee.position.y) / 2), ((pm.leftKnee.position.z + pm.rightKnee.position.z) / 2)), direction);
         Debug.DrawLine(ray1.origin, ray1.origin + ray1.direction * maxDistance1, Color.green);
         Debug.DrawLine(ray2.origin, ray2.origin + ray2.direction * maxDistance2, Color.red);
         
@@ -93,24 +97,38 @@ public class StairClimb : MonoBehaviour
                 //rigidBody.linearVelocity = Physics.gravity;
             }
         }
-        
+
+        pm.anim.SetBool("Climbing", false);
         return false;
     }
     public void WallPushback(RaycastHit hit, Ray ray)
     {
         rigidBody.position = rigidBody.position - ((hit.point - ray.origin) * bounceBackMultiplier);
-        
+
+        pm.anim.SetBool("Climbing", false);
         pm.velocity = new Vector3(0, pm.velocity.y, 0) + (Physics.gravity * bounceBackMultiplier);
         rigidBody.linearVelocity = pm.velocity;
     }
     public float ladderScale = 2;
     public void ClimbStep()
     {
-        var stepAmount = stepSmooth;
-        if(tagOfPotentialClimbable == "Ladder" || tagOfPotentialClimbable == "Climbable")
+        if (pm.move.IsPressed())
         {
-            stepAmount = stepSmooth * ladderScale;
+            var stepAmount = stepSmooth;
+            if (tagOfPotentialClimbable == "Ladder" || tagOfPotentialClimbable == "Climbable")
+            {
+                stepAmount = stepSmooth * ladderScale;
+                pm.anim.SetBool("Climbing", true);
+            }
+            else
+            {
+                pm.anim.SetBool("Climbing", false);
+            }
+            rigidBody.position += new Vector3(0f, stepAmount * Time.deltaTime, 0f);
         }
-        rigidBody.position += new Vector3(0f, stepAmount * Time.deltaTime, 0f);
+        else
+        {
+            pm.anim.SetBool("Climbing", false);
+        }
     }
 }

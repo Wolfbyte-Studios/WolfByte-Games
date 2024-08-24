@@ -31,6 +31,7 @@ public class FeetGrounder : MonoBehaviour
 
     public bool useProIkFeature = false;
     public bool showSolverDebug = true;
+    
 
     private void Start()
     {

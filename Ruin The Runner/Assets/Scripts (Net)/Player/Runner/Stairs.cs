@@ -17,6 +17,7 @@ public class StairClimb : MonoBehaviour
     PlayerMovement pm;
     public List<string> AcceptedTagsForClimb = new List<string>() { "Ladder", "Climbable"};
     string tagOfPotentialClimbable;
+    public float distanceToStair;
 
     private void Awake()
     {
@@ -76,12 +77,13 @@ public class StairClimb : MonoBehaviour
             {
                 tagOfPotentialClimbable = hitLower.collider.gameObject.tag;
                 Debug.Log(tagOfPotentialClimbable);
+                distanceToStair = hitLower.distance;
                 return true;
             }
 
             if (!Physics.Raycast(ray2, out hitUpper, maxDistance2, layerMask, QueryTriggerInteraction.Ignore))
             {
-                
+                distanceToStair = hitLower.distance;
                 return true;
             }
             else
@@ -117,14 +119,16 @@ public class StairClimb : MonoBehaviour
             var stepAmount = stepSmooth;
             if (tagOfPotentialClimbable == "Ladder" || tagOfPotentialClimbable == "Climbable")
             {
-                stepAmount = stepSmooth * ladderScale;
+                
+                rigidBody.position += new Vector3(0f, (ladderScale * Time.deltaTime), 0f);
                 pm.anim.SetBool("Climbing", true);
             }
             else
             {
                 pm.anim.SetBool("Climbing", false);
+                rigidBody.position += new Vector3(0f, (stepAmount * Time.deltaTime) / distanceToStair, 0f);
             }
-            rigidBody.position += new Vector3(0f, stepAmount * Time.deltaTime, 0f);
+            
         }
         else
         {

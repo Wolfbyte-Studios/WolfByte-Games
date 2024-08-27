@@ -436,6 +436,10 @@ public class PlayerMovement : NetworkBehaviour
         }
         anim.SetFloat("UpDown", velocity.y);
         rb.linearVelocity = velocity;
+        if(playertype.Runner == PlayerType)
+        {
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+        }
     }
     [ContextMenu("Respawn")]
     public void Respawn()

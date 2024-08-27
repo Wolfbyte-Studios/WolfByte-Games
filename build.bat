@@ -1,0 +1,1 @@
+"C:\Program Files\Unity\Hub\Editor\6000.0.5f1\Editor\Unity.exe" -quit -batchmode -projectPath "C:\Users\user1\3d zeldaish" -buildWindows64Player "C:\Users\user1\3d zeldaish\Builds\Ruin The Runner\RuinTheRunner.exe"

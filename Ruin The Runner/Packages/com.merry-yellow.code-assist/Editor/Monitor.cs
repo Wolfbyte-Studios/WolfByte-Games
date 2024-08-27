@@ -46,6 +46,7 @@ namespace Meryel.UnityCodeAssist.Editor
 
             EditorApplication.hierarchyChanged += OnHierarchyChanged;
             EditorApplication.update += OnUpdate;
+            EditorApplication.playModeStateChanged += OnPlayModeStateChanged;
             Undo.postprocessModifications += MyPostprocessModificationsCallback;
             //Undo.undoRedoPerformed += MyUndoCallback;
             Selection.selectionChanged += OnSelectionChanged;
@@ -54,6 +55,19 @@ namespace Meryel.UnityCodeAssist.Editor
 
             Application.logMessageReceived += Application_logMessageReceived;
             //System.Threading.Tasks.TaskScheduler.UnobservedTaskException += 
+        }
+
+        private static void OnPlayModeStateChanged(PlayModeStateChange playModeStateChange)
+        {
+            if (playModeStateChange != PlayModeStateChange.EnteredEditMode)
+                return;
+
+            var delayedRequestUpdate = NetMQInitializer.Publisher?.DelayedRequestUpdate;
+            if (delayedRequestUpdate == null)
+                return;
+
+            var processor = NetMQInitializer.Publisher as Synchronizer.Model.IProcessor;
+            processor?.Process(delayedRequestUpdate);
         }
 
         /// <summary>

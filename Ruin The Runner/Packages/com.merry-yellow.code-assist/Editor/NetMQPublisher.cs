@@ -830,10 +830,20 @@ namespace Meryel.UnityCodeAssist.Editor
             Monitor.LazyLoad(requestLazyLoad.Category);
         }
 
+        internal Synchronizer.Model.RequestUpdate? DelayedRequestUpdate { get; private set; }
         void Synchronizer.Model.IProcessor.Process(Synchronizer.Model.RequestUpdate requestUpdate)
         {
             if (requestUpdate.App != "Unity" && requestUpdate.App != "SystemBinariesForDotNetStandard20")
                 return;
+
+            // cannot import package in play mode, so delay it
+            if (EditorApplication.isPlayingOrWillChangePlaymode)
+            {
+                Serilog.Log.Information("Cannot import package in play mode, please exit play mode to update");
+                DelayedRequestUpdate = requestUpdate;
+                return;
+            }
+            DelayedRequestUpdate = null;
 
             // let unity update the package, don't unzip it, to prevent file already in use and other issues
             AssetDatabase.ImportPackage(requestUpdate.Path, requestUpdate.IsInteractive);

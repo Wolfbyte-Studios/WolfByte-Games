@@ -1,5 +1,13 @@
 List of new features, bug fixes and improvements
 
+# Version 1.2.6
+* Exporting when Unity is in play mode
+* Some error messages have been made more user friendly
+
+# Version 1.2.5
+* Released on itch.io https://meryel.itch.io/unity-code-assist
+* Url changes
+
 # Version 1.2.4
 * Bugfix for exporter with long file paths
 * Bugfix for retrieving animation and animator data

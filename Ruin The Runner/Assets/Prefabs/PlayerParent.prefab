@@ -1640,15 +1640,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lowerOffset: {x: 0, y: 0.01}
   upperOffset: {x: 0, y: 0.45}
-  maxDistance1: 0.75
-  maxDistance2: 0.75
+  maxDistance1: 0.5
+  maxDistance2: 0.35
   stepHeight: 0.3
-  stepSmooth: 3
+  stepSmooth: 7.5
   bounceBackMultiplier: 0.05
   AcceptedTagsForClimb:
   - Ladder
   - Climbable
-  ladderScale: 0.75
+  distanceToStair: 0.59517854
+  ladderScale: 2
 --- !u!1 &7037198218284721127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,8 +1706,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7834521376227375610}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.46319023, y: -0.19164616, z: 0.10332766, w: 0.8590984}
-  m_LocalPosition: {x: 35.959763, y: 2.1510973, z: 4.633774}
+  m_LocalRotation: {x: 0.5536724, y: -0.008294084, z: 0.005515002, w: 0.8326751}
+  m_LocalPosition: {x: -3.8722744, y: 5.3790946, z: 0.4641966}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3251,7 +3252,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8308969824060933931}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 726325959c0cb064597e2f1bd5eb6b21, type: 3}
   m_Name: 

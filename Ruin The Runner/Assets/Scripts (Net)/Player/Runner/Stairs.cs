@@ -58,6 +58,9 @@ public class StairClimb : MonoBehaviour
             return false;
         }
     }
+    public float stepUpForwardCheck = .1f;
+    public Vector3 newFootPlacement;
+    public float heightOffset = .15f;
 
     public bool StepClimb(Vector3 direction, float YOffset)
     {
@@ -67,24 +70,37 @@ public class StairClimb : MonoBehaviour
         RaycastHit hitLower;
         Ray ray1 = new Ray(new Vector3(((pm.leftFoot.position.x + pm.rightFoot.position.x) / 2), transform.position.y + lowerOffset.y, ((pm.leftFoot.position.z + pm.rightFoot.position.z) / 2)), direction);
         Ray ray2 = new Ray(new Vector3(((pm.leftKnee.position.x + pm.rightKnee.position.x) / 2), ((pm.leftKnee.position.y + pm.rightKnee.position.y) / 2), ((pm.leftKnee.position.z + pm.rightKnee.position.z) / 2)), direction);
+       
         Debug.DrawLine(ray1.origin, ray1.origin + ray1.direction * maxDistance1, Color.green);
         Debug.DrawLine(ray2.origin, ray2.origin + ray2.direction * maxDistance2, Color.red);
         
         if (Physics.Raycast(ray1, out hitLower, maxDistance1, layerMask, QueryTriggerInteraction.Ignore))
         {
+           
+           
             RaycastHit hitUpper;
             if(AcceptedTagsForClimb.Contains(hitLower.collider.gameObject.tag))
             {
                 tagOfPotentialClimbable = hitLower.collider.gameObject.tag;
                 Debug.Log(tagOfPotentialClimbable);
-                distanceToStair = hitLower.distance;
+                distanceToStair = hitLower.distance / maxDistance1;
                 return true;
             }
 
             if (!Physics.Raycast(ray2, out hitUpper, maxDistance2, layerMask, QueryTriggerInteraction.Ignore))
             {
-                distanceToStair = hitLower.distance;
-                return true;
+                Vector3 orig = new Vector3(hitLower.point.x, ray2.origin.y, hitLower.point.z) + (ray1.direction * stepUpForwardCheck);
+                Ray downRay = new Ray(orig, Vector3.down);
+                Debug.DrawLine(downRay.origin, downRay.origin + downRay.direction * maxDistance2, Color.blue);
+                RaycastHit downhit;
+                if(Physics.Raycast(downRay, out downhit, maxDistance2, layerMask, QueryTriggerInteraction.Ignore))
+                {
+                    newFootPlacement = downhit.point + (Vector3.up * heightOffset) ;
+                    Debug.Log("New Foot Placement: " + newFootPlacement + downhit.point);
+                    return true;
+                }
+                /*distanceToStair = hitLower.distance / maxDistance2;
+                return true;*/
             }
             else
             {
@@ -125,8 +141,9 @@ public class StairClimb : MonoBehaviour
             }
             else
             {
-                pm.anim.SetBool("Climbing", false);
-                rigidBody.position += new Vector3(0f, (stepAmount * Time.deltaTime) / distanceToStair, 0f);
+               
+                rigidBody.position = Vector3.Lerp(rigidBody.position, newFootPlacement, stepSmooth);
+                rigidBody.linearVelocity = new Vector3(rigidBody.linearVelocity.z, 0, rigidBody.linearVelocity.z);
             }
             
         }

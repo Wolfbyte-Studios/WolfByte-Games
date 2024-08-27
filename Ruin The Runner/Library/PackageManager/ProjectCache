@@ -23,8 +23,8 @@ m_EmbeddedPackageManifests:
       m_ContentTrackingEnabled: 1
       m_ModificationDate:
         serializedVersion: 2
-        ticks: 638597846285019805
-      m_Hash: 1729855699
+        ticks: 638599602180000000
+      m_Hash: 4251217072
     C:/Users/user1/3d zeldaish/Ruin The Runner/Packages/com.heathen.steamworkscomplete/package.json:
       m_FilePath: C:/Users/user1/3d zeldaish/Ruin The Runner/Packages/com.heathen.steamworkscomplete/package.json
       m_PathExists: 1
@@ -1224,10 +1224,12 @@ m_ResolvedPackages:
     - 6.0.1-pre.2
     - 6.0.1
     - 6.0.2
+    - 6.0.3
     compatible:
     - 6.0.1
     - 6.0.2
-    recommended: 6.0.2
+    - 6.0.3
+    recommended: 6.0.3
     deprecated: []
   dependencies:
   - name: com.unity.shadergraph
@@ -1827,18 +1829,18 @@ m_ResolvedPackages:
     recommended: 1.8.7
     deprecated: []
   dependencies:
+  - name: com.unity.modules.audio
+    version: 1.0.0
   - name: com.unity.modules.director
     version: 1.0.0
   - name: com.unity.modules.animation
     version: 1.0.0
-  - name: com.unity.modules.audio
-    version: 1.0.0
   - name: com.unity.modules.particlesystem
     version: 1.0.0
   resolvedDependencies:
-  - name: com.unity.modules.director
-    version: 1.0.0
   - name: com.unity.modules.audio
+    version: 1.0.0
+  - name: com.unity.modules.director
     version: 1.0.0
   - name: com.unity.modules.animation
     version: 1.0.0
@@ -4362,7 +4364,7 @@ m_ResolvedPackages:
     Runner\Packages\com.merry-yellow.code-assist
   testable: 1
   isDirectDependency: 1
-  version: 1.2.4
+  version: 1.2.6
   source: 3
   resolvedPath: C:\Users\user1\3d zeldaish\Ruin The Runner\Packages\com.merry-yellow.code-assist
   assetPath: Packages/com.merry-yellow.code-assist

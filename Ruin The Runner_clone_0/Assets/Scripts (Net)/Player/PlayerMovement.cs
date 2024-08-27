@@ -271,7 +271,7 @@ public class PlayerMovement : NetworkBehaviour
 
     void Update()
     {
-        checkGround();
+        //checkGround();
     }
     public void centerModel()
     {
@@ -378,8 +378,8 @@ public class PlayerMovement : NetworkBehaviour
         {
             anim.SetBool("Grounded", true);
         }
-        
-        else
+
+        if (!l && !r && !o)
         {
             anim.SetBool("Grounded", false);
         }
@@ -393,7 +393,11 @@ public class PlayerMovement : NetworkBehaviour
     public void FixedUpdate()
     {
         velocity = rb.linearVelocity;
-        //checkGround();
+        if (playertype.Runner == PlayerType)
+        {
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0); 
+            checkGround();
+        }
         centerModel();
         if (!isLocalPlayer)
         {
@@ -436,10 +440,7 @@ public class PlayerMovement : NetworkBehaviour
         }
         anim.SetFloat("UpDown", velocity.y);
         rb.linearVelocity = velocity;
-        if(playertype.Runner == PlayerType)
-        {
-            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
-        }
+        
     }
     [ContextMenu("Respawn")]
     public void Respawn()

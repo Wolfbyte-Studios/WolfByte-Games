@@ -24,13 +24,13 @@ jobs:
       - name: Set up Unity
         uses: game-ci/unity-builder@v2
         with:
-          unityVersion: 2023.1.0f1
+          unityVersion: 6000.0.5f1
           targetPlatform: ${{ matrix.targetPlatform }}
 
       - name: Build project
         uses: game-ci/unity-builder@v2
         with:
-          unityVersion: 2023.1.0f1
+          unityVersion: 6000.0.5f1
           targetPlatform: ${{ matrix.targetPlatform }}
 
       - name: Upload Build Artifacts

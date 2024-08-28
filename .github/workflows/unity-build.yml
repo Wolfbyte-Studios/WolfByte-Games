@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: MOTHERSHIP
+    runs-on: self-hosted
 
     strategy:
       matrix:

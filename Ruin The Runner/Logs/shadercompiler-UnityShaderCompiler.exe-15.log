@@ -1,1 +1,6 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/PlaybackEngines'
+Cmd: initializeCompiler
+
+Cmd: compileComputeKernel
+  insize=14335 file=Packages/com.unity.render-pipelines.high-definition/Runtime/Water/Shaders/WaterLighting.compute kernel=WaterDeferredLighting_Variant0 ppOnly=0 stripLineD=0 buildPlatform=19 km=<WATER_DEFERRED_LIGHTING=WaterDeferredLighting_Variant0>,<VARIANT=0>,<USE_INDIRECT=1>,<UNITY_VERSION=60000005> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PLATFORM_SUPPORTS_DEPTH_FETCH uKW=PUNCTUAL_SHADOW_MEDIUM DIRECTIONAL_SHADOW_MEDIUM AREA_SHADOW_MEDIUM SHADER_STAGE_COMPUTE platform=d3d11 flags=0 reqs=16385 forceDXC=0 forceFXC=0 ok=1 outsize=29756
+

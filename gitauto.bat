@@ -5,6 +5,11 @@ set SCRIPT_DIR=%~dp0
 REM Change directory to the script directory
 cd /d "%SCRIPT_DIR%"
 
+REM Trigger the Unity build process and wait for it to finish
+echo Starting Unity build process...
+call "%SCRIPT_DIR%build.bat" windows
+
+REM After the build is finished, proceed with the Git operations
 REM Pull the latest changes from the remote repository
 echo Pulling the latest changes from the remote repository...
 git pull origin main

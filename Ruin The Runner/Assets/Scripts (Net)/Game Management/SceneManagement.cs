@@ -28,6 +28,7 @@ public class SceneStuff : NetworkBehaviour
         }
         //uncomment when added win screen and any others at end of build scenes
         //scenesInBuild.RemoveAt(totalScenes - 1);
+
     }
 
     List<string> GetScenesInBuild()

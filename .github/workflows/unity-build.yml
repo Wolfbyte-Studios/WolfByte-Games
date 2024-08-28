@@ -21,10 +21,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Cache Unity Library
+        uses: actions/cache@v3
+        with:
+          path: |
+            "Ruin The Runner/Library"
+            "Ruin The Runner/Build"
+          key: ${{ runner.os }}-unity-library-${{ matrix.targetPlatform }}-${{ hashFiles('**/Packages/manifest.json') }}
+          restore-keys: |
+            ${{ runner.os }}-unity-library-${{ matrix.targetPlatform }}-
+
       - name: Set up Unity
         uses: game-ci/unity-builder@v2
         with:
-          unityVersion: 6000.0.5f1
+          unityVersion: auto
           targetPlatform: ${{ matrix.targetPlatform }}
           projectPath: "Ruin The Runner"
         env:
@@ -35,7 +45,7 @@ jobs:
       - name: Build project
         uses: game-ci/unity-builder@v2
         with:
-          unityVersion: 6000.0.5f1
+          unityVersion: auto
           targetPlatform: ${{ matrix.targetPlatform }}
           projectPath: "Ruin The Runner"
         env:

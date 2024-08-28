@@ -6,4 +6,4 @@ SET BUILD_TARGET="C:\Users\user1\3d zeldaish\Builds\Ruin The Runner Current\Ruin
 %UNITY_PATH% -quit -batchmode -buildWindows64Player %BUILD_TARGET%
 
 echo Build completed.
-pause
+

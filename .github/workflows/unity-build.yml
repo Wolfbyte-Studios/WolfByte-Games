@@ -32,7 +32,7 @@ jobs:
             ${{ runner.os }}-unity-library-${{ matrix.targetPlatform }}-
 
       - name: Set up Unity
-        uses: game-ci/unity-builder@v2
+        uses: game-ci/unity-builder@v4.2.3
         with:
           unityVersion: auto
           targetPlatform: ${{ matrix.targetPlatform }}
@@ -43,7 +43,7 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
 
       - name: Build project
-        uses: game-ci/unity-builder@v2
+        uses: game-ci/unity-builder@v4.2.3
         with:
           unityVersion: auto
           targetPlatform: ${{ matrix.targetPlatform }}

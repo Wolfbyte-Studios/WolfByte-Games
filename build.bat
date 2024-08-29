@@ -9,6 +9,6 @@ SET ARCHIVE_PATH="C:\Users\user1\3d zeldaish\Builds\Ruin_The_Runner_Current.zip"
 echo Build completed. Creating archive...
 
 REM Creating a zip archive of the build
-powershell -Command "Compress-Archive -Path 'C:\Users\user1\3d zeldaish\Builds\Ruin The Runner Current\*' -DestinationPath '%ARCHIVE_PATH%'"
+powershell -Command "Compress-Archive -Path 'C:\Users\user1\3d zeldaish\Builds\Ruin The Runner Current\*' -DestinationPath '%ARCHIVE_PATH%' -Force"
 
 echo Archive created at %ARCHIVE_PATH%

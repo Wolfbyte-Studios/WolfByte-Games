@@ -220,12 +220,17 @@ public class PlayerMovement : NetworkBehaviour
     [Command]
     public void onPoop()
     {
+        if(GameManager.singleton.hungerPercent < 1)
+        {
+            return;
+        }
         Vector3 offset = (shitOffset.x * this.gameObject.transform.right) +
                   (shitOffset.y * this.gameObject.transform.up) +
                   (shitOffset.z * this.gameObject.transform.forward);
 
         var poop = Instantiate(Shit, this.gameObject.transform.position + offset, Quaternion.identity);
         NetworkServer.Spawn(poop, netIdentity.gameObject);
+        GameManager.singleton.hungerPercent = 0f;
     }
     public void OnCrouch(InputAction.CallbackContext obj)
     {

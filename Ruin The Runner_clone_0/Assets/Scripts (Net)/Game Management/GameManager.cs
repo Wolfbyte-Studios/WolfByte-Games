@@ -3,6 +3,7 @@ using Mirror;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(NetworkIdentity))]
 public class GameManager : NetworkBehaviour
@@ -30,6 +31,9 @@ public class GameManager : NetworkBehaviour
     public List<Poop> poopList = new List<Poop>();
     [SyncVar]
     public Transform lastPooped;
+    [SyncVar(hook = nameof(UpdateHunger))]
+    [Range(0, 1)]
+    public float hungerPercent = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Start()
     {
@@ -39,6 +43,21 @@ public class GameManager : NetworkBehaviour
         SceneManager.activeSceneChanged += OnSceneChange;
 
 
+    }
+    public void AddHunger(int foodPoints)
+    {
+        
+        hungerPercent += (float)foodPoints / 100f;
+        
+    }
+    [ContextMenu("UpdateHunger")]
+    public void UpdateHunger(float oldvalue, float newvalue)
+    {
+        var hungerbars = GameObject.FindGameObjectsWithTag("Hunger");
+        foreach (var bar in hungerbars)
+        {
+            bar.GetComponent<Image>().fillAmount = newvalue;
+        }
     }
 
     private void OnSceneChange(Scene arg0, Scene arg1)

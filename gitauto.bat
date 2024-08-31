@@ -18,9 +18,12 @@ REM Add all changes to the staging area
 echo Adding changes to the staging area...
 git add .
 
+REM Generate a random commit message using the current date and time
+set commit_message="Auto-commit %date% %time:~0,2%-%time:~3,2%-%time:~6,2%"
+
 REM Commit the changes
-echo Committing changes...
-git commit -m "Auto-commit from script"
+echo Committing changes with message: %commit_message%
+git commit -m %commit_message%
 
 REM Push the changes to the remote repository
 echo Pushing changes to the remote repository...

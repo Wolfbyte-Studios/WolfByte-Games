@@ -1,696 +1,265 @@
 { "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
-,{ "pid":12345, "tid":0, "ts":1725073073230097, "dur":23031, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1725073073253134, "dur":264, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1725073073253454, "dur":357, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1725073073255241, "dur":54, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.RenderPipelines.Core.Runtime.Shared.dll" }}
-,{ "pid":12345, "tid":0, "ts":1725073073253826, "dur":3054, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1725073073256883, "dur":10446041, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1725073083702926, "dur":251, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1725073083703178, "dur":75, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1725073083703328, "dur":52, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1725073083703463, "dur":2447, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
-,{ "pid":12345, "tid":1, "ts":1725073073253985, "dur":2981, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073073256967, "dur":494, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073073257515, "dur":712, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\modules.asset" }}
-,{ "pid":12345, "tid":1, "ts":1725073073257461, "dur":1051, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073073258512, "dur":1423, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073073259935, "dur":7524, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073073267792, "dur":43063, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/level0" }}
-,{ "pid":12345, "tid":1, "ts":1725073073311023, "dur":332066, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073073643156, "dur":18750, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.PerformanceReportingModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073073643092, "dur":18816, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073073661909, "dur":109, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073073662071, "dur":49050, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.ProBuilder.Poly2Tri.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073073662033, "dur":49089, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.ProBuilder.Poly2Tri.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073073711124, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073073711241, "dur":384168, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Mirror.Components.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073073711212, "dur":384198, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Mirror.Components.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074095411, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074095520, "dur":60467, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074095491, "dur":60497, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074156067, "dur":20856, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Mirror.Authenticators.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074156045, "dur":20879, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Mirror.Authenticators.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074176925, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074177019, "dur":587, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074176995, "dur":612, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.RenderPipelines.HighDefinition.Config.Runtime.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074177678, "dur":500, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.MemoryProfiler.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074177658, "dur":520, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.MemoryProfiler.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074178231, "dur":13711, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074178212, "dur":13732, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074191945, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074192056, "dur":51468, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.Burst.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074192030, "dur":51495, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.Burst.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074243527, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074243633, "dur":18740, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074243607, "dur":18768, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074262376, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074262503, "dur":13997, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.UnityCurlModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074262477, "dur":14025, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074276503, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074276609, "dur":19338, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.SubstanceModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074276582, "dur":19366, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.SubstanceModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074295949, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074296045, "dur":36367, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.AccessibilityModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074296012, "dur":36402, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074332417, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074332520, "dur":16873, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.JSONSerializeModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074332495, "dur":16900, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074349396, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074349495, "dur":27133, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.UIModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074349472, "dur":27157, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.UIModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074376630, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074376726, "dur":14551, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.ARModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074376704, "dur":14575, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.ARModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074391280, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074391383, "dur":34810, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.GameCenterModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074391356, "dur":34839, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.GameCenterModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074426196, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074426305, "dur":37445, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.PropertiesModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074426280, "dur":37472, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.PropertiesModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074463753, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074463861, "dur":16775, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.SpriteShapeModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074463834, "dur":16803, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074480638, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074480741, "dur":21943, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.InputLegacyModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074480716, "dur":21969, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074502686, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074502794, "dur":14855, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.MultiplayerModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074502768, "dur":14883, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.MultiplayerModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074517652, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074517760, "dur":18510, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.ContentLoadModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074517735, "dur":18537, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.ContentLoadModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074536273, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074536385, "dur":20130, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.SharedInternalsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074536357, "dur":20160, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074556517, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074556595, "dur":54861, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.UnityWebRequestModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074556574, "dur":54883, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074611525, "dur":29901, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.TilemapModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074611505, "dur":29922, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.TilemapModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074641428, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074641533, "dur":64591, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.CoreModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074641508, "dur":64617, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.CoreModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074706126, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074706233, "dur":22911, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.NVIDIAModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074706209, "dur":22936, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074729149, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074729262, "dur":14483, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.TerrainPhysicsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074729232, "dur":14515, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074743748, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074743854, "dur":30593, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.ParticleSystemModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074743831, "dur":30618, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074774450, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074774561, "dur":13690, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.UnityTestProtocolModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074774535, "dur":13718, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074788254, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074788351, "dur":43405, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.IMGUIModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074788328, "dur":43430, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.IMGUIModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074831759, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074831861, "dur":40095, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.AudioModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074831836, "dur":40121, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.AudioModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074871957, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074872039, "dur":42644, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.Collections.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074872019, "dur":42667, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.Collections.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074914687, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074914782, "dur":7001, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\System.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074914760, "dur":7025, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/System.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074921786, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074921901, "dur":13838, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\System.Runtime.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074921875, "dur":13866, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/System.Runtime.dll" }}
-,{ "pid":12345, "tid":1, "ts":1725073074935742, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1725073074935818, "dur":8767103, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1725073073253918, "dur":2973, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1725073073260234, "dur":639, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/il2cpp/build/deploy" }}
-,{ "pid":12345, "tid":2, "ts":1725073073260873, "dur":3933, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/il2cpp/libil2cpp" }}
-,{ "pid":12345, "tid":2, "ts":1725073073264806, "dur":92, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport" }}
-,{ "pid":12345, "tid":2, "ts":1725073073264898, "dur":867, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono" }}
-,{ "pid":12345, "tid":2, "ts":1725073073265765, "dur":63, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/Data/Resources" }}
-,{ "pid":12345, "tid":2, "ts":1725073073265828, "dur":142, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Tools/BuildPipeline" }}
-,{ "pid":12345, "tid":2, "ts":1725073073265970, "dur":101, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"Library/PlayerDataCache/Win642/Data" }}
-,{ "pid":12345, "tid":2, "ts":1725073073256894, "dur":9246, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1725073073267452, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteResponseFile Library/Bee/artifacts/rsp/12472187740721062503.rsp" }}
-,{ "pid":12345, "tid":2, "ts":1725073073267518, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1725073073267731, "dur":155, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073267888, "dur":57, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\com.cratesmith.assetui.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073267946, "dur":170, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\com.rlabrecque.steamworks.net.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073268117, "dur":60, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\ECM2.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073268225, "dur":70, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Heathen.Core.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073268297, "dur":159, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Heathen.Steamworks.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073268650, "dur":73, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Mirror.Components.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073268725, "dur":83, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Mirror.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073268810, "dur":75, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Mirror.Examples.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073268887, "dur":51, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Mirror.Transports.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073269032, "dur":208, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Burst.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073269244, "dur":191, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Cinemachine.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073269437, "dur":171, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Collections.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073269611, "dur":362, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073270015, "dur":238, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Mathematics.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073270319, "dur":137, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.ProBuilder.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073270535, "dur":84, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.ProBuilder.Stl.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073270685, "dur":113, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Rendering.LightTransport.Runtime.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073270800, "dur":262, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.Core.Runtime.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073271123, "dur":81, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.GPUDriven.Runtime.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073271238, "dur":1046, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.HighDefinition.Runtime.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073272289, "dur":53, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073272345, "dur":126, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Splines.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073272473, "dur":233, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073272710, "dur":149, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073272920, "dur":83, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualEffectGraph.Runtime.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073273006, "dur":268, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073273276, "dur":167, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073273490, "dur":236, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073274227, "dur":65, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\artifacts\\UnityLinkerInputs\\MethodsToPreserve.xml" }}
-,{ "pid":12345, "tid":2, "ts":1725073073274430, "dur":220, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\artifacts\\UnityLinkerInputs\\EditorToUnityLinkerData.json" }}
-,{ "pid":12345, "tid":2, "ts":1725073073267584, "dur":7637, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"UnityLinker C:/Users/user1/3d zeldaish/Ruin The Runner/Library/Bee/artifacts/unitylinker_dwek.traceevents" }}
-,{ "pid":12345, "tid":2, "ts":1725073073276046, "dur":221, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1725073073304736, "dur":327221, "ph":"X", "name": "UnityLinker",  "args": { "detail":"C:/Users/user1/3d zeldaish/Ruin The Runner/Library/Bee/artifacts/unitylinker_dwek.traceevents" }}
-,{ "pid":12345, "tid":2, "ts":1725073073642824, "dur":453697, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073074096523, "dur":13805, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\com.cratesmith.assetui.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073074110332, "dur":43002, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\ECM2.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073074153385, "dur":77706, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\FizzySteamworks.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073074231094, "dur":679469, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Heathen.Core.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073074910566, "dur":59784, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Heathen.Steamworks.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073074970355, "dur":164969, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\IngameDebugConsole.Runtime.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073075135376, "dur":74662, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.RenderPipelines.HighDefinition.Runtime.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073073642779, "dur":1567338, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"GenerateNativePluginsForAssemblies Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker" }}
-,{ "pid":12345, "tid":2, "ts":1725073075211216, "dur":8476188, "ph":"X", "name": "GenerateNativePluginsForAssemblies",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker" }}
-,{ "pid":12345, "tid":2, "ts":1725073083687678, "dur":14122, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\AsyncPluginsFromLinker\\x86_64\\lib_burst_generated.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073083687662, "dur":14140, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Plugins/x86_64/lib_burst_generated.dll" }}
-,{ "pid":12345, "tid":2, "ts":1725073083701970, "dur":905, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Plugins/x86_64/lib_burst_generated.dll" }}
-,{ "pid":12345, "tid":3, "ts":1725073073253979, "dur":2939, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1725073073256920, "dur":849, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1725073073257843, "dur":563, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Facades\\System.Xml.XmlSerializer.dll" }}
-,{ "pid":12345, "tid":3, "ts":1725073073258542, "dur":1152, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Facades\\System.ValueTuple.dll" }}
-,{ "pid":12345, "tid":3, "ts":1725073073257770, "dur":2121, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1725073073259891, "dur":7569, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1725073073267824, "dur":57041, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/globalgamemanagers.assets.resS" }}
-,{ "pid":12345, "tid":3, "ts":1725073073324942, "dur":317909, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1725073073642916, "dur":452465, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.RenderPipelines.Core.Runtime.dll" }}
-,{ "pid":12345, "tid":3, "ts":1725073073642854, "dur":452529, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll" }}
-,{ "pid":12345, "tid":3, "ts":1725073074095384, "dur":84, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1725073074095513, "dur":2370, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\System.Configuration.dll" }}
-,{ "pid":12345, "tid":3, "ts":1725073074095485, "dur":2400, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/System.Configuration.dll" }}
-,{ "pid":12345, "tid":3, "ts":1725073074097886, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1725073074097974, "dur":43994, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Telepathy.dll" }}
-,{ "pid":12345, "tid":3, "ts":1725073074097953, "dur":44017, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Telepathy.dll" }}
-,{ "pid":12345, "tid":3, "ts":1725073074141971, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1725073074142080, "dur":879825, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Mirror.dll" }}
-,{ "pid":12345, "tid":3, "ts":1725073074142056, "dur":879851, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Mirror.dll" }}
-,{ "pid":12345, "tid":3, "ts":1725073075021908, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1725073075021985, "dur":8680954, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1725073073254042, "dur":2966, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1725073073257056, "dur":502, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.Net.WebHeaderCollection.dll" }}
-,{ "pid":12345, "tid":4, "ts":1725073073258061, "dur":511, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.Net.Mail.dll" }}
-,{ "pid":12345, "tid":4, "ts":1725073073257010, "dur":1852, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1725073073259001, "dur":706, "ph":"X", "name": "File",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Mirror.Components.dll" }}
-,{ "pid":12345, "tid":4, "ts":1725073073258862, "dur":1054, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1725073073259916, "dur":7581, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1725073073267775, "dur":38822, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":4, "ts":1725073073306655, "dur":336267, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1725073073642955, "dur":505420, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\System.Data.dll" }}
-,{ "pid":12345, "tid":4, "ts":1725073073642925, "dur":505452, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/System.Data.dll" }}
-,{ "pid":12345, "tid":4, "ts":1725073074148378, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1725073074148464, "dur":145346, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\System.Numerics.dll" }}
-,{ "pid":12345, "tid":4, "ts":1725073074148440, "dur":145371, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/System.Numerics.dll" }}
-,{ "pid":12345, "tid":4, "ts":1725073074293812, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1725073074293902, "dur":80578, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.ScreenCaptureModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1725073074293877, "dur":80604, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1725073074374483, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1725073074374591, "dur":25030, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.GIModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1725073074374567, "dur":25055, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.GIModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1725073074399623, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1725073074399723, "dur":572749, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.InputForUIModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1725073074399696, "dur":572777, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.InputForUIModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1725073074972474, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1725073074972534, "dur":8730418, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1725073073253956, "dur":2948, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1725073073257697, "dur":635, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\Unity.IL2CPP.Bee.BuildLogic.AppleTV.dll" }}
-,{ "pid":12345, "tid":5, "ts":1725073073256906, "dur":2647, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1725073073259553, "dur":7696, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1725073073268206, "dur":56881, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/sharedassets1.assets.resS" }}
-,{ "pid":12345, "tid":5, "ts":1725073073325146, "dur":317694, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1725073073642884, "dur":357261, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.Rendering.Denoising.Runtime.dll" }}
-,{ "pid":12345, "tid":5, "ts":1725073073642845, "dur":357302, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.Rendering.Denoising.Runtime.dll" }}
-,{ "pid":12345, "tid":5, "ts":1725073074000148, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1725073074000252, "dur":7297, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\System.Xml.dll" }}
-,{ "pid":12345, "tid":5, "ts":1725073074000228, "dur":7323, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":5, "ts":1725073074007552, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1725073074007653, "dur":861173, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.Splines.dll" }}
-,{ "pid":12345, "tid":5, "ts":1725073074007629, "dur":861198, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.Splines.dll" }}
-,{ "pid":12345, "tid":5, "ts":1725073074868900, "dur":71366, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.RenderPipelines.Core.ShaderLibrary.dll" }}
-,{ "pid":12345, "tid":5, "ts":1725073074868880, "dur":71388, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll" }}
-,{ "pid":12345, "tid":5, "ts":1725073074940269, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1725073074940354, "dur":8762606, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1725073073253972, "dur":2939, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1725073073258002, "dur":778, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.Threading.Thread.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073073256914, "dur":2200, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1725073073259115, "dur":1066, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1725073073260181, "dur":5964, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1725073073266147, "dur":92, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/UnityPlayer.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073073266391, "dur":935, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1725073073267338, "dur":63, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win642\\Data\\ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":6, "ts":1725073073267334, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":6, "ts":1725073073281422, "dur":33996, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/resources.assets" }}
-,{ "pid":12345, "tid":6, "ts":1725073073315512, "dur":327279, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1725073073642876, "dur":510469, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\ECM2.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073073642792, "dur":510554, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/ECM2.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074153347, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1725073074153447, "dur":1489, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.Burst.Unsafe.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074153417, "dur":1520, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.Burst.Unsafe.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074154938, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1725073074155018, "dur":17277, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\mscorlib.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074154997, "dur":17299, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/mscorlib.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074172298, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1725073074172402, "dur":81746, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Mirror.Transports.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074172378, "dur":81772, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Mirror.Transports.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074254222, "dur":3809, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.RenderPipelines.Core.Runtime.Shared.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074254199, "dur":3834, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.RenderPipelines.Core.Runtime.Shared.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074258034, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1725073074258134, "dur":121514, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.Physics2DModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074258111, "dur":121539, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.Physics2DModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074379725, "dur":124610, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.XRModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074379706, "dur":124631, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.XRModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074504339, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1725073074504444, "dur":81615, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074504416, "dur":81644, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074586133, "dur":26794, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.DSPGraphModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074586112, "dur":26816, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074612930, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1725073074613033, "dur":82726, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.TerrainModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074613008, "dur":82753, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.TerrainModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074695762, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1725073074695888, "dur":87837, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.AMDModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074695851, "dur":87875, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.AMDModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074783728, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1725073074783833, "dur":254750, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.VideoModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073074783808, "dur":254776, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.VideoModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1725073075038585, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1725073075038655, "dur":8664265, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1725073073253928, "dur":2969, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1725073073256901, "dur":404, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1725073073257908, "dur":584, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.Diagnostics.StackTrace.dll" }}
-,{ "pid":12345, "tid":7, "ts":1725073073258785, "dur":933, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.Diagnostics.Contracts.dll" }}
-,{ "pid":12345, "tid":7, "ts":1725073073257305, "dur":2445, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1725073073259750, "dur":7509, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1725073073271780, "dur":54616, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/sharedassets1.assets" }}
-,{ "pid":12345, "tid":7, "ts":1725073073326452, "dur":316336, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1725073073642949, "dur":209837, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Newtonsoft.Json.dll" }}
-,{ "pid":12345, "tid":7, "ts":1725073073642792, "dur":209996, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Newtonsoft.Json.dll" }}
-,{ "pid":12345, "tid":7, "ts":1725073073852789, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1725073073852902, "dur":124397, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":7, "ts":1725073073852876, "dur":124425, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":7, "ts":1725073073977302, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1725073073977410, "dur":6097, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Mono.Security.dll" }}
-,{ "pid":12345, "tid":7, "ts":1725073073977386, "dur":6123, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Mono.Security.dll" }}
-,{ "pid":12345, "tid":7, "ts":1725073073983510, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1725073073983610, "dur":14075, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1725073073983582, "dur":14105, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1725073073997688, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1725073073997793, "dur":912722, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Heathen.Core.dll" }}
-,{ "pid":12345, "tid":7, "ts":1725073073997768, "dur":912749, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Heathen.Core.dll" }}
-,{ "pid":12345, "tid":7, "ts":1725073074910518, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1725073074910628, "dur":88084, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Mirror.Examples.dll" }}
-,{ "pid":12345, "tid":7, "ts":1725073074910603, "dur":88110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Mirror.Examples.dll" }}
-,{ "pid":12345, "tid":7, "ts":1725073074998714, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1725073074998772, "dur":8704172, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1725073073254007, "dur":2967, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1725073073256976, "dur":419, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1725073073257868, "dur":845, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\Microsoft.Extensions.Logging.dll" }}
-,{ "pid":12345, "tid":8, "ts":1725073073258803, "dur":723, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\Microsoft.Extensions.Configuration.Abstractions.dll" }}
-,{ "pid":12345, "tid":8, "ts":1725073073257396, "dur":2588, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1725073073259985, "dur":7454, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1725073073289244, "dur":24034, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/level2" }}
-,{ "pid":12345, "tid":8, "ts":1725073073313358, "dur":329724, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1725073073643141, "dur":578217, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.UnityAnalyticsCommonModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1725073073643088, "dur":578271, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1725073074221361, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1725073074221471, "dur":302645, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\System.Security.dll" }}
-,{ "pid":12345, "tid":8, "ts":1725073074221447, "dur":302670, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/System.Security.dll" }}
-,{ "pid":12345, "tid":8, "ts":1725073074524118, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1725073074524224, "dur":30433, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.ClusterRendererModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1725073074524198, "dur":30461, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1725073074554661, "dur":81, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1725073074554780, "dur":30621, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.ImageConversionModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1725073074554753, "dur":30650, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1725073074585404, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1725073074585514, "dur":381596, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.DirectorModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1725073074585489, "dur":381623, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.DirectorModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1725073074967113, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1725073074967202, "dur":8735721, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1725073073254064, "dur":2967, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1725073073257033, "dur":349, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1725073073257709, "dur":568, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\mscordbi.dll" }}
-,{ "pid":12345, "tid":9, "ts":1725073073257382, "dur":2135, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1725073073259517, "dur":6802, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1725073073266319, "dur":128, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":9, "ts":1725073073266633, "dur":481, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Temp\\StagingArea\\WindowsPlayer.exe" }}
-,{ "pid":12345, "tid":9, "ts":1725073073266549, "dur":565, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner.exe" }}
-,{ "pid":12345, "tid":9, "ts":1725073073267733, "dur":31157, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/sharedassets2.assets.resS" }}
-,{ "pid":12345, "tid":9, "ts":1725073073298937, "dur":344059, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1725073073643040, "dur":414517, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\BouncyCastle.Cryptography.dll" }}
-,{ "pid":12345, "tid":9, "ts":1725073073642997, "dur":414561, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/BouncyCastle.Cryptography.dll" }}
-,{ "pid":12345, "tid":9, "ts":1725073074057559, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1725073074057648, "dur":38856, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.ShaderVariantAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1725073074057622, "dur":38883, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.ShaderVariantAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1725073074096506, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1725073074096596, "dur":279109, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\SimpleWebTransport.dll" }}
-,{ "pid":12345, "tid":9, "ts":1725073074096573, "dur":279134, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/SimpleWebTransport.dll" }}
-,{ "pid":12345, "tid":9, "ts":1725073074375708, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1725073074375816, "dur":298217, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.AIModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1725073074375790, "dur":298245, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.AIModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1725073074674036, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1725073074674140, "dur":191068, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.TLSModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1725073074674116, "dur":191094, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.TLSModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1725073074865211, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1725073074865323, "dur":269991, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\IngameDebugConsole.Runtime.dll" }}
-,{ "pid":12345, "tid":9, "ts":1725073074865297, "dur":270019, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/IngameDebugConsole.Runtime.dll" }}
-,{ "pid":12345, "tid":9, "ts":1725073075135317, "dur":81, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1725073075135409, "dur":8567552, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1725073073254084, "dur":3232, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1725073073257594, "dur":550, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.AppContext.dll" }}
-,{ "pid":12345, "tid":10, "ts":1725073073257317, "dur":878, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1725073073258195, "dur":1180, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1725073073259375, "dur":6766, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1725073073266219, "dur":54, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win642\\Data\\boot.config" }}
-,{ "pid":12345, "tid":10, "ts":1725073073266281, "dur":5592, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win642\\Data\\RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":10, "ts":1725073073271998, "dur":1262, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.HighDefinition.Runtime.dll" }}
-,{ "pid":12345, "tid":10, "ts":1725073073273267, "dur":255, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":10, "ts":1725073073273525, "dur":180, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":10, "ts":1725073073274214, "dur":94, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\Playeraf2576a2-inputdata.json" }}
-,{ "pid":12345, "tid":10, "ts":1725073073266212, "dur":8124, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"AddBootConfigGUID Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
-,{ "pid":12345, "tid":10, "ts":1725073073274726, "dur":108, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1725073073275142, "dur":105424, "ph":"X", "name": "AddBootConfigGUID",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
-,{ "pid":12345, "tid":10, "ts":1725073073387282, "dur":50, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\boot.config" }}
-,{ "pid":12345, "tid":10, "ts":1725073073387266, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/boot.config" }}
-,{ "pid":12345, "tid":10, "ts":1725073073387348, "dur":727, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/boot.config" }}
-,{ "pid":12345, "tid":10, "ts":1725073073388078, "dur":254890, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1725073073643014, "dur":458741, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\System.Drawing.dll" }}
-,{ "pid":12345, "tid":10, "ts":1725073073642970, "dur":458787, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/System.Drawing.dll" }}
-,{ "pid":12345, "tid":10, "ts":1725073074101758, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1725073074101863, "dur":821309, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Heathen.Steamworks.Examples.dll" }}
-,{ "pid":12345, "tid":10, "ts":1725073074101837, "dur":821336, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Heathen.Steamworks.Examples.dll" }}
-,{ "pid":12345, "tid":10, "ts":1725073074923174, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1725073074923272, "dur":8519, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":10, "ts":1725073074923246, "dur":8547, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":10, "ts":1725073074931794, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1725073074931882, "dur":103147, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.Mathematics.dll" }}
-,{ "pid":12345, "tid":10, "ts":1725073074931861, "dur":103170, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.Mathematics.dll" }}
-,{ "pid":12345, "tid":10, "ts":1725073075035032, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1725073075035104, "dur":8667928, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1725073073254097, "dur":3331, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1725073073257429, "dur":570, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1725073073258048, "dur":577, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Facades\\System.Text.RegularExpressions.dll" }}
-,{ "pid":12345, "tid":11, "ts":1725073073257999, "dur":1406, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1725073073259405, "dur":6744, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1725073073266150, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":11, "ts":1725073073266278, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":11, "ts":1725073073266412, "dur":820, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1725073073296695, "dur":15873, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/sharedassets2.assets" }}
-,{ "pid":12345, "tid":11, "ts":1725073073312624, "dur":330158, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1725073073642871, "dur":499258, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":11, "ts":1725073073642786, "dur":499344, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":11, "ts":1725073074142131, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1725073074142219, "dur":468867, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.InputSystem.dll" }}
-,{ "pid":12345, "tid":11, "ts":1725073074142195, "dur":468893, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.InputSystem.dll" }}
-,{ "pid":12345, "tid":11, "ts":1725073074611089, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1725073074611203, "dur":105365, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.PhysicsModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1725073074611175, "dur":105395, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.PhysicsModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1725073074716571, "dur":82, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1725073074716695, "dur":423384, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.TextCoreTextEngineModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1725073074716665, "dur":423416, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1725073075140082, "dur":107, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1725073075140201, "dur":8562742, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073073254128, "dur":3312, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073073257522, "dur":551, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\Bee.Toolchain.EmbeddedLinux.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073073257442, "dur":860, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073073258303, "dur":808, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073073259111, "dur":418, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073073259529, "dur":6810, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073073266339, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":12, "ts":1725073073266526, "dur":801, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073073267337, "dur":4676, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win642\\Data\\RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":12, "ts":1725073073267335, "dur":4679, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":12, "ts":1725073073272015, "dur":1646, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073073273668, "dur":369111, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073073642871, "dur":2515, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073073642781, "dur":2607, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073073645389, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073073645525, "dur":508002, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.Profiling.Core.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073073645491, "dur":508037, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.Profiling.Core.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074153530, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073074153610, "dur":110330, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\kcp2k.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074153589, "dur":110352, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/kcp2k.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074264013, "dur":63367, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074263993, "dur":63388, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074327383, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073074327520, "dur":70890, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.HierarchyCoreModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074327482, "dur":70929, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.HierarchyCoreModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074398413, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073074398517, "dur":41571, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.SubsystemsModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074398493, "dur":41597, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074440091, "dur":83, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073074440213, "dur":154029, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.AndroidJNIModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074440185, "dur":154059, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074594245, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073074594364, "dur":30632, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.VehiclesModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074594335, "dur":30663, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.VehiclesModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074624999, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073074625102, "dur":23596, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.GridModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074625076, "dur":23624, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.GridModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074648702, "dur":91, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073074648838, "dur":16779, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.WindModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074648803, "dur":16816, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.WindModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074665620, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073074665722, "dur":55850, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.VFXModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074665700, "dur":55874, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.VFXModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074721576, "dur":85, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073074721703, "dur":25331, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.CrashReportingModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074721673, "dur":25363, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074747038, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073074747150, "dur":22594, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.UnityConnectModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074747125, "dur":22620, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074769746, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073074769847, "dur":44140, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.VirtualTexturingModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074769821, "dur":44167, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074813989, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073074814095, "dur":15935, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.UmbraModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074814067, "dur":15965, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.UmbraModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074830033, "dur":94, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073074830165, "dur":22384, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.InputModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074830137, "dur":22414, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.InputModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074852552, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073074852689, "dur":3579, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\System.Core.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074852670, "dur":3599, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/System.Core.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074856270, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073074856375, "dur":30204, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074856349, "dur":30231, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074886582, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073074886692, "dur":1456, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.Collections.LowLevel.ILSupport.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074886664, "dur":1485, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.Collections.LowLevel.ILSupport.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074888221, "dur":39832, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\System.Transactions.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074888203, "dur":39852, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/System.Transactions.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074928056, "dur":79, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073074928171, "dur":19042, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.GraphicsStateCollectionSerializerModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074928144, "dur":19070, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.GraphicsStateCollectionSerializerModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1725073074947216, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1725073074947299, "dur":8755639, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1725073073254154, "dur":3381, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1725073073257740, "dur":644, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\Tools\\BuildPipeline\\BeeLocalCacheTool.exe" }}
-,{ "pid":12345, "tid":13, "ts":1725073073258758, "dur":949, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\Tools\\BuildPipeline\\Bee.Toolchain.Xcode.dll" }}
-,{ "pid":12345, "tid":13, "ts":1725073073257538, "dur":2307, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1725073073259845, "dur":7528, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1725073073281217, "dur":31136, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/resources.assets.resS" }}
-,{ "pid":12345, "tid":13, "ts":1725073073312414, "dur":330372, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1725073073642884, "dur":1782, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\HierarchyIcons.dll" }}
-,{ "pid":12345, "tid":13, "ts":1725073073642787, "dur":1882, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/HierarchyIcons.dll" }}
-,{ "pid":12345, "tid":13, "ts":1725073073644672, "dur":119, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1725073073644845, "dur":272304, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.ProBuilder.Csg.dll" }}
-,{ "pid":12345, "tid":13, "ts":1725073073644808, "dur":272342, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.ProBuilder.Csg.dll" }}
-,{ "pid":12345, "tid":13, "ts":1725073073917151, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1725073073917233, "dur":950245, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":13, "ts":1725073073917210, "dur":950270, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":13, "ts":1725073074867481, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1725073074867595, "dur":342440, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.RenderPipelines.HighDefinition.Runtime.dll" }}
-,{ "pid":12345, "tid":13, "ts":1725073074867569, "dur":342467, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.RenderPipelines.HighDefinition.Runtime.dll" }}
-,{ "pid":12345, "tid":13, "ts":1725073075210038, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1725073075210126, "dur":8492811, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1725073073254168, "dur":3371, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1725073073257857, "dur":555, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\Tools\\BuildPipeline\\Bee.CSharpSupport.dll" }}
-,{ "pid":12345, "tid":14, "ts":1725073073257540, "dur":1198, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1725073073258739, "dur":529, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1725073073259268, "dur":266, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1725073073259534, "dur":6614, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1725073073266149, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":14, "ts":1725073073266524, "dur":283, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":14, "ts":1725073073266808, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1725073073266888, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Plugins/x86_64/tbbmalloc.dll" }}
-,{ "pid":12345, "tid":14, "ts":1725073073266962, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1725073073267077, "dur":281, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1725073073273815, "dur":1157, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":14, "ts":1725073073275011, "dur":368155, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1725073073643236, "dur":215832, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\com.rlabrecque.steamworks.net.dll" }}
-,{ "pid":12345, "tid":14, "ts":1725073073643168, "dur":215902, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/com.rlabrecque.steamworks.net.dll" }}
-,{ "pid":12345, "tid":14, "ts":1725073073859071, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1725073073859170, "dur":248117, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.VisualEffectGraph.Runtime.dll" }}
-,{ "pid":12345, "tid":14, "ts":1725073073859148, "dur":248141, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.VisualEffectGraph.Runtime.dll" }}
-,{ "pid":12345, "tid":14, "ts":1725073074107290, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1725073074107404, "dur":600770, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.Rendering.LightTransport.Runtime.dll" }}
-,{ "pid":12345, "tid":14, "ts":1725073074107377, "dur":600798, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.Rendering.LightTransport.Runtime.dll" }}
-,{ "pid":12345, "tid":14, "ts":1725073074708176, "dur":79, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1725073074708295, "dur":43557, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.UnityWebRequestWWWModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1725073074708264, "dur":43589, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1725073074751854, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1725073074751987, "dur":14963, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.ClusterInputModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1725073074751944, "dur":15008, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1725073074766953, "dur":86, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1725073074767074, "dur":231388, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.LocalizationModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1725073074767048, "dur":231415, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.LocalizationModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1725073074998465, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1725073074998544, "dur":8704404, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1725073073254186, "dur":3423, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1725073073257610, "dur":482, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1725073073258623, "dur":931, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Facades\\System.Security.Cryptography.Encryption.ECDiffieHellman.dll" }}
-,{ "pid":12345, "tid":15, "ts":1725073073258092, "dur":2013, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1725073073260105, "dur":7395, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1725073073267501, "dur":375283, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1725073073642878, "dur":30442, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":15, "ts":1725073073642786, "dur":30536, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":15, "ts":1725073073673324, "dur":114, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1725073073673498, "dur":24672, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.ProBuilder.KdTree.dll" }}
-,{ "pid":12345, "tid":15, "ts":1725073073673451, "dur":24721, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.ProBuilder.KdTree.dll" }}
-,{ "pid":12345, "tid":15, "ts":1725073073698173, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1725073073698276, "dur":218537, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\netstandard.dll" }}
-,{ "pid":12345, "tid":15, "ts":1725073073698252, "dur":218563, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/netstandard.dll" }}
-,{ "pid":12345, "tid":15, "ts":1725073073916817, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1725073073916925, "dur":337603, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":15, "ts":1725073073916899, "dur":337631, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":15, "ts":1725073074254623, "dur":132261, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.HotReloadModule.dll" }}
-,{ "pid":12345, "tid":15, "ts":1725073074254603, "dur":132283, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.HotReloadModule.dll" }}
-,{ "pid":12345, "tid":15, "ts":1725073074386888, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1725073074386997, "dur":708276, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":15, "ts":1725073074386971, "dur":708304, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":15, "ts":1725073075095276, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1725073075095358, "dur":8607656, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1725073073254203, "dur":3431, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1725073073257924, "dur":594, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Runtime.Remoting.dll" }}
-,{ "pid":12345, "tid":16, "ts":1725073073257636, "dur":1197, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1725073073258834, "dur":422, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1725073073259256, "dur":741, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1725073073259997, "dur":7448, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1725073073289628, "dur":23928, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/level1" }}
-,{ "pid":12345, "tid":16, "ts":1725073073313604, "dur":329399, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1725073073643066, "dur":352112, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.UnityWebRequestAudioModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1725073073643012, "dur":352167, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1725073073995180, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1725073073995290, "dur":107353, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\System.Net.Http.dll" }}
-,{ "pid":12345, "tid":16, "ts":1725073073995264, "dur":107380, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/System.Net.Http.dll" }}
-,{ "pid":12345, "tid":16, "ts":1725073074102645, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1725073074102732, "dur":867626, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Heathen.Steamworks.dll" }}
-,{ "pid":12345, "tid":16, "ts":1725073074102708, "dur":867651, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Heathen.Steamworks.dll" }}
-,{ "pid":12345, "tid":16, "ts":1725073074970361, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1725073074970445, "dur":8732597, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1725073073254225, "dur":3415, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1725073073257825, "dur":537, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Reactive.Core.dll" }}
-,{ "pid":12345, "tid":17, "ts":1725073073257642, "dur":1411, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1725073073259053, "dur":407, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1725073073259461, "dur":6683, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1725073073266477, "dur":151, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1725073073266631, "dur":131, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":17, "ts":1725073073266762, "dur":395, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1725073073267163, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/StreamingAssets/APVStreamingAssets/8d7b63506841d9e479c706284e600465/9d656847ed438ed4cbf48344c8178519.bytes" }}
-,{ "pid":12345, "tid":17, "ts":1725073073267214, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1725073073272316, "dur":95593, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":17, "ts":1725073073367935, "dur":275044, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1725073073643039, "dur":346574, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\System.EnterpriseServices.dll" }}
-,{ "pid":12345, "tid":17, "ts":1725073073642980, "dur":346634, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/System.EnterpriseServices.dll" }}
-,{ "pid":12345, "tid":17, "ts":1725073073989615, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1725073073989721, "dur":67424, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":17, "ts":1725073073989697, "dur":67449, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":17, "ts":1725073074057147, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1725073074057258, "dur":182642, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.UnityWebRequestTextureModule.dll" }}
-,{ "pid":12345, "tid":17, "ts":1725073074057230, "dur":182672, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
-,{ "pid":12345, "tid":17, "ts":1725073074239903, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1725073074240012, "dur":477504, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":17, "ts":1725073074239986, "dur":477531, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":17, "ts":1725073074717518, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1725073074717620, "dur":82409, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.TextCoreFontEngineModule.dll" }}
-,{ "pid":12345, "tid":17, "ts":1725073074717579, "dur":82452, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
-,{ "pid":12345, "tid":17, "ts":1725073074800032, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1725073074800158, "dur":216934, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":17, "ts":1725073074800133, "dur":216960, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":17, "ts":1725073075017094, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1725073075017162, "dur":8685873, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1725073073254248, "dur":3395, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1725073073258257, "dur":1447, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":18, "ts":1725073073257646, "dur":2133, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1725073073259779, "dur":6762, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1725073073266541, "dur":130, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":18, "ts":1725073073266701, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Plugins/x86_64/tbb.dll" }}
-,{ "pid":12345, "tid":18, "ts":1725073073267177, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/D3D12/D3D12Core.dll" }}
-,{ "pid":12345, "tid":18, "ts":1725073073271968, "dur":58013, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":18, "ts":1725073073330027, "dur":312967, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1725073073643042, "dur":504763, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":18, "ts":1725073073642995, "dur":504812, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":18, "ts":1725073074147808, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1725073074147911, "dur":204758, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.InputSystem.ForUI.dll" }}
-,{ "pid":12345, "tid":18, "ts":1725073074147888, "dur":204782, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.InputSystem.ForUI.dll" }}
-,{ "pid":12345, "tid":18, "ts":1725073074352672, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1725073074352770, "dur":91056, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.VRModule.dll" }}
-,{ "pid":12345, "tid":18, "ts":1725073074352745, "dur":91082, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.VRModule.dll" }}
-,{ "pid":12345, "tid":18, "ts":1725073074443828, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1725073074443928, "dur":281872, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.MarshallingModule.dll" }}
-,{ "pid":12345, "tid":18, "ts":1725073074443904, "dur":281898, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.MarshallingModule.dll" }}
-,{ "pid":12345, "tid":18, "ts":1725073074725803, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1725073074725911, "dur":334790, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.UnityAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":18, "ts":1725073074725881, "dur":334822, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":18, "ts":1725073075060705, "dur":87, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1725073075060802, "dur":8642145, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1725073073254264, "dur":3384, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1725073073257649, "dur":714, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1725073073258383, "dur":697, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Facades\\System.Linq.Expressions.dll" }}
-,{ "pid":12345, "tid":19, "ts":1725073073258363, "dur":1646, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1725073073260009, "dur":7440, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1725073073296524, "dur":20800, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/level0.resS" }}
-,{ "pid":12345, "tid":19, "ts":1725073073317390, "dur":325882, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1725073073643340, "dur":32323, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.ProBuilder.Stl.dll" }}
-,{ "pid":12345, "tid":19, "ts":1725073073643273, "dur":32392, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.ProBuilder.Stl.dll" }}
-,{ "pid":12345, "tid":19, "ts":1725073073675666, "dur":81, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1725073073675794, "dur":419667, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":19, "ts":1725073073675759, "dur":419703, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":19, "ts":1725073074095540, "dur":14789, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\com.cratesmith.assetui.dll" }}
-,{ "pid":12345, "tid":19, "ts":1725073074095513, "dur":14817, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/com.cratesmith.assetui.dll" }}
-,{ "pid":12345, "tid":19, "ts":1725073074110331, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1725073074110444, "dur":179908, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.RenderPipelines.GPUDriven.Runtime.dll" }}
-,{ "pid":12345, "tid":19, "ts":1725073074110417, "dur":179937, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.RenderPipelines.GPUDriven.Runtime.dll" }}
-,{ "pid":12345, "tid":19, "ts":1725073074290355, "dur":81, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1725073074290473, "dur":27680, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.StreamingModule.dll" }}
-,{ "pid":12345, "tid":19, "ts":1725073074290447, "dur":27707, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.StreamingModule.dll" }}
-,{ "pid":12345, "tid":19, "ts":1725073074318155, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1725073074318260, "dur":95868, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.TextRenderingModule.dll" }}
-,{ "pid":12345, "tid":19, "ts":1725073074318234, "dur":95895, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
-,{ "pid":12345, "tid":19, "ts":1725073074414131, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1725073074414232, "dur":25857, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.SpriteMaskModule.dll" }}
-,{ "pid":12345, "tid":19, "ts":1725073074414207, "dur":25883, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
-,{ "pid":12345, "tid":19, "ts":1725073074440091, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1725073074440225, "dur":709592, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\UnityEngine.UIElementsModule.dll" }}
-,{ "pid":12345, "tid":19, "ts":1725073074440187, "dur":709631, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/UnityEngine.UIElementsModule.dll" }}
-,{ "pid":12345, "tid":19, "ts":1725073075149819, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1725073075149884, "dur":8553167, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1725073073254288, "dur":3365, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1725073073258635, "dur":1063, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Microsoft.Build.Utilities.v4.0.dll" }}
-,{ "pid":12345, "tid":20, "ts":1725073073257653, "dur":2325, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1725073073259978, "dur":7483, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1725073073267762, "dur":31289, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":20, "ts":1725073073299102, "dur":344162, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1725073073643347, "dur":290060, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.ProBuilder.dll" }}
-,{ "pid":12345, "tid":20, "ts":1725073073643267, "dur":290142, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.ProBuilder.dll" }}
-,{ "pid":12345, "tid":20, "ts":1725073073933410, "dur":82, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1725073073933532, "dur":318597, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.VisualScripting.Antlr3.Runtime.dll" }}
-,{ "pid":12345, "tid":20, "ts":1725073073933504, "dur":318627, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
-,{ "pid":12345, "tid":20, "ts":1725073074252132, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1725073074252240, "dur":762596, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\ManagedStripped\\Unity.Cinemachine.dll" }}
-,{ "pid":12345, "tid":20, "ts":1725073074252217, "dur":762621, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Managed/Unity.Cinemachine.dll" }}
-,{ "pid":12345, "tid":20, "ts":1725073075014839, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1725073075014921, "dur":8688014, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1725073083709761, "dur":977, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid":12345, "tid":0, "ts":1725078021743086, "dur":24571, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1725078021767662, "dur":1606, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1725078021769308, "dur":52, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1725078021769361, "dur":399, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1725078021769777, "dur":4899, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1725078021774679, "dur":610427, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1725078022385109, "dur":133, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1725078022385243, "dur":158, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1725078022385556, "dur":3717, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1725078021770080, "dur":4606, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1725078021777099, "dur":663, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/il2cpp/build/deploy" }}
+,{ "pid":12345, "tid":1, "ts":1725078021777762, "dur":3909, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/il2cpp/libil2cpp" }}
+,{ "pid":12345, "tid":1, "ts":1725078021781671, "dur":85, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport" }}
+,{ "pid":12345, "tid":1, "ts":1725078021781756, "dur":877, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono" }}
+,{ "pid":12345, "tid":1, "ts":1725078021782680, "dur":146, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"C:/Program Files/Unity/Hub/Editor/6000.0.5f1/Editor/Data/Tools/BuildPipeline" }}
+,{ "pid":12345, "tid":1, "ts":1725078021782826, "dur":93, "ph":"X", "name": "CheckGlobSignature",  "args": { "detail":"Library/PlayerDataCache/Win642/Data" }}
+,{ "pid":12345, "tid":1, "ts":1725078021774689, "dur":8277, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1725078021783547, "dur":529, "ph":"X", "name": "WriteResponseFile",  "args": { "detail":"Library/Bee/artifacts/rsp/12472187740721062503.rsp" }}
+,{ "pid":12345, "tid":1, "ts":1725078021784240, "dur":230, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021784474, "dur":74, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\com.cratesmith.assetui.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021784550, "dur":374, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\com.rlabrecque.steamworks.net.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021784926, "dur":114, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\ECM2.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021785044, "dur":341, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\FizzySteamworks.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021785449, "dur":377, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Heathen.Core.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021785838, "dur":356, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Heathen.Steamworks.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021786196, "dur":57, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Heathen.Steamworks.Examples.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021786292, "dur":89, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\IngameDebugConsole.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021786383, "dur":117, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\kcp2k.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021786504, "dur":78, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Mirror.Authenticators.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021786585, "dur":183, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Mirror.Components.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021786773, "dur":161, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Mirror.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021786938, "dur":159, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Mirror.Examples.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021787101, "dur":102, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Mirror.Transports.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021787208, "dur":92, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\SimpleWebTransport.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021787304, "dur":97, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Telepathy.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021787407, "dur":235, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Burst.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021787645, "dur":285, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Cinemachine.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021787933, "dur":250, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Collections.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021788189, "dur":583, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021788777, "dur":74, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.InputSystem.ForUI.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021788855, "dur":368, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021789280, "dur":53, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.ProBuilder.Csg.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021789336, "dur":315, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.ProBuilder.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021789653, "dur":62, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.ProBuilder.KdTree.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021789720, "dur":64, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.ProBuilder.Poly2Tri.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021789789, "dur":51, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.ProBuilder.Stl.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021789845, "dur":58, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Profiling.Core.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021789957, "dur":264, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Rendering.LightTransport.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021790226, "dur":538, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.Core.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021790769, "dur":55, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.Core.Runtime.Shared.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021790871, "dur":150, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.GPUDriven.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021791025, "dur":52, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021791082, "dur":1623, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.HighDefinition.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021792716, "dur":207, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021792931, "dur":138, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Splines.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021793071, "dur":269, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021793343, "dur":102, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021793448, "dur":133, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualEffectGraph.Runtime.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021793583, "dur":580, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021794171, "dur":336, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021794512, "dur":131, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021794653, "dur":275, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":1, "ts":1725078021795890, "dur":198, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\artifacts\\UnityLinkerInputs\\MethodsToPreserve.xml" }}
+,{ "pid":12345, "tid":1, "ts":1725078021796090, "dur":104, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\artifacts\\UnityLinkerInputs\\TypesInScenes.xml" }}
+,{ "pid":12345, "tid":1, "ts":1725078021796197, "dur":86, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\artifacts\\UnityLinkerInputs\\SerializedTypes.xml" }}
+,{ "pid":12345, "tid":1, "ts":1725078021796285, "dur":91, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Temp\\InputSystemLink.xml" }}
+,{ "pid":12345, "tid":1, "ts":1725078021796379, "dur":188, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"C:\\Users\\user1\\3d zeldaish\\Ruin The Runner\\Library\\Bee\\artifacts\\UnityLinkerInputs\\EditorToUnityLinkerData.json" }}
+,{ "pid":12345, "tid":1, "ts":1725078021797208, "dur":18896, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\rsp\\12472187740721062503.rsp" }}
+,{ "pid":12345, "tid":1, "ts":1725078021784077, "dur":32031, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"UnityLinker C:/Users/user1/3d zeldaish/Ruin The Runner/Library/Bee/artifacts/unitylinker_dwek.traceevents" }}
+,{ "pid":12345, "tid":1, "ts":1725078021816757, "dur":300, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1725078021867310, "dur":506962, "ph":"X", "name": "UnityLinker",  "args": { "detail":"C:/Users/user1/3d zeldaish/Ruin The Runner/Library/Bee/artifacts/unitylinker_dwek.traceevents" }}
+,{ "pid":12345, "tid":2, "ts":1725078021771446, "dur":3617, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1725078021775064, "dur":789, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1725078021775854, "dur":547, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1725078021776401, "dur":685, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1725078021777087, "dur":6183, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1725078021783271, "dur":196, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":2, "ts":1725078021783891, "dur":4569, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":2, "ts":1725078021788525, "dur":69, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win642\\Data\\ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":2, "ts":1725078021788516, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":2, "ts":1725078021788630, "dur":20920, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win642\\Data\\RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":2, "ts":1725078021788628, "dur":20925, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":2, "ts":1725078021809557, "dur":162, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1725078021809745, "dur":575492, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1725078021770880, "dur":4132, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1725078021775013, "dur":812, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1725078021775826, "dur":1084, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1725078021776910, "dur":6314, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1725078021783224, "dur":171, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":3, "ts":1725078021787121, "dur":57, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1725078021783953, "dur":4780, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":3, "ts":1725078021788779, "dur":997, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":3, "ts":1725078021789841, "dur":54178, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/level0.resS" }}
+,{ "pid":12345, "tid":3, "ts":1725078021844087, "dur":541059, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1725078021770359, "dur":4523, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1725078021774884, "dur":704, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1725078021775588, "dur":878, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1725078021776466, "dur":632, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1725078021777099, "dur":6139, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1725078021783842, "dur":3629, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":4, "ts":1725078021787560, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1725078021787720, "dur":2814, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/sharedassets2.assets" }}
+,{ "pid":12345, "tid":4, "ts":1725078021790601, "dur":65270, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/globalgamemanagers.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1725078021855925, "dur":529203, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1725078021770630, "dur":4272, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1725078021775776, "dur":849, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.Collections.NonGeneric.dll" }}
+,{ "pid":12345, "tid":5, "ts":1725078021774903, "dur":2087, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1725078021776990, "dur":5980, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1725078021782982, "dur":98, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1725078021783132, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":5, "ts":1725078021784568, "dur":4421, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":5, "ts":1725078021789021, "dur":54363, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/resources.assets" }}
+,{ "pid":12345, "tid":5, "ts":1725078021843444, "dur":541732, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1725078021771189, "dur":3870, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1725078021775062, "dur":600, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1725078021775663, "dur":623, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1725078021776286, "dur":735, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1725078021777021, "dur":6155, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1725078021783176, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":6, "ts":1725078021784642, "dur":3152, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":6, "ts":1725078021787867, "dur":42007, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":6, "ts":1725078021829936, "dur":555219, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1725078021771669, "dur":3456, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1725078021775474, "dur":1245, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\Bee.Toolchain.EmbeddedLinux.dll" }}
+,{ "pid":12345, "tid":7, "ts":1725078021775127, "dur":2070, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1725078021777197, "dur":5934, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1725078021783132, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":7, "ts":1725078021784120, "dur":2244, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":7, "ts":1725078021786442, "dur":469, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Temp\\StagingArea\\WindowsPlayer.exe" }}
+,{ "pid":12345, "tid":7, "ts":1725078021786409, "dur":503, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner.exe" }}
+,{ "pid":12345, "tid":7, "ts":1725078021786925, "dur":2349, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner.exe" }}
+,{ "pid":12345, "tid":7, "ts":1725078021789318, "dur":55050, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/level1" }}
+,{ "pid":12345, "tid":7, "ts":1725078021844463, "dur":540677, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1725078021771912, "dur":3337, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1725078021775251, "dur":921, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1725078021776172, "dur":431, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1725078021776603, "dur":6455, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1725078021783059, "dur":276, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":8, "ts":1725078021783790, "dur":4200, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":8, "ts":1725078021788051, "dur":40635, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":8, "ts":1725078021828730, "dur":556493, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1725078021772135, "dur":3128, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1725078021775264, "dur":843, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1725078021776107, "dur":414, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1725078021776521, "dur":414, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1725078021776935, "dur":6038, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1725078021782976, "dur":343, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":9, "ts":1725078021783752, "dur":7507, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":9, "ts":1725078021791304, "dur":53343, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":9, "ts":1725078021844707, "dur":540427, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1725078021772405, "dur":2872, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1725078021775765, "dur":931, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Web.WebPages.dll" }}
+,{ "pid":12345, "tid":10, "ts":1725078021775280, "dur":1885, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1725078021777165, "dur":6100, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1725078021783266, "dur":247, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":10, "ts":1725078021783844, "dur":2885, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":10, "ts":1725078021786810, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":10, "ts":1725078021786938, "dur":11560, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":10, "ts":1725078021798565, "dur":586687, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1725078021772600, "dur":2681, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1725078021775282, "dur":491, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1725078021775773, "dur":888, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1725078021776661, "dur":6307, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1725078021783059, "dur":65, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win642\\Data\\boot.config" }}
+,{ "pid":12345, "tid":11, "ts":1725078021783150, "dur":26393, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win642\\Data\\RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":11, "ts":1725078021810580, "dur":242, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\Playeraf2576a2-inputdata.json" }}
+,{ "pid":12345, "tid":11, "ts":1725078021783051, "dur":27822, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"AddBootConfigGUID Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
+,{ "pid":12345, "tid":11, "ts":1725078021811626, "dur":278, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1725078021812637, "dur":155381, "ph":"X", "name": "AddBootConfigGUID",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
+,{ "pid":12345, "tid":11, "ts":1725078021974958, "dur":64, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\boot.config" }}
+,{ "pid":12345, "tid":11, "ts":1725078021974941, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/boot.config" }}
+,{ "pid":12345, "tid":11, "ts":1725078021975045, "dur":856, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/boot.config" }}
+,{ "pid":12345, "tid":11, "ts":1725078021975903, "dur":409204, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1725078021772872, "dur":2416, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1725078021775288, "dur":1264, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1725078021776553, "dur":6683, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1725078021783236, "dur":242, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":12, "ts":1725078021787141, "dur":51, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1725078021783849, "dur":4989, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":12, "ts":1725078021788888, "dur":40510, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":12, "ts":1725078021829465, "dur":555718, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1725078021770080, "dur":4612, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1725078021774696, "dur":1010, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1725078021775707, "dur":468, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1725078021776175, "dur":483, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1725078021776659, "dur":6313, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1725078021782975, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":13, "ts":1725078021783698, "dur":31007, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":13, "ts":1725078021814754, "dur":570456, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1725078021770105, "dur":4595, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1725078021774703, "dur":833, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1725078021775768, "dur":954, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Novell.Directory.Ldap.dll" }}
+,{ "pid":12345, "tid":14, "ts":1725078021775536, "dur":1632, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1725078021777168, "dur":6092, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1725078021783261, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":14, "ts":1725078021783901, "dur":3200, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":14, "ts":1725078021787183, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1725078021787368, "dur":300, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1725078021787673, "dur":104, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/D3D12/D3D12Core.dll" }}
+,{ "pid":12345, "tid":14, "ts":1725078021787845, "dur":41318, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":14, "ts":1725078021829236, "dur":555961, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1725078021770139, "dur":4567, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1725078021774709, "dur":492, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1725078021775695, "dur":1040, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\Tools\\BuildPipeline\\Unity.IL2CPP.Bee.BuildLogic.dll" }}
+,{ "pid":12345, "tid":15, "ts":1725078021775201, "dur":1817, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1725078021777019, "dur":5968, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1725078021782988, "dur":381, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":15, "ts":1725078021784423, "dur":3825, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":15, "ts":1725078021788327, "dur":118553, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":15, "ts":1725078021906907, "dur":478207, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1725078021770157, "dur":4556, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1725078021775326, "dur":1629, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.Security.Cryptography.Primitives.dll" }}
+,{ "pid":12345, "tid":16, "ts":1725078021774715, "dur":2337, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1725078021777052, "dur":6165, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1725078021783217, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":16, "ts":1725078021783860, "dur":1739, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":16, "ts":1725078021785633, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":16, "ts":1725078021785719, "dur":5253, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":16, "ts":1725078021791022, "dur":85197, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":16, "ts":1725078021876274, "dur":508847, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1725078021770183, "dur":4535, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1725078021774721, "dur":675, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1725078021775870, "dur":669, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Configuration.Install.dll" }}
+,{ "pid":12345, "tid":17, "ts":1725078021775396, "dur":1162, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1725078021776558, "dur":6511, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1725078021783069, "dur":184, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":17, "ts":1725078021783892, "dur":2004, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":17, "ts":1725078021785941, "dur":486, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":17, "ts":1725078021786478, "dur":3454, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":17, "ts":1725078021790005, "dur":41099, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/level0" }}
+,{ "pid":12345, "tid":17, "ts":1725078021831154, "dur":553996, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1725078021770206, "dur":4518, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1725078021774928, "dur":530, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\il2cpp\\build\\deploy\\System.Reflection.Emit.Lightweight.dll" }}
+,{ "pid":12345, "tid":18, "ts":1725078021774726, "dur":1237, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1725078021775963, "dur":751, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1725078021776714, "dur":6309, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1725078021783024, "dur":500, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":18, "ts":1725078021783821, "dur":2299, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":18, "ts":1725078021786154, "dur":1232, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":18, "ts":1725078021787420, "dur":15325, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":18, "ts":1725078021802885, "dur":582346, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1725078021770227, "dur":4588, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1725078021774816, "dur":1039, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1725078021775856, "dur":1099, "ph":"X", "name": "File",  "args": { "detail":"C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.5f1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\Facades\\System.Linq.Parallel.dll" }}
+,{ "pid":12345, "tid":19, "ts":1725078021775856, "dur":1417, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1725078021777274, "dur":5812, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1725078021783086, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":19, "ts":1725078021784076, "dur":2853, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":19, "ts":1725078021786985, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1725078021787330, "dur":285, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1725078021787714, "dur":9856, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/sharedassets2.assets.resS" }}
+,{ "pid":12345, "tid":19, "ts":1725078021797635, "dur":587621, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1725078021770249, "dur":4627, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1725078021774878, "dur":1167, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1725078021776045, "dur":541, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1725078021776586, "dur":6606, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1725078021783192, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":20, "ts":1725078021783811, "dur":1897, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":20, "ts":1725078021785757, "dur":245, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":20, "ts":1725078021786045, "dur":3044, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":20, "ts":1725078021789151, "dur":39740, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/user1/3d zeldaish/Builds/Ruin The Runner Current/Ruin The Runner_Data/level2" }}
+,{ "pid":12345, "tid":20, "ts":1725078021828935, "dur":556270, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1725078022393247, "dur":854, "ph":"X", "name": "ProfilerWriteOutput" }
 ,

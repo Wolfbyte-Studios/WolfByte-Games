@@ -1,0 +1,28 @@
+{
+  "name": "com.unity.multiplayer.playmode",
+  "displayName": "Multiplayer Play Mode",
+  "version": "1.1.0",
+  "unity": "6000.0",
+  "unityRelease": "3f1",
+  "description": "Multiplayer Play Mode is a feature that enables multiple editor instances to be opened simultaneously on the same development device.",
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "2.0.2"
+  },
+  "type": "tool",
+  "relatedPackages": {
+    "com.unity.multiplayer.workflows.tests.common": "0.0.0",
+    "com.unity.multiplayer.playmode.tests": "0.0.0"
+  },
+  "_upm": {
+    "changelog": "### Added\n- Added Netcode For Entities layout option to each mppm clone if package is installed.\n- Close button now displays warning dialog prompt and if confirmed, the virtual player is now deactivated\n- Added the ability to mute players to the settings\n- Added the ability to change the asset database refresh timeout to the settings\n- Can now properly focus on other individual player windows from inside an individual player (by using the keyboard shortcuts)\n- Added clearer message to certain types of Symlink failures (on FAT32) which are not supported\n\n### Fixed\n- Upgrades of the MPPM package now clear out the local clone cache to ensure stable updates\n- Fixed a crash with layout files when computers were set to certain regions\n- Changed default multiplayer role of player clones to Client and Server\n- Added a minimum width for the main view of the MPPM window\n- Escape key no longer closes virtual player windows on Windows\n- Fixed issues with heartbeat timeout"
+  },
+  "upmCi": {
+    "footprint": "93af61d0dae3c4da771b5dbb2592aa7f2d4728a4"
+  },
+  "repository": {
+    "url": "https://github.cds.internal.unity3d.com/unity/multiplayer-workflows.git",
+    "type": "git",
+    "revision": "49ca8afa5238571a591be4bd8a21a1f598040783"
+  },
+  "_fingerprint": "711ab965e49f964e03552bf5f2809e32d6b0be9c"
+}

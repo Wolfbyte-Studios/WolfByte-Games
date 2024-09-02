@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6b9ee661311146421ed2d2f9c50f1fb8aa7b299d2f8c01fc83a71b4f9adaa8dd
-size 794
+using UnityEngine;
+using UnityEditor;
+
+[CustomEditor(typeof(LerpMovement))]
+public class LerpMovementEditor : UnityEditor.Editor
+{
+    public override void OnInspectorGUI()
+    {
+        DrawDefaultInspector();
+
+        LerpMovement script = (LerpMovement)target;
+        if (GUILayout.Button("Add Current Transform"))
+        {
+            Undo.RecordObject(script, "Add Transform");
+            script.transforms.Add(new LerpMovement.TransformData
+            {
+                position = script.transform.position,
+                rotation = script.transform.rotation,
+                speed = 1
+            });
+            EditorUtility.SetDirty(script);
+        }
+
+        if (GUILayout.Button("Trigger Movement"))
+        {
+            script.Trigger();
+        }
+    }
+}

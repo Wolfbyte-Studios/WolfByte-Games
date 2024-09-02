@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b75e9a4dcb8ce0561c178cd02439ab2d4b007ac58c379b4b7af93f759de62a8b
-size 539
+using UnityEngine;
+
+namespace Mirror.Examples.Pong
+{
+    public class Player : NetworkBehaviour
+    {
+        public float speed = 30;
+        public Rigidbody2D rigidbody2d;
+
+        // need to use FixedUpdate for rigidbody
+        void FixedUpdate()
+        {
+            // only let the local player control the racket.
+            // don't control other player's rackets
+            if (isLocalPlayer)
+                rigidbody2d.linearVelocity = new Vector2(0, Input.GetAxisRaw("Vertical")) * speed * Time.fixedDeltaTime;
+        }
+    }
+}
